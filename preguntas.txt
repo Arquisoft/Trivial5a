@@ -1,0 +1,195 @@
+$CATEGORY: Arte y Literatura
+
+::Q1::¿Quién pintó el “Gernika”? {
+~Salvador Dalí
+~Francisco de Goya
+=Pablo Picasso
+}
+
+::Q2::¿A qué movimiento pertenecía Salvador Dalí? {
+=Surrealismo
+~Futurismo
+~Cubismo
+}
+
+::Q3::¿Quién escribió “Don Quijote de la Mancha"? {
+~Lope de Vega
+=Miguel de Cervantes
+~Francisco de Quevedo
+}
+
+::Q4::¿Cómo se llama la 1ª obra que se conoce escrita en español? {
+~Don Quijote de la Mancha
+=El Cantar de Mio Cid
+~El Lazarillo de Tormes
+}
+
+::Q5::¿Qué premio Nobel de literatura escribió “Cien años de soledad”? {
+~Juan Ramón Jiménez
+~Pablo Neruda
+=Gabriel García Márquez 
+}
+
+::Q6::¿En qué célebre cuadro retrató Goya la invasión de España por parte de la armada francesa? {
+~Saturno devorando a sus hijos
+=Los fusilamientos del 3 de mayo
+~Akelarre
+}
+
+
+$CATEGORY: Música y Cine
+
+::Q7::¿Qué actor español ganó el Óscar al mejor actor de reparto por el film “No country for old men”? {
+~Antonio Banderas
+=Javier Bardem
+~Benicio del Toro 
+}
+
+::Q8::¿Por qué film ganó Almodóvar el Óscar a la mejor película de habla no inglesa? {
+~Hable con ella
+=Todo sobre mi madre
+~La mala educación 
+}
+
+::Q9::¿A qué género musical latinoamericano perteneció el cantante Carlos Gardel? {
+=Tango
+~Salsa
+~Bossa Nova
+}
+
+::Q10::¿Qué director español ganó el Óscar a la mejor película de habla no inglesa por “Mar adentro”? {
+=Alejandro Amenábar
+~Pedro Almodóvar
+~Fernando Trueba 
+}
+
+::Q11::Paco de Lucía, Vicente Amigo y Tomatito son tres famosos músicos de… {
+~Tango
+~Salsa
+=Flamenco 
+}
+
+::Q12::¿De qué país son originarias las “rancheras”? {
+~Argentina
+~Colombia
+=México 
+}
+
+
+$CATEGORY: Deportes
+
+::Q13::¿En qué equipo de la NBA juega el pívot español Pau Gasol? {
+~Menphis Grizzlees
+=Chicago Bulls
+~Los Angeles Lakers 
+}
+
+::Q14::¿Qué jugador de la selección española de fútbol fue uno de los máximos goleadores del Mundial 2010? {
+~Andrés Iniesta
+=David Villa
+~Diego Forlán 
+}
+
+::Q15::¿Cuántos Grand Slam ha ganado el tenista español Rafa Nadal? {
+~12
+~13
+=14 
+}
+
+::Q16::¿Con qué escudería ganó el piloto español de F1 Fernando Alonso sus dos títulos mundiales? {
+~Red Bull
+~McLaren
+=Renault 
+}
+
+::Q17::¿Qué ciclista español ganó cinco Tours de Francia de manera consecutiva? {
+~Luis Ocaña
+~Pedro Delgado
+=Miguel Induráin
+}
+
+::Q18::¿Qué legendario jugador de fútbol marcó un gol con “la mano de Dios”? {
+~Pelé
+~Johan Cruyff
+=Maradona 
+}
+
+
+$CATEGORY: Cultura y Tradición
+
+::Q19::¿Qué es una “media verónica”? {
+~Una bebida
+~Un paso de baile regional
+=Un pase de toreo 
+}
+
+::Q20::¿Qué fruto se suele comer en España en Nochevieja, 31 de diciembre, cuando suenan las doce campanadas? {
+~12 fresas
+~12 cerezas
+=12 uvas 
+}
+
+::Q21::¿En cuál de estas localidades no se inicia el Camino de Santiago? {
+~Somport
+~Roncesvalles
+=Biarritz 
+}
+
+::Q22::¿De cuál de las 4 lenguas oficiales de España no se conoce aún su origen? {
+~Castellano
+~Catalán
+~Gallego
+=Euskera
+}
+
+::Q23::¿Cuál de los siguientes platos gastronómicos no es típico de España? {
+~Paella
+=Marmitako
+~Fabada
+}
+
+::Q24::¿De qué región es típico el gazpacho? {
+~Aragón
+=Andalucía
+~Cataluña
+}
+
+
+$CATEGORY: Historia y Geografía
+
+::Q25::¿Cuántos años duró la Guerra Civil española? {
+=3 años
+~7 años
+~10 años 
+}
+
+::Q26::¿Por qué se decía que en España nunca se ponía el sol? {
+~Porque siempre hacía buen tiempo
+=Porque España poseía colonias en todos loscontinentes
+~Porque España estaba viviendo “su siglo de las luces”.
+}
+
+::Q27::¿Cuál es la capital de Azerbaijan? {
+=Baku
+~Ibra
+~Amma
+~Faiza
+}
+
+::Q28::¿A qué reinos pertenecían los Reyes Católicos, Isabel y Fernando, antes de comenzar la unificación de lo que hoy se conoce como España? {
+=Castilla y Aragón
+~Aragón y Navarra
+~Navarra y Granada 
+}
+
+::Q29::¿Quiénes son los presidentes de Colombia y Venezuela? {
+=Juan Manuel Santos y Hugo Chávez
+~Hugo Chávez y Evo Morales
+~Evo Morales y Juan Manuel Santos 
+}
+
+::Q30::¿Cuántas comunidades autónomas componen España?
+~15
+~16
+=17 
+}
