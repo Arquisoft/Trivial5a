@@ -1,194 +1,194 @@
-$CATEGORY: Arte y Literatura
+ï»¿$CATEGORY: Arte y Literatura
 
-::Q1::¿Quién pintó el “Gernika”? {
-~Salvador Dalí
+::Q1::Â¿QuiÃ©n pintÃ³ el â€œGernikaâ€? {
+~Salvador DalÃ­
 ~Francisco de Goya
 =Pablo Picasso
 }
 
-::Q2::¿A qué movimiento pertenecía Salvador Dalí? {
+::Q2::Â¿A quÃ© movimiento pertenecÃ­a Salvador DalÃ­? {
 =Surrealismo
 ~Futurismo
 ~Cubismo
 }
 
-::Q3::¿Quién escribió “Don Quijote de la Mancha"? {
+::Q3::Â¿QuiÃ©n escribiÃ³ â€œDon Quijote de la Mancha"? {
 ~Lope de Vega
 =Miguel de Cervantes
 ~Francisco de Quevedo
 }
 
-::Q4::¿Cómo se llama la 1ª obra que se conoce escrita en español? {
+::Q4::Â¿CÃ³mo se llama la 1Âª obra que se conoce escrita en espaÃ±ol? {
 ~Don Quijote de la Mancha
 =El Cantar de Mio Cid
 ~El Lazarillo de Tormes
 }
 
-::Q5::¿Qué premio Nobel de literatura escribió “Cien años de soledad”? {
-~Juan Ramón Jiménez
+::Q5::Â¿QuÃ© premio Nobel de literatura escribiÃ³ â€œCien aÃ±os de soledadâ€? {
+~Juan RamÃ³n JimÃ©nez
 ~Pablo Neruda
-=Gabriel García Márquez 
+=Gabriel GarcÃ­a MÃ¡rquez 
 }
 
-::Q6::¿En qué célebre cuadro retrató Goya la invasión de España por parte de la armada francesa? {
+::Q6::Â¿En quÃ© cÃ©lebre cuadro retratÃ³ Goya la invasiÃ³n de EspaÃ±a por parte de la armada francesa? {
 ~Saturno devorando a sus hijos
 =Los fusilamientos del 3 de mayo
 ~Akelarre
 }
 
 
-$CATEGORY: Música y Cine
+$CATEGORY: MÃºsica y Cine
 
-::Q7::¿Qué actor español ganó el Óscar al mejor actor de reparto por el film “No country for old men”? {
+::Q7::Â¿QuÃ© actor espaÃ±ol ganÃ³ el Ã“scar al mejor actor de reparto por el film â€œNo country for old menâ€? {
 ~Antonio Banderas
 =Javier Bardem
 ~Benicio del Toro 
 }
 
-::Q8::¿Por qué film ganó Almodóvar el Óscar a la mejor película de habla no inglesa? {
+::Q8::Â¿Por quÃ© film ganÃ³ AlmodÃ³var el Ã“scar a la mejor pelÃ­cula de habla no inglesa? {
 ~Hable con ella
 =Todo sobre mi madre
-~La mala educación 
+~La mala educaciÃ³n 
 }
 
-::Q9::¿A qué género musical latinoamericano perteneció el cantante Carlos Gardel? {
+::Q9::Â¿A quÃ© gÃ©nero musical latinoamericano perteneciÃ³ el cantante Carlos Gardel? {
 =Tango
 ~Salsa
 ~Bossa Nova
 }
 
-::Q10::¿Qué director español ganó el Óscar a la mejor película de habla no inglesa por “Mar adentro”? {
-=Alejandro Amenábar
-~Pedro Almodóvar
+::Q10::Â¿QuÃ© director espaÃ±ol ganÃ³ el Ã“scar a la mejor pelÃ­cula de habla no inglesa por â€œMar adentroâ€? {
+=Alejandro AmenÃ¡bar
+~Pedro AlmodÃ³var
 ~Fernando Trueba 
 }
 
-::Q11::Paco de Lucía, Vicente Amigo y Tomatito son tres famosos músicos de… {
+::Q11::Paco de LucÃ­a, Vicente Amigo y Tomatito son tres famosos mÃºsicos deâ€¦ {
 ~Tango
 ~Salsa
 =Flamenco 
 }
 
-::Q12::¿De qué país son originarias las “rancheras”? {
+::Q12::Â¿De quÃ© paÃ­s son originarias las â€œrancherasâ€? {
 ~Argentina
 ~Colombia
-=México 
+=MÃ©xico 
 }
 
 
 $CATEGORY: Deportes
 
-::Q13::¿En qué equipo de la NBA juega el pívot español Pau Gasol? {
+::Q13::Â¿En quÃ© equipo de la NBA juega el pÃ­vot espaÃ±ol Pau Gasol? {
 ~Menphis Grizzlees
 =Chicago Bulls
 ~Los Angeles Lakers 
 }
 
-::Q14::¿Qué jugador de la selección española de fútbol fue uno de los máximos goleadores del Mundial 2010? {
-~Andrés Iniesta
+::Q14::Â¿QuÃ© jugador de la selecciÃ³n espaÃ±ola de fÃºtbol fue uno de los mÃ¡ximos goleadores del Mundial 2010? {
+~AndrÃ©s Iniesta
 =David Villa
-~Diego Forlán 
+~Diego ForlÃ¡n 
 }
 
-::Q15::¿Cuántos Grand Slam ha ganado el tenista español Rafa Nadal? {
+::Q15::Â¿CuÃ¡ntos Grand Slam ha ganado el tenista espaÃ±ol Rafa Nadal? {
 ~12
 ~13
 =14 
 }
 
-::Q16::¿Con qué escudería ganó el piloto español de F1 Fernando Alonso sus dos títulos mundiales? {
+::Q16::Â¿Con quÃ© escuderÃ­a ganÃ³ el piloto espaÃ±ol de F1 Fernando Alonso sus dos tÃ­tulos mundiales? {
 ~Red Bull
 ~McLaren
 =Renault 
 }
 
-::Q17::¿Qué ciclista español ganó cinco Tours de Francia de manera consecutiva? {
-~Luis Ocaña
+::Q17::Â¿QuÃ© ciclista espaÃ±ol ganÃ³ cinco Tours de Francia de manera consecutiva? {
+~Luis OcaÃ±a
 ~Pedro Delgado
-=Miguel Induráin
+=Miguel IndurÃ¡in
 }
 
-::Q18::¿Qué legendario jugador de fútbol marcó un gol con “la mano de Dios”? {
-~Pelé
+::Q18::Â¿QuÃ© legendario jugador de fÃºtbol marcÃ³ un gol con â€œla mano de Diosâ€? {
+~PelÃ©
 ~Johan Cruyff
 =Maradona 
 }
 
 
-$CATEGORY: Cultura y Tradición
+$CATEGORY: Cultura y TradiciÃ³n
 
-::Q19::¿Qué es una “media verónica”? {
+::Q19::Â¿QuÃ© es una â€œmedia verÃ³nicaâ€? {
 ~Una bebida
 ~Un paso de baile regional
 =Un pase de toreo 
 }
 
-::Q20::¿Qué fruto se suele comer en España en Nochevieja, 31 de diciembre, cuando suenan las doce campanadas? {
+::Q20::Â¿QuÃ© fruto se suele comer en EspaÃ±a en Nochevieja, 31 de diciembre, cuando suenan las doce campanadas? {
 ~12 fresas
 ~12 cerezas
 =12 uvas 
 }
 
-::Q21::¿En cuál de estas localidades no se inicia el Camino de Santiago? {
+::Q21::Â¿En cuÃ¡l de estas localidades no se inicia el Camino de Santiago? {
 ~Somport
 ~Roncesvalles
 =Biarritz 
 }
 
-::Q22::¿De cuál de las 4 lenguas oficiales de España no se conoce aún su origen? {
+::Q22::Â¿De cuÃ¡l de las 4 lenguas oficiales de EspaÃ±a no se conoce aÃºn su origen? {
 ~Castellano
-~Catalán
+~CatalÃ¡n
 ~Gallego
 =Euskera
 }
 
-::Q23::¿Cuál de los siguientes platos gastronómicos no es típico de España? {
+::Q23::Â¿CuÃ¡l de los siguientes platos gastronÃ³micos no es tÃ­pico de EspaÃ±a? {
 ~Paella
 =Marmitako
 ~Fabada
 }
 
-::Q24::¿De qué región es típico el gazpacho? {
-~Aragón
-=Andalucía
-~Cataluña
+::Q24::Â¿De quÃ© regiÃ³n es tÃ­pico el gazpacho? {
+~AragÃ³n
+=AndalucÃ­a
+~CataluÃ±a
 }
 
 
-$CATEGORY: Historia y Geografía
+$CATEGORY: Historia y GeografÃ­a
 
-::Q25::¿Cuántos años duró la Guerra Civil española? {
-=3 años
-~7 años
-~10 años 
+::Q25::Â¿CuÃ¡ntos aÃ±os durÃ³ la Guerra Civil espaÃ±ola? {
+=3 aÃ±os
+~7 aÃ±os
+~10 aÃ±os 
 }
 
-::Q26::¿Por qué se decía que en España nunca se ponía el sol? {
-~Porque siempre hacía buen tiempo
-=Porque España poseía colonias en todos loscontinentes
-~Porque España estaba viviendo “su siglo de las luces”.
+::Q26::Â¿Por quÃ© se decÃ­a que en EspaÃ±a nunca se ponÃ­a el sol? {
+~Porque siempre hacÃ­a buen tiempo
+=Porque EspaÃ±a poseÃ­a colonias en todos loscontinentes
+~Porque EspaÃ±a estaba viviendo â€œsu siglo de las lucesâ€.
 }
 
-::Q27::¿Cuál es la capital de Azerbaijan? {
+::Q27::Â¿CuÃ¡l es la capital de Azerbaijan? {
 =Baku
 ~Ibra
 ~Amma
 ~Faiza
 }
 
-::Q28::¿A qué reinos pertenecían los Reyes Católicos, Isabel y Fernando, antes de comenzar la unificación de lo que hoy se conoce como España? {
-=Castilla y Aragón
-~Aragón y Navarra
+::Q28::Â¿A quÃ© reinos pertenecÃ­an los Reyes CatÃ³licos, Isabel y Fernando, antes de comenzar la unificaciÃ³n de lo que hoy se conoce como EspaÃ±a? {
+=Castilla y AragÃ³n
+~AragÃ³n y Navarra
 ~Navarra y Granada 
 }
 
-::Q29::¿Quiénes son los presidentes de Colombia y Venezuela? {
-=Juan Manuel Santos y Hugo Chávez
-~Hugo Chávez y Evo Morales
+::Q29::Â¿QuiÃ©nes son los presidentes de Colombia y Venezuela? {
+=Juan Manuel Santos y Hugo ChÃ¡vez
+~Hugo ChÃ¡vez y Evo Morales
 ~Evo Morales y Juan Manuel Santos 
 }
 
-::Q30::¿Cuántas comunidades autónomas componen España?
+::Q30::Â¿CuÃ¡ntas comunidades autÃ³nomas componen EspaÃ±a?
 ~15
 ~16
 =17 
