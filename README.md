@@ -15,13 +15,13 @@ Formantes del grupo:
 
 [Changqu](https://github.com/changqu)
 
-[Fernando Delgado](https://github.com/changqu)
+[Fernando Delgado](https://github.com/Ikzer)
 
 [Fernando Vigil-Escalera Caicoya](https://github.com/FernandoVigil)
 
 [Javier Ruiz](https://github.com/javierruix)
 
-[Noelia Rico](https://github.com/javierruix)
+[Noelia Rico](https://github.com/noeliarico)
 
 [Pablo Fernández](https://github.com/PabloFernandezRodriguez)
 
