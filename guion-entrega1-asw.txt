@@ -1,0 +1,18 @@
+1. Planteamiento del problema
+	1.1 Problema
+	1.2 Diagrama contextual
+2. Metodología usada
+3. Identificación de los interesados
+	3.1 Descripción de Stakeholders
+		- Stakeholder 1
+		- Stakeholder 2
+		- .. etc
+4. Requisitos funcionales
+5. Requisitos no funcionales
+6. Atributos de calidad
+	4.1 Atributo 1
+	4.2 Atributo 2
+	4.3 .. etc
+7. Escenarios de calidad
+
+Esquema de documentación que deberíamos tener antes de la primera reunión
