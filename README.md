@@ -21,7 +21,7 @@ Formantes del grupo:
 
 [Javier Ruiz](https://github.com/javierruix)
 
-[Noelia Rico](https://github.com/noeliarico)
+[Noelia Rico Pachón](https://github.com/noeliarico)
 
 [Pablo Fernández](https://github.com/PabloFernandezRodriguez)
 
