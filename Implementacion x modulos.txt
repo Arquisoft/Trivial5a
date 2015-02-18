@@ -1,0 +1,13 @@
+Solo para los que se encargan de implementa
+Ya que Labra nos dios una base del proyecto, yo creo que deberiamos empezar por ahi.
+
+Que cada equipo cree un package de la forma
+
+---> Parser 
+---> Interaccion
+
+Las pruebas van a aparte por lo que no les afecta.
+
+Asi a la hora de subirlo , se mezclara todo el proyecto sin problemas.
+
+Ademas era buena idea si por ejemplo en la parte de interaccion con el usuario  se necesita acceder a los ficheros de la BBDD ( que se necesita para depurar segun espeficacion) se quedase en algun tipo de formalidad de nombres en las interfaces asi a la hora de  integrar no perderiamos tanto tiempo a refactorizar y cosas de esas
