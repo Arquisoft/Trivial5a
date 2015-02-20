@@ -32,5 +32,7 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
+	<classpathentry kind="lib" path="mongo-java-driver-2.11.3.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
