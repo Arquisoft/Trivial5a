@@ -7,7 +7,7 @@ import java.io.IOException;
 public class Parser {
 	
 	String[] lineas;
-	String transformado;
+	String[] transformado;
 	Document file;
 	
 	public void reader() throws IOException
@@ -43,5 +43,22 @@ public class Parser {
 		transformado=file.getTipo().transform(lineas);
 		
 	}
+
+
+	public String[] getLineas() {
+		return lineas;
+	}
+
+
+	public String[] getTransformado() {
+		return transformado;
+	}
+
+
+	public Document getFile() {
+		return file;
+	}
+	
+	
 
 }

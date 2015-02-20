@@ -1,0 +1,26 @@
+2015-02-19T16:53:53.416+0100 Trying to start Windows service 'MongoDB'
+2015-02-19T16:53:53.418+0100 Service running
+2015-02-19T16:53:53.428+0100 [initandlisten] MongoDB starting : pid=3216 port=27017 dbpath=\data\db\ 64-bit host=FerVigil-PC
+2015-02-19T16:53:53.429+0100 [initandlisten] targetMinOS: Windows 7/Windows Server 2008 R2
+2015-02-19T16:53:53.429+0100 [initandlisten] db version v2.6.7
+2015-02-19T16:53:53.429+0100 [initandlisten] git version: a7d57ad27c382de82e9cb93bf983a80fd9ac9899
+2015-02-19T16:53:53.429+0100 [initandlisten] build info: windows sys.getwindowsversion(major=6, minor=1, build=7601, platform=2, service_pack='Service Pack 1') BOOST_LIB_VERSION=1_49
+2015-02-19T16:53:53.429+0100 [initandlisten] allocator: system
+2015-02-19T16:53:53.429+0100 [initandlisten] options: { config: "C:\mongodb\mongod.cfg", service: true, systemLog: { destination: "file", path: "C:\mongodb\log\mongo.log" } }
+2015-02-19T16:53:53.430+0100 [initandlisten] exception in initAndListen: 10296 
+*********************************************************************
+ ERROR: dbpath (\data\db\) does not exist.
+ Create this directory or give existing directory in --dbpath.
+ See http://dochub.mongodb.org/core/startingandstoppingmongo
+*********************************************************************
+, terminating
+2015-02-19T16:53:53.430+0100 [initandlisten] dbexit: 
+2015-02-19T16:53:53.430+0100 [initandlisten] shutdown: going to close listening sockets...
+2015-02-19T16:53:53.430+0100 [initandlisten] shutdown: going to flush diaglog...
+2015-02-19T16:53:53.430+0100 [initandlisten] shutdown: going to close sockets...
+2015-02-19T16:53:53.430+0100 [initandlisten] shutdown: waiting for fs preallocator...
+2015-02-19T16:53:53.430+0100 [initandlisten] shutdown: lock for final commit...
+2015-02-19T16:53:53.430+0100 [initandlisten] shutdown: final commit...
+2015-02-19T16:53:53.430+0100 [initandlisten] shutdown: closing all files...
+2015-02-19T16:53:53.430+0100 [initandlisten] closeAllFiles() finished
+2015-02-19T16:53:53.431+0100 [initandlisten] dbexit: really exiting now
