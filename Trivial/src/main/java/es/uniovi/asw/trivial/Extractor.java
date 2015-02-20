@@ -2,6 +2,7 @@ package es.uniovi.asw.trivial;
 
 import java.io.IOException;
 
+import conf.Driver;
 import Parser.Parser;
 
 public class Extractor {
@@ -16,9 +17,11 @@ public class Extractor {
 		
 		
 		Parser p = new Parser();
+		Driver d = new Driver();
 		p.reader();
 		if(p.verificarFormato())
 		p.transform();
+		d.save(p.getTransformado());
 		
 		
 		return 0;

@@ -9,18 +9,18 @@ import model.Question;
 public class GiftType implements TipoDocumento {
 
 	List<Category> categorias = new ArrayList<Category>();
+	
 	@Override
-	public String transform(String[] leido) {
+	public String[] transform(String[] leido) {
 		
-			String JSON = "";
-		for(int i =0;i<categorias.size();i++)
+		
+		String [] mapaJSON =new String[categorias.size()];
+			
+		for(int i =0;i<mapaJSON.length;i++)
 		{	
-			JSON +=categorias.get(i).toJSON();
-			if(i!=categorias.size()-1)
-				JSON+=",";
+			mapaJSON[i]="{"+categorias.get(i).toJSON()+"";
 		}
-		System.out.println(JSON);
-		return JSON;
+		return mapaJSON;
 	}
 
 	@Override

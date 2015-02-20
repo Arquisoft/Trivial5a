@@ -39,14 +39,14 @@ public class Category {
 	
 	public String toJSON()
 	{
-		String JSON= "{ \n"+'"'+"Category"+'"'+":"+'"'+getName()+'"'+": [ \n";
+		String JSON= " \n"+"'"+getName()+"'"+":"+" [  \n";
 		for( int i =0; i< questions.size();i++)
 			if(i==questions.size()-1)
 			JSON+="{ \n"+questions.get(i).toJSON();
 			else
 				JSON+="{ \n"+questions.get(i).toJSON()+",\n";
 		
-		JSON+="\n] \n}";
+		JSON+="\n]\n}";
 		return JSON;
 	}
 	
