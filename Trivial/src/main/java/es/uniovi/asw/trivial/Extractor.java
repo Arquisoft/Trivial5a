@@ -1,9 +1,9 @@
-package es.uniovi.asw.trivial;
+package main.java.es.uniovi.asw.trivial;
 
 import java.io.IOException;
 
-import conf.Driver;
-import Parser.Parser;
+import main.java.conf.Driver;
+import main.java.Parser.Parser;
 
 public class Extractor {
 	

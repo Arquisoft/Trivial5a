@@ -1,4 +1,4 @@
-package Parser;
+package main.java.Parser;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -6,9 +6,9 @@ import java.io.IOException;
 
 public class Parser {
 	
-	String[] lineas;
+	protected String[] lineas;
 	String[] transformado;
-	Document file;
+	protected Document file;
 	
 	public void reader() throws IOException
 	{	String leido= new String();

@@ -1,4 +1,4 @@
-package Parser;
+package main.java.Parser;
 
 public interface TipoDocumento {
 	

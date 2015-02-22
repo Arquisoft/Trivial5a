@@ -1,4 +1,4 @@
-package conf;
+package main.java.conf;
 
 import java.net.UnknownHostException;
 import java.util.List;
