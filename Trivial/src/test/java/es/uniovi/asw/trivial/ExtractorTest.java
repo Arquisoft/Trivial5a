@@ -1,4 +1,4 @@
-package es.uniovi.asw.trivial;
+package test.java.es.uniovi.asw.trivial;
 
 import org.junit.Test;
 

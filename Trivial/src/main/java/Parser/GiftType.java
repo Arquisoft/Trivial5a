@@ -1,10 +1,10 @@
-package Parser;
+package main.java.Parser;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import model.Category;
-import model.Question;
+import main.java.model.Category;
+import main.java.model.Question;
 
 public class GiftType implements TipoDocumento {
 
