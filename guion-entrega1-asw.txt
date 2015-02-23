@@ -10,9 +10,12 @@
 4. Requisitos funcionales
 5. Requisitos no funcionales
 6. Atributos de calidad
-	4.1 Atributo 1
-	4.2 Atributo 2
-	4.3 .. etc
+	4.1 Disponibilidad
+	4.2 Modificabilidad
+	4.3 Rendimiento
+	4.4 Seguridad
+	4.5 Testabilidad
+	4.6 Usabilidad
 7. Escenarios de calidad
 
 Esquema de documentación que deberíamos tener antes de la primera reunión
