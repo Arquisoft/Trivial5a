@@ -1,10 +1,10 @@
-package main.java.Consola;
+package es.uniovi.asw.Consola;
 
 import java.io.File;
 import java.io.FileWriter;
 
-import main.java.Parser.Document;
-import main.java.Parser.GiftType;
+import es.uniovi.asw.Parser.Document;
+import es.uniovi.asw.Parser.GiftType;
 
 public class ConsolaUtils {
 

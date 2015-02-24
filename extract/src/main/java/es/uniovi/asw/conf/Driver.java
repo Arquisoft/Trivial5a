@@ -1,4 +1,4 @@
-package main.java.conf;
+package es.uniovi.asw.conf;
 
 import java.net.UnknownHostException;
 import java.util.List;

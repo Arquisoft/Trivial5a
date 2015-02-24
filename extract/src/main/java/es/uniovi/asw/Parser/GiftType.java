@@ -1,10 +1,10 @@
-package main.java.Parser;
+package es.uniovi.asw.Parser;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import main.java.model.Category;
-import main.java.model.Question;
+import es.uniovi.asw.model.Category;
+import es.uniovi.asw.model.Question;
 
 public class GiftType implements TipoDocumento {
 
