@@ -1,3 +1,0 @@
-2015-02-19T16:53:30.223+0100 Trying to install Windows service 'MongoDB'
-2015-02-19T16:53:30.405+0100 Service 'MongoDB' (MongoDB) installed with command line 'C:\mongodb\bin\mongod.exe --config C:\mongodb\mongod.cfg --service'
-2015-02-19T16:53:30.405+0100 Service can be started from the command line with 'net start MongoDB'
