@@ -1,10 +1,10 @@
-package main.java.Consola;
+package es.uniovi.asw.Consola;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 
-import main.java.Parser.*;
+import es.uniovi.asw.Parser.*;
 
 public class ConsolaParser extends Parser{
 

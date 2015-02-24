@@ -1,4 +1,4 @@
-package main.java.model;
+package es.uniovi.asw.model;
 
 import java.util.ArrayList;
 

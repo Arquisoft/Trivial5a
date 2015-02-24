@@ -1,8 +1,6 @@
-package main.java.Consola;
+package es.uniovi.asw.Consola;
 
-import java.io.File;
-
-import main.java.Parser.Document;
+import es.uniovi.asw.Parser.Document;
 
 public class Consola {
 
@@ -10,11 +8,11 @@ public class Consola {
 		//Formato: nombreArchivoDeEntrada.tipoDeArchivoDeEntrada nombreArchivoDeSalida
 		Document archivoEntrada = new Document("data/"+args[0]);
 		String nombreArchivoEntrada = ConsolaUtils.getFileName(archivoEntrada.getName());
-		String entradaExtensión = ConsolaUtils.getFileExtension(archivoEntrada);
-		String nombreArchivoSalida = args[1]; //Sin extensión JSON
+		String entradaExtension = ConsolaUtils.getFileExtension(archivoEntrada);
+		String nombreArchivoSalida = args[1]; //Sin extensin JSON
 		
 		ConsolaParser parser = new ConsolaParser(archivoEntrada);
-		System.out.println("Extensión del archivo correcta ");
+		System.out.println("Extensiï¿½n del archivo correcta ");
 		System.out.println("Leyendo fichero...");
 		parser.reader();
 		if(!parser.verificarFormato()) throw new Exception("Formato de entrada no valido");
@@ -22,7 +20,7 @@ public class Consola {
 		parser.transform();
 		System.out.println("Transformando a JSON");
 		ConsolaUtils.saveFile(parser.getTransformado(), nombreArchivoSalida);
-		System.out.println("Transformación completada");
+		System.out.println("Transformaciï¿½n completada");
 	}
 
 }

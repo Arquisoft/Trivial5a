@@ -1,4 +1,4 @@
-package main.java.Parser;
+package es.uniovi.asw.Parser;
 
 import java.io.File;
 
