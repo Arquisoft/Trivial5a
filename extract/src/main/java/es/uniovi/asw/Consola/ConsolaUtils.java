@@ -8,6 +8,11 @@ import es.uniovi.asw.Parser.GiftType;
 
 public class ConsolaUtils {
 
+	public static String[] formatosSalidaValidos = {"JSON"};	
+	
+	/**
+	 * Dado un nombre de archivo completo, devuelve el nombre sin la extension
+	 */
 	public static String getFileName(String path){
 
 		 String fileName = null;
@@ -24,6 +29,9 @@ public class ConsolaUtils {
 		 return fileName;
 		}
 	
+	/**
+	 * Dado archivo, devuelve su extension
+	 */
 	public static String getFileExtension(File file) {
 	    String name = file.getName();
 	    int lastIndexOf = name.lastIndexOf(".");
@@ -33,7 +41,9 @@ public class ConsolaUtils {
 	    return name.substring(lastIndexOf+1);
 	}
 	
-	
+	/**
+	 * Dado un documento con extensión de la forma "preguntas.gift", modifica su tipo.
+	 */
 	public static void setTipoDocumento(Document documento) throws Exception
 	{
 		switch(getFileExtension(documento))
@@ -46,14 +56,56 @@ public class ConsolaUtils {
 		 
 	}
 	
+	/**
+	 * Dado un documento y un nombre de extensión, el documento modifica su tipo a la de la extension
+	 */
+	public static void setTipoDocumento(Document documento, String tipo) throws Exception
+	{
+		switch(tipo)
+		{
+			case "gift":  documento.setTipo(new GiftType()); break;
+			
+			
+			default : throw new Exception("Tipo de archivo no valido");
+		}	 
+	}	
 
+	/**
+	 * Guarda un conjunto de lineas en un fichero con un nombre dado y la extensión JSON
+	 */
 	  public static void saveFile(String[] lines,String savedName) throws Exception {
-	    FileWriter fw = new FileWriter(savedName+".JSON");
+	    FileWriter fw = new FileWriter("src/main/java/es/uniovi/asw/data/"+savedName+".JSON");
 
 	    for (int i = 0; i < lines.length; i++) {
 	      fw.write(lines[i]+"\n");
 	    }
 	    fw.close();
 	  }
+	  
+	 /**
+	 * Guarda un conjunto de lineas en un fichero con un nombre dado y la extensión dada
+	 */
+	  public static void saveFile(String[] lines,String savedName, String extension) throws Exception {
+		    FileWriter fw = new FileWriter("src/main/java/es/uniovi/asw/data/"+savedName+"."+extension);
+
+		    for (int i = 0; i < lines.length; i++) {
+		      fw.write(lines[i]+"\n");
+		    }
+		    fw.close();
+		  }
+	  
+	/**
+	 * Ejecuta el método de transformación correspondiente al formato de salida (actualmente, solo JSON)
+	 */
 	
+	public static void transform(ConsolaParser parser, String formatoSalida) throws Exception
+	{
+		switch(formatoSalida)
+		{
+			case "JSON":  parser.transform(); break;
+			
+			
+			default : throw new Exception("Formato de salida no valido");
+		}	 
+	}
 }
