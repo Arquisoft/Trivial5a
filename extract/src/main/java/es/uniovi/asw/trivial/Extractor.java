@@ -11,7 +11,6 @@ public class Extractor {
 	 * PUNTO DE ENTRADA DEL PROGRAMA
 	 * @param args
 	 * @return
-	 * @throws Exception
 	 */
 	public int run(String[] args)  {
 		try {
@@ -23,50 +22,29 @@ public class Extractor {
 		
 		return 0;
 	}
-	
-
 	public static void main(final String[] args) {
 		new Extractor().automatizar();
-		//new Extractor().run(args);
     }
 	
+	/**
+	 * Metodo que automatiza la ejecucion. Mientras este funcionando
+	 * se podran meter comandos siempre que se quiera
+	 */
+	@SuppressWarnings("resource")
 	public void automatizar()
 	{
-		
-		
-		Runnable run = new Runnable() {
-			@Override
-			public void run() {
-				Scanner scan;
-						System.out.println("Ejecutando automaticamente...(Introduzca comando)");
-					scan =new Scanner(new InputStreamReader(System.in));
-					 String comando = scan.nextLine();
-					String[] args= comando.split(" ");
-					if(args.length!=0)
-						try {
-							new Extractor().run(args);
-						} catch (Exception e) {
-							// TODO Auto-generated catch block
-							e.printStackTrace();
-						}
-					}
-					
-			
-			
-		};
-		
-		try {
-			while(1==1)
-			{
-			Thread threadA1 = new Thread(run, "A");
-			//System.out.println(threadA1.getId());
-			threadA1.run();
-			Thread.sleep(1000);
-			
-			}
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+		String cadena = new String();
+		while(true)
+		{
+		System.out.println("Ejecutando automaticamente...(Introduzca comando)");
+		System.out.println("Introduzca Q para salir");
+		Scanner sc= new Scanner(new InputStreamReader(System.in));
+		cadena=sc.nextLine();
+		if(cadena.toLowerCase().equals("q"))
+			break;
+		String[] comando = cadena.split(" ");
+		if(comando.length!=0)
+			new Extractor().run(comando);
 		}
 	}
 }
