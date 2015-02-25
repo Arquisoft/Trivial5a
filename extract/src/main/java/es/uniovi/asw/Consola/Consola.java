@@ -4,8 +4,18 @@ import es.uniovi.asw.Parser.Document;
 
 public class Consola {
 
+	/**
+	 * EJECUTA LA CONSOLA DE LA APLICACION.
+	 * LEE EL FICHERO, SU EXTENSION, Y LLAMA A LAS CAPAS INFERIORES PARA 
+	 * PARSEO Y PERSISTENCIA
+	 * @param args
+	 * @throws Exception
+	 */
 	public static void main(String[] args) throws Exception {
+		System.out.println("Wellcome to Trivial Extractor");
 		//Formato: nombreArchivoDeEntrada.tipoDeArchivoDeEntrada nombreArchivoDeSalida
+		if(args.length!=2)
+			throw new Exception("Comando mal introducido ");
 		Document archivoEntrada = new Document("data/"+args[0]);
 		String nombreArchivoEntrada = ConsolaUtils.getFileName(archivoEntrada.getName());
 		String entradaExtension = ConsolaUtils.getFileExtension(archivoEntrada);
@@ -19,6 +29,8 @@ public class Consola {
 		else System.out.println("Formato del fichero correcto");
 		parser.transform();
 		System.out.println("Transformando a JSON");
+		System.out.println("-------------Visualizacion de JSON--------------------------");
+		parser.depurarJSON();
 		ConsolaUtils.saveFile(parser.getTransformado(), nombreArchivoSalida);
 		System.out.println("Transformaci�n completada");
 	}

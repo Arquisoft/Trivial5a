@@ -62,23 +62,6 @@ public class Driver {
 			}
 			System.out.println();
 			
-			/*
-			//Borrar base de datos
-			if(db == client.getDB("Trivial5aaaaa")){
-				db.dropDatabase();
-				System.out.println("Base de datos " + db +" borrada");
-			}
-			System.out.println();
-			
-			// Listas las bases de datos
-			System.out.println("Lista de todas las bases de datos tras el borrado de " + db);
-			List<String> basesDeDatosBorrada = client.getDatabaseNames();
-			for (String nombreBaseDatos : basesDeDatosBorrada) {
-				System.out.println(" - " + nombreBaseDatos);
-			}
-			System.out.println();
-			*/
-
 		} else {
 			System.out.println("Error: Conexión no establecida");
 		}
