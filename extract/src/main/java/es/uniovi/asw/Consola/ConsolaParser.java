@@ -10,46 +10,47 @@ import es.uniovi.asw.Parser.Parser;
 
 public class ConsolaParser extends Parser {
 
-	
-	
-	public ConsolaParser(String[] lineas) {
-		super(lineas);
-		// TODO Auto-generated constructor stub
-	}
-
-	public ConsolaParser(Document document) throws Exception  {
-		this.file=document;
+	/**
+	 * Constructor usado cuando el nombre del documento ya contiente su extensión
+	 */
+	public ConsolaParser(Document document) throws Exception {
+		this.file = document;
 		ConsolaUtils.setTipoDocumento(document);
 	}
-	
+
+	/**
+	 * Constructor usado cuando el nombre del documento no contiente su extensión
+	 */
+	public ConsolaParser(Document document, String tipoEntrada)
+			throws Exception {
+		this.file = document;
+		ConsolaUtils.setTipoDocumento(document, tipoEntrada);
+	}
+
 	/**
 	 * Lee el archivo de entrada
+	 * 
 	 * @throws IOException
 	 */
-	public void reader() throws IOException
-	{	
-		String leido= new String();
-		 file= new Document("src/main/java/es/uniovi/asw/data/preguntas.txt");
-		 file.setTipo(new GiftType());
-		//Poner ruta de datos
-		 
+	public void reader() throws IOException {
+		String leido = new String();
+		// Poner ruta de datos
+
 		BufferedReader bf = new BufferedReader(new FileReader(file));
-		while(bf.ready())
-		{
-			leido+=bf.readLine()+"\n";
+		while (bf.ready()) {
+			leido += bf.readLine() + "\n";
 		}
 		lineas = leido.split("[\r\n]");
-		bf.close();	
+		bf.close();
 	}
-	
+
 	/**
-	 * Saca por consola para el proceso de depurabilidad el mapa JSON
-	 * para que el usuario lo vea
+	 * Saca por consola para el proceso de depurabilidad para que el usuario lo
+	 * vea
 	 */
-	public void depurarJSON()
-	{
-		for (String mapaJSON : super.getTransformado())
-			System.out.println(mapaJSON);
+	public void depurar() {
+		for (String linea : super.getTransformado())
+			System.out.println(linea);
 	}
 
 }
