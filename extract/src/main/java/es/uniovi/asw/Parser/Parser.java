@@ -1,31 +1,22 @@
 package es.uniovi.asw.Parser;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
-
 public class Parser {
 	
 	protected String[] lineas;
 	String[] transformado;
 	protected Document file;
 	
-	public void reader() throws IOException
-	{	String leido= new String();
-		 file= new Document("data/preguntas.txt");
-		 file.setTipo(new GiftType());
-		//Poner ruta de datos
-		 
-		BufferedReader bf = new BufferedReader(new FileReader(file));
-		while(bf.ready())
-		{
-			leido+=bf.readLine()+"\n";
-		}
-		lineas = leido.split("[\r\n]");
-		bf.close();	
+	
+	public Parser(){}
+	/**
+	 * 
+	 * @param lineas
+	 */
+	public Parser(String[] lineas) {
+		super();
+		this.lineas = lineas;
 	}
-	
-	
+
 	/**
 	 * Metodo que verifica que el formato de entrada sea correcto
 	 */

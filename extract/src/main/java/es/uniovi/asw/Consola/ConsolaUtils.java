@@ -43,7 +43,7 @@ public class ConsolaUtils {
 			
 			default : throw new Exception("Tipo de archivo no valido");
 		}
-		
+		 
 	}
 	
 

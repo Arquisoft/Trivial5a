@@ -1,27 +1,11 @@
 package es.uniovi.asw.Parser;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import es.uniovi.asw.model.Category;
 import es.uniovi.asw.model.Question;
 
-public class GiftType implements TipoDocumento {
+public class GiftType extends AbstractDocument {
 
-	List<Category> categorias = new ArrayList<Category>();
 	
-	@Override
-	public String[] transform(String[] leido) {
-		
-		
-		String [] mapaJSON =new String[categorias.size()];
-			
-		for(int i =0;i<mapaJSON.length;i++)
-		{	
-			mapaJSON[i]="{"+categorias.get(i).toJSON()+"";
-		}
-		return mapaJSON;
-	}
 
 	@Override
 	public boolean verify(String[] leido) {
