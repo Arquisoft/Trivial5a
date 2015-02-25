@@ -34,6 +34,9 @@ public class Consola {
 		parser.depurar();
 		ConsolaUtils.saveFile(parser.getTransformado(), nombreArchivoSalida);
 		System.out.println("Transformacion completada");
+		
+		parser.persist();
+
 		}
 		
 		//Formato: nombreArchivoDeEntrada tipoEntrada nombreArchivoDeSalida tipoArchivoDeSalida
@@ -55,6 +58,9 @@ public class Consola {
 			parser.depurar();
 			ConsolaUtils.saveFile(parser.getTransformado(),args[2],salidaExtension);
 			System.out.println();
+			
+			parser.persist();
+			
 		}
 		else throw new Exception("Comando mal introducido ");
 	}

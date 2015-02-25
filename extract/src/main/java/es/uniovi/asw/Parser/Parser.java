@@ -1,5 +1,7 @@
 package es.uniovi.asw.Parser;
 
+import es.uniovi.asw.conf.Driver;
+
 public class Parser {
 	
 	protected String[] lineas;
@@ -50,6 +52,13 @@ public class Parser {
 		return file;
 	}
 	
-	
+	/**
+	 * Guarda en memoria el mapa JSON del fichero de entrada
+	 */
+	public void persist()
+	{
+		Driver D = new Driver();
+		D.save(transformado);
+	}
 
 }
