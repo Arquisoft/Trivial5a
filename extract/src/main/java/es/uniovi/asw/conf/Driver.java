@@ -20,7 +20,7 @@ public class Driver {
 	public void save(String[] JSONarray) {
 		DB db;
 		try {
-			client = new MongoClient(new ServerAddress("localhost", 27018));
+			client = new MongoClient(new ServerAddress("localhost", 27017));
 
 		} catch (UnknownHostException e) {
 			e.printStackTrace();
@@ -31,21 +31,21 @@ public class Driver {
 
 			// Crea una tabla si no existe y agrega datos
 			table = db.getCollection("categorias");
-			
+
 			DBObject[] categorias = new BasicDBObject[JSONarray.length];
-			
-			System.out.println("Tabla " + table );
-			for (int i = 0; i < JSONarray.length; i++) { 
-				categorias[i]= (DBObject) JSON.parse(JSONarray[i]);
+
+			System.out.println("Tabla " + table);
+			for (int i = 0; i < JSONarray.length; i++) {
+				categorias[i] = (DBObject) JSON.parse(JSONarray[i]);
 				System.out.println(categorias[i]);
 			}
-			
+
 			for (int i = 0; i < categorias.length; i++) { // Insertar tablas
-				table.insert(categorias[i]); 
+				table.insert(categorias[i]);
 				// System.out.println("Bien insertado");
 			}
 			System.out.println();
-			
+
 			// Listas las bases de datos
 			System.out.println("Lista de todas las bases de datos: ");
 			List<String> basesDeDatos = client.getDatabaseNames();
@@ -61,7 +61,24 @@ public class Driver {
 				System.out.println(" - " + coleccion);
 			}
 			System.out.println();
-			
+
+			/*
+			// Borrar base de datos
+			if (db == client.getDB("Trivial5a")) {//Base de datos que queremos borrar
+				db.dropDatabase();
+				System.out.println("Base de datos " + db + " borrada");
+			}
+			System.out.println();
+
+			// Listas las bases de datos
+			System.out.println("Lista de todas las bases de datos tras el borrado de "
+							+ db);
+			List<String> basesDeDatosBorrada = client.getDatabaseNames();
+			for (String nombreBaseDatos : basesDeDatosBorrada) {
+				System.out.println(" - " + nombreBaseDatos);
+			}
+			System.out.println();*/
+
 		} else {
 			System.out.println("Error: Conexión no establecida");
 		}
