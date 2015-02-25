@@ -1,6 +1,6 @@
 ﻿$CATEGORY: Arte y Literatura
 
-::Q1::¿Quién pintó el “Gernika”? {
+::Q1::¿Quién pintó el "Gernika"? {
 ~Salvador Dalí
 ~Francisco de Goya
 =Pablo Picasso
@@ -12,7 +12,7 @@
 ~Cubismo
 }
 
-::Q3::¿Quién escribió “Don Quijote de la Mancha"? {
+::Q3::¿Quién escribió "Don Quijote de la Mancha"? {
 ~Lope de Vega
 =Miguel de Cervantes
 ~Francisco de Quevedo
@@ -24,7 +24,7 @@
 ~El Lazarillo de Tormes
 }
 
-::Q5::¿Qué premio Nobel de literatura escribió “Cien años de soledad”? {
+::Q5::¿Qué premio Nobel de literatura escribió "Cien años de soledad"? {
 ~Juan Ramón Jiménez
 ~Pablo Neruda
 =Gabriel García Márquez 
@@ -39,7 +39,7 @@
 
 $CATEGORY: Música y Cine
 
-::Q7::¿Qué actor español ganó el Óscar al mejor actor de reparto por el film “No country for old men”? {
+::Q7::¿Qué actor español ganó el Óscar al mejor actor de reparto por el film "No country for old men"? {
 ~Antonio Banderas
 =Javier Bardem
 ~Benicio del Toro 
@@ -57,7 +57,7 @@ $CATEGORY: Música y Cine
 ~Bossa Nova
 }
 
-::Q10::¿Qué director español ganó el Óscar a la mejor película de habla no inglesa por “Mar adentro”? {
+::Q10::¿Qué director español ganó el Óscar a la mejor película de habla no inglesa por "Mar adentro"? {
 =Alejandro Amenábar
 ~Pedro Almodóvar
 ~Fernando Trueba 
@@ -69,7 +69,7 @@ $CATEGORY: Música y Cine
 =Flamenco 
 }
 
-::Q12::¿De qué país son originarias las “rancheras”? {
+::Q12::¿De qué país son originarias las "Rancheras"? {
 ~Argentina
 ~Colombia
 =México 
@@ -79,7 +79,7 @@ $CATEGORY: Música y Cine
 $CATEGORY: Deportes
 
 ::Q13::¿En qué equipo de la NBA juega el pívot español Pau Gasol? {
-~Menphis Grizzlees
+~Memphis Grizzlees
 =Chicago Bulls
 ~Los Angeles Lakers 
 }
@@ -108,7 +108,7 @@ $CATEGORY: Deportes
 =Miguel Induráin
 }
 
-::Q18::¿Qué legendario jugador de fútbol marcó un gol con “la mano de Dios”? {
+::Q18::¿Qué legendario jugador de fútbol marcó un gol con "la mano de Dios"? {
 ~Pelé
 ~Johan Cruyff
 =Maradona 
@@ -117,7 +117,7 @@ $CATEGORY: Deportes
 
 $CATEGORY: Cultura y Tradición
 
-::Q19::¿Qué es una “media verónica”? {
+::Q19::¿Qué es una "media verónica"? {
 ~Una bebida
 ~Un paso de baile regional
 =Un pase de toreo 
@@ -165,8 +165,8 @@ $CATEGORY: Historia y Geografía
 
 ::Q26::¿Por qué se decía que en España nunca se ponía el sol? {
 ~Porque siempre hacía buen tiempo
-=Porque España poseía colonias en todos loscontinentes
-~Porque España estaba viviendo “su siglo de las luces”.
+=Porque España poseía colonias en todos los continentes
+~Porque España estaba viviendo "su siglo de las luces"
 }
 
 ::Q27::¿Cuál es la capital de Azerbaijan? {
@@ -188,7 +188,7 @@ $CATEGORY: Historia y Geografía
 ~Evo Morales y Juan Manuel Santos 
 }
 
-::Q30::¿Cuántas comunidades autónomas componen España?
+::Q30::¿Cuántas comunidades autónomas componen España? {
 ~15
 ~16
 =17 

@@ -1,0 +1,2013 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE questestinterop SYSTEM "ims_qtiasiv1p2.dtd">
+
+<questestinterop>
+<assessment ident="trivial" title="Trivial">
+
+<item title="¿Quién pintó el Gernika?" ident="4046274820511086">
+<itemmetadata>
+<qmd_itemtype>Multiple Choice</qmd_itemtype>
+<qmd_status>Normal</qmd_status>
+<qmd_toolvendor>Questionmark Perception</qmd_toolvendor>
+<qmd_topic>Arte y Literatura</qmd_topic>
+</itemmetadata>
+<presentation>
+<material>
+<mattext texttype="text/html"><![CDATA[¿Quién pintó el "Gernika"?]]></mattext>
+</material>
+<response_lid ident="1">
+<render_choice shuffle="Yes">
+<response_label ident="A">
+<material>
+<mattext texttype="text/html"><![CDATA[Salvador Dalí]]></mattext>
+</material>
+</response_label>
+<response_label ident="B">
+<material>
+<mattext texttype="text/html"><![CDATA[Francisco de Goya]]></mattext>
+</material>
+</response_label>
+<response_label ident="C">
+<material>
+<mattext texttype="text/html"><![CDATA[Pablo Picasso]]></mattext>
+</material>
+</response_label>
+</render_choice>
+</response_lid>
+</presentation>
+<resprocessing>
+<outcomes>
+<decvar/>
+</outcomes>
+<respcondition title="0 Salvador Dalí" >
+<conditionvar>
+<varequal respident="1">A</varequal>
+</conditionvar>
+<setvar action="Set">0</setvar>
+<displayfeedback linkrefid="0 Salvador Dalí"/>
+</respcondition>
+<respcondition title="1 Francisco de Goya" >
+<conditionvar>
+<varequal respident="1">B</varequal>
+</conditionvar>
+<setvar action="Set">0</setvar>
+<displayfeedback linkrefid="1 Francisco de Goya"/>
+</respcondition>
+<respcondition title="2 Pablo Picasso" >
+<conditionvar>
+<varequal respident="1">C</varequal>
+</conditionvar>
+<setvar action="Set">100</setvar>
+<displayfeedback linkrefid="2 Pablo Picasso"/>
+</respcondition>
+</resprocessing>
+<itemfeedback ident="0 Salvador Dalí" view="Candidate">
+</itemfeedback>
+<itemfeedback ident="1 Francisco de Goya" view="Candidate">
+</itemfeedback>
+<itemfeedback ident="2 Pablo Picasso" view="Candidate">
+</itemfeedback>
+</item>
+
+
+<item title="¿A qué movimiento pertenecía Salvador Dalí?" ident="5960496330863391">
+<itemmetadata>
+<qmd_itemtype>Multiple Choice</qmd_itemtype>
+<qmd_status>Normal</qmd_status>
+<qmd_toolvendor>Questionmark Perception</qmd_toolvendor>
+<qmd_topic>Arte y Literatura</qmd_topic>
+</itemmetadata>
+<presentation>
+<material>
+<mattext texttype="text/html"><![CDATA[¿A qué movimiento pertenecía Salvador Dalí?]]></mattext>
+</material>
+<response_lid ident="1">
+<render_choice shuffle="Yes">
+<response_label ident="A">
+<material>
+<mattext texttype="text/html"><![CDATA[Surrealismo]]></mattext>
+</material>
+</response_label>
+<response_label ident="B">
+<material>
+<mattext texttype="text/html"><![CDATA[Futurismo]]></mattext>
+</material>
+</response_label>
+<response_label ident="C">
+<material>
+<mattext texttype="text/html"><![CDATA[Cubismo]]></mattext>
+</material>
+</response_label>
+</render_choice>
+</response_lid>
+</presentation>
+<resprocessing>
+<outcomes>
+<decvar/>
+</outcomes>
+<respcondition title="0 Surrealismo" >
+<conditionvar>
+<varequal respident="1">A</varequal>
+</conditionvar>
+<setvar action="Set">100</setvar>
+<displayfeedback linkrefid="0 Surrealismo"/>
+</respcondition>
+<respcondition title="1 Futurismo" >
+<conditionvar>
+<varequal respident="1">B</varequal>
+</conditionvar>
+<setvar action="Set">0</setvar>
+<displayfeedback linkrefid="1 Futurismo"/>
+</respcondition>
+<respcondition title="2 Cubismo" >
+<conditionvar>
+<varequal respident="1">C</varequal>
+</conditionvar>
+<setvar action="Set">0</setvar>
+<displayfeedback linkrefid="2 Cubismo"/>
+</respcondition>
+</resprocessing>
+<itemfeedback ident="0 Surrealismo" view="Candidate">
+</itemfeedback>
+<itemfeedback ident="1 Futurismo" view="Candidate">
+</itemfeedback>
+<itemfeedback ident="2 Cubismo" view="Candidate">
+</itemfeedback>
+</item>
+
+
+<item title="¿Quién escribió Don Quijote de la Mancha?" ident="3501878397147909">
+<itemmetadata>
+<qmd_itemtype>Multiple Choice</qmd_itemtype>
+<qmd_status>Normal</qmd_status>
+<qmd_toolvendor>Questionmark Perception</qmd_toolvendor>
+<qmd_topic>Arte y Literatura</qmd_topic>
+</itemmetadata>
+<presentation>
+<material>
+<mattext texttype="text/html"><![CDATA[¿Quién escribió "Don Quijote de la Mancha"?]]></mattext>
+</material>
+<response_lid ident="1">
+<render_choice shuffle="Yes">
+<response_label ident="A">
+<material>
+<mattext texttype="text/html"><![CDATA[Lope de Vega]]></mattext>
+</material>
+</response_label>
+<response_label ident="B">
+<material>
+<mattext texttype="text/html"><![CDATA[Miguel de Cervantes]]></mattext>
+</material>
+</response_label>
+<response_label ident="C">
+<material>
+<mattext texttype="text/html"><![CDATA[Francisco de Quevedo]]></mattext>
+</material>
+</response_label>
+</render_choice>
+</response_lid>
+</presentation>
+<resprocessing>
+<outcomes>
+<decvar/>
+</outcomes>
+<respcondition title="0 Lope de Vega" >
+<conditionvar>
+<varequal respident="1">A</varequal>
+</conditionvar>
+<setvar action="Set">0</setvar>
+<displayfeedback linkrefid="0 Lope de Vega"/>
+</respcondition>
+<respcondition title="1 Miguel de Cervantes" >
+<conditionvar>
+<varequal respident="1">B</varequal>
+</conditionvar>
+<setvar action="Set">100</setvar>
+<displayfeedback linkrefid="1 Miguel de Cervantes"/>
+</respcondition>
+<respcondition title="2 Francisco de Quevedo" >
+<conditionvar>
+<varequal respident="1">C</varequal>
+</conditionvar>
+<setvar action="Set">0</setvar>
+<displayfeedback linkrefid="2 Francisco de Quevedo"/>
+</respcondition>
+</resprocessing>
+<itemfeedback ident="0 Lope de Vega" view="Candidate">
+</itemfeedback>
+<itemfeedback ident="1 Miguel de Cervantes" view="Candidate">
+</itemfeedback>
+<itemfeedback ident="2 Francisco de Quevedo" view="Candidate">
+</itemfeedback>
+</item>
+
+
+<item title="¿Cómo se llama la 1ª obra que se conoce escrita en español?" ident="2331249385876604">
+<itemmetadata>
+<qmd_itemtype>Multiple Choice</qmd_itemtype>
+<qmd_status>Normal</qmd_status>
+<qmd_toolvendor>Questionmark Perception</qmd_toolvendor>
+<qmd_topic>Arte y Literatura</qmd_topic>
+</itemmetadata>
+<presentation>
+<material>
+<mattext texttype="text/html"><![CDATA[¿Cómo se llama la 1ª obra que se conoce escrita en español?]]></mattext>
+</material>
+<response_lid ident="1">
+<render_choice shuffle="Yes">
+<response_label ident="A">
+<material>
+<mattext texttype="text/html"><![CDATA[Don Quijote de la Mancha]]></mattext>
+</material>
+</response_label>
+<response_label ident="B">
+<material>
+<mattext texttype="text/html"><![CDATA[El Cantar de Mio Cid]]></mattext>
+</material>
+</response_label>
+<response_label ident="C">
+<material>
+<mattext texttype="text/html"><![CDATA[El Lazarillo de Tormes]]></mattext>
+</material>
+</response_label>
+</render_choice>
+</response_lid>
+</presentation>
+<resprocessing>
+<outcomes>
+<decvar/>
+</outcomes>
+<respcondition title="0 Don Quijote de la Mancha" >
+<conditionvar>
+<varequal respident="1">A</varequal>
+</conditionvar>
+<setvar action="Set">0</setvar>
+<displayfeedback linkrefid="0 Don Quijote de la Mancha"/>
+</respcondition>
+<respcondition title="1 El Cantar de Mio Cid" >
+<conditionvar>
+<varequal respident="1">B</varequal>
+</conditionvar>
+<setvar action="Set">100</setvar>
+<displayfeedback linkrefid="1 El Cantar de Mio Cid"/>
+</respcondition>
+<respcondition title="2 El Lazarillo de Tormes" >
+<conditionvar>
+<varequal respident="1">C</varequal>
+</conditionvar>
+<setvar action="Set">0</setvar>
+<displayfeedback linkrefid="2 El Lazarillo de Tormes"/>
+</respcondition>
+</resprocessing>
+<itemfeedback ident="0 Don Quijote de la Mancha" view="Candidate">
+</itemfeedback>
+<itemfeedback ident="1 El Cantar de Mio Cid" view="Candidate">
+</itemfeedback>
+<itemfeedback ident="2 El Lazarillo de Tormes" view="Candidate">
+</itemfeedback>
+</item>
+
+
+<item title="¿Qué premio Nobel de literatura escribió Cien años de soledad?" ident="6137844688880081">
+<itemmetadata>
+<qmd_itemtype>Multiple Choice</qmd_itemtype>
+<qmd_status>Normal</qmd_status>
+<qmd_toolvendor>Questionmark Perception</qmd_toolvendor>
+<qmd_topic>Arte y Literatura</qmd_topic>
+</itemmetadata>
+<presentation>
+<material>
+<mattext texttype="text/html"><![CDATA[¿Qué premio Nobel de literatura escribió "Cien años de soledad"?]]></mattext>
+</material>
+<response_lid ident="1">
+<render_choice shuffle="Yes">
+<response_label ident="A">
+<material>
+<mattext texttype="text/html"><![CDATA[Juan Ramón Jiménez]]></mattext>
+</material>
+</response_label>
+<response_label ident="B">
+<material>
+<mattext texttype="text/html"><![CDATA[Pablo Neruda]]></mattext>
+</material>
+</response_label>
+<response_label ident="C">
+<material>
+<mattext texttype="text/html"><![CDATA[Gabriel García Márquez]]></mattext>
+</material>
+</response_label>
+</render_choice>
+</response_lid>
+</presentation>
+<resprocessing>
+<outcomes>
+<decvar/>
+</outcomes>
+<respcondition title="0 Juan Ramón Jiménez" >
+<conditionvar>
+<varequal respident="1">A</varequal>
+</conditionvar>
+<setvar action="Set">0</setvar>
+<displayfeedback linkrefid="0 Juan Ramón Jiménez"/>
+</respcondition>
+<respcondition title="1 Pablo Neruda" >
+<conditionvar>
+<varequal respident="1">B</varequal>
+</conditionvar>
+<setvar action="Set">0</setvar>
+<displayfeedback linkrefid="1 Pablo Neruda"/>
+</respcondition>
+<respcondition title="2 Gabriel García Márquez" >
+<conditionvar>
+<varequal respident="1">C</varequal>
+</conditionvar>
+<setvar action="Set">100</setvar>
+<displayfeedback linkrefid="2 Gabriel García Márquez"/>
+</respcondition>
+</resprocessing>
+<itemfeedback ident="0 Juan Ramón Jiménez" view="Candidate">
+</itemfeedback>
+<itemfeedback ident="1 Pablo Neruda" view="Candidate">
+</itemfeedback>
+<itemfeedback ident="2 Gabriel García Márquez" view="Candidate">
+</itemfeedback>
+</item>
+
+
+<item title="¿En qué célebre cuadro retrató Goya la invasión de España por parte de la armada francesa?" ident="8067133387319426">
+<itemmetadata>
+<qmd_itemtype>Multiple Choice</qmd_itemtype>
+<qmd_status>Normal</qmd_status>
+<qmd_toolvendor>Questionmark Perception</qmd_toolvendor>
+<qmd_topic>Arte y Literatura</qmd_topic>
+</itemmetadata>
+<presentation>
+<material>
+<mattext texttype="text/html"><![CDATA[¿En qué célebre cuadro retrató Goya la invasión de España por parte de la armada francesa?]]></mattext>
+</material>
+<response_lid ident="1">
+<render_choice shuffle="Yes">
+<response_label ident="A">
+<material>
+<mattext texttype="text/html"><![CDATA[Saturno devorando a sus hijos]]></mattext>
+</material>
+</response_label>
+<response_label ident="B">
+<material>
+<mattext texttype="text/html"><![CDATA[Los fusilamientos del 3 de mayo]]></mattext>
+</material>
+</response_label>
+<response_label ident="C">
+<material>
+<mattext texttype="text/html"><![CDATA[Akelarre]]></mattext>
+</material>
+</response_label>
+</render_choice>
+</response_lid>
+</presentation>
+<resprocessing>
+<outcomes>
+<decvar/>
+</outcomes>
+<respcondition title="0 Saturno devorando a sus hijos" >
+<conditionvar>
+<varequal respident="1">A</varequal>
+</conditionvar>
+<setvar action="Set">0</setvar>
+<displayfeedback linkrefid="0 Saturno devorando a sus hijos"/>
+</respcondition>
+<respcondition title="1 Los fusilamientos del 3 de mayo" >
+<conditionvar>
+<varequal respident="1">B</varequal>
+</conditionvar>
+<setvar action="Set">100</setvar>
+<displayfeedback linkrefid="1 Los fusilamientos del 3 de mayo"/>
+</respcondition>
+<respcondition title="2 Akelarre" >
+<conditionvar>
+<varequal respident="1">C</varequal>
+</conditionvar>
+<setvar action="Set">0</setvar>
+<displayfeedback linkrefid="2 Akelarre"/>
+</respcondition>
+</resprocessing>
+<itemfeedback ident="0 Saturno devorando a sus hijos" view="Candidate">
+</itemfeedback>
+<itemfeedback ident="1 Los fusilamientos del 3 de mayo" view="Candidate">
+</itemfeedback>
+<itemfeedback ident="2 Akelarre" view="Candidate">
+</itemfeedback>
+</item>
+
+<item title="¿Qué actor español ganó el Óscar al mejor actor de reparto por el film No country for old men?" ident="8235440320136329">
+<itemmetadata>
+<qmd_itemtype>Multiple Choice</qmd_itemtype>
+<qmd_status>Normal</qmd_status>
+<qmd_toolvendor>Questionmark Perception</qmd_toolvendor>
+<qmd_topic>Música y Cine</qmd_topic>
+</itemmetadata>
+<presentation>
+<material>
+<mattext texttype="text/html"><![CDATA[¿Qué actor español ganó el Óscar al mejor actor de reparto por el film "No country for old men"?]]></mattext>
+</material>
+<response_lid ident="1">
+<render_choice shuffle="Yes">
+<response_label ident="A">
+<material>
+<mattext texttype="text/html"><![CDATA[Antonio Banderas]]></mattext>
+</material>
+</response_label>
+<response_label ident="B">
+<material>
+<mattext texttype="text/html"><![CDATA[Javier Bardem]]></mattext>
+</material>
+</response_label>
+<response_label ident="C">
+<material>
+<mattext texttype="text/html"><![CDATA[Benicio del Toro]]></mattext>
+</material>
+</response_label>
+</render_choice>
+</response_lid>
+</presentation>
+<resprocessing>
+<outcomes>
+<decvar/>
+</outcomes>
+<respcondition title="0 Antonio Banderas" >
+<conditionvar>
+<varequal respident="1">A</varequal>
+</conditionvar>
+<setvar action="Set">0</setvar>
+<displayfeedback linkrefid="0 Antonio Banderas"/>
+</respcondition>
+<respcondition title="1 Javier Bardem" >
+<conditionvar>
+<varequal respident="1">B</varequal>
+</conditionvar>
+<setvar action="Set">100</setvar>
+<displayfeedback linkrefid="1 Javier Bardem"/>
+</respcondition>
+<respcondition title="2 Benicio del Toro" >
+<conditionvar>
+<varequal respident="1">C</varequal>
+</conditionvar>
+<setvar action="Set">0</setvar>
+<displayfeedback linkrefid="2 Benicio del Toro"/>
+</respcondition>
+</resprocessing>
+<itemfeedback ident="0 Antonio Banderas" view="Candidate">
+</itemfeedback>
+<itemfeedback ident="1 Javier Bardem" view="Candidate">
+</itemfeedback>
+<itemfeedback ident="2 Benicio del Toro" view="Candidate">
+</itemfeedback>
+</item>
+
+
+<item title="¿Por qué film ganó Almodóvar el Óscar a la mejor película de habla no inglesa?" ident="2627600546371588">
+<itemmetadata>
+<qmd_itemtype>Multiple Choice</qmd_itemtype>
+<qmd_status>Normal</qmd_status>
+<qmd_toolvendor>Questionmark Perception</qmd_toolvendor>
+<qmd_topic>Música y Cine</qmd_topic>
+</itemmetadata>
+<presentation>
+<material>
+<mattext texttype="text/html"><![CDATA[¿Por qué film ganó Almodóvar el Óscar a la mejor película de habla no inglesa?]]></mattext>
+</material>
+<response_lid ident="1">
+<render_choice shuffle="Yes">
+<response_label ident="A">
+<material>
+<mattext texttype="text/html"><![CDATA[Hable con ella]]></mattext>
+</material>
+</response_label>
+<response_label ident="B">
+<material>
+<mattext texttype="text/html"><![CDATA[Todo sobre mi madre]]></mattext>
+</material>
+</response_label>
+<response_label ident="C">
+<material>
+<mattext texttype="text/html"><![CDATA[La mala educación]]></mattext>
+</material>
+</response_label>
+</render_choice>
+</response_lid>
+</presentation>
+<resprocessing>
+<outcomes>
+<decvar/>
+</outcomes>
+<respcondition title="0 Hable con ella" >
+<conditionvar>
+<varequal respident="1">A</varequal>
+</conditionvar>
+<setvar action="Set">0</setvar>
+<displayfeedback linkrefid="0 Hable con ella"/>
+</respcondition>
+<respcondition title="1 Todo sobre mi madre" >
+<conditionvar>
+<varequal respident="1">B</varequal>
+</conditionvar>
+<setvar action="Set">100</setvar>
+<displayfeedback linkrefid="1 Todo sobre mi madre"/>
+</respcondition>
+<respcondition title="2 La mala educación" >
+<conditionvar>
+<varequal respident="1">C</varequal>
+</conditionvar>
+<setvar action="Set">0</setvar>
+<displayfeedback linkrefid="2 La mala educación"/>
+</respcondition>
+</resprocessing>
+<itemfeedback ident="0 Hable con ella" view="Candidate">
+</itemfeedback>
+<itemfeedback ident="1 Todo sobre mi madre" view="Candidate">
+</itemfeedback>
+<itemfeedback ident="2 La mala educación" view="Candidate">
+</itemfeedback>
+</item>
+
+
+<item title="¿A qué género musical latinoamericano perteneció el cantante Carlos Gardel?" ident="8418170796248424">
+<itemmetadata>
+<qmd_itemtype>Multiple Choice</qmd_itemtype>
+<qmd_status>Normal</qmd_status>
+<qmd_toolvendor>Questionmark Perception</qmd_toolvendor>
+<qmd_topic>Música y Cine</qmd_topic>
+</itemmetadata>
+<presentation>
+<material>
+<mattext texttype="text/html"><![CDATA[¿A qué género musical latinoamericano perteneció el cantante Carlos Gardel?]]></mattext>
+</material>
+<response_lid ident="1">
+<render_choice shuffle="Yes">
+<response_label ident="A">
+<material>
+<mattext texttype="text/html"><![CDATA[Tango]]></mattext>
+</material>
+</response_label>
+<response_label ident="B">
+<material>
+<mattext texttype="text/html"><![CDATA[Salsa]]></mattext>
+</material>
+</response_label>
+<response_label ident="C">
+<material>
+<mattext texttype="text/html"><![CDATA[Bossa Nova]]></mattext>
+</material>
+</response_label>
+</render_choice>
+</response_lid>
+</presentation>
+<resprocessing>
+<outcomes>
+<decvar/>
+</outcomes>
+<respcondition title="0 Tango" >
+<conditionvar>
+<varequal respident="1">A</varequal>
+</conditionvar>
+<setvar action="Set">100</setvar>
+<displayfeedback linkrefid="0 Tango"/>
+</respcondition>
+<respcondition title="1 Salsa" >
+<conditionvar>
+<varequal respident="1">B</varequal>
+</conditionvar>
+<setvar action="Set">0</setvar>
+<displayfeedback linkrefid="1 Salsa"/>
+</respcondition>
+<respcondition title="2 Bossa Nova" >
+<conditionvar>
+<varequal respident="1">C</varequal>
+</conditionvar>
+<setvar action="Set">0</setvar>
+<displayfeedback linkrefid="2 Bossa Nova"/>
+</respcondition>
+</resprocessing>
+<itemfeedback ident="0 Tango" view="Candidate">
+</itemfeedback>
+<itemfeedback ident="1 Salsa" view="Candidate">
+</itemfeedback>
+<itemfeedback ident="2 Bossa Nova" view="Candidate">
+</itemfeedback>
+</item>
+
+
+<item title="¿Qué director español ganó el Óscar a la mejor película de habla no inglesa por Mar adentro?" ident="7495366393659846">
+<itemmetadata>
+<qmd_itemtype>Multiple Choice</qmd_itemtype>
+<qmd_status>Normal</qmd_status>
+<qmd_toolvendor>Questionmark Perception</qmd_toolvendor>
+<qmd_topic>Música y Cine</qmd_topic>
+</itemmetadata>
+<presentation>
+<material>
+<mattext texttype="text/html"><![CDATA[¿Qué director español ganó el Óscar a la mejor película de habla no inglesa por "Mar adentro"?]]></mattext>
+</material>
+<response_lid ident="1">
+<render_choice shuffle="Yes">
+<response_label ident="A">
+<material>
+<mattext texttype="text/html"><![CDATA[Alejandro Amenábar]]></mattext>
+</material>
+</response_label>
+<response_label ident="B">
+<material>
+<mattext texttype="text/html"><![CDATA[Pedro Almodóvar]]></mattext>
+</material>
+</response_label>
+<response_label ident="C">
+<material>
+<mattext texttype="text/html"><![CDATA[Fernando Trueba]]></mattext>
+</material>
+</response_label>
+</render_choice>
+</response_lid>
+</presentation>
+<resprocessing>
+<outcomes>
+<decvar/>
+</outcomes>
+<respcondition title="0 Alejandro Amenábar" >
+<conditionvar>
+<varequal respident="1">A</varequal>
+</conditionvar>
+<setvar action="Set">100</setvar>
+<displayfeedback linkrefid="0 Alejandro Amenábar"/>
+</respcondition>
+<respcondition title="1 Pedro Almodóvar" >
+<conditionvar>
+<varequal respident="1">B</varequal>
+</conditionvar>
+<setvar action="Set">0</setvar>
+<displayfeedback linkrefid="1 Pedro Almodóvar"/>
+</respcondition>
+<respcondition title="2 Fernando Trueba" >
+<conditionvar>
+<varequal respident="1">C</varequal>
+</conditionvar>
+<setvar action="Set">0</setvar>
+<displayfeedback linkrefid="2 Fernando Trueba"/>
+</respcondition>
+</resprocessing>
+<itemfeedback ident="0 Alejandro Amenábar" view="Candidate">
+</itemfeedback>
+<itemfeedback ident="1 Pedro Almodóvar" view="Candidate">
+</itemfeedback>
+<itemfeedback ident="2 Fernando Trueba" view="Candidate">
+</itemfeedback>
+</item>
+
+
+<item title="Paco de Lucía, Vicente Amigo y Tomatito son tres famosos músicos de…" ident="1334752312919437">
+<itemmetadata>
+<qmd_itemtype>Multiple Choice</qmd_itemtype>
+<qmd_status>Normal</qmd_status>
+<qmd_toolvendor>Questionmark Perception</qmd_toolvendor>
+<qmd_topic>Música y Cine</qmd_topic>
+</itemmetadata>
+<presentation>
+<material>
+<mattext texttype="text/html"><![CDATA[Paco de Lucía, Vicente Amigo y Tomatito son tres famosos músicos de…]]></mattext>
+</material>
+<response_lid ident="1">
+<render_choice shuffle="Yes">
+<response_label ident="A">
+<material>
+<mattext texttype="text/html"><![CDATA[Tango]]></mattext>
+</material>
+</response_label>
+<response_label ident="B">
+<material>
+<mattext texttype="text/html"><![CDATA[Salsa]]></mattext>
+</material>
+</response_label>
+<response_label ident="C">
+<material>
+<mattext texttype="text/html"><![CDATA[Flamenco]]></mattext>
+</material>
+</response_label>
+</render_choice>
+</response_lid>
+</presentation>
+<resprocessing>
+<outcomes>
+<decvar/>
+</outcomes>
+<respcondition title="0 Tango" >
+<conditionvar>
+<varequal respident="1">A</varequal>
+</conditionvar>
+<setvar action="Set">0</setvar>
+<displayfeedback linkrefid="0 Tango"/>
+</respcondition>
+<respcondition title="1 Salsa" >
+<conditionvar>
+<varequal respident="1">B</varequal>
+</conditionvar>
+<setvar action="Set">0</setvar>
+<displayfeedback linkrefid="1 Salsa"/>
+</respcondition>
+<respcondition title="2 Flamenco" >
+<conditionvar>
+<varequal respident="1">C</varequal>
+</conditionvar>
+<setvar action="Set">100</setvar>
+<displayfeedback linkrefid="2 Flamenco"/>
+</respcondition>
+</resprocessing>
+<itemfeedback ident="0 Tango" view="Candidate">
+</itemfeedback>
+<itemfeedback ident="1 Salsa" view="Candidate">
+</itemfeedback>
+<itemfeedback ident="2 Flamenco" view="Candidate">
+</itemfeedback>
+</item>
+
+
+<item title="¿De qué país son originarias las Rancheras?" ident="4032080456731126">
+<itemmetadata>
+<qmd_itemtype>Multiple Choice</qmd_itemtype>
+<qmd_status>Normal</qmd_status>
+<qmd_toolvendor>Questionmark Perception</qmd_toolvendor>
+<qmd_topic>Música y Cine</qmd_topic>
+</itemmetadata>
+<presentation>
+<material>
+<mattext texttype="text/html"><![CDATA[¿De qué país son originarias las "Rancheras"?]]></mattext>
+</material>
+<response_lid ident="1">
+<render_choice shuffle="Yes">
+<response_label ident="A">
+<material>
+<mattext texttype="text/html"><![CDATA[Argentina]]></mattext>
+</material>
+</response_label>
+<response_label ident="B">
+<material>
+<mattext texttype="text/html"><![CDATA[Colombia]]></mattext>
+</material>
+</response_label>
+<response_label ident="C">
+<material>
+<mattext texttype="text/html"><![CDATA[México]]></mattext>
+</material>
+</response_label>
+</render_choice>
+</response_lid>
+</presentation>
+<resprocessing>
+<outcomes>
+<decvar/>
+</outcomes>
+<respcondition title="0 Argentina" >
+<conditionvar>
+<varequal respident="1">A</varequal>
+</conditionvar>
+<setvar action="Set">0</setvar>
+<displayfeedback linkrefid="0 Argentina"/>
+</respcondition>
+<respcondition title="1 Colombia" >
+<conditionvar>
+<varequal respident="1">B</varequal>
+</conditionvar>
+<setvar action="Set">0</setvar>
+<displayfeedback linkrefid="1 Colombia"/>
+</respcondition>
+<respcondition title="2 México" >
+<conditionvar>
+<varequal respident="1">C</varequal>
+</conditionvar>
+<setvar action="Set">100</setvar>
+<displayfeedback linkrefid="2 México"/>
+</respcondition>
+</resprocessing>
+<itemfeedback ident="0 Argentina" view="Candidate">
+</itemfeedback>
+<itemfeedback ident="1 Colombia" view="Candidate">
+</itemfeedback>
+<itemfeedback ident="2 México" view="Candidate">
+</itemfeedback>
+</item>
+
+<item title="¿En qué equipo de la NBA juega el pívot español Pau Gasol?" ident="6019620123591781">
+<itemmetadata>
+<qmd_itemtype>Multiple Choice</qmd_itemtype>
+<qmd_status>Normal</qmd_status>
+<qmd_toolvendor>Questionmark Perception</qmd_toolvendor>
+<qmd_topic>Deportes</qmd_topic>
+</itemmetadata>
+<presentation>
+<material>
+<mattext texttype="text/html"><![CDATA[¿En qué equipo de la NBA juega el pívot español Pau Gasol?]]></mattext>
+</material>
+<response_lid ident="1">
+<render_choice shuffle="Yes">
+<response_label ident="A">
+<material>
+<mattext texttype="text/html"><![CDATA[Memphis Grizzlees]]></mattext>
+</material>
+</response_label>
+<response_label ident="B">
+<material>
+<mattext texttype="text/html"><![CDATA[Chicago Bulls]]></mattext>
+</material>
+</response_label>
+<response_label ident="C">
+<material>
+<mattext texttype="text/html"><![CDATA[Los Angeles Lakers]]></mattext>
+</material>
+</response_label>
+</render_choice>
+</response_lid>
+</presentation>
+<resprocessing>
+<outcomes>
+<decvar/>
+</outcomes>
+<respcondition title="0 Memphis Grizzlees" >
+<conditionvar>
+<varequal respident="1">A</varequal>
+</conditionvar>
+<setvar action="Set">0</setvar>
+<displayfeedback linkrefid="0 Memphis Grizzlees"/>
+</respcondition>
+<respcondition title="1 Chicago Bulls" >
+<conditionvar>
+<varequal respident="1">B</varequal>
+</conditionvar>
+<setvar action="Set">100</setvar>
+<displayfeedback linkrefid="1 Chicago Bulls"/>
+</respcondition>
+<respcondition title="2 Los Angeles Lakers" >
+<conditionvar>
+<varequal respident="1">C</varequal>
+</conditionvar>
+<setvar action="Set">0</setvar>
+<displayfeedback linkrefid="2 Los Angeles Lakers"/>
+</respcondition>
+</resprocessing>
+<itemfeedback ident="0 Memphis Grizzlees" view="Candidate">
+</itemfeedback>
+<itemfeedback ident="1 Chicago Bulls" view="Candidate">
+</itemfeedback>
+<itemfeedback ident="2 Los Angeles Lakers" view="Candidate">
+</itemfeedback>
+</item>
+
+
+<item title="¿Qué jugador de la selección española de fútbol fue uno de los máximos goleadores del Mundial 2010?" ident="0074599686156993">
+<itemmetadata>
+<qmd_itemtype>Multiple Choice</qmd_itemtype>
+<qmd_status>Normal</qmd_status>
+<qmd_toolvendor>Questionmark Perception</qmd_toolvendor>
+<qmd_topic>Deportes</qmd_topic>
+</itemmetadata>
+<presentation>
+<material>
+<mattext texttype="text/html"><![CDATA[¿Qué jugador de la selección española de fútbol fue uno de los máximos goleadores del Mundial 2010?]]></mattext>
+</material>
+<response_lid ident="1">
+<render_choice shuffle="Yes">
+<response_label ident="A">
+<material>
+<mattext texttype="text/html"><![CDATA[Andrés Iniesta]]></mattext>
+</material>
+</response_label>
+<response_label ident="B">
+<material>
+<mattext texttype="text/html"><![CDATA[David Villa]]></mattext>
+</material>
+</response_label>
+<response_label ident="C">
+<material>
+<mattext texttype="text/html"><![CDATA[Diego Forlán]]></mattext>
+</material>
+</response_label>
+</render_choice>
+</response_lid>
+</presentation>
+<resprocessing>
+<outcomes>
+<decvar/>
+</outcomes>
+<respcondition title="0 Andrés Iniesta" >
+<conditionvar>
+<varequal respident="1">A</varequal>
+</conditionvar>
+<setvar action="Set">0</setvar>
+<displayfeedback linkrefid="0 Andrés Iniesta"/>
+</respcondition>
+<respcondition title="1 David Villa" >
+<conditionvar>
+<varequal respident="1">B</varequal>
+</conditionvar>
+<setvar action="Set">100</setvar>
+<displayfeedback linkrefid="1 David Villa"/>
+</respcondition>
+<respcondition title="2 Diego Forlán" >
+<conditionvar>
+<varequal respident="1">C</varequal>
+</conditionvar>
+<setvar action="Set">0</setvar>
+<displayfeedback linkrefid="2 Diego Forlán"/>
+</respcondition>
+</resprocessing>
+<itemfeedback ident="0 Andrés Iniesta" view="Candidate">
+</itemfeedback>
+<itemfeedback ident="1 David Villa" view="Candidate">
+</itemfeedback>
+<itemfeedback ident="2 Diego Forlán" view="Candidate">
+</itemfeedback>
+</item>
+
+
+<item title="¿Cuántos Grand Slam ha ganado el tenista español Rafa Nadal?" ident="9233728347120111">
+<itemmetadata>
+<qmd_itemtype>Multiple Choice</qmd_itemtype>
+<qmd_status>Normal</qmd_status>
+<qmd_toolvendor>Questionmark Perception</qmd_toolvendor>
+<qmd_topic>Deportes</qmd_topic>
+</itemmetadata>
+<presentation>
+<material>
+<mattext texttype="text/html"><![CDATA[¿Cuántos Grand Slam ha ganado el tenista español Rafa Nadal?]]></mattext>
+</material>
+<response_lid ident="1">
+<render_choice shuffle="Yes">
+<response_label ident="A">
+<material>
+<mattext texttype="text/html"><![CDATA[12]]></mattext>
+</material>
+</response_label>
+<response_label ident="B">
+<material>
+<mattext texttype="text/html"><![CDATA[13]]></mattext>
+</material>
+</response_label>
+<response_label ident="C">
+<material>
+<mattext texttype="text/html"><![CDATA[14]]></mattext>
+</material>
+</response_label>
+</render_choice>
+</response_lid>
+</presentation>
+<resprocessing>
+<outcomes>
+<decvar/>
+</outcomes>
+<respcondition title="0 12" >
+<conditionvar>
+<varequal respident="1">A</varequal>
+</conditionvar>
+<setvar action="Set">0</setvar>
+<displayfeedback linkrefid="0 12"/>
+</respcondition>
+<respcondition title="1 13" >
+<conditionvar>
+<varequal respident="1">B</varequal>
+</conditionvar>
+<setvar action="Set">0</setvar>
+<displayfeedback linkrefid="1 13"/>
+</respcondition>
+<respcondition title="2 14" >
+<conditionvar>
+<varequal respident="1">C</varequal>
+</conditionvar>
+<setvar action="Set">100</setvar>
+<displayfeedback linkrefid="2 14"/>
+</respcondition>
+</resprocessing>
+<itemfeedback ident="0 12" view="Candidate">
+</itemfeedback>
+<itemfeedback ident="1 13" view="Candidate">
+</itemfeedback>
+<itemfeedback ident="2 14" view="Candidate">
+</itemfeedback>
+</item>
+
+
+<item title="¿Con qué escudería ganó el piloto español de F1 Fernando Alonso sus dos títulos mundiales?" ident="9684922258861577">
+<itemmetadata>
+<qmd_itemtype>Multiple Choice</qmd_itemtype>
+<qmd_status>Normal</qmd_status>
+<qmd_toolvendor>Questionmark Perception</qmd_toolvendor>
+<qmd_topic>Deportes</qmd_topic>
+</itemmetadata>
+<presentation>
+<material>
+<mattext texttype="text/html"><![CDATA[¿Con qué escudería ganó el piloto español de F1 Fernando Alonso sus dos títulos mundiales?]]></mattext>
+</material>
+<response_lid ident="1">
+<render_choice shuffle="Yes">
+<response_label ident="A">
+<material>
+<mattext texttype="text/html"><![CDATA[Red Bull]]></mattext>
+</material>
+</response_label>
+<response_label ident="B">
+<material>
+<mattext texttype="text/html"><![CDATA[McLaren]]></mattext>
+</material>
+</response_label>
+<response_label ident="C">
+<material>
+<mattext texttype="text/html"><![CDATA[Renault]]></mattext>
+</material>
+</response_label>
+</render_choice>
+</response_lid>
+</presentation>
+<resprocessing>
+<outcomes>
+<decvar/>
+</outcomes>
+<respcondition title="0 Red Bull" >
+<conditionvar>
+<varequal respident="1">A</varequal>
+</conditionvar>
+<setvar action="Set">0</setvar>
+<displayfeedback linkrefid="0 Red Bull"/>
+</respcondition>
+<respcondition title="1 McLaren" >
+<conditionvar>
+<varequal respident="1">B</varequal>
+</conditionvar>
+<setvar action="Set">0</setvar>
+<displayfeedback linkrefid="1 McLaren"/>
+</respcondition>
+<respcondition title="2 Renault" >
+<conditionvar>
+<varequal respident="1">C</varequal>
+</conditionvar>
+<setvar action="Set">100</setvar>
+<displayfeedback linkrefid="2 Renault"/>
+</respcondition>
+</resprocessing>
+<itemfeedback ident="0 Red Bull" view="Candidate">
+</itemfeedback>
+<itemfeedback ident="1 McLaren" view="Candidate">
+</itemfeedback>
+<itemfeedback ident="2 Renault" view="Candidate">
+</itemfeedback>
+</item>
+
+
+<item title="¿Qué ciclista español ganó cinco Tours de Francia de manera consecutiva?" ident="3397356092213221">
+<itemmetadata>
+<qmd_itemtype>Multiple Choice</qmd_itemtype>
+<qmd_status>Normal</qmd_status>
+<qmd_toolvendor>Questionmark Perception</qmd_toolvendor>
+<qmd_topic>Deportes</qmd_topic>
+</itemmetadata>
+<presentation>
+<material>
+<mattext texttype="text/html"><![CDATA[¿Qué ciclista español ganó cinco Tours de Francia de manera consecutiva?]]></mattext>
+</material>
+<response_lid ident="1">
+<render_choice shuffle="Yes">
+<response_label ident="A">
+<material>
+<mattext texttype="text/html"><![CDATA[Luis Ocaña]]></mattext>
+</material>
+</response_label>
+<response_label ident="B">
+<material>
+<mattext texttype="text/html"><![CDATA[Pedro Delgado]]></mattext>
+</material>
+</response_label>
+<response_label ident="C">
+<material>
+<mattext texttype="text/html"><![CDATA[Miguel Induráin]]></mattext>
+</material>
+</response_label>
+</render_choice>
+</response_lid>
+</presentation>
+<resprocessing>
+<outcomes>
+<decvar/>
+</outcomes>
+<respcondition title="0 Luis Ocaña" >
+<conditionvar>
+<varequal respident="1">A</varequal>
+</conditionvar>
+<setvar action="Set">0</setvar>
+<displayfeedback linkrefid="0 Luis Ocaña"/>
+</respcondition>
+<respcondition title="1 Pedro Delgado" >
+<conditionvar>
+<varequal respident="1">B</varequal>
+</conditionvar>
+<setvar action="Set">0</setvar>
+<displayfeedback linkrefid="1 Pedro Delgado"/>
+</respcondition>
+<respcondition title="2 Miguel Induráin" >
+<conditionvar>
+<varequal respident="1">C</varequal>
+</conditionvar>
+<setvar action="Set">100</setvar>
+<displayfeedback linkrefid="2 Miguel Induráin"/>
+</respcondition>
+</resprocessing>
+<itemfeedback ident="0 Luis Ocaña" view="Candidate">
+</itemfeedback>
+<itemfeedback ident="1 Pedro Delgado" view="Candidate">
+</itemfeedback>
+<itemfeedback ident="2 Miguel Induráin" view="Candidate">
+</itemfeedback>
+</item>
+
+
+<item title="¿Qué legendario jugador de fútbol marcó un gol con la mano de Dios?" ident="7105866287832249">
+<itemmetadata>
+<qmd_itemtype>Multiple Choice</qmd_itemtype>
+<qmd_status>Normal</qmd_status>
+<qmd_toolvendor>Questionmark Perception</qmd_toolvendor>
+<qmd_topic>Deportes</qmd_topic>
+</itemmetadata>
+<presentation>
+<material>
+<mattext texttype="text/html"><![CDATA[¿Qué legendario jugador de fútbol marcó un gol con "la mano de Dios"?]]></mattext>
+</material>
+<response_lid ident="1">
+<render_choice shuffle="Yes">
+<response_label ident="A">
+<material>
+<mattext texttype="text/html"><![CDATA[Pelé]]></mattext>
+</material>
+</response_label>
+<response_label ident="B">
+<material>
+<mattext texttype="text/html"><![CDATA[Johan Cruyff]]></mattext>
+</material>
+</response_label>
+<response_label ident="C">
+<material>
+<mattext texttype="text/html"><![CDATA[Maradona]]></mattext>
+</material>
+</response_label>
+</render_choice>
+</response_lid>
+</presentation>
+<resprocessing>
+<outcomes>
+<decvar/>
+</outcomes>
+<respcondition title="0 Pelé" >
+<conditionvar>
+<varequal respident="1">A</varequal>
+</conditionvar>
+<setvar action="Set">0</setvar>
+<displayfeedback linkrefid="0 Pelé"/>
+</respcondition>
+<respcondition title="1 Johan Cruyff" >
+<conditionvar>
+<varequal respident="1">B</varequal>
+</conditionvar>
+<setvar action="Set">0</setvar>
+<displayfeedback linkrefid="1 Johan Cruyff"/>
+</respcondition>
+<respcondition title="2 Maradona" >
+<conditionvar>
+<varequal respident="1">C</varequal>
+</conditionvar>
+<setvar action="Set">100</setvar>
+<displayfeedback linkrefid="2 Maradona"/>
+</respcondition>
+</resprocessing>
+<itemfeedback ident="0 Pelé" view="Candidate">
+</itemfeedback>
+<itemfeedback ident="1 Johan Cruyff" view="Candidate">
+</itemfeedback>
+<itemfeedback ident="2 Maradona" view="Candidate">
+</itemfeedback>
+</item>
+
+<item title="¿Qué es una media verónica?" ident="7803457880037126">
+<itemmetadata>
+<qmd_itemtype>Multiple Choice</qmd_itemtype>
+<qmd_status>Normal</qmd_status>
+<qmd_toolvendor>Questionmark Perception</qmd_toolvendor>
+<qmd_topic>Cultura y Tradición</qmd_topic>
+</itemmetadata>
+<presentation>
+<material>
+<mattext texttype="text/html"><![CDATA[¿Qué es una "media verónica"?]]></mattext>
+</material>
+<response_lid ident="1">
+<render_choice shuffle="Yes">
+<response_label ident="A">
+<material>
+<mattext texttype="text/html"><![CDATA[Una bebida]]></mattext>
+</material>
+</response_label>
+<response_label ident="B">
+<material>
+<mattext texttype="text/html"><![CDATA[Un paso de baile regional]]></mattext>
+</material>
+</response_label>
+<response_label ident="C">
+<material>
+<mattext texttype="text/html"><![CDATA[Un pase de toreo]]></mattext>
+</material>
+</response_label>
+</render_choice>
+</response_lid>
+</presentation>
+<resprocessing>
+<outcomes>
+<decvar/>
+</outcomes>
+<respcondition title="0 Una bebida" >
+<conditionvar>
+<varequal respident="1">A</varequal>
+</conditionvar>
+<setvar action="Set">0</setvar>
+<displayfeedback linkrefid="0 Una bebida"/>
+</respcondition>
+<respcondition title="1 Un paso de baile regional" >
+<conditionvar>
+<varequal respident="1">B</varequal>
+</conditionvar>
+<setvar action="Set">0</setvar>
+<displayfeedback linkrefid="1 Un paso de baile regional"/>
+</respcondition>
+<respcondition title="2 Un pase de toreo" >
+<conditionvar>
+<varequal respident="1">C</varequal>
+</conditionvar>
+<setvar action="Set">100</setvar>
+<displayfeedback linkrefid="2 Un pase de toreo"/>
+</respcondition>
+</resprocessing>
+<itemfeedback ident="0 Una bebida" view="Candidate">
+</itemfeedback>
+<itemfeedback ident="1 Un paso de baile regional" view="Candidate">
+</itemfeedback>
+<itemfeedback ident="2 Un pase de toreo" view="Candidate">
+</itemfeedback>
+</item>
+
+
+<item title="¿Qué fruto se suele comer en España en Nochevieja, 31 de diciembre, cuando suenan las doce campanadas?" ident="0810008268403529">
+<itemmetadata>
+<qmd_itemtype>Multiple Choice</qmd_itemtype>
+<qmd_status>Normal</qmd_status>
+<qmd_toolvendor>Questionmark Perception</qmd_toolvendor>
+<qmd_topic>Cultura y Tradición</qmd_topic>
+</itemmetadata>
+<presentation>
+<material>
+<mattext texttype="text/html"><![CDATA[¿Qué fruto se suele comer en España en Nochevieja, 31 de diciembre, cuando suenan las doce campanadas?]]></mattext>
+</material>
+<response_lid ident="1">
+<render_choice shuffle="Yes">
+<response_label ident="A">
+<material>
+<mattext texttype="text/html"><![CDATA[12 fresas]]></mattext>
+</material>
+</response_label>
+<response_label ident="B">
+<material>
+<mattext texttype="text/html"><![CDATA[12 cerezas]]></mattext>
+</material>
+</response_label>
+<response_label ident="C">
+<material>
+<mattext texttype="text/html"><![CDATA[12 uvas]]></mattext>
+</material>
+</response_label>
+</render_choice>
+</response_lid>
+</presentation>
+<resprocessing>
+<outcomes>
+<decvar/>
+</outcomes>
+<respcondition title="0 12 fresas" >
+<conditionvar>
+<varequal respident="1">A</varequal>
+</conditionvar>
+<setvar action="Set">0</setvar>
+<displayfeedback linkrefid="0 12 fresas"/>
+</respcondition>
+<respcondition title="1 12 cerezas" >
+<conditionvar>
+<varequal respident="1">B</varequal>
+</conditionvar>
+<setvar action="Set">0</setvar>
+<displayfeedback linkrefid="1 12 cerezas"/>
+</respcondition>
+<respcondition title="2 12 uvas" >
+<conditionvar>
+<varequal respident="1">C</varequal>
+</conditionvar>
+<setvar action="Set">100</setvar>
+<displayfeedback linkrefid="2 12 uvas"/>
+</respcondition>
+</resprocessing>
+<itemfeedback ident="0 12 fresas" view="Candidate">
+</itemfeedback>
+<itemfeedback ident="1 12 cerezas" view="Candidate">
+</itemfeedback>
+<itemfeedback ident="2 12 uvas" view="Candidate">
+</itemfeedback>
+</item>
+
+
+<item title="¿En cuál de estas localidades no se inicia el Camino de Santiago?" ident="7829533257398557">
+<itemmetadata>
+<qmd_itemtype>Multiple Choice</qmd_itemtype>
+<qmd_status>Normal</qmd_status>
+<qmd_toolvendor>Questionmark Perception</qmd_toolvendor>
+<qmd_topic>Cultura y Tradición</qmd_topic>
+</itemmetadata>
+<presentation>
+<material>
+<mattext texttype="text/html"><![CDATA[¿En cuál de estas localidades no se inicia el Camino de Santiago?]]></mattext>
+</material>
+<response_lid ident="1">
+<render_choice shuffle="Yes">
+<response_label ident="A">
+<material>
+<mattext texttype="text/html"><![CDATA[Somport]]></mattext>
+</material>
+</response_label>
+<response_label ident="B">
+<material>
+<mattext texttype="text/html"><![CDATA[Roncesvalles]]></mattext>
+</material>
+</response_label>
+<response_label ident="C">
+<material>
+<mattext texttype="text/html"><![CDATA[Biarritz]]></mattext>
+</material>
+</response_label>
+</render_choice>
+</response_lid>
+</presentation>
+<resprocessing>
+<outcomes>
+<decvar/>
+</outcomes>
+<respcondition title="0 Somport" >
+<conditionvar>
+<varequal respident="1">A</varequal>
+</conditionvar>
+<setvar action="Set">0</setvar>
+<displayfeedback linkrefid="0 Somport"/>
+</respcondition>
+<respcondition title="1 Roncesvalles" >
+<conditionvar>
+<varequal respident="1">B</varequal>
+</conditionvar>
+<setvar action="Set">0</setvar>
+<displayfeedback linkrefid="1 Roncesvalles"/>
+</respcondition>
+<respcondition title="2 Biarritz" >
+<conditionvar>
+<varequal respident="1">C</varequal>
+</conditionvar>
+<setvar action="Set">100</setvar>
+<displayfeedback linkrefid="2 Biarritz"/>
+</respcondition>
+</resprocessing>
+<itemfeedback ident="0 Somport" view="Candidate">
+</itemfeedback>
+<itemfeedback ident="1 Roncesvalles" view="Candidate">
+</itemfeedback>
+<itemfeedback ident="2 Biarritz" view="Candidate">
+</itemfeedback>
+</item>
+
+
+<item title="¿De cuál de las 4 lenguas oficiales de España no se conoce aún su origen?" ident="6038475639707241">
+<itemmetadata>
+<qmd_itemtype>Multiple Choice</qmd_itemtype>
+<qmd_status>Normal</qmd_status>
+<qmd_toolvendor>Questionmark Perception</qmd_toolvendor>
+<qmd_topic>Cultura y Tradición</qmd_topic>
+</itemmetadata>
+<presentation>
+<material>
+<mattext texttype="text/html"><![CDATA[<P>¿De cuál de las 4 lenguas oficiales de España no se conoce aún su origen?</P>]]></mattext>
+</material>
+<response_lid ident="1">
+<render_choice shuffle="Yes">
+<response_label ident="A">
+<material>
+<mattext texttype="text/html"><![CDATA[Castellano]]></mattext>
+</material>
+</response_label>
+<response_label ident="B">
+<material>
+<mattext texttype="text/html"><![CDATA[Catalán]]></mattext>
+</material>
+</response_label>
+<response_label ident="C">
+<material>
+<mattext texttype="text/html"><![CDATA[Gallego]]></mattext>
+</material>
+</response_label>
+<response_label ident="D">
+<material>
+<mattext texttype="text/html"><![CDATA[Vasco]]></mattext>
+</material>
+</response_label>
+</render_choice>
+</response_lid>
+</presentation>
+<resprocessing>
+<outcomes>
+<decvar/>
+</outcomes>
+<respcondition title="0 Castellano" >
+<conditionvar>
+<varequal respident="1">A</varequal>
+</conditionvar>
+<setvar action="Set">0</setvar>
+<displayfeedback linkrefid="0 Castellano"/>
+</respcondition>
+<respcondition title="1 Catalán" >
+<conditionvar>
+<varequal respident="1">B</varequal>
+</conditionvar>
+<setvar action="Set">0</setvar>
+<displayfeedback linkrefid="1 Catalán"/>
+</respcondition>
+<respcondition title="2 Gallego" >
+<conditionvar>
+<varequal respident="1">C</varequal>
+</conditionvar>
+<setvar action="Set">0</setvar>
+<displayfeedback linkrefid="2 Gallego"/>
+</respcondition>
+<respcondition title="3 Vasco" >
+<conditionvar>
+<varequal respident="1">D</varequal>
+</conditionvar>
+<setvar action="Set">100</setvar>
+<displayfeedback linkrefid="3 Vasco"/>
+</respcondition>
+</resprocessing>
+<itemfeedback ident="0 Castellano" view="Candidate">
+</itemfeedback>
+<itemfeedback ident="1 Catalán" view="Candidate">
+</itemfeedback>
+<itemfeedback ident="2 Gallego" view="Candidate">
+</itemfeedback>
+<itemfeedback ident="3 Vasco" view="Candidate">
+</itemfeedback>
+</item>
+
+
+<item title="¿Cuál de los siguientes platos gastronómicos no es típico de España?" ident="2576092669846631">
+<itemmetadata>
+<qmd_itemtype>Multiple Choice</qmd_itemtype>
+<qmd_status>Normal</qmd_status>
+<qmd_toolvendor>Questionmark Perception</qmd_toolvendor>
+<qmd_topic>Cultura y Tradición</qmd_topic>
+</itemmetadata>
+<presentation>
+<material>
+<mattext texttype="text/html"><![CDATA[¿Cuál de los siguientes platos gastronómicos no es típico de España?]]></mattext>
+</material>
+<response_lid ident="1">
+<render_choice shuffle="Yes">
+<response_label ident="A">
+<material>
+<mattext texttype="text/html"><![CDATA[Paella]]></mattext>
+</material>
+</response_label>
+<response_label ident="B">
+<material>
+<mattext texttype="text/html"><![CDATA[Marmitako]]></mattext>
+</material>
+</response_label>
+<response_label ident="C">
+<material>
+<mattext texttype="text/html"><![CDATA[Fabada]]></mattext>
+</material>
+</response_label>
+</render_choice>
+</response_lid>
+</presentation>
+<resprocessing>
+<outcomes>
+<decvar/>
+</outcomes>
+<respcondition title="0 Paella" >
+<conditionvar>
+<varequal respident="1">A</varequal>
+</conditionvar>
+<setvar action="Set">0</setvar>
+<displayfeedback linkrefid="0 Paella"/>
+</respcondition>
+<respcondition title="1 Marmitako" >
+<conditionvar>
+<varequal respident="1">B</varequal>
+</conditionvar>
+<setvar action="Set">100</setvar>
+<displayfeedback linkrefid="1 Marmitako"/>
+</respcondition>
+<respcondition title="2 Fabada" >
+<conditionvar>
+<varequal respident="1">C</varequal>
+</conditionvar>
+<setvar action="Set">0</setvar>
+<displayfeedback linkrefid="2 Fabada"/>
+</respcondition>
+</resprocessing>
+<itemfeedback ident="0 Paella" view="Candidate">
+</itemfeedback>
+<itemfeedback ident="1 Marmitako" view="Candidate">
+</itemfeedback>
+<itemfeedback ident="2 Fabada" view="Candidate">
+</itemfeedback>
+</item>
+
+
+<item title="¿De qué región es típico el gazpacho?" ident="9052556851388440">
+<itemmetadata>
+<qmd_itemtype>Multiple Choice</qmd_itemtype>
+<qmd_status>Normal</qmd_status>
+<qmd_toolvendor>Questionmark Perception</qmd_toolvendor>
+<qmd_topic>Cultura y Tradición</qmd_topic>
+</itemmetadata>
+<presentation>
+<material>
+<mattext texttype="text/html"><![CDATA[¿De qué región es típico el gazpacho?]]></mattext>
+</material>
+<response_lid ident="1">
+<render_choice shuffle="Yes">
+<response_label ident="A">
+<material>
+<mattext texttype="text/html"><![CDATA[Aragón]]></mattext>
+</material>
+</response_label>
+<response_label ident="B">
+<material>
+<mattext texttype="text/html"><![CDATA[Andalucía]]></mattext>
+</material>
+</response_label>
+<response_label ident="C">
+<material>
+<mattext texttype="text/html"><![CDATA[Cataluña]]></mattext>
+</material>
+</response_label>
+</render_choice>
+</response_lid>
+</presentation>
+<resprocessing>
+<outcomes>
+<decvar/>
+</outcomes>
+<respcondition title="0 Aragón" >
+<conditionvar>
+<varequal respident="1">A</varequal>
+</conditionvar>
+<setvar action="Set">0</setvar>
+<displayfeedback linkrefid="0 Aragón"/>
+</respcondition>
+<respcondition title="1 Andalucía" >
+<conditionvar>
+<varequal respident="1">B</varequal>
+</conditionvar>
+<setvar action="Set">100</setvar>
+<displayfeedback linkrefid="1 Andalucía"/>
+</respcondition>
+<respcondition title="2 Cataluña" >
+<conditionvar>
+<varequal respident="1">C</varequal>
+</conditionvar>
+<setvar action="Set">0</setvar>
+<displayfeedback linkrefid="2 Cataluña"/>
+</respcondition>
+</resprocessing>
+<itemfeedback ident="0 Aragón" view="Candidate">
+</itemfeedback>
+<itemfeedback ident="1 Andalucía" view="Candidate">
+</itemfeedback>
+<itemfeedback ident="2 Cataluña" view="Candidate">
+</itemfeedback>
+</item>
+
+<item title="¿Cuántos años duró la Guerra Civil española?" ident="5948661080025040">
+<itemmetadata>
+<qmd_itemtype>Multiple Choice</qmd_itemtype>
+<qmd_status>Normal</qmd_status>
+<qmd_toolvendor>Questionmark Perception</qmd_toolvendor>
+<qmd_topic>Historia y Geografía</qmd_topic>
+</itemmetadata>
+<presentation>
+<material>
+<mattext texttype="text/html"><![CDATA[¿Cuántos años duró la Guerra Civil española?]]></mattext>
+</material>
+<response_lid ident="1">
+<render_choice shuffle="Yes">
+<response_label ident="A">
+<material>
+<mattext texttype="text/html"><![CDATA[3 años]]></mattext>
+</material>
+</response_label>
+<response_label ident="B">
+<material>
+<mattext texttype="text/html"><![CDATA[7 años]]></mattext>
+</material>
+</response_label>
+<response_label ident="C">
+<material>
+<mattext texttype="text/html"><![CDATA[10 años]]></mattext>
+</material>
+</response_label>
+</render_choice>
+</response_lid>
+</presentation>
+<resprocessing>
+<outcomes>
+<decvar/>
+</outcomes>
+<respcondition title="0 3 años" >
+<conditionvar>
+<varequal respident="1">A</varequal>
+</conditionvar>
+<setvar action="Set">100</setvar>
+<displayfeedback linkrefid="0 3 años"/>
+</respcondition>
+<respcondition title="1 7 años" >
+<conditionvar>
+<varequal respident="1">B</varequal>
+</conditionvar>
+<setvar action="Set">0</setvar>
+<displayfeedback linkrefid="1 7 años"/>
+</respcondition>
+<respcondition title="2 10 años" >
+<conditionvar>
+<varequal respident="1">C</varequal>
+</conditionvar>
+<setvar action="Set">0</setvar>
+<displayfeedback linkrefid="2 10 años"/>
+</respcondition>
+</resprocessing>
+<itemfeedback ident="0 3 años" view="Candidate">
+</itemfeedback>
+<itemfeedback ident="1 7 años" view="Candidate">
+</itemfeedback>
+<itemfeedback ident="2 10 años" view="Candidate">
+</itemfeedback>
+</item>
+
+
+<item title="¿Por qué se decía que en España nunca se ponía el sol?" ident="0935593988957632">
+<itemmetadata>
+<qmd_itemtype>Multiple Choice</qmd_itemtype>
+<qmd_status>Normal</qmd_status>
+<qmd_toolvendor>Questionmark Perception</qmd_toolvendor>
+<qmd_topic>Historia y Geografía</qmd_topic>
+</itemmetadata>
+<presentation>
+<material>
+<mattext texttype="text/html"><![CDATA[¿Por qué se decía que en España nunca se ponía el sol?]]></mattext>
+</material>
+<response_lid ident="1">
+<render_choice shuffle="Yes">
+<response_label ident="A">
+<material>
+<mattext texttype="text/html"><![CDATA[Porque siempre hacía buen tiempo]]></mattext>
+</material>
+</response_label>
+<response_label ident="B">
+<material>
+<mattext texttype="text/html"><![CDATA[Porque España poseía colonias en todos los continentes]]></mattext>
+</material>
+</response_label>
+<response_label ident="C">
+<material>
+<mattext texttype="text/html"><![CDATA[Porque España estaba viviendo "su siglo de las luces"]]></mattext>
+</material>
+</response_label>
+</render_choice>
+</response_lid>
+</presentation>
+<resprocessing>
+<outcomes>
+<decvar/>
+</outcomes>
+<respcondition title="0 Porque siempre hacía buen tiempo" >
+<conditionvar>
+<varequal respident="1">A</varequal>
+</conditionvar>
+<setvar action="Set">0</setvar>
+<displayfeedback linkrefid="0 Porque siempre hacía buen tiempo"/>
+</respcondition>
+<respcondition title="1 Porque España poseía colonias en todos l" >
+<conditionvar>
+<varequal respident="1">B</varequal>
+</conditionvar>
+<setvar action="Set">100</setvar>
+<displayfeedback linkrefid="1 Porque España poseía colonias en todos l"/>
+</respcondition>
+<respcondition title="2 Porque España estaba viviendo su siglo d" >
+<conditionvar>
+<varequal respident="1">C</varequal>
+</conditionvar>
+<setvar action="Set">0</setvar>
+<displayfeedback linkrefid="2 Porque España estaba viviendo su siglo d"/>
+</respcondition>
+</resprocessing>
+<itemfeedback ident="0 Porque siempre hacía buen tiempo" view="Candidate">
+</itemfeedback>
+<itemfeedback ident="1 Porque España poseía colonias en todos l" view="Candidate">
+</itemfeedback>
+<itemfeedback ident="2 Porque España estaba viviendo su siglo d" view="Candidate">
+</itemfeedback>
+</item>
+
+
+<item title="¿Cuál es la capital de Azerbaijan?" ident="9429950534642523">
+<itemmetadata>
+<qmd_itemtype>Multiple Choice</qmd_itemtype>
+<qmd_status>Normal</qmd_status>
+<qmd_toolvendor>Questionmark Perception</qmd_toolvendor>
+<qmd_topic>Historia y Geografía</qmd_topic>
+</itemmetadata>
+<presentation>
+<material>
+<mattext texttype="text/html"><![CDATA[¿Cuál es la capital de Azerbaijan?]]></mattext>
+</material>
+<response_lid ident="1">
+<render_choice shuffle="Yes">
+<response_label ident="A">
+<material>
+<mattext texttype="text/html"><![CDATA[Baku]]></mattext>
+</material>
+</response_label>
+<response_label ident="B">
+<material>
+<mattext texttype="text/html"><![CDATA[Ibra]]></mattext>
+</material>
+</response_label>
+<response_label ident="C">
+<material>
+<mattext texttype="text/html"><![CDATA[Amma]]></mattext>
+</material>
+</response_label>
+<response_label ident="D">
+<material>
+<mattext texttype="text/html"><![CDATA[Faiza]]></mattext>
+</material>
+</response_label>
+</render_choice>
+</response_lid>
+</presentation>
+<resprocessing>
+<outcomes>
+<decvar/>
+</outcomes>
+<respcondition title="0 Baku" >
+<conditionvar>
+<varequal respident="1">A</varequal>
+</conditionvar>
+<setvar action="Set">100</setvar>
+<displayfeedback linkrefid="0 Baku"/>
+</respcondition>
+<respcondition title="1 Ibra" >
+<conditionvar>
+<varequal respident="1">B</varequal>
+</conditionvar>
+<setvar action="Set">0</setvar>
+<displayfeedback linkrefid="1 Ibra"/>
+</respcondition>
+<respcondition title="2 Amma" >
+<conditionvar>
+<varequal respident="1">C</varequal>
+</conditionvar>
+<setvar action="Set">0</setvar>
+<displayfeedback linkrefid="2 Amma"/>
+</respcondition>
+<respcondition title="3 Faiza" >
+<conditionvar>
+<varequal respident="1">D</varequal>
+</conditionvar>
+<setvar action="Set">0</setvar>
+<displayfeedback linkrefid="3 Faiza"/>
+</respcondition>
+</resprocessing>
+<itemfeedback ident="0 Baku" view="Candidate">
+</itemfeedback>
+<itemfeedback ident="1 Ibra" view="Candidate">
+</itemfeedback>
+<itemfeedback ident="2 Amma" view="Candidate">
+</itemfeedback>
+<itemfeedback ident="3 Faiza" view="Candidate">
+</itemfeedback>
+</item>
+
+
+<item title="¿A qué reinos pertenecían los Reyes Católicos, Isabel y Fernando, antes de comenzar la unificación de lo que hoy se conoce como España?" ident="1558044903756861">
+<itemmetadata>
+<qmd_itemtype>Multiple Choice</qmd_itemtype>
+<qmd_status>Normal</qmd_status>
+<qmd_toolvendor>Questionmark Perception</qmd_toolvendor>
+<qmd_topic>Historia y Geografía</qmd_topic>
+</itemmetadata>
+<presentation>
+<material>
+<mattext texttype="text/html"><![CDATA[¿A qué reinos pertenecían los Reyes Católicos, Isabel y Fernando, antes de comenzar la unificación de lo que hoy se conoce como España?]]></mattext>
+</material>
+<response_lid ident="1">
+<render_choice shuffle="Yes">
+<response_label ident="A">
+<material>
+<mattext texttype="text/html"><![CDATA[Castilla y Aragón]]></mattext>
+</material>
+</response_label>
+<response_label ident="B">
+<material>
+<mattext texttype="text/html"><![CDATA[Aragón y Navarra]]></mattext>
+</material>
+</response_label>
+<response_label ident="C">
+<material>
+<mattext texttype="text/html"><![CDATA[Navarra y Granada]]></mattext>
+</material>
+</response_label>
+</render_choice>
+</response_lid>
+</presentation>
+<resprocessing>
+<outcomes>
+<decvar/>
+</outcomes>
+<respcondition title="0 Castilla y Aragón" >
+<conditionvar>
+<varequal respident="1">A</varequal>
+</conditionvar>
+<setvar action="Set">100</setvar>
+<displayfeedback linkrefid="0 Castilla y Aragón"/>
+</respcondition>
+<respcondition title="1 Aragón y Navarra" >
+<conditionvar>
+<varequal respident="1">B</varequal>
+</conditionvar>
+<setvar action="Set">0</setvar>
+<displayfeedback linkrefid="1 Aragón y Navarra"/>
+</respcondition>
+<respcondition title="2 Navarra y Granada" >
+<conditionvar>
+<varequal respident="1">C</varequal>
+</conditionvar>
+<setvar action="Set">0</setvar>
+<displayfeedback linkrefid="2 Navarra y Granada"/>
+</respcondition>
+</resprocessing>
+<itemfeedback ident="0 Castilla y Aragón" view="Candidate">
+</itemfeedback>
+<itemfeedback ident="1 Aragón y Navarra" view="Candidate">
+</itemfeedback>
+<itemfeedback ident="2 Navarra y Granada" view="Candidate">
+</itemfeedback>
+</item>
+
+
+<item title="¿Quiénes son los presidentes de Colombia y Venezuela?" ident="3947009867774214">
+<itemmetadata>
+<qmd_itemtype>Multiple Choice</qmd_itemtype>
+<qmd_status>Normal</qmd_status>
+<qmd_toolvendor>Questionmark Perception</qmd_toolvendor>
+<qmd_topic>Historia y Geografía</qmd_topic>
+</itemmetadata>
+<presentation>
+<material>
+<mattext texttype="text/html"><![CDATA[¿Quiénes son los presidentes de Colombia y Venezuela?]]></mattext>
+</material>
+<response_lid ident="1">
+<render_choice shuffle="Yes">
+<response_label ident="A">
+<material>
+<mattext texttype="text/html"><![CDATA[Juan Manuel Santos y Hugo Chávez]]></mattext>
+</material>
+</response_label>
+<response_label ident="B">
+<material>
+<mattext texttype="text/html"><![CDATA[Hugo Chávez y Evo Morales]]></mattext>
+</material>
+</response_label>
+<response_label ident="C">
+<material>
+<mattext texttype="text/html"><![CDATA[Evo Morales y Juan Manuel Santos]]></mattext>
+</material>
+</response_label>
+</render_choice>
+</response_lid>
+</presentation>
+<resprocessing>
+<outcomes>
+<decvar/>
+</outcomes>
+<respcondition title="0 Juan Manuel Santos y Hugo Chávez" >
+<conditionvar>
+<varequal respident="1">A</varequal>
+</conditionvar>
+<setvar action="Set">100</setvar>
+<displayfeedback linkrefid="0 Juan Manuel Santos y Hugo Chávez"/>
+</respcondition>
+<respcondition title="1 Hugo Chávez y Evo Morales" >
+<conditionvar>
+<varequal respident="1">B</varequal>
+</conditionvar>
+<setvar action="Set">0</setvar>
+<displayfeedback linkrefid="1 Hugo Chávez y Evo Morales"/>
+</respcondition>
+<respcondition title="2 Evo Morales y Juan Manuel Santos" >
+<conditionvar>
+<varequal respident="1">C</varequal>
+</conditionvar>
+<setvar action="Set">0</setvar>
+<displayfeedback linkrefid="2 Evo Morales y Juan Manuel Santos"/>
+</respcondition>
+</resprocessing>
+<itemfeedback ident="0 Juan Manuel Santos y Hugo Chávez" view="Candidate">
+</itemfeedback>
+<itemfeedback ident="1 Hugo Chávez y Evo Morales" view="Candidate">
+</itemfeedback>
+<itemfeedback ident="2 Evo Morales y Juan Manuel Santos" view="Candidate">
+</itemfeedback>
+</item>
+
+
+<item title="¿Cuántas comunidades autónomas componen España?" ident="2824127768172943">
+<itemmetadata>
+<qmd_itemtype>Multiple Choice</qmd_itemtype>
+<qmd_status>Normal</qmd_status>
+<qmd_toolvendor>Questionmark Perception</qmd_toolvendor>
+<qmd_topic>Historia y Geografía</qmd_topic>
+</itemmetadata>
+<presentation>
+<material>
+<mattext texttype="text/html"><![CDATA[¿Cuántas comunidades autónomas componen España? ]]></mattext>
+</material>
+<response_lid ident="1">
+<render_choice shuffle="Yes">
+<response_label ident="A">
+<material>
+<mattext texttype="text/html"><![CDATA[15]]></mattext>
+</material>
+</response_label>
+<response_label ident="B">
+<material>
+<mattext texttype="text/html"><![CDATA[16]]></mattext>
+</material>
+</response_label>
+<response_label ident="C">
+<material>
+<mattext texttype="text/html"><![CDATA[17]]></mattext>
+</material>
+</response_label>
+</render_choice>
+</response_lid>
+</presentation>
+<resprocessing>
+<outcomes>
+<decvar/>
+</outcomes>
+<respcondition title="0 15" >
+<conditionvar>
+<varequal respident="1">A</varequal>
+</conditionvar>
+<setvar action="Set">0</setvar>
+<displayfeedback linkrefid="0 15"/>
+</respcondition>
+<respcondition title="1 16" >
+<conditionvar>
+<varequal respident="1">B</varequal>
+</conditionvar>
+<setvar action="Set">0</setvar>
+<displayfeedback linkrefid="1 16"/>
+</respcondition>
+<respcondition title="2 17" >
+<conditionvar>
+<varequal respident="1">C</varequal>
+</conditionvar>
+<setvar action="Set">100</setvar>
+<displayfeedback linkrefid="2 17"/>
+</respcondition>
+</resprocessing>
+<itemfeedback ident="0 15" view="Candidate">
+</itemfeedback>
+<itemfeedback ident="1 16" view="Candidate">
+</itemfeedback>
+<itemfeedback ident="2 17" view="Candidate">
+</itemfeedback>
+</item>
+
+</assessment>
+</questestinterop>
+
+
