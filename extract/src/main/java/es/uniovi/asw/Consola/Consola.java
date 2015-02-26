@@ -18,9 +18,9 @@ public class Consola {
 		{
 			
 		Document archivoEntrada = new Document("src/main/java/es/uniovi/asw/data/"+args[0]);
-		String nombreArchivoEntrada = ConsolaUtils.getFileName(archivoEntrada.getName());
-		String entradaExtension = ConsolaUtils.getFileExtension(archivoEntrada);
-		String nombreArchivoSalida = args[1]; //Sin extensin JSON
+		//String nombreArchivoEntrada = ConsolaUtils.getFileName(archivoEntrada.getName());
+		//String entradaExtension = ConsolaUtils.getFileExtension(archivoEntrada);
+		String nombreArchivoSalida = args[1]; //Sin extension JSON
 		
 		ConsolaParser parser = new ConsolaParser(archivoEntrada);
 		System.out.println("Extension del archivo correcta ");
