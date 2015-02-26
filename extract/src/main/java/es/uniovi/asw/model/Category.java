@@ -7,8 +7,6 @@ public class Category {
 	private String name;
 	private ArrayList <Question> questions= new ArrayList<Question>();
 
-	
-	
 	public void addQuestions(Question question)
 	{
 		questions.add(question);

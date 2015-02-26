@@ -5,6 +5,7 @@ import java.io.FileWriter;
 
 import es.uniovi.asw.Parser.Document;
 import es.uniovi.asw.Parser.GiftType;
+import es.uniovi.asw.Parser.QTIXMLType;
 
 public class ConsolaUtils {
 
@@ -42,7 +43,7 @@ public class ConsolaUtils {
 	}
 	
 	/**
-	 * Dado un documento con extensión de la forma "preguntas.gift", modifica su tipo.
+	 * Dado un documento con extensión, modifica su tipo.
 	 */
 	public static void setTipoDocumento(Document documento) throws Exception
 	{
@@ -50,6 +51,7 @@ public class ConsolaUtils {
 		{
 			case "gift":  documento.setTipo(new GiftType()); break;
 			
+			case "xml":	documento.setTipo(new QTIXMLType());break;
 			
 			default : throw new Exception("Tipo de archivo no valido");
 		}
@@ -65,6 +67,7 @@ public class ConsolaUtils {
 		{
 			case "gift":  documento.setTipo(new GiftType()); break;
 			
+			case "xml":	documento.setTipo(new QTIXMLType());break;
 			
 			default : throw new Exception("Tipo de archivo no valido");
 		}	 
