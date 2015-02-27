@@ -5,7 +5,7 @@ import java.io.FileReader;
 import java.io.IOException;
 
 import es.uniovi.asw.Parser.Document;
-import es.uniovi.asw.Parser.GiftType;
+//import es.uniovi.asw.Parser.GiftType;
 import es.uniovi.asw.Parser.Parser;
 
 public class ConsolaParser extends Parser {
