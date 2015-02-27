@@ -1,7 +1,7 @@
 /**
  * 
  */
-package es.uniovi.asw.trivial;
+package es.uniovi.asw.Parser;
 
 import static org.junit.Assert.*;
 
@@ -11,7 +11,7 @@ import org.junit.Test;
  * @author ikzer
  *
  */
-public class ExtractorTest {
+public class QTIXMLTypeTest {
 
 	@Test
 	public void test() {
