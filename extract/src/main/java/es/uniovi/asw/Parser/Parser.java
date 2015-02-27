@@ -22,19 +22,15 @@ public class Parser {
 	/**
 	 * Metodo que verifica que el formato de entrada sea correcto
 	 */
-	public boolean verificarFormato()
-	{
+	public boolean verificarFormato() {
 		return file.getTipo().verify(lineas);
-		
 	}
 	
 	/**
 	 * Metodo que transforma a formato JSON el archivo de entrada una vez verificado
 	 */
-	public void transform()
-	{
+	public void transform()	{
 		transformado=file.getTipo().transform(lineas);
-		
 	}
 
 
@@ -55,8 +51,7 @@ public class Parser {
 	/**
 	 * Guarda en memoria el mapa JSON del fichero de entrada
 	 */
-	public void persist()
-	{
+	public void persist() {
 		Driver D = new Driver();
 		D.save(transformado);
 	}
