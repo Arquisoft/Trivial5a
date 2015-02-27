@@ -33,4 +33,30 @@ public class ParserTest {
 		assertTrue(parser.verificarFormato());
 	}
 
+	@Test
+	public void testConstructor() {
+		String[] l = new String[2];
+		l[0] = "a";
+		l[1] = "b";
+		Parser p = new Parser(l);
+		assertArrayEquals(l,p.lineas);
+	}
+	
+	@Test
+	public void testGetLineas() {
+		String[] l = new String[2];
+		l[0] = "a";
+		l[1] = "b";
+		Parser p = new Parser(l);
+		assertArrayEquals(l,p.getLineas());
+	}
+	
+	@Test
+	public void testGetTransformado() {
+		String[] l = new String[2];
+		l[0] = "a";
+		l[1] = "b";
+		Parser p = new Parser(l);
+		assertArrayEquals(l,p.getTransformado());
+	}
 }

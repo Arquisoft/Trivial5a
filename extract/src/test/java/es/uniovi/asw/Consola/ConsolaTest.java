@@ -13,9 +13,21 @@ import org.junit.Test;
  */
 public class ConsolaTest {
 
+	Consola c = new Consola();
+	
 	@Test
-	public void test() {
-		fail("Not yet implemented");
+	public void testIncorrectArgs() {
+		try {
+			String[] args = new String[5];
+			Consola.main(args);
+		} catch (Exception e) {
+			assertEquals("Comando mal introducido ", e.getMessage());
+		}
+	}
+	
+	@Test
+	public void test2Args() {
+		
 	}
 
 }
