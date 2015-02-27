@@ -10,7 +10,7 @@ import org.junit.Test;
 import es.uniovi.asw.Parser.Document;
 
 /**
- * @author ikzer
+ * @author Fernando Delgado
  *
  */
 public class ConsolaUtilsTest {
