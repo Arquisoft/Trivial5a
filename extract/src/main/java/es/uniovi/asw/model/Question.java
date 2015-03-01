@@ -39,8 +39,8 @@ public class Question {
 		public void removeWrongAnswer(String answer)
 		{
 			for(int i =0;i< wrongAnswers.length;i++)
-				if(wrongAnswers.equals(answer))
-			wrongAnswers [i]=null;
+				if(wrongAnswers[i] == answer)
+					wrongAnswers [i]=null;
 		}
 		
 	/**
