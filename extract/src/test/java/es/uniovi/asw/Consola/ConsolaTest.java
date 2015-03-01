@@ -46,5 +46,47 @@ public class ConsolaTest {
 			assertEquals("Formato de entrada no valido", e.getMessage());
 		}
 	}
+	
+	@Test
+	public void test4ArgsNoExiste() {
+		try {
+			String[] args = new String[4];
+			args[0] = "testNoExiste.gift";
+			args[1] = "gift";
+			args[3] = "json";
+			
+			Consola.main(args);
+		} catch (Exception e) {
+			assertEquals("src/main/java/es/uniovi/asw/data/testNoExiste.gift (No existe el archivo o el directorio)", e.getMessage());
+		}
+	}
+	
+	@Test
+	public void test4ArgsFormatoSalidaInvalido() {
+		try {
+			String[] args = new String[4];
+			args[0] = "preguntasMalFormato.gift";
+			args[1] = "gift";
+			
+			args[3] = "txt";
+			Consola.main(args);
+		} catch (Exception e) {
+			assertEquals("Formato de salida no valido", e.getMessage());
+		}
+	}
+	
+	@Test
+	public void test4ArgsFormatoInvalido() {
+		try {
+			String[] args = new String[4];
+			args[0] = "preguntas.gift";
+			args[1] = "gift";
+			
+			args[3] = "json";
+			Consola.main(args);
+		} catch (Exception e) {
+			assertEquals("Formato de salida no valido", e.getMessage());
+		}
+	}
 
 }
