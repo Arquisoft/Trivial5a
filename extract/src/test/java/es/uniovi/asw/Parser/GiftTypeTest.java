@@ -20,7 +20,7 @@ import org.junit.Test;
  */
 public class GiftTypeTest {
 
-	GiftType gt = new GiftType();
+	GiftType gt = new GiftType();//prueba de giftType
 	
 	@Test
 	public void test() throws IOException {
