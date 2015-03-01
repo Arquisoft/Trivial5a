@@ -24,7 +24,7 @@ public class QTIXMLTypeTest {
 	
 	@Test
 	public void test() throws IOException {
-		Document file = new Document("src/main/java/es/uniovi/asw/data/preguntasQTI.XML");
+		Document file = new Document("src/main/java/es/uniovi/asw/data/preguntasQTI.xml");
 	
 		Parser parser = new Parser();
 	
