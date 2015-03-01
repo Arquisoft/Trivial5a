@@ -19,16 +19,16 @@ public class ConsolaUtilsTest {
 	
 	@Test
 	public void testValidExtension() {
-		assertEquals("test", c.getFileName("test.gift"));
+		assertEquals("test", ConsolaUtils.getFileName("test.gift"));
 	}
 
 	@Test
 	public void testNoExtension() {
-		assertEquals("test", c.getFileName("test"));
+		assertEquals("test", ConsolaUtils.getFileName("test"));
 	}
 	
 	@Test
-	public void testTransformJSON() throws Exception {
+	public void testTransformInvalid() throws Exception {
 		Document d = new Document("src/main/java/es/uniovi/asw/data/test.gift");
 		ConsolaParser p = new ConsolaParser(d);
 		try {
@@ -36,5 +36,54 @@ public class ConsolaUtilsTest {
 		} catch (Exception e) {
 			assertEquals("Formato de salida no valido", e.getMessage());
 		}
+	}
+	
+	@Test
+	public void testTransformGValid() throws Exception {
+		Document d = new Document("src/main/java/es/uniovi/asw/data/test.gift");
+		ConsolaParser p = new ConsolaParser(d);
+		try {
+			ConsolaUtils.transform(p, "JSON");
+		} catch (Exception e) {
+			assertEquals("Formato de salida no valido", e.getMessage());
+		}
+	}
+	
+	@Test
+	public void testSetTipoDocumentoInvalid_1Arg(){
+		Document d = new Document("src/main/java/es/uniovi/asw/data/test.gift");
+		try {
+			ConsolaUtils.setTipoDocumento(d);
+		} catch (Exception e) {
+			assertEquals("Tipo de archivo no valido", e.getMessage());
+		}
+	}
+	
+	@Test
+	public void testSetTipoDocumentoInvalid_2Args(){
+		Document d = new Document("src/main/java/es/uniovi/asw/data/test.gift");
+		try {
+			ConsolaUtils.setTipoDocumento(d,"txt");
+		} catch (Exception e) {
+			assertEquals("Tipo de archivo no valido", e.getMessage());
+		}
+	}
+	
+	@Test
+	public void testSaveFile() throws Exception {
+		String[] file = new String[2];
+		file[0] = "Linea 1";
+		file[1] = "Linea 2";
+		
+		ConsolaUtils.saveFile(file, "testSaveFile");
+	}
+	
+	@Test
+	public void testSaveFileExtension() throws Exception {
+		String[] file = new String[2];
+		file[0] = "Linea 1";
+		file[1] = "Linea 2";
+		
+		ConsolaUtils.saveFile(file, "testSaveFile", "JSON");
 	}
 }
