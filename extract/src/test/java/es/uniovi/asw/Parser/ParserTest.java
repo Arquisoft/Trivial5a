@@ -32,6 +32,14 @@ public class ParserTest {
 		parser.reader();
 		assertTrue(parser.verificarFormato());
 	}
+	
+	@Test
+	public void testGetFile() throws Exception {
+		Document archivoEntrada = new Document("src/main/java/es/uniovi/asw/data/preguntas.gift");
+		ConsolaParser parser = new ConsolaParser(archivoEntrada);
+		parser.reader();
+		assertEquals(archivoEntrada,parser.getFile());
+	}
 
 	@Test
 	public void testConstructor() {
@@ -52,11 +60,10 @@ public class ParserTest {
 	}
 	
 	@Test
-	public void testGetTransformado() {
-		String[] l = new String[2];
-		l[0] = "a";
-		l[1] = "b";
-		Parser p = new Parser(l);
-		assertArrayEquals(l,p.getTransformado());
+	public void testGetTransformado() throws Exception {
+		Document archivoEntrada = new Document("src/main/java/es/uniovi/asw/data/preguntas.gift");
+		ConsolaParser parser = new ConsolaParser(archivoEntrada);
+		parser.transform();
+		assertNotNull(parser.getTransformado());
 	}
 }
