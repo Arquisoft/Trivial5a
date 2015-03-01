@@ -1,5 +1,7 @@
 package es.uniovi.asw.trivial;
 
+import java.io.ByteArrayOutputStream;
+import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.Scanner;
 
@@ -22,8 +24,9 @@ public class Extractor {
 		
 		return 0;
 	}
+	
 	public static void main(final String[] args) {
-		new Extractor().automatizar();
+		new Extractor().automatizar(System.in);
     }
 	
 	/**
@@ -31,17 +34,19 @@ public class Extractor {
 	 * se podran meter comandos siempre que se quiera
 	 */
 	@SuppressWarnings("resource")
-	public void automatizar()
+	public void automatizar(InputStream input)
 	{
 		String cadena = new String();
 		while(true)
 		{
 		System.out.println("Ejecutando automaticamente...(Introduzca comando)");
 		System.out.println("Introduzca Q para salir");
-		Scanner sc= new Scanner(new InputStreamReader(System.in));
+		Scanner sc= new Scanner(input);
 		cadena=sc.nextLine();
-		if(cadena.toLowerCase().equals("q"))
+		if(cadena.toLowerCase().equals("q")) {
+			System.out.println("Saliendo del programa...");
 			break;
+		}
 		String[] comando = cadena.split(" ");
 		if(comando.length!=0)
 			new Extractor().run(comando);
