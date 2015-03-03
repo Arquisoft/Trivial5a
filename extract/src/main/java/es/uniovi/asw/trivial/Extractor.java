@@ -1,8 +1,6 @@
 package es.uniovi.asw.trivial;
 
-import java.io.ByteArrayOutputStream;
 import java.io.InputStream;
-import java.io.InputStreamReader;
 import java.util.Scanner;
 
 import es.uniovi.asw.Consola.Consola;
