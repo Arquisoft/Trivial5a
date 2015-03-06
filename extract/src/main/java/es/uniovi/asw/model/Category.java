@@ -1,6 +1,10 @@
 package es.uniovi.asw.model;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
+
+import com.google.gson.Gson;
 
 public class Category {
 	
@@ -37,15 +41,31 @@ public class Category {
 	
 	public String toJSON()
 	{
-		String JSON= " \n"+"'"+getName()+"'"+":"+" [  \n";
-		for( int i =0; i< questions.size();i++)
-			if(i==questions.size()-1)
-			JSON+="{ \n"+questions.get(i).toJSON();
-			else
-				JSON+="{ \n"+questions.get(i).toJSON()+",\n";
-		
-		JSON+="\n]\n}";
-		return JSON;
+		Gson g= new Gson();
+		return g.toJson(this);
 	}
 	
+	/**
+	 * Devuelve la pregunta mas facil y mas dificil de la categoria
+	 * @return
+	 */
+	public Map<String, Question> showEstadisticsCategory()
+	{
+		Question preguntaMasDificil=questions.get(0);
+		Question preguntaMasFacil=questions.get(0);
+		
+		Map<String, Question> preguntaFacilDificil= new HashMap<String,Question>();
+		for(Question q : questions)
+		{		
+			if(q.getVecesAcertada()>preguntaMasFacil.getVecesAcertada())
+				preguntaMasFacil=q;
+			
+			if(q.getVecesFallada()>preguntaMasDificil.getVecesFallada())
+				preguntaMasDificil=q;
+		}
+		preguntaFacilDificil.put("preguntaFacil", preguntaMasFacil);
+		preguntaFacilDificil.put("preguntaDificil", preguntaMasDificil);
+		
+		return preguntaFacilDificil;
+	}
 }

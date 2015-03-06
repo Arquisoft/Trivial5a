@@ -31,6 +31,7 @@ public class Driver {
 
 		try {
 			client = new MongoClient(new ServerAddress("localhost", 27017));
+			db = client.getDB("Trivial5a");
 
 		} catch (UnknownHostException e) {
 			e.printStackTrace();
@@ -47,7 +48,7 @@ public class Driver {
 		conectDB();
 		if (client != null) {
 			// Si no existe la base de datos la crea
-			db = client.getDB("Trivial5a");
+		
 
 			// Crea una tabla si no existe y agrega datos
 			table = db.getCollection("categorias");
@@ -81,7 +82,6 @@ public class Driver {
 		conectDB();
 		if (client != null) {
 			// Si no existe la base de datos la crea
-			db = client.getDB("Trivial5a");
 
 			// Crea una tabla si no existe y agrega datos
 			table = db.getCollection("usuarios");
@@ -108,8 +108,6 @@ public class Driver {
 		conectDB();
 
 		if (client != null) {
-			// Si no existe la base de datos la crea
-			db = client.getDB("Trivial5a");
 
 			// Crea una tabla si no existe y agrega datos
 			table = db.getCollection("usuarios");
@@ -117,15 +115,37 @@ public class Driver {
 					lastName).append("password", password);
 			
 			Gson g =new Gson();
-			User usuario=g.fromJson(table.findOne(user).toString(),
+			DBObject obj =table.findOne(user);
+			if(obj!=null)
+			{
+			User usuario=g.fromJson(obj.toString(),
 					User.class);
+			return usuario;
+			}
 			client.close();
 			
-			return usuario;
+			return null;
 			
 				
 		} else
 			throw new Exception("Error: Conexión no establecida");
+	}
+	
+	/**
+	 * Actualizar las estadisictas o datos de un usuario
+	 * @param user
+	 */
+	public void updateUser(User user) {
+		conectDB();
+		
+		// Crea una tabla si no existe y agrega datos
+		table = db.getCollection("usuarios");
+		DBObject [] userModificado = new BasicDBObject[1];
+		userModificado[0]=(DBObject) JSON.parse(user.toJSON());
+		DBObject userActualizar = new BasicDBObject("name", user.getName())
+		.append("lastName",user.getLastName());
+		table.findAndModify(userActualizar, userModificado[0]);
+		client.close();
 	}
 
 	/**
@@ -139,7 +159,6 @@ public class Driver {
 		if (client != null) {
 			List<User> usuarios = new ArrayList<User>();
 			// Si no existe la base de datos la crea
-			db = client.getDB("Trivial5a");
 
 			// Crea una tabla si no existe y agrega datos
 			table = db.getCollection("usuarios");
@@ -149,9 +168,6 @@ public class Driver {
 						User.class);
 				usuarios.add(user);
 			}
-			
-			for(User u : usuarios)
-				System.out.println(u);
 			
 			client.close();
 			return usuarios;
@@ -171,7 +187,6 @@ public class Driver {
 		// Borrar base de datos
 			if(client!=null)
 			{
-					db=client.getDB("Trivial5a");
 					db.getCollection(table).drop();
 					System.out.println();
 
@@ -199,7 +214,6 @@ public class Driver {
 		// Listas las bases de datos
 		if (client != null) {
 			// Si no existe la base de datos la crea
-			db = client.getDB("Trivial5a");
 			
 		System.out.println("Lista de todas las bases de datos: ");
 		List<String> basesDeDatos = client.getDatabaseNames();
@@ -221,4 +235,6 @@ public class Driver {
 		else
 			throw new Exception("Error: Conexión no establecida");
 }
+
+
 }

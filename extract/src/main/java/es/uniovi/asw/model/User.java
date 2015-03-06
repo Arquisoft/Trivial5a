@@ -1,5 +1,8 @@
 package es.uniovi.asw.model;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import com.google.gson.Gson;
 
 
@@ -16,8 +19,9 @@ public class User {
 	public int numberWrongAnswer;	// preguntas falladas
 	
 	
-	public User(long id, String name, String lastName, int numerCorrectAnswer,
-			int numberWrongAnswer, String password) {
+	public User(long id, String name, String lastName,String password,
+			int numerCorrectAnswer,
+			int numberWrongAnswer,boolean admin) {
 		super();
 		this.id = id;
 		this.name = name;
@@ -25,6 +29,7 @@ public class User {
 		this.numerCorrectAnswer = numerCorrectAnswer;
 		this.numberWrongAnswer = numberWrongAnswer;
 		this.password= password;
+		this.admin=admin;
 	}
 
 
@@ -112,5 +117,15 @@ public class User {
 	}
 	
 	
+	public Map<String, Object> showStadistics()
+	{
+		
+		Map<String, Object> vecesFallosAciertos= new HashMap<String,Object>();
+		vecesFallosAciertos.put("usuario", name);	
+		vecesFallosAciertos.put("aciertos", numerCorrectAnswer);
+		vecesFallosAciertos.put("fallos", numberWrongAnswer);
+		
+		return vecesFallosAciertos;
+	}
 	
 }

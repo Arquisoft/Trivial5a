@@ -2,6 +2,8 @@ package es.uniovi.asw.model;
 
 import java.util.Arrays;
 
+import com.google.gson.Gson;
+
 public class Question {
 	
 	/**
@@ -45,16 +47,17 @@ public class Question {
 					wrongAnswers [i]=null;
 		}
 		
-	/**
-	 * Generado por defecto	
-	 * return String
-	 */
-	@Override
-	public String toString() {
-		return "Question [identifier= "+identifer+", "+"query=" + query + ", correctAnswer=" + correctAnswer
-				+ ", wrongAnswers=" + Arrays.toString(wrongAnswers) + "]";
-	}
+
 		
+	@Override
+		public String toString() {
+			return "Question [category=" + category + ", query=" + query
+					+ ", identifer=" + identifer + ", correctAnswer="
+					+ correctAnswer + ", wrongAnswers="
+					+ Arrays.toString(wrongAnswers) + ", vecesFallada="
+					+ vecesFallada + ", vecesAcertada=" + vecesAcertada + "]";
+		}
+
 	/**
 	 * Devuelve la representacion en formato JSON de la pregunta.
 	 * Cabe añadir que es independiente del formato de entrada
@@ -63,20 +66,8 @@ public class Question {
 	public String toJSON()
 	{
 		
-		String JSON="Identifier"+":"+"'"+identifer+"'"+",\n"+
-					"Query"+":"+"'"+query+"'"+",\n"+
-					"CorrectAnswer"+":"+"'"+correctAnswer+"'"+",\n";
-		
-					for(int i=0;i< wrongAnswers.length;i++)
-					{
-						if(i==wrongAnswers.length-1)
-							JSON+=	"WrongAnswer"+i+":"+"'"+wrongAnswers[i]+"'";
-						else
-							JSON+=	"WrongAnswer"+i+":"+"'"+wrongAnswers[i]+"'"+",\n";
-					}
-					JSON += "\n}";
-				
-		return JSON;
+		Gson g= new Gson();
+		return g.toJson(this);
 	}
 
 

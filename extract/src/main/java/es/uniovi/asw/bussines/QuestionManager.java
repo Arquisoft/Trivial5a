@@ -16,4 +16,5 @@ public class QuestionManager {
 	//Hay que hacer un parser de JSON para cargar las preguntas en la lista
 	
 	
+  	
 }
