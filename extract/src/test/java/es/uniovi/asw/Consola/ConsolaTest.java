@@ -7,6 +7,9 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
+import es.uniovi.asw.extractor.consola.Consola;
+
+
 /**
  * @author ikzer
  *

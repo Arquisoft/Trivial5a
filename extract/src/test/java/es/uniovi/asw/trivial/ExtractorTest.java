@@ -7,10 +7,7 @@ import static org.junit.Assert.*;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
-import java.io.InputStreamReader;
 import java.io.PrintStream;
-import java.util.Scanner;
-
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;

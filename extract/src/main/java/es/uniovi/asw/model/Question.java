@@ -18,6 +18,8 @@ public class Question {
 	private String[] wrongAnswers; //Array de preguntas incorrectas
 
 
+	private int vecesFallada;
+	private int vecesAcertada;
 	/**
 	 * Se crea el objeto con el numero de respuestas incorrectas que sean todas menos la correcta
 	 * Si hubiera mas respuestas correctas se cambiaria en el constructor
@@ -135,6 +137,22 @@ public class Question {
 
 	public void setWrongAnswers(String[] wrongAnswers) {
 		this.wrongAnswers = wrongAnswers;
+	}
+
+	public int getVecesFallada() {
+		return vecesFallada;
+	}
+
+	public void setVecesFallada(int vecesFallada) {
+		this.vecesFallada = vecesFallada;
+	}
+
+	public int getVecesAcertada() {
+		return vecesAcertada;
+	}
+
+	public void setVecesAcertada(int vecesAcertada) {
+		this.vecesAcertada = vecesAcertada;
 	}
 	
 	

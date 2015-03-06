@@ -3,7 +3,7 @@ package es.uniovi.asw.trivial;
 import java.io.InputStream;
 import java.util.Scanner;
 
-import es.uniovi.asw.Consola.Consola;
+import es.uniovi.asw.extractor.consola.Consola;
 
 public class Extractor {
 	
@@ -34,6 +34,12 @@ public class Extractor {
 	@SuppressWarnings("resource")
 	public void automatizar(InputStream input)
 	{
+		try {
+					} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
 		String cadena = new String();
 		while(true)
 		{

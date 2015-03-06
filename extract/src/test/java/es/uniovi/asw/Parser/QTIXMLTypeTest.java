@@ -6,13 +6,14 @@ package es.uniovi.asw.Parser;
 import static org.junit.Assert.*;
 
 import java.io.BufferedReader;
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 
-import javax.swing.JOptionPane;
-
 import org.junit.Test;
+
+import es.uniovi.asw.extractor.parser.Document;
+import es.uniovi.asw.extractor.parser.Parser;
+import es.uniovi.asw.extractor.parser.QTIXMLType;
 
 /**
  * @author changqu
@@ -34,11 +35,11 @@ public class QTIXMLTypeTest {
 		while (bf.ready()) {
 			leido += bf.readLine() + "\n";
 		}
-		parser.lineas = leido.split("[\r\n]");
+		parser.setLineas(leido.split("[\r\n]"));
 		bf.close();
 	
 	
-		assertEquals(true, qt.verify(parser.lineas));
+		assertEquals(true, qt.verify(parser.getLineas()));
 	}
 
 }
