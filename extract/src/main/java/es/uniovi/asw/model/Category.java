@@ -11,36 +11,60 @@ public class Category {
 	private String name;
 	private ArrayList <Question> questions= new ArrayList<Question>();
 
-	public void addQuestions(Question question)
-	{
+	/**
+	 * Añadir una pregunta
+	 * @param question
+	 */
+	public void addQuestions(Question question){
 		questions.add(question);
 	}
 	
-	public void removeQuestions (Question question)
-	{
+	/**
+	 * Eliminar un pregunta
+	 * @param question
+	 */
+	public void removeQuestions (Question question){
 		questions.remove(question);
 	}
 
+	/**
+	 * Devuelve el valor de name
+	 * @return name
+	 */
 	public String getName() {
 		return name;
 	}
 
+	/**
+	 * Devuelve el valor de questions
+	 * @return questions
+	 */
 	public ArrayList<Question> getQuestions() {
 		return questions;
 	}
 
+	/**
+	 * Cambia el valor de name id 
+	 * @param name
+	 */
 	public void setName(String name) {
 		this.name = name;
 	}
 
+	/**
+	 * Devuelve el valor de name y questions
+	 */
 	@Override
 	public String toString() {
-		
 		return "Category [name=" + name + ", questions=" + questions + "]";
 	}
 	
-	public String toJSON()
-	{
+	/**
+	 * Devuelve la representacion en formato JSON de la pregunta.
+	 * Cabe añadir que es independiente del formato de entrada
+	 * @return String JSON
+	 */
+	public String toJSON(){
 		Gson g= new Gson();
 		return g.toJson(this);
 	}
@@ -49,8 +73,7 @@ public class Category {
 	 * Devuelve la pregunta mas facil y mas dificil de la categoria
 	 * @return
 	 */
-	public Map<String, Question> showEstadisticsCategory()
-	{
+	public Map<String, Question> showEstadisticsCategory() {
 		Question preguntaMasDificil=questions.get(0);
 		Question preguntaMasFacil=questions.get(0);
 		
