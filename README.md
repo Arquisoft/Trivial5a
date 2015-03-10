@@ -1,5 +1,7 @@
-Trivial0
+Trivial 5a
 =============
+
+Travis: https://travis-ci.org/Arquisoft/Trivial5a.svg?branch=master
 
 Repository for Trivial programs. 
 
