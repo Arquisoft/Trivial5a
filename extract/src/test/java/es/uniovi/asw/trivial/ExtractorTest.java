@@ -48,16 +48,6 @@ public class ExtractorTest {
 	}
 	
 	@Test
-	public void testAutomatizar_1Arg() {
-		ByteArrayInputStream in = new ByteArrayInputStream("TestIncorrectInput".getBytes());
-		System.setIn(in);
-
-		extractor.automatizar(in);
-
-		System.setIn(System.in);
-	}
-	
-	@Test
 	public void testRunValid() {
 		String[] arg = new String[4];
 		assertEquals(0, extractor.run(arg));
