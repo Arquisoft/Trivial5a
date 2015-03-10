@@ -1,5 +1,6 @@
 Trivial 5a
 =============
+[![Build Status](https://travis-ci.org/Arquisoft/Trivial5a.svg?branch=master)](https://travis-ci.org/Arquisoft/Trivial5a)
 
 Travis: https://travis-ci.org/Arquisoft/Trivial5a.svg?branch=master
 
