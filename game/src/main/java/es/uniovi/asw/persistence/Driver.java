@@ -93,15 +93,15 @@ public class Driver {
 	 * @return
 	 * @throws Exception
 	 */
-	public User findUser(String name, String lastName, String password)
+	public User findUser(String login, String password)
 			throws Exception {
 		conectDB();
 
 		if (client != null) {
 			// Crea una tabla si no existe y agrega datos
 			table = db.getCollection("usuarios");
-			DBObject user = new BasicDBObject("name", name).append("lastName",
-					lastName).append("password", password);
+			DBObject user = new BasicDBObject("login", login)
+			.append("password", password);
 			
 			Gson g =new Gson();
 			DBObject obj =table.findOne(user);
@@ -126,8 +126,8 @@ public class Driver {
 		table = db.getCollection("usuarios");
 		DBObject [] userModificado = new BasicDBObject[1];
 		userModificado[0]=(DBObject) JSON.parse(user.toJSON());
-		DBObject userActualizar = new BasicDBObject("name", user.getName())
-		.append("lastName",user.getLastName());
+		DBObject userActualizar = new BasicDBObject("name", user.getLogin())
+		.append("lastName",user.getLogin());
 		table.findAndModify(userActualizar, userModificado[0]);
 		client.close();
 	}

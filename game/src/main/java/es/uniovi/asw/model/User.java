@@ -6,20 +6,18 @@ import com.google.gson.Gson;
 
 public class User {
 	public long id;
-	public String name;
-	public String lastName;
+	public String login;
 	public String password;
 	private boolean admin; //Poder administrar
 	public int numerCorrectAnswer; //preguntas acertadas
 	public int numberWrongAnswer;	// preguntas falladas
 	
-	public User(long id, String name, String lastName,String password,
+	public User(long id, String login,String password,
 			int numerCorrectAnswer,
 			int numberWrongAnswer,boolean admin) {
 		super();
 		this.id = id;
-		this.name = name;
-		this.lastName = lastName;
+		this.login = login;
 		this.numerCorrectAnswer = numerCorrectAnswer;
 		this.numberWrongAnswer = numberWrongAnswer;
 		this.password= password;
@@ -27,36 +25,23 @@ public class User {
 	}
 
 	/**
-	 * Devuelve el valor de name
+	 * Devuelve el valor de login
 	 * @return name
 	 */
-	public String getName() {
-		return name;
+	public String getLogin() {
+		return login;
 	}
 
 	/**
-	 * Cambia el valor de name
+	 * Cambia el valor de login
 	 * @param name
 	 */
-	public void setName(String name) {
-		this.name = name;
+	public void setLogin(String login) {
+		this.login=login;
 	}
 
-	/**
-	 * Devuelve el valor de lastName
-	 * @return lastName
-	 */
-	public String getLastName() {
-		return lastName;
-	}
-
-	/**
-	 * Cambia el valor de lastName
-	 * @param lastName
-	 */
-	public void setLastName(String lastName) {
-		this.lastName = lastName;
-	}
+	
+	
 
 	/**
 	 * Devuelve el valor de numerCorrectAnswer
@@ -131,17 +116,16 @@ public class User {
 	}
 
 	/**
-	 * Devuelve el id del usuario, nombre, apellidos, contraseña, si es administrador
+	 * Devuelve el id del usuario,login, contraseña, si es administrador
 	 * o no, el número de respuestas correctas y el númer de respuestas falladas
 	 */
 	@Override
 	public String toString() {
-		return "User [id=" + id + ", name=" + name + ", lastName=" + lastName
-				+ ", password=" + password + ", admin=" + admin
-				+ ", numerCorrectAnswer=" + numerCorrectAnswer
-				+ ", numberWrongAnswer=" + numberWrongAnswer + "]";
+		return "User [id=" + id + ", login=" + login + ", password=" + password
+				+ ", admin=" + admin + ", numerCorrectAnswer="
+				+ numerCorrectAnswer + ", numberWrongAnswer="
+				+ numberWrongAnswer + "]";
 	}
-
 	/**
 	 * Devuelve la representacion en formato JSON de la pregunta.
 	 * Cabe añadir que es independiente del formato de entrada
@@ -152,13 +136,15 @@ public class User {
 		return g.toJson(this);
 	}
 	
+	
+
 	/**
 	 * Devuelve las estadísticas del usuario mostrando el número de preguntas acertadas y falladas
 	 * @return vecesFallosAciertos
 	 */
 	public Map<String, Object> showStadistics() {
 		Map<String, Object> vecesFallosAciertos= new HashMap<String,Object>();
-		vecesFallosAciertos.put("usuario", name);	
+		vecesFallosAciertos.put("usuario", login);	
 		vecesFallosAciertos.put("aciertos", numerCorrectAnswer);
 		vecesFallosAciertos.put("fallos", numberWrongAnswer);
 		return vecesFallosAciertos;

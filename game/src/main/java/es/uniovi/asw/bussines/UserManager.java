@@ -15,8 +15,7 @@ public class UserManager {
 	 */
 	public User login(User user) throws Exception {
 		d= new Driver();
-		User userBBDD=d.findUser(user.getName(), user.getLastName(),
-				user.getPassword());
+		User userBBDD=d.findUser(user.getLogin(),user.getPassword());
 		if(userBBDD==null)
 			throw new Exception("Usuario no encontrado. Introduzca datos");
 		return userBBDD;

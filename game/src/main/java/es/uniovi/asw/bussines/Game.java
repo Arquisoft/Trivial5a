@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Random;
+
 import es.uniovi.asw.model.Category;
 import es.uniovi.asw.model.User;
 
@@ -14,11 +16,13 @@ public class Game {
 	private UserManager userManager;
 	private List<Category> tablero;
 	
+	private  User usuarioActivo; //Se usa para gestionar el turno activo del usuario
 	
-	public Game(List<User> usuarios) {
+ 	public Game(List<User> usuarios) {
 		this.usuarios = usuarios;
 		this.questionManager = new QuestionManager();
 		this.tablero = new ArrayList<Category>();
+		this.usuarioActivo=usuarios.get(0); //Empieza el 1º usuario
 		/*Category c = new Category();
 		Question q = new Question();
 		q.setVecesFallada(4);
@@ -37,6 +41,7 @@ public class Game {
 	 * Muestra las preguntas acertadas y falladas de cada usuario
 	 * Muestra estadisticas de preguntas. Pregunta mas dificil, mas facil,etc
 	 */
+	@SuppressWarnings("rawtypes")
 	public void showEstadistics() {
 		Map<String,List<Map>> estadisticas = new HashMap<String,List<Map>>();
 		
@@ -54,7 +59,7 @@ public class Game {
 		
 		estadisticas.put("estadisticasPreguntas", estadisticasPreguntas);
 		
-		//MOSTRAR ESTADISTICAS USERS
+		//MOSTRAR ESTADISTICAS USERS //ESTO SE BORRARIA
 		List<Map> user =	estadisticas.get("estadisticasUsers");
 		for(Map m : user)
 			System.out.println(m);
@@ -128,4 +133,47 @@ public class Game {
 	public void setTablero(List<Category> tablero) {
 		this.tablero = tablero;
 	}
+
+	public User getUsuarioActivo() {
+		return usuarioActivo;
+	}
+
+	public void setUsuarioActivo(User usuarioActivo) {
+		this.usuarioActivo = usuarioActivo;
+	}
+	
+	/**
+	 * Metodo que simula la tirada de un dado. 
+	 * @return un numero aleatorio entre 1 y 6
+	 */
+	public int tirarDado()
+	{	Random r = new Random();
+		 return r.nextInt(6)+1; 
+	}
+	
+	/**
+	 * Si se falla se cambia el turno, al turno siguiente
+	 */
+	public void turnoSiguiente()
+	{
+		int indexUsuarioSiguente= (usuarios.indexOf(usuarioActivo)+1)%usuarios.size();
+		usuarioActivo= usuarios.get(indexUsuarioSiguente);
+	}
+	
+	/**
+	 * Metodo que se llamara cada vez que acierte una pregunta
+	 */
+	public void acierta()
+	{
+		
+	}
+	
+	/**
+	 * Metodo que se llamara cada vez que se falle una pregunta
+	 */
+	public void falla()
+	{
+		
+	}
+	
 }
