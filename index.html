@@ -185,22 +185,46 @@
 
       </div>
 
-      <div class="w-col w-col-6">
+      <div>
 
-            <div class="right wp8">
+            <div>
 
-              <p>Descripción del extractor. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut exercitation ullamco labore et dolore magna aliqua exercitation ullamco labore et dolore magna aliqua.</p>
+			  <p>La empresa NoGame dedicada a la creación de videojuegos va a crear una nueva línea de
+				 productos basados en juegos de preguntas/respuesta para diversas plataformas. En primer
+				 lugar se desea construir una variante del juego Trivial, aunque la idea es que puedan
+				 crearse más juegos de preguntas/respuesta similares en el futuro</p>
+				 
+			  <p>En una primera fase, desean hacerse con una base de preguntas suficiente para poder
+				 alimentar los diferentes juegos. Para ello, desean construir una sencilla aplicación que lea
+				 ficheros con los enunciados y respuestas de las preguntas, procese dichas preguntas
+				 indicando si hay errores o son correctas y las almacene en una base de datos.</p>
+				 
+			  <p>Los ficheros con los enunciados de las preguntas se tomarán de bancos de preguntas ya
+				 existentes. Uno de los bancos de preguntas utiliza el formato GIFT. La aplicación utilizará
+				 una representación interna de las preguntas en formato JSON que facilitará su posterior
+				 almacenamiento en la base de datos. La compañía está considerando utilizar MongoDb,
+				 aunque esta decisión todavía no se ha tomado.</p>
 
-            </div>
-
-          </div>
-
-          <div class="w-col w-col-6">
-
-            <div class="left wp7">
-
-              <p>Descripción del programa de escritorio. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut exercitation ullamco labore et dolore magna aliqua exercitation ullamco labore et dolore magna aliqua.</p>
-
+			  <p>Se desea que la aplicación pueda ejecutarse en dos etapas. Una primera etapa que analiza
+				 los ficheros con las preguntas y genera el formato intermedio y otra etapa que toma las
+				 preguntas en dicho formato intermedio y las almacena en la base de datos. La ejecución de
+				 estas 2 etapas será controlada por un operador de la compañía que podrá decidir cuándo
+				 ejecuta cada etapa e incluso podrá automatizar dicha ejecución para que se realice cada
+				 cierto tiempo.</p>
+				 
+			  <p>Es importante garantizar que la conversión es correcta, facilitando la depuración del
+				 proceso de carga de preguntas. Por ese motivo, se buscará una solución que no requiera
+				 interfaz interactivo pero que permita varias opciones de entrada (elegir nombre del fichero a
+				 cargar, elegir formato de la entrada, elegir nombre del fichero de salida, elegir formato del
+				 fichero de salida, etc.) y que permita observar los resultados intermedios de la conversión
+				 para chequear que no hay errores.</p>
+				 
+			  <p>Puesto que la conversión puede automatizarse para que se realice en cualquier momento,
+				 la compañía no requiere que las aplicaciones sean muy eficientes ni que el proceso de
+				 conversión se realice de forma interactiva. En la primera fase la compañía solamente
+				 requiere la conversión de preguntas en formato GIFT, pero se está pensando que la
+				 solución debe admitir otros formatos en el futuro. Por ejemplo, la compañía está pensando
+				 procesar también preguntas en formatos XML como el formato QTI.</p>
             </div>
 
           </div>
@@ -215,8 +239,7 @@
 
               <h3 class="underline">extractor</h3>
 
-              <p>Descripción corta del extractor. Lorem ipsum dolor sit ameLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut exercitation ullamco labore et dolore magna aliquat, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut exercitation ullamco labore et dolore magna aliqua.</p>
-
+              <p>Descripción corta del extractor.</p>
             </div>
 
           </div>
@@ -229,8 +252,7 @@
 
               <h3 class="underline">escritorio</h3>
 
-              <p>Descripción corta del programa de escritorio. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut exercitation ullamco labore et dolore magna aliqua.</p>
-
+              <p>Descripción corta del programa de escritorio.</p>
             </div>
 
           </div>
