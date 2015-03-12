@@ -7,6 +7,14 @@ public class UserManager {
 	
 	Driver d;
 	
+	
+	
+	public UserManager(Driver d) {
+		super();
+		this.d = d;
+	}
+
+
 	/**
 	 * Metodo de negocio que llama a la persistencia y hace el login en la aplicacion
 	 * @param user
@@ -14,7 +22,6 @@ public class UserManager {
 	 * @throws Exception
 	 */
 	public User login(User user) throws Exception {
-		d= new Driver();
 		User userBBDD=d.findUser(user.getLogin(),user.getPassword());
 		if(userBBDD==null)
 			throw new Exception("Usuario no encontrado. Introduzca datos");
@@ -30,7 +37,6 @@ public class UserManager {
 	 * @param user
 	 */
 	public void updateUser(User user) {
-		d= new Driver();
 		d.updateUser(user);
 	}
 }

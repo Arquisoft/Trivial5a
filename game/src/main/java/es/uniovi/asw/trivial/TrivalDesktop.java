@@ -1,13 +1,17 @@
 package es.uniovi.asw.trivial;
 
-import java.util.List;
 import es.uniovi.asw.bussines.*;
-import es.uniovi.asw.model.User;
 
 public class TrivalDesktop {
+	
+	public static void main(String [] args)
+	{
+		run();
+	}
 
-	public void run(List<User> usuarios){
-		Game g = new Game(usuarios);
+	public static void run(){
+		
+		Game g = new Game();
 		g.initialize();
 	}
 

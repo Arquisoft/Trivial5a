@@ -70,14 +70,14 @@ public class Category {
 	}
 	
 	/**
-	 * Devuelve la pregunta mas facil y mas dificil de la categoria
+	 * Devuelve la pregunta mas facil y mas dificil de la categoria junto con su nombre
 	 * @return
 	 */
-	public Map<String, Question> showEstadisticsCategory() {
+	public Map<String, Object> showEstadisticsCategory() {
 		Question preguntaMasDificil=questions.get(0);
 		Question preguntaMasFacil=questions.get(0);
 		
-		Map<String, Question> preguntaFacilDificil= new HashMap<String,Question>();
+		Map<String, Object> preguntaFacilDificil= new HashMap<String,Object>();
 		for(Question q : questions)
 		{		
 			if(q.getVecesAcertada()>preguntaMasFacil.getVecesAcertada())
@@ -86,6 +86,7 @@ public class Category {
 			if(q.getVecesFallada()>preguntaMasDificil.getVecesFallada())
 				preguntaMasDificil=q;
 		}
+		preguntaFacilDificil.put("name", getName());
 		preguntaFacilDificil.put("preguntaFacil", preguntaMasFacil);
 		preguntaFacilDificil.put("preguntaDificil", preguntaMasDificil);
 		

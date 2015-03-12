@@ -5,9 +5,11 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Random;
+import java.util.Timer;
 
 import es.uniovi.asw.model.Category;
 import es.uniovi.asw.model.User;
+import es.uniovi.asw.persistence.Driver;
 
 public class Game {
 
@@ -15,14 +17,22 @@ public class Game {
 	private QuestionManager questionManager;
 	private UserManager userManager;
 	private List<Category> tablero;
+	private Driver d = new Driver();//Solo se carga una vez el Driver por ejecucion
 	
 	private  User usuarioActivo; //Se usa para gestionar el turno activo del usuario
 	
- 	public Game(List<User> usuarios) {
-		this.usuarios = usuarios;
-		this.questionManager = new QuestionManager();
+	/**
+	 * Constructor de la clase Game.
+	 * Crea los gestores de preguntas  y usuarios y les pasa el driver de la BBDD
+	 * Este metodo no carga nada
+	 * Los usuarios se cargan cuando se loguean en la aplicacion con el metodo accederJuego()
+	 * Las preguntas se cargan desde el gestor de preguntas en el metodo Initialize()
+	 */
+ 	public Game() {
+		this.questionManager = new QuestionManager(d);
+		this.userManager = new UserManager(d);
 		this.tablero = new ArrayList<Category>();
-		this.usuarioActivo=usuarios.get(0); //Empieza el 1º usuario
+		this.usuarios= new ArrayList<User>();
 		/*Category c = new Category();
 		Question q = new Question();
 		q.setVecesFallada(4);
@@ -32,7 +42,7 @@ public class Game {
 	}
 
 	public void initialize() {
-		// TODO Auto-generated method stub
+		questionManager.cargarPreguntas();
 		
 	}
 	
@@ -143,6 +153,17 @@ public class Game {
 	}
 	
 	/**
+	 * Cuando el login acierta, el usuario se mete en los usuarios del juego
+	 * Si no se loguea correctamente, lanza una excepcion
+	 * @param user
+	 * @throws Exception
+	 */
+	public void accederJuego(User user) throws Exception
+	{
+		usuarios.add(userManager.login(user));
+	}
+	
+	/**
 	 * Metodo que simula la tirada de un dado. 
 	 * @return un numero aleatorio entre 1 y 6
 	 */
@@ -162,18 +183,24 @@ public class Game {
 	
 	/**
 	 * Metodo que se llamara cada vez que acierte una pregunta
+	 * Actualiza estadisticas
 	 */
 	public void acierta()
 	{
-		
+		usuarioActivo.setNumberCorrectAnswer(usuarioActivo.getNumberCorrectAnswer()+1);
+		userManager.updateUser(usuarioActivo);
 	}
 	
 	/**
 	 * Metodo que se llamara cada vez que se falle una pregunta
+	 * Actualiza estadisticas y pasa el turno
 	 */
 	public void falla()
 	{
-		
+		usuarioActivo.setNumberWrongAnswer(usuarioActivo.getNumberWrongAnswer()+1);
+		userManager.updateUser(usuarioActivo);
+		turnoSiguiente();
 	}
+	
 	
 }

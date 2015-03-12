@@ -152,6 +152,8 @@ public class Driver {
 			}
 			
 			client.close();
+			for(User user : usuarios)
+				System.out.println(user);
 			return usuarios;
 		} else
 			throw new Exception("Error: Conexión no establecida");

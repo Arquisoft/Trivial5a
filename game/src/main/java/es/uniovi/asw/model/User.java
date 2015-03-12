@@ -9,16 +9,16 @@ public class User {
 	public String login;
 	public String password;
 	private boolean admin; //Poder administrar
-	public int numerCorrectAnswer; //preguntas acertadas
+	public int numberCorrectAnswer; //preguntas acertadas
 	public int numberWrongAnswer;	// preguntas falladas
 	
 	public User(long id, String login,String password,
-			int numerCorrectAnswer,
+			int numberCorrectAnswer,
 			int numberWrongAnswer,boolean admin) {
 		super();
 		this.id = id;
 		this.login = login;
-		this.numerCorrectAnswer = numerCorrectAnswer;
+		this.numberCorrectAnswer = numberCorrectAnswer;
 		this.numberWrongAnswer = numberWrongAnswer;
 		this.password= password;
 		this.admin=admin;
@@ -47,16 +47,16 @@ public class User {
 	 * Devuelve el valor de numerCorrectAnswer
 	 * @return numerCorrectAnswer
 	 */
-	public int getNumerCorrectAnswer() {
-		return numerCorrectAnswer;
+	public int getNumberCorrectAnswer() {
+		return numberCorrectAnswer;
 	}
 
 	/**
 	 * Cambia el valor de numerCorrectAnswer
 	 * @param numerCorrectAnswer
 	 */
-	public void setNumerCorrectAnswer(int numerCorrectAnswer) {
-		this.numerCorrectAnswer = numerCorrectAnswer;
+	public void setNumberCorrectAnswer(int numberCorrectAnswer) {
+		this.numberCorrectAnswer = numberCorrectAnswer;
 	}
 
 	/**
@@ -122,8 +122,8 @@ public class User {
 	@Override
 	public String toString() {
 		return "User [id=" + id + ", login=" + login + ", password=" + password
-				+ ", admin=" + admin + ", numerCorrectAnswer="
-				+ numerCorrectAnswer + ", numberWrongAnswer="
+				+ ", admin=" + admin + ", numberCorrectAnswer="
+				+ numberCorrectAnswer + ", numberWrongAnswer="
 				+ numberWrongAnswer + "]";
 	}
 	/**
@@ -145,7 +145,7 @@ public class User {
 	public Map<String, Object> showStadistics() {
 		Map<String, Object> vecesFallosAciertos= new HashMap<String,Object>();
 		vecesFallosAciertos.put("usuario", login);	
-		vecesFallosAciertos.put("aciertos", numerCorrectAnswer);
+		vecesFallosAciertos.put("aciertos", numberCorrectAnswer);
 		vecesFallosAciertos.put("fallos", numberWrongAnswer);
 		return vecesFallosAciertos;
 	}
