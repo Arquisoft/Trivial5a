@@ -2,7 +2,7 @@
 ' Arte y Literatura': [  
 { 
 Identifier:'Q1',
-Query:':¿Quién pintó el “Gernika�?? ',
+Query:':¿Quién pintó el “Gernika”? ',
 CorrectAnswer:'Pablo Picasso',
 WrongAnswer0:'Salvador Dalí',
 WrongAnswer1:'Francisco de Goya'
@@ -30,7 +30,7 @@ WrongAnswer1:'El Lazarillo de Tormes'
 },
 { 
 Identifier:'Q5',
-Query:'¿Qué premio Nobel de literatura escribió “Cien años de soledad�?? ',
+Query:'¿Qué premio Nobel de literatura escribió “Cien años de soledad”? ',
 CorrectAnswer:'Gabriel García Márquez ',
 WrongAnswer0:'Juan Ramón Jiménez',
 WrongAnswer1:'Pablo Neruda'
@@ -48,7 +48,7 @@ WrongAnswer1:'Akelarre'
 ' Música y Cine': [  
 { 
 Identifier:'Q7',
-Query:'¿Qué actor español ganó el Óscar al mejor actor de reparto por el film “No country for old men�?? ',
+Query:'¿Qué actor español ganó el Óscar al mejor actor de reparto por el film “No country for old men”? ',
 CorrectAnswer:'Javier Bardem',
 WrongAnswer0:'Antonio Banderas',
 WrongAnswer1:'Benicio del Toro '
@@ -69,7 +69,7 @@ WrongAnswer1:'Bossa Nova'
 },
 { 
 Identifier:'Q10',
-Query:'¿Qué director español ganó el Óscar a la mejor película de habla no inglesa por “Mar adentro�?? ',
+Query:'¿Qué director español ganó el Óscar a la mejor película de habla no inglesa por “Mar adentro”? ',
 CorrectAnswer:'Alejandro Amenábar',
 WrongAnswer0:'Pedro Almodóvar',
 WrongAnswer1:'Fernando Trueba '
@@ -83,7 +83,7 @@ WrongAnswer1:'Salsa'
 },
 { 
 Identifier:'Q12',
-Query:'¿De qué país son originarias las “rancheras�?? ',
+Query:'¿De qué país son originarias las “rancheras”? ',
 CorrectAnswer:'México ',
 WrongAnswer0:'Argentina',
 WrongAnswer1:'Colombia'
@@ -129,7 +129,7 @@ WrongAnswer1:'Pedro Delgado'
 },
 { 
 Identifier:'Q18',
-Query:'¿Qué legendario jugador de fútbol marcó un gol con “la mano de Dios�?? ',
+Query:'¿Qué legendario jugador de fútbol marcó un gol con “la mano de Dios”? ',
 CorrectAnswer:'Maradona ',
 WrongAnswer0:'Pelé',
 WrongAnswer1:'Johan Cruyff'
@@ -140,7 +140,7 @@ WrongAnswer1:'Johan Cruyff'
 ' Cultura y Tradición': [  
 { 
 Identifier:'Q19',
-Query:'¿Qué es una “media verónica�?? ',
+Query:'¿Qué es una “media verónica”? ',
 CorrectAnswer:'Un pase de toreo ',
 WrongAnswer0:'Una bebida',
 WrongAnswer1:'Un paso de baile regional'
@@ -196,7 +196,7 @@ Identifier:'Q26',
 Query:'¿Por qué se decía que en España nunca se ponía el sol? ',
 CorrectAnswer:'Porque España poseía colonias en todos loscontinentes',
 WrongAnswer0:'Porque siempre hacía buen tiempo',
-WrongAnswer1:'Porque España estaba viviendo “su siglo de las luces�?.'
+WrongAnswer1:'Porque España estaba viviendo “su siglo de las luces”.'
 },
 { 
 Identifier:'Q27',
