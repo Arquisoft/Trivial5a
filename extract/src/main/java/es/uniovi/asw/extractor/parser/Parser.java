@@ -54,7 +54,7 @@ public class Parser {
 	 */
 	public void persist() throws Exception {
 		Driver D = new Driver();
-		D.saveQuestionJSON(transformado);
+		D.save(transformado);
 	}
 	public void setLineas(String[] lineas) {
 		this.lineas = lineas;
