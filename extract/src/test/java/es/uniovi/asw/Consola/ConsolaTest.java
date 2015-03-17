@@ -11,6 +11,7 @@ import org.junit.Test;
  * @author ikzer
  *
  */
+/*
 public class ConsolaTest {
 
 	Consola c = new Consola();
@@ -25,7 +26,7 @@ public class ConsolaTest {
 		}
 	}
 	
-	/*@Test
+	@Test
 	public void test2ArgsNoExiste() {
 		try {
 			String[] args = new String[2];
@@ -34,7 +35,7 @@ public class ConsolaTest {
 		} catch (Exception e) {
 			assertEquals("src/main/java/es/uniovi/asw/data/testNoExiste.gift (No existe el archivo o el directorio)", e.getMessage());
 		}
-	}*/
+	}
 	
 	@Test
 	public void test2ArgsFormatoInvalido() {
@@ -47,7 +48,7 @@ public class ConsolaTest {
 		}
 	}
 	
-	/*@Test
+	@Test
 	public void test4ArgsNoExiste() {
 		try {
 			String[] args = new String[4];
@@ -59,7 +60,7 @@ public class ConsolaTest {
 		} catch (Exception e) {
 			assertEquals("src/main/java/es/uniovi/asw/data/testNoExiste.gift (No existe el archivo o el directorio)", e.getMessage());
 		}
-	}*/
+	}
 	
 	@Test
 	public void test4ArgsFormatoSalidaInvalido() {
@@ -90,3 +91,4 @@ public class ConsolaTest {
 	}
 
 }
+*/
