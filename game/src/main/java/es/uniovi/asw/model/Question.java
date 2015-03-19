@@ -1,6 +1,7 @@
 package es.uniovi.asw.model;
 
 import java.util.Arrays;
+
 import com.google.gson.Gson;
 
 public class Question {
@@ -8,7 +9,7 @@ public class Question {
 	/**
 	 * Clase que modela una preguna del modelo GIFT
 	 */
-	public static final int MAX_ANSWER = 3; //Se podria cambiar facilmente si dado el caso
+	public static final int MAX_ANSWER = 4; //Se podria cambiar facilmente si dado el caso
 										 // se quisese cambiar el modelo de juego
 	private Category category; //Una pregunta solo puede tener una categoria asociada
 	private String query;	

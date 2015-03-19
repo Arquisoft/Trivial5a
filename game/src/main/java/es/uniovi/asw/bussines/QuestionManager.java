@@ -3,7 +3,7 @@ package es.uniovi.asw.bussines;
 import java.util.HashSet;
 import java.util.Set;
 
-import es.uniovi.asw.model.*;
+import es.uniovi.asw.model.Question;
 import es.uniovi.asw.persistence.Driver;
 
 public class QuestionManager {

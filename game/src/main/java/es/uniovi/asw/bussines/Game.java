@@ -2,22 +2,31 @@ package es.uniovi.asw.bussines;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Random;
-import java.util.Timer;
+import java.util.Set;
 
 import es.uniovi.asw.model.Category;
+import es.uniovi.asw.model.Question;
 import es.uniovi.asw.model.User;
 import es.uniovi.asw.persistence.Driver;
 
 public class Game {
-
+	CountDown cronometro = new CountDown(); //CLASE QUE SIRVE PARA CRONOMETRO
+	
+	private static final int maxCategorias =6;
 	private List<User> usuarios;
 	private QuestionManager questionManager;
 	private UserManager userManager;
 	private List<Category> tablero;
 	private Driver d = new Driver();//Solo se carga una vez el Driver por ejecucion
+	
+	private Map<User,Set<String>> preguntasAcertadas;
+	
+	
+	private Question preguntaActual;											
 	
 	private  User usuarioActivo; //Se usa para gestionar el turno activo del usuario
 	
@@ -33,6 +42,7 @@ public class Game {
 		this.userManager = new UserManager(d);
 		this.tablero = new ArrayList<Category>();
 		this.usuarios= new ArrayList<User>();
+		this.preguntasAcertadas= new HashMap<User,Set<String>>();
 		/*Category c = new Category();
 		Question q = new Question();
 		q.setVecesFallada(4);
@@ -161,6 +171,8 @@ public class Game {
 	public void accederJuego(User user) throws Exception
 	{
 		usuarios.add(userManager.login(user));
+		preguntasAcertadas.put(user, new HashSet<String>());
+		
 	}
 	
 	/**
@@ -187,18 +199,39 @@ public class Game {
 	 */
 	public void acierta()
 	{
+		
 		usuarioActivo.setNumberCorrectAnswer(usuarioActivo.getNumberCorrectAnswer()+1);
 		userManager.updateUser(usuarioActivo);
+		
+		preguntaActual.setVecesAcertada(preguntaActual.getVecesAcertada()+1);
+		//questionManager.updateQuestion(preguntaActual);
+		
+		preguntasAcertadas.get(usuarioActivo).add(preguntaActual.getCategory().getName());
+		if(preguntasAcertadas.get(usuarioActivo).size()==maxCategorias)
+			terminarPartida();
 	}
 	
+	/**
+	 * Metodo final del juego. Cuando algun usuario acaba  se llama a este metodo
+	 */
+	private void terminarPartida() {
+		// SE MOSTRARA LAS ESTADISTICAS DE LA PARTIDA Y EL MENSAJE DE PARTIDA FINALIZADA
+		
+	}
+
 	/**
 	 * Metodo que se llamara cada vez que se falle una pregunta
 	 * Actualiza estadisticas y pasa el turno
 	 */
 	public void falla()
 	{
+		if(cronometro.tiempoacabado()==true)
+			turnoSiguiente();
 		usuarioActivo.setNumberWrongAnswer(usuarioActivo.getNumberWrongAnswer()+1);
 		userManager.updateUser(usuarioActivo);
+		
+		preguntaActual.setVecesFallada(preguntaActual.getVecesFallada()+1);
+		//questionManager.updateQuestion(preguntaActual);
 		turnoSiguiente();
 	}
 	

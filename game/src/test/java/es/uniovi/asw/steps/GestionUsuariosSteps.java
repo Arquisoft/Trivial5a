@@ -2,8 +2,6 @@ package es.uniovi.asw.steps;
 
 import java.util.List;
 
-import es.uniovi.asw.game.User;
-import es.uniovi.asw.game.UserDb;
 import cucumber.api.java.es.*;
 import cucumber.api.PendingException;
 import static org.assertj.core.api.Assertions.*;
@@ -13,8 +11,8 @@ public class GestionUsuariosSteps {
 	private UserDb users ;
 	private Boolean loginValue;
 
-	@Dada("^una lista vacía de usuarios$")
-	public void una_lista_vacía_de_usuarios() throws Throwable {
+	@Dada("^una lista vacï¿½a de usuarios$")
+	public void una_lista_vacï¿½a_de_usuarios() throws Throwable {
 		users = new UserDb();
 	}
 
@@ -23,8 +21,8 @@ public class GestionUsuariosSteps {
 		users.addUser(nombre,clave);
 	}
 
-	@Entonces("^el número de usuarios es (\\d+)$")
-	public void el_número_de_usuarios_es(int n) throws Throwable {
+	@Entonces("^el nï¿½mero de usuarios es (\\d+)$")
+	public void el_nï¿½mero_de_usuarios_es(int n) throws Throwable {
 	    assertThat(users.size()).isEqualTo(n);  
 	}
 

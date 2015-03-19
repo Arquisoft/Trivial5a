@@ -1,6 +1,6 @@
 package es.uniovi.asw.trivial;
 
-import es.uniovi.asw.bussines.*;
+import es.uniovi.asw.bussines.Game;
 
 public class TrivalDesktop {
 	
