@@ -3,8 +3,6 @@ package es.uniovi.asw.bussines;
 import java.util.HashSet;
 import java.util.Set;
 
-import com.mongodb.util.JSON;
-
 import es.uniovi.asw.model.Question;
 import es.uniovi.asw.persistence.Driver;
 
@@ -23,9 +21,6 @@ public class QuestionManager {
 	}
 	
 	//Hay que hacer un parser de JSON para cargar las preguntas en la lista
-	
-	private void JSONParser(JSON json)
-	{
-	}
+
   	
 }
