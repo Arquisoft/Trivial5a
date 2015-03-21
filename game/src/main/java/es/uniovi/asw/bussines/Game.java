@@ -51,9 +51,8 @@ public class Game {
 		tablero.add(c);*/
 	}
 
-	public void initialize() {
+	public void initialize()  {
 		questionManager.cargarPreguntas();
-		
 	}
 	
 	/**

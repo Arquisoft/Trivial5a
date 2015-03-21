@@ -3,13 +3,17 @@ package es.uniovi.asw.model;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Random;
 
 import com.google.gson.Gson;
+
+import edu.emory.mathcs.backport.java.util.Collections;
 
 public class Category {
 	
 	private String name;
 	private ArrayList <Question> questions= new ArrayList<Question>();
+	private ArrayList <Question> usedQuestions = new ArrayList<Question>();
 
 	/**
 	 * Añadir una pregunta
@@ -91,5 +95,33 @@ public class Category {
 		preguntaFacilDificil.put("preguntaDificil", preguntaMasDificil);
 		
 		return preguntaFacilDificil;
+	}
+	
+	/**
+	 * Devuelve la pregunta que se va a preguntar, la elimina de la lista principal y la añade a la lista de las ya preguntadas.
+	 * En caso de que la lista principal esté vacia, añade todas las ya preguntadas y las baraja.
+	 * @return
+	 */
+	public Question askQuestion()
+	{
+		Question nextQuestion = questions.get(1);
+		questions.remove(nextQuestion);
+		usedQuestions.add(nextQuestion);
+		if(questions.isEmpty())
+		{
+			questions.addAll(usedQuestions);
+			usedQuestions.clear();
+			shuffleQuestions();
+		}
+		return nextQuestion;
+	}
+	
+	/**
+	 * Baraja aleatoriamente las preguntas de la categoría
+	 */
+	private void shuffleQuestions()
+	{
+		long s = System.nanoTime(); //seed
+		Collections.shuffle(questions, new Random(s));
 	}
 }
