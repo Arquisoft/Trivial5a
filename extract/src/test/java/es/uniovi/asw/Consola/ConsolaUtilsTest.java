@@ -7,7 +7,14 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
+<<<<<<< HEAD
 import es.uniovi.asw.Parser.Document;
+=======
+import es.uniovi.asw.extractor.consola.ConsolaParser;
+import es.uniovi.asw.extractor.consola.ConsolaUtils;
+import es.uniovi.asw.extractor.parser.Document;
+
+>>>>>>> 20ad8fe43e656ba87180b589f8a119ac9057a3b1
 
 /**
  * @author Fernando Delgado

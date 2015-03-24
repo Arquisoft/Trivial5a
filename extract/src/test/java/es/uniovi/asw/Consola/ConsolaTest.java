@@ -7,6 +7,12 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
+<<<<<<< HEAD
+=======
+import es.uniovi.asw.extractor.consola.Consola;
+
+
+>>>>>>> 20ad8fe43e656ba87180b589f8a119ac9057a3b1
 /**
  * @author ikzer
  *

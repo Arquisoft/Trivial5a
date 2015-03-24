@@ -7,7 +7,14 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
+<<<<<<< HEAD
 import es.uniovi.asw.Consola.ConsolaParser;
+=======
+import es.uniovi.asw.extractor.consola.ConsolaParser;
+import es.uniovi.asw.extractor.parser.Document;
+import es.uniovi.asw.extractor.parser.Parser;
+
+>>>>>>> 20ad8fe43e656ba87180b589f8a119ac9057a3b1
 
 /**
  * @author ikzer
@@ -47,7 +54,11 @@ public class ParserTest {
 		l[0] = "a";
 		l[1] = "b";
 		Parser p = new Parser(l);
+<<<<<<< HEAD
 		assertArrayEquals(l,p.lineas);
+=======
+		assertArrayEquals(l,p.getLineas());
+>>>>>>> 20ad8fe43e656ba87180b589f8a119ac9057a3b1
 	}
 	
 	@Test
