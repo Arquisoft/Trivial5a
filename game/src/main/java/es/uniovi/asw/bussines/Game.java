@@ -174,6 +174,12 @@ public class Game {
 		
 	}
 	
+	public void validarTodosUsuarios(List<User> usuarios) throws Exception {
+		for(User u: usuarios) {
+			accederJuego(u);
+		}
+	}
+	
 	/**
 	 * Metodo que simula la tirada de un dado. 
 	 * @return un numero aleatorio entre 1 y 6
