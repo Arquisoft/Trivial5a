@@ -17,8 +17,8 @@ public class TrivialDesktop {
 		run();
 	}
 
-	public static void run() {		
-		Game g = new Game();
+	public static void run() {	
+		new Game();
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
@@ -34,7 +34,6 @@ public class TrivialDesktop {
 			}
 		});
 		
-		g.initialize();
 	}
 
 }

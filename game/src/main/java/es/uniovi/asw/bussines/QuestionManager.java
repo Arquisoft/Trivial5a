@@ -1,26 +1,40 @@
 package es.uniovi.asw.bussines;
 
-import java.util.HashSet;
-import java.util.Set;
+import java.util.ArrayList;
+import java.util.List;
 
+import es.uniovi.asw.model.Category;
 import es.uniovi.asw.model.Question;
 import es.uniovi.asw.persistence.Driver;
 
 public class QuestionManager {
 
-	public Set<Question> preguntas;
 	public Driver d;
-	
+
 	public QuestionManager(Driver d) {
-		this.d=d;
-		this.preguntas = new HashSet<Question>();
+		this.d = d;
 	}
 
-	public void cargarPreguntas() {
-		// TODO Auto-generated method stub
+	public List<Category> cargarTablero() {
+		List<Category> tablero = new ArrayList<Category>();
+		List<Question> preguntas = null;
+		Category c = new Category();
+		try {
+			preguntas = d.findAllQuestion();
+		} catch (Exception e) {
+			System.err.print(e.getMessage());
+		}
+		for (Question p : preguntas) {
+			if (!c.equals(p.getCategory()))
+				c = p.getCategory();
+			c.addQuestions(p);
+			tablero.add(c);
+		}
+		int tamanio = tablero.size();
+		if (tamanio == Game.MAX_CATEGORIAS)
+			return tablero;
+		else
+			return null;
 	}
 	
-	//Hay que hacer un parser de JSON para cargar las preguntas en la lista
-
-  	
 }

@@ -1,18 +1,17 @@
 package es.uniovi.asw.trivial;
 
-<<<<<<< HEAD
+
 import java.io.ByteArrayOutputStream;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.Scanner;
 
 import es.uniovi.asw.Consola.Consola;
-=======
 import java.io.InputStream;
 import java.util.Scanner;
 
-import es.uniovi.asw.extractor.consola.Consola;
->>>>>>> 20ad8fe43e656ba87180b589f8a119ac9057a3b1
+import es.uniovi.asw.Consola.Consola;
+
 
 public class Extractor {
 	
@@ -59,8 +58,4 @@ public class Extractor {
 			new Extractor().run(comando);
 		}
 	}
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 20ad8fe43e656ba87180b589f8a119ac9057a3b1

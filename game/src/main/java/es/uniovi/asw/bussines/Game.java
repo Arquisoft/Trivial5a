@@ -14,9 +14,10 @@ import es.uniovi.asw.model.User;
 import es.uniovi.asw.persistence.Driver;
 
 public class Game {
+	
 	CountDown cronometro = new CountDown(); //CLASE QUE SIRVE PARA CRONOMETRO
 	
-	private static final int maxCategorias =6;
+	public static final int MAX_CATEGORIAS = 6;
 	private List<User> usuarios;
 	private QuestionManager questionManager;
 	private UserManager userManager;
@@ -25,10 +26,9 @@ public class Game {
 	
 	private Map<User,Set<String>> preguntasAcertadas;
 	
-	
 	private Question preguntaActual;											
 	
-	private  User usuarioActivo; //Se usa para gestionar el turno activo del usuario
+	private User usuarioActivo; //Se usa para gestionar el turno activo del usuario
 	
 	/**
 	 * Constructor de la clase Game.
@@ -40,7 +40,7 @@ public class Game {
  	public Game() {
 		this.questionManager = new QuestionManager(d);
 		this.userManager = new UserManager(d);
-		this.tablero = new ArrayList<Category>();
+		this.tablero = questionManager.cargarTablero();
 		this.usuarios= new ArrayList<User>();
 		this.preguntasAcertadas= new HashMap<User,Set<String>>();
 		/*Category c = new Category();
@@ -51,10 +51,6 @@ public class Game {
 		tablero.add(c);*/
 	}
 
-	public void initialize()  {
-		questionManager.cargarPreguntas();
-	}
-	
 	/**
 	 * Muestra las estadisticas del juego. 
 	 * Muestra las preguntas acertadas y falladas de cada usuario
@@ -212,7 +208,7 @@ public class Game {
 		//questionManager.updateQuestion(preguntaActual);
 		
 		preguntasAcertadas.get(usuarioActivo).add(preguntaActual.getCategory().getName());
-		if(preguntasAcertadas.get(usuarioActivo).size()==maxCategorias)
+		if(preguntasAcertadas.get(usuarioActivo).size()==MAX_CATEGORIAS)
 			terminarPartida();
 	}
 	
@@ -239,6 +235,5 @@ public class Game {
 		//questionManager.updateQuestion(preguntaActual);
 		turnoSiguiente();
 	}
-	
 	
 }

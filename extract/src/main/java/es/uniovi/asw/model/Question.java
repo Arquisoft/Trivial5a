@@ -7,7 +7,7 @@ public class Question {
 	/**
 	 * Clase que modela una preguna del modelo GIFT
 	 */
-	public static final int MAX_ANSWER = 3; //Se podria cambiar facilmente si dado el caso
+	public static final int MAX_ANSWER = 4; //Se podria cambiar facilmente si dado el caso
 										 // se quisese cambiar el modelo de juego
 	
 	private Category category; //Una pregunta solo puede tener una categoria asociada

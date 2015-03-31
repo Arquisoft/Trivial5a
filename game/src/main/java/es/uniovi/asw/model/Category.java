@@ -12,8 +12,8 @@ import edu.emory.mathcs.backport.java.util.Collections;
 public class Category {
 	
 	private String name;
-	private ArrayList <Question> questions= new ArrayList<Question>();
-	private ArrayList <Question> usedQuestions = new ArrayList<Question>();
+	private ArrayList<Question> questions= new ArrayList<Question>();
+	private ArrayList<Question> usedQuestions = new ArrayList<Question>();
 
 	/**
 	 * Añadir una pregunta
@@ -69,7 +69,7 @@ public class Category {
 	 * @return String JSON
 	 */
 	public String toJSON(){
-		Gson g= new Gson();
+		Gson g = new Gson();
 		return g.toJson(this);
 	}
 	
@@ -124,4 +124,32 @@ public class Category {
 		long s = System.nanoTime(); //seed
 		Collections.shuffle(questions, new Random(s));
 	}
+
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((name == null) ? 0 : name.hashCode());
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Category other = (Category) obj;
+		if (name == null) {
+			if (other.name != null)
+				return false;
+		} else if (!name.equals(other.name))
+			return false;
+		return true;
+	}
+	
+	
+	
 }

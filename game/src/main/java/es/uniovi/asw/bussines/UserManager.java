@@ -7,13 +7,10 @@ public class UserManager {
 	
 	Driver d;
 	
-	
-	
 	public UserManager(Driver d) {
 		super();
 		this.d = d;
 	}
-
 
 	/**
 	 * Metodo de negocio que llama a la persistencia y hace el login en la aplicacion

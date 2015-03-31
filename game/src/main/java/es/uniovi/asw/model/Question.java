@@ -25,7 +25,7 @@ public class Question {
 	 * Si hubiera mas respuestas correctas se cambiaria en el constructor
 	 */
 	public Question(){
-		wrongAnswers = new String[ MAX_ANSWER-1];
+		wrongAnswers = new String[MAX_ANSWER-1];
 	}
 		
 	/**
@@ -65,7 +65,7 @@ public class Question {
 	 * @return String JSON
 	 */
 	public String toJSON() {
-		Gson g= new Gson();
+		Gson g = new Gson();
 		return g.toJson(this);
 	}
 

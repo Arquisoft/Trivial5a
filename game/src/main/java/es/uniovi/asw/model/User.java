@@ -41,9 +41,6 @@ public class User {
 		this.login=login;
 	}
 
-	
-	
-
 	/**
 	 * Devuelve el valor de numerCorrectAnswer
 	 * @return numerCorrectAnswer
@@ -137,8 +134,6 @@ public class User {
 		return g.toJson(this);
 	}
 	
-	
-
 	/**
 	 * Devuelve las estadísticas del usuario mostrando el número de preguntas acertadas y falladas
 	 * @return vecesFallosAciertos

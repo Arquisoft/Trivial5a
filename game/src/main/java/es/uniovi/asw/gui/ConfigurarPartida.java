@@ -1,33 +1,21 @@
 package es.uniovi.asw.gui;
 import java.awt.BorderLayout;
 import java.awt.Component;
-import java.awt.EventQueue;
-
-import javax.swing.JFrame;
-import javax.swing.JPanel;
-import javax.swing.border.EmptyBorder;
-
-import java.awt.GridLayout;
-
-import javax.swing.JDialog;
-import javax.swing.JOptionPane;
-import javax.swing.JRadioButton;
-import javax.swing.JLabel;
-import javax.swing.JTextField;
-import javax.swing.ButtonGroup;
-
-import java.awt.event.ActionListener;
-import java.awt.event.ActionEvent;
-import java.util.ArrayList;
-import java.util.List;
-
-import javax.swing.border.TitledBorder;
-import javax.swing.JButton;
-import javax.swing.SwingConstants;
-
-import org.pushingpixels.substance.api.SubstanceLookAndFeel;
-
 import java.awt.FlowLayout;
+import java.awt.GridLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.ButtonGroup;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+import javax.swing.JRadioButton;
+import javax.swing.JTextField;
+import javax.swing.border.EmptyBorder;
+import javax.swing.border.TitledBorder;
 
 
 public class ConfigurarPartida extends JFrame {
@@ -454,12 +442,12 @@ public class ConfigurarPartida extends JFrame {
 	}
 	
 	//####################################################################
-	//######-------L�GICA-------##########################################
+	//######-------LÓGICA-------##########################################
 	//####################################################################
 	
 	/**
-	 * M�todo para invocar en los action de los radiobutton
-	 * Activa o desactiva los paneles en funci�n del n�mero de jugadores seleccionados
+	 * Método para invocar en los action de los radiobutton
+	 * Activa o desactiva los paneles en función del número de jugadores seleccionados
 	 */
 	private void gestionarPaneles() {
 		int numJugadores = 0;

@@ -15,6 +15,7 @@ import com.mongodb.MongoClient;
 import com.mongodb.ServerAddress;
 import com.mongodb.util.JSON;
 
+import es.uniovi.asw.model.Question;
 import es.uniovi.asw.model.User;
 
 public class Driver {
@@ -87,6 +88,27 @@ public class Driver {
 			throw new Exception("Error: Conexión no establecida");
 		}
 	}
+	
+	/**
+	 * Añade una pregunta a la BBDD
+	 * 
+	 * @param question
+	 * @throws Exception
+	 */
+	public void addQuestion(Question q) throws Exception {
+		conectDB();
+		if (client != null) {
+			// Crea una tabla si no existe y agrega datos
+			table = db.getCollection("preguntas");
+			DBObject[] pregunta = new BasicDBObject[1];
+			pregunta[0]=(DBObject) JSON.parse(q.toJSON());
+			table.insert(pregunta[0]);
+			
+			client.close();
+		} else {
+			throw new Exception("Error: Conexión no establecida");
+		}
+	}
 
 	/**
 	 * Busca un usuario por su nombre de usuario y su contraseña
@@ -106,7 +128,7 @@ public class Driver {
 			.append("password", password);
 			
 			Gson g =new Gson();
-			DBObject obj =table.findOne(user);
+			DBObject obj = table.findOne(user);
 			if(obj!=null) {
 				User usuario=g.fromJson(obj.toString(), User.class);
 				return usuario;
@@ -159,6 +181,33 @@ public class Driver {
 			return usuarios;
 		} else
 			throw new Exception("Error: Conexión no establecida");
+	}
+
+	/**
+	 * Devuelve todos las preguntas.
+	 * 
+	 * @return
+	 * @throws Exception
+	 */
+	public List<Question> findAllQuestion() throws Exception {
+		conectDB();
+		if (client != null) {
+			List<Question> preguntas = new ArrayList<Question>();
+
+			// Crea una tabla si no existe y agrega datos
+			table = db.getCollection("preguntas");
+			DBCursor cursor = table.find();
+			while (cursor.hasNext()) {
+				Question question = new Gson().fromJson(cursor.next().toString(), Question.class);
+				preguntas.add(question);
+			}
+			
+			client.close();
+			for(Question question : preguntas)
+				System.out.println(question);
+			return preguntas;
+		} else
+			throw new Exception("Error al cargar las preguntas");
 	}
 
 	/**
