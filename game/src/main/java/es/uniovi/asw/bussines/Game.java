@@ -38,6 +38,12 @@ public class Game {
 	 * Las preguntas se cargan desde el gestor de preguntas en el metodo Initialize()
 	 */
  	public Game() {
+ 		try {
+			d.imprimirDB();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		this.questionManager = new QuestionManager(d);
 		this.userManager = new UserManager(d);
 		this.tablero = questionManager.cargarTablero();

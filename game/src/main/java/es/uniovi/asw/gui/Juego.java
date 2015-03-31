@@ -3,111 +3,169 @@ package es.uniovi.asw.gui;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Component;
-import java.awt.Dimension;
-import java.awt.EventQueue;
-
-import javax.swing.JButton;
-import javax.swing.JFrame;
-import javax.swing.JPanel;
-import javax.swing.border.EmptyBorder;
-
-import java.awt.GridLayout;
-
-import javax.swing.JTable;
-import javax.swing.table.DefaultTableModel;
-import javax.swing.table.TableCellRenderer;
-import javax.swing.table.TableColumnModel;
-import javax.swing.JDialog;
-import javax.swing.JLabel;
-import javax.swing.SwingConstants;
-import javax.swing.JScrollPane;
-import javax.swing.JTextField;
-import javax.swing.ImageIcon;
-import javax.swing.Timer;
-
-import java.awt.event.ActionListener;
-import java.awt.event.ActionEvent;
-import java.util.concurrent.TimeUnit;
+import java.awt.Cursor;
 import java.awt.Font;
-import java.awt.FlowLayout;
+import java.awt.GridLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.io.File;
+import java.util.List;
 
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
+import javax.swing.JFileChooser;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JMenu;
+import javax.swing.JMenuBar;
+import javax.swing.JMenuItem;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+import javax.swing.JScrollPane;
+import javax.swing.JSeparator;
+import javax.swing.JTable;
+import javax.swing.JTextField;
 import javax.swing.ScrollPaneConstants;
+import javax.swing.SwingConstants;
+import javax.swing.border.EmptyBorder;
+import javax.swing.border.LineBorder;
+import javax.swing.filechooser.FileNameExtensionFilter;
 
-import org.pushingpixels.substance.api.SubstanceLookAndFeel;
+import org.openqa.selenium.Dimension;
+
+import es.uniovi.asw.bussines.Game;
+import java.awt.Toolkit;
 
 public class Juego extends JFrame {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
 	private final static int numcasillas = 30;
 	
-	private ConfigurarPartida ventana_login;
-//	private ModeloNoEditable modeloTabla;
-	private DefaultTableModel modeloTabla;
+	private CircleLayout cl;
 	
-	private JPanel contentPane;
-	private JPanel pnTablero;
-	private JPanel pnNorte;
-	private JPanel pnGestion;
+	private ConfigurarPartida ventana_login;
+	private ModeloNoEditable modeloTabla;
+	
+	private JPanelConFondo contentPane;
+	private JPanelConFondo pnTablero;
+	private JPanelConFondo pnNorte;
+	private JPanelConFondo pnGestion;
 	private JLabel lblIcono;
-	private JLabel lblTitulo;
-	private JPanel pnDado;
+	private JPanelConFondo pnDado;
 	private JScrollPane pnScTabla;
 	private JButton btnDado;
 	private JTextField txtDado;
 	private JTable table;
+	private JPanelConFondo pnGestionCentro;
+	
+	private JFileChooser selector;
+	private JMenuBar menuBar;
+	private JMenu mnJuego;
+	private JMenu mnConfiguracin;
+	private JMenuItem mntmCambiarFondo;
+	private JMenuItem mntmNuevo;
+	private JSeparator separator;
+	private JMenuItem mntmSalir;
+	private JLabel lblDados;
 
 	/**
 	 * Create the frame.
 	 */
 	public Juego(ConfigurarPartida cp) {
-		SubstanceLookAndFeel.setSkin("org.pushingpixels.substance.api.skin.EmeraldDuskSkin");
-		JFrame.setDefaultLookAndFeelDecorated(true);
-		JDialog.setDefaultLookAndFeelDecorated(true);
+		setIconImage(Toolkit.getDefaultToolkit().getImage(Juego.class.getResource("/es/uniovi/asw/gui/img/iconoPeque.png")));
+		
 		ventana_login = cp;
+		setPreferredSize(new java.awt.Dimension(1167, 733));
+		this.setTitle("Trivial");
 		setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
-		setBounds(100, 100, 844, 566);
-		contentPane = new JPanel();
+		setBounds(100, 100, 1167, 733); 
+		setMinimumSize(getPreferredSize()); // para que no se pueda reducir la pantalla, el minimo es lo inicial
+		setJMenuBar(getMenuBar_1());
+		contentPane = new JPanelConFondo();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
-		contentPane.setLayout(new BorderLayout(0, 0));
+		contentPane.setLayout(new BorderLayout(5, 0));
 		setContentPane(contentPane);
 		contentPane.add(getPnTablero(), BorderLayout.CENTER);
-		contentPane.add(getPnNorte(), BorderLayout.NORTH);
 		contentPane.add(getPnGestion(), BorderLayout.WEST);
-		generarBotones();
+		
 	}
 
-	private JPanel getPnTablero() {
+	private JFileChooser getSelector() {
+		if(selector == null) {
+			selector = new JFileChooser();
+			selector.setMultiSelectionEnabled(false);
+			selector.setFileFilter(new FileNameExtensionFilter("Archivos jpg", "jpg"));
+			//String directorio = System.getProperty("user.dir");
+			//selector.setCurrentDirectory(new File(directorio));
+			
+			// .home contiene la ruta común a los ficheros de mi equipo
+			// EJEMPLO (luego se añade el resto de la ruta)
+			String directorio = System.getProperty("user.home") + "/Desktop";
+			selector.setCurrentDirectory(new File(directorio));
+		}
+		return selector;
+	}
+	private JPanelConFondo getPnTablero() {
 		if (pnTablero == null) {
-			pnTablero = new JPanel(new CircleLayout(true));
-			pnTablero.setMaximumSize(new Dimension(500,500));
+			cl = new CircleLayout();
+			pnTablero = new JPanelConFondo("/es/uniovi/asw/gui/img/tablero.png");
+			pnTablero.setLayout(cl);
+			pnTablero.setBorder(new EmptyBorder(1, 1, 45, 40));
+			
+			btnDado = cl.getBoton();
+			pnTablero.add(btnDado);
+			generarBotones();
+			
+			btnDado.setIcon(new ImageIcon(Juego.class.getResource("/es/uniovi/asw/gui/img/dados.gif")));
+			btnDado.setDisabledSelectedIcon(new ImageIcon(Juego.class.getResource("/es/uniovi/asw/gui/img/dados.gif")));
+			btnDado.setBackground(null);
+			btnDado.setActionCommand("-1"); // no toques
+			btnDado.setCursor(new Cursor(Cursor.HAND_CURSOR));
+			btnDado.addActionListener(new ActionListener() {
+				public void actionPerformed(ActionEvent arg0) {
+					tirarDado();
+				}
+			});
+			
+		
 		}
 		return pnTablero;
 	}
 	private JPanel getPnNorte() {
 		if (pnNorte == null) {
-			pnNorte = new JPanel();
-			pnNorte.setLayout(new BorderLayout(0, 0));
-			pnNorte.add(getLblIcono(), BorderLayout.WEST);
-			pnNorte.add(getLblTitulo(), BorderLayout.CENTER);
+			pnNorte = new JPanelConFondo("/es/uniovi/asw/gui/img/transparente.png");
+			pnNorte.setLayout(new GridLayout(0, 1, 0, 0));
+			pnNorte.add(getLblIcono());
+			pnNorte.setBorder(new EmptyBorder(10, 10, 10, 10));
 		}
 		return pnNorte;
 	}
 	private JPanel getPnGestion() {
 		if (pnGestion == null) {
-			pnGestion = new JPanel();
-			pnGestion.setLayout(new BorderLayout(0, 0));
-			pnGestion.add(getPnDado(), BorderLayout.NORTH);
-			pnGestion.add(getPnScTabla());
-			
-			
+			pnGestion = new JPanelConFondo("/es/uniovi/asw/gui/img/transparente.png");
+			pnGestion.setBorder(new EmptyBorder(20, 20, 20, 30));
+			pnGestion.setLayout(new BorderLayout(0, 40));
+			pnGestion.add(getPnNorte(), BorderLayout.NORTH);
+			pnGestion.add(getPnGestionCentro(), BorderLayout.WEST);
 		}
 		return pnGestion;
 	}
 
+/*	private void cambiarJugadorTabla() {
+		int jugador = table.getSelectedRow();
+		if(jugador == ventana_login.numJugadores())
+			
+	} */
+	
 	//####################################################################
 	//######-------L�GICA-------##########################################
 	//####################################################################
 	
-	private void elegirCasillar(JButton casilla) {
+	private void elegirCasillas(JButton casilla) {
 		lanzarPregunta();
 	}
 	
@@ -124,11 +182,12 @@ public class Juego extends JFrame {
 	
 	
 	private void rellenarFilasTabla() {
+		List<String> logins = ventana_login.getLogins();
 		int numJugadores = ventana_login.numJugadores();
-		for(int i=0; i<=numJugadores; i++) {
+		for(int i=0; i<numJugadores; i++) {
 			Object[] fila = new Object[2];
-			fila[0] = String.valueOf(i);
-			fila[1] = "aqui va el nombre";
+			fila[0] = String.valueOf(i+1);
+			fila[1] = logins.get(i);
 			modeloTabla.addRow(fila);
 		}
 		
@@ -157,13 +216,11 @@ public class Juego extends JFrame {
 			opc2=btnActual+numdado;
 		}
 		
-		System.out.println(opc1);
-		System.out.println(opc2);
-		
 		Component[] botones = pnTablero.getComponents();		
 		for(int i=0; i<botones.length; i++) 
 		{
 			JButton bt = (JButton) botones[i];
+			System.out.println(bt.getActionCommand());
 			if( Integer.valueOf(bt.getActionCommand()) == opc1 || Integer.valueOf(bt.getActionCommand()) == opc2) 
 			{
 				bt.setEnabled(true);
@@ -178,22 +235,19 @@ public class Juego extends JFrame {
 	
 	private JLabel getLblIcono() {
 		if (lblIcono == null) {
-			lblIcono = new JLabel("aqui va el icono");
+			lblIcono = new JLabel("");
+			lblIcono.setIcon(new ImageIcon(Juego.class.getResource("/es/uniovi/asw/gui/img/icon.png")));
+			lblIcono.setHorizontalAlignment(SwingConstants.CENTER);
+			lblIcono.setBorder(new EmptyBorder(0,0,0,0));
 		}
 		return lblIcono;
 	}
-	private JLabel getLblTitulo() {
-		if (lblTitulo == null) {
-			lblTitulo = new JLabel("TRIVIAL 5A");
-			lblTitulo.setHorizontalAlignment(SwingConstants.CENTER);
-		}
-		return lblTitulo;
-	}
-	private JPanel getPnDado() {
+	private JPanelConFondo getPnDado() {
 		if (pnDado == null) {
-			pnDado = new JPanel();
-			pnDado.setLayout(new FlowLayout(FlowLayout.CENTER, 5, 5));
-			pnDado.add(getBtnDado());
+			pnDado = new JPanelConFondo("/es/uniovi/asw/gui/img/transparente.png");
+			pnDado.setBorder(new EmptyBorder(10, 10, 10, 10));
+			pnDado.setLayout(new GridLayout(0, 2, 5, 0));
+			pnDado.add(getLblDados());
 			pnDado.add(getTxtDado());
 		}
 		return pnDado;
@@ -206,47 +260,130 @@ public class Juego extends JFrame {
 		}
 		return pnScTabla;
 	}
-	private JButton getBtnDado() {
-		if (btnDado == null) {
-			btnDado = new JButton("");
-			btnDado.setIcon(new ImageIcon(Juego.class.getResource("/img/dados.gif")));
-			btnDado.setBackground(null);
-			btnDado.addActionListener(new ActionListener() {
-				public void actionPerformed(ActionEvent arg0) {
-					tirarDado();
-				}
-			});
-			
-		}
-		return btnDado;
-	}
 	private JTextField getTxtDado() {
 		if (txtDado == null) {
 			txtDado = new JTextField();
+			txtDado.setBorder(new LineBorder(new Color(171, 173, 179)));
+			txtDado.setToolTipText("");
+			txtDado.setEnabled(false);
+			txtDado.setEditable(false);
 			txtDado.setColumns(2);
 			txtDado.setBackground(null);
+			txtDado.setMaximumSize(getPreferredSize());
 			txtDado.setHorizontalAlignment(SwingConstants.CENTER);
 			txtDado.setFont(new Font("Tekton Pro", Font.PLAIN, 70));
-			txtDado.setBounds(txtDado.getX(), txtDado.getY(), 10, 10);
 			
 		}
 		return txtDado;
 	}
 	private JTable getTable() {
 		if (table == null) {
+			
 			String[] columnas = {"Jugador", "Nombre", "Puntos"};
 			modeloTabla = new ModeloNoEditable(columnas, 0);
 			
 			table = new JTable(modeloTabla);
+			table.setEnabled(false);
 			
 			rellenarFilasTabla();
-			RendererSubstance renderer = new RendererSubstance();
+			RendererSubstance renderer = new RendererSubstance(ventana_login);
 			table.setDefaultRenderer(Object.class, renderer);
 			
-		//	table.setAutoResizeMode(JTable.AUTO_RESIZE_ALL_COLUMNS);
+		
 		}
 		return table;
 	}
-	
-	
+	private JPanelConFondo getPnGestionCentro() {
+		if (pnGestionCentro == null) {
+			pnGestionCentro = new JPanelConFondo("/es/uniovi/asw/gui/img/transparente.png");
+			pnGestionCentro.setLayout(new BorderLayout(0, 30));
+			pnGestionCentro.add(getPnScTabla());
+			pnGestionCentro.add(getPnDado(), BorderLayout.NORTH);
+		}
+		return pnGestionCentro;
+	}
+	private JMenuBar getMenuBar_1() {
+		if (menuBar == null) {
+			menuBar = new JMenuBar();
+			menuBar.add(getMnJuego());
+			menuBar.add(getMnConfiguracin());
+		}
+		return menuBar;
+	}
+	private JMenu getMnJuego() {
+		if (mnJuego == null) {
+			mnJuego = new JMenu("Juego");
+			mnJuego.add(getMntmNuevo());
+			mnJuego.add(getSeparator());
+			mnJuego.add(getMntmSalir());
+		}
+		return mnJuego;
+	}
+	private JMenu getMnConfiguracin() {
+		if (mnConfiguracin == null) {
+			mnConfiguracin = new JMenu("Configuraci\u00F3n");
+			mnConfiguracin.add(getMntmCambiarFondo());
+		}
+		return mnConfiguracin;
+	}
+	private JMenuItem getMntmCambiarFondo() {
+		if (mntmCambiarFondo == null) {
+			mntmCambiarFondo = new JMenuItem("Cambiar fondo");
+			mntmCambiarFondo.addActionListener(new ActionListener() {
+				public void actionPerformed(ActionEvent e) {
+					int respuesta = getSelector().showOpenDialog(null);
+					if(respuesta == JFileChooser.APPROVE_OPTION) {
+							File file = selector.getSelectedFile();
+							String nombre = file.getAbsolutePath();
+							contentPane.setImagen((new ImageIcon(nombre)).getImage());
+					}
+				}
+			});
+		}
+		return mntmCambiarFondo;
+	}
+	private JMenuItem getMntmNuevo() {
+		if (mntmNuevo == null) {
+			mntmNuevo = new JMenuItem("Nuevo");
+			final Juego partida = this;
+			mntmNuevo.addActionListener(new ActionListener() {
+				public void actionPerformed(ActionEvent e) {
+					int respuesta = JOptionPane.showConfirmDialog(null, "¿Está seguro que desea abandonar la partida y comenzar de nuevo?");
+					
+					Game juegonuevo = new Game();
+					PantallaInicial pn = new PantallaInicial(juegonuevo);
+					pn.setVisible(true);
+					pn.setLocationRelativeTo(null);
+					partida.setVisible(false);
+				}
+			});
+		}
+		return mntmNuevo;
+	}
+	private JSeparator getSeparator() {
+		if (separator == null) {
+			separator = new JSeparator();
+		}
+		return separator;
+	}
+	private JMenuItem getMntmSalir() {
+		if (mntmSalir == null) {
+			mntmSalir = new JMenuItem("Salir");
+			mntmSalir.addActionListener(new ActionListener() {
+				public void actionPerformed(ActionEvent e) {
+					System.exit(0);
+				}
+			});
+		}
+		return mntmSalir;
+	}
+	private JLabel getLblDados() {
+		if (lblDados == null) {
+			lblDados = new JLabel("");
+			lblDados.setHorizontalAlignment(SwingConstants.CENTER);
+			lblDados.setIcon(new ImageIcon(Juego.class.getResource("/es/uniovi/asw/gui/img/dadosIcono.png")));
+			lblDados.setToolTipText("\"Para tirar del dado pulsa en el centro del tablero\"");
+		}
+		return lblDados;
+	}
 }

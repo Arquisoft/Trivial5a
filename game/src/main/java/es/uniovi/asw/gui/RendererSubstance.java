@@ -11,7 +11,13 @@ import org.pushingpixels.substance.api.renderers.SubstanceDefaultTableCellRender
 public class RendererSubstance extends SubstanceDefaultTableCellRenderer{
 
 	private static final long serialVersionUID = 1L;
-
+	
+	private int numeroJugadores;
+	
+	public RendererSubstance(ConfigurarPartida cp) {
+		numeroJugadores = cp.numJugadores();
+	}
+	
 	    @Override
 	    public Component getTableCellRendererComponent(JTable table, Object value,
 	            boolean isSelected, boolean hasFocus, int row, int column) {
@@ -20,13 +26,17 @@ public class RendererSubstance extends SubstanceDefaultTableCellRenderer{
 	      
 	       this.setFont(new Font("Dialog", Font.PLAIN, 12));
 	       
-	       table.setRowHeight(130);
+	       int altura = table.getParent().getHeight();
+	       
+	       table.setRowHeight(altura/numeroJugadores);
+	       
+	   //    table.setPreferredScrollableViewportSize(table.getPreferredSize());
 	      
 	        if (table.getSelectedRow()==row)
 		    
 	        {
-	        	this.setForeground(Color.red);
-	        	this.setFont(new java.awt.Font("Dialog", Font.BOLD, 13));
+	        	this.setForeground(Color.gray);
+	        	this.setFont(new java.awt.Font("Dialog", Font.BOLD, 20));
 		      }
 	        
 	        return this;

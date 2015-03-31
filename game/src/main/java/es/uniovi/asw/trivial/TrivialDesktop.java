@@ -8,7 +8,7 @@ import javax.swing.JFrame;
 import org.pushingpixels.substance.api.SubstanceLookAndFeel;
 
 import es.uniovi.asw.bussines.Game;
-import es.uniovi.asw.gui.ConfigurarPartida;
+import es.uniovi.asw.gui.PantallaInicial;
 
 public class TrivialDesktop {
 	
@@ -18,13 +18,16 @@ public class TrivialDesktop {
 	}
 
 	public static void run() {	
-		new Game();
+		
+		final Game g = new Game();
+		
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					ConfigurarPartida frame = new ConfigurarPartida();
+					PantallaInicial frame = new PantallaInicial(g);
 					frame.setVisible(true);
-					SubstanceLookAndFeel.setSkin("org.pushingpixels.substance.api.skin.NebulaBrickWallSkin");
+					frame.setLocationRelativeTo(null);
+					SubstanceLookAndFeel.setSkin("org.pushingpixels.substance.api.skin.MistAquaSkin");
 					JFrame.setDefaultLookAndFeelDecorated(true);
 					JDialog.setDefaultLookAndFeelDecorated(true);
 				
