@@ -18,6 +18,8 @@ import java.awt.Font;
 
 import javax.swing.JButton;
 
+import es.uniovi.asw.bussines.QuestionManager;
+
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import java.awt.Toolkit;

@@ -12,8 +12,10 @@ import es.uniovi.asw.gui.PantallaInicial;
 
 public class TrivialDesktop {
 	
+	
 	public static void main(String [] args) 
 	{
+		
 		run();
 	}
 
