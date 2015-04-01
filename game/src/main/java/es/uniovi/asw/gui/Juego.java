@@ -45,6 +45,8 @@ public class Juego extends JFrame {
 
 	private final static int numcasillas = 30;
 	
+	private int AnteriorDado;
+	
 	private CircleLayout cl;
 	
 	private ConfigurarPartida ventana_login;
@@ -196,11 +198,12 @@ public class Juego extends JFrame {
 	private void tirarDado() {
 		int x = 1 + new Double(Math.random() * 6).intValue();
 		txtDado.setText(String.valueOf(x));
-		activarBotones(x, 0);
-		
+		activarBotones(AnteriorDado, 0, false);
+		activarBotones(x, 0, true);
+		AnteriorDado = x;
 	}
 	
-	private void activarBotones(int numdado, int btnActual) {
+	private void activarBotones(int numdado, int btnActual, boolean active) {
 			
 		int opc1;
 		int opc2;	
@@ -223,7 +226,7 @@ public class Juego extends JFrame {
 			System.out.println(bt.getActionCommand());
 			if( Integer.valueOf(bt.getActionCommand()) == opc1 || Integer.valueOf(bt.getActionCommand()) == opc2) 
 			{
-				bt.setEnabled(true);
+				bt.setEnabled(active);
 			}
 		}
 		
