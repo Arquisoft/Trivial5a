@@ -19,6 +19,7 @@ import javax.swing.border.LineBorder;
 
 import org.pushingpixels.substance.internal.utils.ButtonBackgroundDelegate;
 
+import es.uniovi.asw.bussines.Game;
 import es.uniovi.asw.model.Category;
 
 public class BotonTablero extends JButton {
@@ -28,15 +29,16 @@ public class BotonTablero extends JButton {
 	 */
 	private static final long serialVersionUID = 1L;
 	
-	
-	
+	Game juego;
 	Category categoria;
+	
 	Color color;
 	int id_boton;
 	boolean quesito;
 	
-	public BotonTablero(int id){
+	public BotonTablero(int id, final Game juego){
 		super();
+		this.juego = juego;
 		this.setIgnoreRepaint(true);
 		id_boton = id;					// con este campo se relaciona con la logica
 		this.setText(String.valueOf(id));
@@ -54,7 +56,7 @@ public class BotonTablero extends JButton {
 		
 		this.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				VentanaPregunta vp = new VentanaPregunta(quesito);
+				VentanaPregunta vp = new VentanaPregunta(quesito, juego);
 				vp.setVisible(true);
 			}
 		});
@@ -63,6 +65,7 @@ public class BotonTablero extends JButton {
 	public Category getCategoria() {
 		return categoria;
 	}
+	
 	public void setCategoria(Category categoria) {
 		this.categoria = categoria;
 	}

@@ -104,14 +104,14 @@ public class Category {
 	 */
 	public Question askQuestion()
 	{
-		Question nextQuestion = questions.get(1);
+		shuffleQuestions();
+		Question nextQuestion = questions.get(0);
 		questions.remove(nextQuestion);
 		usedQuestions.add(nextQuestion);
 		if(questions.isEmpty())
 		{
 			questions.addAll(usedQuestions);
 			usedQuestions.clear();
-			shuffleQuestions();
 		}
 		return nextQuestion;
 	}

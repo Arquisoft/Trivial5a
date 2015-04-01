@@ -47,6 +47,8 @@ public class Juego extends JFrame {
 	
 	private int AnteriorDado;
 	
+	private Game juego;
+	
 	private CircleLayout cl;
 	
 	private ConfigurarPartida ventana_login;
@@ -77,10 +79,11 @@ public class Juego extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public Juego(ConfigurarPartida cp) {
+	public Juego(ConfigurarPartida cp, Game juego) {
 		setIconImage(Toolkit.getDefaultToolkit().getImage(Juego.class.getResource("/es/uniovi/asw/gui/img/iconoPeque.png")));
 		
 		ventana_login = cp;
+		this.juego = juego;
 		setPreferredSize(new java.awt.Dimension(1167, 733));
 		this.setTitle("Trivial");
 		setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
@@ -132,8 +135,6 @@ public class Juego extends JFrame {
 					tirarDado();
 				}
 			});
-			
-		
 		}
 		return pnTablero;
 	}
@@ -177,7 +178,7 @@ public class Juego extends JFrame {
 	private void generarBotones() {
 		BotonTablero bt;
 		for (int i = 0; i < 30; i++) {
-			bt = new BotonTablero(i);
+			bt = new BotonTablero(i, juego);
 		    getPnTablero().add(bt);
 		}
 	}
