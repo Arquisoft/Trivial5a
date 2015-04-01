@@ -158,11 +158,12 @@ public class Juego extends JFrame {
 		return pnGestion;
 	}
 
-/*	private void cambiarJugadorTabla() {
+	private void cambiarJugadorTabla() {
 		int jugador = table.getSelectedRow();
 		if(jugador == ventana_login.numJugadores())
+			jugador=0;
 			
-	} */
+	} 
 	
 	//####################################################################
 	//######-------L�GICA-------##########################################

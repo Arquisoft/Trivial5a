@@ -763,7 +763,12 @@ public class ConfigurarPartida extends JFrame {
 			btnContinuar.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
 					if(comprobarCamposVacios()) {
-						
+						try {
+							crearUsuarios();
+						} catch (Exception e1) {
+							JOptionPane.showMessageDialog(null, e1.getMessage(), "Bienvenido", JOptionPane.PLAIN_MESSAGE);
+							return;
+						}
 						JOptionPane.showMessageDialog(null, "¡Comienza el juego!", "Bienvenido", JOptionPane.PLAIN_MESSAGE);
 						Juego j = new Juego(cp, juego);
 						j.setVisible(true);
@@ -785,7 +790,11 @@ public class ConfigurarPartida extends JFrame {
 		return lblSubt;
 	}
 	
-	private void crearUsuarios()
+	/**
+	 * Cojo los formularios y creo los usuarios
+	 * @throws Exception
+	 */
+	private void crearUsuarios() throws Exception
 	{
 		User user1,user2,user3,user4,user5,user6;
 		List<User> usuarios = new ArrayList<User>();
@@ -797,18 +806,24 @@ public class ConfigurarPartida extends JFrame {
 			user2 = new User();
 			user2.setLogin(txLogin2.getText());
 			user2.setPassword(txPass2.getText());
+			usuarios.add(user1);
+			usuarios.add(user2);
+
 		}
 		else if (rb3.isSelected())
 		{
 			user3= new User();
 			user3.setLogin(txLogin3.getText());
 			user3.setPassword(txPass3.getText());
+			usuarios.add(user3);
+
 		}
 		else if (rb4.isSelected())
 		{
 			user4= new User();
 			user4.setLogin(txLogin4.getText());
 			user4.setPassword(txPass4.getText());
+			usuarios.add(user4);
 
 		}
 		else if (rb5.isSelected())
@@ -816,6 +831,7 @@ public class ConfigurarPartida extends JFrame {
 			user5= new User();
 			user5.setLogin(txLogin5.getText());
 			user5.setPassword(txPass5.getText());
+			usuarios.add(user5);
 
 		}
 		else if (rb6.isSelected())
@@ -823,8 +839,28 @@ public class ConfigurarPartida extends JFrame {
 			user6= new User();
 			user6.setLogin(txLogin6.getText());
 			user6.setPassword(txPass6.getText());
+			usuarios.add(user6);
 		}
-		
+		if(usuarioUnico(usuarios))
 		juego.validarTodosUsuarios(usuarios);
+		else
+			throw new Exception("Usuario repetido");
 	}
+	
+	
+	/**
+	 * Comprobar si un usuario
+	 * @return
+	 */
+	public boolean usuarioUnico(List<User> usuarios)
+	{
+		for(int i=0;i<usuarios.size();i++)
+			for(int j=i+1;j<=usuarios.size()-1;j++)
+			{
+				if(usuarios.get(i).equals(usuarios.get(j)))
+					return false;
+			}
+		return true;
+	}
+
 }

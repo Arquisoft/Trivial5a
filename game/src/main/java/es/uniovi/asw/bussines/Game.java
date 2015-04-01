@@ -46,7 +46,7 @@ public class Game {
 		}
 		this.questionManager = new QuestionManager(d);
 		this.userManager = new UserManager(d);
-		this.tablero = questionManager.cargarTablero();
+		//this.tablero = questionManager.cargarTablero();
 		this.usuarios= new ArrayList<User>();
 		this.preguntasAcertadas= new HashMap<User,Set<String>>();
 		/*Category c = new Category();

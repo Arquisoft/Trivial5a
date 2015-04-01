@@ -222,7 +222,7 @@ public class Driver {
 			List<Question> preguntas = new ArrayList<Question>();
 
 			// Crea una tabla si no existe y agrega datos
-			table = db.getCollection("preguntas");
+			table = db.getCollection("categorias");
 			DBCursor cursor = table.find();
 			while (cursor.hasNext()) {
 				Question question = new Gson().fromJson(cursor.next().toString(), Question.class);

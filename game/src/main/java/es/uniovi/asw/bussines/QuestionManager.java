@@ -15,7 +15,7 @@ public class QuestionManager {
 		this.d = d;
 	}
 
-	public List<Category> cargarTablero() {
+/*	public List<Category> cargarTablero() {
 		List<Category> tablero = new ArrayList<Category>();
 		List<Question> preguntas = null;
 		Category c = new Category();
@@ -36,5 +36,5 @@ public class QuestionManager {
 		else
 			return null;
 	}
-	
+	*/
 }
