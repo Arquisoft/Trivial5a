@@ -18,13 +18,19 @@ import java.awt.Font;
 
 import javax.swing.JButton;
 
+import es.uniovi.asw.bussines.Game;
+import es.uniovi.asw.bussines.QuestionManager;
+import es.uniovi.asw.model.Category;
+
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import java.awt.Toolkit;
+import java.util.List;
 
 public class VentanaPregunta extends JDialog {
 	
 	private boolean quesito;
+	private Game juego;
 
 	private JPanel contentPane;
 	private JPanel pnPreguntas;
@@ -35,7 +41,8 @@ public class VentanaPregunta extends JDialog {
 	private JLabel lblPregunta;
 	private JButton btnResponder;
 
-	public VentanaPregunta(boolean quesito) {
+	public VentanaPregunta(boolean quesito, Game juego) {
+		this.juego = juego;
 		setIconImage(Toolkit.getDefaultToolkit().getImage(VentanaPregunta.class.getResource("/es/uniovi/asw/gui/img/iconoPeque.png")));
 		
 		this.quesito = quesito; // para gestionar que hay que hacer con la respuesta
@@ -95,8 +102,10 @@ public class VentanaPregunta extends JDialog {
 		return rdbtnOpc4;
 	}
 	private JLabel getLblPregunta() {
+		List<Category> cats = juego.getQuestionManager().cargarTablero();
+		
 		if (lblPregunta == null) {
-			lblPregunta = new JLabel("<html>El texto va entre etiquetas html por si no entra en una sola linea para que se divida de forma automatica<html>");
+			lblPregunta = new JLabel(cats.get(1).askQuestion().getQuery());
 			lblPregunta.setFont(new Font("Tahoma", Font.PLAIN, 20));
 		}
 		return lblPregunta;

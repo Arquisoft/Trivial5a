@@ -45,6 +45,10 @@ public class Juego extends JFrame {
 
 	private final static int numcasillas = 30;
 	
+	private int AnteriorDado;
+	
+	private Game juego;
+	
 	private CircleLayout cl;
 	
 	private ConfigurarPartida ventana_login;
@@ -75,10 +79,11 @@ public class Juego extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public Juego(ConfigurarPartida cp) {
+	public Juego(ConfigurarPartida cp, Game juego) {
 		setIconImage(Toolkit.getDefaultToolkit().getImage(Juego.class.getResource("/es/uniovi/asw/gui/img/iconoPeque.png")));
 		
 		ventana_login = cp;
+		this.juego = juego;
 		setPreferredSize(new java.awt.Dimension(1167, 733));
 		this.setTitle("Trivial");
 		setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
@@ -130,8 +135,6 @@ public class Juego extends JFrame {
 					tirarDado();
 				}
 			});
-			
-		
 		}
 		return pnTablero;
 	}
@@ -175,7 +178,7 @@ public class Juego extends JFrame {
 	private void generarBotones() {
 		BotonTablero bt;
 		for (int i = 0; i < 30; i++) {
-			bt = new BotonTablero(i);
+			bt = new BotonTablero(i, juego);
 		    getPnTablero().add(bt);
 		}
 	}
@@ -196,11 +199,12 @@ public class Juego extends JFrame {
 	private void tirarDado() {
 		int x = 1 + new Double(Math.random() * 6).intValue();
 		txtDado.setText(String.valueOf(x));
-		activarBotones(x, 0);
-		
+		activarBotones(AnteriorDado, 0, false);
+		activarBotones(x, 0, true);
+		AnteriorDado = x;
 	}
 	
-	private void activarBotones(int numdado, int btnActual) {
+	private void activarBotones(int numdado, int btnActual, boolean active) {
 			
 		int opc1;
 		int opc2;	
@@ -223,7 +227,7 @@ public class Juego extends JFrame {
 			System.out.println(bt.getActionCommand());
 			if( Integer.valueOf(bt.getActionCommand()) == opc1 || Integer.valueOf(bt.getActionCommand()) == opc2) 
 			{
-				bt.setEnabled(true);
+				bt.setEnabled(active);
 			}
 		}
 		

@@ -765,7 +765,7 @@ public class ConfigurarPartida extends JFrame {
 					if(comprobarCamposVacios()) {
 						
 						JOptionPane.showMessageDialog(null, "¡Comienza el juego!", "Bienvenido", JOptionPane.PLAIN_MESSAGE);
-						Juego j = new Juego(cp);
+						Juego j = new Juego(cp, juego);
 						j.setVisible(true);
 						cp.setVisible(false);
 					} else {
