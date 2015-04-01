@@ -9,6 +9,7 @@ import org.pushingpixels.substance.api.SubstanceLookAndFeel;
 
 import es.uniovi.asw.bussines.Game;
 import es.uniovi.asw.gui.PantallaInicial;
+import es.uniovi.asw.persistence.Driver;
 
 public class TrivialDesktop {
 	
@@ -22,6 +23,13 @@ public class TrivialDesktop {
 	public static void run() {	
 		
 		final Game g = new Game();
+		Driver d = new Driver();
+		try {
+			d.findAllQuestion();
+		} catch (Exception e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
 		
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {

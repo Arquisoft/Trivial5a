@@ -15,6 +15,7 @@ import com.mongodb.MongoClient;
 import com.mongodb.ServerAddress;
 import com.mongodb.util.JSON;
 
+import es.uniovi.asw.model.Category;
 import es.uniovi.asw.model.Question;
 import es.uniovi.asw.model.User;
 
@@ -216,21 +217,21 @@ public class Driver {
 	 * @return
 	 * @throws Exception
 	 */
-	public List<Question> findAllQuestion() throws Exception {
+	public List<Category> findAllQuestion() throws Exception {
 		conectDB();
 		if (client != null) {
-			List<Question> preguntas = new ArrayList<Question>();
+			List<Category> preguntas = new ArrayList<Category>();
 
 			// Crea una tabla si no existe y agrega datos
 			table = db.getCollection("categorias");
 			DBCursor cursor = table.find();
 			while (cursor.hasNext()) {
-				Question question = new Gson().fromJson(cursor.next().toString(), Question.class);
-				preguntas.add(question);
+				Category category = new Gson().fromJson(cursor.next().toString(), Category.class);
+				preguntas.add(category);
 			}
 			
 			client.close();
-			for(Question question : preguntas)
+			for(Category question : preguntas)
 				System.out.println(question);
 			return preguntas;
 		} else

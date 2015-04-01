@@ -2,6 +2,8 @@ package es.uniovi.asw.model;
 
 import java.util.Arrays;
 
+import com.google.gson.Gson;
+
 public class Question {
 	
 	/**
@@ -61,20 +63,8 @@ public class Question {
 	public String toJSON()
 	{
 		
-		String JSON="Identifier"+":"+"'"+identifer+"'"+",\n"+
-					"Query"+":"+"'"+query+"'"+",\n"+
-					"CorrectAnswer"+":"+"'"+correctAnswer+"'"+",\n";
-		
-					for(int i=0;i< wrongAnswers.length;i++)
-					{
-						if(i==wrongAnswers.length-1)
-							JSON+=	"WrongAnswer"+i+":"+"'"+wrongAnswers[i]+"'";
-						else
-							JSON+=	"WrongAnswer"+i+":"+"'"+wrongAnswers[i]+"'"+",\n";
-					}
-					JSON += "\n}";
-				
-		return JSON;
+		Gson g = new Gson();
+		return g.toJson(this);
 	}
 
 

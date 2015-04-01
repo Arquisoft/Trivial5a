@@ -1,13 +1,13 @@
 package es.uniovi.asw.model;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Random;
 
 import com.google.gson.Gson;
 
-import edu.emory.mathcs.backport.java.util.Collections;
 
 public class Category {
 	

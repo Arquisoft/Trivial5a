@@ -24,7 +24,7 @@ public class Extractor {
 		try {
 			Consola.main(args);
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
+			e.printStackTrace();
 			System.err.println(e.getMessage()+"\n");
 		}
 		

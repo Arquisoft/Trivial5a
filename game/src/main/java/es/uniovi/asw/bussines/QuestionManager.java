@@ -15,20 +15,14 @@ public class QuestionManager {
 		this.d = d;
 	}
 
-/*	public List<Category> cargarTablero() {
+	public List<Category> cargarTablero() {
 		List<Category> tablero = new ArrayList<Category>();
 		List<Question> preguntas = null;
 		Category c = new Category();
 		try {
-			preguntas = d.findAllQuestion();
+			tablero = d.findAllQuestion();
 		} catch (Exception e) {
 			System.err.print(e.getMessage());
-		}
-		for (Question p : preguntas) {
-			if (!c.equals(p.getCategory()))
-				c = p.getCategory();
-			c.addQuestions(p);
-			tablero.add(c);
 		}
 		int tamanio = tablero.size();
 		if (tamanio == Game.MAX_CATEGORIAS)
@@ -36,5 +30,5 @@ public class QuestionManager {
 		else
 			return null;
 	}
-	*/
+	
 }
