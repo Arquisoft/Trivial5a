@@ -91,10 +91,13 @@ public class PantallaInicial extends JFrame {
 	private JButton getBtnRegistro() {
 		if (btnRegistro == null) {
 			btnRegistro = new JButton("Registrarme");
+			final PantallaInicial ventana = this;
 			btnRegistro.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
-					// aquí va el formulario de registrar un usuario en la BD
-					// mondoDB pa vosotros entero enterito, osssk jajajaja
+					PantallaRegistro pr = new PantallaRegistro(juego);
+					pr.setLocationRelativeTo(null);
+					pr.setVisible(true);
+						
 				}
 			});
 			btnRegistro.setFont(new Font("Tahoma", Font.PLAIN, 27));

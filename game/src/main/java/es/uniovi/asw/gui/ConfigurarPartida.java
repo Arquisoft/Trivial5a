@@ -30,6 +30,7 @@ import javax.swing.SwingConstants;
 import org.pushingpixels.substance.api.SubstanceLookAndFeel;
 
 import es.uniovi.asw.bussines.Game;
+import es.uniovi.asw.model.User;
 
 import java.awt.FlowLayout;
 import java.awt.event.FocusAdapter;
@@ -762,6 +763,7 @@ public class ConfigurarPartida extends JFrame {
 			btnContinuar.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
 					if(comprobarCamposVacios()) {
+						
 						JOptionPane.showMessageDialog(null, "¡Comienza el juego!", "Bienvenido", JOptionPane.PLAIN_MESSAGE);
 						Juego j = new Juego(cp);
 						j.setVisible(true);
@@ -781,5 +783,48 @@ public class ConfigurarPartida extends JFrame {
 			lblSubt.setFont(new Font("Arial", Font.PLAIN, 11));
 		}
 		return lblSubt;
+	}
+	
+	private void crearUsuarios()
+	{
+		User user1,user2,user3,user4,user5,user6;
+		List<User> usuarios = new ArrayList<User>();
+		if(rb2.isSelected())
+		{
+			user1 = new User();
+			user1.setLogin(txLogin1.getText());
+			user1.setPassword(txPass1.getText());
+			user2 = new User();
+			user2.setLogin(txLogin2.getText());
+			user2.setPassword(txPass2.getText());
+		}
+		else if (rb3.isSelected())
+		{
+			user3= new User();
+			user3.setLogin(txLogin3.getText());
+			user3.setPassword(txPass3.getText());
+		}
+		else if (rb4.isSelected())
+		{
+			user4= new User();
+			user4.setLogin(txLogin4.getText());
+			user4.setPassword(txPass4.getText());
+
+		}
+		else if (rb5.isSelected())
+		{
+			user5= new User();
+			user5.setLogin(txLogin5.getText());
+			user5.setPassword(txPass5.getText());
+
+		}
+		else if (rb6.isSelected())
+		{
+			user6= new User();
+			user6.setLogin(txLogin6.getText());
+			user6.setPassword(txPass6.getText());
+		}
+		
+		juego.validarTodosUsuarios(usuarios);
 	}
 }

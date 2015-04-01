@@ -1,5 +1,7 @@
 package es.uniovi.asw.bussines;
 
+import java.util.List;
+
 import es.uniovi.asw.model.User;
 import es.uniovi.asw.persistence.Driver;
 
@@ -35,5 +37,29 @@ public class UserManager {
 	 */
 	public void updateUser(User user) {
 		d.updateUser(user);
+	}
+	
+	/**
+	 * Llama al addUser de la persistencia
+	 * @param user
+	 * @throws Exception 
+	 */
+	public void addUser(User user) throws Exception{
+		d.addUser(user);
+	}
+	
+	/**
+	 * Devuelve true si ya hay un usuario con un login
+	 * @param login
+	 * @return
+	 * @throws Exception
+	 */
+	public boolean findUserByLogin(String login) throws Exception
+	{
+		List<User> usuarios =d.findAllUser();
+		for(User u : usuarios)
+			if(u.getLogin().equals(login))
+				return true;
+		return false;
 	}
 }

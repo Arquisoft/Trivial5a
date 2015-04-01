@@ -140,6 +140,33 @@ public class Driver {
 	}
 	
 	/**
+	 * Busca un usuario por su nombre de usuario y su contraseña
+	 * 
+	 * @param user
+	 * @return
+	 * @throws Exception
+	 */
+	public User findUser(String login)
+			throws Exception {
+		conectDB();
+
+		if (client != null) {
+			// Crea una tabla si no existe y agrega datos
+			table = db.getCollection("usuarios");
+			DBObject user = new BasicDBObject("login", login);
+			Gson g =new Gson();
+			DBObject obj = table.findOne(user);
+			if(obj!=null) {
+				User usuario=g.fromJson(obj.toString(), User.class);
+				return usuario;
+			}
+			client.close();
+			return null;
+		} else
+			throw new Exception("Error: Conexión no establecida");
+	}
+	
+	/**
 	 * Actualizar las estadíticas o datos de un usuario
 	 * @param user
 	 */
