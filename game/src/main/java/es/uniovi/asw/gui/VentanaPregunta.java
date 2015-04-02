@@ -3,6 +3,7 @@ package es.uniovi.asw.gui;
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
 
+import javax.swing.ImageIcon;
 import javax.swing.JDialog;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
@@ -26,12 +27,14 @@ import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import java.awt.Toolkit;
 import java.util.List;
+
 import javax.swing.ButtonGroup;
 
 public class VentanaPregunta extends JDialog {
 	
 	private boolean quesito;
 	private Game juego;
+	private Juego pantalla;
 
 	private JPanel contentPane;
 	private JPanel pnPreguntas;
@@ -43,7 +46,8 @@ public class VentanaPregunta extends JDialog {
 	private JButton btnResponder;
 	private final ButtonGroup buttonGroup = new ButtonGroup();
 
-	public VentanaPregunta(boolean quesito, Game juego) {
+	public VentanaPregunta(boolean quesito, Juego pantalla, Game juego) {
+		this.pantalla = pantalla;
 		this.juego = juego;
 		setIconImage(Toolkit.getDefaultToolkit().getImage(VentanaPregunta.class.getResource("/es/uniovi/asw/gui/img/iconoPeque.png")));
 		
@@ -123,17 +127,19 @@ public class VentanaPregunta extends JDialog {
 		List<Category> cats = juego.getQuestionManager().cargarTablero();
 		
 		if (lblPregunta == null) {
-			lblPregunta = new JLabel(cats.get(1).askQuestion().getQuery());
+			lblPregunta = new JLabel();
+			lblPregunta.setText("<html>"+cats.get(1).askQuestion().getQuery()+"</html>");
 			lblPregunta.setFont(new Font("Tahoma", Font.PLAIN, 20));
 		}
 		return lblPregunta;
 	}
 	private JButton getBtnResponder() {
 		if (btnResponder == null) {
-			final VentanaPregunta vp = this;
+			
 			btnResponder = new JButton("Responder");
 			btnResponder.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
+					
 					
 					/**
 					 * IF - respuesta incorrecta
@@ -153,8 +159,10 @@ public class VentanaPregunta extends JDialog {
 					 * }
 					 * 
 					 */
+					pantalla.desactivarBotones();
+					pantalla.getBtDado().setEnabled(true);
+					dispose();
 					
-					vp.setVisible(false);
 				}
 			});
 		}

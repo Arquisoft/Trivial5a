@@ -24,7 +24,7 @@ public class BotonTablero extends JButton {
 	int id_boton;
 	boolean quesito;
 	
-	public BotonTablero(int id, final Game juego){
+	public BotonTablero(int id, final Juego pantalla, final Game juego){
 		super();
 		this.juego = juego;
 		this.setIgnoreRepaint(true);
@@ -44,7 +44,7 @@ public class BotonTablero extends JButton {
 		
 		this.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				VentanaPregunta vp = new VentanaPregunta(quesito, juego);
+				VentanaPregunta vp = new VentanaPregunta(quesito, pantalla, juego);
 				vp.setVisible(true);
 			}
 		});

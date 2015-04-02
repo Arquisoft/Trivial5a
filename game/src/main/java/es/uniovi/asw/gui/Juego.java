@@ -81,7 +81,7 @@ public class Juego extends JFrame {
 	 */
 	public Juego(ConfigurarPartida cp, Game juego) {
 		setIconImage(Toolkit.getDefaultToolkit().getImage(Juego.class.getResource("/es/uniovi/asw/gui/img/iconoPeque.png")));
-		
+		cl = new CircleLayout();
 		ventana_login = cp;
 		this.juego = juego;
 		setPreferredSize(new java.awt.Dimension(1167, 733));
@@ -116,17 +116,23 @@ public class Juego extends JFrame {
 	}
 	private JPanelConFondo getPnTablero() {
 		if (pnTablero == null) {
-			cl = new CircleLayout();
+			
 			pnTablero = new JPanelConFondo("/es/uniovi/asw/gui/img/tablero.png");
 			pnTablero.setLayout(cl);
 			pnTablero.setBorder(new EmptyBorder(1, 1, 45, 40));
 			
-			btnDado = cl.getBoton();
-			pnTablero.add(btnDado);
+			pnTablero.add(getBtDado());
 			generarBotones();
 			
+		}
+		return pnTablero;
+	}
+	public JButton getBtDado() {
+		if (btnDado == null) {
+			btnDado = cl.getBoton();
+			btnDado.setIgnoreRepaint(false);
 			btnDado.setIcon(new ImageIcon(Juego.class.getResource("/es/uniovi/asw/gui/img/dados.gif")));
-			btnDado.setDisabledSelectedIcon(new ImageIcon(Juego.class.getResource("/es/uniovi/asw/gui/img/dadosIcono.png")));
+			btnDado.setDisabledIcon(new ImageIcon(Juego.class.getResource("/es/uniovi/asw/gui/img/dd.png")));
 			btnDado.setRolloverIcon(new ImageIcon(Juego.class.getResource("/es/uniovi/asw/gui/img/dados.gif")));
 			btnDado.setBackground(null);
 			btnDado.setActionCommand("-1"); // no toques
@@ -137,7 +143,7 @@ public class Juego extends JFrame {
 				}
 			});
 		}
-		return pnTablero;
+			return btnDado;
 	}
 	private JPanel getPnNorte() {
 		if (pnNorte == null) {
@@ -158,29 +164,15 @@ public class Juego extends JFrame {
 		}
 		return pnGestion;
 	}
-
-	private void cambiarJugadorTabla() {
-		int jugador = table.getSelectedRow();
-		if(jugador == ventana_login.numJugadores())
-			jugador=0;
-			
-	} 
 	
 	//####################################################################
 	//######-------L�GICA-------##########################################
 	//####################################################################
-	
-	private void elegirCasillas(JButton casilla) {
-		lanzarPregunta();
-	}
-	
-	private void lanzarPregunta() {}
-	
-	
+		
 	private void generarBotones() {
 		BotonTablero bt;
 		for (int i = 0; i < 30; i++) {
-			bt = new BotonTablero(i, juego);
+			bt = new BotonTablero(i, this, juego);
 		    getPnTablero().add(bt);
 		}
 	}
@@ -204,6 +196,7 @@ public class Juego extends JFrame {
 		activarBotones(AnteriorDado, 0, false);
 		activarBotones(x, 0, true);
 		AnteriorDado = x;
+		btnDado.setEnabled(false);
 	}
 	
 	private void activarBotones(int numdado, int btnActual, boolean active) {
@@ -226,13 +219,26 @@ public class Juego extends JFrame {
 		for(int i=0; i<botones.length; i++) 
 		{
 			JButton bt = (JButton) botones[i];
-			System.out.println(bt.getActionCommand());
 			if( Integer.valueOf(bt.getActionCommand()) == opc1 || Integer.valueOf(bt.getActionCommand()) == opc2) 
 			{
 				bt.setEnabled(active);
 			}
 		}
 		
+	}
+	
+	public void desactivarBotones() {
+		btnDado.setIcon(new ImageIcon(Juego.class.getResource("/es/uniovi/asw/gui/img/dados.gif")));
+		btnDado.setRolloverIcon(new ImageIcon(Juego.class.getResource("/es/uniovi/asw/gui/img/dados.gif")));
+		Component[] botones = pnTablero.getComponents();		
+		for(int i=0; i<botones.length; i++) 
+		{
+			JButton bt = (JButton) botones[i];
+			if( Integer.valueOf(bt.getActionCommand()) != -1) 
+			{
+				bt.setEnabled(false);
+			}
+		}
 	}
 	
 	//####################################################################
