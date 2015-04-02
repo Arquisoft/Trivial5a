@@ -2,22 +2,10 @@ package es.uniovi.asw.gui;
 
 import java.awt.Color;
 import java.awt.Dimension;
-import java.awt.Font;
-import java.awt.FontMetrics;
-import java.awt.Graphics;
-import java.awt.Image;
-import java.awt.Rectangle;
-import java.awt.Shape;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.image.ImageObserver;
-import java.text.AttributedCharacterIterator;
 
 import javax.swing.JButton;
-import javax.swing.JOptionPane;
-import javax.swing.border.LineBorder;
-
-import org.pushingpixels.substance.internal.utils.ButtonBackgroundDelegate;
 
 import es.uniovi.asw.bussines.Game;
 import es.uniovi.asw.model.Category;

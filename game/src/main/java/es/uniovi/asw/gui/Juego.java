@@ -126,7 +126,8 @@ public class Juego extends JFrame {
 			generarBotones();
 			
 			btnDado.setIcon(new ImageIcon(Juego.class.getResource("/es/uniovi/asw/gui/img/dados.gif")));
-			btnDado.setDisabledSelectedIcon(new ImageIcon(Juego.class.getResource("/es/uniovi/asw/gui/img/dados.gif")));
+			btnDado.setDisabledSelectedIcon(new ImageIcon(Juego.class.getResource("/es/uniovi/asw/gui/img/dadosIcono.png")));
+			btnDado.setRolloverIcon(new ImageIcon(Juego.class.getResource("/es/uniovi/asw/gui/img/dados.gif")));
 			btnDado.setBackground(null);
 			btnDado.setActionCommand("-1"); // no toques
 			btnDado.setCursor(new Cursor(Cursor.HAND_CURSOR));
@@ -260,6 +261,7 @@ public class Juego extends JFrame {
 	private JScrollPane getPnScTabla() {
 		if (pnScTabla == null) {
 			pnScTabla = new JScrollPane(table);
+			pnScTabla.setEnabled(false);
 			pnScTabla.setHorizontalScrollBarPolicy(ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
 			pnScTabla.setViewportView(getTable());
 		}
@@ -284,11 +286,13 @@ public class Juego extends JFrame {
 	private JTable getTable() {
 		if (table == null) {
 			
-			String[] columnas = {"Jugador", "Nombre", "Puntos"};
+			Object[] columnas = {"Jugador", "Nombre", "HIST", "ARTE", "GEO", "DEP", "CIEN", "ESP" };
 			modeloTabla = new ModeloNoEditable(columnas, 0);
 			
 			table = new JTable(modeloTabla);
+			table.setAutoResizeMode(JTable.AUTO_RESIZE_ALL_COLUMNS);
 			table.setEnabled(false);
+			table.getTableHeader().setReorderingAllowed(false);
 			
 			rellenarFilasTabla();
 			RendererSubstance renderer = new RendererSubstance(ventana_login);

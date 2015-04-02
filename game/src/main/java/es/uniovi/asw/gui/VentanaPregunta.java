@@ -26,6 +26,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import java.awt.Toolkit;
 import java.util.List;
+import javax.swing.ButtonGroup;
 
 public class VentanaPregunta extends JDialog {
 	
@@ -40,6 +41,7 @@ public class VentanaPregunta extends JDialog {
 	private JRadioButton rdbtnOpc4;
 	private JLabel lblPregunta;
 	private JButton btnResponder;
+	private final ButtonGroup buttonGroup = new ButtonGroup();
 
 	public VentanaPregunta(boolean quesito, Game juego) {
 		this.juego = juego;
@@ -75,6 +77,7 @@ public class VentanaPregunta extends JDialog {
 	private JRadioButton getRdbtnOpc1() {
 		if (rdbtnOpc1 == null) {
 			rdbtnOpc1 = new JRadioButton("<html>esdkjhf asdhflksdhf laksdfhlksadf hdiufbdjk vdnvo este es un texto tan tan tan grande que no entra en una sola linea<html>");
+			buttonGroup.add(rdbtnOpc1);
 			rdbtnOpc1.setFont(new Font("Tahoma", Font.PLAIN, 15));
 			
 		}
@@ -83,6 +86,11 @@ public class VentanaPregunta extends JDialog {
 	private JRadioButton getRdbtnOpc3() {
 		if (rdbtnOpc3 == null) {
 			rdbtnOpc3 = new JRadioButton("<html>Aseguraos de que el texto de la opción va entre las etiquetas html para que divida la linea si no entra<html>");
+			buttonGroup.add(rdbtnOpc3);
+			rdbtnOpc3.addActionListener(new ActionListener() {
+				public void actionPerformed(ActionEvent e) {
+				}
+			});
 			rdbtnOpc3.setFont(new Font("Tahoma", Font.PLAIN, 15));
 		}
 		return rdbtnOpc3;
@@ -90,6 +98,11 @@ public class VentanaPregunta extends JDialog {
 	private JRadioButton getRdbtnOpc2() {
 		if (rdbtnOpc2 == null) {
 			rdbtnOpc2 = new JRadioButton("Opc2");
+			buttonGroup.add(rdbtnOpc2);
+			rdbtnOpc2.addActionListener(new ActionListener() {
+				public void actionPerformed(ActionEvent e) {
+				}
+			});
 			rdbtnOpc2.setFont(new Font("Tahoma", Font.PLAIN, 15));
 		}
 		return rdbtnOpc2;
@@ -97,6 +110,11 @@ public class VentanaPregunta extends JDialog {
 	private JRadioButton getRdbtnOpc4() {
 		if (rdbtnOpc4 == null) {
 			rdbtnOpc4 = new JRadioButton("Opc4");
+			buttonGroup.add(rdbtnOpc4);
+			rdbtnOpc4.addActionListener(new ActionListener() {
+				public void actionPerformed(ActionEvent arg0) {
+				}
+			});
 			rdbtnOpc4.setFont(new Font("Tahoma", Font.PLAIN, 15));
 		}
 		return rdbtnOpc4;
