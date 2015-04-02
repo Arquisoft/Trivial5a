@@ -13,6 +13,8 @@ public class User {
 	public int numberCorrectAnswer; //preguntas acertadas
 	public int numberWrongAnswer;	// preguntas falladas
 	
+	private int posicion;
+	
 	public User(long id, String login,String password,
 			int numberCorrectAnswer,
 			int numberWrongAnswer,boolean admin) {
@@ -180,6 +182,15 @@ public class User {
 			return false;
 		return true;
 	}
+
+	public int getPosicion() {
+		return posicion;
+	}
+
+	public void setPosicion(int posicion) {
+		this.posicion = posicion;
+	}
+	
 	
 	
 	

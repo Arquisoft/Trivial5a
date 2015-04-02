@@ -22,6 +22,7 @@ import javax.swing.JButton;
 import es.uniovi.asw.bussines.Game;
 import es.uniovi.asw.bussines.QuestionManager;
 import es.uniovi.asw.model.Category;
+import es.uniovi.asw.model.Question;
 
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
@@ -35,6 +36,9 @@ public class VentanaPregunta extends JDialog {
 	private boolean quesito;
 	private Game juego;
 	private Juego pantalla;
+	private int categoria;
+	private Question pregunta;
+	private String[] respuestas;
 
 	private JPanel contentPane;
 	private JPanel pnPreguntas;
@@ -46,7 +50,13 @@ public class VentanaPregunta extends JDialog {
 	private JButton btnResponder;
 	private final ButtonGroup buttonGroup = new ButtonGroup();
 
-	public VentanaPregunta(boolean quesito, Juego pantalla, Game juego) {
+	public VentanaPregunta(boolean quesito, int categoria, Juego pantalla, Game juego) {
+		List<Category> cats = juego.getQuestionManager().cargarTablero();
+		pregunta = cats.get(categoria).askQuestion();
+		respuestas = pregunta.getAllAnswers();
+		
+		this.categoria = categoria;
+		this.quesito = quesito;
 		this.pantalla = pantalla;
 		this.juego = juego;
 		setIconImage(Toolkit.getDefaultToolkit().getImage(VentanaPregunta.class.getResource("/es/uniovi/asw/gui/img/iconoPeque.png")));
@@ -80,7 +90,8 @@ public class VentanaPregunta extends JDialog {
 	}
 	private JRadioButton getRdbtnOpc1() {
 		if (rdbtnOpc1 == null) {
-			rdbtnOpc1 = new JRadioButton("<html>esdkjhf asdhflksdhf laksdfhlksadf hdiufbdjk vdnvo este es un texto tan tan tan grande que no entra en una sola linea<html>");
+			rdbtnOpc1 = new JRadioButton("");
+			rdbtnOpc1.setText("<html>"+respuestas[0]+"</html>");
 			buttonGroup.add(rdbtnOpc1);
 			rdbtnOpc1.setFont(new Font("Tahoma", Font.PLAIN, 15));
 			
@@ -89,7 +100,7 @@ public class VentanaPregunta extends JDialog {
 	}
 	private JRadioButton getRdbtnOpc3() {
 		if (rdbtnOpc3 == null) {
-			rdbtnOpc3 = new JRadioButton("<html>Aseguraos de que el texto de la opción va entre las etiquetas html para que divida la linea si no entra<html>");
+			rdbtnOpc3 = new JRadioButton("");
 			buttonGroup.add(rdbtnOpc3);
 			rdbtnOpc3.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
@@ -124,11 +135,10 @@ public class VentanaPregunta extends JDialog {
 		return rdbtnOpc4;
 	}
 	private JLabel getLblPregunta() {
-		List<Category> cats = juego.getQuestionManager().cargarTablero();
-		
+			
 		if (lblPregunta == null) {
 			lblPregunta = new JLabel();
-			lblPregunta.setText("<html>"+cats.get(1).askQuestion().getQuery()+"</html>");
+			lblPregunta.setText("<html>"+pregunta.getQuery()+"</html>");
 			lblPregunta.setFont(new Font("Tahoma", Font.PLAIN, 20));
 		}
 		return lblPregunta;
@@ -139,6 +149,7 @@ public class VentanaPregunta extends JDialog {
 			btnResponder = new JButton("Responder");
 			btnResponder.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
+					
 					
 					
 					/**

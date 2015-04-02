@@ -228,6 +228,7 @@ public class Juego extends JFrame {
 	}
 	
 	public void desactivarBotones() {
+		txtDado.setText("");
 		btnDado.setIcon(new ImageIcon(Juego.class.getResource("/es/uniovi/asw/gui/img/dados.gif")));
 		btnDado.setRolloverIcon(new ImageIcon(Juego.class.getResource("/es/uniovi/asw/gui/img/dados.gif")));
 		Component[] botones = pnTablero.getComponents();		
@@ -239,6 +240,10 @@ public class Juego extends JFrame {
 				bt.setEnabled(false);
 			}
 		}
+	}
+	
+	public void resolverJugada() {
+		
 	}
 	
 	//####################################################################

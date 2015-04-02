@@ -18,10 +18,10 @@ public class BotonTablero extends JButton {
 	private static final long serialVersionUID = 1L;
 	
 	Game juego;
-	Category categoria;
 	
 	Color color;
 	int id_boton;
+	int categoria;
 	boolean quesito;
 	
 	public BotonTablero(int id, final Juego pantalla, final Game juego){
@@ -33,6 +33,7 @@ public class BotonTablero extends JButton {
 		this.setBackground(pintarBoton(id));
 		this.repaint();
 		isQuesito(id);
+		asignarCategoria(id);
 		
 		this.setActionCommand(String.valueOf(id)); // el nombre del boton, pero hay veces que java no permite usarlo al generarse de forma dinamica
 		this.setEnabled(false);	// por defecto todos desactivados hasta que se tire el dado
@@ -44,17 +45,17 @@ public class BotonTablero extends JButton {
 		
 		this.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				VentanaPregunta vp = new VentanaPregunta(quesito, pantalla, juego);
+				VentanaPregunta vp = new VentanaPregunta(quesito, categoria, pantalla, juego);
 				vp.setVisible(true);
 			}
 		});
 		
 	}
-	public Category getCategoria() {
+	public int getCategoria() {
 		return categoria;
 	}
 	
-	public void setCategoria(Category categoria) {
+	public void setCategoria(int categoria) {
 		this.categoria = categoria;
 	}
 	public Color getColor() {
@@ -100,5 +101,39 @@ public class BotonTablero extends JButton {
 			this.setText("X"); // para trabajar de forma mas sencilla con la interfaz en desarrollo, luego borrar
 		}
 	}
+	
+	private void asignarCategoria(int bt) {
+		switch(bt%6) {
+		case 0: // rosa
+			categoria = 4;
+			break;
+		case 1: // naranja
+			categoria = 1;
+			break;
+		case 2: // amarillo
+			categoria = 5;
+			break;
+		case 3: // azul
+			categoria = 0;
+			break;
+		case 4: // marron
+			categoria = 2;
+			break;
+		case 5: // verde
+			categoria = 3;
+		}
+	}
 
+	/**
+	 * CATEGORIAS - en funcion como estan en la base de datos
+	 * para organizarlas a la hora de sacar la pregunta por pantalla
+	 * 
+	 * 0 - geografia // azul
+	 * 1- deportes // naranja
+	 * 2- arte // marron
+	 * 3 - ciencias // verde
+	 * 4- espectaculos // rosa
+	 * 5- historia // amarillo
+	 * 
+	 */
 }
