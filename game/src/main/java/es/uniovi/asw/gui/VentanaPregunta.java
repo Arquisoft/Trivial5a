@@ -1,6 +1,7 @@
 package es.uniovi.asw.gui;
 
 import java.awt.BorderLayout;
+import java.awt.Component;
 import java.awt.EventQueue;
 
 import javax.swing.ImageIcon;
@@ -23,6 +24,7 @@ import es.uniovi.asw.bussines.Game;
 import es.uniovi.asw.bussines.QuestionManager;
 import es.uniovi.asw.model.Category;
 import es.uniovi.asw.model.Question;
+import es.uniovi.asw.model.User;
 
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
@@ -51,14 +53,15 @@ public class VentanaPregunta extends JDialog {
 	private final ButtonGroup buttonGroup = new ButtonGroup();
 
 	public VentanaPregunta(boolean quesito, int categoria, Juego pantalla, Game juego) {
-		List<Category> cats = juego.getQuestionManager().cargarTablero();
-		pregunta = cats.get(categoria).askQuestion();
-		respuestas = pregunta.getAllAnswers();
-		
 		this.categoria = categoria;
 		this.quesito = quesito;
 		this.pantalla = pantalla;
 		this.juego = juego;
+		List<Category> cats = juego.getQuestionManager().cargarTablero();
+		pregunta = cats.get(categoria).askQuestion();
+		respuestas = pregunta.getAllAnswers();
+		
+		
 		setIconImage(Toolkit.getDefaultToolkit().getImage(VentanaPregunta.class.getResource("/es/uniovi/asw/gui/img/iconoPeque.png")));
 		
 		this.quesito = quesito; // para gestionar que hay que hacer con la respuesta
@@ -91,6 +94,7 @@ public class VentanaPregunta extends JDialog {
 	private JRadioButton getRdbtnOpc1() {
 		if (rdbtnOpc1 == null) {
 			rdbtnOpc1 = new JRadioButton("");
+			rdbtnOpc1.setActionCommand("0");
 			rdbtnOpc1.setText("<html>"+respuestas[0]+"</html>");
 			buttonGroup.add(rdbtnOpc1);
 			rdbtnOpc1.setFont(new Font("Tahoma", Font.PLAIN, 15));
@@ -101,11 +105,10 @@ public class VentanaPregunta extends JDialog {
 	private JRadioButton getRdbtnOpc3() {
 		if (rdbtnOpc3 == null) {
 			rdbtnOpc3 = new JRadioButton("");
+			rdbtnOpc3.setActionCommand("2");
+			rdbtnOpc3.setText("<html>"+respuestas[2]+"</html>");
 			buttonGroup.add(rdbtnOpc3);
-			rdbtnOpc3.addActionListener(new ActionListener() {
-				public void actionPerformed(ActionEvent e) {
-				}
-			});
+			
 			rdbtnOpc3.setFont(new Font("Tahoma", Font.PLAIN, 15));
 		}
 		return rdbtnOpc3;
@@ -113,11 +116,10 @@ public class VentanaPregunta extends JDialog {
 	private JRadioButton getRdbtnOpc2() {
 		if (rdbtnOpc2 == null) {
 			rdbtnOpc2 = new JRadioButton("Opc2");
+			rdbtnOpc2.setActionCommand("1");
+			rdbtnOpc2.setText("<html>"+respuestas[1]+"</html>");
 			buttonGroup.add(rdbtnOpc2);
-			rdbtnOpc2.addActionListener(new ActionListener() {
-				public void actionPerformed(ActionEvent e) {
-				}
-			});
+			
 			rdbtnOpc2.setFont(new Font("Tahoma", Font.PLAIN, 15));
 		}
 		return rdbtnOpc2;
@@ -125,11 +127,10 @@ public class VentanaPregunta extends JDialog {
 	private JRadioButton getRdbtnOpc4() {
 		if (rdbtnOpc4 == null) {
 			rdbtnOpc4 = new JRadioButton("Opc4");
+			rdbtnOpc4.setText("<html>"+respuestas[3]+"</html>");
+			rdbtnOpc4.setActionCommand("3");
 			buttonGroup.add(rdbtnOpc4);
-			rdbtnOpc4.addActionListener(new ActionListener() {
-				public void actionPerformed(ActionEvent arg0) {
-				}
-			});
+			
 			rdbtnOpc4.setFont(new Font("Tahoma", Font.PLAIN, 15));
 		}
 		return rdbtnOpc4;
@@ -150,26 +151,22 @@ public class VentanaPregunta extends JDialog {
 			btnResponder.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
 					
+					User usuarioActivo = juego.getUsuarioActivo();
 					
+										
+					if(!respuesta()) {
+						JOptionPane.showMessageDialog(null, "Has fallado. Pierdes el turno :(");
+					}
+					else {
+						if(quesito) {
+							JOptionPane.showMessageDialog(null, "¡Respuesta correcta! Has ganado un quesito");
+							
+						} 
+						else {
+							JOptionPane.showMessageDialog(null, "¡Respuesta correcta!");
+						}
+					}
 					
-					/**
-					 * IF - respuesta incorrecta
-					 * {
-					 * 	JOptionPane.showMessageDialog(null, "Has fallado. Pierdes el turno");
-						
-					 * 
-					 * }
-					 * 	
-					 * ELSE - i la respuesta es acertada
-					 * 
-					 * {
-					 * 		if(quesito)
-					 * 
-					 * 		else
-					 * 		
-					 * }
-					 * 
-					 */
 					pantalla.desactivarBotones();
 					pantalla.getBtDado().setEnabled(true);
 					dispose();
@@ -178,6 +175,21 @@ public class VentanaPregunta extends JDialog {
 			});
 		}
 		return btnResponder;
+	}
+	
+	public boolean respuesta() {
+		int respuestaSeleccionada = -1;
+		Component[] botones = (Component[]) pnPreguntas.getComponents();
+		for(int i=0; i<botones.length; i++) {
+			JRadioButton bt = (JRadioButton) botones[i];
+			if(bt.isSelected()) {
+				respuestaSeleccionada = Integer.valueOf(bt.getActionCommand());
+				if( (pregunta.getCorrectAnswer()).equals(respuestas[respuestaSeleccionada]) ) {
+					return true;
+				}
+			}
+		}
+		return false;
 	}
 	
 }

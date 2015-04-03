@@ -213,9 +213,11 @@ public class Game {
 		preguntaActual.setVecesAcertada(preguntaActual.getVecesAcertada()+1);
 		//questionManager.updateQuestion(preguntaActual);
 		
+	
 		preguntasAcertadas.get(usuarioActivo).add(preguntaActual.getCategory().getName());
-		if(preguntasAcertadas.get(usuarioActivo).size()==MAX_CATEGORIAS)
-			terminarPartida();
+		
+	//	if(preguntasAcertadas.get(usuarioActivo).size()==MAX_CATEGORIAS)
+	//		terminarPartida();
 	}
 	
 	/**
