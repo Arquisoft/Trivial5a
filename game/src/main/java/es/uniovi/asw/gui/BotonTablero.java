@@ -46,8 +46,9 @@ public class BotonTablero extends JButton {
 		this.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				juego.getUsuarioActivo().setPosicion(id_boton);
+				pantalla.pintarPosicion(id_boton);
 				System.out.print("POS BtTablero: "+ juego.getUsuarioActivo().getPosicion() + "\n");
-				VentanaPregunta vp = new VentanaPregunta(quesito, categoria, pantalla, juego);
+				VentanaPregunta vp = new VentanaPregunta(quesito, categoria, pantalla, juego, id_boton);
 				vp.setVisible(true);
 			}
 		});

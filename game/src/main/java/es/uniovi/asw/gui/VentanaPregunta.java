@@ -41,6 +41,7 @@ public class VentanaPregunta extends JDialog {
 	private int categoria;
 	private Question pregunta;
 	private String[] respuestas;
+	private int boton;
 
 	private JPanel contentPane;
 	private JPanel pnPreguntas;
@@ -52,7 +53,7 @@ public class VentanaPregunta extends JDialog {
 	private JButton btnResponder;
 	private final ButtonGroup buttonGroup = new ButtonGroup();
 
-	public VentanaPregunta(boolean quesito, int categoria, Juego pantalla, Game juego) {
+	public VentanaPregunta(boolean quesito, int categoria, Juego pantalla, Game juego, int boton) {
 		this.categoria = categoria;
 		this.quesito = quesito;
 		this.pantalla = pantalla;
@@ -156,14 +157,20 @@ public class VentanaPregunta extends JDialog {
 										
 					if(!respuesta()) {
 						JOptionPane.showMessageDialog(null, "Has fallado. Pierdes el turno :(");
+						juego.falla(pregunta);
+						pantalla.pintarPosicion(juego.getUsuarioActivo().getPosicion());
 					}
 					else {
 						if(quesito) {
 							JOptionPane.showMessageDialog(null, "¡Respuesta correcta! Has ganado un quesito");
-							
+							pantalla.getTable().setAlignmentX(CENTER_ALIGNMENT);
+							pantalla.getTable().setAlignmentY(CENTER_ALIGNMENT);
+							pantalla.getTable().getModel().setValueAt("X", (int)juego.getUsuarioActivo().getId(), categoria+2);
+							juego.acierta(pregunta, true);
 						} 
 						else {
 							JOptionPane.showMessageDialog(null, "¡Respuesta correcta!");
+							juego.acierta(pregunta, false);
 						}
 					}
 					
