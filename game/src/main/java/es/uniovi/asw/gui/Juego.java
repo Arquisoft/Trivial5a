@@ -448,6 +448,10 @@ public class Juego extends JFrame {
 	private JMenuItem getMntmEstadisticas() {
 		if (mntmEstadisticas == null) {
 			mntmEstadisticas = new JMenuItem("Estadisticas");
+			if(juego.getUsuarioActivo().isAdmin())
+				mntmEstadisticas.setEnabled(true);
+			else
+				mntmEstadisticas.setEnabled(false);
 			mntmEstadisticas.addActionListener(new ActionListener() {
 					public void actionPerformed(ActionEvent e) {
 						VentanaEstadisticas ve = new VentanaEstadisticas(juego);

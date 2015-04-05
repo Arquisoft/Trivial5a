@@ -178,8 +178,7 @@ public class Driver {
 		table = db.getCollection("usuarios");
 		DBObject [] userModificado = new BasicDBObject[1];
 		userModificado[0]=(DBObject) JSON.parse(user.toJSON());
-		DBObject userActualizar = new BasicDBObject("name", user.getLogin())
-		.append("lastName",user.getLogin());
+		DBObject userActualizar = new BasicDBObject("login", user.getLogin());
 		table.findAndModify(userActualizar, userModificado[0]);
 		client.close();
 	}

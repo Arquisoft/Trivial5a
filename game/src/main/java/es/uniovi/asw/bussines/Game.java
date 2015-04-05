@@ -8,6 +8,7 @@ import java.util.Map;
 import java.util.Random;
 import java.util.Set;
 
+import es.uniovi.asw.gui.VentanaEstadisticas;
 import es.uniovi.asw.model.Category;
 import es.uniovi.asw.model.Question;
 import es.uniovi.asw.model.User;
@@ -195,22 +196,19 @@ public class Game {
 		questionManager.updateQuestion(preg,preg.getCategory());
 
 		
-		if (quesito) {
-			//if (preg.getCategory().getName() != null)
-				//preguntasAcertadas.get(usuarioActivo).add(preg.getCategory().getName());
-			//else
-				preguntasAcertadas.get(usuarioActivo).add("1");
+		if (quesito) { //Si es quesito mete la el nombre de la categoria, sino no hace nada
+				preguntasAcertadas.get(usuarioActivo).add(preg.getCategory());
 		}
 		
-	//	if(preguntasAcertadas.get(usuarioActivo).size()==MAX_CATEGORIAS)
-	//		terminarPartida();
+		if(preguntasAcertadas.get(usuarioActivo).size()==MAX_CATEGORIAS)
+			terminarPartida();
 	}
 	
 	/**
 	 * Metodo final del juego. Cuando algun usuario acaba  se llama a este metodo
 	 */
 	private void terminarPartida() {
-		// SE MOSTRARA LAS ESTADISTICAS DE LA PARTIDA Y EL MENSAJE DE PARTIDA FINALIZADA
+		new VentanaEstadisticas(this);
 		
 	}
 
@@ -220,13 +218,13 @@ public class Game {
 	 */
 	public void falla(Question preg)
 	{
-		//if(cronometro.tiempoacabado()==true)
-			//turnoSiguiente();
+		
 		
 		usuarioActivo.setNumberWrongAnswer(usuarioActivo.getNumberWrongAnswer()+1);
 		userManager.updateUser(usuarioActivo);
-preg.setVecesFallada(preg.getVecesFallada()+1);
+		preg.setVecesFallada(preg.getVecesFallada()+1);
 		questionManager.updateQuestion(preg,preg.getCategory());
 		turnoSiguiente();
 	}
+	
 }

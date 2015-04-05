@@ -36,8 +36,10 @@ public class QuestionManager {
 	 * @param preguntaActual
 	 * @param category
 	 */
-	public void updateQuestion(Question preguntaActual, Category category) {
-			d.updateQuestion(preguntaActual, category);
+	public void updateQuestion(Question preguntaActual, String category) {
+				for(Category c : cargarTablero())
+					if (c.equals(category))
+			d.updateQuestion(preguntaActual, c);
 	}
 	
 }

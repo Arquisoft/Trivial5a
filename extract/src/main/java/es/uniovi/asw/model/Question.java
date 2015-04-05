@@ -12,7 +12,7 @@ public class Question {
 	public static final int MAX_ANSWER = 4; //Se podria cambiar facilmente si dado el caso
 										 // se quisese cambiar el modelo de juego
 	
-	private Category category; //Una pregunta solo puede tener una categoria asociada
+	private String category; //Una pregunta solo puede tener una categoria asociada
 	private String query;	
 	private String identifer; //Identifica unequivocamente a la pregunta
 	private String correctAnswer; //Solo puede tener una respuesta correcta 
@@ -69,13 +69,13 @@ public class Question {
 
 
 
-	public Category getCategory() {
+	public String getCategory() {
 		return category;
 	}
 
 
 
-	public void setCategory(Category category) {
+	public void setCategory(String category) {
 		this.category = category;
 	}
 
