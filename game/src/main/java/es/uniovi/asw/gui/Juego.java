@@ -172,9 +172,9 @@ public class Juego extends JFrame {
 	//####################################################################
 		
 	private void generarBotones() {
-		BotonTablero bt;
+		BotonTableroTest bt;
 		for (int i = 0; i < 30; i++) {
-			bt = new BotonTablero(i, this, juego);
+			bt = new BotonTableroTest(i, this, juego);
 		    getPnTablero().add(bt);
 		}
 	}
