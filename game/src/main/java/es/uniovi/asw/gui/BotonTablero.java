@@ -29,7 +29,7 @@ public class BotonTablero extends JButton {
 		this.juego = juego;
 		this.setIgnoreRepaint(true);
 		id_boton = id;					// con este campo se relaciona con la logica
-		this.setText(String.valueOf(id));
+		this.setText(" ");
 		this.setBackground(pintarBoton(id));
 		this.repaint();
 		isQuesito(id);
@@ -45,6 +45,8 @@ public class BotonTablero extends JButton {
 		
 		this.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				juego.getUsuarioActivo().setPosicion(id_boton);
+				System.out.print("POS BtTablero: "+ juego.getUsuarioActivo().getPosicion() + "\n");
 				VentanaPregunta vp = new VentanaPregunta(quesito, categoria, pantalla, juego);
 				vp.setVisible(true);
 			}
@@ -98,7 +100,7 @@ public class BotonTablero extends JButton {
 	private void isQuesito(int bt) {
 		if(bt%5 == 0) { //(bt%numcat-1)
 			this.quesito = true;
-			this.setText("X"); // para trabajar de forma mas sencilla con la interfaz en desarrollo, luego borrar
+		//	this.setText("X"); // para trabajar de forma mas sencilla con la interfaz en desarrollo, luego borrar
 		}
 	}
 	
@@ -108,10 +110,10 @@ public class BotonTablero extends JButton {
 			categoria = 4;
 			break;
 		case 1: // naranja
-			categoria = 1;
+			categoria = 5;
 			break;
 		case 2: // amarillo
-			categoria = 5;
+			categoria = 1;
 			break;
 		case 3: // azul
 			categoria = 0;

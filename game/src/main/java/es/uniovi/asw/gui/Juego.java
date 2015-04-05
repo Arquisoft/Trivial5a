@@ -45,7 +45,6 @@ public class Juego extends JFrame {
 
 	private final static int numcasillas = 30;
 	
-	private int AnteriorDado;
 	
 	private Game juego;
 	
@@ -84,6 +83,7 @@ public class Juego extends JFrame {
 		cl = new CircleLayout();
 		ventana_login = cp;
 		this.juego = juego;
+		juego.setUsuarioActivo(juego.getUsuarios().get(0));
 		setPreferredSize(new java.awt.Dimension(1167, 733));
 		this.setTitle("Trivial");
 		setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
@@ -193,9 +193,8 @@ public class Juego extends JFrame {
 	private void tirarDado() {
 		int x = 1 + new Double(Math.random() * 6).intValue();
 		txtDado.setText(String.valueOf(x));
-		activarBotones(AnteriorDado, 0, false);
-		activarBotones(x, 0, true);
-		AnteriorDado = x;
+		System.out.println("POS TIRAR DADO: " + juego.getUsuarioActivo().getPosicion());
+		activarBotones(x, juego.getUsuarioActivo().getPosicion(), true);
 		btnDado.setEnabled(false);
 	}
 	
@@ -205,9 +204,22 @@ public class Juego extends JFrame {
 		int opc2;	
 		if(btnActual <= 5) 
 		{
-			int aux = numcasillas+btnActual;
-			opc1=aux-numdado;
+			if(btnActual-numdado >=0)
+				opc1 = btnActual-numdado;
+			else
+			{
+				int aux = numcasillas+btnActual;
+				opc1=aux-numdado;
+			}
 			opc2=btnActual+numdado;
+		}
+		else if(btnActual >= 24)
+		{
+			if(btnActual+numdado>=30)
+				opc1=(btnActual+numdado)-numcasillas;
+			else
+				opc1=btnActual+numdado;
+			opc2=btnActual-numdado;
 		}
 		else 
 		{
@@ -219,14 +231,30 @@ public class Juego extends JFrame {
 		for(int i=0; i<botones.length; i++) 
 		{
 			JButton bt = (JButton) botones[i];
+				
 			if( Integer.valueOf(bt.getActionCommand()) == opc1 || Integer.valueOf(bt.getActionCommand()) == opc2) 
 			{
 				bt.setEnabled(active);
 			}
 		}
 		
+		System.out.println("OPC1: " + opc1);
+		System.out.print("OPC: " + opc2);
 	}
 	
+	public void pintarPosicion(int btnActual) {
+		Component[] botones = pnTablero.getComponents();		
+		for(int i=0; i<botones.length; i++) 
+		{
+			JButton bt = (JButton) botones[i];
+			if( Integer.valueOf(bt.getActionCommand()) == btnActual) {
+				bt.setText("X");
+			}
+			else {
+				bt.setText(" "); // tienen un punto porque si no les meto texto los botones se hacen cuadrados
+			}
+		}
+	}
 	public void desactivarBotones() {
 		txtDado.setText("");
 		btnDado.setIcon(new ImageIcon(Juego.class.getResource("/es/uniovi/asw/gui/img/dados.gif")));
@@ -368,7 +396,7 @@ public class Juego extends JFrame {
 			final Juego partida = this;
 			mntmNuevo.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
-					int respuesta = JOptionPane.showConfirmDialog(null, "¿Está seguro que desea abandonar la partida y comenzar de nuevo?");
+			//		int respuesta = JOptionPane.showConfirmDialog(null, "¿Está seguro que desea abandonar la partida y comenzar de nuevo?");
 					
 					Game juegonuevo = new Game();
 					PantallaInicial pn = new PantallaInicial(juegonuevo);
