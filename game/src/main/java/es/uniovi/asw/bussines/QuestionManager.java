@@ -30,5 +30,14 @@ public class QuestionManager {
 		else
 			return null;
 	}
+
+	/**
+	 * Llama a la persistencia y actualiza las estadisticas
+	 * @param preguntaActual
+	 * @param category
+	 */
+	public void updateQuestion(Question preguntaActual, Category category) {
+			d.updateQuestion(preguntaActual, category);
+	}
 	
 }

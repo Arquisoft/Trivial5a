@@ -20,7 +20,7 @@ public class AbstractDocument implements TipoDocumento {
 		
 		for(int i =0;i<mapaJSON.length;i++)
 		{	
-			mapaJSON[i]="{"+categorias.get(i).toJSON()+"";
+			mapaJSON[i]=categorias.get(i).toJSON();
 		}
 		return mapaJSON;
 	}

@@ -46,50 +46,31 @@ public class Game {
 		}
 		this.questionManager = new QuestionManager(d);
 		this.userManager = new UserManager(d);
-		//this.tablero = questionManager.cargarTablero();
 		this.usuarios= new ArrayList<User>();
 		this.preguntasAcertadas= new HashMap<User,Set<String>>();
-		/*Category c = new Category();
-		Question q = new Question();
-		q.setVecesFallada(4);
-		q.setVecesAcertada(3);
-		c.addQuestions(q);
-		tablero.add(c);*/
+		
 	}
 
 	/**
 	 * Muestra las estadisticas del juego. 
 	 * Muestra las preguntas acertadas y falladas de cada usuario
 	 * Muestra estadisticas de preguntas. Pregunta mas dificil, mas facil,etc
+	 * @throws Exception 
 	 */
-	@SuppressWarnings("rawtypes")
-	public void showEstadistics() {
-		Map<String,List<Map>> estadisticas = new HashMap<String,List<Map>>();
+	public List<User> showEstadisticsUser() throws Exception {
+		List<User> estadisticasUser =userManager.d.findAllUser();
 		
-		List<Map> estadisticasUsuarios = new ArrayList<Map>();
-		List<Map> estadisticasPreguntas = new ArrayList<Map>();
-
-		for(User user : usuarios)
-			estadisticasUsuarios.add(user.showStadistics());
 		
-		estadisticas.put("estadisticasUsers", estadisticasUsuarios);
-		
-		for (Category category : tablero) {
-			estadisticasPreguntas.add(category.showEstadisticsCategory());
-		}
-		
-		estadisticas.put("estadisticasPreguntas", estadisticasPreguntas);
-		
-		//MOSTRAR ESTADISTICAS USERS //ESTO SE BORRARIA
-		List<Map> user =	estadisticas.get("estadisticasUsers");
-		for(Map m : user)
-			System.out.println(m);
-		
-		List<Map> question =	estadisticas.get("estadisticasPreguntas");
-		for(Map m : question)
-			System.out.println(m.get("preguntaFacil"));
-		
+		return estadisticasUser;
 	}
+	
+	public List<Category> showEstadisticsQuestion() throws Exception {
+		List<Category> estadisticasCategory =questionManager.d.findAllQuestion();
+		
+		
+		return estadisticasCategory;
+	}
+	
 	
 	/**
 	 * Devuelve el valor de usuarios
@@ -211,7 +192,7 @@ public class Game {
 		userManager.updateUser(usuarioActivo);
 		
 		preguntaActual.setVecesAcertada(preguntaActual.getVecesAcertada()+1);
-		//questionManager.updateQuestion(preguntaActual);
+		questionManager.updateQuestion(preguntaActual,preguntaActual.getCategory());
 		
 	
 		preguntasAcertadas.get(usuarioActivo).add(preguntaActual.getCategory().getName());
@@ -240,7 +221,7 @@ public class Game {
 		userManager.updateUser(usuarioActivo);
 		
 		preguntaActual.setVecesFallada(preguntaActual.getVecesFallada()+1);
-		//questionManager.updateQuestion(preguntaActual);
+		questionManager.updateQuestion(preguntaActual,preguntaActual.getCategory());
 		turnoSiguiente();
 	}
 	

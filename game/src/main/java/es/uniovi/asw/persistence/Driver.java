@@ -183,6 +183,22 @@ public class Driver {
 		table.findAndModify(userActualizar, userModificado[0]);
 		client.close();
 	}
+	
+	/**
+	 * Actualizar las estadíticas o datos de un pregunta
+	 * @param user
+	 */
+	public void updateQuestion(Question question,Category category) {
+		conectDB();
+		category.addQuestions(question);
+		// Crea una tabla si no existe y agrega datos
+		table = db.getCollection("categorias");
+		DBObject [] categoria = new BasicDBObject[1];
+		categoria[0]=(DBObject) JSON.parse(category.toJSON());
+		DBObject categoriaActualizar = new BasicDBObject("name", category.getName());
+		table.findAndModify(categoriaActualizar, categoria[0]);
+		client.close();
+	}
 
 	/**
 	 * Devuelve todos los usuarios registrados en la aplicacion

@@ -34,6 +34,7 @@ import javax.swing.filechooser.FileNameExtensionFilter;
 import org.openqa.selenium.Dimension;
 
 import es.uniovi.asw.bussines.Game;
+
 import java.awt.Toolkit;
 
 public class Juego extends JFrame {
@@ -74,6 +75,8 @@ public class Juego extends JFrame {
 	private JSeparator separator;
 	private JMenuItem mntmSalir;
 	private JLabel lblDados;
+	private JSeparator separator_1;
+	private JMenuItem mntmEstadisticas;
 
 	/**
 	 * Create the frame.
@@ -363,6 +366,8 @@ public class Juego extends JFrame {
 			mnJuego = new JMenu("Juego");
 			mnJuego.add(getMntmNuevo());
 			mnJuego.add(getSeparator());
+			mnJuego.add(getMntmEstadisticas());
+			mnJuego.add(getSeparator_1());
 			mnJuego.add(getMntmSalir());
 		}
 		return mnJuego;
@@ -433,5 +438,24 @@ public class Juego extends JFrame {
 			lblDados.setToolTipText("\"Para tirar del dado pulsa en el centro del tablero\"");
 		}
 		return lblDados;
+	}
+	private JSeparator getSeparator_1() {
+		if (separator_1 == null) {
+			separator_1 = new JSeparator();
+		}
+		return separator_1;
+	}
+	private JMenuItem getMntmEstadisticas() {
+		if (mntmEstadisticas == null) {
+			mntmEstadisticas = new JMenuItem("Estadisticas");
+			mntmEstadisticas.addActionListener(new ActionListener() {
+					public void actionPerformed(ActionEvent e) {
+						VentanaEstadisticas ve = new VentanaEstadisticas(juego);
+						ve.setVisible(true);
+						ve.setLocationRelativeTo(null);
+					}
+				});
+			}
+		return mntmEstadisticas;
 	}
 }

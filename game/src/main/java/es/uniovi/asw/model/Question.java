@@ -197,4 +197,33 @@ public class Question {
 	public void setVecesAcertada(int vecesAcertada) {
 		this.vecesAcertada = vecesAcertada;
 	}
+
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result
+				+ ((identifer == null) ? 0 : identifer.hashCode());
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Question other = (Question) obj;
+		if (identifer == null) {
+			if (other.identifer != null)
+				return false;
+		} else if (!identifer.equals(other.identifer))
+			return false;
+		return true;
+	}
+	
+	
+	
 }
