@@ -1,11 +1,10 @@
 package es.uniovi.asw.model;
 
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.Random;
 
 import com.google.gson.Gson;
-
-import java.util.Collections;
 
 public class Question {
 	

@@ -16,7 +16,7 @@ import es.uniovi.asw.persistence.Driver;
 
 public class Game {
 	
-	CountDown cronometro = new CountDown(); //CLASE QUE SIRVE PARA CRONOMETRO
+	
 	
 	public static final int MAX_CATEGORIAS = 6;
 	private List<User> usuarios;

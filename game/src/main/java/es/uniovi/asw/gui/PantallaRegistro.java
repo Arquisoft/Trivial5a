@@ -54,6 +54,7 @@ public class PantallaRegistro extends JDialog {
 		
 			JButton okButton = new JButton("Registrarse");
 			okButton.addActionListener(new ActionListener() {
+				@Override
 				@SuppressWarnings("deprecation")
 				public void actionPerformed(ActionEvent arg0) {
 					textFieldError.setText("");
@@ -99,6 +100,7 @@ public class PantallaRegistro extends JDialog {
 		{
 			JButton cancelButton = new JButton("Cancel");
 			cancelButton.addActionListener(new ActionListener() {
+				@Override
 				public void actionPerformed(ActionEvent e) {
 					dispose();
 				}

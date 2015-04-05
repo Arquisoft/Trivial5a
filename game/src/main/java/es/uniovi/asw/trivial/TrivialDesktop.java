@@ -34,6 +34,7 @@ public class TrivialDesktop {
 		}
 		
 		EventQueue.invokeLater(new Runnable() {
+			@Override
 			public void run() {
 				try {
 					PantallaInicial frame = new PantallaInicial(g);

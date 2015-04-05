@@ -2,41 +2,32 @@ package es.uniovi.asw.gui;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Component;
-import java.awt.EventQueue;
-
-import javax.swing.JFrame;
-import javax.swing.JPanel;
-import javax.swing.border.EmptyBorder;
-
+import java.awt.FlowLayout;
+import java.awt.Font;
 import java.awt.GridLayout;
-
-import javax.swing.JDialog;
-import javax.swing.JOptionPane;
-import javax.swing.JPasswordField;
-import javax.swing.JRadioButton;
-import javax.swing.JLabel;
-import javax.swing.JTextField;
-import javax.swing.ButtonGroup;
-
-import java.awt.event.ActionListener;
+import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.FocusAdapter;
+import java.awt.event.FocusEvent;
 import java.util.ArrayList;
 import java.util.List;
 
-import javax.swing.border.TitledBorder;
+import javax.swing.ButtonGroup;
 import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+import javax.swing.JPasswordField;
+import javax.swing.JRadioButton;
+import javax.swing.JTextField;
 import javax.swing.SwingConstants;
-
-import org.pushingpixels.substance.api.SubstanceLookAndFeel;
+import javax.swing.border.EmptyBorder;
+import javax.swing.border.TitledBorder;
 
 import es.uniovi.asw.bussines.Game;
 import es.uniovi.asw.model.User;
-
-import java.awt.FlowLayout;
-import java.awt.event.FocusAdapter;
-import java.awt.event.FocusEvent;
-import java.awt.Font;
-import java.awt.Toolkit;
 
 
 public class ConfigurarPartida extends JFrame {
@@ -184,6 +175,7 @@ public class ConfigurarPartida extends JFrame {
 			rb2 = new JRadioButton("2");
 			rb2.setSelected(true);
 			rb2.addActionListener(new ActionListener() {
+				@Override
 				public void actionPerformed(ActionEvent arg0) {
 					gestionarPaneles();
 				}
@@ -196,6 +188,7 @@ public class ConfigurarPartida extends JFrame {
 		if (rb3 == null) {
 			rb3 = new JRadioButton("3");
 			rb3.addActionListener(new ActionListener() {
+				@Override
 				public void actionPerformed(ActionEvent e) {
 					gestionarPaneles();
 				}
@@ -208,6 +201,7 @@ public class ConfigurarPartida extends JFrame {
 		if (rb4 == null) {
 			rb4 = new JRadioButton("4");
 			rb4.addActionListener(new ActionListener() {
+				@Override
 				public void actionPerformed(ActionEvent e) {
 					gestionarPaneles();
 				}
@@ -220,6 +214,7 @@ public class ConfigurarPartida extends JFrame {
 		if (rb5 == null) {
 			rb5 = new JRadioButton("5");
 			rb5.addActionListener(new ActionListener() {
+				@Override
 				public void actionPerformed(ActionEvent e) {
 					gestionarPaneles();
 				}
@@ -232,6 +227,7 @@ public class ConfigurarPartida extends JFrame {
 		if (rb6 == null) {
 			rb6 = new JRadioButton("6");
 			rb6.addActionListener(new ActionListener() {
+				@Override
 				public void actionPerformed(ActionEvent e) {
 					gestionarPaneles();
 				}
@@ -761,6 +757,7 @@ public class ConfigurarPartida extends JFrame {
 			final ConfigurarPartida cp = this;
 			btnContinuar = new JButton("Continuar");
 			btnContinuar.addActionListener(new ActionListener() {
+				@Override
 				public void actionPerformed(ActionEvent e) {
 					if(comprobarCamposVacios()) {
 						try {
@@ -794,6 +791,7 @@ public class ConfigurarPartida extends JFrame {
 	 * Cojo los formularios y creo los usuarios
 	 * @throws Exception
 	 */
+	@SuppressWarnings("deprecation")
 	private void crearUsuarios() throws Exception
 	{
 		User user1,user2,user3,user4,user5,user6;

@@ -8,7 +8,6 @@ import java.awt.event.ActionListener;
 import javax.swing.JButton;
 
 import es.uniovi.asw.bussines.Game;
-import es.uniovi.asw.model.Category;
 
 public class BotonTablero extends JButton {
 	
@@ -44,6 +43,7 @@ public class BotonTablero extends JButton {
 		
 		
 		this.addActionListener(new ActionListener() {
+			@Override
 			public void actionPerformed(ActionEvent e) {
 				juego.getUsuarioActivo().setPosicion(id_boton);
 				pantalla.pintarPosicion(id_boton);
