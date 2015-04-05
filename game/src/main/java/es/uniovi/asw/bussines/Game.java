@@ -26,7 +26,7 @@ public class Game {
 	
 	private Map<User,Set<String>> preguntasAcertadas;
 	
-	private Question preguntaActual;											
+	//private Question preguntaActual;											
 	
 	private User usuarioActivo; //Se usa para gestionar el turno activo del usuario
 	
@@ -204,17 +204,21 @@ public class Game {
 	 * Metodo que se llamara cada vez que acierte una pregunta
 	 * Actualiza estadisticas
 	 */
-	public void acierta()
+	public void acierta(Question preg, boolean quesito)
 	{
 		
 		usuarioActivo.setNumberCorrectAnswer(usuarioActivo.getNumberCorrectAnswer()+1);
 		userManager.updateUser(usuarioActivo);
 		
-		preguntaActual.setVecesAcertada(preguntaActual.getVecesAcertada()+1);
+		preg.setVecesAcertada(preg.getVecesAcertada()+1);
 		//questionManager.updateQuestion(preguntaActual);
 		
-	
-		preguntasAcertadas.get(usuarioActivo).add(preguntaActual.getCategory().getName());
+		if (quesito) {
+			if (preg.getCategory().getName() != null)
+				preguntasAcertadas.get(usuarioActivo).add(preg.getCategory().getName());
+			else
+				preguntasAcertadas.get(usuarioActivo).add("1");
+		}
 		
 	//	if(preguntasAcertadas.get(usuarioActivo).size()==MAX_CATEGORIAS)
 	//		terminarPartida();
@@ -232,16 +236,16 @@ public class Game {
 	 * Metodo que se llamara cada vez que se falle una pregunta
 	 * Actualiza estadisticas y pasa el turno
 	 */
-	public void falla()
+	public void falla(Question preg)
 	{
-		if(cronometro.tiempoacabado()==true)
-			turnoSiguiente();
+		//if(cronometro.tiempoacabado()==true)
+			//turnoSiguiente();
+		
 		usuarioActivo.setNumberWrongAnswer(usuarioActivo.getNumberWrongAnswer()+1);
 		userManager.updateUser(usuarioActivo);
 		
-		preguntaActual.setVecesFallada(preguntaActual.getVecesFallada()+1);
+		preg.setVecesFallada(preg.getVecesFallada()+1);
 		//questionManager.updateQuestion(preguntaActual);
 		turnoSiguiente();
 	}
-	
 }

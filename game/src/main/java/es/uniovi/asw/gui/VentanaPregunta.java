@@ -156,14 +156,16 @@ public class VentanaPregunta extends JDialog {
 										
 					if(!respuesta()) {
 						JOptionPane.showMessageDialog(null, "Has fallado. Pierdes el turno :(");
+						juego.falla(pregunta);
 					}
 					else {
 						if(quesito) {
 							JOptionPane.showMessageDialog(null, "¡Respuesta correcta! Has ganado un quesito");
-							
+							juego.acierta(pregunta, true);
 						} 
 						else {
 							JOptionPane.showMessageDialog(null, "¡Respuesta correcta!");
+							juego.acierta(pregunta, false);
 						}
 					}
 					
