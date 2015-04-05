@@ -34,6 +34,7 @@ import javax.swing.filechooser.FileNameExtensionFilter;
 import org.openqa.selenium.Dimension;
 
 import es.uniovi.asw.bussines.Game;
+
 import java.awt.Toolkit;
 
 public class Juego extends JFrame {
@@ -86,6 +87,7 @@ public class Juego extends JFrame {
 		juego.setUsuarioActivo(juego.getUsuarios().get(0));
 		setPreferredSize(new java.awt.Dimension(1167, 733));
 		this.setTitle("Trivial");
+		
 		setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
 		setBounds(100, 100, 1167, 733); 
 		setMinimumSize(getPreferredSize()); // para que no se pueda reducir la pantalla, el minimo es lo inicial
@@ -96,7 +98,7 @@ public class Juego extends JFrame {
 		setContentPane(contentPane);
 		contentPane.add(getPnTablero(), BorderLayout.CENTER);
 		contentPane.add(getPnGestion(), BorderLayout.WEST);
-		
+		pintarPosicion(0);
 	}
 
 	private JFileChooser getSelector() {
@@ -248,7 +250,7 @@ public class Juego extends JFrame {
 		{
 			JButton bt = (JButton) botones[i];
 			if( Integer.valueOf(bt.getActionCommand()) == btnActual) {
-				bt.setText("X");
+				bt.setText(juego.getUsuarioActivo().getLogin());
 			}
 			else {
 				bt.setText(" "); // tienen un punto porque si no les meto texto los botones se hacen cuadrados
@@ -322,10 +324,9 @@ public class Juego extends JFrame {
 		}
 		return txtDado;
 	}
-	private JTable getTable() {
+	public JTable getTable() {
 		if (table == null) {
-			
-			Object[] columnas = {"Jugador", "Nombre", "HIST", "ARTE", "GEO", "DEP", "CIEN", "ESP" };
+			Object[] columnas = {"Jugador", "Nombre", "GEO", "DEP", "ARTE", "CIEN", "ESP", "HIST" };
 			modeloTabla = new ModeloNoEditable(columnas, 0);
 			
 			table = new JTable(modeloTabla);

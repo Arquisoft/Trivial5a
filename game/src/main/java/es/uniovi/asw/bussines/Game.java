@@ -214,9 +214,9 @@ public class Game {
 		//questionManager.updateQuestion(preguntaActual);
 		
 		if (quesito) {
-			if (preg.getCategory().getName() != null)
-				preguntasAcertadas.get(usuarioActivo).add(preg.getCategory().getName());
-			else
+			//if (preg.getCategory().getName() != null)
+				//preguntasAcertadas.get(usuarioActivo).add(preg.getCategory().getName());
+			//else
 				preguntasAcertadas.get(usuarioActivo).add("1");
 		}
 		

@@ -31,26 +31,25 @@ public class RendererSubstance extends SubstanceDefaultTableCellRenderer{
 	       
 	       table.setRowHeight(altura/numeroJugadores);
 	       
-	       
 	       if(column == 2) {
-	    	   this.setBackground(new Color(255,140,0));
+	    	   this.setBackground(new Color(30,144,255)); // GEO
 	    	   this.setMaximumSize(new Dimension(10, 100));
 	       }
 	       	
 	       if(column == 3)
-	    	   this.setBackground(new Color(156, 93, 82));
+	    	   this.setBackground(new Color(255,255,153)); // DEP
 	       
 	       if(column == 4)
-	    	   this.setBackground(new Color(30,144,255));
+	    	   this.setBackground(new Color(156, 93, 82)); // ARTE
 	       
 	       if(column == 5)
-	    	   this.setBackground(new Color(255,255,153));
+	    	   this.setBackground(new Color(0, 153, 51)); // CIEN
 	       
 	       if(column == 6)
-	    	   this.setBackground(new Color(0, 153, 51));
+	    	   this.setBackground(new Color(255,51,204)); // ESP
 	       
 	       if(column == 7)
-	    	   this.setBackground(new Color(255,51,204));
+	    	   this.setBackground(new Color(255,140,0)); // HIST
 
 
 	        this.setForeground(Color.black);
