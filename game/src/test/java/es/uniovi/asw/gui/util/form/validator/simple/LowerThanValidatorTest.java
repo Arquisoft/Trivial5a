@@ -6,19 +6,25 @@ import org.junit.Test;
 
 public class LowerThanValidatorTest {
 
-	@Test
-	public void testLowerThanValidator() {
-		fail("Not yet implemented");
-	}
-
-	@Test
+	/**
+	 * changquye
+	 */
+	private int limite=20;
+	private LowerThanValidator ltv = new LowerThanValidator(limite);
+	private String textoDePrueba="";
+	
+	@Test//menor que limite true
 	public void testValidar() {
-		fail("Not yet implemented");
+		assertEquals(true, ltv.validar(textoDePrueba));
+		textoDePrueba="holadsjjsds";
+		assertEquals(true, ltv.validar(textoDePrueba));
+		textoDePrueba="holasdlskjfgsghbwkegjvhsikghkshbsjkghsjhgdhfgkjfhsigfuwhegfuwjsds";
+		assertEquals(false, ltv.validar(textoDePrueba));
 	}
 
-	@Test
-	public void testHelp() {
-		fail("Not yet implemented");
-	}
+//	@Test
+//	public void testHelp() {
+//		fail("Not yet implemented");
+//	}
 
 }

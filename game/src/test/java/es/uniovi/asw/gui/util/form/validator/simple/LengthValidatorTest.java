@@ -6,19 +6,27 @@ import org.junit.Test;
 
 public class LengthValidatorTest {
 
-	@Test
-	public void testLengthValidator() {
-		fail("Not yet implemented");
-	}
+	/**
+	 * changquye
+	 */
+	private int longitud=20;
+	private LengthValidator lv = new  LengthValidator(longitud);
+	private String textoDePrueba="";
 
-	@Test
+	@Test//misma longitud verdadero
 	public void testValidar() {
-		fail("Not yet implemented");
+		assertEquals(false, lv.validar(textoDePrueba));
+		textoDePrueba="abcdefghiopqrstu";
+		assertEquals(false, lv.validar(textoDePrueba));
+		textoDePrueba="abcdefghijklmnopqrst";
+		assertEquals(true, lv.validar(textoDePrueba));
+		textoDePrueba="abcdefghijklmnopqrsssdsdsdsdstu";
+		assertEquals(false, lv.validar(textoDePrueba));
 	}
 
-	@Test
-	public void testHelp() {
-		fail("Not yet implemented");
-	}
+//	@Test
+//	public void testHelp() {
+//		fail("Not yet implemented");
+//	}
 
 }

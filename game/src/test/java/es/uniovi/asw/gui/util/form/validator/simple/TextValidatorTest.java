@@ -6,14 +6,29 @@ import org.junit.Test;
 
 public class TextValidatorTest {
 
-	@Test
+	/**
+	 * changqu
+	 */
+	
+	private TextValidator tv = new TextValidator();
+	private String textoDePrueba="";
+	
+	@Test//si es texto true
 	public void testValidar() {
-		fail("Not yet implemented");
+		//assertEquals(false, tv.validar(textoDePrueba));
+		textoDePrueba="ho ladsjjsds";
+		assertEquals(false, tv.validar(textoDePrueba));
+		textoDePrueba="hol5154adsjjsds";
+		assertEquals(false, tv.validar(textoDePrueba));
+		textoDePrueba="52556743583573";
+		assertEquals(false, tv.validar(textoDePrueba));
+		textoDePrueba="hola";
+		assertEquals(true, tv.validar(textoDePrueba));
 	}
 
-	@Test
-	public void testHelp() {
-		fail("Not yet implemented");
-	}
+//	@Test
+//	public void testHelp() {
+//		fail("Not yet implemented");
+//	}
 
 }

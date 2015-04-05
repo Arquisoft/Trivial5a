@@ -2,33 +2,19 @@ package es.uniovi.asw.gui.util.form.validator.composite;
 
 import static org.junit.Assert.*;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.junit.Test;
+
+import es.uniovi.asw.gui.util.form.validator.Validator;
 
 public class CompositeValidatorTest {
 
-	@Test
-	public void testCompositeValidatorListOfValidator() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	public void testCompositeValidatorValidatorArray() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	public void testAddValidator() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	public void testRemoveValidator() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	public void testValidar() {
-		fail("Not yet implemented");
-	}
-
+	/**
+	 * changqu
+	 */
+	//CompositeValidator es una clase abstracta (ya que tiene metodos vacios->metodo abstracta)
+	//hacer sus test en clase hijos
+	
 }

@@ -6,14 +6,17 @@ import org.junit.Test;
 
 public class ValidatorTest {
 
-	@Test
-	public void testValidar() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	public void testHelp() {
-		fail("Not yet implemented");
-	}
+	/**
+	 * interface no hace falta test
+	 */
+//	@Test
+//	public void testValidar() {
+//		fail("Not yet implemented");
+//	}
+//
+//	@Test
+//	public void testHelp() {
+//		fail("Not yet implemented");
+//	}
 
 }

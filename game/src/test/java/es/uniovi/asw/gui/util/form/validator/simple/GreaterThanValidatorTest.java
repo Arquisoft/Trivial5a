@@ -6,19 +6,25 @@ import org.junit.Test;
 
 public class GreaterThanValidatorTest {
 
-	@Test
-	public void testGreaterThanValidator() {
-		fail("Not yet implemented");
-	}
+	/**
+	 * changquye
+	 */
+	private int limite=20;
+	private GreaterThanValidator gtv = new GreaterThanValidator(limite);
+	private String textoDePrueba="";
 
-	@Test
+	@Test//si supera el limite verdadero
 	public void testValidar() {
-		fail("Not yet implemented");
+		assertEquals(false, gtv.validar(textoDePrueba));
+		textoDePrueba="holadsjjsds";
+		assertEquals(false, gtv.validar(textoDePrueba));
+		textoDePrueba="holasdlskjfgsghbwkegjvhsikghkshbsjkghsjhgdhfgkjfhsigfuwhegfuwjsds";
+		assertEquals(true, gtv.validar(textoDePrueba));
 	}
 
-	@Test
-	public void testHelp() {
-		fail("Not yet implemented");
-	}
+//	@Test
+//	public void testHelp() {
+//		fail("Not yet implemented");
+//	}
 
 }

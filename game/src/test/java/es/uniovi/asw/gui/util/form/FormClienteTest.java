@@ -6,6 +6,10 @@ import org.junit.Test;
 
 public class FormClienteTest {
 
+	/**
+	 * autor ChangQu Ye
+	 * 
+	 */
 	@Test
 	public void testFormularioCliente() {
 		fail("Not yet implemented");

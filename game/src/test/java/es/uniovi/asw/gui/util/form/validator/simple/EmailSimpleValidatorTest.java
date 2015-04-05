@@ -5,15 +5,26 @@ import static org.junit.Assert.*;
 import org.junit.Test;
 
 public class EmailSimpleValidatorTest {
-
-	@Test
+	
+	/**
+	 * changqu
+	 */
+	private EmailSimpleValidator esv = new EmailSimpleValidator();
+	private String textoDePrueba="";
+	
+	@Test//comprobar email
 	public void testValidar() {
-		fail("Not yet implemented");
+		textoDePrueba="";
+		assertEquals(false, esv.validar(textoDePrueba));
+		textoDePrueba="1255@";
+		assertEquals(false, esv.validar(textoDePrueba));
+		textoDePrueba="1255@yahoo.com";
+		assertEquals(true, esv.validar(textoDePrueba));
 	}
 
-	@Test
+	/*@Test
 	public void testHelp() {
-		fail("Not yet implemented");
-	}
+		retr
+	}*/
 
 }
