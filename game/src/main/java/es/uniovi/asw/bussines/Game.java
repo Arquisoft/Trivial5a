@@ -8,7 +8,7 @@ import java.util.Map;
 import java.util.Random;
 import java.util.Set;
 
-import es.uniovi.asw.gui.VentanaEstadisticas;
+import es.uniovi.asw.gui.VentanaFinJuego;
 import es.uniovi.asw.model.Category;
 import es.uniovi.asw.model.Question;
 import es.uniovi.asw.model.User;
@@ -22,7 +22,6 @@ public class Game {
 	private List<User> usuarios;
 	private QuestionManager questionManager;
 	private UserManager userManager;
-	private List<Category> tablero;
 	private Driver d = new Driver();//Solo se carga una vez el Driver por ejecucion
 	
 	private Map<User,Set<String>> preguntasAcertadas;
@@ -198,7 +197,7 @@ public class Game {
 	 * Metodo final del juego. Cuando algun usuario acaba  se llama a este metodo
 	 */
 	private void terminarPartida() {
-		new VentanaEstadisticas(this);
+		new VentanaFinJuego(this);
 		
 	}
 

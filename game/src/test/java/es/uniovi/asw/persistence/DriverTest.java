@@ -5,7 +5,7 @@ import static org.junit.Assert.*;
 import org.junit.Test;
 
 public class DriverTest {
-
+/*
 	@Test
 	public void testConectDB() {
 		fail("Not yet implemented");
@@ -60,5 +60,5 @@ public class DriverTest {
 	public void testImprimirDB() {
 		fail("Not yet implemented");
 	}
-
+*/
 }

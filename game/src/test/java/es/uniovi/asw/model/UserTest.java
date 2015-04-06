@@ -1,12 +1,15 @@
 package es.uniovi.asw.model;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
 
 import java.util.HashMap;
 import java.util.Map;
 
 import org.junit.Test;
 
+import es.uniovi.asw.model.User;
 import es.uniovi.asw.persistence.Driver;
 
 public class UserTest {
@@ -82,14 +85,14 @@ public class UserTest {
 
 	@Test
 	public void testToString() {
-		String compareTo = "User [id=1, login=TestUser2, password=TestPassword2, admin=true, numberCorrectAnswer=2, numberWrongAnswer=2]";
+		String compareTo = "User [id=1, login=TestUser, password=TestPassword, admin=true, numberCorrectAnswer=2, numberWrongAnswer=2]";
 		
 		assertEquals(compareTo, u.toString());
 	}
 
 	@Test
 	public void testToJSON() {
-		String compareTo = "{\"id\":1,\"login\":\"TestUser2\",\"password\":\"TestPassword2\",\"admin\":true,\"numberCorrectAnswer\":2,\"numberWrongAnswer\":2,\"posicion\":0}";
+		String compareTo = "{\"id\":1,\"login\":\"TestUser\",\"password\":\"TestPassword\",\"admin\":true,\"numberCorrectAnswer\":2,\"numberWrongAnswer\":2,\"posicion\":0}";
 		
 		assertEquals(compareTo, u.toJSON());
 	}

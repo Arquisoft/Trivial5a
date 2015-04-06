@@ -29,9 +29,9 @@ public class CategoryTest {
 		category.addQuestions(question);
 		assertEquals("Category [name=Categoria1, "
 				+ "questions=[Question [identifier= ID1, query=Q1, correctAnswer=Domingo, "
-				+ "wrongAnswers=[Lunes, Martes]]]]",category.toString());
+				+ "wrongAnswers=[Lunes, Martes, null]]]]",category.toString());
 	}
-	
+		
 	@Test
 	public void testToJSONOne() {
 		category.setName("Categoria1");
@@ -42,12 +42,11 @@ public class CategoryTest {
 		question.setIdentifer("ID1");
 		question.setQuery("Q1");
 		category.addQuestions(question);
-		assertEquals(" \n'Categoria1': [  \n"
-				+ "{ \n"
-				+ question.toJSON()
-				+ "\n]\n}",category.toJSON());
+		String compareTo = "{\"name\":\"Categoria1\",\"questions\":[{\"category\":\"Categoria1\",\"query\":\"Q1\",\"identifer\":\"ID1\",\"correctAnswer\":\"Domingo\",\"wrongAnswers\":[\"Lunes\",\"Martes\",null]}]}";
+
+		assertEquals(compareTo,category.toJSON());
 	}
-	
+			
 	@Test
 	public void testToJSONMany() {
 		category.setName("Categoria1");
@@ -65,13 +64,15 @@ public class CategoryTest {
 		question2.setIdentifer("ID2");
 		question2.setQuery("Q2");
 		category.addQuestions(question2);
-		assertEquals(" \n'Categoria1': [  \n"
-				+ "{ \n"
-				+ question.toJSON()
-				+ ",\n"
-				+ "{ \n"
-				+ question2.toJSON()
-				+ "\n]\n}",category.toJSON());
+		
+		String compareTo = "{\"name\":\"Categoria1\",\"questions\":[{\""
+				+ "category\":\"Categoria1\",\"query\":\"Q1\",\""
+				+ "identifer\":\"ID1\",\"correctAnswer\":\"Domingo\","
+				+ "\"wrongAnswers\":[\"Lunes\",\"Martes\",null]},{\"category\""
+				+ ":\"Categoria1\",\"query\":\"Q2\",\"identifer\":\"ID2\",\""
+				+ "correctAnswer\":\"Domingo\",\"wrongAnswers\":[\"Lunes\",\"Martes\",null]}]}";
+		
+		assertEquals(compareTo,category.toJSON());
 	}
 
 	@Test
