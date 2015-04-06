@@ -24,9 +24,9 @@ public class LengthValidatorTest {
 		assertEquals(false, lv.validar(textoDePrueba));
 	}
 
-//	@Test
-//	public void testHelp() {
-//		fail("Not yet implemented");
-//	}
+	@Test
+	public void testHelp() {
+		assertNull(lv.help());
+	}
 
 }

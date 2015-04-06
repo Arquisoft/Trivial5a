@@ -25,9 +25,9 @@ public class NumberValidatorTest {
 		assertEquals(true, nv.validar(textoDePrueba));
 	}
 
-//	@Test
-//	public void testHelp() {
-//		fail("Not yet implemented");
-//	}
+	@Test
+	public void testHelp() {
+		assertNull(nv.help());
+	}
 
 }

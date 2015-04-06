@@ -121,22 +121,6 @@ public class Game {
 		this.userManager = userManager;
 	}
 
-	/**
-	 * Devuelve el valor de tablero
-	 * @return tablero
-	 */
-	public List<Category> getTablero() {
-		return tablero;
-	}
-
-	/**
-	 * Cambia el valor de tablero
-	 * @param tablero
-	 */
-	public void setTablero(List<Category> tablero) {
-		this.tablero = tablero;
-	}
-
 	public User getUsuarioActivo() {
 		return usuarioActivo;
 	}

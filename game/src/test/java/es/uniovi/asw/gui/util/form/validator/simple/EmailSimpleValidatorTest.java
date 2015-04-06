@@ -22,9 +22,9 @@ public class EmailSimpleValidatorTest {
 		assertEquals(true, esv.validar(textoDePrueba));
 	}
 
-	/*@Test
+	@Test
 	public void testHelp() {
-		retr
-	}*/
+		assertNull(esv.help());
+	}
 
 }

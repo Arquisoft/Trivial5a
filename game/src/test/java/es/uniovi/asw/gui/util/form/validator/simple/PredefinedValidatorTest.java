@@ -27,9 +27,9 @@ public class PredefinedValidatorTest {
 		assertEquals(false, pv.validar(textoDePrueba));
 	}
 
-//	@Test
-//	public void testHelp() {
-//		fail("Not yet implemented");
-//	}
+	@Test
+	public void testHelp() {
+		assertNull(pv.help());
+	}
 
 }

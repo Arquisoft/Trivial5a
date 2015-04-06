@@ -22,9 +22,9 @@ public class LowerThanValidatorTest {
 		assertEquals(false, ltv.validar(textoDePrueba));
 	}
 
-//	@Test
-//	public void testHelp() {
-//		fail("Not yet implemented");
-//	}
+	@Test
+	public void testHelp() {
+		assertNull(ltv.help());
+	}
 
 }

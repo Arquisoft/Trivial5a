@@ -5,6 +5,7 @@ import static org.junit.Assert.*;
 import org.junit.Test;
 
 public class UserTest {
+	User u = new User(1, "TestUser2", "TestPassword2", 2, 2, true);
 
 	@Test
 	public void testHashCode() {
@@ -12,78 +13,47 @@ public class UserTest {
 	}
 
 	@Test
-	public void testUserLongStringStringIntIntBoolean() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	public void testUser() {
-		fail("Not yet implemented");
-	}
-
-	@Test
 	public void testGetLogin() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	public void testSetLogin() {
-		fail("Not yet implemented");
+		assertEquals("TestUser2", u.getLogin());
 	}
 
 	@Test
 	public void testGetNumberCorrectAnswer() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	public void testSetNumberCorrectAnswer() {
-		fail("Not yet implemented");
+		assertEquals(2, u.getNumberCorrectAnswer());
 	}
 
 	@Test
 	public void testGetNumberWrongAnswer() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	public void testSetNumberWrongAnswer() {
-		fail("Not yet implemented");
+		assertEquals(2, u.getNumberWrongAnswer());
 	}
 
 	@Test
 	public void testGetId() {
-		fail("Not yet implemented");
+		assertEquals(1, u.getId());
 	}
 
 	@Test
 	public void testGetPassword() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	public void testSetPassword() {
-		fail("Not yet implemented");
+		assertEquals("TestPassword2", u.getPassword());
 	}
 
 	@Test
 	public void testIsAdmin() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	public void testSetAdmin() {
-		fail("Not yet implemented");
+		assertEquals(true, u.isAdmin());
 	}
 
 	@Test
 	public void testToString() {
-		fail("Not yet implemented");
+		String compareTo = "User [id=1, login=TestUser2, password=TestPassword2, admin=true, numberCorrectAnswer=2, numberWrongAnswer=2]";
+		
+		assertEquals(compareTo, u.toString());
 	}
 
 	@Test
 	public void testToJSON() {
-		fail("Not yet implemented");
+		String compareTo = "{\"id\":1,\"login\":\"TestUser2\",\"password\":\"TestPassword2\",\"admin\":true,\"numberCorrectAnswer\":2,\"numberWrongAnswer\":2,\"posicion\":0}";
+		
+		assertEquals(compareTo, u.toJSON());
 	}
 
 	@Test
@@ -98,12 +68,9 @@ public class UserTest {
 
 	@Test
 	public void testGetPosicion() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	public void testSetPosicion() {
-		fail("Not yet implemented");
+		u.setPosicion(1);
+		
+		assertEquals(1,u.getPosicion());
 	}
 
 }

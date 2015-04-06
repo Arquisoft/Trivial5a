@@ -26,9 +26,9 @@ public class TextValidatorTest {
 		assertEquals(true, tv.validar(textoDePrueba));
 	}
 
-//	@Test
-//	public void testHelp() {
-//		fail("Not yet implemented");
-//	}
+	@Test
+	public void testHelp() {
+		assertNull(tv.help());
+	}
 
 }

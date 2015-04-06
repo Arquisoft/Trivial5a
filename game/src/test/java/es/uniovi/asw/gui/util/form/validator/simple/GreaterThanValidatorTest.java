@@ -22,9 +22,9 @@ public class GreaterThanValidatorTest {
 		assertEquals(true, gtv.validar(textoDePrueba));
 	}
 
-//	@Test
-//	public void testHelp() {
-//		fail("Not yet implemented");
-//	}
+	@Test
+	public void testHelp() {
+		assertNull(gtv.help());
+	}
 
 }

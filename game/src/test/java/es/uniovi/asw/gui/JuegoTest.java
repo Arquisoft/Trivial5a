@@ -4,8 +4,13 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-public class JuegoTest {
+import es.uniovi.asw.bussines.Game;
 
+public class JuegoTest {
+	Game game = new Game();
+	ConfigurarPartida cp = new ConfigurarPartida(game);
+	
+	Juego juego = new Juego(cp, game);
 	@Test
 	public void testJuego() {
 		fail("Not yet implemented");
