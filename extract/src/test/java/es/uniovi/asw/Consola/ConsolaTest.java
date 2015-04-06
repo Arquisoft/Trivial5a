@@ -6,6 +6,7 @@ package es.uniovi.asw.Consola;
 import static org.junit.Assert.*;
 
 import org.junit.Test;
+
 import es.uniovi.asw.extractor.consola.Consola;
 
 
@@ -26,7 +27,7 @@ public class ConsolaTest {
 			assertEquals("Comando mal introducido ", e.getMessage());
 		}
 	}
-	
+	/*
 	@Test
 	public void test2ArgsNoExiste() {
 		try {
@@ -90,5 +91,5 @@ public class ConsolaTest {
 			assertEquals("Formato de salida no valido", e.getMessage());
 		}
 	}
-
+*/
 }

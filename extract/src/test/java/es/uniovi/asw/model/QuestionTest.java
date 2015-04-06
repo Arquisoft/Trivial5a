@@ -23,7 +23,7 @@ public class QuestionTest {
 		question.setIdentifer("ID1");
 		question.setQuery("TestQuery");
 		assertEquals("Question [identifier= ID1, query=TestQuery, correctAnswer=Domingo, "
-				+ "wrongAnswers=[Lunes, Martes]]",question.toString());
+				+ "wrongAnswers=[Lunes, Martes, null]]",question.toString());
 	}
 	
 	@Test
@@ -33,19 +33,14 @@ public class QuestionTest {
 		question.setCorrectAnswer("Domingo");
 		question.setIdentifer("ID1");
 		question.setQuery("TestQuery");
-		assertEquals("Identifier:'ID1',\n"
-				+ "Query:'TestQuery',\n"
-				+ "CorrectAnswer:'Domingo',\n"
-				+ "WrongAnswer0:'Lunes',\n"
-				+ "WrongAnswer1:'Martes'\n}",question.toJSON());
+		String compareTo = "{\"query\":\"TestQuery\",\"identifer\":\"ID1\",\"correctAnswer\":\"Domingo\",\"wrongAnswers\":[\"Lunes\",\"Martes\",null]}";
+		assertEquals(compareTo,question.toJSON());
 	}
 	
 	@Test
 	public void testCategories() {
-		Category cat = new Category();
-		cat.setName("CategoryTest");
-		question.setCategory(cat.getName());
-		assertEquals(cat.getName(), question.getCategory());
+		question.setCategory("CategoryTest");
+		assertEquals("CategoryTest", question.getCategory());
 	}
 	
 	@Test
@@ -75,7 +70,7 @@ public class QuestionTest {
 		q.addWrongAnswer("Lunes", 0);
 		q.addWrongAnswer("Martes", 1);
 		q.removeWrongAnswer("Lunes");
-		String[] wrong = new String[2];
+		String[] wrong = new String[3];
 		wrong[1] = "Martes";
 		assertArrayEquals(wrong,q.getWrongAnswers());
 	}

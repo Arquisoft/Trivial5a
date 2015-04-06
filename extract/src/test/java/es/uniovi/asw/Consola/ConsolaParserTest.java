@@ -2,9 +2,13 @@
  * 
  */
 package es.uniovi.asw.Consola;
+
 import static org.junit.Assert.*;
+
 import org.junit.Test;
-import es.uniovi.asw.Parser.Document;
+
+import es.uniovi.asw.extractor.consola.ConsolaParser;
+import es.uniovi.asw.extractor.parser.Document;
 
 /**
  * @author Fernando Delgado

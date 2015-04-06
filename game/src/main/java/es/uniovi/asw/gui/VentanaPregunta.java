@@ -82,7 +82,7 @@ public class VentanaPregunta extends JDialog implements ActionListener {
 		this.pantalla = pantalla;
 		this.juego = juego;
 		List<Category> cats = juego.getQuestionManager().cargarTablero();
-		pregunta = cats.get(categoria).askQuestion();
+		pregunta = cats.get(categoria).askQuestion(System.nanoTime());
 		respuestas = pregunta.getAllAnswers();
 		setIconImage(Toolkit.getDefaultToolkit().getImage(
 				VentanaPregunta.class
