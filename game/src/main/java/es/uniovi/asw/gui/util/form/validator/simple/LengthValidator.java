@@ -12,18 +12,14 @@ public class LengthValidator implements Validator {
 
 	@Override
 	public boolean validar(String texto) {
-
-		if(texto.length() == longitud){
+		if (texto.length() == longitud) {
 			return true;
 		}
 		return false;
-
 	}
 
 	@Override
 	public String help() {
-		// TODO Auto-generated method stub
 		return null;
 	}
-
 }

@@ -7,7 +7,6 @@ import java.awt.Rectangle;
 import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -15,26 +14,26 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.SwingConstants;
 import javax.swing.border.EmptyBorder;
-
 import es.uniovi.asw.bussines.Game;
 
 public class PantallaInicial extends JFrame {
 
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = 1L;
-	
+
 	private JPanel contentPane;
-	private JLabel lblIcono;
-	private JButton btnJugar;
 	
+	private JLabel lblIcono;
+	
+	private JButton btnJugar;
+
 	private Game juego;
+	
 	private JPanel pnSur;
+	
 	private JButton btnRegistro;
 
 	/**
-	 * Create the frame.
+	 * Crea la pantalla inicial del juego
 	 */
 	public PantallaInicial(Game juego) {
 		setIconImage(Toolkit.getDefaultToolkit().getImage(PantallaInicial.class.getResource("/es/uniovi/asw/gui/img/iconoPeque.png")));
@@ -52,6 +51,11 @@ public class PantallaInicial extends JFrame {
 		contentPane.add(getPnSur(), BorderLayout.SOUTH);
 	}
 
+	/**
+	 * Devuelve el valor de lblIcono
+	 * 
+	 * @return lblIcono
+	 */
 	private JLabel getLblIcono() {
 		if (lblIcono == null) {
 			lblIcono = new JLabel("");
@@ -62,6 +66,12 @@ public class PantallaInicial extends JFrame {
 		}
 		return lblIcono;
 	}
+
+	/**
+	 * Devuelve el valor de btnJugar
+	 * 
+	 * @return btnJugar
+	 */
 	private JButton getBtnJugar() {
 		if (btnJugar == null) {
 			btnJugar = new JButton("Jugar");
@@ -79,6 +89,12 @@ public class PantallaInicial extends JFrame {
 		}
 		return btnJugar;
 	}
+
+	/**
+	 * Devuelve el valor de pnSur
+	 * 
+	 * @return pnSur
+	 */
 	private JPanel getPnSur() {
 		if (pnSur == null) {
 			pnSur = new JPanel();
@@ -88,17 +104,22 @@ public class PantallaInicial extends JFrame {
 		}
 		return pnSur;
 	}
+
+	/**
+	 * Devuelve el valor de btnRegistro
+	 * 
+	 * @return btnRegistro
+	 */
 	private JButton getBtnRegistro() {
 		if (btnRegistro == null) {
 			btnRegistro = new JButton("Registrarme");
-			final PantallaInicial ventana = this;
 			btnRegistro.addActionListener(new ActionListener() {
 				@Override
 				public void actionPerformed(ActionEvent e) {
 					PantallaRegistro pr = new PantallaRegistro(juego);
 					pr.setLocationRelativeTo(null);
 					pr.setVisible(true);
-						
+
 				}
 			});
 			btnRegistro.setFont(new Font("Tahoma", Font.PLAIN, 27));

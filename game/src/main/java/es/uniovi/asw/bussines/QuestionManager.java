@@ -2,7 +2,6 @@ package es.uniovi.asw.bussines;
 
 import java.util.ArrayList;
 import java.util.List;
-
 import es.uniovi.asw.model.Category;
 import es.uniovi.asw.model.Question;
 import es.uniovi.asw.persistence.Driver;
@@ -15,10 +14,13 @@ public class QuestionManager {
 		this.d = d;
 	}
 
+	/**
+	 * Carga todas las preguntas al iniciarse el juego
+	 * 
+	 * @return
+	 */
 	public List<Category> cargarTablero() {
 		List<Category> tablero = new ArrayList<Category>();
-		List<Question> preguntas = null;
-		Category c = new Category();
 		try {
 			tablero = d.findAllQuestion();
 		} catch (Exception e) {
@@ -33,13 +35,13 @@ public class QuestionManager {
 
 	/**
 	 * Llama a la persistencia y actualiza las estadisticas
+	 * 
 	 * @param preguntaActual
 	 * @param category
 	 */
 	public void updateQuestion(Question preguntaActual, String category) {
-				for(Category c : cargarTablero())
-					if (c.equals(category))
-			d.updateQuestion(preguntaActual, c);
+		for (Category c : cargarTablero())
+			if (c.equals(category))
+				d.updateQuestion(preguntaActual, c);
 	}
-	
 }

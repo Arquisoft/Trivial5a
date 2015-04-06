@@ -5,15 +5,14 @@ import java.util.List;
 
 import es.uniovi.asw.gui.util.form.validator.Validator;
 
-
-public abstract class CompositeValidator implements Validator{
+public abstract class CompositeValidator implements Validator {
 
 	List<Validator> validators;
-	
+
 	public CompositeValidator(List<Validator> validators) {
 		this.validators = validators;
 	}
-	
+
 	public CompositeValidator(Validator... validators) {
 		this(Arrays.asList(validators));
 	}
@@ -21,12 +20,12 @@ public abstract class CompositeValidator implements Validator{
 	public void addValidator(Validator validator) {
 		validators.add(validator);
 	}
-	
+
 	public void removeValidator(Validator validator) {
 		validators.remove(validator);
 	}
 
 	@Override
 	public abstract boolean validar(String text);
-	
+
 }

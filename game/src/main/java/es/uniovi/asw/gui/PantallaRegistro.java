@@ -6,7 +6,6 @@ import java.awt.GridLayout;
 import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-
 import javax.swing.JButton;
 import javax.swing.JDialog;
 import javax.swing.JLabel;
@@ -14,31 +13,32 @@ import javax.swing.JPanel;
 import javax.swing.JPasswordField;
 import javax.swing.JTextField;
 import javax.swing.border.EmptyBorder;
-
 import es.uniovi.asw.bussines.Game;
 import es.uniovi.asw.model.User;
 
 public class PantallaRegistro extends JDialog {
 
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = 1L;
+
 	private final JPanel contentPanel = new JPanel();
+
 	private Game juego;
+
 	private JPasswordField passwordField1;
+
 	private JPasswordField passwordField2;
+
 	private JTextField textFieldUser;
+
 	private JTextField textFieldError;
-	
- 
+
 	/**
-	 * Create the dialog.
+	 * Crea la pantalla de registro de nuevo usuario
 	 */
 	public PantallaRegistro(final Game juego) {
 		setIconImage(Toolkit.getDefaultToolkit().getImage(PantallaRegistro.class.getResource("/es/uniovi/asw/gui/img/iconoPeque.png")));
 		setModal(true);
-		this.juego=juego;
+		this.juego = juego;
 		setBounds(100, 100, 482, 391);
 		getContentPane().setLayout(new BorderLayout());
 		contentPanel.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -51,45 +51,36 @@ public class PantallaRegistro extends JDialog {
 			contentPanel.add(lblRegistro);
 		}
 		{
-		
+
 			JButton okButton = new JButton("Registrarse");
 			okButton.addActionListener(new ActionListener() {
 				@Override
 				@SuppressWarnings("deprecation")
 				public void actionPerformed(ActionEvent arg0) {
 					textFieldError.setText("");
-					if(!validarPassword(passwordField1.getText(), passwordField2.getText()))
-					{
+					if (!validarPassword(passwordField1.getText(),passwordField2.getText())) {
 						textFieldError.setText("Las contraseñas no son iguales");
 						textFieldError.setVisible(true);
-					}
-					else
-					{
+					} else {
 						User user = new User();
 						user.setLogin(textFieldUser.getText());
 						user.setPassword(passwordField1.getText());
 						try {
-							
-							if(juego.getUserManager().findUserByLogin(user.login))
-							{
-							textFieldError.setText("El usuario  ya existe");
-							textFieldError.setVisible(true);
-							}
-							else
-							{
+							if (juego.getUserManager().findUserByLogin(user.login)) {
+								textFieldError.setText("El usuario  ya existe");
+								textFieldError.setVisible(true);
+							} else {
 								juego.getUserManager().addUser(user);
 								textFieldError.setText("Se ha registrado correctamente");
 								textFieldError.setVisible(true);
 								textFieldUser.setText("");
 								passwordField1.setText("");
 								passwordField2.setText("");
-								
 							}
 						} catch (Exception e) {
 							e.printStackTrace();
 						}
 					}
-						
 				}
 			});
 			okButton.setBounds(45, 306, 137, 25);
@@ -118,7 +109,7 @@ public class PantallaRegistro extends JDialog {
 			contentPanel.add(textFieldError);
 			textFieldError.setColumns(10);
 		}
-		
+
 		JPanel pnCentro = new JPanel();
 		pnCentro.setBounds(47, 59, 381, 157);
 		contentPanel.add(pnCentro);
@@ -152,10 +143,15 @@ public class PantallaRegistro extends JDialog {
 			pnCentro.add(passwordField2);
 		}
 	}
-	
-	
-	public boolean validarPassword(String cs, String cs2)
-	{
+
+	/**
+	 * Método que comprueba que las contraseñas son iguales
+	 * 
+	 * @param cs
+	 * @param cs2
+	 * @return
+	 */
+	public boolean validarPassword(String cs, String cs2) {
 		if (cs.equals(cs2))
 			return true;
 		return false;

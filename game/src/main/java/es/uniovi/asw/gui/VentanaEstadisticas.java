@@ -4,7 +4,6 @@ import java.awt.Component;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-
 import javax.swing.JButton;
 import javax.swing.JDialog;
 import javax.swing.JLabel;
@@ -16,29 +15,27 @@ import javax.swing.table.DefaultTableColumnModel;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableCellRenderer;
 import javax.swing.table.TableColumn;
-import javax.swing.table.TableModel;
-
 import es.uniovi.asw.bussines.Game;
 import es.uniovi.asw.model.Category;
 import es.uniovi.asw.model.Question;
 import es.uniovi.asw.model.User;
 
 public class VentanaEstadisticas extends JDialog {
-
-	/**
-	 * 
-	 */
+	
 	private static final long serialVersionUID = 1L;
+	
 	private final JPanel contentPanel = new JPanel();
+	
 	private JTable tableUsuarios;
+	
 	private Game juego;
+	
 	private JTable tablePreguntas;
 
 	/**
-	 * Create the dialog.
+	 * Crea la ventana de estadísticas de los jugadores
 	 */
 	public VentanaEstadisticas(Game juego) {
-
 		this.juego = juego;
 		setBounds(100, 100, 1109, 733);
 		getContentPane().setLayout(null);
@@ -64,12 +61,10 @@ public class VentanaEstadisticas extends JDialog {
 		try {
 			rellenarFilasUsers();
 		} catch (Exception e1) {
-			// TODO Auto-generated catch block
 			e1.printStackTrace();
 		}
 
 		scrollPaneUsers.setViewportView(tableUsuarios);
-
 		JScrollPane scrollPanePreguntas = new JScrollPane();
 		scrollPanePreguntas.setEnabled(false);
 		scrollPanePreguntas.setBounds(401, 91, 678, 441);
@@ -77,11 +72,10 @@ public class VentanaEstadisticas extends JDialog {
 		try {
 			rellenarFilasPreguntas();
 		} catch (Exception e1) {
-			// TODO Auto-generated catch block
 			e1.printStackTrace();
 		}
+		
 		scrollPanePreguntas.setViewportView(tablePreguntas);
-
 		JPanel buttonPane = new JPanel();
 		buttonPane.setBounds(12, 545, 1091, 140);
 		contentPanel.add(buttonPane);
@@ -109,18 +103,12 @@ public class VentanaEstadisticas extends JDialog {
 	 * @throws Exception
 	 */
 	public void rellenarFilasUsers() throws Exception {
-
 		String column_names[] = { "Usuario", "Acertadas", "Falladas" };
-		DefaultTableModel table_model = new DefaultTableModel(column_names,
-				juego.showEstadisticsUser().size());
-
+		DefaultTableModel table_model = new DefaultTableModel(column_names, juego.showEstadisticsUser().size());
 		table_model.setNumRows(0);
-
 		for (int i = 0; i < table_model.getRowCount(); i++) {
 			table_model.removeRow(i);
-
 		}
-
 		for (User u : juego.showEstadisticsUser()) {
 			Object[] objetos = new Object[3];
 			objetos[0] = u.getLogin();
@@ -134,73 +122,59 @@ public class VentanaEstadisticas extends JDialog {
 		tableUsuarios.setAutoResizeMode(JTable.AUTO_RESIZE_ALL_COLUMNS);
 	}
 
+	/**
+	 * Rellena las filas de la lista con las preguntas de cada categoría (difícil y fácil)
+	 * 
+	 * @throws Exception
+	 */
 	public void rellenarFilasPreguntas() throws Exception {
-		String column_names[] = { "Categoria", "Preg mas facil",
-				"Preg mas dificil" };
-		DefaultTableModel table_model = new DefaultTableModel(column_names,
-				juego.showEstadisticsQuestion().size());
-
+		String column_names[] = { "Categoria", "Preg mas facil", "Preg mas dificil" };
+		DefaultTableModel table_model = new DefaultTableModel(column_names, juego.showEstadisticsQuestion().size());
 		table_model.setNumRows(0);
-
 		for (int i = 0; i < table_model.getRowCount(); i++) {
 			table_model.removeRow(i);
-
 		}
-
 		for (Category c : juego.showEstadisticsQuestion()) {
-
 			Object[] objetos = new Object[3];
 			objetos[0] = c.getName();
-
-			objetos[1] = ((Question) c.showEstadisticsCategory().get(
-					"preguntaFacil")).getQuery();
-			objetos[2] = ((Question) c.showEstadisticsCategory().get(
-					"preguntaDificil")).getQuery();
+			objetos[1] = ((Question) c.showEstadisticsCategory().get("preguntaFacil")).getQuery();
+			objetos[2] = ((Question) c.showEstadisticsCategory().get("preguntaDificil")).getQuery();
 			table_model.addRow(objetos);
 		}
-
 		tablePreguntas = new JTable(table_model);
 		tablePreguntas.setRowHeight(150);
 		tablePreguntas.setEnabled(false);
 		tablePreguntas.setRowSelectionAllowed(false);
-		tablePreguntas.setAutoResizeMode(JTable.AUTO_RESIZE_OFF);        // Adiciona dados aqui        
+		tablePreguntas.setAutoResizeMode(JTable.AUTO_RESIZE_OFF); 
+		
 		int margin = 2;
-	    packColumn(tablePreguntas, 0, margin);
-	    packColumn(tablePreguntas, 1, margin);
-	    packColumn(tablePreguntas, 2, margin);
-
+		packColumn(tablePreguntas, 0, margin);
+		packColumn(tablePreguntas, 1, margin);
+		packColumn(tablePreguntas, 2, margin);
 	}
 
-	
-	
-    public void packColumns(JTable table, int margin) {
-        for (int c=0; c<table.getColumnCount(); c++) {
-          packColumn(table, c, 2);
-        }
-    }    // Ajusta a largura preferida da coluna visível especificada pelo vColIndex.
-// A coluna será larga o bastante para mostrar o cabeçalho da coluna e a
-// célula de maior conteúdo.
-    public void packColumn(JTable table, int vColIndex, int margin) {
-        TableModel model = table.getModel();
-        DefaultTableColumnModel colModel = (DefaultTableColumnModel)table.
-getColumnModel();
-        TableColumn col = colModel.getColumn(vColIndex);
-        int width = 0;            // Obtém a largura do cabeçalho da coluna
-        TableCellRenderer renderer = col.getHeaderRenderer();
-        if (renderer == null) {
-            renderer = table.getTableHeader().getDefaultRenderer();
-        }
-        Component comp = renderer.getTableCellRendererComponent(
-            table, col.getHeaderValue(), false, false, 0, 0);
-        width = comp.getPreferredSize().width;            // Obtém a largura maxima da coluna de dados
-       for (int r=0; r<table.getRowCount(); r++) {
-            renderer = table.getCellRenderer(r, vColIndex);
-            comp = renderer.getTableCellRendererComponent(
-                table, table.getValueAt(r, vColIndex), false, false, r,
-vColIndex);
-            width = Math.max(width, comp.getPreferredSize().width);
-        }            width += 2*margin;            // Configura a largura
-        col.setPreferredWidth(width);
-    }
-}
+	public void packColumns(JTable table, int margin) {
+		for (int c = 0; c < table.getColumnCount(); c++) {
+			packColumn(table, c, 2);
+		}
+	} 
 
+	public void packColumn(JTable table, int vColIndex, int margin) {
+		DefaultTableColumnModel colModel = (DefaultTableColumnModel) table.getColumnModel();
+		TableColumn col = colModel.getColumn(vColIndex);
+		int width = 0; // Obtém a largura do cabeçalho da coluna
+		TableCellRenderer renderer = col.getHeaderRenderer();
+		if (renderer == null) {
+			renderer = table.getTableHeader().getDefaultRenderer();
+		}
+		Component comp = renderer.getTableCellRendererComponent(table, col.getHeaderValue(), false, false, 0, 0);
+		width = comp.getPreferredSize().width; 
+		for (int r = 0; r < table.getRowCount(); r++) {
+			renderer = table.getCellRenderer(r, vColIndex);
+			comp = renderer.getTableCellRendererComponent(table, table.getValueAt(r, vColIndex), false, false, r, vColIndex);
+			width = Math.max(width, comp.getPreferredSize().width);
+		}
+		width += 2 * margin; // Configura a largura
+		col.setPreferredWidth(width);
+	}
+}
