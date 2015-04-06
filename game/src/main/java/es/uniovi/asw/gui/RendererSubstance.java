@@ -4,21 +4,28 @@ import java.awt.Color;
 import java.awt.Component;
 import java.awt.Dimension;
 import java.awt.Font;
+
 import javax.swing.JTable;
+
 import org.pushingpixels.substance.api.renderers.SubstanceDefaultTableCellRenderer;
+
+import es.uniovi.asw.bussines.Game;
 
 public class RendererSubstance extends SubstanceDefaultTableCellRenderer {
 
 	private static final long serialVersionUID = 1L;
 
 	private int numeroJugadores;
+	private Game juego;
 
-	public RendererSubstance(ConfigurarPartida cp) {
-		numeroJugadores = cp.numJugadores();
+	public RendererSubstance(ConfigurarPartida cp, Game juego) {
+		this.numeroJugadores = cp.numJugadores();
+		this.juego = juego;
 	}
 
 	/**
-	 * Método que colorea las columnas de cada categoría con su solor correspondiente
+	 * Método que colorea las columnas de cada categoría con su solor
+	 * correspondiente
 	 */
 	@Override
 	public Component getTableCellRendererComponent(JTable table, Object value,
@@ -53,10 +60,18 @@ public class RendererSubstance extends SubstanceDefaultTableCellRenderer {
 		if (column == 7)
 			this.setBackground(new Color(255, 140, 0)); // HIST
 
+		if (column == 0
+				&& row == juego.getUsuarios().indexOf(juego.getUsuarioActivo()))
+			this.setBackground(Color.YELLOW); // USER ACTUAL
+
 		this.setForeground(Color.black);
 		this.setFont(new java.awt.Font("Dialog", Font.BOLD, 12));
 
 		return this;
+	}
+
+	public void pintarUserActivo() {
+
 	}
 
 }

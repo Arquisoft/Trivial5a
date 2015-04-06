@@ -13,6 +13,7 @@ import java.awt.event.FocusAdapter;
 import java.awt.event.FocusEvent;
 import java.util.ArrayList;
 import java.util.List;
+
 import javax.swing.ButtonGroup;
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -25,6 +26,7 @@ import javax.swing.JTextField;
 import javax.swing.SwingConstants;
 import javax.swing.border.EmptyBorder;
 import javax.swing.border.TitledBorder;
+
 import es.uniovi.asw.bussines.Game;
 import es.uniovi.asw.model.User;
 
@@ -35,99 +37,101 @@ public class ConfigurarPartida extends JFrame {
 	private Game juego;
 
 	private JPanel contentPane;
-	
+
 	private JPanel pnNorte;
-	
+
 	private JPanel pnCentro;
-	
+
 	private JPanel pnSeleccionJugadores;
-	
+
 	private JPanel pnJugadores;
-	
+
 	private JPanel pnJ3;
-	
+
 	private JRadioButton rb2;
-	
+
 	private JRadioButton rb3;
-	
+
 	private JRadioButton rb4;
-	
+
 	private JRadioButton rb5;
-	
+
 	private JRadioButton rb6;
-	
+
 	private JLabel lblConfiguracin;
-	
+
 	private JLabel lblLogin3;
-	
+
 	private JTextField txLogin3;
-	
+
 	private JLabel lblPass3;
-	
+
 	private JPasswordField txPass3;
-	
+
 	private JPanel pnJ1;
-	
+
 	private JLabel lblLogin1;
-	
+
 	private JTextField txLogin1;
-	
+
 	private JLabel lblPass1;
-	
+
 	private JPasswordField txPass1;
-	
+
 	private JPanel pnJ2;
-	
+
 	private JLabel lblLogin2;
-	
+
 	private JTextField txLogin2;
-	
+
 	private JLabel lblPass2;
-	
+
 	private JPasswordField txPass2;
-	
+
 	private JPanel pnJ4;
-	
+
 	private JLabel lblLogin4;
-	
+
 	private JTextField txLogin4;
-	
+
 	private JLabel lblPass4;
-	
+
 	private JPasswordField txPass4;
-	
+
 	private JPanel pnJ6;
-	
+
 	private JLabel lblLogin6;
-	
+
 	private JTextField txLogin6;
-	
+
 	private JLabel lblPass6;
-	
+
 	private JPasswordField txPass6;
-	
+
 	private JPanel pnJ5;
-	
+
 	private JLabel lblLogin5;
-	
+
 	private JTextField txLogin5;
-	
+
 	private JLabel lblPass5;
-	
+
 	private JPasswordField txPass5;
-	
+
 	private final ButtonGroup buttonGroup = new ButtonGroup();
-	
+
 	private JPanel pnBotones;
-	
+
 	private JButton btnContinuar;
-	
+
 	private JLabel lblSubt;
 
 	private List<String> logins;
 
 	public ConfigurarPartida(Game juego) {
-		setIconImage(Toolkit.getDefaultToolkit().getImage(ConfigurarPartida.class.getResource("/es/uniovi/asw/gui/img/iconoPeque.png")));
+		setIconImage(Toolkit.getDefaultToolkit().getImage(
+				ConfigurarPartida.class
+						.getResource("/es/uniovi/asw/gui/img/iconoPeque.png")));
 
 		this.setResizable(false);
 		this.setLocationRelativeTo(null);
@@ -1026,12 +1030,13 @@ public class ConfigurarPartida extends JFrame {
 
 		return false;
 	}
+
 	/**
 	 * Devuelve el valor de logins
 	 * 
 	 * @return logins
 	 */
-	
+
 	public List<String> getLogins() {
 		return logins;
 	}

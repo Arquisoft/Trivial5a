@@ -11,8 +11,8 @@ import es.uniovi.asw.gui.util.form.validator.specific.SurnameValidator;
 import es.uniovi.asw.gui.util.form.validator.specific.TelephoneValidator;
 
 /**
- *         Clase que define un formulario específico con los campos
- *         correspondientes para clientes.
+ * Clase que define un formulario específico con los campos correspondientes
+ * para clientes.
  */
 public class FormCliente extends Form {
 

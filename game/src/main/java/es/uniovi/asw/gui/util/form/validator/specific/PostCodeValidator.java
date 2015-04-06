@@ -4,7 +4,6 @@ import es.uniovi.asw.gui.util.form.validator.composite.CheckAllValidator;
 import es.uniovi.asw.gui.util.form.validator.simple.LengthValidator;
 import es.uniovi.asw.gui.util.form.validator.simple.NumberValidator;
 
-
 public class PostCodeValidator extends CheckAllValidator {
 
 	public PostCodeValidator() {
@@ -15,5 +14,5 @@ public class PostCodeValidator extends CheckAllValidator {
 	public String help() {
 		return "S�lo n�meros, 5 caracteres.";
 	}
-	
+
 }

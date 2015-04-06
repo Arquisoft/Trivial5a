@@ -11,6 +11,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.File;
 import java.util.List;
+
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFileChooser;
@@ -30,6 +31,7 @@ import javax.swing.WindowConstants;
 import javax.swing.border.EmptyBorder;
 import javax.swing.border.LineBorder;
 import javax.swing.filechooser.FileNameExtensionFilter;
+
 import es.uniovi.asw.bussines.Game;
 
 public class Juego extends JFrame {
@@ -43,51 +45,51 @@ public class Juego extends JFrame {
 	private CircleLayout cl;
 
 	private ConfigurarPartida ventana_login;
-	
+
 	private ModeloNoEditable modeloTabla;
 
 	private JPanelConFondo contentPane;
-	
+
 	private JPanelConFondo pnTablero;
-	
+
 	private JPanelConFondo pnNorte;
-	
+
 	private JPanelConFondo pnGestion;
-	
+
 	private JLabel lblIcono;
-	
+
 	private JPanelConFondo pnDado;
-	
+
 	private JScrollPane pnScTabla;
-	
+
 	private JButton btnDado;
-	
+
 	private JTextField txtDado;
-	
+
 	private JTable table;
-	
+
 	private JPanelConFondo pnGestionCentro;
 
 	private JFileChooser selector;
-	
+
 	private JMenuBar menuBar;
-	
+
 	private JMenu mnJuego;
-	
+
 	private JMenu mnConfiguracin;
-	
+
 	private JMenuItem mntmCambiarFondo;
-	
+
 	private JMenuItem mntmNuevo;
-	
+
 	private JSeparator separator;
-	
+
 	private JMenuItem mntmSalir;
-	
+
 	private JLabel lblDados;
-	
+
 	private JSeparator separator_1;
-	
+
 	private JMenuItem mntmEstadisticas;
 
 	/**
@@ -97,7 +99,9 @@ public class Juego extends JFrame {
 	 * @param juego
 	 */
 	public Juego(ConfigurarPartida cp, Game juego) {
-		setIconImage(Toolkit.getDefaultToolkit().getImage(Juego.class.getResource("/es/uniovi/asw/gui/img/iconoPeque.png")));
+		setIconImage(Toolkit.getDefaultToolkit().getImage(
+				Juego.class
+						.getResource("/es/uniovi/asw/gui/img/iconoPeque.png")));
 		cl = new CircleLayout();
 		ventana_login = cp;
 		this.juego = juego;
@@ -107,9 +111,9 @@ public class Juego extends JFrame {
 
 		setDefaultCloseOperation(WindowConstants.HIDE_ON_CLOSE);
 		setBounds(100, 100, 1167, 733);
-		
+
 		// para que no se pueda reducir la pantalla, el minimo es lo inicial
-		setMinimumSize(getPreferredSize()); 
+		setMinimumSize(getPreferredSize());
 		setJMenuBar(getMenuBar_1());
 		contentPane = new JPanelConFondo();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -117,7 +121,7 @@ public class Juego extends JFrame {
 		setContentPane(contentPane);
 		contentPane.add(getPnTablero(), BorderLayout.CENTER);
 		contentPane.add(getPnGestion(), BorderLayout.WEST);
-		pintarPosicion(0);
+		pintarPosicion(juego.getUsuarioActivo().getPosicion());
 	}
 
 	/**
@@ -129,7 +133,8 @@ public class Juego extends JFrame {
 		if (selector == null) {
 			selector = new JFileChooser();
 			selector.setMultiSelectionEnabled(false);
-			selector.setFileFilter(new FileNameExtensionFilter("Archivos jpg", "jpg"));
+			selector.setFileFilter(new FileNameExtensionFilter("Archivos jpg",
+					"jpg"));
 			String directorio = System.getProperty("user.home") + "/Desktop";
 			selector.setCurrentDirectory(new File(directorio));
 		}
@@ -161,9 +166,12 @@ public class Juego extends JFrame {
 		if (btnDado == null) {
 			btnDado = cl.getBoton();
 			btnDado.setIgnoreRepaint(false);
-			btnDado.setIcon(new ImageIcon(Juego.class.getResource("/es/uniovi/asw/gui/img/dados.gif")));
-			btnDado.setDisabledIcon(new ImageIcon(Juego.class.getResource("/es/uniovi/asw/gui/img/dd.png")));
-			btnDado.setRolloverIcon(new ImageIcon(Juego.class.getResource("/es/uniovi/asw/gui/img/dados.gif")));
+			btnDado.setIcon(new ImageIcon(Juego.class
+					.getResource("/es/uniovi/asw/gui/img/dados.gif")));
+			btnDado.setDisabledIcon(new ImageIcon(Juego.class
+					.getResource("/es/uniovi/asw/gui/img/dd.png")));
+			btnDado.setRolloverIcon(new ImageIcon(Juego.class
+					.getResource("/es/uniovi/asw/gui/img/dados.gif")));
 			btnDado.setBackground(null);
 			btnDado.setActionCommand("-1");
 			btnDado.setCursor(new Cursor(Cursor.HAND_CURSOR));
@@ -184,7 +192,8 @@ public class Juego extends JFrame {
 	 */
 	private JPanel getPnNorte() {
 		if (pnNorte == null) {
-			pnNorte = new JPanelConFondo("/es/uniovi/asw/gui/img/transparente.png");
+			pnNorte = new JPanelConFondo(
+					"/es/uniovi/asw/gui/img/transparente.png");
 			pnNorte.setLayout(new GridLayout(0, 1, 0, 0));
 			pnNorte.add(getLblIcono());
 			pnNorte.setBorder(new EmptyBorder(10, 10, 10, 10));
@@ -199,7 +208,8 @@ public class Juego extends JFrame {
 	 */
 	private JPanel getPnGestion() {
 		if (pnGestion == null) {
-			pnGestion = new JPanelConFondo("/es/uniovi/asw/gui/img/transparente.png");
+			pnGestion = new JPanelConFondo(
+					"/es/uniovi/asw/gui/img/transparente.png");
 			pnGestion.setBorder(new EmptyBorder(20, 20, 20, 30));
 			pnGestion.setLayout(new BorderLayout(0, 40));
 			pnGestion.add(getPnNorte(), BorderLayout.NORTH);
@@ -236,18 +246,21 @@ public class Juego extends JFrame {
 	}
 
 	/**
-	 * Método que asgina un número aleatorio al tirar el dado (entre 1 y 6 incluidos ambos)
+	 * Método que asgina un número aleatorio al tirar el dado (entre 1 y 6
+	 * incluidos ambos)
 	 */
 	private void tirarDado() {
 		int x = 1 + new Double(Math.random() * 6).intValue();
 		txtDado.setText(String.valueOf(x));
-		System.out.println("POS TIRAR DADO: " + juego.getUsuarioActivo().getPosicion());
+		System.out.println("POS TIRAR DADO: "
+				+ juego.getUsuarioActivo().getPosicion());
 		activarBotones(x, juego.getUsuarioActivo().getPosicion(), true);
 		btnDado.setEnabled(false);
 	}
 
 	/**
-	 * Método que activa el botón en el momento que lanzamos en el dad, para saber en que posición estamos
+	 * Método que activa el botón en el momento que lanzamos en el dad, para
+	 * saber en que posición estamos
 	 * 
 	 * @param numdado
 	 * @param btnActual
@@ -296,21 +309,26 @@ public class Juego extends JFrame {
 		for (int i = 0; i < botones.length; i++) {
 			JButton bt = (JButton) botones[i];
 			if (Integer.valueOf(bt.getActionCommand()) == btnActual) {
-				bt.setText(juego.getUsuarioActivo().getLogin());
+				bt.setText(""
+						+ (juego.getUsuarios()
+								.indexOf(juego.getUsuarioActivo()) + 1));
 			} else {
-				//Si no se mete texto los botones se hacen cuadrados
-				bt.setText(" "); 
+				// Si no se mete texto los botones se hacen cuadrados
+				bt.setText(" ");
 			}
 		}
 	}
 
 	/**
-	 * Desactiva el botón un ve se realice la pregunta o volvamos a tirar el dado
+	 * Desactiva el botón un ve se realice la pregunta o volvamos a tirar el
+	 * dado
 	 */
 	public void desactivarBotones() {
 		txtDado.setText("");
-		btnDado.setIcon(new ImageIcon(Juego.class.getResource("/es/uniovi/asw/gui/img/dados.gif")));
-		btnDado.setRolloverIcon(new ImageIcon(Juego.class.getResource("/es/uniovi/asw/gui/img/dados.gif")));
+		btnDado.setIcon(new ImageIcon(Juego.class
+				.getResource("/es/uniovi/asw/gui/img/dados.gif")));
+		btnDado.setRolloverIcon(new ImageIcon(Juego.class
+				.getResource("/es/uniovi/asw/gui/img/dados.gif")));
 		Component[] botones = pnTablero.getComponents();
 		for (int i = 0; i < botones.length; i++) {
 			JButton bt = (JButton) botones[i];
@@ -328,7 +346,8 @@ public class Juego extends JFrame {
 	private JLabel getLblIcono() {
 		if (lblIcono == null) {
 			lblIcono = new JLabel("");
-			lblIcono.setIcon(new ImageIcon(Juego.class.getResource("/es/uniovi/asw/gui/img/icon.png")));
+			lblIcono.setIcon(new ImageIcon(Juego.class
+					.getResource("/es/uniovi/asw/gui/img/icon.png")));
 			lblIcono.setHorizontalAlignment(SwingConstants.CENTER);
 			lblIcono.setBorder(new EmptyBorder(0, 0, 0, 0));
 		}
@@ -342,7 +361,8 @@ public class Juego extends JFrame {
 	 */
 	private JPanelConFondo getPnDado() {
 		if (pnDado == null) {
-			pnDado = new JPanelConFondo("/es/uniovi/asw/gui/img/transparente.png");
+			pnDado = new JPanelConFondo(
+					"/es/uniovi/asw/gui/img/transparente.png");
 			pnDado.setBorder(new EmptyBorder(10, 10, 10, 10));
 			pnDado.setLayout(new GridLayout(0, 2, 5, 0));
 			pnDado.add(getLblDados());
@@ -360,7 +380,8 @@ public class Juego extends JFrame {
 		if (pnScTabla == null) {
 			pnScTabla = new JScrollPane(table);
 			pnScTabla.setEnabled(false);
-			pnScTabla.setHorizontalScrollBarPolicy(ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
+			pnScTabla
+					.setHorizontalScrollBarPolicy(ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
 			pnScTabla.setViewportView(getTable());
 		}
 		return pnScTabla;
@@ -394,14 +415,16 @@ public class Juego extends JFrame {
 	 */
 	public JTable getTable() {
 		if (table == null) {
-			Object[] columnas = { "Jugador", "Nombre", "GEO", "DEP", "ARTE", "CIEN", "ESP", "HIST" };
+			Object[] columnas = { "Jugador", "Nombre", "GEO", "DEP", "ARTE",
+					"CIEN", "ESP", "HIST" };
 			modeloTabla = new ModeloNoEditable(columnas, 0);
 			table = new JTable(modeloTabla);
 			table.setAutoResizeMode(JTable.AUTO_RESIZE_ALL_COLUMNS);
 			table.setEnabled(false);
 			table.getTableHeader().setReorderingAllowed(false);
 			rellenarFilasTabla();
-			RendererSubstance renderer = new RendererSubstance(ventana_login);
+			RendererSubstance renderer = new RendererSubstance(ventana_login,
+					juego);
 			table.setDefaultRenderer(Object.class, renderer);
 		}
 		return table;
@@ -414,7 +437,8 @@ public class Juego extends JFrame {
 	 */
 	private JPanelConFondo getPnGestionCentro() {
 		if (pnGestionCentro == null) {
-			pnGestionCentro = new JPanelConFondo("/es/uniovi/asw/gui/img/transparente.png");
+			pnGestionCentro = new JPanelConFondo(
+					"/es/uniovi/asw/gui/img/transparente.png");
 			pnGestionCentro.setLayout(new BorderLayout(0, 30));
 			pnGestionCentro.add(getPnScTabla());
 			pnGestionCentro.add(getPnDado(), BorderLayout.NORTH);
@@ -481,7 +505,8 @@ public class Juego extends JFrame {
 					if (respuesta == JFileChooser.APPROVE_OPTION) {
 						File file = selector.getSelectedFile();
 						String nombre = file.getAbsolutePath();
-						contentPane.setImagen((new ImageIcon(nombre)).getImage());
+						contentPane.setImagen((new ImageIcon(nombre))
+								.getImage());
 					}
 				}
 			});
@@ -551,7 +576,8 @@ public class Juego extends JFrame {
 		if (lblDados == null) {
 			lblDados = new JLabel("");
 			lblDados.setHorizontalAlignment(SwingConstants.CENTER);
-			lblDados.setIcon(new ImageIcon(Juego.class.getResource("/es/uniovi/asw/gui/img/dadosIcono.png")));
+			lblDados.setIcon(new ImageIcon(Juego.class
+					.getResource("/es/uniovi/asw/gui/img/dadosIcono.png")));
 			lblDados.setToolTipText("\"Para tirar del dado pulsa en el centro del tablero\"");
 		}
 		return lblDados;
@@ -574,7 +600,7 @@ public class Juego extends JFrame {
 	 * 
 	 * @return mntmEstadisticas
 	 */
-	private JMenuItem getMntmEstadisticas() {
+	public JMenuItem getMntmEstadisticas() {
 		if (mntmEstadisticas == null) {
 			mntmEstadisticas = new JMenuItem("Estadisticas");
 			if (juego.getUsuarioActivo().isAdmin())
@@ -591,5 +617,22 @@ public class Juego extends JFrame {
 			});
 		}
 		return mntmEstadisticas;
+	}
+
+	/**
+	 * Repinta el boton de Estadisticas ya que solo los Administradores pueden
+	 * ver las estadisticas
+	 */
+	public void repintarBotonEstadistica() {
+		if (juego.getUsuarioActivo().isAdmin())
+			mntmEstadisticas.setEnabled(true);
+		else
+			mntmEstadisticas.setEnabled(false);
+		mntmEstadisticas.setVisible(true);
+	}
+
+	public void repintarUsuarioActivo() {
+		RendererSubstance renderer = new RendererSubstance(ventana_login, juego);
+		table.setDefaultRenderer(Object.class, renderer);
 	}
 }

@@ -3,6 +3,7 @@ package es.uniovi.asw.model;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.Random;
+
 import com.google.gson.Gson;
 
 public class Question {
@@ -10,11 +11,13 @@ public class Question {
 	/**
 	 * Clase que modela una preguna del modelo GIFT
 	 */
-	public static final int MAX_ANSWER = 4; 
-	private String category; // Una pregunta solo puede tener una categoria asociada
+	public static final int MAX_ANSWER = 4;
+	private String category; // Una pregunta solo puede tener una categoria
+								// asociada
 	private String query;
 	private String identifer; // Identifica inequivocamente a la pregunta
-	private String correctAnswer; // Solo puede tener una respuesta correcta. Se podria modificar llegado el caso
+	private String correctAnswer; // Solo puede tener una respuesta correcta. Se
+									// podria modificar llegado el caso
 	private String[] wrongAnswers; // Array de preguntas incorrectas
 	private int vecesFallada;
 	private int vecesAcertada;

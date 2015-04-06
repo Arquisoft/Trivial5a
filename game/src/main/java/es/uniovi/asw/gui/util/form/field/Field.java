@@ -3,6 +3,7 @@ package es.uniovi.asw.gui.util.form.field;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+
 import es.uniovi.asw.gui.util.form.validator.Validator;
 
 public class Field {
