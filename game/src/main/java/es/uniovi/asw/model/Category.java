@@ -102,9 +102,9 @@ public class Category {
 	 * En caso de que la lista principal esté vacia, añade todas las ya preguntadas y las baraja.
 	 * @return
 	 */
-	public Question askQuestion()
+	public Question askQuestion(long seed)
 	{
-		shuffleQuestions();
+		shuffleQuestions(seed);
 		Question nextQuestion = questions.get(0);
 		questions.remove(nextQuestion);
 		usedQuestions.add(nextQuestion);
@@ -119,10 +119,9 @@ public class Category {
 	/**
 	 * Baraja aleatoriamente las preguntas de la categoría
 	 */
-	private void shuffleQuestions()
+	private void shuffleQuestions(long seed)
 	{
-		long s = System.nanoTime(); //seed
-		Collections.shuffle(questions, new Random(s));
+		Collections.shuffle(questions, new Random(seed));
 	}
 
 	@Override

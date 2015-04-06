@@ -3,12 +3,15 @@ package es.uniovi.asw.business;
 import static org.junit.Assert.*;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import org.junit.Test;
 
 import es.uniovi.asw.bussines.Game;
 import es.uniovi.asw.bussines.QuestionManager;
 import es.uniovi.asw.bussines.UserManager;
+import es.uniovi.asw.model.Category;
+import es.uniovi.asw.model.Question;
 import es.uniovi.asw.model.User;
 import es.uniovi.asw.persistence.Driver;
 
@@ -92,19 +95,62 @@ public class GameTest {
 
 	@Test
 	public void testTirarDado() {
-		fail("Not yet implemented");
+		int res = game.tirarDado();
+		assertTrue(res <= 6 && res >= 1);
 	}
 
 	@Test
 	public void testTurnoSiguiente() {
-		fail("Not yet implemented");
+		Game game = new Game();
+		
+		User u1 = new User(1, "TestUser1", "TestPassword", 1, 1, false);
+		User u2 = new User(2, "TestUser2", "TestPassword2", 2, 2, true);
+		
+		ArrayList<User> usuarios = new ArrayList<User>();
+		usuarios.add(u1);
+		usuarios.add(u2);
+		
+		game.setUsuarios(usuarios);
+		game.setUsuarioActivo(u1);
+		
+		assertEquals(u1, game.getUsuarioActivo());
+		
+		// Comprobar que después del test, el usuario activo es el 2
+		game.turnoSiguiente();
+		assertEquals(u2, game.getUsuarioActivo());
 	}
 
+	
 	@Test
-	public void testAcierta() {
-		fail("Not yet implemented");
+	public void testAciertaNoQuesito() {
+		Game game = new Game();
+		ArrayList<User> usuarios = new ArrayList<User>();
+		
+		List<Category> cats = game.getQuestionManager().cargarTablero();
+		Question pregunta = cats.get(1).askQuestion(System.nanoTime());
+		
+		Driver d = new Driver();
+		try {
+			List<User> users = d.findAllUser();
+			for (User user : users) {
+				usuarios.add(user);
+				game.accederJuego(user);
+				game.setUsuarioActivo(user);
+			}
+			
+		} catch (Exception e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
+		
+		// Hace que el usuario activo aumente su número de respuestas acertadas y sigue siendo el mismo usuario activo
+		int i = game.getUsuarioActivo().getNumberCorrectAnswer();
+		
+		game.acierta(pregunta, false);
+		
+		assertEquals(i+1, game.getUsuarioActivo().getNumberCorrectAnswer());
 	}
-
+	
 	@Test
 	public void testFalla() {
 		fail("Not yet implemented");
