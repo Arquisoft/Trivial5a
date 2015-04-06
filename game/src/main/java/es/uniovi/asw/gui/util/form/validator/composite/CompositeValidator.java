@@ -17,13 +17,13 @@ public abstract class CompositeValidator implements Validator {
 		this(Arrays.asList(validators));
 	}
 
-	public void addValidator(Validator validator) {
-		validators.add(validator);
-	}
-
-	public void removeValidator(Validator validator) {
-		validators.remove(validator);
-	}
+//	public void addValidator(Validator validator) {
+//		validators.add(validator);
+//	}
+//
+//	public void removeValidator(Validator validator) {
+//		validators.remove(validator);
+//	}
 
 	@Override
 	public abstract boolean validar(String text);
