@@ -7,13 +7,12 @@ public class ModeloNoEditable extends DefaultTableModel {
 
 	public ModeloNoEditable(Object[] columnNames, int rowCount) {
 		super(columnNames, rowCount);
-	
-		
-   }
+
+	}
+
 	@Override
 	public boolean isCellEditable(int row, int column) {
-        return false; 
-    }
-	
-	
+		return false;
+	}
+
 }

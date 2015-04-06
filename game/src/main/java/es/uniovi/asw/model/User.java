@@ -2,25 +2,27 @@ package es.uniovi.asw.model;
 
 import java.util.HashMap;
 import java.util.Map;
+
 import com.google.gson.Gson;
 
 public class User {
-	
+
 	public long id;
-	
+
 	public String login;
-	
+
 	public String password;
-	
+
 	private boolean admin; // Poder administrar
-	
+
 	public int numberCorrectAnswer; // preguntas acertadas
-	
+
 	public int numberWrongAnswer; // preguntas falladas
 
 	private int posicion;
 
-	public User(long id, String login, String password, int numberCorrectAnswer, int numberWrongAnswer, boolean admin) {
+	public User(long id, String login, String password,
+			int numberCorrectAnswer, int numberWrongAnswer, boolean admin) {
 		super();
 		this.id = id;
 		this.login = login;
@@ -174,7 +176,8 @@ public class User {
 		final int prime = 31;
 		int result = 1;
 		result = prime * result + ((login == null) ? 0 : login.hashCode());
-		result = prime * result + ((password == null) ? 0 : password.hashCode());
+		result = prime * result
+				+ ((password == null) ? 0 : password.hashCode());
 		return result;
 	}
 

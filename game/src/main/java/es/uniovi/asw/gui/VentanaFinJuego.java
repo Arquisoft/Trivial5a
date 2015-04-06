@@ -1,5 +1,6 @@
 package es.uniovi.asw.gui;
 
+import java.awt.Color;
 import java.awt.Component;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
@@ -21,19 +22,17 @@ import es.uniovi.asw.bussines.Game;
 import es.uniovi.asw.model.Category;
 import es.uniovi.asw.model.Question;
 import es.uniovi.asw.model.User;
-import javax.swing.JTextField;
-import java.awt.Color;
 
 public class VentanaFinJuego extends JDialog {
-	
+
 	private static final long serialVersionUID = 1L;
-	
+
 	private final JPanel contentPanel = new JPanel();
-	
+
 	private JTable tableUsuarios;
-	
+
 	private Game juego;
-	
+
 	private JTable tablePreguntas;
 
 	/**
@@ -78,7 +77,7 @@ public class VentanaFinJuego extends JDialog {
 		} catch (Exception e1) {
 			e1.printStackTrace();
 		}
-		
+
 		scrollPanePreguntas.setViewportView(tablePreguntas);
 		JPanel buttonPane = new JPanel();
 		buttonPane.setBounds(12, 545, 1091, 140);
@@ -92,12 +91,13 @@ public class VentanaFinJuego extends JDialog {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				dispose();
+				System.exit(0);
 			}
 		});
 		buttonPane.setLayout(null);
 		buttonPane.add(volverButton);
 		getRootPane().setDefaultButton(volverButton);
-		
+
 		JButton reiniciarButton = new JButton("Reiniciar partida");
 		reiniciarButton.setFont(new Font("Tahoma", Font.PLAIN, 18));
 		reiniciarButton.setBounds(714, 86, 162, 41);
@@ -112,7 +112,7 @@ public class VentanaFinJuego extends JDialog {
 		});
 		buttonPane.setLayout(null);
 		buttonPane.add(reiniciarButton);
-		
+
 		JLabel lblNewLabel = new JLabel("!La partida ha terminado!");
 		lblNewLabel.setForeground(Color.RED);
 		lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 26));
@@ -128,7 +128,8 @@ public class VentanaFinJuego extends JDialog {
 	 */
 	public void rellenarFilasUsers() throws Exception {
 		String column_names[] = { "Usuario", "Acertadas", "Falladas" };
-		DefaultTableModel table_model = new DefaultTableModel(column_names, juego.showEstadisticsUser().size());
+		DefaultTableModel table_model = new DefaultTableModel(column_names,
+				juego.showEstadisticsUser().size());
 		table_model.setNumRows(0);
 		for (int i = 0; i < table_model.getRowCount(); i++) {
 			table_model.removeRow(i);
@@ -147,13 +148,16 @@ public class VentanaFinJuego extends JDialog {
 	}
 
 	/**
-	 * Rellena las filas de la lista con las preguntas de cada categoría (difícil y fácil)
+	 * Rellena las filas de la lista con las preguntas de cada categoría
+	 * (difícil y fácil)
 	 * 
 	 * @throws Exception
 	 */
 	public void rellenarFilasPreguntas() throws Exception {
-		String column_names[] = { "Categoria", "Preg mas facil", "Preg mas dificil" };
-		DefaultTableModel table_model = new DefaultTableModel(column_names, juego.showEstadisticsQuestion().size());
+		String column_names[] = { "Categoria", "Preg mas facil",
+				"Preg mas dificil" };
+		DefaultTableModel table_model = new DefaultTableModel(column_names,
+				juego.showEstadisticsQuestion().size());
 		table_model.setNumRows(0);
 		for (int i = 0; i < table_model.getRowCount(); i++) {
 			table_model.removeRow(i);
@@ -161,16 +165,18 @@ public class VentanaFinJuego extends JDialog {
 		for (Category c : juego.showEstadisticsQuestion()) {
 			Object[] objetos = new Object[3];
 			objetos[0] = c.getName();
-			objetos[1] = ((Question) c.showEstadisticsCategory().get("preguntaFacil")).getQuery();
-			objetos[2] = ((Question) c.showEstadisticsCategory().get("preguntaDificil")).getQuery();
+			objetos[1] = ((Question) c.showEstadisticsCategory().get(
+					"preguntaFacil")).getQuery();
+			objetos[2] = ((Question) c.showEstadisticsCategory().get(
+					"preguntaDificil")).getQuery();
 			table_model.addRow(objetos);
 		}
 		tablePreguntas = new JTable(table_model);
 		tablePreguntas.setRowHeight(150);
 		tablePreguntas.setEnabled(false);
 		tablePreguntas.setRowSelectionAllowed(false);
-		tablePreguntas.setAutoResizeMode(JTable.AUTO_RESIZE_OFF); 
-		
+		tablePreguntas.setAutoResizeMode(JTable.AUTO_RESIZE_OFF);
+
 		int margin = 2;
 		packColumn(tablePreguntas, 0, margin);
 		packColumn(tablePreguntas, 1, margin);
@@ -181,21 +187,24 @@ public class VentanaFinJuego extends JDialog {
 		for (int c = 0; c < table.getColumnCount(); c++) {
 			packColumn(table, c, 2);
 		}
-	} 
+	}
 
 	public void packColumn(JTable table, int vColIndex, int margin) {
-		DefaultTableColumnModel colModel = (DefaultTableColumnModel) table.getColumnModel();
+		DefaultTableColumnModel colModel = (DefaultTableColumnModel) table
+				.getColumnModel();
 		TableColumn col = colModel.getColumn(vColIndex);
 		int width = 0; // Obtém a largura do cabeçalho da coluna
 		TableCellRenderer renderer = col.getHeaderRenderer();
 		if (renderer == null) {
 			renderer = table.getTableHeader().getDefaultRenderer();
 		}
-		Component comp = renderer.getTableCellRendererComponent(table, col.getHeaderValue(), false, false, 0, 0);
-		width = comp.getPreferredSize().width; 
+		Component comp = renderer.getTableCellRendererComponent(table,
+				col.getHeaderValue(), false, false, 0, 0);
+		width = comp.getPreferredSize().width;
 		for (int r = 0; r < table.getRowCount(); r++) {
 			renderer = table.getCellRenderer(r, vColIndex);
-			comp = renderer.getTableCellRendererComponent(table, table.getValueAt(r, vColIndex), false, false, r, vColIndex);
+			comp = renderer.getTableCellRendererComponent(table,
+					table.getValueAt(r, vColIndex), false, false, r, vColIndex);
 			width = Math.max(width, comp.getPreferredSize().width);
 		}
 		width += 2 * margin; // Configura a largura

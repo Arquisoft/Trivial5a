@@ -2,10 +2,11 @@ package es.uniovi.asw.gui.util.form;
 
 import java.util.ArrayList;
 import java.util.List;
+
 import es.uniovi.asw.gui.util.form.field.Field;
 
 /**
- *  Clase que define un formulario compuesto por campos
+ * Clase que define un formulario compuesto por campos
  */
 public class Form {
 

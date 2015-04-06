@@ -7,6 +7,7 @@ import java.awt.Rectangle;
 import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -14,6 +15,7 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.SwingConstants;
 import javax.swing.border.EmptyBorder;
+
 import es.uniovi.asw.bussines.Game;
 
 public class PantallaInicial extends JFrame {
@@ -21,22 +23,24 @@ public class PantallaInicial extends JFrame {
 	private static final long serialVersionUID = 1L;
 
 	private JPanel contentPane;
-	
+
 	private JLabel lblIcono;
-	
+
 	private JButton btnJugar;
 
 	private Game juego;
-	
+
 	private JPanel pnSur;
-	
+
 	private JButton btnRegistro;
 
 	/**
 	 * Crea la pantalla inicial del juego
 	 */
 	public PantallaInicial(Game juego) {
-		setIconImage(Toolkit.getDefaultToolkit().getImage(PantallaInicial.class.getResource("/es/uniovi/asw/gui/img/iconoPeque.png")));
+		setIconImage(Toolkit.getDefaultToolkit().getImage(
+				PantallaInicial.class
+						.getResource("/es/uniovi/asw/gui/img/iconoPeque.png")));
 		setBounds(new Rectangle(20, 20, 20, 20));
 		setResizable(false);
 		this.juego = juego;
@@ -62,7 +66,8 @@ public class PantallaInicial extends JFrame {
 			lblIcono.setAlignmentY(2.0f);
 			lblIcono.setAlignmentX(2.0f);
 			lblIcono.setHorizontalAlignment(SwingConstants.CENTER);
-			lblIcono.setIcon(new ImageIcon(PantallaInicial.class.getResource("/es/uniovi/asw/gui/img/iconoGrande.png")));
+			lblIcono.setIcon(new ImageIcon(PantallaInicial.class
+					.getResource("/es/uniovi/asw/gui/img/iconoGrande.png")));
 		}
 		return lblIcono;
 	}

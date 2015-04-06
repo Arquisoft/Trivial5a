@@ -1,9 +1,12 @@
 package es.uniovi.asw.trivial;
 
 import java.awt.EventQueue;
+
 import javax.swing.JDialog;
 import javax.swing.JFrame;
+
 import org.pushingpixels.substance.api.SubstanceLookAndFeel;
+
 import es.uniovi.asw.bussines.Game;
 import es.uniovi.asw.gui.PantallaInicial;
 import es.uniovi.asw.persistence.Driver;
@@ -35,7 +38,8 @@ public class TrivialDesktop {
 					PantallaInicial frame = new PantallaInicial(g);
 					frame.setVisible(true);
 					frame.setLocationRelativeTo(null);
-					SubstanceLookAndFeel.setSkin("org.pushingpixels.substance.api.skin.MistAquaSkin");
+					SubstanceLookAndFeel
+							.setSkin("org.pushingpixels.substance.api.skin.MistAquaSkin");
 					JFrame.setDefaultLookAndFeelDecorated(true);
 					JDialog.setDefaultLookAndFeelDecorated(true);
 				} catch (Exception e) {

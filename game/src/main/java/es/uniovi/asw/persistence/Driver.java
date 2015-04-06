@@ -4,6 +4,7 @@ import java.net.UnknownHostException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
+
 import com.google.gson.Gson;
 import com.mongodb.BasicDBObject;
 import com.mongodb.DB;
@@ -13,6 +14,7 @@ import com.mongodb.DBObject;
 import com.mongodb.MongoClient;
 import com.mongodb.ServerAddress;
 import com.mongodb.util.JSON;
+
 import es.uniovi.asw.model.Category;
 import es.uniovi.asw.model.Question;
 import es.uniovi.asw.model.User;
@@ -20,9 +22,9 @@ import es.uniovi.asw.model.User;
 public class Driver {
 
 	private static MongoClient client;
-	
+
 	private static DBCollection table;
-	
+
 	public DB db;
 
 	/**
@@ -55,7 +57,8 @@ public class Driver {
 				categorias[i] = (DBObject) JSON.parse(JSONarray[i]);
 				System.out.println(categorias[i]);
 			}
-			for (int i = 0; i < categorias.length; i++)  // Insertar tablas
+			for (int i = 0; i < categorias.length; i++)
+				// Insertar tablas
 				table.insert(categorias[i]);
 			System.out.println();
 			client.close();
@@ -116,7 +119,8 @@ public class Driver {
 		if (client != null) {
 			// Crea una tabla si no existe y agrega datos
 			table = db.getCollection("usuarios");
-			DBObject user = new BasicDBObject("login", login).append("password", password);
+			DBObject user = new BasicDBObject("login", login).append(
+					"password", password);
 			Gson g = new Gson();
 			DBObject obj = table.findOne(user);
 			if (obj != null) {
@@ -177,12 +181,14 @@ public class Driver {
 	 */
 	public void updateQuestion(Question question, Category category) {
 		conectDB();
-		category.addQuestions(question);
+		int index = category.getQuestions().indexOf(question);
+		category.getQuestions().set(index, question);
 		// Crea una tabla si no existe y agrega datos
 		table = db.getCollection("categorias");
 		DBObject[] categoria = new BasicDBObject[1];
 		categoria[0] = (DBObject) JSON.parse(category.toJSON());
-		DBObject categoriaActualizar = new BasicDBObject("name", category.getName());
+		DBObject categoriaActualizar = new BasicDBObject("name",
+				category.getName());
 		table.findAndModify(categoriaActualizar, categoria[0]);
 		client.close();
 	}
@@ -201,7 +207,8 @@ public class Driver {
 			table = db.getCollection("usuarios");
 			DBCursor cursor = table.find();
 			while (cursor.hasNext()) {
-				User user = new Gson().fromJson(cursor.next().toString(), User.class);
+				User user = new Gson().fromJson(cursor.next().toString(),
+						User.class);
 				usuarios.add(user);
 			}
 			client.close();
@@ -226,7 +233,8 @@ public class Driver {
 			table = db.getCollection("categorias");
 			DBCursor cursor = table.find();
 			while (cursor.hasNext()) {
-				Category category = new Gson().fromJson(cursor.next().toString(), Category.class);
+				Category category = new Gson().fromJson(cursor.next()
+						.toString(), Category.class);
 				preguntas.add(category);
 			}
 			client.close();
@@ -250,9 +258,11 @@ public class Driver {
 			db.getCollection(table).drop();
 			System.out.println();
 			// Listas las bases de datos
-			System.out.println("Lista de todas las tablas de la BBDD tras el borrado de " + db);
+			System.out
+					.println("Lista de todas las tablas de la BBDD tras el borrado de "
+							+ db);
 			List<String> basesDeDatosBorrada = client.getDatabaseNames();
-			for (String nombreBaseDatos : basesDeDatosBorrada) 
+			for (String nombreBaseDatos : basesDeDatosBorrada)
 				System.out.println(" - " + nombreBaseDatos);
 			System.out.println();
 			client.close();
@@ -278,7 +288,7 @@ public class Driver {
 			// Listar las tablas de la base de datos actual
 			System.out.println("Lista de tablas de la base de datos: ");
 			Set<String> tables = db.getCollectionNames();
-			for (String coleccion : tables) 
+			for (String coleccion : tables)
 				System.out.println(" - " + coleccion);
 			System.out.println();
 			client.close();

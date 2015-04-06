@@ -5,6 +5,7 @@ import java.awt.Container;
 import java.awt.Dimension;
 import java.awt.Insets;
 import java.awt.LayoutManager;
+
 import javax.swing.JButton;
 
 class CircleLayout implements LayoutManager {
@@ -53,7 +54,8 @@ class CircleLayout implements LayoutManager {
 		int centerY = (int) (parentHeight) / 2;
 		int ladoBoton = 100;
 
-		bt.setBounds(centerX - (ladoBoton / 2), centerY - (ladoBoton / 2), ladoBoton, ladoBoton);
+		bt.setBounds(centerX - (ladoBoton / 2), centerY - (ladoBoton / 2),
+				ladoBoton, ladoBoton);
 		bt.setBorderPainted(false);
 		bt.setContentAreaFilled(false);
 		bt.setFocusPainted(false);
@@ -65,7 +67,7 @@ class CircleLayout implements LayoutManager {
 		centerY = (int) (parentHeight - (insets.top + insets.bottom)) / 2;
 
 		// En caso de que solo tenga un componente lo centra
-		if (n == 1) { 
+		if (n == 1) {
 			comp = parent.getComponent(0);
 			x = centerX;
 			y = centerY;
@@ -78,7 +80,7 @@ class CircleLayout implements LayoutManager {
 		else {
 			double r = (Math.min(parentWidth - (insets.left + insets.right),
 			// para tener los bordes en cuenta
-			parentHeight - (insets.top + insets.bottom))) / 2;
+					parentHeight - (insets.top + insets.bottom))) / 2;
 
 			// Sin bordes
 			// double r = (Math.min(parentWidth, parentHeight)) * 0.55; // radio

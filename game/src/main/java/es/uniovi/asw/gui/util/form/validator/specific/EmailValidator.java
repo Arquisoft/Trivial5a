@@ -4,7 +4,6 @@ import es.uniovi.asw.gui.util.form.validator.composite.CheckAllValidator;
 import es.uniovi.asw.gui.util.form.validator.simple.EmailSimpleValidator;
 import es.uniovi.asw.gui.util.form.validator.simple.LowerThanValidator;
 
-
 public class EmailValidator extends CheckAllValidator {
 
 	public EmailValidator() {
