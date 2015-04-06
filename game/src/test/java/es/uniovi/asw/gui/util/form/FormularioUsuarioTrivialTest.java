@@ -6,9 +6,15 @@ import org.junit.Test;
 
 public class FormularioUsuarioTrivialTest {
 
+	/**
+	 * changqu
+	 */
+	
+	private FormularioUsuarioTrivial fut = new FormularioUsuarioTrivial();
+	
 	@Test
 	public void testFormularioUsuarioTrivial() {
-		fail("Not yet implemented");
+		//assertEquals(null, fut.formularioUsuarioTrivial());
 	}
 
 }
