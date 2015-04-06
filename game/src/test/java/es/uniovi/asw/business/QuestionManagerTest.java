@@ -28,7 +28,7 @@ public class QuestionManagerTest {
 		assertEquals(tablero, qm.cargarTablero());
 	}
 	
-	public List<Category> getTablero(){
+	private List<Category> getTablero(){
 		List<Category> tablero = new ArrayList<Category>();
 		try {
 			tablero = d.findAllQuestion();

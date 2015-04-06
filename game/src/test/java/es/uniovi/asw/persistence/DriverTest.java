@@ -89,7 +89,7 @@ public class DriverTest {
 		assertEquals(usuarios, d.findAllUser());
 	}
 	
-	@Test
+	@Test//
 	public void testUpdateUser() throws Exception {
 		d.conectDB();
 		User u = new User();
@@ -114,7 +114,7 @@ public class DriverTest {
 		assertEquals(question, d.findAllQuestion());
 	}
 	
-	@Test
+	@Test//
 	public void testUpdateQuestion() throws Exception {
 		d.conectDB();
 		Question q =new Question();
