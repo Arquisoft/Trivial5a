@@ -11,9 +11,9 @@ import com.google.gson.Gson;
 public class Category {
 
 	private String name;
-	
+
 	private ArrayList<Question> questions = new ArrayList<Question>();
-	
+
 	private ArrayList<Question> usedQuestions = new ArrayList<Question>();
 
 	/**

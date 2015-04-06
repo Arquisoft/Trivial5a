@@ -44,8 +44,8 @@ public class QuestionTest {
 	public void testCategories() {
 		Category cat = new Category();
 		cat.setName("CategoryTest");
-		question.setCategory(cat);
-		assertEquals(cat, question.getCategory());
+		question.setCategory(cat.getName());
+		assertEquals(cat.getName(), question.getCategory());
 	}
 	
 	@Test

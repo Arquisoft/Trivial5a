@@ -8,7 +8,7 @@ public class DniValidator extends CheckAllValidator {
 	public DniValidator() {
 		super(new LengthValidator(9));
 	}
-	
+
 	@Override
 	public String help() {
 		return "9 caracteres.";

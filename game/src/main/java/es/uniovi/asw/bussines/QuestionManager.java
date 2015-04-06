@@ -2,6 +2,7 @@ package es.uniovi.asw.bussines;
 
 import java.util.ArrayList;
 import java.util.List;
+
 import es.uniovi.asw.model.Category;
 import es.uniovi.asw.model.Question;
 import es.uniovi.asw.persistence.Driver;
@@ -41,7 +42,7 @@ public class QuestionManager {
 	 */
 	public void updateQuestion(Question preguntaActual, String category) {
 		for (Category c : cargarTablero())
-			if (c.equals(category))
+			if (c.getName().equals(category))
 				d.updateQuestion(preguntaActual, c);
 	}
 }

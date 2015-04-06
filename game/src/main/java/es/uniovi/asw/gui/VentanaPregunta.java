@@ -8,6 +8,7 @@ import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.List;
+
 import javax.swing.ButtonGroup;
 import javax.swing.JButton;
 import javax.swing.JDialog;
@@ -18,6 +19,7 @@ import javax.swing.JRadioButton;
 import javax.swing.Timer;
 import javax.swing.WindowConstants;
 import javax.swing.border.EmptyBorder;
+
 import es.uniovi.asw.bussines.Game;
 import es.uniovi.asw.model.Category;
 import es.uniovi.asw.model.Question;
@@ -25,41 +27,41 @@ import es.uniovi.asw.model.Question;
 public class VentanaPregunta extends JDialog implements ActionListener {
 
 	private static final long serialVersionUID = 1L;
-	
-	private int cuenta = 30, paso = 1;
-	
+
+	private int cuenta = 29, paso = 1;
+
 	private Timer tiempo;
-	
+
 	private boolean quesito;
-	
+
 	private Game juego;
-	
+
 	private Juego pantalla;
-	
+
 	private int categoria;
-	
+
 	private Question pregunta;
-	
+
 	private String[] respuestas;
-	
+
 	private JPanel contentPane;
-	
+
 	private JPanel pnPreguntas;
-	
+
 	private JRadioButton rdbtnOpc1;
-	
+
 	private JRadioButton rdbtnOpc3;
-	
+
 	private JRadioButton rdbtnOpc2;
-	
+
 	private JRadioButton rdbtnOpc4;
-	
+
 	private JLabel lblPregunta;
-	
+
 	private JButton btnResponder;
-	
+
 	private final ButtonGroup buttonGroup = new ButtonGroup();
-	
+
 	private JLabel labelCronometro;
 
 	/**
@@ -71,7 +73,8 @@ public class VentanaPregunta extends JDialog implements ActionListener {
 	 * @param juego
 	 * @param boton
 	 */
-	public VentanaPregunta(boolean quesito, int categoria, Juego pantalla, Game juego, int boton) {
+	public VentanaPregunta(boolean quesito, int categoria, Juego pantalla,
+			Game juego, int boton) {
 		tiempo = new Timer(1000, this);
 		tiempo.start();
 		this.categoria = categoria;
@@ -81,10 +84,12 @@ public class VentanaPregunta extends JDialog implements ActionListener {
 		List<Category> cats = juego.getQuestionManager().cargarTablero();
 		pregunta = cats.get(categoria).askQuestion();
 		respuestas = pregunta.getAllAnswers();
-		setIconImage(Toolkit.getDefaultToolkit().getImage(VentanaPregunta.class.getResource("/es/uniovi/asw/gui/img/iconoPeque.png")));
-		this.quesito = quesito; 
+		setIconImage(Toolkit.getDefaultToolkit().getImage(
+				VentanaPregunta.class
+						.getResource("/es/uniovi/asw/gui/img/iconoPeque.png")));
+		this.quesito = quesito;
 		this.setLocationRelativeTo(null);
-		this.setModal(true); 
+		this.setModal(true);
 		setDefaultCloseOperation(WindowConstants.DO_NOTHING_ON_CLOSE);
 		setBounds(100, 100, 604, 300);
 		contentPane = new JPanel();
@@ -204,19 +209,34 @@ public class VentanaPregunta extends JDialog implements ActionListener {
 				@Override
 				public void actionPerformed(ActionEvent e) {
 					if (!respuesta()) {
-						JOptionPane.showMessageDialog(null, "Has fallado. Pierdes el turno :(");
+						JOptionPane.showMessageDialog(null,
+								"Has fallado. Pierdes el turno :(");
 						juego.falla(pregunta);
-						pantalla.pintarPosicion(juego.getUsuarioActivo() .getPosicion());
+						tiempo.stop();
+						pantalla.pintarPosicion(juego.getUsuarioActivo()
+								.getPosicion());
+						pantalla.repintarBotonEstadistica();
 					} else {
 						if (quesito) {
-							JOptionPane.showMessageDialog(null, "¡Respuesta correcta! Has ganado un quesito");
+							JOptionPane
+									.showMessageDialog(null,
+											"¡Respuesta correcta! Has ganado un quesito");
 							pantalla.getTable().setAlignmentX(CENTER_ALIGNMENT);
 							pantalla.getTable().setAlignmentY(CENTER_ALIGNMENT);
-							pantalla.getTable().getModel().setValueAt("X", (int) juego.getUsuarioActivo().getId(), categoria + 2);
 							juego.acierta(pregunta, true);
+							pantalla.getTable()
+									.getModel()
+									.setValueAt(
+											"OK",
+											juego.getUsuarios().indexOf(
+													juego.getUsuarioActivo()),
+											categoria + 2);
+							tiempo.stop();
 						} else {
-							JOptionPane.showMessageDialog(null, "¡Respuesta correcta!");
+							JOptionPane.showMessageDialog(null,
+									"¡Respuesta correcta!");
 							juego.acierta(pregunta, false);
+							tiempo.stop();
 						}
 					}
 					pantalla.desactivarBotones();
@@ -240,7 +260,8 @@ public class VentanaPregunta extends JDialog implements ActionListener {
 			JRadioButton bt = (JRadioButton) botones[i];
 			if (bt.isSelected()) {
 				respuestaSeleccionada = Integer.valueOf(bt.getActionCommand());
-				if ((pregunta.getCorrectAnswer()).equals(respuestas[respuestaSeleccionada])) {
+				if ((pregunta.getCorrectAnswer())
+						.equals(respuestas[respuestaSeleccionada])) {
 					return true;
 				}
 			}
@@ -270,9 +291,12 @@ public class VentanaPregunta extends JDialog implements ActionListener {
 		cuenta -= paso;
 		if (cuenta == 0) {
 			tiempo.stop();
-			JOptionPane.showMessageDialog(null, "Tiempo agotado. Pierdes el turno :(");
+			JOptionPane.showMessageDialog(null,
+					"Tiempo agotado. Pierdes el turno :(");
 			juego.falla(pregunta);
 			pantalla.pintarPosicion(juego.getUsuarioActivo().getPosicion());
+			pantalla.desactivarBotones();
+			pantalla.getBtDado().setEnabled(true);
 			dispose();
 		}
 	}

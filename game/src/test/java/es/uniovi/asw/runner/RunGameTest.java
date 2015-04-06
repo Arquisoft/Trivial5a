@@ -6,10 +6,6 @@ import cucumber.api.CucumberOptions;
 import cucumber.api.junit.Cucumber;
 
 @RunWith(Cucumber.class)
-@CucumberOptions(
-        format 		= { "pretty", "html:target/cucumber" },
-        glue 		= "es.uniovi.asw.steps",
-        features 	= "classpath:cucumber/"
-)
+@CucumberOptions(format = { "pretty", "html:target/cucumber" }, glue = "es.uniovi.asw.steps", features = "classpath:cucumber/")
 public class RunGameTest {
 }

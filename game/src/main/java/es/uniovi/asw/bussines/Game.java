@@ -5,8 +5,8 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
-import java.util.Random;
 import java.util.Set;
+
 import es.uniovi.asw.gui.VentanaFinJuego;
 import es.uniovi.asw.model.Category;
 import es.uniovi.asw.model.Question;
@@ -37,6 +37,7 @@ public class Game {
 	 * cargan cuando se loguean en la aplicacion con el metodo accederJuego()
 	 * Las preguntas se cargan desde el gestor de preguntas en el metodo
 	 * Initialize()
+	 * 
 	 * @wbp.parser.entryPoint
 	 */
 	public Game() {
@@ -70,7 +71,8 @@ public class Game {
 	 * @throws Exception
 	 */
 	public List<Category> showEstadisticsQuestion() throws Exception {
-		List<Category> estadisticasCategory = questionManager.d.findAllQuestion();
+		List<Category> estadisticasCategory = questionManager.d
+				.findAllQuestion();
 		return estadisticasCategory;
 	}
 
@@ -190,21 +192,14 @@ public class Game {
 	}
 
 	/**
-	 * Metodo que simula la tirada de un dado.
-	 * 
-	 * @return un numero aleatorio entre 1 y 6
-	 */
-	public int tirarDado() {
-		Random r = new Random();
-		return r.nextInt(6) + 1;
-	}
-
-	/**
 	 * Si se falla se cambia el turno, al turno siguiente
 	 */
 	public void turnoSiguiente() {
-		int indexUsuarioSiguente = (usuarios.indexOf(usuarioActivo) + 1) % usuarios.size();
+		int indexUsuarioSiguente = (usuarios.indexOf(usuarioActivo) + 1)
+				% usuarios.size();
 		usuarioActivo = usuarios.get(indexUsuarioSiguente);
+
+		System.out.println("usuario siguiente " + usuarioActivo);
 	}
 
 	/**
@@ -217,7 +212,8 @@ public class Game {
 		userManager.updateUser(usuarioActivo);
 		preg.setVecesAcertada(preg.getVecesAcertada() + 1);
 		questionManager.updateQuestion(preg, preg.getCategory());
-		if (quesito) // Si es quesito mete la el nombre de la categoria, sino no hace nada
+		if (quesito) // Si es quesito mete la el nombre de la categoria, sino no
+						// hace nada
 			preguntasAcertadas.get(usuarioActivo).add(preg.getCategory());
 
 		if (preguntasAcertadas.get(usuarioActivo).size() == MAX_CATEGORIAS)
@@ -237,7 +233,8 @@ public class Game {
 	 * estadisticas y pasa el turno
 	 */
 	public void falla(Question preg) {
-		usuarioActivo.setNumberWrongAnswer(usuarioActivo.getNumberWrongAnswer() + 1);
+		usuarioActivo
+				.setNumberWrongAnswer(usuarioActivo.getNumberWrongAnswer() + 1);
 		userManager.updateUser(usuarioActivo);
 		preg.setVecesFallada(preg.getVecesFallada() + 1);
 		questionManager.updateQuestion(preg, preg.getCategory());
