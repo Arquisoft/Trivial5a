@@ -34,13 +34,6 @@ public class VentanaFinJuego extends JDialog {
 	private Game juego;
 
 	private JTable tablePreguntas;
-	public static void main(String [] args)
-	{
-		VentanaFinJuego frame = new VentanaFinJuego(new Game());
-		frame.setVisible(true);
-		frame.setLocationRelativeTo(null);
-	}
-	
 	/**
 	 * Crea la ventana de estadísticas de los jugadores
 	 */
