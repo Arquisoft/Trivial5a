@@ -216,16 +216,17 @@ public class Game {
 						// hace nada
 			preguntasAcertadas.get(usuarioActivo).add(preg.getCategory());
 
-		if (preguntasAcertadas.get(usuarioActivo).size() == MAX_CATEGORIAS)
+		
 			terminarPartida();
 	}
 
 	/**
 	 * Metodo final del juego. Cuando algun usuario acaba se llama a este metodo
 	 */
-	private void terminarPartida() {
-		new VentanaFinJuego(this);
-
+	public boolean terminarPartida() {
+		if (preguntasAcertadas.get(usuarioActivo).size() == MAX_CATEGORIAS)
+			return true;
+		return false;
 	}
 
 	/**
@@ -240,4 +241,5 @@ public class Game {
 		questionManager.updateQuestion(preg, preg.getCategory());
 		turnoSiguiente();
 	}
+
 }

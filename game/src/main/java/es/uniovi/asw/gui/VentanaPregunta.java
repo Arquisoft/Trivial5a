@@ -232,6 +232,13 @@ public class VentanaPregunta extends JDialog implements ActionListener {
 													juego.getUsuarioActivo()),
 											categoria + 2);
 							tiempo.stop();
+							if(juego.terminarPartida())
+							{
+								pantalla.dispose();
+								VentanaFinJuego vf= new VentanaFinJuego(juego);
+							vf.setVisible(true);
+							vf.setLocationRelativeTo(null);
+							}
 						} else {
 							JOptionPane.showMessageDialog(null,
 									"¡Respuesta correcta!");

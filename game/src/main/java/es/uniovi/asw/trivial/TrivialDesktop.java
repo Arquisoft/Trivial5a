@@ -26,7 +26,6 @@ public class TrivialDesktop {
 		final Game g = new Game();
 		Driver d = new Driver();
 		try {
-			// d.removeTable("categorias");
 			d.findAllQuestion();
 		} catch (Exception e1) {
 			e1.printStackTrace();
