@@ -23,7 +23,7 @@ public class DriverTest {
 	
 	private Driver d = new Driver();
 
-	@Test
+	@Test//
 	public void testSaveQuestionJSON() throws Exception {
 		String[] JSonArray = {"JSon1","JSon2","JSon3"};
 		d.saveQuestionJSON(JSonArray);
@@ -126,13 +126,13 @@ public class DriverTest {
 		assertEquals(question, d.findAllQuestion());
 	}
 
-	@Test
+	@Test//
 	public void testRemoveTable() throws Exception {
 		String table = "table1";
 		d.removeTable(table);
 	}
 
-	@Test
+	@Test//
 	public void testImprimirDB() throws Exception {
 		d.imprimirDB();
 	}

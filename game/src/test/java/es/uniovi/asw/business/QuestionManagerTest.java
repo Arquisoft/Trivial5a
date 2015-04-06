@@ -42,7 +42,7 @@ public class QuestionManagerTest {
 			return null;
 	}
 
-	@Test
+	@Test//
 	public void testUpdateQuestion() {
 		Question preguntaActual = new Question();
 		String category = "categoria1";
