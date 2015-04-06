@@ -4,26 +4,32 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
+import es.uniovi.asw.gui.util.form.validator.simple.TextValidator;
+import es.uniovi.asw.gui.util.form.validator.Validator;
+
 public class FieldTest {
 
-	@Test
-	public void testField() {
-		fail("Not yet implemented");
-	}
+	/**
+	 * changquye
+	 */
+	private String label="label";
+	private String texto="texto";
+	private Validator v = new TextValidator();
+	private Field f = new Field(label, v);
 
 	@Test
 	public void testReadData() {
-		fail("Not yet implemented");
+		f.readData();
 	}
 
 	@Test
 	public void testGetString() {
-		fail("Not yet implemented");
+		assertEquals(texto, f.getString());
 	}
 
 	@Test
 	public void testGetLabel() {
-		fail("Not yet implemented");
+		assertEquals(label, f.getLabel());
 	}
 
 }

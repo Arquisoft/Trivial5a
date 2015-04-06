@@ -14,21 +14,18 @@ public class CheckAllValidatorTest {
 	 * changqu
 	 */
 	
-	private Validator[] validators;
+	private Validator[] validators = {new LengthValidator(20), new TextValidator()};
 	private CheckAllValidator cv;
 	private String textoPrueba="";
 	
 	@Test//todos cumple la condicion devuelve true
 	public void testValidar() {
-		LengthValidator lv = new LengthValidator(20);
-		TextValidator tv = new TextValidator();
 		cv = new CheckAllValidator(validators);
-		cv.addValidator(lv);
 		textoPrueba="skjfds";
 		assertEquals(false, cv.validar(textoPrueba));
-		cv.addValidator(tv);
+		textoPrueba="11111111111fds34fghty";
 		assertEquals(false, cv.validar(textoPrueba));
-		cv.removeValidator(lv);
+		textoPrueba="abcdefghijklmnopqrst";
 		assertEquals(true, cv.validar(textoPrueba));
 	}
 
