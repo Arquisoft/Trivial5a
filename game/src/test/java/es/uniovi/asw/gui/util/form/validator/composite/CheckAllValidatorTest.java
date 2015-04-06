@@ -6,6 +6,7 @@ import org.junit.Test;
 
 import es.uniovi.asw.gui.util.form.validator.Validator;
 import es.uniovi.asw.gui.util.form.validator.simple.LengthValidator;
+import es.uniovi.asw.gui.util.form.validator.simple.NumberValidator;
 import es.uniovi.asw.gui.util.form.validator.simple.TextValidator;
 
 public class CheckAllValidatorTest {
@@ -27,6 +28,12 @@ public class CheckAllValidatorTest {
 		assertEquals(false, cv.validar(textoPrueba));
 		textoPrueba="abcdefghijklmnopqrst";
 		assertEquals(true, cv.validar(textoPrueba));
+		
+//		Validator nv = new NumberValidator();
+//		cv.addValidator(nv);
+//		assertEquals(false, cv.validar(textoPrueba));
+//		cv.removeValidator(nv);
+//		assertEquals(true, cv.validar(textoPrueba));
 	}
 
 //	@Test

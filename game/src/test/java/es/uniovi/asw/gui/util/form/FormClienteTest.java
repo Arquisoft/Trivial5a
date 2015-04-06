@@ -15,6 +15,16 @@ public class FormClienteTest {
 	
 	private FormCliente fc = new FormCliente();
 
+//	@Test
+//	public void testFormularioCliente(){
+//	
+//	}
+//	
+//	@Test
+//	public void testFormularioUpdateCliente(){
+//	
+//	}
+	
 	@Test
 	public void testFormularioDni() {
 		//metodo para los metodo que tiene como parametro entrada
