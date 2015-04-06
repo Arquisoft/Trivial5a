@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Random;
 import java.util.Set;
-import es.uniovi.asw.gui.VentanaEstadisticas;
+import es.uniovi.asw.gui.VentanaFinJuego;
 import es.uniovi.asw.model.Category;
 import es.uniovi.asw.model.Question;
 import es.uniovi.asw.model.User;
@@ -37,6 +37,7 @@ public class Game {
 	 * cargan cuando se loguean en la aplicacion con el metodo accederJuego()
 	 * Las preguntas se cargan desde el gestor de preguntas en el metodo
 	 * Initialize()
+	 * @wbp.parser.entryPoint
 	 */
 	public Game() {
 		try {
@@ -227,7 +228,7 @@ public class Game {
 	 * Metodo final del juego. Cuando algun usuario acaba se llama a este metodo
 	 */
 	private void terminarPartida() {
-		new VentanaEstadisticas(this);
+		new VentanaFinJuego(this);
 
 	}
 

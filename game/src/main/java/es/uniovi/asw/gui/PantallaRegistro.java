@@ -15,6 +15,7 @@ import javax.swing.JTextField;
 import javax.swing.border.EmptyBorder;
 import es.uniovi.asw.bussines.Game;
 import es.uniovi.asw.model.User;
+import javax.swing.JCheckBox;
 
 public class PantallaRegistro extends JDialog {
 
@@ -39,7 +40,7 @@ public class PantallaRegistro extends JDialog {
 		setIconImage(Toolkit.getDefaultToolkit().getImage(PantallaRegistro.class.getResource("/es/uniovi/asw/gui/img/iconoPeque.png")));
 		setModal(true);
 		this.juego = juego;
-		setBounds(100, 100, 482, 391);
+		setBounds(100, 100, 572, 438);
 		getContentPane().setLayout(new BorderLayout());
 		contentPanel.setBorder(new EmptyBorder(5, 5, 5, 5));
 		getContentPane().add(contentPanel, BorderLayout.CENTER);
@@ -83,7 +84,7 @@ public class PantallaRegistro extends JDialog {
 					}
 				}
 			});
-			okButton.setBounds(45, 306, 137, 25);
+			okButton.setBounds(103, 364, 137, 25);
 			contentPanel.add(okButton);
 			okButton.setActionCommand("OK");
 			getRootPane().setDefaultButton(okButton);
@@ -96,7 +97,7 @@ public class PantallaRegistro extends JDialog {
 					dispose();
 				}
 			});
-			cancelButton.setBounds(320, 306, 108, 25);
+			cancelButton.setBounds(329, 364, 108, 25);
 			contentPanel.add(cancelButton);
 			cancelButton.setActionCommand("Cancel");
 		}
@@ -105,13 +106,13 @@ public class PantallaRegistro extends JDialog {
 			textFieldError.setFont(new Font("Tahoma", Font.PLAIN, 15));
 			textFieldError.setEditable(false);
 			textFieldError.setVisible(false);
-			textFieldError.setBounds(45, 241, 383, 33);
+			textFieldError.setBounds(45, 297, 413, 33);
 			contentPanel.add(textFieldError);
 			textFieldError.setColumns(10);
 		}
 
 		JPanel pnCentro = new JPanel();
-		pnCentro.setBounds(47, 59, 381, 157);
+		pnCentro.setBounds(49, 96, 413, 168);
 		contentPanel.add(pnCentro);
 		pnCentro.setLayout(new GridLayout(3, 2, 20, 20));
 		{
@@ -141,6 +142,16 @@ public class PantallaRegistro extends JDialog {
 		{
 			passwordField2 = new JPasswordField();
 			pnCentro.add(passwordField2);
+		}
+		{
+			JCheckBox adminCheckBox = new JCheckBox("Administrador");
+			adminCheckBox.setBounds(45, 66, 97, 23);
+			contentPanel.add(adminCheckBox);
+		}
+		{
+			JCheckBox usuarioCheckBox = new JCheckBox("Nuevo usuario");
+			usuarioCheckBox.setBounds(169, 66, 97, 23);
+			contentPanel.add(usuarioCheckBox);
 		}
 	}
 
