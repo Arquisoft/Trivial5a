@@ -4,7 +4,6 @@ import java.net.UnknownHostException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
-
 import com.google.gson.Gson;
 import com.mongodb.BasicDBObject;
 import com.mongodb.DB;
@@ -14,7 +13,6 @@ import com.mongodb.DBObject;
 import com.mongodb.MongoClient;
 import com.mongodb.ServerAddress;
 import com.mongodb.util.JSON;
-
 import es.uniovi.asw.model.Category;
 import es.uniovi.asw.model.Question;
 import es.uniovi.asw.model.User;
@@ -22,17 +20,19 @@ import es.uniovi.asw.model.User;
 public class Driver {
 
 	private static MongoClient client;
+	
 	private static DBCollection table;
-	DB db;
+	
+	public DB db;
 
 	/**
-	 * Conecta con la base de datos MongoDB presente en el equipo en el puerto po defecto 27017
+	 * Conecta con la base de datos MongoDB presente en el equipo en el puerto
+	 * po defecto 27017
 	 */
 	public void conectDB() {
 		try {
 			client = new MongoClient(new ServerAddress("localhost", 27017));
 			db = client.getDB("Trivial5a");
-
 		} catch (UnknownHostException e) {
 			e.printStackTrace();
 		}
@@ -49,24 +49,18 @@ public class Driver {
 		if (client != null) {
 			// Crea una tabla si no existe y agrega datos
 			table = db.getCollection("categorias");
-
 			DBObject[] categorias = new BasicDBObject[JSONarray.length];
-
 			System.out.println("Tabla " + table);
 			for (int i = 0; i < JSONarray.length; i++) {
 				categorias[i] = (DBObject) JSON.parse(JSONarray[i]);
 				System.out.println(categorias[i]);
 			}
-
-			for (int i = 0; i < categorias.length; i++) { // Insertar tablas
+			for (int i = 0; i < categorias.length; i++)  // Insertar tablas
 				table.insert(categorias[i]);
-			}
 			System.out.println();
-
 			client.close();
-		} else 
+		} else
 			throw new Exception("Error: Conexión no establecida");
-
 	}
 
 	/**
@@ -81,15 +75,14 @@ public class Driver {
 			// Crea una tabla si no existe y agrega datos
 			table = db.getCollection("usuarios");
 			DBObject[] usuario = new BasicDBObject[1];
-			usuario[0]=(DBObject) JSON.parse(user.toJSON());
+			usuario[0] = (DBObject) JSON.parse(user.toJSON());
 			table.insert(usuario[0]);
-			
 			client.close();
 		} else {
 			throw new Exception("Error: Conexión no establecida");
 		}
 	}
-	
+
 	/**
 	 * Añade una pregunta a la BBDD
 	 * 
@@ -102,9 +95,8 @@ public class Driver {
 			// Crea una tabla si no existe y agrega datos
 			table = db.getCollection("preguntas");
 			DBObject[] pregunta = new BasicDBObject[1];
-			pregunta[0]=(DBObject) JSON.parse(q.toJSON());
+			pregunta[0] = (DBObject) JSON.parse(q.toJSON());
 			table.insert(pregunta[0]);
-			
 			client.close();
 		} else {
 			throw new Exception("Error: Conexión no establecida");
@@ -118,20 +110,17 @@ public class Driver {
 	 * @return
 	 * @throws Exception
 	 */
-	public User findUser(String login, String password)
-			throws Exception {
+	public User findUser(String login, String password) throws Exception {
 		conectDB();
 
 		if (client != null) {
 			// Crea una tabla si no existe y agrega datos
 			table = db.getCollection("usuarios");
-			DBObject user = new BasicDBObject("login", login)
-			.append("password", password);
-			
-			Gson g =new Gson();
+			DBObject user = new BasicDBObject("login", login).append("password", password);
+			Gson g = new Gson();
 			DBObject obj = table.findOne(user);
-			if(obj!=null) {
-				User usuario=g.fromJson(obj.toString(), User.class);
+			if (obj != null) {
+				User usuario = g.fromJson(obj.toString(), User.class);
 				return usuario;
 			}
 			client.close();
@@ -139,7 +128,7 @@ public class Driver {
 		} else
 			throw new Exception("Error: Conexión no establecida");
 	}
-	
+
 	/**
 	 * Busca un usuario por su nombre de usuario y su contraseña
 	 * 
@@ -147,18 +136,16 @@ public class Driver {
 	 * @return
 	 * @throws Exception
 	 */
-	public User findUser(String login)
-			throws Exception {
+	public User findUser(String login) throws Exception {
 		conectDB();
-
 		if (client != null) {
 			// Crea una tabla si no existe y agrega datos
 			table = db.getCollection("usuarios");
 			DBObject user = new BasicDBObject("login", login);
-			Gson g =new Gson();
+			Gson g = new Gson();
 			DBObject obj = table.findOne(user);
-			if(obj!=null) {
-				User usuario=g.fromJson(obj.toString(), User.class);
+			if (obj != null) {
+				User usuario = g.fromJson(obj.toString(), User.class);
 				return usuario;
 			}
 			client.close();
@@ -166,34 +153,35 @@ public class Driver {
 		} else
 			throw new Exception("Error: Conexión no establecida");
 	}
-	
+
 	/**
 	 * Actualizar las estadíticas o datos de un usuario
+	 * 
 	 * @param user
 	 */
 	public void updateUser(User user) {
 		conectDB();
-		
 		// Crea una tabla si no existe y agrega datos
 		table = db.getCollection("usuarios");
-		DBObject [] userModificado = new BasicDBObject[1];
-		userModificado[0]=(DBObject) JSON.parse(user.toJSON());
+		DBObject[] userModificado = new BasicDBObject[1];
+		userModificado[0] = (DBObject) JSON.parse(user.toJSON());
 		DBObject userActualizar = new BasicDBObject("login", user.getLogin());
 		table.findAndModify(userActualizar, userModificado[0]);
 		client.close();
 	}
-	
+
 	/**
 	 * Actualizar las estadíticas o datos de un pregunta
+	 * 
 	 * @param user
 	 */
-	public void updateQuestion(Question question,Category category) {
+	public void updateQuestion(Question question, Category category) {
 		conectDB();
 		category.addQuestions(question);
 		// Crea una tabla si no existe y agrega datos
 		table = db.getCollection("categorias");
-		DBObject [] categoria = new BasicDBObject[1];
-		categoria[0]=(DBObject) JSON.parse(category.toJSON());
+		DBObject[] categoria = new BasicDBObject[1];
+		categoria[0] = (DBObject) JSON.parse(category.toJSON());
 		DBObject categoriaActualizar = new BasicDBObject("name", category.getName());
 		table.findAndModify(categoriaActualizar, categoria[0]);
 		client.close();
@@ -209,7 +197,6 @@ public class Driver {
 		conectDB();
 		if (client != null) {
 			List<User> usuarios = new ArrayList<User>();
-
 			// Crea una tabla si no existe y agrega datos
 			table = db.getCollection("usuarios");
 			DBCursor cursor = table.find();
@@ -217,9 +204,8 @@ public class Driver {
 				User user = new Gson().fromJson(cursor.next().toString(), User.class);
 				usuarios.add(user);
 			}
-			
 			client.close();
-			for(User user : usuarios)
+			for (User user : usuarios)
 				System.out.println(user);
 			return usuarios;
 		} else
@@ -236,7 +222,6 @@ public class Driver {
 		conectDB();
 		if (client != null) {
 			List<Category> preguntas = new ArrayList<Category>();
-
 			// Crea una tabla si no existe y agrega datos
 			table = db.getCollection("categorias");
 			DBCursor cursor = table.find();
@@ -244,9 +229,8 @@ public class Driver {
 				Category category = new Gson().fromJson(cursor.next().toString(), Category.class);
 				preguntas.add(category);
 			}
-			
 			client.close();
-			for(Category question : preguntas)
+			for (Category question : preguntas)
 				System.out.println(question);
 			return preguntas;
 		} else
@@ -257,32 +241,29 @@ public class Driver {
 	 * Borra la tabla cuyo nombre es pasado como parametro
 	 * 
 	 * @param DBName
-	 * @throws Exception 
+	 * @throws Exception
 	 */
 	public void removeTable(String table) throws Exception {
 		conectDB();
 		// Borrar base de datos
-		if(client!=null) {
+		if (client != null) {
 			db.getCollection(table).drop();
 			System.out.println();
-
 			// Listas las bases de datos
 			System.out.println("Lista de todas las tablas de la BBDD tras el borrado de " + db);
 			List<String> basesDeDatosBorrada = client.getDatabaseNames();
-			for (String nombreBaseDatos : basesDeDatosBorrada) {
+			for (String nombreBaseDatos : basesDeDatosBorrada) 
 				System.out.println(" - " + nombreBaseDatos);
-			}
 			System.out.println();
-			
 			client.close();
-		} 
-		else 
+		} else
 			throw new Exception("Error: Conexión no establecida");
 	}
-	
+
 	/**
 	 * Clase que imprime el contentido de la BBDD para casos de depurabilidad
-	 * @throws Exception 
+	 * 
+	 * @throws Exception
 	 */
 	public void imprimirDB() throws Exception {
 		conectDB();
@@ -294,18 +275,14 @@ public class Driver {
 				System.out.println(" - " + nombreBaseDatos);
 			}
 			System.out.println();
-	
 			// Listar las tablas de la base de datos actual
 			System.out.println("Lista de tablas de la base de datos: ");
 			Set<String> tables = db.getCollectionNames();
-			for (String coleccion :tables) {
+			for (String coleccion : tables) 
 				System.out.println(" - " + coleccion);
-			}
 			System.out.println();
-			
 			client.close();
-		}
-		else
+		} else
 			throw new Exception("Error: Conexión no establecida");
 	}
 }

@@ -1,8 +1,6 @@
 package es.uniovi.asw.gui.util.form;
 
 /**
- * @author Pablo Fernández Rodríguez UO218251 71673238V
- * 
  *         Clase que define un formulario específico con los campos
  *         correspondientes para usuarios del Trivial.
  */

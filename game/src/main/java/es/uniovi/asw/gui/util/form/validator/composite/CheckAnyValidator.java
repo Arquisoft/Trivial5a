@@ -2,7 +2,6 @@ package es.uniovi.asw.gui.util.form.validator.composite;
 
 import es.uniovi.asw.gui.util.form.validator.Validator;
 
-
 public class CheckAnyValidator extends CompositeValidator{
 
 	public CheckAnyValidator(Validator... validators) {
@@ -11,7 +10,6 @@ public class CheckAnyValidator extends CompositeValidator{
 	
 	@Override
 	public boolean validar(String text) {
-
 		for(Validator v : validators){
 			if(v.validar(text)){
 				return true;
@@ -22,8 +20,6 @@ public class CheckAnyValidator extends CompositeValidator{
 
 	@Override
 	public String help() {
-		// TODO Auto-generated method stub
 		return null;
 	}
-
 }

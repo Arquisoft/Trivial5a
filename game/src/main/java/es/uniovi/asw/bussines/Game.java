@@ -121,6 +121,12 @@ public class Game {
 		this.userManager = userManager;
 	}
 
+    /**
+     * Devuelve el valor de usuarioActivo
+     * 
+     * @return usuarioActivo
+     */
+
 	public User getUsuarioActivo() {
 		return usuarioActivo;
 	}

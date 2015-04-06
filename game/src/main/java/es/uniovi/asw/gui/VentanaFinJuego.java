@@ -4,6 +4,7 @@ import java.awt.Component;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+
 import javax.swing.JButton;
 import javax.swing.JDialog;
 import javax.swing.JLabel;
@@ -15,12 +16,15 @@ import javax.swing.table.DefaultTableColumnModel;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableCellRenderer;
 import javax.swing.table.TableColumn;
+
 import es.uniovi.asw.bussines.Game;
 import es.uniovi.asw.model.Category;
 import es.uniovi.asw.model.Question;
 import es.uniovi.asw.model.User;
+import javax.swing.JTextField;
+import java.awt.Color;
 
-public class VentanaEstadisticas extends JDialog {
+public class VentanaFinJuego extends JDialog {
 	
 	private static final long serialVersionUID = 1L;
 	
@@ -35,7 +39,7 @@ public class VentanaEstadisticas extends JDialog {
 	/**
 	 * Crea la ventana de estadísticas de los jugadores
 	 */
-	public VentanaEstadisticas(Game juego) {
+	public VentanaFinJuego(Game juego) {
 		this.juego = juego;
 		setBounds(100, 100, 1109, 733);
 		getContentPane().setLayout(null);
@@ -80,9 +84,9 @@ public class VentanaEstadisticas extends JDialog {
 		buttonPane.setBounds(12, 545, 1091, 140);
 		contentPanel.add(buttonPane);
 
-		JButton volverButton = new JButton("Volver");
-		volverButton.setFont(new Font("Tahoma", Font.PLAIN, 26));
-		volverButton.setBounds(876, 86, 203, 41);
+		JButton volverButton = new JButton("Salir");
+		volverButton.setFont(new Font("Tahoma", Font.PLAIN, 18));
+		volverButton.setBounds(903, 86, 148, 41);
 		volverButton.setActionCommand("OK");
 		volverButton.addActionListener(new ActionListener() {
 			@Override
@@ -93,7 +97,27 @@ public class VentanaEstadisticas extends JDialog {
 		buttonPane.setLayout(null);
 		buttonPane.add(volverButton);
 		getRootPane().setDefaultButton(volverButton);
-
+		
+		JButton reiniciarButton = new JButton("Reiniciar partida");
+		reiniciarButton.setFont(new Font("Tahoma", Font.PLAIN, 18));
+		reiniciarButton.setBounds(714, 86, 162, 41);
+		reiniciarButton.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				Game juegonuevo = new Game();
+				PantallaInicial pn = new PantallaInicial(juegonuevo);
+				pn.setVisible(true);
+				pn.setLocationRelativeTo(null);
+			}
+		});
+		buttonPane.setLayout(null);
+		buttonPane.add(reiniciarButton);
+		
+		JLabel lblNewLabel = new JLabel("!La partida ha terminado!");
+		lblNewLabel.setForeground(Color.RED);
+		lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 26));
+		lblNewLabel.setBounds(400, 24, 295, 36);
+		buttonPane.add(lblNewLabel);
 	}
 
 	/**

@@ -3,54 +3,55 @@ package es.uniovi.asw.model;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.Random;
-
 import com.google.gson.Gson;
 
 public class Question {
-	
+
 	/**
 	 * Clase que modela una preguna del modelo GIFT
 	 */
-	public static final int MAX_ANSWER = 4; //Se podria cambiar facilmente si dado el caso
-										 // se quisese cambiar el modelo de juego
-	private String category; //Una pregunta solo puede tener una categoria asociada
-	private String query;	
-	private String identifer; //Identifica unequivocamente a la pregunta
-	private String correctAnswer; //Solo puede tener una respuesta correcta 
-								  // Se podria modificar llegado el caso
-	private String[] wrongAnswers; //Array de preguntas incorrectas
+	public static final int MAX_ANSWER = 4; 
+	private String category; // Una pregunta solo puede tener una categoria asociada
+	private String query;
+	private String identifer; // Identifica inequivocamente a la pregunta
+	private String correctAnswer; // Solo puede tener una respuesta correcta. Se podria modificar llegado el caso
+	private String[] wrongAnswers; // Array de preguntas incorrectas
 	private int vecesFallada;
 	private int vecesAcertada;
-	
+
 	/**
-	 * Se crea el objeto con el numero de respuestas incorrectas que sean todas menos la correcta
-	 * Si hubiera mas respuestas correctas se cambiaria en el constructor
+	 * Se crea el objeto con el numero de respuestas incorrectas que sean todas
+	 * menos la correcta Si hubiera mas respuestas correctas se cambiaria en el
+	 * constructor
 	 */
-	public Question(){
-		wrongAnswers = new String[MAX_ANSWER-1];
+	public Question() {
+		wrongAnswers = new String[MAX_ANSWER - 1];
 	}
-		
+
 	/**
 	 * Añade una respuesta incorrecta
+	 * 
 	 * @param answer
 	 */
-	public void addWrongAnswer(String answer,int index) {
-		wrongAnswers [index]=answer;
+	public void addWrongAnswer(String answer, int index) {
+		wrongAnswers[index] = answer;
 	}
-		
+
 	/**
 	 * Elimina una respuesta incorrecta
+	 * 
 	 * @param answer
 	 */
 	public void removeWrongAnswer(String answer) {
-		for(int i =0;i< wrongAnswers.length;i++)
-			if(wrongAnswers[i] == answer)
-				wrongAnswers [i]=null;
+		for (int i = 0; i < wrongAnswers.length; i++)
+			if (wrongAnswers[i] == answer)
+				wrongAnswers[i] = null;
 	}
-		
+
 	/**
-	 * Devuelve la categoría de la pregunta, la pregunta, el identificador, la respuesta correcta,
-	 * las respuestas incorrectas, el número de veces fallada y el número de veces acertada
+	 * Devuelve la categoría de la pregunta, la pregunta, el identificador, la
+	 * respuesta correcta, las respuestas incorrectas, el número de veces
+	 * fallada y el número de veces acertada
 	 */
 	@Override
 	public String toString() {
@@ -62,8 +63,9 @@ public class Question {
 	}
 
 	/**
-	 * Devuelve la representacion en formato JSON de la pregunta.
-	 * Cabe añadir que es independiente del formato de entrada
+	 * Devuelve la representacion en formato JSON de la pregunta. Cabe añadir
+	 * que es independiente del formato de entrada
+	 * 
 	 * @return String JSON
 	 */
 	public String toJSON() {
@@ -73,6 +75,7 @@ public class Question {
 
 	/**
 	 * Devuelve el valor de category
+	 * 
 	 * @return category
 	 */
 	public String getCategory() {
@@ -81,6 +84,7 @@ public class Question {
 
 	/**
 	 * Cambia el valor de category
+	 * 
 	 * @param category
 	 */
 	public void setCategory(String category) {
@@ -89,6 +93,7 @@ public class Question {
 
 	/**
 	 * Devuelve el valor de query
+	 * 
 	 * @return query
 	 */
 	public String getQuery() {
@@ -97,6 +102,7 @@ public class Question {
 
 	/**
 	 * Cambia el valor de query
+	 * 
 	 * @param query
 	 */
 	public void setQuery(String query) {
@@ -105,6 +111,7 @@ public class Question {
 
 	/**
 	 * Devuelve el valor de identifer
+	 * 
 	 * @return identifer
 	 */
 	public String getIdentifer() {
@@ -113,6 +120,7 @@ public class Question {
 
 	/**
 	 * Cambia el valor de identifer
+	 * 
 	 * @param identifer
 	 */
 	public void setIdentifer(String identifer) {
@@ -121,6 +129,7 @@ public class Question {
 
 	/**
 	 * Devuelve el valor de correctAnswer
+	 * 
 	 * @return correctAnswer
 	 */
 	public String getCorrectAnswer() {
@@ -129,6 +138,7 @@ public class Question {
 
 	/**
 	 * Cambia el valor de correctAnswer
+	 * 
 	 * @param correctAnswer
 	 */
 	public void setCorrectAnswer(String correctAnswer) {
@@ -137,6 +147,7 @@ public class Question {
 
 	/**
 	 * Devuelve el valor de wrongAnswers
+	 * 
 	 * @return wrongAnswers
 	 */
 	public String[] getWrongAnswers() {
@@ -145,6 +156,7 @@ public class Question {
 
 	/**
 	 * Cambia el valor de wrongAnswers
+	 * 
 	 * @param wrongAnswers
 	 */
 	public void setWrongAnswers(String[] wrongAnswers) {
@@ -153,20 +165,22 @@ public class Question {
 
 	/**
 	 * Devuelve todas las respuesas mezcladas
+	 * 
 	 * @return allAnswers
 	 */
 	public String[] getAllAnswers() {
 		String[] ans = new String[4];
-		for (int i=0;i<wrongAnswers.length;i++) 
+		for (int i = 0; i < wrongAnswers.length; i++)
 			ans[i] = wrongAnswers[i];
 		ans[3] = correctAnswer;
-		long s = System.nanoTime(); //seed
+		long s = System.nanoTime(); // seed
 		Collections.shuffle(Arrays.asList(ans), new Random(s));
 		return ans;
 	}
-	
+
 	/**
 	 * Devuelve el valor de vecesFallada
+	 * 
 	 * @return vecesFallada
 	 */
 	public int getVecesFallada() {
@@ -175,6 +189,7 @@ public class Question {
 
 	/**
 	 * Cambia el valor de vecesFallada
+	 * 
 	 * @param vecesFallada
 	 */
 	public void setVecesFallada(int vecesFallada) {
@@ -183,6 +198,7 @@ public class Question {
 
 	/**
 	 * Devuelve el valor de vecesAcertada
+	 * 
 	 * @return vecesAcertada
 	 */
 	public int getVecesAcertada() {
@@ -191,6 +207,7 @@ public class Question {
 
 	/**
 	 * Cambia el valor de vecesAcertada
+	 * 
 	 * @param vecesAcertada
 	 */
 	public void setVecesAcertada(int vecesAcertada) {
@@ -222,7 +239,4 @@ public class Question {
 			return false;
 		return true;
 	}
-	
-	
-	
 }
