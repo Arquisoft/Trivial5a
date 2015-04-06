@@ -48,11 +48,13 @@ class CircleLayout implements LayoutManager {
   /**
    * For compatibility with LayoutManager interface
    */
-  public void addLayoutComponent(String name, Component comp) {
+  @Override
+public void addLayoutComponent(String name, Component comp) {
   }
 
  
-  public void layoutContainer(Container parent) {
+  @Override
+public void layoutContainer(Container parent) {
     int x=0;
     int y=0;
     int w=0;
@@ -141,7 +143,8 @@ class CircleLayout implements LayoutManager {
    * @return The preferred size
    */
 
-  public Dimension preferredLayoutSize(Container target) {
+  @Override
+public Dimension preferredLayoutSize(Container target) {
     return target.getSize();
   }
 
@@ -152,14 +155,16 @@ class CircleLayout implements LayoutManager {
    *          This CircleLayout's target container
    * @return The minimum size
    */
-  public Dimension minimumLayoutSize(Container target) {
+  @Override
+public Dimension minimumLayoutSize(Container target) {
     return target.getSize();
   }
 
   /**
    * For compatibility with LayoutManager interface
    */
-  public void removeLayoutComponent(Component comp) {
+  @Override
+public void removeLayoutComponent(Component comp) {
   }
 
   /**
@@ -167,7 +172,8 @@ class CircleLayout implements LayoutManager {
    * 
    * @return A String that represents this CircleLayout
    */
-  public String toString() {
+  @Override
+public String toString() {
     return this.getClass().getName();
   }
 

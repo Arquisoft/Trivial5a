@@ -1,6 +1,6 @@
 package es.uniovi.asw.gui;
 
-import javax.swing.table.*;
+import javax.swing.table.DefaultTableModel;
 
 public class ModeloNoEditable extends DefaultTableModel {
 	private static final long serialVersionUID = 1L;

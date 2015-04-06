@@ -68,6 +68,7 @@ public class PantallaInicial extends JFrame {
 			btnJugar.setFont(new Font("Tahoma", Font.PLAIN, 27));
 			final PantallaInicial ventana = this;
 			btnJugar.addActionListener(new ActionListener() {
+				@Override
 				public void actionPerformed(ActionEvent arg0) {
 					ConfigurarPartida cp = new ConfigurarPartida(juego);
 					cp.setVisible(true);
@@ -92,6 +93,7 @@ public class PantallaInicial extends JFrame {
 			btnRegistro = new JButton("Registrarme");
 			final PantallaInicial ventana = this;
 			btnRegistro.addActionListener(new ActionListener() {
+				@Override
 				public void actionPerformed(ActionEvent e) {
 					PantallaRegistro pr = new PantallaRegistro(juego);
 					pr.setLocationRelativeTo(null);

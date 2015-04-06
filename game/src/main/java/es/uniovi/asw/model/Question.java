@@ -1,11 +1,10 @@
 package es.uniovi.asw.model;
 
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.Random;
 
 import com.google.gson.Gson;
-
-import java.util.Collections;
 
 public class Question {
 	
@@ -14,7 +13,7 @@ public class Question {
 	 */
 	public static final int MAX_ANSWER = 4; //Se podria cambiar facilmente si dado el caso
 										 // se quisese cambiar el modelo de juego
-	private Category category; //Una pregunta solo puede tener una categoria asociada
+	private String category; //Una pregunta solo puede tener una categoria asociada
 	private String query;	
 	private String identifer; //Identifica unequivocamente a la pregunta
 	private String correctAnswer; //Solo puede tener una respuesta correcta 
@@ -76,7 +75,7 @@ public class Question {
 	 * Devuelve el valor de category
 	 * @return category
 	 */
-	public Category getCategory() {
+	public String getCategory() {
 		return category;
 	}
 
@@ -84,7 +83,7 @@ public class Question {
 	 * Cambia el valor de category
 	 * @param category
 	 */
-	public void setCategory(Category category) {
+	public void setCategory(String category) {
 		this.category = category;
 	}
 
@@ -197,4 +196,33 @@ public class Question {
 	public void setVecesAcertada(int vecesAcertada) {
 		this.vecesAcertada = vecesAcertada;
 	}
+
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result
+				+ ((identifer == null) ? 0 : identifer.hashCode());
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Question other = (Question) obj;
+		if (identifer == null) {
+			if (other.identifer != null)
+				return false;
+		} else if (!identifer.equals(other.identifer))
+			return false;
+		return true;
+	}
+	
+	
+	
 }

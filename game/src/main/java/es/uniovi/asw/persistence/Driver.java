@@ -178,9 +178,24 @@ public class Driver {
 		table = db.getCollection("usuarios");
 		DBObject [] userModificado = new BasicDBObject[1];
 		userModificado[0]=(DBObject) JSON.parse(user.toJSON());
-		DBObject userActualizar = new BasicDBObject("name", user.getLogin())
-		.append("lastName",user.getLogin());
+		DBObject userActualizar = new BasicDBObject("login", user.getLogin());
 		table.findAndModify(userActualizar, userModificado[0]);
+		client.close();
+	}
+	
+	/**
+	 * Actualizar las estadíticas o datos de un pregunta
+	 * @param user
+	 */
+	public void updateQuestion(Question question,Category category) {
+		conectDB();
+		category.addQuestions(question);
+		// Crea una tabla si no existe y agrega datos
+		table = db.getCollection("categorias");
+		DBObject [] categoria = new BasicDBObject[1];
+		categoria[0]=(DBObject) JSON.parse(category.toJSON());
+		DBObject categoriaActualizar = new BasicDBObject("name", category.getName());
+		table.findAndModify(categoriaActualizar, categoria[0]);
 		client.close();
 	}
 

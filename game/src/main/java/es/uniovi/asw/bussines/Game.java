@@ -8,6 +8,7 @@ import java.util.Map;
 import java.util.Random;
 import java.util.Set;
 
+import es.uniovi.asw.gui.VentanaEstadisticas;
 import es.uniovi.asw.model.Category;
 import es.uniovi.asw.model.Question;
 import es.uniovi.asw.model.User;
@@ -15,7 +16,7 @@ import es.uniovi.asw.persistence.Driver;
 
 public class Game {
 	
-	CountDown cronometro = new CountDown(); //CLASE QUE SIRVE PARA CRONOMETRO
+	
 	
 	public static final int MAX_CATEGORIAS = 6;
 	private List<User> usuarios;
@@ -46,50 +47,31 @@ public class Game {
 		}
 		this.questionManager = new QuestionManager(d);
 		this.userManager = new UserManager(d);
-		//this.tablero = questionManager.cargarTablero();
 		this.usuarios= new ArrayList<User>();
 		this.preguntasAcertadas= new HashMap<User,Set<String>>();
-		/*Category c = new Category();
-		Question q = new Question();
-		q.setVecesFallada(4);
-		q.setVecesAcertada(3);
-		c.addQuestions(q);
-		tablero.add(c);*/
+		
 	}
 
 	/**
 	 * Muestra las estadisticas del juego. 
 	 * Muestra las preguntas acertadas y falladas de cada usuario
 	 * Muestra estadisticas de preguntas. Pregunta mas dificil, mas facil,etc
+	 * @throws Exception 
 	 */
-	@SuppressWarnings("rawtypes")
-	public void showEstadistics() {
-		Map<String,List<Map>> estadisticas = new HashMap<String,List<Map>>();
+	public List<User> showEstadisticsUser() throws Exception {
+		List<User> estadisticasUser =userManager.d.findAllUser();
 		
-		List<Map> estadisticasUsuarios = new ArrayList<Map>();
-		List<Map> estadisticasPreguntas = new ArrayList<Map>();
-
-		for(User user : usuarios)
-			estadisticasUsuarios.add(user.showStadistics());
 		
-		estadisticas.put("estadisticasUsers", estadisticasUsuarios);
-		
-		for (Category category : tablero) {
-			estadisticasPreguntas.add(category.showEstadisticsCategory());
-		}
-		
-		estadisticas.put("estadisticasPreguntas", estadisticasPreguntas);
-		
-		//MOSTRAR ESTADISTICAS USERS //ESTO SE BORRARIA
-		List<Map> user =	estadisticas.get("estadisticasUsers");
-		for(Map m : user)
-			System.out.println(m);
-		
-		List<Map> question =	estadisticas.get("estadisticasPreguntas");
-		for(Map m : question)
-			System.out.println(m.get("preguntaFacil"));
-		
+		return estadisticasUser;
 	}
+	
+	public List<Category> showEstadisticsQuestion() throws Exception {
+		List<Category> estadisticasCategory =questionManager.d.findAllQuestion();
+		
+		
+		return estadisticasCategory;
+	}
+	
 	
 	/**
 	 * Devuelve el valor de usuarios
@@ -210,25 +192,23 @@ public class Game {
 		usuarioActivo.setNumberCorrectAnswer(usuarioActivo.getNumberCorrectAnswer()+1);
 		userManager.updateUser(usuarioActivo);
 		
-		preg.setVecesAcertada(preg.getVecesAcertada()+1);
-		//questionManager.updateQuestion(preguntaActual);
+			preg.setVecesAcertada(preg.getVecesAcertada()+1);
+		questionManager.updateQuestion(preg,preg.getCategory());
+
 		
-		if (quesito) {
-			//if (preg.getCategory().getName() != null)
-				//preguntasAcertadas.get(usuarioActivo).add(preg.getCategory().getName());
-			//else
-				preguntasAcertadas.get(usuarioActivo).add("1");
+		if (quesito) { //Si es quesito mete la el nombre de la categoria, sino no hace nada
+				preguntasAcertadas.get(usuarioActivo).add(preg.getCategory());
 		}
 		
-	//	if(preguntasAcertadas.get(usuarioActivo).size()==MAX_CATEGORIAS)
-	//		terminarPartida();
+		if(preguntasAcertadas.get(usuarioActivo).size()==MAX_CATEGORIAS)
+			terminarPartida();
 	}
 	
 	/**
 	 * Metodo final del juego. Cuando algun usuario acaba  se llama a este metodo
 	 */
 	private void terminarPartida() {
-		// SE MOSTRARA LAS ESTADISTICAS DE LA PARTIDA Y EL MENSAJE DE PARTIDA FINALIZADA
+		new VentanaEstadisticas(this);
 		
 	}
 
@@ -238,14 +218,13 @@ public class Game {
 	 */
 	public void falla(Question preg)
 	{
-		//if(cronometro.tiempoacabado()==true)
-			//turnoSiguiente();
+		
 		
 		usuarioActivo.setNumberWrongAnswer(usuarioActivo.getNumberWrongAnswer()+1);
 		userManager.updateUser(usuarioActivo);
-		
 		preg.setVecesFallada(preg.getVecesFallada()+1);
-		//questionManager.updateQuestion(preguntaActual);
+		questionManager.updateQuestion(preg,preg.getCategory());
 		turnoSiguiente();
 	}
+	
 }

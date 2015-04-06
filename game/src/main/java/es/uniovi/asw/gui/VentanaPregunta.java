@@ -2,38 +2,37 @@ package es.uniovi.asw.gui;
 
 import java.awt.BorderLayout;
 import java.awt.Component;
-import java.awt.EventQueue;
+import java.awt.Font;
+import java.awt.GridLayout;
+import java.awt.Toolkit;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.util.List;
 
-import javax.swing.ImageIcon;
+import javax.swing.ButtonGroup;
+import javax.swing.JButton;
 import javax.swing.JDialog;
-import javax.swing.JFrame;
+import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
+import javax.swing.JRadioButton;
+import javax.swing.Timer;
+import javax.swing.WindowConstants;
 import javax.swing.border.EmptyBorder;
 
-import java.awt.GridLayout;
-
-import javax.swing.JRadioButton;
-import javax.swing.JLabel;
-
-import java.awt.Font;
-
-import javax.swing.JButton;
-
 import es.uniovi.asw.bussines.Game;
-import es.uniovi.asw.bussines.QuestionManager;
 import es.uniovi.asw.model.Category;
 import es.uniovi.asw.model.Question;
 import es.uniovi.asw.model.User;
 
-import java.awt.event.ActionListener;
-import java.awt.event.ActionEvent;
-import java.awt.Toolkit;
-import java.util.List;
-
-import javax.swing.ButtonGroup;
-
-public class VentanaPregunta extends JDialog {
+public class VentanaPregunta extends JDialog  implements ActionListener{ 
+	
+	 /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private int cuenta=30,paso=1;
+    private Timer tiempo;  
 	
 	private boolean quesito;
 	private Game juego;
@@ -41,7 +40,6 @@ public class VentanaPregunta extends JDialog {
 	private int categoria;
 	private Question pregunta;
 	private String[] respuestas;
-	private int boton;
 
 	private JPanel contentPane;
 	private JPanel pnPreguntas;
@@ -51,9 +49,14 @@ public class VentanaPregunta extends JDialog {
 	private JRadioButton rdbtnOpc4;
 	private JLabel lblPregunta;
 	private JButton btnResponder;
+	
+	
 	private final ButtonGroup buttonGroup = new ButtonGroup();
+	private JLabel labelCronometro;
 
 	public VentanaPregunta(boolean quesito, int categoria, Juego pantalla, Game juego, int boton) {
+		tiempo=new Timer(1000,this);
+		tiempo.start();
 		this.categoria = categoria;
 		this.quesito = quesito;
 		this.pantalla = pantalla;
@@ -69,7 +72,7 @@ public class VentanaPregunta extends JDialog {
 		
 		this.setLocationRelativeTo(null);
 		this.setModal(true); // para que no se pueda pulsar la ventana del tablero hasta que no respondas
-		setDefaultCloseOperation(JDialog.DO_NOTHING_ON_CLOSE); // para inhabilitar el boton de cerrar y que no puedan saltarse la pregunta
+		setDefaultCloseOperation(WindowConstants.DO_NOTHING_ON_CLOSE); // para inhabilitar el boton de cerrar y que no puedan saltarse la pregunta
 		
 		setBounds(100, 100, 604, 300);
 		contentPane = new JPanel();
@@ -79,6 +82,7 @@ public class VentanaPregunta extends JDialog {
 		contentPane.add(getLblPregunta(), BorderLayout.NORTH);
 		contentPane.add(getPnPreguntas(), BorderLayout.CENTER);
 		contentPane.add(getBtnResponder(), BorderLayout.SOUTH);
+		contentPane.add(getLabelCronometro(), BorderLayout.WEST);
 	}
 
 	private JPanel getPnPreguntas() {
@@ -150,6 +154,7 @@ public class VentanaPregunta extends JDialog {
 			
 			btnResponder = new JButton("Responder");
 			btnResponder.addActionListener(new ActionListener() {
+				@Override
 				public void actionPerformed(ActionEvent e) {
 					
 					User usuarioActivo = juego.getUsuarioActivo();
@@ -186,7 +191,7 @@ public class VentanaPregunta extends JDialog {
 	
 	public boolean respuesta() {
 		int respuestaSeleccionada = -1;
-		Component[] botones = (Component[]) pnPreguntas.getComponents();
+		Component[] botones = pnPreguntas.getComponents();
 		for(int i=0; i<botones.length; i++) {
 			JRadioButton bt = (JRadioButton) botones[i];
 			if(bt.isSelected()) {
@@ -199,4 +204,25 @@ public class VentanaPregunta extends JDialog {
 		return false;
 	}
 	
+	private JLabel getLabelCronometro() {
+		if (labelCronometro == null) {
+			labelCronometro = new JLabel("");
+			labelCronometro.setFont(new Font("Tahoma", Font.PLAIN, 18));
+			
+		}
+		return labelCronometro;
+	}
+
+	@Override
+	public void actionPerformed(ActionEvent arg0) {
+		labelCronometro.setText(""+cuenta);
+		cuenta-=paso;	
+		if (cuenta==0){
+		 tiempo.stop();
+		 	JOptionPane.showMessageDialog(null, "Tiempo agotado. Pierdes el turno :(");
+			juego.falla(pregunta);
+			pantalla.pintarPosicion(juego.getUsuarioActivo().getPosicion());
+		 dispose();
+	}
+	}
 }

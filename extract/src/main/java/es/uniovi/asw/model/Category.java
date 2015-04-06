@@ -10,6 +10,7 @@ public class Category {
 	public void addQuestions(Question question)
 	{
 		questions.add(question);
+		question.setCategory(this.name);
 	}
 	
 	public void removeQuestions (Question question)

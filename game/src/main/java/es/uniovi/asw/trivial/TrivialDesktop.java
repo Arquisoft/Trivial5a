@@ -24,7 +24,9 @@ public class TrivialDesktop {
 		
 		final Game g = new Game();
 		Driver d = new Driver();
+		
 		try {
+			//d.removeTable("categorias");
 			d.findAllQuestion();
 		} catch (Exception e1) {
 			// TODO Auto-generated catch block
@@ -32,6 +34,7 @@ public class TrivialDesktop {
 		}
 		
 		EventQueue.invokeLater(new Runnable() {
+			@Override
 			public void run() {
 				try {
 					PantallaInicial frame = new PantallaInicial(g);

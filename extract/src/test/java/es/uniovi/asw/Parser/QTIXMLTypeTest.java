@@ -6,7 +6,6 @@ package es.uniovi.asw.Parser;
 import static org.junit.Assert.*;
 
 import java.io.BufferedReader;
-<<<<<<< HEAD
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
@@ -15,17 +14,10 @@ import javax.swing.JOptionPane;
 
 import org.junit.Test;
 
-=======
-import java.io.FileReader;
-import java.io.IOException;
-
-import org.junit.Test;
-
 import es.uniovi.asw.extractor.parser.Document;
 import es.uniovi.asw.extractor.parser.Parser;
 import es.uniovi.asw.extractor.parser.QTIXMLType;
 
->>>>>>> 20ad8fe43e656ba87180b589f8a119ac9057a3b1
 /**
  * @author changqu
  *

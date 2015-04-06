@@ -30,5 +30,16 @@ public class QuestionManager {
 		else
 			return null;
 	}
+
+	/**
+	 * Llama a la persistencia y actualiza las estadisticas
+	 * @param preguntaActual
+	 * @param category
+	 */
+	public void updateQuestion(Question preguntaActual, String category) {
+				for(Category c : cargarTablero())
+					if (c.equals(category))
+			d.updateQuestion(preguntaActual, c);
+	}
 	
 }

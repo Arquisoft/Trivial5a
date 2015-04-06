@@ -6,6 +6,7 @@ import java.awt.Component;
 import java.awt.Cursor;
 import java.awt.Font;
 import java.awt.GridLayout;
+import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.File;
@@ -19,7 +20,6 @@ import javax.swing.JLabel;
 import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
-import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JSeparator;
@@ -27,15 +27,12 @@ import javax.swing.JTable;
 import javax.swing.JTextField;
 import javax.swing.ScrollPaneConstants;
 import javax.swing.SwingConstants;
+import javax.swing.WindowConstants;
 import javax.swing.border.EmptyBorder;
 import javax.swing.border.LineBorder;
 import javax.swing.filechooser.FileNameExtensionFilter;
 
-import org.openqa.selenium.Dimension;
-
 import es.uniovi.asw.bussines.Game;
-
-import java.awt.Toolkit;
 
 public class Juego extends JFrame {
 
@@ -75,6 +72,8 @@ public class Juego extends JFrame {
 	private JSeparator separator;
 	private JMenuItem mntmSalir;
 	private JLabel lblDados;
+	private JSeparator separator_1;
+	private JMenuItem mntmEstadisticas;
 
 	/**
 	 * Create the frame.
@@ -88,7 +87,7 @@ public class Juego extends JFrame {
 		setPreferredSize(new java.awt.Dimension(1167, 733));
 		this.setTitle("Trivial");
 		
-		setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
+		setDefaultCloseOperation(WindowConstants.HIDE_ON_CLOSE);
 		setBounds(100, 100, 1167, 733); 
 		setMinimumSize(getPreferredSize()); // para que no se pueda reducir la pantalla, el minimo es lo inicial
 		setJMenuBar(getMenuBar_1());
@@ -140,6 +139,7 @@ public class Juego extends JFrame {
 			btnDado.setActionCommand("-1"); // no toques
 			btnDado.setCursor(new Cursor(Cursor.HAND_CURSOR));
 			btnDado.addActionListener(new ActionListener() {
+				@Override
 				public void actionPerformed(ActionEvent arg0) {
 					tirarDado();
 				}
@@ -364,6 +364,8 @@ public class Juego extends JFrame {
 			mnJuego = new JMenu("Juego");
 			mnJuego.add(getMntmNuevo());
 			mnJuego.add(getSeparator());
+			mnJuego.add(getMntmEstadisticas());
+			mnJuego.add(getSeparator_1());
 			mnJuego.add(getMntmSalir());
 		}
 		return mnJuego;
@@ -379,6 +381,7 @@ public class Juego extends JFrame {
 		if (mntmCambiarFondo == null) {
 			mntmCambiarFondo = new JMenuItem("Cambiar fondo");
 			mntmCambiarFondo.addActionListener(new ActionListener() {
+				@Override
 				public void actionPerformed(ActionEvent e) {
 					int respuesta = getSelector().showOpenDialog(null);
 					if(respuesta == JFileChooser.APPROVE_OPTION) {
@@ -396,6 +399,7 @@ public class Juego extends JFrame {
 			mntmNuevo = new JMenuItem("Nuevo");
 			final Juego partida = this;
 			mntmNuevo.addActionListener(new ActionListener() {
+				@Override
 				public void actionPerformed(ActionEvent e) {
 			//		int respuesta = JOptionPane.showConfirmDialog(null, "¿Está seguro que desea abandonar la partida y comenzar de nuevo?");
 					
@@ -419,6 +423,7 @@ public class Juego extends JFrame {
 		if (mntmSalir == null) {
 			mntmSalir = new JMenuItem("Salir");
 			mntmSalir.addActionListener(new ActionListener() {
+				@Override
 				public void actionPerformed(ActionEvent e) {
 					System.exit(0);
 				}
@@ -434,5 +439,29 @@ public class Juego extends JFrame {
 			lblDados.setToolTipText("\"Para tirar del dado pulsa en el centro del tablero\"");
 		}
 		return lblDados;
+	}
+	private JSeparator getSeparator_1() {
+		if (separator_1 == null) {
+			separator_1 = new JSeparator();
+		}
+		return separator_1;
+	}
+	private JMenuItem getMntmEstadisticas() {
+		if (mntmEstadisticas == null) {
+			mntmEstadisticas = new JMenuItem("Estadisticas");
+			if(juego.getUsuarioActivo().isAdmin())
+				mntmEstadisticas.setEnabled(true);
+			else
+				mntmEstadisticas.setEnabled(false);
+			mntmEstadisticas.addActionListener(new ActionListener() {
+					@Override
+					public void actionPerformed(ActionEvent e) {
+						VentanaEstadisticas ve = new VentanaEstadisticas(juego);
+						ve.setVisible(true);
+						ve.setLocationRelativeTo(null);
+					}
+				});
+			}
+		return mntmEstadisticas;
 	}
 }
