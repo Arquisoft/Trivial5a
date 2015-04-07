@@ -64,4 +64,15 @@ public class UserManager {
 				return true;
 		return false;
 	}
+	
+	
+	/**
+	 * Metodo que borra usuarios
+	 * @param user
+	 * @throws Exception 
+	 */
+	public void removeUser(User user) throws Exception
+	{
+		d.removeUser(user);
+	}
 }

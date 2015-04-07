@@ -4,6 +4,8 @@ import static org.junit.Assert.*;
 
 import java.util.List;
 
+import org.junit.After;
+import org.junit.AfterClass;
 import org.junit.Test;
 
 import es.uniovi.asw.bussines.QuestionManager;
@@ -41,6 +43,8 @@ public class UserManagerTest {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		
+		
 	}
 
 	@Test
@@ -54,6 +58,22 @@ public class UserManagerTest {
 		} catch (Exception e1) {
 			// TODO Auto-generated catch block
 			e1.printStackTrace();
+		}
+	}
+	
+	@AfterClass
+	public static void eliminarUserTest()
+	{
+		Driver d = new Driver();
+		UserManager um = new UserManager(d);
+		User u = new User();
+		u.setLogin("TestUser");
+		u.setPassword("TestPassword");
+		try {
+			um.removeUser(u);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
 	}
 

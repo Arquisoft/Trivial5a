@@ -33,6 +33,7 @@ public class Driver {
 	 */
 	public void conectDB() {
 		try {
+		
 			client = new MongoClient(new ServerAddress("localhost", 27017));
 			db = client.getDB("Trivial5a");
 		} catch (UnknownHostException e) {
@@ -171,6 +172,23 @@ public class Driver {
 		userModificado[0] = (DBObject) JSON.parse(user.toJSON());
 		DBObject userActualizar = new BasicDBObject("login", user.getLogin());
 		table.findAndModify(userActualizar, userModificado[0]);
+		client.close();
+	}
+	
+	/**
+	 * Actualizar las estadíticas o datos de un usuario
+	 * 
+	 * @param user
+	 * @throws Exception 
+	 */
+	public void removeUser(User user) throws Exception {
+		conectDB();
+		// Crea una tabla si no existe y agrega datos
+		findUser(user.getLogin());
+		table = db.getCollection("usuarios");
+		DBObject userAborrar = new BasicDBObject();
+		userAborrar = (DBObject) JSON.parse(user.toJSON());
+		table.findAndRemove(userAborrar);
 		client.close();
 	}
 

@@ -118,6 +118,18 @@
 			<timezone>2</timezone>
 			<properties />
 		</developer>
+		<developer>
+			<id>aitorsaezalvarez</id>
+			<name>Aitor Saez Alvarez</name>
+			<email>UO227702@uniovi.es</email>
+			<organization>University of Oviedo</organization>
+			<organizationUrl>http://www.uniovi.es</organizationUrl>
+			<roles>
+				<role>Developer</role>
+			</roles>
+			<timezone>2</timezone>
+			<properties />
+		</developer>
 	</developers>
 
 
