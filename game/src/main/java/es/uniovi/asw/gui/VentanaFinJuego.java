@@ -34,11 +34,24 @@ public class VentanaFinJuego extends JDialog {
 	private Game juego;
 
 	private JTable tablePreguntas;
+	
+	
+	
+	public static void main (String [] args)
+	{
+		VentanaFinJuego vf = new VentanaFinJuego(new Game());
+		vf.setVisible(true);
+	}
 	/**
 	 * Crea la ventana de estadísticas de los jugadores
 	 */
 	
 	public VentanaFinJuego(Game juego) {
+		User user = new User();
+		user.setLogin("aitor");
+		juego.setUsuarioActivo(user);
+		
+		
 		this.setModal(true);
 		this.setDefaultCloseOperation(JDialog.DO_NOTHING_ON_CLOSE);
 		this.juego = juego;
@@ -120,7 +133,7 @@ public class VentanaFinJuego extends JDialog {
 		+juego.getUsuarioActivo().getLogin());
 		lblNewLabel.setForeground(Color.RED);
 		lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 26));
-		lblNewLabel.setBounds(400, 24, 295, 36);
+		lblNewLabel.setBounds(135, 24, 828, 36);
 		buttonPane.add(lblNewLabel);
 	}
 
