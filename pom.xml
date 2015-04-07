@@ -130,6 +130,18 @@
 			<timezone>2</timezone>
 			<properties />
 		</developer>
+		<developer>
+			<id>AlexRey</id>
+			<name>Alejandro Rey Santiago</name>
+			<email>UO233234@uniovi.es</email>
+			<organization>University of Oviedo</organization>
+			<organizationUrl>http://www.uniovi.es</organizationUrl>
+			<roles>
+				<role>Developer</role>
+			</roles>
+			<timezone>2</timezone>
+			<properties />
+		</developer>
 	</developers>
 
 
