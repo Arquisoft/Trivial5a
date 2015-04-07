@@ -12,6 +12,7 @@ import com.mongodb.DBCollection;
 import com.mongodb.DBCursor;
 import com.mongodb.DBObject;
 import com.mongodb.MongoClient;
+import com.mongodb.MongoClientURI;
 import com.mongodb.ServerAddress;
 import com.mongodb.util.JSON;
 
@@ -33,9 +34,12 @@ public class Driver {
 	 */
 	public void conectDB() {
 		try {
-		
-			client = new MongoClient(new ServerAddress("localhost", 27017));
-			db = client.getDB("Trivial5a");
+			String uri="mongodb://admin:admin@ds043329.mongolab.com:43329/trivial5a";
+			MongoClientURI muri = new MongoClientURI(uri);
+			client = new MongoClient(muri);
+			db = client.getDB(muri.getDatabase());
+			//client = new MongoClient(new ServerAddress("localhost", 27017));
+			//db = client.getDB("Trivial5a");
 		} catch (UnknownHostException e) {
 			e.printStackTrace();
 		}
