@@ -1,11 +1,14 @@
-Trivial0
+Trivial 5a
 =============
+[Página Web] (http://arquisoft.github.io/Trivial5a/)
+
+Travis: [![Build Status](https://travis-ci.org/Arquisoft/Trivial5a.svg?branch=master)](https://travis-ci.org/Arquisoft/Trivial5a)
 
 Repository for Trivial programs. 
 
 Software Architecture course - [University of Oviedo](http://www.uniovi.es), 2014-15
 
-Formantes del grupo:
+Integrantes del grupo:
 
 [Aitor Sáez](https://github.com/aitorSaezAlvarez)
 
@@ -24,5 +27,7 @@ Formantes del grupo:
 [Noelia Rico](https://github.com/noeliarico)
 
 [Pablo Fernández](https://github.com/PabloFernandezRodriguez)
+
+
 
 
