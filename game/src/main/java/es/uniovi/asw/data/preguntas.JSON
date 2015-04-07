@@ -1,0 +1,2424 @@
+{ 
+' Geografia': [  
+{ 
+Identifier:'Q1',
+Query:'¿Cuál es el país menos turístico de Europa? ',
+CorrectAnswer:'Liechtenstein',
+WrongAnswer0:'Armenia',
+WrongAnswer1:'Moldavia',
+WrongAnswer2:'Hungría'
+},
+{ 
+Identifier:'Q2',
+Query:'¿A qué país pertenece la isla de Tasmania? ',
+CorrectAnswer:'Australia',
+WrongAnswer0:'Estados Unidos',
+WrongAnswer1:'Portugal',
+WrongAnswer2:'Ninguna es correcta'
+},
+{ 
+Identifier:'Q3',
+Query:'¿En cuál de los siguientes países NO hay ningún desierto? ',
+CorrectAnswer:'Alemania',
+WrongAnswer0:'España',
+WrongAnswer1:'Chile',
+WrongAnswer2:'Mongolia'
+},
+{ 
+Identifier:'Q4',
+Query:'¿Cuál es el código internacional para Cuba? ',
+CorrectAnswer:'CU',
+WrongAnswer0:'CA',
+WrongAnswer1:'CB',
+WrongAnswer2:'Ninguna es correcta'
+},
+{ 
+Identifier:'Q5',
+Query:'¿Cuál es la capital del estado de Arkansas? ',
+CorrectAnswer:'Little Rock',
+WrongAnswer0:'Kansas',
+WrongAnswer1:'Hot Springs',
+WrongAnswer2:'Washington'
+},
+{ 
+Identifier:'Q6',
+Query:'¿En qué país situarías la ciudad de Cali? ',
+CorrectAnswer:'Colombia',
+WrongAnswer0:'Venezuela',
+WrongAnswer1:'Costa Rica',
+WrongAnswer2:'Chile'
+},
+{ 
+Identifier:'Q7',
+Query:'¿Cuál de estas características no pertenece al clima Mediterráneo? ',
+CorrectAnswer:'Lluvias muy abundantes',
+WrongAnswer0:'Veranos secos y calurosos',
+WrongAnswer1:'Es un tipo de clima templado',
+WrongAnswer2:'Variables temperaturas en primavera'
+},
+{ 
+Identifier:'Q8',
+Query:'¿Qué es el Cabo de Creus? ',
+CorrectAnswer:'El punto más oriental de la Península',
+WrongAnswer0:'El punto más oriental de España',
+WrongAnswer1:'El punto más oriental de Cataluña',
+WrongAnswer2:'Ninguna es correcta'
+},
+{ 
+Identifier:'Q9',
+Query:'¿Cuál es principal celebración holandesa? ',
+CorrectAnswer:'El día de la Reina',
+WrongAnswer0:'Navidad',
+WrongAnswer1:'La llegada del verano',
+WrongAnswer2:'Hallowen'
+},
+{ 
+Identifier:'Q10',
+Query:'¿Cuál de las siguientes especialidades NO es típica de la cocina estadounidense? ',
+CorrectAnswer:'Todas son típicas',
+WrongAnswer0:'La hamburguesa',
+WrongAnswer1:'El pastel de cangrejo',
+WrongAnswer2:'La tarta de manzana'
+},
+{ 
+Identifier:'Q11',
+Query:'¿Con cuántos países limita Argentina? ',
+CorrectAnswer:'Cinco',
+WrongAnswer0:'Tres',
+WrongAnswer1:'Cuatro',
+WrongAnswer2:'Seis'
+},
+{ 
+Identifier:'Q12',
+Query:'¿Qué es la UA? ',
+CorrectAnswer:'Unión Africana',
+WrongAnswer0:'Unión Austrohúngara',
+WrongAnswer1:'Unión Americana',
+WrongAnswer2:'Unión Afroamericana'
+},
+{ 
+Identifier:'Q13',
+Query:'¿Cuál es la capital de Suiza? ',
+CorrectAnswer:'Berna',
+WrongAnswer0:'Zurich',
+WrongAnswer1:'Ginebra',
+WrongAnswer2:'Basilea'
+},
+{ 
+Identifier:'Q14',
+Query:'¿Qué separa las franjas de Gaza y Cisjordania? ',
+CorrectAnswer:'Israel',
+WrongAnswer0:'Un muro',
+WrongAnswer1:'Nada',
+WrongAnswer2:'Israel'
+},
+{ 
+Identifier:'Q15',
+Query:'¿En qué país está Ushuaia, la ciudad más al sur del mundo? ',
+CorrectAnswer:'Argentina',
+WrongAnswer0:'Chile',
+WrongAnswer1:'Sudáfrica',
+WrongAnswer2:'Nueva Zelanda'
+},
+{ 
+Identifier:'Q16',
+Query:'¿Cuál de estos países africanos no tiene costa? ',
+CorrectAnswer:'Todas tienen costa',
+WrongAnswer0:'Mauritania',
+WrongAnswer1:'Senegal',
+WrongAnswer2:'Gambia'
+},
+{ 
+Identifier:'Q17',
+Query:'¿En qué se dividen las rupias indias y pakistanís? ',
+CorrectAnswer:'En paisas',
+WrongAnswer0:'En centavos',
+WrongAnswer1:'En céntimos',
+WrongAnswer2:'En peniques'
+},
+{ 
+Identifier:'Q18',
+Query:'¿Cuál de las siguientes islas está más al sur? ',
+CorrectAnswer:'Malta',
+WrongAnswer0:'Sicilia',
+WrongAnswer1:'Córcega',
+WrongAnswer2:'Cerdeña'
+},
+{ 
+Identifier:'Q19',
+Query:'¿Cuál de las siguientes ciudades no es una ciudad santa? ',
+CorrectAnswer:'Burgos',
+WrongAnswer0:'Santiago de Compostela',
+WrongAnswer1:'Hebrón',
+WrongAnswer2:'Asís'
+},
+{ 
+Identifier:'Q20',
+Query:'¿Cuál es la capital de Baréin? ',
+CorrectAnswer:'Manama',
+WrongAnswer0:'Baréin',
+WrongAnswer1:'Ammán',
+WrongAnswer2:'Riad'
+},
+{ 
+Identifier:'Q21',
+Query:'¿En qué país está la Laguna Verde? ',
+CorrectAnswer:'Bolivia',
+WrongAnswer0:'Chile',
+WrongAnswer1:'Argentina',
+WrongAnswer2:'Todas son correctas'
+},
+{ 
+Identifier:'Q22',
+Query:'¿En qué cordillera están la mayoría de las grandes montañas? ',
+CorrectAnswer:'En el Himalaya',
+WrongAnswer0:'En el Karakórum',
+WrongAnswer1:'En los Andes',
+WrongAnswer2:'En las Montañas Rocosas'
+},
+{ 
+Identifier:'Q23',
+Query:'¿Qué ciudad europea es famosa por la belleza de su parlamento? ',
+CorrectAnswer:'Budapest',
+WrongAnswer0:'París',
+WrongAnswer1:'Madrid',
+WrongAnswer2:'Praga'
+},
+{ 
+Identifier:'Q24',
+Query:'¿Cuál es la capital de Libia? ',
+CorrectAnswer:'Trípoli',
+WrongAnswer0:'Beirut',
+WrongAnswer1:'El Cairo',
+WrongAnswer2:'Riad'
+},
+{ 
+Identifier:'Q25',
+Query:'¿Entre qué dos países está el lago Titicaca? ',
+CorrectAnswer:'Bolivia y Perú',
+WrongAnswer0:'Bolivia y Paraguay',
+WrongAnswer1:'Bolivia y Brasil',
+WrongAnswer2:'Bolivia y Argentina'
+},
+{ 
+Identifier:'Q26',
+Query:'¿Cuál es la capital de la república de Macedonia? ',
+CorrectAnswer:'Skopje',
+WrongAnswer0:'La Valeta',
+WrongAnswer1:'Chisinau',
+WrongAnswer2:'Sarajevo'
+},
+{ 
+Identifier:'Q27',
+Query:'¿Qué accidente geográfico se define como un conjunto de islas, islotes y diminutas masas de tierra cercanas entre sí? ',
+CorrectAnswer:'Archipiélago',
+WrongAnswer0:'Islotes',
+WrongAnswer1:'Península',
+WrongAnswer2:'Meandro'
+},
+{ 
+Identifier:'Q28',
+Query:'¿A qué país pertenece la isla Mujeres? ',
+CorrectAnswer:'México',
+WrongAnswer0:'Argentina',
+WrongAnswer1:'Colombia',
+WrongAnswer2:'Chile'
+},
+{ 
+Identifier:'Q29',
+Query:'¿Qué país es bañado por la Bahía de Hudson? ',
+CorrectAnswer:'Canadá',
+WrongAnswer0:'Estados Unidos',
+WrongAnswer1:'Reino Unido',
+WrongAnswer2:'Rep. de Irlanda'
+},
+{ 
+Identifier:'Q30',
+Query:'¿Qué país africano fue antigua colonia española? ',
+CorrectAnswer:'Guinea Ecuatorial',
+WrongAnswer0:'R.D. Congo',
+WrongAnswer1:'Sudáfrica',
+WrongAnswer2:'Egipto'
+},
+{ 
+Identifier:'Q31',
+Query:'¿En qué continente/s se encuentra Turquía? ',
+CorrectAnswer:'Asia y Europa',
+WrongAnswer0:'América',
+WrongAnswer1:'África y Europa',
+WrongAnswer2:'Oceania'
+},
+{ 
+Identifier:'Q32',
+Query:'¿Cuál es la religión mayoritaria en China? ',
+CorrectAnswer:'Budismo',
+WrongAnswer0:'Taoísmo',
+WrongAnswer1:'Confucianismo',
+WrongAnswer2:'Cristianismo'
+},
+{ 
+Identifier:'Q33',
+Query:'¿En qué mar desemboca el rio Segura? ',
+CorrectAnswer:'Mar Mediterráneo',
+WrongAnswer0:'Ninguna es correcta',
+WrongAnswer1:'Mar Cantábrico',
+WrongAnswer2:'Mar Báltico'
+},
+{ 
+Identifier:'Q34',
+Query:'¿Que accidente geográfico se define como una pendiente vertical abrupta? ',
+CorrectAnswer:'Un acantilado',
+WrongAnswer0:'Un barranco',
+WrongAnswer1:'Una montaña',
+WrongAnswer2:'Un puente'
+},
+{ 
+Identifier:'Q35',
+Query:'¿Cuál es el edificio más famoso en Dubai? ',
+CorrectAnswer:'Burjal Arab',
+WrongAnswer0:'Crystal Island',
+WrongAnswer1:'Torre Eiffel',
+WrongAnswer2:'Crosgrove'
+},
+{ 
+Identifier:'Q36',
+Query:'¿Con cuántos países limita la República Argentina? ',
+CorrectAnswer:'5',
+WrongAnswer0:'6',
+WrongAnswer1:'4',
+WrongAnswer2:'3'
+},
+{ 
+Identifier:'Q37',
+Query:'¿Dónde se encuentra el Cerro Uritorco, conocido por sus avistamientos a O.V.N.I.S.? ',
+CorrectAnswer:'Capilla del Monte, Córdoba',
+WrongAnswer0:'La Banda, Santiago del Estero',
+WrongAnswer1:'Logroño, España',
+WrongAnswer2:'Santiago, Chile'
+},
+{ 
+Identifier:'Q38',
+Query:'¿Dónde está el desierto del Gobi? ',
+CorrectAnswer:'Al sur de Mongolia',
+WrongAnswer0:'Al sur de China',
+WrongAnswer1:'Al sur de Japón',
+WrongAnswer2:'Ninguna es correcta'
+},
+{ 
+Identifier:'Q39',
+Query:'¿Dónde se encuentra Baiona? ',
+CorrectAnswer:'Pontevedra',
+WrongAnswer0:'Francia',
+WrongAnswer1:'País Vasco',
+WrongAnswer2:'Andalucia'
+},
+{ 
+Identifier:'Q40',
+Query:'¿A qué país pertenece la Isla de Pascua? ',
+CorrectAnswer:'Chile',
+WrongAnswer0:'Indonesia',
+WrongAnswer1:'Australia',
+WrongAnswer2:'Es un país'
+},
+{ 
+Identifier:'Q41',
+Query:'¿En qué país de África es el español el idioma oficial? ',
+CorrectAnswer:'Ghana',
+WrongAnswer0:'Camerún',
+WrongAnswer1:'Gabón',
+WrongAnswer2:'Guinea Ecuatorial'
+},
+{ 
+Identifier:'Q42',
+Query:'¿Cuál es la capital de Argelia? ',
+CorrectAnswer:'Argel',
+WrongAnswer0:'Argela',
+WrongAnswer1:'Arabia',
+WrongAnswer2:'Colombo'
+},
+{ 
+Identifier:'Q43',
+Query:'¿Dónde está la isla más joven del mundo, nacida en 2011 producto de una erupción volcánica? ',
+CorrectAnswer:'En Yemen',
+WrongAnswer0:'En Omán',
+WrongAnswer1:'En la Polinesia Francesa',
+WrongAnswer2:'En Australia'
+},
+{ 
+Identifier:'Q44',
+Query:'¿En qué continente está la India? ',
+CorrectAnswer:'Asia',
+WrongAnswer0:'Oceanía',
+WrongAnswer1:'América',
+WrongAnswer2:'Antártida'
+},
+{ 
+Identifier:'Q45',
+Query:'¿Cuál es la capital del estado de California? ',
+CorrectAnswer:'Sacramento',
+WrongAnswer0:'San Francisco',
+WrongAnswer1:'Los Ángeles',
+WrongAnswer2:'San Diego'
+},
+{ 
+Identifier:'Q46',
+Query:'¿Cuál es el mayor golfo de Africa? ',
+CorrectAnswer:'El de Guinea',
+WrongAnswer0:'El de Sirte',
+WrongAnswer1:'El de Gabés',
+WrongAnswer2:'Ninguna es correcta'
+},
+{ 
+Identifier:'Q47',
+Query:'¿Cúales son las ciudades autónomas de España? ',
+CorrectAnswer:'Ceuta y Melilla',
+WrongAnswer0:'Melilla y Alhucemas',
+WrongAnswer1:'Melilla y Nador',
+WrongAnswer2:'Ceuta y Villa Sanjurjo'
+},
+{ 
+Identifier:'Q48',
+Query:'¿Cúal es la capital de Alemania? ',
+CorrectAnswer:'Berlín',
+WrongAnswer0:'Múnich',
+WrongAnswer1:'Frankfurt',
+WrongAnswer2:'Dublin'
+},
+{ 
+Identifier:'Q49',
+Query:'¿Dónde está la ciudad de Mostar? ',
+CorrectAnswer:'Bosnia y Herzegovina',
+WrongAnswer0:'Serbia',
+WrongAnswer1:'Montenegro',
+WrongAnswer2:'Croacia'
+},
+{ 
+Identifier:'Q50',
+Query:'¿De dónde es capital Thimbu? ',
+CorrectAnswer:'De Bután',
+WrongAnswer0:'De Thimbu',
+WrongAnswer1:'De Nepal',
+WrongAnswer2:'Ninguna es correcta'
+}
+]
+}
+{ 
+' Deportes': [  
+{ 
+Identifier:'Q51',
+Query:'¿De que deporte es el kemari uno de los principales antecesores? ',
+CorrectAnswer:'Fútbol',
+WrongAnswer0:'Ténis',
+WrongAnswer1:'Rugby',
+WrongAnswer2:'Karate'
+},
+{ 
+Identifier:'Q52',
+Query:'¿Cuál es el clásico rival del Flamengo (BRA)? ',
+CorrectAnswer:'Corinthians',
+WrongAnswer0:'Palmeiras',
+WrongAnswer1:'Cruzeiro',
+WrongAnswer2:'São Paulo'
+},
+{ 
+Identifier:'Q53',
+Query:'¿Qué jugadora de hockey sobre césped ha ganado 7 veces el premio a la mejor jugadora del mundo de 2013? ',
+CorrectAnswer:'Luciana Aymar',
+WrongAnswer0:'Natascha Keller',
+WrongAnswer1:'Alyson Annan',
+WrongAnswer2:'Maartje Paumen'
+},
+{ 
+Identifier:'Q54',
+Query:'¿Cuántas finales del mundo jugó la Selección Argentina de fútbol? ',
+CorrectAnswer:'Cuatro',
+WrongAnswer0:'Cinco',
+WrongAnswer1:'Seis',
+WrongAnswer2:'Tres'
+},
+{ 
+Identifier:'Q55',
+Query:'¿Quién marcó el gol 3.500 en Liga del Atlético de Madrid? ',
+CorrectAnswer:'Christian Vieri',
+WrongAnswer0:'Zinedine Zidane',
+WrongAnswer1:'Luka Modric',
+WrongAnswer2:'Adrián Escudero'
+},
+{ 
+Identifier:'Q56',
+Query:'¿Cuántos mangos por lado tiene el futbolín? ',
+CorrectAnswer:'Cuatro',
+WrongAnswer0:'Dos',
+WrongAnswer1:'Tres',
+WrongAnswer2:'Cinco'
+},
+{ 
+Identifier:'Q57',
+Query:'¿Cuál es el estilo de natación más rápido? ',
+CorrectAnswer:'Crol',
+WrongAnswer0:'Espalda',
+WrongAnswer1:'Mariposa',
+WrongAnswer2:'Pecho'
+},
+{ 
+Identifier:'Q58',
+Query:'¿Cuántos jugadores componen un equipo de rugby? ',
+CorrectAnswer:'15',
+WrongAnswer0:'11',
+WrongAnswer1:'12',
+WrongAnswer2:'21'
+},
+{ 
+Identifier:'Q59',
+Query:'¿Cuántas puntas de cada color hay en un tablero de backgammon? ',
+CorrectAnswer:'Doce',
+WrongAnswer0:'Ocho',
+WrongAnswer1:'Catorce',
+WrongAnswer2:'Dieciséis'
+},
+{ 
+Identifier:'Q60',
+Query:'¿En qué país se inventó el voleibol? ',
+CorrectAnswer:'Estados Unidos',
+WrongAnswer0:'Gran Bretaña',
+WrongAnswer1:'Francia',
+WrongAnswer2:'Rusia'
+},
+{ 
+Identifier:'Q61',
+Query:'¿Cuál de las siguientes modalidades no forma parte del deporte rural vasco? ',
+CorrectAnswer:'Desintegramiento de piedra',
+WrongAnswer0:'Arrastre de piedra',
+WrongAnswer1:'Lanzamiento de fardo',
+WrongAnswer2:'Corte de troncos'
+},
+{ 
+Identifier:'Q62',
+Query:'¿Qué tienen en común Ty Cobb, Cy Young y Roberto Clemente? ',
+CorrectAnswer:'Son jugadores de béisbol',
+WrongAnswer0:'Son jugadores de fútbol',
+WrongAnswer1:'Son jugadores de baloncesto',
+WrongAnswer2:'Son jugadores de golf'
+},
+{ 
+Identifier:'Q63',
+Query:'¿Dónde se jugará la Copa Mundial de Rugby en 2015? ',
+CorrectAnswer:'Inglaterra',
+WrongAnswer0:'Australia',
+WrongAnswer1:'Escocia',
+WrongAnswer2:'Gales'
+},
+{ 
+Identifier:'Q64',
+Query:'¿Qué selección acumula mayor cantidad de expulsados en  mundiales de fútbol? ',
+CorrectAnswer:'Argentina',
+WrongAnswer0:'Brasil',
+WrongAnswer1:'Italia',
+WrongAnswer2:'Camerún'
+},
+{ 
+Identifier:'Q65',
+Query:'¿Quién inventó el arte marcial llamado Jeet Kune Do? ',
+CorrectAnswer:'Bruce Lee',
+WrongAnswer0:'David Carradine',
+WrongAnswer1:'Kato Mimoko',
+WrongAnswer2:'Ninguna es correcta'
+},
+{ 
+Identifier:'Q66',
+Query:'¿De qué deporte es el longboard una de las modalidades? ',
+CorrectAnswer:'Skateboard',
+WrongAnswer0:'Snowboard',
+WrongAnswer1:'Alpinismo',
+WrongAnswer2:'Surf'
+},
+{ 
+Identifier:'Q67',
+Query:'¿En qué deporte se destaca Jonny Wilkinson? ',
+CorrectAnswer:'Rugby',
+WrongAnswer0:'Fútbol',
+WrongAnswer1:'Atletismo',
+WrongAnswer2:'Remo'
+},
+{ 
+Identifier:'Q68',
+Query:'¿De qué color es el cero en el cilindro de la ruleta? ',
+CorrectAnswer:'Verde',
+WrongAnswer0:'Blanco',
+WrongAnswer1:'Negro',
+WrongAnswer2:'Rojo'
+},
+{ 
+Identifier:'Q69',
+Query:'¿A qué barrio porteño pertenece el club de fútbol San Lorenzo? ',
+CorrectAnswer:'Boedo',
+WrongAnswer0:'La Boca',
+WrongAnswer1:'Liniers',
+WrongAnswer2:'Paternal'
+},
+{ 
+Identifier:'Q70',
+Query:'¿Cuánto pesa aproximadamente una bola de bolera? ',
+CorrectAnswer:'Siete kilos y cuarto',
+WrongAnswer0:'5 kilos y cuarto',
+WrongAnswer1:'Cuatro kilos y medio',
+WrongAnswer2:'Ocho kilos y cuarto'
+},
+{ 
+Identifier:'Q71',
+Query:'¿Cuántos puntos vale un tiro libre ensectado en baloncesto? ',
+CorrectAnswer:'Uno',
+WrongAnswer0:'Dos',
+WrongAnswer1:'Tres',
+WrongAnswer2:'Depende'
+},
+{ 
+Identifier:'Q72',
+Query:'¿Cuál es el estadio de fútbol con mayor capacidad en América? ',
+CorrectAnswer:'Estadio Azteca (México)',
+WrongAnswer0:'Estadio Maracaná (Brasil)',
+WrongAnswer1:'Estadio Monumentar (Argentina)',
+WrongAnswer2:'Estadio Morumbi (Brasil)'
+},
+{ 
+Identifier:'Q73',
+Query:'¿Qué tipo de competición es el Giro de Italia? ',
+CorrectAnswer:'Una carrera ciclista',
+WrongAnswer0:'Una competición de vela',
+WrongAnswer1:'Un maratón',
+WrongAnswer2:'Una carrera automovilística'
+},
+{ 
+Identifier:'Q74',
+Query:'¿Cuánto dura un partido de fútbol? ',
+CorrectAnswer:'90 minutos',
+WrongAnswer0:'45 minutos',
+WrongAnswer1:'75 minutos',
+WrongAnswer2:'80 minutos'
+},
+{ 
+Identifier:'Q75',
+Query:'¿Cuál es el derbi más esperado en Andalucía? ',
+CorrectAnswer:'Betis vs Sevilla',
+WrongAnswer0:'Real Madrid vs At. Madrid',
+WrongAnswer1:'Real Madrid vs Sevilla',
+WrongAnswer2:'Granada vs Málaga'
+},
+{ 
+Identifier:'Q76',
+Query:'¿Cómo se llama la zona de hierba rasa donde está ubivado el hoyo en golf? ',
+CorrectAnswer:'Green',
+WrongAnswer0:'Esplanada',
+WrongAnswer1:'Campo',
+WrongAnswer2:'Terreno'
+},
+{ 
+Identifier:'Q77',
+Query:'¿Cuál de estas frases NO fue dicha por Diego Armando Maradona? ',
+CorrectAnswer:'La pelota no dobla',
+WrongAnswer0:'Pelé, debutó con un pibe',
+WrongAnswer1:'Segurola y La Habana 4310 7mo piso',
+WrongAnswer2:'La pelota no se mancha'
+},
+{ 
+Identifier:'Q78',
+Query:'¿Cuál de estos pilotos no es de F1? ',
+CorrectAnswer:'Richard Petty',
+WrongAnswer0:'Fernando Alonso',
+WrongAnswer1:'Sebastian Vettel',
+WrongAnswer2:'Mark Webber'
+},
+{ 
+Identifier:'Q79',
+Query:'¿A qué tipo de billa se juega con más bolas? ',
+CorrectAnswer:'Snooker',
+WrongAnswer0:'Bola 9',
+WrongAnswer1:'Billar español',
+WrongAnswer2:'Billar italiano'
+},
+{ 
+Identifier:'Q80',
+Query:'¿De qué nacionalidad es el entrenador de fútbol Tata Martino? ',
+CorrectAnswer:'Argentina',
+WrongAnswer0:'Italia',
+WrongAnswer1:'España',
+WrongAnswer2:'Brasil'
+},
+{ 
+Identifier:'Q81',
+Query:'¿En cuál de estos deportes no hay árbitro? ',
+CorrectAnswer:'Ultimate',
+WrongAnswer0:'Football',
+WrongAnswer1:'Basketball',
+WrongAnswer2:'Volleyball'
+},
+{ 
+Identifier:'Q82',
+Query:'¿Cuál es el país de origen del futbolista Lionel Messi? ',
+CorrectAnswer:'Argentina',
+WrongAnswer0:'España',
+WrongAnswer1:'Brasil',
+WrongAnswer2:'Chile'
+},
+{ 
+Identifier:'Q83',
+Query:'¿Cómo se llama la cantera del FC Barcelona? ',
+CorrectAnswer:'La Masía',
+WrongAnswer0:'El Chalet',
+WrongAnswer1:'La Fábrica',
+WrongAnswer2:'La Depuradora'
+},
+{ 
+Identifier:'Q84',
+Query:'¿Cuál de los siguientes es un truco de skate? ',
+CorrectAnswer:'Ollie',
+WrongAnswer0:'Mollie',
+WrongAnswer1:'Clop',
+WrongAnswer2:'Superclop'
+},
+{ 
+Identifier:'Q85',
+Query:'Cuándo el árbitro de fútbol hace sonar su silbato a los 90 minutos ¿Qué significa? ',
+CorrectAnswer:'Finalización del partido',
+WrongAnswer0:'Medio tiempo',
+WrongAnswer1:'Falta',
+WrongAnswer2:'Tarjeta'
+},
+{ 
+Identifier:'Q86',
+Query:'¿Quién ganó el mundial de fútbol del año 2002? ',
+CorrectAnswer:'Brasil',
+WrongAnswer0:'Italia',
+WrongAnswer1:'España',
+WrongAnswer2:'Francia'
+},
+{ 
+Identifier:'Q87',
+Query:'¿A la selección de rugby de qué país se los conoce como Los Pumas? ',
+CorrectAnswer:'Argentina',
+WrongAnswer0:'Sudáfrica',
+WrongAnswer1:'Australia',
+WrongAnswer2:'Gales'
+},
+{ 
+Identifier:'Q88',
+Query:'¿Cómo se llama el estadio del Universidad de Las Palmas? ',
+CorrectAnswer:'Maspalomas',
+WrongAnswer0:'Pedro Escartín',
+WrongAnswer1:'Monumental',
+WrongAnswer2:'Los pajaricos'
+},
+{ 
+Identifier:'Q89',
+Query:'¿En cuál de estas situaciones se sacará una bandera amarilla, o incluso roja, en las carreras de coches? ',
+CorrectAnswer:'Un peligro en la pista',
+WrongAnswer0:'Se ha declarado un ganador',
+WrongAnswer1:'Queda una vuelta',
+WrongAnswer2:'La carrera va a empezar'
+},
+{ 
+Identifier:'Q90',
+Query:'¿Qué país ganó el Mundial de balonmano en el año 2013? ',
+CorrectAnswer:'España',
+WrongAnswer0:'Francia',
+WrongAnswer1:'Croacia',
+WrongAnswer2:'Serbia'
+},
+{ 
+Identifier:'Q91',
+Query:'¿En cuántos mundiales de fútbol participó la selección de Canadá? ',
+CorrectAnswer:'1',
+WrongAnswer0:'0',
+WrongAnswer1:'3',
+WrongAnswer2:'5'
+},
+{ 
+Identifier:'Q92',
+Query:'¿Dónde se inventó el tenis de mesa? ',
+CorrectAnswer:'Inglaterra',
+WrongAnswer0:'China',
+WrongAnswer1:'Japón',
+WrongAnswer2:'Korea del Sur'
+},
+{ 
+Identifier:'Q93',
+Query:'¿Qué jugador francés ha ganado un balón de oro mientras jugaba en Italia? ',
+CorrectAnswer:'Zidane',
+WrongAnswer0:'Platini',
+WrongAnswer1:'Ribery',
+WrongAnswer2:'Maradona'
+},
+{ 
+Identifier:'Q94',
+Query:'¿Qué país es campeón del mundo de balonmano masculino del 2013? ',
+CorrectAnswer:'España',
+WrongAnswer0:'Hungria',
+WrongAnswer1:'Alemania',
+WrongAnswer2:'Francia'
+},
+{ 
+Identifier:'Q95',
+Query:'¿Cómo se llama el primer sueco que jugó en el FC Barcelona? ',
+CorrectAnswer:'Henrik Larsson',
+WrongAnswer0:'Zlatan Larsson',
+WrongAnswer1:'Henrik Ibrahimovic',
+WrongAnswer2:'Zlatan Ibrahimovic'
+},
+{ 
+Identifier:'Q96',
+Query:'¿De dónde viene el jugador Alexis Sánchez? ',
+CorrectAnswer:'Chile',
+WrongAnswer0:'India',
+WrongAnswer1:'España',
+WrongAnswer2:'Moscú'
+},
+{ 
+Identifier:'Q97',
+Query:'¿Con qué sobrenomnre apodó el Presidente de la FIFA a Cristiano Ronaldo? ',
+CorrectAnswer:'El Comandante',
+WrongAnswer0:'El Coloso',
+WrongAnswer1:'El Chulito',
+WrongAnswer2:'O Rei'
+},
+{ 
+Identifier:'Q98',
+Query:'¿Quién quedó número 1 del mundo de tenis en 2008? ',
+CorrectAnswer:'Rafael Nadal',
+WrongAnswer0:'Roger Federer',
+WrongAnswer1:'Novak Djokovic',
+WrongAnswer2:'Carlos Moyá'
+},
+{ 
+Identifier:'Q99',
+Query:'¿Cómo se llama el estadio del FCBarcelona? ',
+CorrectAnswer:'Camp Nou',
+WrongAnswer0:'Santiago Bernabeu',
+WrongAnswer1:'La Masia',
+WrongAnswer2:'Barcelona Camp'
+},
+{ 
+Identifier:'Q100',
+Query:'¿Quién es el máximo goleador de la selección argentina de fútbol? ',
+CorrectAnswer:'Batistuta',
+WrongAnswer0:'Maradona',
+WrongAnswer1:'Kempes',
+WrongAnswer2:'Caniggia'
+}
+]
+}
+{ 
+' Arte y Literatura': [  
+{ 
+Identifier:'Q101',
+Query:'¿Cuál era la nacionalidad de Heri Cartier-Bresson, considerado por muchos el padre del fotoreportaje? ',
+CorrectAnswer:'Francesa',
+WrongAnswer0:'Británica',
+WrongAnswer1:'Española',
+WrongAnswer2:'Alemana'
+},
+{ 
+Identifier:'Q102',
+Query:'¿Quién pintó el cuado "El jardín de las delicias"? ',
+CorrectAnswer:'El Bosco',
+WrongAnswer0:'Carvaggio',
+WrongAnswer1:'Velázquez',
+WrongAnswer2:'Arcimboldo'
+},
+{ 
+Identifier:'Q103',
+Query:'¿Qué ciudades describe Italo Calvino en "Las ciudades invisibles"? ',
+CorrectAnswer:'Ciudades imaginadas por Marco Polo',
+WrongAnswer0:'Ciudades asiáticas',
+WrongAnswer1:'Las que Marco Polo visitó en sus viajes',
+WrongAnswer2:'Ciudades europeas'
+},
+{ 
+Identifier:'Q104',
+Query:'¿Cuál es la ciudad fetiche del escritor Paul Auster? ',
+CorrectAnswer:'Nueva York',
+WrongAnswer0:'Londres',
+WrongAnswer1:'París',
+WrongAnswer2:'Chicago'
+},
+{ 
+Identifier:'Q105',
+Query:'¿Quién escribió “El viejo y el mar? ',
+CorrectAnswer:'Ernest Hemingway',
+WrongAnswer0:'Norman Mailer',
+WrongAnswer1:'Gabriel García Márquez',
+WrongAnswer2:'Truman Capote'
+},
+{ 
+Identifier:'Q106',
+Query:'¿Quién vivía en el 221B de Backer Street? ',
+CorrectAnswer:'Sherlock Holmes',
+WrongAnswer0:'Truman Capote',
+WrongAnswer1:'Philip Marlowe',
+WrongAnswer2:'Arthur Conan Doyle'
+},
+{ 
+Identifier:'Q107',
+Query:'¿Qué fotografía, sobre todo, Anne Geddes? ',
+CorrectAnswer:'Bebés',
+WrongAnswer0:'Famosos',
+WrongAnswer1:'Farolas',
+WrongAnswer2:'Palomas'
+},
+{ 
+Identifier:'Q108',
+Query:'¿A qué género pertenece la novela "La historia del ojo" de George Bataille? ',
+CorrectAnswer:'Erótico',
+WrongAnswer0:'Ciencia-ficción',
+WrongAnswer1:'Negro',
+WrongAnswer2:'Romántico'
+},
+{ 
+Identifier:'Q109',
+Query:'¿Cuál de los siguientes artistas es una figura clave del dadaísmo y el surrealismo? ',
+CorrectAnswer:'Max Ernst',
+WrongAnswer0:'Claude Monet',
+WrongAnswer1:'Vincent Van Gogh',
+WrongAnswer2:'Rafael'
+},
+{ 
+Identifier:'Q110',
+Query:'¿Qué profesión tenía Hércules Poiriot en las novelas de Agatha Christie? ',
+CorrectAnswer:'Detective',
+WrongAnswer0:'Policía',
+WrongAnswer1:'Médico',
+WrongAnswer2:'Paul Verlaine'
+},
+{ 
+Identifier:'Q111',
+Query:'¿Quién es el autor de la obra teatral “Casa de Muñecas”? ',
+CorrectAnswer:'Henrik Ibsen',
+WrongAnswer0:'Isaac Asimov',
+WrongAnswer1:'Émile Zola',
+WrongAnswer2:'Sigrid Undset'
+},
+{ 
+Identifier:'Q112',
+Query:'¿Qué cosa perdida buscaba Marcel Proust? ',
+CorrectAnswer:'El tiempo',
+WrongAnswer0:'El amor',
+WrongAnswer1:'La fortuna',
+WrongAnswer2:'La existencia'
+},
+{ 
+Identifier:'Q113',
+Query:'¿Donde muere el padre del niño protagonista de la novela "Tan fuerte, tan cerca" de Jonathan Safran-Foer? ',
+CorrectAnswer:'En los atentados del World Trade Center',
+WrongAnswer0:'En la guerra de Vietnam',
+WrongAnswer1:'En la guerra de Irak',
+WrongAnswer2:'En un accidente de coche'
+},
+{ 
+Identifier:'Q114',
+Query:'¿Qué era Le Chat Noir, el establecimiento que anunciaban los carteles el famoso gato negro de París? ',
+CorrectAnswer:'Un cabaret',
+WrongAnswer0:'Un restaurante',
+WrongAnswer1:'Un cine',
+WrongAnswer2:'Una biblioteca'
+},
+{ 
+Identifier:'Q115',
+Query:'Los amantes de Teruel… ',
+CorrectAnswer:'Tonta ella y tonto él',
+WrongAnswer0:'Viajaban en carrusel',
+WrongAnswer1:'Vivían en un burdel',
+WrongAnswer2:'Existieron en papel'
+},
+{ 
+Identifier:'Q116',
+Query:'¿Quién escribió "El túnel"? ',
+CorrectAnswer:'Ernesto Sabato',
+WrongAnswer0:'Gabrial García Márquez',
+WrongAnswer1:'Mario Vargas Llosa',
+WrongAnswer2:'Jorge Luis Borges'
+},
+{ 
+Identifier:'Q117',
+Query:'¿Quién es el autor de "El retrato de Dorian Gray"? ',
+CorrectAnswer:'Oscar Wilde',
+WrongAnswer0:'Charles Dickens',
+WrongAnswer1:'Arthur Conan Doyle',
+WrongAnswer2:'George Orwell'
+},
+{ 
+Identifier:'Q118',
+Query:'¿Quién es el autor de "Moby Dick"? ',
+CorrectAnswer:'Herman Melville',
+WrongAnswer0:'Henry David Thoreau',
+WrongAnswer1:'Ralph Waldo Emerson',
+WrongAnswer2:'Henry James'
+},
+{ 
+Identifier:'Q119',
+Query:'¿Qué editorial ha publicado los dos últimos libros del humorista y escritor Miguel Noguera? ',
+CorrectAnswer:'Blackie Books',
+WrongAnswer0:'Mondadori',
+WrongAnswer1:'Alpha Decay',
+WrongAnswer2:'Planeta'
+},
+{ 
+Identifier:'Q120',
+Query:'¿Quién introdujo la lira en la lírica española? ',
+CorrectAnswer:'Garcilaso de la Vega',
+WrongAnswer0:'Luis de Góngora',
+WrongAnswer1:'Lope de Vega',
+WrongAnswer2:'Miguel de Cervantes'
+},
+{ 
+Identifier:'Q121',
+Query:'¿Cómo se llama el protagonista de "El código Da Vinci" de Dan Brown? ',
+CorrectAnswer:'Robert Langdom',
+WrongAnswer0:'Tom Hanks',
+WrongAnswer1:'Mr. White',
+WrongAnswer2:'Robert Black'
+},
+{ 
+Identifier:'Q122',
+Query:'¿Cuál fue el género más cultivado por los autores de la generación del 27? ',
+CorrectAnswer:'Poesía',
+WrongAnswer0:'Ensayo',
+WrongAnswer1:'Teatro',
+WrongAnswer2:'Novela'
+},
+{ 
+Identifier:'Q123',
+Query:'¿Qué describe una prosopografía? ',
+CorrectAnswer:'El físico de una persona',
+WrongAnswer0:'El carácter de una persona',
+WrongAnswer1:'El fisico y el carácter de una persona',
+WrongAnswer2:'Caricaturiza a una persona'
+},
+{ 
+Identifier:'Q124',
+Query:'¿Qué escritor español firmaba como Fígaro? ',
+CorrectAnswer:'Mariano José de Larra',
+WrongAnswer0:'Federico García Lorca',
+WrongAnswer1:'Antonio Machado',
+WrongAnswer2:'Francisco de Quevedo'
+},
+{ 
+Identifier:'Q125',
+Query:'¿A dónde pertenece la colección de relatos folklóricos llamada Mabinogion? ',
+CorrectAnswer:'Gales',
+WrongAnswer0:'Inglaterra',
+WrongAnswer1:'Irlanda',
+WrongAnswer2:'Escocia'
+},
+{ 
+Identifier:'Q126',
+Query:'¿Quién escribió la música del himno de la Comunidad de Valencia? ',
+CorrectAnswer:'José Serrano Simeón',
+WrongAnswer0:'Maximiliano Thous Orts',
+WrongAnswer1:'Manuel de Falla Matheu',
+WrongAnswer2:'José Iturbi Baguena'
+},
+{ 
+Identifier:'Q127',
+Query:'¿A qué obra pertenece este fragmento: 'No es verdad, ángel de amor, que en esta apartada orilla…'? ',
+CorrectAnswer:'Don Juan Tenorio',
+WrongAnswer0:'Fígaro',
+WrongAnswer1:'Fausto',
+WrongAnswer2:'Quijote'
+},
+{ 
+Identifier:'Q128',
+Query:'¿En qué siglo nació el artista conocido como Caravaggio? ',
+CorrectAnswer:'XVI',
+WrongAnswer0:'XIV',
+WrongAnswer1:'XII',
+WrongAnswer2:'XVIII'
+},
+{ 
+Identifier:'Q129',
+Query:'¿Cómo se llama a la gente que no posee magia en la saga de Harry Potter? ',
+CorrectAnswer:'Muggles',
+WrongAnswer0:'Humano',
+WrongAnswer1:'Simplón',
+WrongAnswer2:'Impuro'
+},
+{ 
+Identifier:'Q130',
+Query:'Qué obra de mármol de Miguel Ángel se encuentra en la Basílica de San Pedro? ',
+CorrectAnswer:'La Piedad',
+WrongAnswer0:'Moisés',
+WrongAnswer1:'Capilla Sixtina',
+WrongAnswer2:'David'
+},
+{ 
+Identifier:'Q131',
+Query:'Gato con guantes… ',
+CorrectAnswer:'No caza ratones',
+WrongAnswer0:'Y con botas',
+WrongAnswer1:'No rasca bigotes',
+WrongAnswer2:'No corre al trote'
+},
+{ 
+Identifier:'Q132',
+Query:'¿Qué forma es característica de las plantas de las iglesias románicas? ',
+CorrectAnswer:'Cruz',
+WrongAnswer0:'Óvalo',
+WrongAnswer1:'Rectángulo',
+WrongAnswer2:'Cuadrado'
+},
+{ 
+Identifier:'Q133',
+Query:'La autoría de la pintua 'El Coloso' se ha puesto muy en duda en los últimos años. ¿A quién se le atribuye tradicionalmente? ',
+CorrectAnswer:'Goya',
+WrongAnswer0:'Velázquez',
+WrongAnswer1:'Sorolla',
+WrongAnswer2:'Quevedo'
+},
+{ 
+Identifier:'Q134',
+Query:'¿Qué odia Mafalda? ',
+CorrectAnswer:'La sopa',
+WrongAnswer0:'El Pájaro Loco',
+WrongAnswer1:'Los panqueques',
+WrongAnswer2:'A Manolito'
+},
+{ 
+Identifier:'Q135',
+Query:'¿A qué pintor pertenece la obra 'Serpientes de agua'? ',
+CorrectAnswer:'Gustave Klimt',
+WrongAnswer0:'Vicent Van Gogh',
+WrongAnswer1:'Pablo Picasso',
+WrongAnswer2:'Roger Van der Weiden'
+},
+{ 
+Identifier:'Q136',
+Query:'Arroz con leche me quiero… ',
+CorrectAnswer:'Casar',
+WrongAnswer0:'Escapar',
+WrongAnswer1:'Matar',
+WrongAnswer2:'Cazar'
+},
+{ 
+Identifier:'Q137',
+Query:'¿En qué está esculpida la Venus de MIlo? ',
+CorrectAnswer:'Mármol',
+WrongAnswer0:'Bronce',
+WrongAnswer1:'Piedra',
+WrongAnswer2:'Madera'
+},
+{ 
+Identifier:'Q138',
+Query:'¿Quién fue Antonio Lucio Vivaldi? ',
+CorrectAnswer:'Violinista y Compositor del Barroco',
+WrongAnswer0:'Guitarrista Clásico',
+WrongAnswer1:'Tenor de Opera',
+WrongAnswer2:'Clavesista Italiano'
+},
+{ 
+Identifier:'Q139',
+Query:'¿Quién hizo la obra "La vida es sueño"? ',
+CorrectAnswer:'Calderón de la Barca',
+WrongAnswer0:'Miguel de Cervantes',
+WrongAnswer1:'Feliz Lope de Vega',
+WrongAnswer2:'Tirso de Molina'
+},
+{ 
+Identifier:'Q140',
+Query:'¿Quién pintó La Capilla Sixtina? ',
+CorrectAnswer:'Miguel Ángel',
+WrongAnswer0:'Giorgio Vasari',
+WrongAnswer1:'Leonardo Da Vinci',
+WrongAnswer2:'Tiziano'
+},
+{ 
+Identifier:'Q141',
+Query:'¿Qué filósofo dijo 'solo sé que no sé nada'? ',
+CorrectAnswer:'Sócrates',
+WrongAnswer0:'Heráclito',
+WrongAnswer1:'Platón',
+WrongAnswer2:'Tales de Mileto'
+},
+{ 
+Identifier:'Q142',
+Query:'¿Quién es la autora de "Los Juegos del Hambre"? ',
+CorrectAnswer:'Suzanne Collins',
+WrongAnswer0:'Blue Jeans',
+WrongAnswer1:'Jordi Sierra i Fabra',
+WrongAnswer2:'Bono Bidari'
+},
+{ 
+Identifier:'Q143',
+Query:'¿Quién es la autor del libro "El gato negro y otros cuentos de terror"? ',
+CorrectAnswer:'Edgar Allan Poe',
+WrongAnswer0:'Manuel Broncano',
+WrongAnswer1:'Julio-César Santoyo',
+WrongAnswer2:'Jesús Gabán'
+},
+{ 
+Identifier:'Q144',
+Query:'¿De qué siglo es representativo el arte mozárabe? ',
+CorrectAnswer:'X',
+WrongAnswer0:'IIX',
+WrongAnswer1:'V',
+WrongAnswer2:'XIX'
+},
+{ 
+Identifier:'Q145',
+Query:'¿A quién está dedicada la torre más alta de la Sagrada Familia de Gaudí, aún pendiente de construcción? ',
+CorrectAnswer:'Jesucristo',
+WrongAnswer0:'La Virgen María',
+WrongAnswer1:'El Espiritú Santo',
+WrongAnswer2:'La Sagrada Familia'
+},
+{ 
+Identifier:'Q146',
+Query:'¿Cómo despertó el principe a la Bella Durmiente? ',
+CorrectAnswer:'Besándola',
+WrongAnswer0:'Tocando palmas',
+WrongAnswer1:'Acariciándola',
+WrongAnswer2:'Gritándole'
+},
+{ 
+Identifier:'Q147',
+Query:'¿Quién compuso la famosa canción "Bohemian Rhapsody"? ',
+CorrectAnswer:'Fblackdie Mercury',
+WrongAnswer0:'John Lennon',
+WrongAnswer1:'Elton John',
+WrongAnswer2:'David Bowie'
+},
+{ 
+Identifier:'Q148',
+Query:'¿Quién pintó 'Idas y venidas. La Martinica'? ',
+CorrectAnswer:'Paul Gauguin',
+WrongAnswer0:'Paul Cézanne',
+WrongAnswer1:'Pablo Picasso',
+WrongAnswer2:'Velázquez '
+},
+{ 
+Identifier:'Q149',
+Query:'¿Qué famosa artista estaba casada con su colega, Diego Rivera? ',
+CorrectAnswer:'Frida Kahlo',
+WrongAnswer0:'María Antonieta',
+WrongAnswer1:'Frida Alejandra',
+WrongAnswer2:'Antonieta '
+},
+{ 
+Identifier:'Q150',
+Query:'¿Qué artista expuso un orinal con el título 'La fuente'? ',
+CorrectAnswer:'Marcel Duchamp',
+WrongAnswer0:'Andy Warhol',
+WrongAnswer1:'Pablo Picasso ',
+WrongAnswer2:'Salvador Dalí '
+}
+]
+}
+{ 
+' Ciencia y Tecnologia': [  
+{ 
+Identifier:'Q151',
+Query:'¿Cuál de las sisguientes enfermedades ataca al higado? ',
+CorrectAnswer:'Hepatitis',
+WrongAnswer0:'Diabetes',
+WrongAnswer1:'Artrósis ',
+WrongAnswer2:'Cifoescoliosis'
+},
+{ 
+Identifier:'Q152',
+Query:'¿Cómo tomarías la sustancia alucinógena natural llamada ayahuasca? ',
+CorrectAnswer:'Ingerida',
+WrongAnswer0:'Inhalada ',
+WrongAnswer1:'Esnifada',
+WrongAnswer2:'Inyectada '
+},
+{ 
+Identifier:'Q153',
+Query:'¿Cuál es la función principal del instestino grueso? ',
+CorrectAnswer:'La absorción de agua ',
+WrongAnswer0:'La absorción de nutrientes',
+WrongAnswer1:'La digestión mecánica de los a#1FC868ntos',
+WrongAnswer2:'La digestión química de a#1FC868ntos'
+},
+{ 
+Identifier:'Q154',
+Query:'¿Qué hay en la boca del estómago? ',
+CorrectAnswer:'El cardías',
+WrongAnswer0:'El píloro',
+WrongAnswer1:'Los ácidos gástricos',
+WrongAnswer2:'El epilón mayor'
+},
+{ 
+Identifier:'Q155',
+Query:'¿Qué cambio de estado ocurre en la sublimación? ',
+CorrectAnswer:'De sólido a gaseoso',
+WrongAnswer0:'De sólido a líquido',
+WrongAnswer1:'De gaseoso a líquido',
+WrongAnswer2:'De líquido a solido'
+},
+{ 
+Identifier:'Q156',
+Query:'¿Qué órgano del cuerpo humano produce la bilis? ',
+CorrectAnswer:'Hígado',
+WrongAnswer0:'Páncreas',
+WrongAnswer1:'Intestino delgado',
+WrongAnswer2:'Riñon '
+},
+{ 
+Identifier:'Q157',
+Query:'¿De qué color es la sange de los peces? ',
+CorrectAnswer:'Rojo',
+WrongAnswer0:'Verde oscuro',
+WrongAnswer1:'Marrón oscuro',
+WrongAnswer2:'Azul '
+},
+{ 
+Identifier:'Q158',
+Query:'¿Cuál de los siguientes órganos NO es parte del sistema inmunológico? ',
+CorrectAnswer:'Esófago',
+WrongAnswer0:'Médula ósea',
+WrongAnswer1:'Bazo',
+WrongAnswer2:'Timo  '
+},
+{ 
+Identifier:'Q159',
+Query:'¿De donde de saca la sacarina? ',
+CorrectAnswer:'Del carbón',
+WrongAnswer0:'Del aceite de girasol',
+WrongAnswer1:'Del azúcar',
+WrongAnswer2:'Del azufre '
+},
+{ 
+Identifier:'Q160',
+Query:'¿Cuántas caras tiene un icosaedro? ',
+CorrectAnswer:'20',
+WrongAnswer0:'16',
+WrongAnswer1:'8',
+WrongAnswer2:'24 '
+},
+{ 
+Identifier:'Q161',
+Query:'¿Qué contiene el cactus llamado peyote? ',
+CorrectAnswer:'Mescalina ',
+WrongAnswer0:'LSD ',
+WrongAnswer1:'MDMA',
+WrongAnswer2:'Salvia'
+},
+{ 
+Identifier:'Q162',
+Query:'¿Qué se altera cuando nos damos un golpe en la cabeza que nos hace "ver las estrellas"? ',
+CorrectAnswer:'El nervio óptico',
+WrongAnswer0:'El hipotálamo',
+WrongAnswer1:'El bulbo raquídeo',
+WrongAnswer2:'La pituitaria'
+},
+{ 
+Identifier:'Q163',
+Query:'¿Cuál es el cérvido de mayor tamaño? ',
+CorrectAnswer:'El alce',
+WrongAnswer0:'El corzo',
+WrongAnswer1:'El ciervo',
+WrongAnswer2:'El pudu '
+},
+{ 
+Identifier:'Q164',
+Query:'¿Qué es el calostro? ',
+CorrectAnswer:'La primera leche materna',
+WrongAnswer0:'Un hueso de la espina dorsal',
+WrongAnswer1:'Una hormona',
+WrongAnswer2:'Una parte del intestino grueso'
+},
+{ 
+Identifier:'Q165',
+Query:'¿Cuál es el hueso más pequeño del cuerpo? ',
+CorrectAnswer:'El estribo',
+WrongAnswer0:'El yunque',
+WrongAnswer1:'La falange',
+WrongAnswer2:'Ninguna es correcta '
+},
+{ 
+Identifier:'Q166',
+Query:'¿Dónde vive el delfín rosado? ',
+CorrectAnswer:'En Brasil',
+WrongAnswer0:'En Oceanía',
+WrongAnswer1:'Solo en aguas cálidas',
+WrongAnswer2:'Solo en aguas muy frías '
+},
+{ 
+Identifier:'Q167',
+Query:'¿Qué estudia la icitología? ',
+CorrectAnswer:'Los peces',
+WrongAnswer0:'Los insectos',
+WrongAnswer1:'Las erupciones cutáneas',
+WrongAnswer2:'Las rocas'
+},
+{ 
+Identifier:'Q168',
+Query:'¿Cuál es el mamífero más grande conocido hasta la actualidad? ',
+CorrectAnswer:'Ballena Azul',
+WrongAnswer0:'Cachalote',
+WrongAnswer1:'Elefante',
+WrongAnswer2:'Rinoceronte '
+},
+{ 
+Identifier:'Q169',
+Query:'¿Qué es un equino? ',
+CorrectAnswer:'Un caballo',
+WrongAnswer0:'Una vaca',
+WrongAnswer1:'Un antílope',
+WrongAnswer2:'Una oveja'
+},
+{ 
+Identifier:'Q170',
+Query:'¿Qué causa furor en Internet? ',
+CorrectAnswer:'Los gatos',
+WrongAnswer0:'Los ratones',
+WrongAnswer1:'Los gansos',
+WrongAnswer2:'Los cangrejos '
+},
+{ 
+Identifier:'Q171',
+Query:'¿Con qué otro nombre se conoce el ciclo del agua? ',
+CorrectAnswer:'Ciclo hidrológico',
+WrongAnswer0:'Ciclo natural',
+WrongAnswer1:'Ciclo hidropónico',
+WrongAnswer2:'Ciclo acuoso '
+},
+{ 
+Identifier:'Q172',
+Query:'¿En qué parte del cuerpo tienen rayas el okapi? ',
+CorrectAnswer:'Las patas',
+WrongAnswer0:'La cabeza',
+WrongAnswer1:'El torso',
+WrongAnswer2:'No tiene rayas '
+},
+{ 
+Identifier:'Q173',
+Query:'¿Cuántas cavidades estomacales tiene una vaca? ',
+CorrectAnswer:'Cuatro ',
+WrongAnswer0:'Una',
+WrongAnswer1:'Dos',
+WrongAnswer2:'Tres'
+},
+{ 
+Identifier:'Q174',
+Query:'¿Por qué los cocodrilos mantienen la boca abierta durante largo rato? ',
+CorrectAnswer:'Para calentarse',
+WrongAnswer0:'Para hacer la digestión',
+WrongAnswer1:'Para beber agua',
+WrongAnswer2:'Por si se cuela algo que puedan comerse '
+},
+{ 
+Identifier:'Q175',
+Query:'¿Donde están los meniscos? ',
+CorrectAnswer:'En las rodillas',
+WrongAnswer0:'En los codos',
+WrongAnswer1:'En la punta del pie',
+WrongAnswer2:'En el peroné '
+},
+{ 
+Identifier:'Q176',
+Query:'¿Qué función cumplen los bigotes del gato? ',
+CorrectAnswer:'Son un órgano táctil',
+WrongAnswer0:'Son un órgano auditivo',
+WrongAnswer1:'Son un órgano olfativo',
+WrongAnswer2:'Riñon '
+},
+{ 
+Identifier:'Q177',
+Query:'¿Qué hace la cochinilla de la humedad si la tocamos? ',
+CorrectAnswer:'Se enrolla',
+WrongAnswer0:'Pica',
+WrongAnswer1:'Corre',
+WrongAnswer2:'Se muere'
+},
+{ 
+Identifier:'Q178',
+Query:'¿Qué es lo que transforma la leche en yogur? ',
+CorrectAnswer:'Una bacteria',
+WrongAnswer0:'Un virus',
+WrongAnswer1:'Un musgo',
+WrongAnswer2:'El tiempo'
+},
+{ 
+Identifier:'Q179',
+Query:'¿Con qué abren las ostras las nutrias de mar? ',
+CorrectAnswer:'Con una piedra',
+WrongAnswer0:'Con un palo',
+WrongAnswer1:'Con los dientes',
+WrongAnswer2:'Con las uñas '
+},
+{ 
+Identifier:'Q180',
+Query:'¿Qué tipo de mamífero es un conejo? ',
+CorrectAnswer:'Lagomorfo',
+WrongAnswer0:'Roedor',
+WrongAnswer1:'Marsupial',
+WrongAnswer2:'Equino '
+},
+{ 
+Identifier:'Q181',
+Query:'¿Cuántos rayos gamma hay en una neurona? ',
+CorrectAnswer:'Ninguno',
+WrongAnswer0:'Uno',
+WrongAnswer1:'Dos',
+WrongAnswer2:'De dos a tres'
+},
+{ 
+Identifier:'Q182',
+Query:'¿Qué es Plutón? ',
+CorrectAnswer:'Un planeta',
+WrongAnswer0:'Un satélite',
+WrongAnswer1:'Un plutoide',
+WrongAnswer2:'Ninguna es correcta '
+},
+{ 
+Identifier:'Q183',
+Query:'¿En qué lugar del cuerpo se produce la insulina? ',
+CorrectAnswer:'Páncreas',
+WrongAnswer0:'Hígado',
+WrongAnswer1:'Intestino',
+WrongAnswer2:'Riñon '
+},
+{ 
+Identifier:'Q184',
+Query:'¿Cómo se llama a los electrones que se encuentran en la última capa del átomo? ',
+CorrectAnswer:'Electrones de valencia ',
+WrongAnswer0:'Isotopos',
+WrongAnswer1:'Iones',
+WrongAnswer2:'Electrones'
+},
+{ 
+Identifier:'Q185',
+Query:'¿Cómo se llama a la sensibilidad dolorosa de los sonidos? ',
+CorrectAnswer:'Hiperacusia',
+WrongAnswer0:'Hipocusia',
+WrongAnswer1:'Micropsia',
+WrongAnswer2:'Hipoalgesia '
+},
+{ 
+Identifier:'Q186',
+Query:'¿Cuál de estas blackes sociales es de ámbito laboral? ',
+CorrectAnswer:'LinkedIn ',
+WrongAnswer0:'Facebook',
+WrongAnswer1:'Tuenti',
+WrongAnswer2:'Jobfire'
+},
+{ 
+Identifier:'Q187',
+Query:'¿Cómo se llama la parte de la estructura de una cúpula que la sostiene? ',
+CorrectAnswer:'Tambor',
+WrongAnswer0:'Nervaduras',
+WrongAnswer1:'Contrafuerte',
+WrongAnswer2:'Ninguna '
+},
+{ 
+Identifier:'Q188',
+Query:'¿Cómo se llama el nivel más alto de la marea? ',
+CorrectAnswer:'Pleamar',
+WrongAnswer0:'Bajamar',
+WrongAnswer1:'Repunte',
+WrongAnswer2:'Estacionario '
+},
+{ 
+Identifier:'Q189',
+Query:'¿Como debería estar una persona para que le fuera practicada una autopsia? ',
+CorrectAnswer:'Muerta',
+WrongAnswer0:'Sedada',
+WrongAnswer1:'En coma',
+WrongAnswer2:'Dormida '
+},
+{ 
+Identifier:'Q190',
+Query:'¿Con que parte del cuerpo hacen el zumbido las abejas? ',
+CorrectAnswer:'Con las alas',
+WrongAnswer0:'Con las patas',
+WrongAnswer1:'Con la boca',
+WrongAnswer2:'Con las antenas '
+},
+{ 
+Identifier:'Q191',
+Query:'¿Cómo se llama el incremento en el volumen,fluidez o frecuencia de las deposiciones? ',
+CorrectAnswer:'Diarrea',
+WrongAnswer0:'Estreñimiento',
+WrongAnswer1:'Diverticulosis',
+WrongAnswer2:'Hemorroides'
+},
+{ 
+Identifier:'Q192',
+Query:'¿Cómo se mide la fuerza del viento en el mar? ',
+CorrectAnswer:'Nudos',
+WrongAnswer0:'Pies',
+WrongAnswer1:'Zancadas',
+WrongAnswer2:'Kilómetros por hora '
+},
+{ 
+Identifier:'Q193',
+Query:'¿Cuál es el órgano que tiene como única función el placer? ',
+CorrectAnswer:'Clítoris',
+WrongAnswer0:'Vulva',
+WrongAnswer1:'Pene',
+WrongAnswer2:'Testículos '
+},
+{ 
+Identifier:'Q194',
+Query:'¿Qué droga de diseño,también conocida como MDMA, es análoga a la metanfetamina? ',
+CorrectAnswer:'Éxtasis',
+WrongAnswer0:'Polvo de ángel',
+WrongAnswer1:'Crack',
+WrongAnswer2:'Popper '
+},
+{ 
+Identifier:'Q195',
+Query:'¿Qué son las enzimas? ',
+CorrectAnswer:'Proteínas ',
+WrongAnswer0:'Células ',
+WrongAnswer1:'Glúcidos',
+WrongAnswer2:'Hadas '
+},
+{ 
+Identifier:'Q196',
+Query:'¿Con qué suele arreglarse un diente con caries? ',
+CorrectAnswer:'Empaste',
+WrongAnswer0:'Extrayéndolo',
+WrongAnswer1:'Limpieza bucal',
+WrongAnswer2:'Ortodoncia '
+},
+{ 
+Identifier:'Q197',
+Query:'¿Cuál es la ciencia que estudia la aplicación de la informática y las comunicaciones al hogar? ',
+CorrectAnswer:'Domótica',
+WrongAnswer0:'Robótica',
+WrongAnswer1:'Casática',
+WrongAnswer2:'Autología '
+},
+{ 
+Identifier:'Q198',
+Query:'¿Qué es el gavial (Gavialis gangeticus)? ',
+CorrectAnswer:'Cocodrilo',
+WrongAnswer0:'Hipopótamo',
+WrongAnswer1:'Serpiente',
+WrongAnswer2:'Tiburón '
+},
+{ 
+Identifier:'Q199',
+Query:'¿Qué sonido hace un elefante? ',
+CorrectAnswer:'Baritan',
+WrongAnswer0:'Brugen',
+WrongAnswer1:'Gruñen',
+WrongAnswer2:'Gritan '
+},
+{ 
+Identifier:'Q200',
+Query:'¿Cuál es la fórmula química del agua? ',
+CorrectAnswer:'H2O',
+WrongAnswer0:'HO',
+WrongAnswer1:'HO2',
+WrongAnswer2:'Agu '
+}
+]
+}
+{ 
+' Entretenimiento': [  
+{ 
+Identifier:'Q201',
+Query:'¿Qué premiada serie de televisión tiene como protagonista a un publicista? ',
+CorrectAnswer:'Mad Men',
+WrongAnswer0:'Shameless',
+WrongAnswer1:'Juego de Tronos',
+WrongAnswer2:'Downton Abbey '
+},
+{ 
+Identifier:'Q202',
+Query:'¿Como se llamaba la protagonista femenina de la serie de televisió',
+CorrectAnswer:'Elliot',
+WrongAnswer0:'Sarah',
+WrongAnswer1:'Jordan',
+WrongAnswer2:'Molly '
+},
+{ 
+Identifier:'Q203',
+Query:'¿Cómo se llamaba el personaje que interpretaba John Travolta en "Grease"? ',
+CorrectAnswer:'Danny Zuko',
+WrongAnswer0:'Danny Puño',
+WrongAnswer1:'Danny Grease',
+WrongAnswer2:'Danny Chulo '
+},
+{ 
+Identifier:'Q204',
+Query:'¿En qué año se estrenó la película de Disney "Pinocho"? ',
+CorrectAnswer:'1940',
+WrongAnswer0:'1950',
+WrongAnswer1:'1952',
+WrongAnswer2:'1946 '
+},
+{ 
+Identifier:'Q205',
+Query:'¿En qué país nació la Bauhaus? ',
+CorrectAnswer:'Alemania',
+WrongAnswer0:'Holanda',
+WrongAnswer1:'Rusia',
+WrongAnswer2:'Estados Unidos '
+},
+{ 
+Identifier:'Q206',
+Query:'Arroz con leche me quiero casar con una señorita de… ',
+CorrectAnswer:'San Nicolás',
+WrongAnswer0:'San Martin',
+WrongAnswer1:'San Justo',
+WrongAnswer2:'San José '
+},
+{ 
+Identifier:'Q207',
+Query:'¿Qué director de cine norteamericano aterrorizó a los Estados Unidos con su adaptación radiofónica de "La guerra de los mundos"? ',
+CorrectAnswer:'Orson Welles',
+WrongAnswer0:'Alfblack Hitchcock',
+WrongAnswer1:'Stanley Kubrik',
+WrongAnswer2:'Sergio Leone '
+},
+{ 
+Identifier:'Q208',
+Query:'¿Cuál es el verdadero nombre de Alejandro Sanz? ',
+CorrectAnswer:'Alejandro Sánchez Pizarro',
+WrongAnswer0:'Alejandro Sánchez Gutiérrez',
+WrongAnswer1:'Alexander Santiago Seguiz',
+WrongAnswer2:'Alejandro Alberto Sanzón '
+},
+{ 
+Identifier:'Q209',
+Query:'¿Qué personaje famoso lidera la banda llamada Nancys Rubias? ',
+CorrectAnswer:'Mario Vaquerizo',
+WrongAnswer0:'Nacho Canut',
+WrongAnswer1:'Alaska',
+WrongAnswer2:'Nacho Vidal '
+},
+{ 
+Identifier:'Q210',
+Query:'¿Quién es la mascota de SEGA? ',
+CorrectAnswer:'Sonic',
+WrongAnswer0:'Mario',
+WrongAnswer1:'Pac Man',
+WrongAnswer2:'Ryu '
+},
+{ 
+Identifier:'Q211',
+Query:'¿Cuántos premios Grammy ha ganado Britney Spears? ',
+CorrectAnswer:'Uno',
+WrongAnswer0:'Dos',
+WrongAnswer1:'Tres',
+WrongAnswer2:'Ninguno '
+},
+{ 
+Identifier:'Q212',
+Query:'¿Quién es Bella en la saga "Crepúsculo"? ',
+CorrectAnswer:'Kristen Stewart',
+WrongAnswer0:'Cristina Ricci',
+WrongAnswer1:'Emma Watson',
+WrongAnswer2:'Dakota Fanning '
+},
+{ 
+Identifier:'Q213',
+Query:'¿Como se llaman dos intimas amigas de la serie de televisión "Gossip Girl" que siempre discuten y se traicionan? ',
+CorrectAnswer:'Serena y Blair',
+WrongAnswer0:'Bair y Jenny',
+WrongAnswer1:'Blair y Vanessa',
+WrongAnswer2:'Serena y Vanessa '
+},
+{ 
+Identifier:'Q214',
+Query:'¿Quién dirigió la película "Los lunes al sol2? ',
+CorrectAnswer:'Fernando León de Aranoa',
+WrongAnswer0:'Pedro Almodóvar',
+WrongAnswer1:'Alejandro Amenábar',
+WrongAnswer2:'José Luis Garcia '
+},
+{ 
+Identifier:'Q215',
+Query:'¿Cómo se llamaba el personaje que interpretaba Al Pacino en "Scarface" ',
+CorrectAnswer:'Tony Montana',
+WrongAnswer0:'Sonny Montana',
+WrongAnswer1:'Michael Corleone',
+WrongAnswer2:'Frank Slade '
+},
+{ 
+Identifier:'Q216',
+Query:'¿Cuál es considerado por los fans el peor juego de la historia de ATARI? ',
+CorrectAnswer:'ET',
+WrongAnswer0:'Tetris',
+WrongAnswer1:'Combat',
+WrongAnswer2:'Galaxian '
+},
+{ 
+Identifier:'Q217',
+Query:'¿Por cuál de estas películas ganó Clint Eastwood el premio Oscar al mejor director? ',
+CorrectAnswer:'Los puentes de Madison',
+WrongAnswer0:'Million Dollar Baby',
+WrongAnswer1:'Cartas desde Iwo Jima',
+WrongAnswer2:'Mystic River'
+},
+{ 
+Identifier:'Q218',
+Query:'¿A qué película de Disney pertenece la canción "Un mundo ideal"? ',
+CorrectAnswer:'Aladdín',
+WrongAnswer0:'Pocahontas',
+WrongAnswer1:'Mulán',
+WrongAnswer2:'Hércules '
+},
+{ 
+Identifier:'Q219',
+Query:'¿De qué nacionalidad es la cantante Fey? ',
+CorrectAnswer:'Mexicana',
+WrongAnswer0:'Austriaca',
+WrongAnswer1:'Estadounidense',
+WrongAnswer2:'Panameña '
+},
+{ 
+Identifier:'Q220',
+Query:'¿Cómo se llamó el álbum en directo que publicaron Joan Manuel Serrat y Joaquín Sabina, el primero en conjunto? ',
+CorrectAnswer:'Dos pájaros de un tiro',
+WrongAnswer0:'La orquesta del Titanic',
+WrongAnswer1:'En el Luna Park',
+WrongAnswer2:'Dos pájaron contraatacan '
+},
+{ 
+Identifier:'Q221',
+Query:'¿Qué actor rechazó el papel de Michael Corleone en la película "El Padrino", finalmente interpretado por Al Pacino? ',
+CorrectAnswer:'Jack Nicholson',
+WrongAnswer0:'Anthony Hopkins',
+WrongAnswer1:'Robert DeNiro',
+WrongAnswer2:'Ninguna es correcta '
+},
+{ 
+Identifier:'Q222',
+Query:'¿Qué actor interpretaba a "Hache" en la película 3MSC ',
+CorrectAnswer:'Mario Casas',
+WrongAnswer0:'Hugo Silva',
+WrongAnswer1:'Miguel Angel Silvestre',
+WrongAnswer2:'Dani Martín'
+},
+{ 
+Identifier:'Q223',
+Query:'¿A qué hace referencia 'La milla verde'? ',
+CorrectAnswer:'Al corblackor de la muerte',
+WrongAnswer0:'A un prado cercano',
+WrongAnswer1:'A una carrera',
+WrongAnswer2:'A la cárcel '
+},
+{ 
+Identifier:'Q224',
+Query:'¿Cómo se llama el protagonista de la saga Indiana Jones? ',
+CorrectAnswer:'Harrison Ford',
+WrongAnswer0:'Jack Nicholson',
+WrongAnswer1:'Michael Fox',
+WrongAnswer2:'Robin Williams '
+},
+{ 
+Identifier:'Q225',
+Query:'¿Cuál es el nombre de pila del presentador de televisión apodado como el Gran Wyoming? ',
+CorrectAnswer:'José Miguel Monzón Navarro',
+WrongAnswer0:'José Miguel Navarro Monzón',
+WrongAnswer1:'Miguel José Navarro Monzón',
+WrongAnswer2:'Miguel José Monzón Navarro'
+},
+{ 
+Identifier:'Q226',
+Query:'¿Qué animal es la mascota de Jazmín en Aladdin ',
+CorrectAnswer:'Tigre',
+WrongAnswer0:'Elefante',
+WrongAnswer1:'Mono',
+WrongAnswer2:'Serpiente '
+},
+{ 
+Identifier:'Q227',
+Query:'¿Quién interpreta la canción "Baby One More Time"? ',
+CorrectAnswer:'Britney Spears',
+WrongAnswer0:'Madonna',
+WrongAnswer1:'Montserrat Caballé',
+WrongAnswer2:'Lady Gaga'
+},
+{ 
+Identifier:'Q228',
+Query:'¿Cuál de ellas es una cantante española? ',
+CorrectAnswer:'Chenoa',
+WrongAnswer0:'Ariana Grande',
+WrongAnswer1:'Jennifer Lopez',
+WrongAnswer2:'Alaska '
+},
+{ 
+Identifier:'Q229',
+Query:'¿A quién se considera el Rey del Pop? ',
+CorrectAnswer:'Michael Jackson',
+WrongAnswer0:'Justin Bieber',
+WrongAnswer1:'Zayn Malik',
+WrongAnswer2:'Zac Efron '
+},
+{ 
+Identifier:'Q230',
+Query:'¿Cuál es el verdadero nombre de "El Arrebato"? ',
+CorrectAnswer:'Francisco Javier Labandón Pérez ',
+WrongAnswer0:'Carlos Morean',
+WrongAnswer1:'Miguel Rios',
+WrongAnswer2:'Jorge Moreno '
+},
+{ 
+Identifier:'Q231',
+Query:'¿Qué personaje del videojuego Mortal Kombat tiene poderes de hielo? ',
+CorrectAnswer:'Sub-Zero',
+WrongAnswer0:'Scorpion',
+WrongAnswer1:'Reptile',
+WrongAnswer2:'Motaro '
+},
+{ 
+Identifier:'Q232',
+Query:'¿Qué actriz sale en "La mano que mece la cuna"? ',
+CorrectAnswer:'Rebecca de Mornay',
+WrongAnswer0:'Scarlett Johansson',
+WrongAnswer1:'Vanessa Paradis',
+WrongAnswer2:'Milla Jovovich'
+},
+{ 
+Identifier:'Q233',
+Query:'¿Qué día es San Valentín? ',
+CorrectAnswer:'14 de Febrero',
+WrongAnswer0:'14 de Marzo ',
+WrongAnswer1:'15 de Febrero ',
+WrongAnswer2:'15 de Marzo '
+},
+{ 
+Identifier:'Q234',
+Query:'¿Cómo se llama el actor protagonista de "Solo en casa"? ',
+CorrectAnswer:'Macaulay Culkin',
+WrongAnswer0:'Keanu Reeves',
+WrongAnswer1:'Johnny Depp',
+WrongAnswer2:'Leonardo DiCaprio '
+},
+{ 
+Identifier:'Q235',
+Query:'¿Cómo se llama la actriz que protagoniza Carly? ',
+CorrectAnswer:'Miranda Cosgrove',
+WrongAnswer0:'Victoria Justice',
+WrongAnswer1:'Jennette McCurdy',
+WrongAnswer2:'Keke Palmer '
+},
+{ 
+Identifier:'Q236',
+Query:'¿Cómo se llama el pájaro símbolo de los Juegos del Hambre? ',
+CorrectAnswer:'Sinsajo',
+WrongAnswer0:'Lechuza',
+WrongAnswer1:'Gale',
+WrongAnswer2:'Llamas  '
+},
+{ 
+Identifier:'Q237',
+Query:'¿Qué grupo cómico dobló al español a los protagonistas de "Shrek"? ',
+CorrectAnswer:'Cruz y Raya',
+WrongAnswer0:'Martes y 13',
+WrongAnswer1:'Tip y Coll',
+WrongAnswer2:'Los Morancos  '
+},
+{ 
+Identifier:'Q238',
+Query:'¿Cómo se llama el musical que estrenó en 2013 el grupo Hombres G?? ',
+CorrectAnswer:'Marta tiene un Marcapasos ',
+WrongAnswer0:'Sufre Mamom',
+WrongAnswer1:'Visite Nuestro Bar ',
+WrongAnswer2:'Las Chicas Cocodrilo '
+},
+{ 
+Identifier:'Q239',
+Query:'¿Quién canta "Vivir mi vida"? ',
+CorrectAnswer:'Marc Anthony',
+WrongAnswer0:'Pitbull',
+WrongAnswer1:'Jay Z',
+WrongAnswer2:'Chris Brown '
+},
+{ 
+Identifier:'Q240',
+Query:'¿Qué personaje de Disney perdió su zapato de cristal? ',
+CorrectAnswer:'Cenicienta',
+WrongAnswer0:'Tiana',
+WrongAnswer1:'Blancanieves',
+WrongAnswer2:'La Sirenita'
+},
+{ 
+Identifier:'Q241',
+Query:'¿De dónde era la cantante Rocío Jurado? ',
+CorrectAnswer:'Cádiz ',
+WrongAnswer0:'Sevilla',
+WrongAnswer1:'Málaga',
+WrongAnswer2:'Huelva'
+},
+{ 
+Identifier:'Q242',
+Query:'¿Cómo se llama el marido de la Cuqui en "La que se avecina"? ',
+CorrectAnswer:'Amador Rivas ',
+WrongAnswer0:'Antonio Recio ',
+WrongAnswer1:'Sergio Arias ',
+WrongAnswer2:'Enrique Pastor '
+},
+{ 
+Identifier:'Q243',
+Query:'¿Cuál es la cantante que publicó en 2008 el albúm "Hard  Candy"? ',
+CorrectAnswer:'Madonna',
+WrongAnswer0:'Britney Spears',
+WrongAnswer1:'Rihanna',
+WrongAnswer2:'Shakira '
+},
+{ 
+Identifier:'Q244',
+Query:'¿Cuántos colores tiene un cubo de Rubik clásico? ',
+CorrectAnswer:'6',
+WrongAnswer0:'4',
+WrongAnswer1:'8',
+WrongAnswer2:'9 '
+},
+{ 
+Identifier:'Q245',
+Query:'¿Qué concurso presentó Ramoncín? ',
+CorrectAnswer:'Lingo ',
+WrongAnswer0:'Saber y Ganar ',
+WrongAnswer1:'Pasapalabra',
+WrongAnswer2:'Canta un poquito '
+},
+{ 
+Identifier:'Q246',
+Query:'¿Cuál es el nombre de Paul McCartney? ',
+CorrectAnswer:'James Paul McCartney',
+WrongAnswer0:'Paul James McCartney',
+WrongAnswer1:'Sir Paul MacCartney',
+WrongAnswer2:'Paul McCartney Suer '
+},
+{ 
+Identifier:'Q247',
+Query:'¿Cuál es la discográfica destintiva de la música soul? ',
+CorrectAnswer:'Atlantic',
+WrongAnswer0:'Sony music',
+WrongAnswer1:'EMI',
+WrongAnswer2:'BMG Music '
+},
+{ 
+Identifier:'Q248',
+Query:'¿Cómo se llama la serie de dibujos animados en la que sale un gato cósmico del siglo XXI? ',
+CorrectAnswer:'Doraemon',
+WrongAnswer0:'Bob Esponja',
+WrongAnswer1:'Las tortugas ninja',
+WrongAnswer2:'Las Supernenas  '
+},
+{ 
+Identifier:'Q249',
+Query:'¿En que época quedo ciego Stevie Wonder? ',
+CorrectAnswer:'En la infancia',
+WrongAnswer0:'En los 60’s',
+WrongAnswer1:'En los 70’s',
+WrongAnswer2:'En los 80’s '
+},
+{ 
+Identifier:'Q250',
+Query:'¿Qué actor ha hecho más películas como James Bond? ',
+CorrectAnswer:'Roger Moore ',
+WrongAnswer0:'Pierce Brosnan',
+WrongAnswer1:'Sean Connery',
+WrongAnswer2:'Daniel Craig'
+}
+]
+}
+{ 
+' Historia': [  
+{ 
+Identifier:'Q251',
+Query:'¿Cuál es la rama mayoritaria del Islam? ',
+CorrectAnswer:'Sunismo',
+WrongAnswer0:'Chiísmo',
+WrongAnswer1:'Jariyismo',
+WrongAnswer2:'Sufismo '
+},
+{ 
+Identifier:'Q252',
+Query:'¿De qué fue ministro Manuel Fraga durante el franquismo? ',
+CorrectAnswer:'De Información y Turismo',
+WrongAnswer0:'De Interior',
+WrongAnswer1:'De Economía',
+WrongAnswer2:'Del Ejército '
+},
+{ 
+Identifier:'Q253',
+Query:'¿En qué año tuvo lugar el ataque a Pearl Harbor? ',
+CorrectAnswer:'1941',
+WrongAnswer0:'1939',
+WrongAnswer1:'1940',
+WrongAnswer2:'1942 '
+},
+{ 
+Identifier:'Q254',
+Query:'¿Las revueltas de dónde son llamadas Intifadas? ',
+CorrectAnswer:'Palestina',
+WrongAnswer0:'Montenegro',
+WrongAnswer1:'Kosovo',
+WrongAnswer2:'Chechenia '
+},
+{ 
+Identifier:'Q255',
+Query:'La Comuna de París fue un movimiento… ',
+CorrectAnswer:'Insurrecional autogestionario del XIX',
+WrongAnswer0:'Del mayo de 68',
+WrongAnswer1:'Hippie de los años 60',
+WrongAnswer2:'De la revolución francesa '
+},
+{ 
+Identifier:'Q256',
+Query:'A qué dirigente latinoamericano mandó callar Juan Carlos de Borbón? ',
+CorrectAnswer:'Hugo Chávez',
+WrongAnswer0:'Evo Morales',
+WrongAnswer1:'Fidel Castro',
+WrongAnswer2:'Rafael Correa '
+},
+{ 
+Identifier:'Q257',
+Query:'¿Quiénes fueron los sans-culottes de la Revolución Francesa? ',
+CorrectAnswer:'La principal masa social revolucionaria',
+WrongAnswer0:'La burguesía durante la Revolución',
+WrongAnswer1:'El nombre despectivo de los burgueses',
+WrongAnswer2:'Ninguna es correcta '
+},
+{ 
+Identifier:'Q258',
+Query:'¿Con qué hecho histórico relacionarías al "hombre del tanque" o "rebelde desconocido"? ',
+CorrectAnswer:'Protestas de plaza Tian’anmen, Pekín',
+WrongAnswer0:'Protestas de plaza Tahrir, El Cairo',
+WrongAnswer1:'Protestas de plaza del Sol, Madrid',
+WrongAnswer2:'Protestas de plaza de Mayo, Buenos Aires '
+},
+{ 
+Identifier:'Q259',
+Query:'¿Qué otro nombre recibió el período de la Gran Hambruna China? ',
+CorrectAnswer:'Todas son correctas',
+WrongAnswer0:'Tres años de desastres naturales',
+WrongAnswer1:'Tres años de dificultades económicas',
+WrongAnswer2:'Tres años amargos'
+},
+{ 
+Identifier:'Q260',
+Query:'¿Cuántos soldados argentinos murieron en la Guerra de las Malvinas? ',
+CorrectAnswer:'649',
+WrongAnswer0:'200',
+WrongAnswer1:'987',
+WrongAnswer2:'1452 '
+},
+{ 
+Identifier:'Q261',
+Query:'¿Cuál es la ciudad más antigua de América Latina? ',
+CorrectAnswer:'Caral',
+WrongAnswer0:'Valparaíso',
+WrongAnswer1:'Arequipa',
+WrongAnswer2:'La Paz '
+},
+{ 
+Identifier:'Q262',
+Query:'¿A qué presidente ceso el rey Alfonso XIII tras las reacciones que sucedieron a la Semana Trágica? ',
+CorrectAnswer:'Antonio Maura',
+WrongAnswer0:'Eduardo Dato',
+WrongAnswer1:'Segismundo Moret',
+WrongAnswer2:'Cánovas del Castillo '
+},
+{ 
+Identifier:'Q263',
+Query:'¿Quién pronunció la frase: "Bebamos de la copa de la destrucción"? ',
+CorrectAnswer:'Gengis Kan',
+WrongAnswer0:'Margaret Tatcher',
+WrongAnswer1:'Mussolini',
+WrongAnswer2:'Berlusconi '
+},
+{ 
+Identifier:'Q264',
+Query:'¿Con qué emperador estuvo casada Cleopatra? ',
+CorrectAnswer:'Todas son correctas',
+WrongAnswer0:'Ptolomeo XIV',
+WrongAnswer1:'Julio César',
+WrongAnswer2:'Marco Antonio'
+},
+{ 
+Identifier:'Q265',
+Query:'¿En qué partido se organizan hoy los carlistas? ',
+CorrectAnswer:'Comunión Tradicionalista Carlista',
+WrongAnswer0:'Partido Carlista',
+WrongAnswer1:'Ambas son correctas',
+WrongAnswer2:'Ninguna es correcta '
+},
+{ 
+Identifier:'Q266',
+Query:'El Renacimiento marcó el inicio de la Edad… ',
+CorrectAnswer:'Moderna',
+WrongAnswer0:'Antigüedad clásica',
+WrongAnswer1:'Contemporánea',
+WrongAnswer2:'Media '
+},
+{ 
+Identifier:'Q267',
+Query:'¿Qué país fue dirigido por Stalin? ',
+CorrectAnswer:'Union Soviética',
+WrongAnswer0:'Cuba',
+WrongAnswer1:'Alemania',
+WrongAnswer2:'Polonia'
+},
+{ 
+Identifier:'Q268',
+Query:'¿Qué se celebra el 8 de Marzo? ',
+CorrectAnswer:'El día de la mujer',
+WrongAnswer0:'El día del trabajo',
+WrongAnswer1:'El día del medio ambiente',
+WrongAnswer2:'El día del niño '
+},
+{ 
+Identifier:'Q269',
+Query:'¿Cuál de los siguientes políticos no ha estado implicado en la trama Gürtel? ',
+CorrectAnswer:'Mariano Rajoy',
+WrongAnswer0:'Francisco Camps',
+WrongAnswer1:'Esteban González Pons',
+WrongAnswer2:'Luis Bárcenas '
+},
+{ 
+Identifier:'Q270',
+Query:'¿Cuántos siglos duró el Siglo de Oro? ',
+CorrectAnswer:'Dos',
+WrongAnswer0:'Uno',
+WrongAnswer1:'Tres',
+WrongAnswer2:'Medio '
+},
+{ 
+Identifier:'Q271',
+Query:'¿Qué fue Dracón? ',
+CorrectAnswer:'Legislador',
+WrongAnswer0:'Comerciante',
+WrongAnswer1:'Médico',
+WrongAnswer2:'Guerrero '
+},
+{ 
+Identifier:'Q272',
+Query:'¿Cómo murió Jacques de Molay, último gran maestre templario? ',
+CorrectAnswer:'En la hoguera',
+WrongAnswer0:'Envenenado',
+WrongAnswer1:'De risa',
+WrongAnswer2:'Enfermedad '
+},
+{ 
+Identifier:'Q273',
+Query:'¿Quién es el actual presidente de México (2014)? ',
+CorrectAnswer:'Enrique Peña Nieto',
+WrongAnswer0:'Felipe Calderón Hinojosa',
+WrongAnswer1:'Hugo Chávez',
+WrongAnswer2:'Vicente Fox '
+},
+{ 
+Identifier:'Q274',
+Query:'¿Quién liberó a Argentina, Chile y Perú? ',
+CorrectAnswer:'José de San Martín',
+WrongAnswer0:'Ernesto ‘Che’ Guevara',
+WrongAnswer1:'Manual Belgrano',
+WrongAnswer2:'Simón Bolívar '
+},
+{ 
+Identifier:'Q275',
+Query:'¿Dónde surgió la filosofía? ',
+CorrectAnswer:'Grecia',
+WrongAnswer0:'España',
+WrongAnswer1:'Egipto',
+WrongAnswer2:'Japón '
+},
+{ 
+Identifier:'Q276',
+Query:'¿Para qué fue creado el plan Marshall en 1947? ',
+CorrectAnswer:'Reconstrucción',
+WrongAnswer0:'Regalo',
+WrongAnswer1:'Conquista',
+WrongAnswer2:'Comercio '
+},
+{ 
+Identifier:'Q277',
+Query:'¿Quién fue galardonado con el premio Nobel de la Paz en 2007? ',
+CorrectAnswer:'Albert Gore',
+WrongAnswer0:'Albert Einstein',
+WrongAnswer1:'Albert Schweitzer',
+WrongAnswer2:'Albert Van Bommel '
+},
+{ 
+Identifier:'Q278',
+Query:'¿Cómo llamaban a Dios los testigos de Jehová? ',
+CorrectAnswer:'Jehová',
+WrongAnswer0:'Mutante',
+WrongAnswer1:'Buda',
+WrongAnswer2:'Jesús '
+},
+{ 
+Identifier:'Q279',
+Query:'¿Cómo se llama la sustancia que se utiliza en la Iglesia para hacer mucho humo? ',
+CorrectAnswer:'Incienso',
+WrongAnswer0:'Vino',
+WrongAnswer1:'Carbón',
+WrongAnswer2:'Aceite'
+},
+{ 
+Identifier:'Q280',
+Query:'¿Qué modelo de Estado se propugna en la Constitución española? ',
+CorrectAnswer:'Estado social y democrático de Derecho',
+WrongAnswer0:'Estado federal',
+WrongAnswer1:'Estado de Derecho',
+WrongAnswer2:'Estado liberal '
+},
+{ 
+Identifier:'Q281',
+Query:'¿Cómo se llama la capital del antiguo imperio azteca? ',
+CorrectAnswer:'Tenochtitlan',
+WrongAnswer0:'Quetzalcoatl',
+WrongAnswer1:'Culhuacan',
+WrongAnswer2:'Texcoco '
+},
+{ 
+Identifier:'Q282',
+Query:'Los cuatro evangelistas de la Biblia son Mateo, Marcos, Lucas y… ',
+CorrectAnswer:'Juan',
+WrongAnswer0:'Antonio',
+WrongAnswer1:'Jésus',
+WrongAnswer2:'José'
+},
+{ 
+Identifier:'Q283',
+Query:'¿Quién gobernó Francia desde 1799 a 1815? ',
+CorrectAnswer:'Napoleón Bonaparte',
+WrongAnswer0:'Adam Smith',
+WrongAnswer1:'François Quesnay',
+WrongAnswer2:'Louis Bonaldgug '
+},
+{ 
+Identifier:'Q284',
+Query:'¿Qué modelo de Seat significó la motorización de los españoles? ',
+CorrectAnswer:'600',
+WrongAnswer0:'500',
+WrongAnswer1:'Ibiza',
+WrongAnswer2:'León '
+},
+{ 
+Identifier:'Q285',
+Query:'¿Quién presidia España durante el fallido golpe de estado del 23 de Febrero de 1981? ',
+CorrectAnswer:'Adolfo Suárez',
+WrongAnswer0:'Leopoldo Calvo Sotelo',
+WrongAnswer1:'Felipe Gonzalez',
+WrongAnswer2:'Manual Fraga Iribarne '
+},
+{ 
+Identifier:'Q286',
+Query:'¿Cuál es la capital del noroeste de España, la capital del reino homónimo medieval? ',
+CorrectAnswer:'León',
+WrongAnswer0:'Salamanca',
+WrongAnswer1:'Valladolid',
+WrongAnswer2:'Zamora '
+},
+{ 
+Identifier:'Q287',
+Query:'¿De que estaba fabricado originalmente el maquillaje blanco de las Geishas? ',
+CorrectAnswer:'Plomo',
+WrongAnswer0:'Harina',
+WrongAnswer1:'Arroz molido',
+WrongAnswer2:'Flores de loto '
+},
+{ 
+Identifier:'Q288',
+Query:'¿Cuál de estos nombres en clave no se corresponde con el de una playa del desembarco de Normandía? ',
+CorrectAnswer:'Todos son correctos',
+WrongAnswer0:'Utah',
+WrongAnswer1:'Juno',
+WrongAnswer2:'Sword '
+},
+{ 
+Identifier:'Q289',
+Query:'¿Qué motivó la rebelión que dio lugar a la Guerra de la Independencia de EEUU? ',
+CorrectAnswer:'Impuesto',
+WrongAnswer0:'Esclavitud',
+WrongAnswer1:'Corrupción',
+WrongAnswer2:'Represión '
+},
+{ 
+Identifier:'Q290',
+Query:'¿En qué año se dictó la primera Constitución española? ',
+CorrectAnswer:'1812',
+WrongAnswer0:'1810',
+WrongAnswer1:'1714',
+WrongAnswer2:'1896 '
+},
+{ 
+Identifier:'Q291',
+Query:'¿En qué país nació el protestantismo? ',
+CorrectAnswer:'Alemania',
+WrongAnswer0:'Italia',
+WrongAnswer1:'Francia',
+WrongAnswer2:'Polonia '
+},
+{ 
+Identifier:'Q292',
+Query:'¿Qué imperio llegó a conquistar casí toda Europa? ',
+CorrectAnswer:'Romano',
+WrongAnswer0:'Cartago',
+WrongAnswer1:'Espartano',
+WrongAnswer2:'Vikingo '
+},
+{ 
+Identifier:'Q293',
+Query:'¿Quiénes fueron los Reyes Católicos? ',
+CorrectAnswer:'Isabel I y Fernando II',
+WrongAnswer0:'Juana I y Felipe I',
+WrongAnswer1:'Isabel II y Francisco de Asís',
+WrongAnswer2:'Isabel I y Fernando VII '
+},
+{ 
+Identifier:'Q294',
+Query:'¿De qué color es el humo que informa a los creyentes de que se ha elegido un Papa nuevo? ',
+CorrectAnswer:'Blanco',
+WrongAnswer0:'Negro',
+WrongAnswer1:'Rojo',
+WrongAnswer2:'Amarillo'
+},
+{ 
+Identifier:'Q295',
+Query:'¿Cuántos colores tiene la bandera española? ',
+CorrectAnswer:'Dos',
+WrongAnswer0:'Tres',
+WrongAnswer1:'Cuatro',
+WrongAnswer2:'Uno '
+},
+{ 
+Identifier:'Q296',
+Query:'¿En qué año se instauró el sufragio femenino en España? ',
+CorrectAnswer:'1931',
+WrongAnswer0:'1921',
+WrongAnswer1:'1951',
+WrongAnswer2:'1971 '
+},
+{ 
+Identifier:'Q297',
+Query:'¿Qué sobrenombre tenía Guillermo I de Inglaterra? ',
+CorrectAnswer:'El Conquistador',
+WrongAnswer0:'El Valiente',
+WrongAnswer1:'El Loco',
+WrongAnswer2:'El Tirano '
+},
+{ 
+Identifier:'Q298',
+Query:'¿Maria Antonieta fue reina de qué país? ',
+CorrectAnswer:'Francia',
+WrongAnswer0:'Nunca fue reina',
+WrongAnswer1:'Países Bajos',
+WrongAnswer2:'Reino Unido '
+},
+{ 
+Identifier:'Q299',
+Query:'¿Quién consquisto Valencia de los musulmanes? ',
+CorrectAnswer:'Jaume I',
+WrongAnswer0:'El Cid Campeador',
+WrongAnswer1:'Fernando III',
+WrongAnswer2:'Pere el maestro '
+},
+{ 
+Identifier:'Q300',
+Query:'¿En qué provincia nació el Cid Campeador? ',
+CorrectAnswer:'Burgos',
+WrongAnswer0:'Salamanca',
+WrongAnswer1:'Cantabria',
+WrongAnswer2:'León '
+}
+]
+}

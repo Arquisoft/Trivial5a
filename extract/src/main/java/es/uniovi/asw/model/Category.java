@@ -1,7 +1,7 @@
 package es.uniovi.asw.model;
 
 import java.util.ArrayList;
-
+import com.google.gson.Gson;
 public class Category {
 	
 	private String name;
@@ -10,6 +10,7 @@ public class Category {
 	public void addQuestions(Question question)
 	{
 		questions.add(question);
+		question.setCategory(this.name);
 	}
 	
 	public void removeQuestions (Question question)
@@ -37,15 +38,8 @@ public class Category {
 	
 	public String toJSON()
 	{
-		String JSON= " \n"+"'"+getName()+"'"+":"+" [  \n";
-		for( int i =0; i< questions.size();i++)
-			if(i==questions.size()-1)
-			JSON+="{ \n"+questions.get(i).toJSON();
-			else
-				JSON+="{ \n"+questions.get(i).toJSON()+",\n";
-		
-		JSON+="\n]\n}";
-		return JSON;
+		Gson g = new Gson();
+		return g.toJson(this);
 	}
 	
 }

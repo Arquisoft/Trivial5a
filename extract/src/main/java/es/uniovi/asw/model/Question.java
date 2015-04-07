@@ -2,15 +2,17 @@ package es.uniovi.asw.model;
 
 import java.util.Arrays;
 
+import com.google.gson.Gson;
+
 public class Question {
 	
 	/**
 	 * Clase que modela una preguna del modelo GIFT
 	 */
-	public static final int MAX_ANSWER = 3; //Se podria cambiar facilmente si dado el caso
+	public static final int MAX_ANSWER = 4; //Se podria cambiar facilmente si dado el caso
 										 // se quisese cambiar el modelo de juego
 	
-	private Category category; //Una pregunta solo puede tener una categoria asociada
+	private String category; //Una pregunta solo puede tener una categoria asociada
 	private String query;	
 	private String identifer; //Identifica unequivocamente a la pregunta
 	private String correctAnswer; //Solo puede tener una respuesta correcta 
@@ -61,31 +63,19 @@ public class Question {
 	public String toJSON()
 	{
 		
-		String JSON="Identifier"+":"+"'"+identifer+"'"+",\n"+
-					"Query"+":"+"'"+query+"'"+",\n"+
-					"CorrectAnswer"+":"+"'"+correctAnswer+"'"+",\n";
-		
-					for(int i=0;i< wrongAnswers.length;i++)
-					{
-						if(i==wrongAnswers.length-1)
-							JSON+=	"WrongAnswer"+i+":"+"'"+wrongAnswers[i]+"'";
-						else
-							JSON+=	"WrongAnswer"+i+":"+"'"+wrongAnswers[i]+"'"+",\n";
-					}
-					JSON += "\n}";
-				
-		return JSON;
+		Gson g = new Gson();
+		return g.toJson(this);
 	}
 
 
 
-	public Category getCategory() {
+	public String getCategory() {
 		return category;
 	}
 
 
 
-	public void setCategory(Category category) {
+	public void setCategory(String category) {
 		this.category = category;
 	}
 

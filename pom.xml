@@ -12,6 +12,7 @@
 
     <modules>
         <module>extract</module>
+        <module>game</module>
 <!-- Other modules should be added here: <module>...</module> -->
     </modules>
 
@@ -100,6 +101,18 @@
 			<organizationUrl>http://www.uniovi.es</organizationUrl>
 			<roles>
 				<role>Project Admin</role>
+				<role>Developer</role>
+			</roles>
+			<timezone>2</timezone>
+			<properties />
+		</developer>
+		<developer>
+			<id>pablofernandezrodriguez</id>
+			<name>Pablo Fernandez Rodriguez</name>
+			<email>UO218251@uniovi.es</email>
+			<organization>University of Oviedo</organization>
+			<organizationUrl>http://www.uniovi.es</organizationUrl>
+			<roles>
 				<role>Developer</role>
 			</roles>
 			<timezone>2</timezone>

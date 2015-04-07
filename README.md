@@ -1,7 +1,10 @@
 Trivial 5a
 =============
+<<<<<<< HEAD
 [Página Web] (http://arquisoft.github.io/Trivial5a/)
 
+=======
+>>>>>>> develop
 Travis: [![Build Status](https://travis-ci.org/Arquisoft/Trivial5a.svg?branch=master)](https://travis-ci.org/Arquisoft/Trivial5a)
 
 Repository for Trivial programs. 

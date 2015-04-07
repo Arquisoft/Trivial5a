@@ -8,6 +8,8 @@ import static org.junit.Assert.*;
 import org.junit.Test;
 
 import es.uniovi.asw.Parser.Document;
+import es.uniovi.asw.extractor.consola.*;
+
 
 /**
  * @author Fernando Delgado

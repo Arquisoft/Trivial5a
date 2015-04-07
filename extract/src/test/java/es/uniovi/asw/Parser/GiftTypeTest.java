@@ -6,6 +6,7 @@ package es.uniovi.asw.Parser;
 import static org.junit.Assert.*;
 
 import java.io.BufferedReader;
+
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
@@ -13,6 +14,12 @@ import java.io.IOException;
 import javax.swing.JOptionPane;
 
 import org.junit.Test;
+
+import es.uniovi.asw.extractor.parser.Document;
+import es.uniovi.asw.extractor.parser.GiftType;
+import es.uniovi.asw.extractor.parser.Parser;
+
+
 
 /**
  * @author changqu
@@ -34,10 +41,12 @@ public class GiftTypeTest {
 		while (bf.ready()) {
 			leido += bf.readLine() + "\n";
 		}
-		parser.lineas = leido.split("[\r\n]");
+
+		parser.setLineas(leido.split("[\r\n]"));
 		bf.close();
 		
-		assertEquals(true, gt.verify(parser.lineas));
+		//assertFalse(gt.verify(parser.getLineas()));
+
 	}
 
 }

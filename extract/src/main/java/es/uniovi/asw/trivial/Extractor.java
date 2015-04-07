@@ -1,11 +1,19 @@
 package es.uniovi.asw.trivial;
 
+
 import java.io.ByteArrayOutputStream;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.Scanner;
 
 import es.uniovi.asw.Consola.Consola;
+
+import java.io.InputStream;
+import java.util.Scanner;
+
+import es.uniovi.asw.Consola.Consola;
+import es.uniovi.asw.conf.Driver;
+
 
 public class Extractor {
 	
@@ -18,7 +26,7 @@ public class Extractor {
 		try {
 			Consola.main(args);
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
+			e.printStackTrace();
 			System.err.println(e.getMessage()+"\n");
 		}
 		
