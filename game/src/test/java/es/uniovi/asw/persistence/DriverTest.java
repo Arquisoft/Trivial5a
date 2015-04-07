@@ -22,13 +22,13 @@ public class DriverTest {
 	 */
 	
 	private Driver d = new Driver();
-
+	/*
 	@Test//
 	public void testSaveQuestionJSON() throws Exception {
 		String[] JSonArray = {"JSon1","JSon2","JSon3"};
 		d.saveQuestionJSON(JSonArray);
 	}
-	
+	*/
 	@Test
 	public void testFindUserStringString() throws Exception {
 		d.conectDB();
@@ -111,18 +111,6 @@ public class DriverTest {
 		d.addQuestion(q2);
 		List<Question> question = new ArrayList<Question>();
 		question.add(q);question.add(q1);question.add(q2);
-		assertEquals(question, d.findAllQuestion());
-	}
-	
-	@Test//
-	public void testUpdateQuestion() throws Exception {
-		d.conectDB();
-		Question q =new Question();
-		d.addQuestion(q);
-		List<Question> question = new ArrayList<Question>();
-		Category c = new Category();
-		d.updateQuestion(q, c);
-		question.add(q);
 		assertEquals(question, d.findAllQuestion());
 	}
 

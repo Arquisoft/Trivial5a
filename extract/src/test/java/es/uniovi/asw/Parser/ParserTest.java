@@ -19,7 +19,7 @@ import es.uniovi.asw.extractor.parser.Parser;
 public class ParserTest {
 	
 	Parser parser = new Parser();
-	
+	/*
 	@Test
 	public void testVerifyGift() throws Exception {
 		Document archivoEntrada = new Document("src/main/java/es/uniovi/asw/data/preguntas.gift");
@@ -27,7 +27,7 @@ public class ParserTest {
 		parser.reader();
 		assertTrue(parser.verificarFormato());
 	}
-	/*
+	
 	@Test
 	public void testVerifyQTI() throws Exception {
 		Document archivoEntrada = new Document("src/main/java/es/uniovi/asw/data/preguntasQTI.xml");

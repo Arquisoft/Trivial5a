@@ -42,11 +42,4 @@ public class QuestionManagerTest {
 			return null;
 	}
 
-	@Test//
-	public void testUpdateQuestion() {
-		Question preguntaActual = new Question();
-		String category = "categoria1";
-		qm.updateQuestion(preguntaActual, category);
-	}
-
 }
