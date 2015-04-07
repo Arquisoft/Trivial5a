@@ -38,19 +38,10 @@ public class QTIXMLTypeTest {
 		while (bf.ready()) {
 			leido += bf.readLine() + "\n";
 		}
-//<<<<<<< HEAD
-//		parser.lineas = leido.split("[\r\n]");
-//		bf.close();
-//	
-//	
-//		assertEquals(true, qt.verify(parser.lineas));
-//=======
 		parser.setLineas(leido.split("[\r\n]"));
 		bf.close();
 	
-	
 		//assertEquals(true, qt.verify(parser.getLineas()));
-//>>>>>>> 20ad8fe43e656ba87180b589f8a119ac9057a3b1
 	}
 
 }

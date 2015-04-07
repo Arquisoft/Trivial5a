@@ -734,7 +734,7 @@ $CATEGORY: Arte y Literatura
 ~Chicago
 }
 
-::Q105::¿Quién escribió "El viejo y el mar"? {
+::Q105::¿Quién escribió “El viejo y el mar? {
 =Ernest Hemingway
 ~Norman Mailer
 ~Gabriel García Márquez
@@ -1419,7 +1419,8 @@ $CATEGORY: Entretenimiento
 ~Downton Abbey 
 }
 
-::Q202::¿Como se llamaba la protagonista femenina de la serie de televisión "Scrubs"? {
+::Q202::¿Como se llamaba la protagonista femenina de la serie de televisión
+"Scrubs"? {
 =Elliot
 ~Sarah
 ~Jordan
