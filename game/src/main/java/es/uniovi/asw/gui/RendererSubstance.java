@@ -70,8 +70,4 @@ public class RendererSubstance extends SubstanceDefaultTableCellRenderer {
 		return this;
 	}
 
-	public void pintarUserActivo() {
-
-	}
-
 }

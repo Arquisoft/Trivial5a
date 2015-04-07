@@ -37,6 +37,7 @@ public class VentanaFinJuego extends JDialog {
 	/**
 	 * Crea la ventana de estadísticas de los jugadores
 	 */
+	
 	public VentanaFinJuego(Game juego) {
 		this.setModal(true);
 		this.setDefaultCloseOperation(JDialog.DO_NOTHING_ON_CLOSE);
@@ -109,12 +110,14 @@ public class VentanaFinJuego extends JDialog {
 				PantallaInicial pn = new PantallaInicial(juegonuevo);
 				pn.setVisible(true);
 				pn.setLocationRelativeTo(null);
+				dispose();
 			}
 		});
 		buttonPane.setLayout(null);
 		buttonPane.add(reiniciarButton);
 
-		JLabel lblNewLabel = new JLabel("!La partida ha terminado!");
+		JLabel lblNewLabel = new JLabel("¡La partida ha terminado! El ganador es: "
+		+juego.getUsuarioActivo().getLogin());
 		lblNewLabel.setForeground(Color.RED);
 		lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 26));
 		lblNewLabel.setBounds(400, 24, 295, 36);
