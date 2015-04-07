@@ -127,6 +127,7 @@ public class ConfigurarPartida extends JFrame {
 	private JLabel lblSubt;
 
 	private List<String> logins;
+	private JButton btnAtras;
 
 	public ConfigurarPartida(Game juego) {
 		setIconImage(Toolkit.getDefaultToolkit().getImage(
@@ -1051,6 +1052,7 @@ public class ConfigurarPartida extends JFrame {
 			pnBotones = new JPanel();
 			FlowLayout flowLayout = (FlowLayout) pnBotones.getLayout();
 			flowLayout.setAlignment(FlowLayout.RIGHT);
+			pnBotones.add(getBtnAtras());
 			pnBotones.add(getBtnContinuar());
 		}
 		return pnBotones;
@@ -1077,9 +1079,9 @@ public class ConfigurarPartida extends JFrame {
 									JOptionPane.PLAIN_MESSAGE);
 							return;
 						}
-						JOptionPane.showMessageDialog(null,
-								"¡Comienza el juego!", "Bienvenido",
-								JOptionPane.PLAIN_MESSAGE);
+					//	JOptionPane.showMessageDialog(null,
+						//		"¡Comienza el juego!", "Bienvenido",
+							//	JOptionPane.PLAIN_MESSAGE);
 						Juego j = new Juego(cp, juego);
 						j.setVisible(true);
 						cp.setVisible(false);
@@ -1169,5 +1171,19 @@ public class ConfigurarPartida extends JFrame {
 					return false;
 			}
 		return true;
+	}
+	private JButton getBtnAtras() {
+		if (btnAtras == null) {
+			btnAtras = new JButton("Atras");
+			btnAtras.addActionListener(new ActionListener() {
+				public void actionPerformed(ActionEvent arg0) {
+					PantallaInicial pn = new PantallaInicial(juego);
+					pn.setLocationRelativeTo(null);
+					pn.setVisible(true);
+					dispose();
+				}
+			});
+		}
+		return btnAtras;
 	}
 }
