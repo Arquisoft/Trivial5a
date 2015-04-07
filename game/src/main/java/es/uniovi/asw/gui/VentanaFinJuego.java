@@ -37,20 +37,12 @@ public class VentanaFinJuego extends JDialog {
 	
 	
 	
-	public static void main (String [] args)
-	{
-		VentanaFinJuego vf = new VentanaFinJuego(new Game());
-		vf.setVisible(true);
-	}
+
 	/**
 	 * Crea la ventana de estadísticas de los jugadores
 	 */
 	
 	public VentanaFinJuego(Game juego) {
-		User user = new User();
-		user.setLogin("aitor");
-		juego.setUsuarioActivo(user);
-		
 		
 		this.setModal(true);
 		this.setDefaultCloseOperation(JDialog.DO_NOTHING_ON_CLOSE);
