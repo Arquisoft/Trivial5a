@@ -1,5 +1,7 @@
 package es.uniovi.asw.Parser;
 
+import gherkin.deps.net.iharder.Base64.InputStream;
+
 import java.io.File;
 
 public class Document extends File {

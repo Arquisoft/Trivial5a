@@ -7,6 +7,7 @@ import javax.swing.JFrame;
 
 import org.pushingpixels.substance.api.SubstanceLookAndFeel;
 
+import es.uniovi.asw.Consola.Consola;
 import es.uniovi.asw.bussines.Game;
 import es.uniovi.asw.gui.PantallaInicial;
 import es.uniovi.asw.persistence.Driver;
@@ -26,6 +27,12 @@ public class TrivialDesktop {
 		final Game g = new Game();
 		Driver d = new Driver();
 		try {
+			//d.removeTable("categorias");
+			if(!d.coleccionExiste("categorias"))
+			{
+			Consola.main(new String[0]);
+			}
+			
 			d.findAllQuestion();
 		} catch (Exception e1) {
 			e1.printStackTrace();

@@ -1,5 +1,11 @@
 package es.uniovi.asw.Consola;
 
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.FileWriter;
+import java.io.InputStream;
+import java.io.OutputStream;
+
 import es.uniovi.asw.Parser.Document;
 
 public class Consola {
@@ -61,6 +67,38 @@ public class Consola {
 			
 			parser.persist();
 			
+		}
+		else if(args.length==0)
+		{	
+			System.out.println("0000000000000000000000000000000000000000000000000000000000000000000000000");
+			InputStream file =Consola.class.getResourceAsStream("preguntas.gift");
+			System.out.println("0000000000000000000000000000000000000000000000000000000000000000000000000");
+			OutputStream out = new FileOutputStream(new File(System.getProperty("user.home")+"\\preguntas.gift"));
+			System.out.println("0000000000000000000000000000000000000000000000000000000000000000000000000");
+			int read = 0;
+			System.out.println("0000000000000000000000000000000000000000000000000000000000000000000000000");
+			byte[] bytes = new byte[1024];
+			System.out.println("0000000000000000000000000000000000000000000000000000000000000000000000000");
+			while ((read = file.read(bytes)) != -1) {
+				out.write(bytes, 0, read);
+			}
+			System.out.println("0000000000000000000000000000000000000000000000000000000000000000000000000");
+			Document archivoEntrada = new Document(System.getProperty("user.home")+"\\preguntas.gift");
+			System.out.println("0000000000000000000000000000000000000000000000000000000000000000000000000");
+			ConsolaParser parser = new ConsolaParser(archivoEntrada);
+			System.out.println("Extension del archivo correcta ");
+			System.out.println("Leyendo fichero...");
+			parser.reader();
+			if(!parser.verificarFormato()) throw new Exception("Formato de entrada no valido");
+			else System.out.println("Formato del fichero correcto");
+			parser.transform();
+			System.out.println("Transformando a JSON");
+			System.out.println("-------------Visualizacion de JSON--------------------------");
+			//parser.depurar();
+			//ConsolaUtils.saveFile(parser.getTransformado(), "JSON");
+			System.out.println("Transformacion completada");
+			
+			parser.persist();
 		}
 		else throw new Exception("Comando mal introducido ");
 	}

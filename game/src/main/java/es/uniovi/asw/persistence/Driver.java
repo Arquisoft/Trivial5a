@@ -313,4 +313,19 @@ public class Driver {
 		} else
 			throw new Exception("Error: Conexión no establecida");
 	}
+	
+	public boolean coleccionExiste(String nombre) throws Exception {
+		conectDB();
+		// Listas las bases de datos
+		if (client != null) {
+			System.out.println("Lista de todas las bases de datos: ");
+			List<String> basesDeDatos = client.getDatabaseNames();
+			for (String nombreBaseDatos : basesDeDatos) {
+				if(nombreBaseDatos==nombre) return true;
+			}
+			client.close();
+			return false;
+		} else
+			throw new Exception("Error: Conexión no establecida");
+	}
 }
