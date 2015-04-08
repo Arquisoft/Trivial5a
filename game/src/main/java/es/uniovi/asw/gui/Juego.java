@@ -108,8 +108,8 @@ public class Juego extends JFrame {
 		juego.setUsuarioActivo(juego.getUsuarios().get(0));
 		setPreferredSize(new java.awt.Dimension(1167, 733));
 		this.setTitle("Trivial");
+		setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 
-		setDefaultCloseOperation(WindowConstants.HIDE_ON_CLOSE);
 		setBounds(100, 100, 1167, 733);
 
 		// para que no se pueda reducir la pantalla, el minimo es lo inicial

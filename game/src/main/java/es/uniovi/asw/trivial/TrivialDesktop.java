@@ -24,12 +24,6 @@ public class TrivialDesktop {
 
 	public static void run() {
 		final Game g = new Game();
-		Driver d = new Driver();
-		try {
-			d.findAllQuestion();
-		} catch (Exception e1) {
-			e1.printStackTrace();
-		}
 		EventQueue.invokeLater(new Runnable() {
 			@Override
 			public void run() {
