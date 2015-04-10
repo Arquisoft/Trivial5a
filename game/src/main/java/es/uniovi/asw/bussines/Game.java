@@ -203,12 +203,13 @@ public class Game {
 	 */
 	public void falla(Question preg)
 	{
-		
+
 		
 		usuarioActivo.setNumberWrongAnswer(usuarioActivo.getNumberWrongAnswer()+1);
 		userManager.updateUser(usuarioActivo);
 		preg.setVecesFallada(preg.getVecesFallada()+1);
 		questionManager.updateQuestion(preg,preg.getCategory());
 		turnoSiguiente();
+
 	}
 	}
