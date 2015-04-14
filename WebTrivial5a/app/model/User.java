@@ -1,4 +1,12 @@
 package model;
+import java.util.List;
+
+import javax.persistence.*;
+
+import play.db.ebean.*;
+import play.data.format.*;
+import play.data.validation.*;
+import play.data.validation.Constraints.Required;
 
 @Entity
 public class User extends Model {
@@ -17,8 +25,8 @@ public class User extends Model {
 	public int posicion;
 
 
-	public User(String email, String password) {
-		this.email = email;
+	public User(String login, String password) {
+		this.login = login;
 		this.password = password;
 	}
 
@@ -43,3 +51,4 @@ public class User extends Model {
 	}
 	
 	public static Finder<Long, User> finder = new Finder(Long.class, User.class);
+}

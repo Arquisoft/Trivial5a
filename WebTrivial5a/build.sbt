@@ -11,5 +11,8 @@ libraryDependencies ++= Seq(
   javaEbean,
   cache,
   javaWs,
-  "org.reactivemongo" %% "play2-reactivemongo" % "0.10.5.0.akka23"
+  "org.reactivemongo" %% "play2-reactivemongo" % "0.10.5.0.akka23",
+  "info.cukes" % "cucumber-java" % "1.1.8" % "test",
+  "info.cukes" % "cucumber-junit" % "1.1.8" % "test",
+  "org.assertj" % "assertj-core" % "2.0.0" % "test"
 )

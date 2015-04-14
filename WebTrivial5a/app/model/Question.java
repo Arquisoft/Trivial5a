@@ -1,10 +1,18 @@
 package model;
 
+import javax.persistence.Entity;
+
+import play.db.ebean.*;
+import play.data.format.*;
+import play.data.validation.*;
+import play.data.validation.Constraints.Required;
+
+
 @Entity
-public class Question extends Model{
+public class Question extends Model {
 	
 	
-	@Required @
+	@Required 
 	public String identifer; // Identifica inequivocamente a la pregunta
 	
 	public static final int MAX_ANSWER = 4;
