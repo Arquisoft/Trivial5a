@@ -1,11 +1,18 @@
+package model;
 
-package app.model;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.List;
 import java.util.Random;
 
-import es.uniovi.asw.model.Question;
+import javax.persistence.*;
+
+import play.data.validation.Constraints.Required;
+import play.db.ebean.*;
+import play.db.ebean.Model.Finder;
+
+
 
 @Entity
 public class Category extends Model{
@@ -16,7 +23,6 @@ public class Category extends Model{
 	@Required
 	public ArrayList<Question> questions= new ArrayList<Question>();
 	public ArrayList<Question> usedQuestions = new ArrayList<Question>();
-	int a = "a";
 	
 	
 	public static List<Category> all() {
@@ -31,4 +37,6 @@ public class Category extends Model{
 	{
 		Collections.shuffle(questions, new Random(seed));
 	}
+	
+	public static Finder<String, Category> finder = new Finder(String.class, Category.class);
 }
