@@ -1,0 +1,65 @@
+New log file opened at Tue Apr 14 16:10:37 CEST 2015 by 7288@Aitor
+Taking next connection to: 3830
+New client attempting to connect on port: 3831-3830
+  Address = /192.168.56.1:3830
+This client on port 3831 has uuid 84862f48-d304-4942-bc23-c63575d351c7 configName activator humanReadableName Activator protocolVersion 1 featureTags Vector()
+Connected Clients: activator-84862f48-d304-4942-bc23-c63575d351c7
+Taking next connection to: 3830
+New client attempting to connect on port: 3832-3830
+  Address = /192.168.56.1:3830
+Handshake exception on socket: 3832
+sbt.impl.ipc.HandshakeException: Unable to perform handshake
+	at sbt.impl.ipc.Peer.handshake(IPC.scala:46)
+	at sbt.impl.ipc.MultiClientServer.<init>(IPC.scala:150)
+	at sbt.server.SbtServerSocketHandler$$anon$1.run(SbtServerSocketHandler.scala:43)
+Caused by: java.net.SocketException: Software caused connection abort: recv failed
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.read(SocketInputStream.java:150)
+	at java.net.SocketInputStream.read(SocketInputStream.java:121)
+	at java.io.BufferedInputStream.fill(BufferedInputStream.java:246)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:265)
+	at java.io.DataInputStream.readInt(DataInputStream.java:387)
+	at sbt.impl.ipc.Peer.receive(IPC.scala:95)
+	at sbt.impl.ipc.Peer.handshake(IPC.scala:49)
+	... 2 more
+Taking next connection to: 3830
+New client attempting to connect on port: 3833-3830
+  Address = /192.168.56.1:3830
+This client on port 3833 has uuid 34b32cc8-8388-4ed1-b313-098dfc9df584 configName activator humanReadableName Activator protocolVersion 1 featureTags Vector()
+Connected Clients: activator-84862f48-d304-4942-bc23-c63575d351c7, activator-34b32cc8-8388-4ed1-b313-098dfc9df584
+Taking next connection to: 3830
+Checking to see if clients are empty...
+We have 1 non-daemon clients, continuing serving connections.
+Taking next connection to: 3830
+New client attempting to connect on port: 3872-3830
+  Address = /192.168.56.1:3830
+Handshake exception on socket: 3872
+sbt.impl.ipc.HandshakeException: Unable to perform handshake
+	at sbt.impl.ipc.Peer.handshake(IPC.scala:46)
+	at sbt.impl.ipc.MultiClientServer.<init>(IPC.scala:150)
+	at sbt.server.SbtServerSocketHandler$$anon$1.run(SbtServerSocketHandler.scala:43)
+Caused by: java.net.SocketException: Software caused connection abort: recv failed
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.read(SocketInputStream.java:150)
+	at java.net.SocketInputStream.read(SocketInputStream.java:121)
+	at java.io.BufferedInputStream.fill(BufferedInputStream.java:246)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:265)
+	at java.io.DataInputStream.readInt(DataInputStream.java:387)
+	at sbt.impl.ipc.Peer.receive(IPC.scala:95)
+	at sbt.impl.ipc.Peer.handshake(IPC.scala:49)
+	... 2 more
+Taking next connection to: 3830
+New client attempting to connect on port: 3873-3830
+  Address = /192.168.56.1:3830
+This client on port 3873 has uuid 2bbf1562-f8cc-48d8-ae4d-82ca073e4b4f configName play-fork-run humanReadableName Play Fork Run protocolVersion 1 featureTags Vector()
+Connected Clients: activator-84862f48-d304-4942-bc23-c63575d351c7, play-fork-run-2bbf1562-f8cc-48d8-ae4d-82ca073e4b4f
+Taking next connection to: 3830
+Checking to see if clients are empty...
+We have 1 non-daemon clients, continuing serving connections.
+Taking next connection to: 3830
+Checking to see if clients are empty...
+We have 1 non-daemon clients, continuing serving connections.
+Taking next connection to: 3830
+Checking to see if clients are empty...
+We have 1 non-daemon clients, continuing serving connections.
+Taking next connection to: 3830

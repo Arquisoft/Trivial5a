@@ -16,3 +16,5 @@ libraryDependencies ++= Seq(
   "info.cukes" % "cucumber-junit" % "1.1.8" % "test",
   "org.assertj" % "assertj-core" % "2.0.0" % "test"
 )
+
+fork in run := true

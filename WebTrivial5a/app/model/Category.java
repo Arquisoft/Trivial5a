@@ -14,7 +14,7 @@ import play.db.ebean.*;
 import play.db.ebean.Model.Finder;
 
 
-
+ 
 @Entity
 public class Category extends Model{
 
@@ -60,25 +60,6 @@ public class Category extends Model{
 	 */
 	public void removeQuestions (Question question){
 		questions.remove(question);
-	}
-	
-	/**
-	 * Devuelve la pregunta que se va a preguntar, la elimina de la lista principal y la añade a la lista de las ya preguntadas.
-	 * En caso de que la lista principal esté vacia, añade todas las ya preguntadas y las baraja.
-	 * @return
-	 */
-	public Question askQuestion(long seed)
-	{
-		shuffleQuestions(seed);
-		Question nextQuestion = questions.get(0);
-		questions.remove(nextQuestion);
-		usedQuestions.add(nextQuestion);
-		if(questions.isEmpty())
-		{
-			questions.addAll(usedQuestions);
-			usedQuestions.clear();
-		}
-		return nextQuestion;
 	}
 	
 	

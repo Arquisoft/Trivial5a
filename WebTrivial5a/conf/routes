@@ -4,22 +4,22 @@
 
 # Home page
 GET     /                           	controllers.Application.index()
+#
+#GET		/admin											controllers.Application.admin()
+#
+#POST	/user											controllers.Application.login()
+#POST	/user											controllers.Application.register()
+#POST   	/user            								controllers.Application.newUser()
+#GET		/user											controllers.Application.showUsers()
+#GET		/user/:id										controllers.Application.showUser(id: Long)
+#POST    /user/delete/:id 								controllers.Application.deleteUser(id: Long)
+#DELETE  /user/:id 										controllers.Application.deleteUser(id: Long)
 
-GET		admin											controllers.Application.admin()
-
-POST	/user											controllers.Application.login()
-POST	/user											controllers.Application.register()
-POST   	/user            								controllers.Application.newUser()
-GET		/user											controllers.Application.showUsers()
-GET		/user/:id										controllers.Application.showUser(id: Long)
-POST    /user/delete/:id 								controllers.Application.deleteUser(id: Long)
-DELETE  /user/:id 										controllers.Application.deleteUser(id: Long)
-
-GET		/partida										controllers.Application.showPartidas()
-GET		/partida/:id									controllers.Application.showPartidas(id: Long)
-GET 	/partida/:id/:posCasilla						controllers.Application.getQuestion(id: Long, posCasilla:Int)
-GET 	/partida/:id/:idQuestion						controllers.Application.getRespuesta(id: Long, idQuestion: Long)
-POST 	/partida/:id/:idQuestion/:idAnswer				controllers.Application.setRespuesta(id: Long, idQuestion: Long, idAnswer: Long)
+#GET		/partida										controllers.Application.showPartidas()
+#GET		/partida/:id									controllers.Application.showPartidas(id: Long)
+#GET 	/partida/:id/:posCasilla						controllers.Application.getQuestion(id: Long, posCasilla:Int)
+#GET 	/partida/:id/:idQuestion						controllers.Application.getRespuesta(id: Long, idQuestion: Long)
+#POST 	/partida/:id/:idQuestion/:idAnswer				controllers.Application.setRespuesta(id: Long, idQuestion: Long, idAnswer: Long)
 
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.at(path="/public", file)

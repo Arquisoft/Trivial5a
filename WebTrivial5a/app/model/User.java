@@ -4,7 +4,6 @@ import java.util.List;
 import javax.persistence.*;
 
 import play.db.ebean.*;
-import play.db.ebean.Model.Finder;
 import play.data.format.*;
 import play.data.validation.*;
 import play.data.validation.Constraints.Required;
@@ -54,5 +53,5 @@ public class User extends Model {
 	public static void deleteAll() {
 		finder.all().clear();
 	}
-	public static Finder<Long, User> finder = new Finder(Long.class, Question.class);
+	public static Finder<Long, User> finder = new Finder(Long.class, User.class);
 }
