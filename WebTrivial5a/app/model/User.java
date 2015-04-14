@@ -4,6 +4,7 @@ import java.util.List;
 import javax.persistence.*;
 
 import play.db.ebean.*;
+import play.db.ebean.Model.Finder;
 import play.data.format.*;
 import play.data.validation.*;
 import play.data.validation.Constraints.Required;
@@ -23,7 +24,11 @@ public class User extends Model {
 	public int numberWrongAnswer;
 	
 	public int posicion;
-
+	
+	public boolean isAdmin()
+	{
+		return admin;
+	}
 
 	public User(String login, String password) {
 		this.login = login;
@@ -49,6 +54,5 @@ public class User extends Model {
 	public static void deleteAll() {
 		finder.all().clear();
 	}
-	
-	public static Finder<Long, User> finder = new Finder(Long.class, User.class);
+	public static Finder<Long, User> finder = new Finder(Long.class, Question.class);
 }
