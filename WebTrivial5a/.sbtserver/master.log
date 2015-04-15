@@ -25022,3 +25022,148 @@ Running task... Cancel: sbt.server.ServerTaskCancellation@8ff9b31, check cycles:
 Total time: 0 s, completed 15-abr-2015 15:57:26
 > server-post-command-cleanup
 > server-handle-next-server-request
+> compile
+Evaluating tasks: compile:compile
+Running task... Cancel: sbt.server.ServerTaskCancellation@45e095b2, check cycles: false
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set(C:\Trivial5a\WebTrivial5a\target\scala-2.11\src_managed\main\routes_reverseRouting.scala, C:\Trivial5a\WebTrivial5a\target\scala-2.11\src_managed\main\controllers\routes.java, C:\Trivial5a\WebTrivial5a\app\controllers\Application.java, C:\Trivial5a\WebTrivial5a\target\scala-2.11\src_managed\main\routes_routing.scala)
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set()
+Initial directly invalidated sources: Set(C:\Trivial5a\WebTrivial5a\target\scala-2.11\src_managed\main\routes_reverseRouting.scala, C:\Trivial5a\WebTrivial5a\target\scala-2.11\src_managed\main\controllers\routes.java, C:\Trivial5a\WebTrivial5a\app\controllers\Application.java, C:\Trivial5a\WebTrivial5a\target\scala-2.11\src_managed\main\routes_routing.scala)
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set()
+	external source: Set()
+All initially invalidated sources: Set(C:\Trivial5a\WebTrivial5a\target\scala-2.11\src_managed\main\routes_reverseRouting.scala, C:\Trivial5a\WebTrivial5a\target\scala-2.11\src_managed\main\controllers\routes.java, C:\Trivial5a\WebTrivial5a\app\controllers\Application.java, C:\Trivial5a\WebTrivial5a\target\scala-2.11\src_managed\main\routes_routing.scala)
+
+Read from stdout: Compiling 2 Scala sources and 2 Java sources to C:\Trivial5a\WebTrivial5a\target\scala-2.11\classes...
+Compiling 2 Scala sources and 2 Java sources to C:\Trivial5a\WebTrivial5a\target\scala-2.11\classes...
+Getting compiler-interface from component compiler for Scala 2.11.1
+Other repositories:
+Default repositories:
+Getting compiler-interface from component compiler for Scala 2.11.1
+Other repositories:
+Default repositories:
+Running cached compiler 405c6f47, interfacing (CompilerInterface) with Scala compiler version 2.11.1
+Calling Scala compiler with arguments  (CompilerInterface):
+	-deprecation
+	-unchecked
+	-encoding
+	utf8
+	-bootclasspath
+	C:\Program Files\Java\jdk1.8.0_20\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_20\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_20\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_20\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_20\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_20\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_20\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_20\jre\classes;C:\Users\Rinok\Desktop\activator-1.3.2\repository\org.scala-lang\scala-library\2.11.1\jars\scala-library.jar
+	-classpath
+	C:\Trivial5a\WebTrivial5a\target\scala-2.11\classes;C:\Users\Rinok\.ivy2\cache\com.typesafe.play\twirl-api_2.11\jars\twirl-api_2.11-1.0.2.jar;C:\Users\Rinok\.ivy2\cache\org.apache.commons\commons-lang3\jars\commons-lang3-3.1.jar;C:\Users\Rinok\.ivy2\cache\org.scala-lang.modules\scala-xml_2.11\bundles\scala-xml_2.11-1.0.1.jar;C:\Users\Rinok\.ivy2\cache\com.typesafe.play\play_2.11\jars\play_2.11-2.3.8.jar;C:\Users\Rinok\.ivy2\cache\com.typesafe.play\build-link\jars\build-link-2.3.8.jar;C:\Users\Rinok\.ivy2\cache\com.typesafe.play\play-exceptions\jars\play-exceptions-2.3.8.jar;C:\Users\Rinok\.ivy2\cache\com.typesafe.play\play-iteratees_2.11\jars\play-iteratees_2.11-2.3.8.jar;C:\Users\Rinok\.ivy2\cache\org.scala-stm\scala-stm_2.11\jars\scala-stm_2.11-0.7.jar;C:\Users\Rinok\.ivy2\cache\com.typesafe\config\bundles\config-1.2.1.jar;C:\Users\Rinok\.ivy2\cache\com.typesafe.play\play-json_2.11\jars\play-json_2.11-2.3.8.jar;C:\Users\Rinok\.ivy2\cache\com.typesafe.play\play-functional_2.11\jars\play-functional_2.11-2.3.8.jar;C:\Users\Rinok\.ivy2\cache\com.typesafe.play\play-datacommons_2.11\jars\play-datacommons_2.11-2.3.8.jar;C:\Users\Rinok\.ivy2\cache\joda-time\joda-time\jars\joda-time-2.3.jar;C:\Users\Rinok\.ivy2\cache\org.joda\joda-convert\jars\joda-convert-1.6.jar;C:\Users\Rinok\.ivy2\cache\com.fasterxml.jackson.core\jackson-annotations\bundles\jackson-annotations-2.3.2.jar;C:\Users\Rinok\.ivy2\cache\com.fasterxml.jackson.core\jackson-databind\bundles\jackson-databind-2.3.2.jar;C:\Users\Rinok\Desktop\activator-1.3.2\repository\org.scala-lang\scala-reflect\2.11.1\jars\scala-reflect.jar;C:\Users\Rinok\.ivy2\cache\org.scala-lang.modules\scala-parser-combinators_2.11\bundles\scala-parser-combinators_2.11-1.0.1.jar;C:\Users\Rinok\.ivy2\cache\io.netty\netty\bundles\netty-3.9.3.Final.jar;C:\Users\Rinok\.ivy2\cache\com.typesafe.netty\netty-http-pipelining\jars\netty-http-pipelining-1.1.2.jar;C:\Users\Rinok\.ivy2\cache\org.slf4j\slf4j-api\jars\slf4j-api-1.7.6.jar;C:\Users\Rinok\.ivy2\cache\org.slf4j\jul-to-slf4j\jars\jul-to-slf4j-1.7.6.jar;C:\Users\Rinok\.ivy2\cache\org.slf4j\jcl-over-slf4j\jars\jcl-over-slf4j-1.7.6.jar;C:\Users\Rinok\.ivy2\cache\ch.qos.logback\logback-core\jars\logback-core-1.1.1.jar;C:\Users\Rinok\.ivy2\cache\ch.qos.logback\logback-classic\jars\logback-classic-1.1.1.jar;C:\Users\Rinok\Desktop\activator-1.3.2\repository\com.typesafe.akka\akka-actor_2.11\2.3.4\jars\akka-actor_2.11.jar;C:\Users\Rinok\Desktop\activator-1.3.2\repository\com.typesafe.akka\akka-slf4j_2.11\2.3.4\jars\akka-slf4j_2.11.jar;C:\Users\Rinok\.ivy2\cache\commons-codec\commons-codec\jars\commons-codec-1.9.jar;C:\Users\Rinok\.ivy2\cache\xerces\xercesImpl\jars\xercesImpl-2.11.0.jar;C:\Users\Rinok\.ivy2\cache\xml-apis\xml-apis\jars\xml-apis-1.4.01.jar;C:\Users\Rinok\.ivy2\cache\javax.transaction\jta\jars\jta-1.1.jar;C:\Users\Rinok\.ivy2\cache\com.typesafe.play\play-java_2.11\jars\play-java_2.11-2.3.8.jar;C:\Users\Rinok\.ivy2\cache\org.yaml\snakeyaml\bundles\snakeyaml-1.13.jar;C:\Users\Rinok\.ivy2\cache\org.hibernate\hibernate-validator\jars\hibernate-validator-5.0.3.Final.jar;C:\Users\Rinok\.ivy2\cache\javax.validation\validation-api\jars\validation-api-1.1.0.Final.jar;C:\Users\Rinok\.ivy2\cache\com.fasterxml\classmate\bundles\classmate-1.0.0.jar;C:\Users\Rinok\.ivy2\cache\org.jboss.logging\jboss-logging\jars\jboss-logging-3.2.0.Final.jar;C:\Users\Rinok\.ivy2\cache\org.springframework\spring-context\jars\spring-context-4.0.3.RELEASE.jar;C:\Users\Rinok\.ivy2\cache\org.springframework\spring-core\jars\spring-core-4.0.3.RELEASE.jar;C:\Users\Rinok\.ivy2\cache\org.springframework\spring-beans\jars\spring-beans-4.0.3.RELEASE.jar;C:\Users\Rinok\.ivy2\cache\org.javassist\javassist\bundles\javassist-3.19.0-GA.jar;C:\Users\Rinok\.ivy2\cache\org.reflections\reflections\jars\reflections-0.9.8.jar;C:\Users\Rinok\.ivy2\cache\com.google.guava\guava\bundles\guava-16.0.1.jar;C:\Users\Rinok\.ivy2\cache\dom4j\dom4j\jars\dom4j-1.6.1.jar;C:\Users\Rinok\Desktop\activator-1.3.2\repository\com.google.code.findbugs\jsr305\2.0.3\jars\jsr305.jar;C:\Users\Rinok\.ivy2\cache\org.apache.tomcat\tomcat-servlet-api\jars\tomcat-servlet-api-8.0.5.jar;C:\Users\Rinok\.ivy2\cache\com.typesafe.play\play-java-jdbc_2.11\jars\play-java-jdbc_2.11-2.3.8.jar;C:\Users\Rinok\.ivy2\cache\com.typesafe.play\play-jdbc_2.11\jars\play-jdbc_2.11-2.3.8.jar;C:\Users\Rinok\.ivy2\cache\com.jolbox\bonecp\bundles\bonecp-0.8.0.RELEASE.jar;C:\Users\Rinok\Desktop\activator-1.3.2\repository\com.h2database\h2\1.3.175\jars\h2.jar;C:\Users\Rinok\.ivy2\cache\tyrex\tyrex\jars\tyrex-1.0.1.jar;C:\Users\Rinok\.ivy2\cache\com.typesafe.play\play-java-ebean_2.11\jars\play-java-ebean_2.11-2.3.8.jar;C:\Users\Rinok\.ivy2\cache\org.avaje.ebeanorm\avaje-ebeanorm\jars\avaje-ebeanorm-3.3.4.jar;C:\Users\Rinok\Desktop\activator-1.3.2\repository\org.avaje.ebeanorm\avaje-ebeanorm-agent\3.2.2\jars\avaje-ebeanorm-agent.jar;C:\Users\Rinok\.ivy2\cache\org.hibernate.javax.persistence\hibernate-jpa-2.0-api\jars\hibernate-jpa-2.0-api-1.0.1.Final.jar;C:\Users\Rinok\.ivy2\cache\com.typesafe.play\play-cache_2.11\jars\play-cache_2.11-2.3.8.jar;C:\Users\Rinok\.ivy2\cache\net.sf.ehcache\ehcache-core\jars\ehcache-core-2.6.8.jar;C:\Users\Rinok\.ivy2\cache\com.typesafe.play\play-java-ws_2.11\jars\play-java-ws_2.11-2.3.8.jar;C:\Users\Rinok\.ivy2\cache\com.typesafe.play\play-ws_2.11\jars\play-ws_2.11-2.3.8.jar;C:\Users\Rinok\.ivy2\cache\com.ning\async-http-client\jars\async-http-client-1.8.15.jar;C:\Users\Rinok\.ivy2\cache\oauth.signpost\signpost-core\jars\signpost-core-1.2.1.2.jar;C:\Users\Rinok\.ivy2\cache\oauth.signpost\signpost-commonshttp4\jars\signpost-commonshttp4-1.2.1.2.jar;C:\Users\Rinok\Desktop\activator-1.3.2\repository\org.apache.httpcomponents\httpcore\4.0.1\jars\httpcore.jar;C:\Users\Rinok\Desktop\activator-1.3.2\repository\org.apache.httpcomponents\httpclient\4.0.1\jars\httpclient.jar;C:\Users\Rinok\.ivy2\cache\commons-logging\commons-logging\jars\commons-logging-1.1.1.jar;C:\Users\Rinok\.ivy2\cache\net.vz.mongodb.jackson\play-mongo-jackson-mapper_2.10\jars\play-mongo-jackson-mapper_2.10-1.1.0.jar;C:\Users\Rinok\.ivy2\cache\net.vz.mongodb.jackson\mongo-jackson-mapper\jars\mongo-jackson-mapper-1.4.1.jar;C:\Users\Rinok\.ivy2\cache\org.codehaus.jackson\jackson-mapper-asl\jars\jackson-mapper-asl-1.9.5.jar;C:\Users\Rinok\.ivy2\cache\org.codehaus.jackson\jackson-core-asl\jars\jackson-core-asl-1.9.5.jar;C:\Users\Rinok\.ivy2\cache\javax.persistence\persistence-api\jars\persistence-api-1.0.2.jar;C:\Users\Rinok\.ivy2\cache\org.mongojack\mongojack\jars\mongojack-2.0.0-RC1.jar;C:\Users\Rinok\.ivy2\cache\org.mongodb\mongo-java-driver\jars\mongo-java-driver-2.9.1.jar;C:\Users\Rinok\.ivy2\cache\de.undercouch\bson4jackson\jars\bson4jackson-2.1.0.jar;C:\Users\Rinok\Desktop\activator-1.3.2\repository\com.fasterxml.jackson.core\jackson-core\2.3.3\bundles\jackson-core.jar;C:\Users\Rinok\Desktop\activator-1.3.2\repository\commons-io\commons-io\2.4\jars\commons-io.jar
+Read from stdout: C:\Trivial5a\WebTrivial5a\app\controllers\Application.java:12: illegal start of type
+C:\Trivial5a\WebTrivial5a\app\controllers\Application.java:12: illegal start of type
+Read from stdout: <<<<<<< HEAD
+<<<<<<< HEAD
+Read from stdout: ^
+^
+Read from stdout: C:\Trivial5a\WebTrivial5a\app\controllers\Application.java:18: identifier expected but `;' found.
+C:\Trivial5a\WebTrivial5a\app\controllers\Application.java:18: identifier expected but `;' found.
+Read from stdout: 	static Form<User> userForm = Form.form(User.class);
+	static Form<User> userForm = Form.form(User.class);
+Read from stdout: 	                                                  ^
+	                                                  ^
+Read from stdout: C:\Trivial5a\WebTrivial5a\app\controllers\Application.java:91: illegal start of type
+C:\Trivial5a\WebTrivial5a\app\controllers\Application.java:91: illegal start of type
+Read from stdout: >>>>>>> c3c08a247295b88c2972a712841d8118729d0e90
+>>>>>>> c3c08a247295b88c2972a712841d8118729d0e90
+Read from stdout: ^
+^
+Read from stdout: C:\Trivial5a\WebTrivial5a\app\controllers\Application.java:93: identifier expected but `}' found.
+C:\Trivial5a\WebTrivial5a\app\controllers\Application.java:93: identifier expected but `}' found.
+Read from stdout: }
+}
+Read from stdout: ^
+^
+Read from stdout: four errors found
+four errors found
+Compilation failed (CompilerInterface)
+Read from stdout: (compile:compileIncremental) Compilation failed
+(compile:compileIncremental) Compilation failed
+Total time: 1 s, completed 15-abr-2015 16:01:48
+> server-post-command-error-handler
+> server-post-command-cleanup
+> server-handle-next-server-request
+> compile
+Evaluating tasks: compile:compile
+Running task... Cancel: sbt.server.ServerTaskCancellation@409a6ba2, check cycles: false
+
+Initial source changes: 
+	removed:Set()
+	added: Set()
+	modified: Set(C:\Trivial5a\WebTrivial5a\target\scala-2.11\src_managed\main\routes_reverseRouting.scala, C:\Trivial5a\WebTrivial5a\target\scala-2.11\src_managed\main\controllers\routes.java, C:\Trivial5a\WebTrivial5a\app\controllers\Application.java, C:\Trivial5a\WebTrivial5a\target\scala-2.11\src_managed\main\routes_routing.scala)
+Removed products: Set()
+External API changes: API Changes: Set()
+Modified binary dependencies: Set()
+Initial directly invalidated sources: Set(C:\Trivial5a\WebTrivial5a\target\scala-2.11\src_managed\main\routes_reverseRouting.scala, C:\Trivial5a\WebTrivial5a\target\scala-2.11\src_managed\main\controllers\routes.java, C:\Trivial5a\WebTrivial5a\app\controllers\Application.java, C:\Trivial5a\WebTrivial5a\target\scala-2.11\src_managed\main\routes_routing.scala)
+
+Sources indirectly invalidated by:
+	product: Set()
+	binary dep: Set()
+	external source: Set()
+All initially invalidated sources: Set(C:\Trivial5a\WebTrivial5a\target\scala-2.11\src_managed\main\routes_reverseRouting.scala, C:\Trivial5a\WebTrivial5a\target\scala-2.11\src_managed\main\controllers\routes.java, C:\Trivial5a\WebTrivial5a\app\controllers\Application.java, C:\Trivial5a\WebTrivial5a\target\scala-2.11\src_managed\main\routes_routing.scala)
+
+Read from stdout: Compiling 2 Scala sources and 2 Java sources to C:\Trivial5a\WebTrivial5a\target\scala-2.11\classes...
+Compiling 2 Scala sources and 2 Java sources to C:\Trivial5a\WebTrivial5a\target\scala-2.11\classes...
+Getting compiler-interface from component compiler for Scala 2.11.1
+Other repositories:
+Default repositories:
+Getting compiler-interface from component compiler for Scala 2.11.1
+Other repositories:
+Default repositories:
+Running cached compiler db64a67, interfacing (CompilerInterface) with Scala compiler version 2.11.1
+Calling Scala compiler with arguments  (CompilerInterface):
+	-deprecation
+	-unchecked
+	-encoding
+	utf8
+	-bootclasspath
+	C:\Program Files\Java\jdk1.8.0_20\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_20\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_20\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_20\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_20\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_20\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_20\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_20\jre\classes;C:\Users\Rinok\Desktop\activator-1.3.2\repository\org.scala-lang\scala-library\2.11.1\jars\scala-library.jar
+	-classpath
+	C:\Trivial5a\WebTrivial5a\target\scala-2.11\classes;C:\Users\Rinok\.ivy2\cache\com.typesafe.play\twirl-api_2.11\jars\twirl-api_2.11-1.0.2.jar;C:\Users\Rinok\.ivy2\cache\org.apache.commons\commons-lang3\jars\commons-lang3-3.1.jar;C:\Users\Rinok\.ivy2\cache\org.scala-lang.modules\scala-xml_2.11\bundles\scala-xml_2.11-1.0.1.jar;C:\Users\Rinok\.ivy2\cache\com.typesafe.play\play_2.11\jars\play_2.11-2.3.8.jar;C:\Users\Rinok\.ivy2\cache\com.typesafe.play\build-link\jars\build-link-2.3.8.jar;C:\Users\Rinok\.ivy2\cache\com.typesafe.play\play-exceptions\jars\play-exceptions-2.3.8.jar;C:\Users\Rinok\.ivy2\cache\com.typesafe.play\play-iteratees_2.11\jars\play-iteratees_2.11-2.3.8.jar;C:\Users\Rinok\.ivy2\cache\org.scala-stm\scala-stm_2.11\jars\scala-stm_2.11-0.7.jar;C:\Users\Rinok\.ivy2\cache\com.typesafe\config\bundles\config-1.2.1.jar;C:\Users\Rinok\.ivy2\cache\com.typesafe.play\play-json_2.11\jars\play-json_2.11-2.3.8.jar;C:\Users\Rinok\.ivy2\cache\com.typesafe.play\play-functional_2.11\jars\play-functional_2.11-2.3.8.jar;C:\Users\Rinok\.ivy2\cache\com.typesafe.play\play-datacommons_2.11\jars\play-datacommons_2.11-2.3.8.jar;C:\Users\Rinok\.ivy2\cache\joda-time\joda-time\jars\joda-time-2.3.jar;C:\Users\Rinok\.ivy2\cache\org.joda\joda-convert\jars\joda-convert-1.6.jar;C:\Users\Rinok\.ivy2\cache\com.fasterxml.jackson.core\jackson-annotations\bundles\jackson-annotations-2.3.2.jar;C:\Users\Rinok\.ivy2\cache\com.fasterxml.jackson.core\jackson-databind\bundles\jackson-databind-2.3.2.jar;C:\Users\Rinok\Desktop\activator-1.3.2\repository\org.scala-lang\scala-reflect\2.11.1\jars\scala-reflect.jar;C:\Users\Rinok\.ivy2\cache\org.scala-lang.modules\scala-parser-combinators_2.11\bundles\scala-parser-combinators_2.11-1.0.1.jar;C:\Users\Rinok\.ivy2\cache\io.netty\netty\bundles\netty-3.9.3.Final.jar;C:\Users\Rinok\.ivy2\cache\com.typesafe.netty\netty-http-pipelining\jars\netty-http-pipelining-1.1.2.jar;C:\Users\Rinok\.ivy2\cache\org.slf4j\slf4j-api\jars\slf4j-api-1.7.6.jar;C:\Users\Rinok\.ivy2\cache\org.slf4j\jul-to-slf4j\jars\jul-to-slf4j-1.7.6.jar;C:\Users\Rinok\.ivy2\cache\org.slf4j\jcl-over-slf4j\jars\jcl-over-slf4j-1.7.6.jar;C:\Users\Rinok\.ivy2\cache\ch.qos.logback\logback-core\jars\logback-core-1.1.1.jar;C:\Users\Rinok\.ivy2\cache\ch.qos.logback\logback-classic\jars\logback-classic-1.1.1.jar;C:\Users\Rinok\Desktop\activator-1.3.2\repository\com.typesafe.akka\akka-actor_2.11\2.3.4\jars\akka-actor_2.11.jar;C:\Users\Rinok\Desktop\activator-1.3.2\repository\com.typesafe.akka\akka-slf4j_2.11\2.3.4\jars\akka-slf4j_2.11.jar;C:\Users\Rinok\.ivy2\cache\commons-codec\commons-codec\jars\commons-codec-1.9.jar;C:\Users\Rinok\.ivy2\cache\xerces\xercesImpl\jars\xercesImpl-2.11.0.jar;C:\Users\Rinok\.ivy2\cache\xml-apis\xml-apis\jars\xml-apis-1.4.01.jar;C:\Users\Rinok\.ivy2\cache\javax.transaction\jta\jars\jta-1.1.jar;C:\Users\Rinok\.ivy2\cache\com.typesafe.play\play-java_2.11\jars\play-java_2.11-2.3.8.jar;C:\Users\Rinok\.ivy2\cache\org.yaml\snakeyaml\bundles\snakeyaml-1.13.jar;C:\Users\Rinok\.ivy2\cache\org.hibernate\hibernate-validator\jars\hibernate-validator-5.0.3.Final.jar;C:\Users\Rinok\.ivy2\cache\javax.validation\validation-api\jars\validation-api-1.1.0.Final.jar;C:\Users\Rinok\.ivy2\cache\com.fasterxml\classmate\bundles\classmate-1.0.0.jar;C:\Users\Rinok\.ivy2\cache\org.jboss.logging\jboss-logging\jars\jboss-logging-3.2.0.Final.jar;C:\Users\Rinok\.ivy2\cache\org.springframework\spring-context\jars\spring-context-4.0.3.RELEASE.jar;C:\Users\Rinok\.ivy2\cache\org.springframework\spring-core\jars\spring-core-4.0.3.RELEASE.jar;C:\Users\Rinok\.ivy2\cache\org.springframework\spring-beans\jars\spring-beans-4.0.3.RELEASE.jar;C:\Users\Rinok\.ivy2\cache\org.javassist\javassist\bundles\javassist-3.19.0-GA.jar;C:\Users\Rinok\.ivy2\cache\org.reflections\reflections\jars\reflections-0.9.8.jar;C:\Users\Rinok\.ivy2\cache\com.google.guava\guava\bundles\guava-16.0.1.jar;C:\Users\Rinok\.ivy2\cache\dom4j\dom4j\jars\dom4j-1.6.1.jar;C:\Users\Rinok\Desktop\activator-1.3.2\repository\com.google.code.findbugs\jsr305\2.0.3\jars\jsr305.jar;C:\Users\Rinok\.ivy2\cache\org.apache.tomcat\tomcat-servlet-api\jars\tomcat-servlet-api-8.0.5.jar;C:\Users\Rinok\.ivy2\cache\com.typesafe.play\play-java-jdbc_2.11\jars\play-java-jdbc_2.11-2.3.8.jar;C:\Users\Rinok\.ivy2\cache\com.typesafe.play\play-jdbc_2.11\jars\play-jdbc_2.11-2.3.8.jar;C:\Users\Rinok\.ivy2\cache\com.jolbox\bonecp\bundles\bonecp-0.8.0.RELEASE.jar;C:\Users\Rinok\Desktop\activator-1.3.2\repository\com.h2database\h2\1.3.175\jars\h2.jar;C:\Users\Rinok\.ivy2\cache\tyrex\tyrex\jars\tyrex-1.0.1.jar;C:\Users\Rinok\.ivy2\cache\com.typesafe.play\play-java-ebean_2.11\jars\play-java-ebean_2.11-2.3.8.jar;C:\Users\Rinok\.ivy2\cache\org.avaje.ebeanorm\avaje-ebeanorm\jars\avaje-ebeanorm-3.3.4.jar;C:\Users\Rinok\Desktop\activator-1.3.2\repository\org.avaje.ebeanorm\avaje-ebeanorm-agent\3.2.2\jars\avaje-ebeanorm-agent.jar;C:\Users\Rinok\.ivy2\cache\org.hibernate.javax.persistence\hibernate-jpa-2.0-api\jars\hibernate-jpa-2.0-api-1.0.1.Final.jar;C:\Users\Rinok\.ivy2\cache\com.typesafe.play\play-cache_2.11\jars\play-cache_2.11-2.3.8.jar;C:\Users\Rinok\.ivy2\cache\net.sf.ehcache\ehcache-core\jars\ehcache-core-2.6.8.jar;C:\Users\Rinok\.ivy2\cache\com.typesafe.play\play-java-ws_2.11\jars\play-java-ws_2.11-2.3.8.jar;C:\Users\Rinok\.ivy2\cache\com.typesafe.play\play-ws_2.11\jars\play-ws_2.11-2.3.8.jar;C:\Users\Rinok\.ivy2\cache\com.ning\async-http-client\jars\async-http-client-1.8.15.jar;C:\Users\Rinok\.ivy2\cache\oauth.signpost\signpost-core\jars\signpost-core-1.2.1.2.jar;C:\Users\Rinok\.ivy2\cache\oauth.signpost\signpost-commonshttp4\jars\signpost-commonshttp4-1.2.1.2.jar;C:\Users\Rinok\Desktop\activator-1.3.2\repository\org.apache.httpcomponents\httpcore\4.0.1\jars\httpcore.jar;C:\Users\Rinok\Desktop\activator-1.3.2\repository\org.apache.httpcomponents\httpclient\4.0.1\jars\httpclient.jar;C:\Users\Rinok\.ivy2\cache\commons-logging\commons-logging\jars\commons-logging-1.1.1.jar;C:\Users\Rinok\.ivy2\cache\net.vz.mongodb.jackson\play-mongo-jackson-mapper_2.10\jars\play-mongo-jackson-mapper_2.10-1.1.0.jar;C:\Users\Rinok\.ivy2\cache\net.vz.mongodb.jackson\mongo-jackson-mapper\jars\mongo-jackson-mapper-1.4.1.jar;C:\Users\Rinok\.ivy2\cache\org.codehaus.jackson\jackson-mapper-asl\jars\jackson-mapper-asl-1.9.5.jar;C:\Users\Rinok\.ivy2\cache\org.codehaus.jackson\jackson-core-asl\jars\jackson-core-asl-1.9.5.jar;C:\Users\Rinok\.ivy2\cache\javax.persistence\persistence-api\jars\persistence-api-1.0.2.jar;C:\Users\Rinok\.ivy2\cache\org.mongojack\mongojack\jars\mongojack-2.0.0-RC1.jar;C:\Users\Rinok\.ivy2\cache\org.mongodb\mongo-java-driver\jars\mongo-java-driver-2.9.1.jar;C:\Users\Rinok\.ivy2\cache\de.undercouch\bson4jackson\jars\bson4jackson-2.1.0.jar;C:\Users\Rinok\Desktop\activator-1.3.2\repository\com.fasterxml.jackson.core\jackson-core\2.3.3\bundles\jackson-core.jar;C:\Users\Rinok\Desktop\activator-1.3.2\repository\commons-io\commons-io\2.4\jars\commons-io.jar
+Scala compilation took 3.381504868 s
+Attempting to call com.sun.tools.javac.api.JavacTool@2af87394 directly...
+Read from stdout: C:\Trivial5a\WebTrivial5a\app\controllers\Application.java:39: cannot find symbol
+Read from stdout: symbol:   method save()
+Read from stdout: location: variable user of type model.User
+C:\Trivial5a\WebTrivial5a\app\controllers\Application.java:39: cannot find symbol
+  symbol:   method save()
+  location: variable user of type model.User
+Read from stdout: user.save
+user.save
+Read from stdout: C:\Trivial5a\WebTrivial5a\app\controllers\Application.java:48: cannot find symbol
+Read from stdout: symbol:   method findById(java.lang.Long)
+Read from stdout: location: class model.User
+C:\Trivial5a\WebTrivial5a\app\controllers\Application.java:48: cannot find symbol
+  symbol:   method findById(java.lang.Long)
+  location: class model.User
+Read from stdout: User.findById
+User.findById
+Read from stdout: C:\Trivial5a\WebTrivial5a\app\controllers\Application.java:58:  java.lang.Long cannot be converted to java.lang.String
+C:\Trivial5a\WebTrivial5a\app\controllers\Application.java:58:  java.lang.Long cannot be converted to java.lang.String
+Read from stdout: id
+id
+Read from stdout: C:\Trivial5a\WebTrivial5a\app\controllers\Application.java:76: cannot find symbol
+Read from stdout: symbol:   method findById(java.lang.Long)
+Read from stdout: location: class model.Question
+C:\Trivial5a\WebTrivial5a\app\controllers\Application.java:76: cannot find symbol
+  symbol:   method findById(java.lang.Long)
+  location: class model.Question
+Read from stdout: Question.findById
+Question.findById
+Read from stdout: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+Read from stdout: (compile:compileIncremental) javac returned nonzero exit code
+(compile:compileIncremental) javac returned nonzero exit code
+Total time: 4 s, completed 15-abr-2015 16:02:39
+> server-post-command-error-handler
+> server-post-command-cleanup
+> server-handle-next-server-request
