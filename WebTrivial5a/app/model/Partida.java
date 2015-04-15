@@ -6,8 +6,15 @@ import java.util.*;
 
 import javax.persistence.*;
 
-import net.vz.mongodb.jackson.JacksonDBCollection;
-import net.vz.mongodb.jackson.ObjectId;
+import org.bson.BSONObject;
+
+import com.mongodb.BasicDBObject;
+
+
+import com.mongodb.DBObject;
+
+import net.vz.mongodb.jackson.*;
+import net.vz.mongodb.jackson.Id;
 import model.User;
 
 public class Partida {
@@ -89,11 +96,11 @@ public class Partida {
 		  }
 
 		  /**
-		   * Borra una partida dado un login
+		   * Borra una partida dado un id
 		   * @param login
 		   */
-		  public static void delete(String login) {
-			  Partida user = Partida.coll.findOneById(login);
+		  public static void delete(String id) {
+			  Partida user = Partida.coll.findOneById(id);
 		    if (user != null)
 		    	Partida.coll.remove(user);
 		  }
@@ -113,6 +120,18 @@ public class Partida {
 		  public static Partida findOne(String id)
 		  {	
 			  return Partida.coll.findOneById(id);
+		  }
+		  
+		  /**Busca  partidas no terminadas
+		   * 
+		   * @param id
+		   * @return
+		   */
+		  public static List<Partida> findActive(String id)
+		  {	
+			  DBObject partida = new BasicDBObject("finished", false);
+			  DBCursor<Partida> cursor = Partida.coll.find(partida);
+			return cursor.toArray();
 		  }
 	
 
