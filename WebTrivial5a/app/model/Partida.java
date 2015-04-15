@@ -1,78 +1,119 @@
 package model;
 
-import play.db.ebean.*;
-import play.db.ebean.Model.Finder;
-import play.db.ebean.Model;
-import play.data.format.*;
-import play.data.validation.*;
-import play.data.validation.Constraints.Required;
+import play.modules.mongodb.jackson.MongoDB;
 
 import java.util.*;
 
 import javax.persistence.*;
 
+import net.vz.mongodb.jackson.JacksonDBCollection;
+import net.vz.mongodb.jackson.ObjectId;
 import model.User;
 
-@Entity
-public class Partida extends Model {
+public class Partida {
 	
 	public List<User> usuarios;
+	
+	private static JacksonDBCollection<Partida, String> coll = 
+			MongoDB.getCollection("partidas", Partida.class, String.class);
+
 	
 	public List<Long> idUsers;
 	
 	@Id
-	public Long id;
+	@ObjectId
+	public String id;
+	
+	public boolean finished;
 	
 	public  List<Long> idAskedQuestions;
 	public User activeUser;
 	
 	public Map<Long,Set<String>> quesitosPorJugador;
 	
-	
-	public Partida()
-	{
-		if(findById(this.id) != null) //Ya estaba la partida en la BBDD
-		{
-			
-		}
-		else
-		{
-			
-		}
-			
+	/**
+	 * Constructor con datos para guardar y recuperar
+	 */
+	public Partida(List<User> usuarios, List<Long> idUsers, String id,
+			boolean finished, List<Long> idAskedQuestions, User activeUser,
+			Map<Long, Set<String>> quesitosPorJugador) {
+		super();
+		this.usuarios = usuarios;
+		this.idUsers = idUsers;
+		this.id = id;
+		this.finished = finished;
+		this.idAskedQuestions = idAskedQuestions;
+		this.activeUser = activeUser;
+		this.quesitosPorJugador = quesitosPorJugador;
 	}
+	
 	
 	/**
-	 * Carga los usuarios en memoria
+	 * Comnstructor por defecto
+	 */
+	public Partida ()
+	{
+		
+	}
+	
+	
+
+	/**
+	 * Metodo que encuentra todos los usuarios y los devuelve en una lista
 	 * @return
 	 */
-	public List<User> loadUsers()
-	{
-		return null;
-	}
-	
-	
-	
-	public static Partida findById(Long id) {
-		return finder.byId(id);
-	}
- 
-	public static List<Partida> all() {
-		return finder.all();
-	}
+	  public static List<Partida> all() {
+		    return Partida.coll.find().toArray();
+		  }
 
-	public static void create(Partida partida) {
-		partida.save();
-	}
- 
-	public static void delete(Long id) {
-		finder.ref(id).delete();
-	}
+	  /**
+	   * Metodo que es llamado por el anterior y guarda en la BBDD
+	   * @param user
+	   */
+		  public static void create(Partida partida) throws Exception {
+			  if(Partida.findOne(partida.id)==null)
+				  Partida.coll.save(partida);
+			  else
+				  throw new Exception("Usuario repetido");
+		  }
+
+		  /**
+		   * Metodo que crea una partida
+		   * @param login
+		   * @param password
+		   */
+		  public static void create(List<User> usuarios, List<Long> idUsers, String id,
+					boolean finished, List<Long> idAskedQuestions, User activeUser,
+					Map<Long, Set<String>> quesitosPorJugador) throws Exception{
+		      create(new Partida(usuarios,idUsers,id,finished,idAskedQuestions,activeUser,quesitosPorJugador));
+		  }
+
+		  /**
+		   * Borra una partida dado un login
+		   * @param login
+		   */
+		  public static void delete(String login) {
+			  Partida user = Partida.coll.findOneById(login);
+		    if (user != null)
+		    	Partida.coll.remove(user);
+		  }
+
+		  /**
+		   * Elimina todos los usuarios
+		   */
+		  public static void removeAll(){
+			  Partida.coll.drop();
+		  }
+		  
+		  /**Busca una partida
+		   * 
+		   * @param id
+		   * @return
+		   */
+		  public static Partida findOne(String id)
+		  {	
+			  return Partida.coll.findOneById(id);
+		  }
 	
-	public static void deleteAll() {
-		finder.all().clear();
-	}
-	
-	public static Finder<Long, Partida> finder = new Finder(Long.class, Partida.class);
 
 }
