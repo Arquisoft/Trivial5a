@@ -29,6 +29,10 @@ public class Application extends Controller {
 		 //Form<Login> loginForm = form(Login.class).bindFromRequest();
 		  return ok();
 	}
+	public static Result showQuestions() {
+			
+		  return ok(categorias.render(Category.all()));
+	}
 	
 	public static Result register() {
 		 return null;

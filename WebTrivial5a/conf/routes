@@ -15,6 +15,7 @@ GET     /                           					controllers.Application.index()
 #PUT		/user/:id										controllers.Application.updateUser(id: Long)
 #POST    /user/delete/:id 								controllers.Application.deleteUser(id: Long)
 #DELETE  /user/:id 										controllers.Application.deleteUser(id: Long)
+GET   /categorias										controllers.Application.showQuestions()
 
 #POST	/partida										controllers.Application.newPartida()
 #GET		/partida										controllers.Application.showPartidas()

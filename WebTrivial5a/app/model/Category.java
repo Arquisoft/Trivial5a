@@ -6,6 +6,7 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Random;
 
+import net.vz.mongodb.jackson.Id;
 import net.vz.mongodb.jackson.JacksonDBCollection;
 
 import org.mongojack.ObjectId;
@@ -16,6 +17,7 @@ import play.modules.mongodb.jackson.MongoDB;
 
 public class Category{
 
+	@Id
 	@ObjectId
 	public String name;
 	

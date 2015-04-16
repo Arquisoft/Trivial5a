@@ -1,7 +1,3 @@
-xmlhttp.open("GET","localhost:9000/partida/1/1",true);
-xmlhttp.send();
-
-
 
 
 
