@@ -6,7 +6,6 @@ import play.libs.Json;
 import play.mvc.*;
 import views.html.*;
 import model.*;
-//import models.Task;
 
 public class Application extends Controller {
 
@@ -37,7 +36,7 @@ public class Application extends Controller {
 	
 	public static Result newUser() {
 		User user = userForm.bindFromRequest().get();
-		user.save();
+		//user.save();
 		return ok("Usuario añadido");
 	}
 	
@@ -45,18 +44,18 @@ public class Application extends Controller {
 		return ok(Json.toJson(User.all()));
 	}
 
-	public static Result showUser(Long id) {
-		return ok(Json.toJson(User.findById(id)));
+	public static Result showUser(String id) {
+		return ok(Json.toJson(User.findOne(id)));
 	}
 
 	public static Result updateUser(Long id) {
 		User user = userForm.bindFromRequest().get();
-		User.create(user);
+		//User.create(user);
 		return ok("Usuario modificado");
 	}
 
 	public static Result deleteUser(Long id) {
-		User.delete(id);
+		//User.delete(id);
 		return ok("Usuario eliminado");
 	}
 
@@ -73,9 +72,9 @@ public class Application extends Controller {
 		return null;
 	}
 	
-	public static Result getQuestion(Long id, Long idCategoria) {
+	/*public static Result getQuestion(String id, String idCategoria) {
 		return ok(Json.toJson(Question.findById(id)));
-	}
+	}*/
 	
 	public static Result getRespuesta(Long id, Long idQuestion) {
 		return null;

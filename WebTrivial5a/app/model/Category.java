@@ -60,7 +60,7 @@ public class Category{
 	/**
 	 * Baraja aleatoriamente las preguntas de la categoría
 	 */
-	private void shuffleQuestions(long seed)
+	public void shuffleQuestions(long seed)
 	{
 		Collections.shuffle(questions, new Random(seed));
 	}
