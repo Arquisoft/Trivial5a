@@ -15,7 +15,11 @@ libraryDependencies ++= Seq(
   "org.mongojack" % "mongojack" % "2.0.0-RC1",
   "info.cukes" % "cucumber-java" % "1.1.8" % "test",
   "info.cukes" % "cucumber-junit" % "1.1.8" % "test",
-  "org.assertj" % "assertj-core" % "2.0.0" % "test"
+  "org.assertj" % "assertj-core" % "2.0.0" % "test",
+  "org.webjars" % "bootstrap" % "3.3.1",
+  "org.webjars" % "angularjs" % "1.3.8",
+  "org.webjars" % "angular-ui-bootstrap" % "0.12.0",
+  "org.mockito" % "mockito-core" % "1.10.17" % "test"
 )
 
 fork in run := true
