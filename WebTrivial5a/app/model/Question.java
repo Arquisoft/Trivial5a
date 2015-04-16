@@ -2,9 +2,7 @@ package model;
 
 
 public class Question {
-	
-	
-	
+
 	public String identifier; // Identifica inequivocamente a la pregunta
 	
 	public static final int MAX_ANSWER = 4;

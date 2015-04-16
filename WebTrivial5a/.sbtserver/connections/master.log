@@ -1,19 +1,7 @@
-New log file opened at Thu Apr 16 16:03:18 CEST 2015 by 8548@Aitor
-Taking next connection to: 3905
-New client attempting to connect on port: 3906-3905
-  Address = /192.168.56.1:3905
-This client on port 3906 has uuid bec76260-37ec-44fa-80cc-4edad5aa3058 configName activator humanReadableName Activator protocolVersion 1 featureTags Vector()
-Connected Clients: activator-bec76260-37ec-44fa-80cc-4edad5aa3058
-Taking next connection to: 3905
-Checking to see if clients are empty...
-We have 1 non-daemon clients, continuing serving connections.
-Taking next connection to: 3905
-Checking to see if clients are empty...
-We have 1 non-daemon clients, continuing serving connections.
-Taking next connection to: 3905
-Checking to see if clients are empty...
-We have 1 non-daemon clients, continuing serving connections.
-Taking next connection to: 3905
-Checking to see if clients are empty...
-We have 1 non-daemon clients, continuing serving connections.
-Taking next connection to: 3905
+New log file opened at Thu Apr 16 19:19:51 CEST 2015 by 4656@Pablo
+Taking next connection to: 12937
+New client attempting to connect on port: 12938-12937
+  Address = /192.168.56.1:12937
+This client on port 12938 has uuid dc948264-3290-40a5-97d2-5dfacda24f2a configName play-fork-run humanReadableName Play Fork Run protocolVersion 1 featureTags Vector()
+Connected Clients: play-fork-run-dc948264-3290-40a5-97d2-5dfacda24f2a
+Taking next connection to: 12937

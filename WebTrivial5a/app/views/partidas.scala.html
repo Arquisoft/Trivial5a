@@ -1,0 +1,22 @@
+<!--Esto es un comentario-->
+@(partidas: com.fasterxml.jackson.databind.JsonNode)
+
+@import com.fasterxml.jackson.databind.JsonNode
+
+<Partida> <!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Partidas</title>
+</head>
+<body>
+	<h1>Todas las partidas</h1>
+	<table>
+		@for(partida <- partidas) {
+		<tr>
+			<td>@partida</td>
+		</tr>
+		}
+	</table>
+</body>
+</html>

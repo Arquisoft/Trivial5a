@@ -69,12 +69,12 @@ public class Partida {
 	
 
 	/**
-	 * Metodo que encuentra todos los usuarios y los devuelve en una lista
+	 * Metodo que encuentra todas las partidas y los devuelve en una lista
 	 * @return
 	 */
 	  public static List<Partida> all() {
 		    return Partida.coll.find().toArray();
-		  }
+	  }
 
 	  /**
 	   * Metodo que es llamado por el anterior y guarda en la BBDD

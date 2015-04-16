@@ -1,5 +1,8 @@
 package controllers;
 
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.ObjectMapper;
+
 import play.*;
 import play.data.Form;
 import play.libs.Json;
@@ -31,10 +34,6 @@ public class Application extends Controller {
 	}
 	
 	public static Result register() {
-		 return null;
-	}
-	
-	public static Result newUser() {
 		User user = userForm.bindFromRequest().get();
 		//user.save();
 		return ok("Usuario añadido");
@@ -48,13 +47,13 @@ public class Application extends Controller {
 		return ok(Json.toJson(User.findOne(id)));
 	}
 
-	public static Result updateUser(Long id) {
+	public static Result updateUser(String id) {
 		User user = userForm.bindFromRequest().get();
 		//User.create(user);
 		return ok("Usuario modificado");
 	}
 
-	public static Result deleteUser(Long id) {
+	public static Result deleteUser(String id) {
 		//User.delete(id);
 		return ok("Usuario eliminado");
 	}
@@ -64,23 +63,28 @@ public class Application extends Controller {
 	}
 	
 	public static Result showPartidas() {
-		//return ok(Json.toJson(Partida.all()));
+//		ObjectMapper mapper = new ObjectMapper();
+//		JsonNode actualObj = mapper.readTree(Json.toJson(Partida.all()));
+//		return ok(partidas.render(actualObj));
+		return ok(partidas.render(Partida.all()));
+	}
+	
+	public static Result showPartida(String id) {
 		return null;
 	}
 	
-	public static Result showPartida(Long id) {
+	public static Result getQuestion(String id, String idCategoria) {
+		Partida partidaActiva = Partida.findOne(id);
+		Question q = partidaActiva.devolverPregunta(idCategoria);
+		return ok(Json.toJson(q));
+	}
+	
+	public static Result getRespuesta(String id, String idQuestion) {
+		
 		return null;
 	}
 	
-	/*public static Result getQuestion(String id, String idCategoria) {
-		return ok(Json.toJson(Question.findById(id)));
-	}*/
-	
-	public static Result getRespuesta(Long id, Long idQuestion) {
-		return null;
-	}
-	
-	public static Result setRespuesta(Long id, Long idQuestion, Long idAnswer) {
+	public static Result setRespuesta(String id, String idQuestion, String idAnswer) {
 		return null;
 	}
 
