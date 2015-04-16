@@ -128,6 +128,6 @@ public class Category{
 		   */
 		  public static void Update(Category category)
 		  {
-			 	Category.coll.save(category)
+			 	Category.coll.save(category);
 		  }
 }
