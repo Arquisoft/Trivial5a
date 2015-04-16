@@ -1,7 +1,4 @@
-<!--Esto es un comentario-->
-@(partidas: com.fasterxml.jackson.databind.JsonNode)
-
-@import com.fasterxml.jackson.databind.JsonNode
+@(partidass : List[model.Partida])
 
 <Partida> <!DOCTYPE html>
 <html>
@@ -12,7 +9,7 @@
 <body>
 	<h1>Todas las partidas</h1>
 	<table>
-		@for(partida <- partidas) {
+		@for(partida <- partidass) {
 		<tr>
 			<td>@partida</td>
 		</tr>

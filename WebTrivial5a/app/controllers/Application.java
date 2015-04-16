@@ -34,17 +34,25 @@ public class Application extends Controller {
 	}
 	public static Result showQuestions() {
 			
-		  return ok(categorias.render(Category.all()));
+		  //return ok(categorias.render(Category.all()));
+		return null;
 	}
 	
-	public static Result register() {
-		User user = userForm.bindFromRequest().get();
-		//user.save();
-		return ok("Usuario añadido");
+	/**
+	 * FUNCIONA. FALTARIA  PONER MENSAJE SI USUARIOS REPETIDO Y ESO
+	 * @return
+	 * @throws Exception
+	 */
+	public static Result register() throws Exception {
+		 Form<User> filledForm = userForm.bindFromRequest();
+		 User.Update(filledForm.get());
+		return ok(usuarios.render(userForm));
 	}
 	
 	public static Result showUsers() {
-		return ok(Json.toJson(User.all()));
+		//return ok(Json.toJson(User.all()));
+		return ok(usuarios.render(userForm));
+
 	}
 
 	public static Result showUser(String id) {

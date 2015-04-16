@@ -1,12 +1,15 @@
 package model;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.mongodb.BasicDBObject;
 import com.mongodb.DBObject;
+
 import play.modules.mongodb.jackson.MongoDB;
 import net.vz.mongodb.jackson.JacksonDBCollection;
 import net.vz.mongodb.jackson.Id;
@@ -18,6 +21,8 @@ public class User {
 	
 	@Id
 	@ObjectId
+	public String id;
+	
 	public String login;
 	public String password;
 	
@@ -30,6 +35,7 @@ public class User {
 	
 	public int numberWrongAnswer;
 	
+
 	public int posicion;
 	 
 	public boolean isAdmin()
@@ -43,6 +49,9 @@ public class User {
 		this.admin=admin;
 	}
 	
+	public User(){
+		 
+	  }
 	
 	/**
 	 * Metodo que encuentra todos los usuarios y los devuelve en una lista
@@ -50,14 +59,15 @@ public class User {
 	 */
 	  public static List<User> all() {
 		    return User.coll.find().toArray();
+		 
 		  }
 
 	  /**
 	   * Metodo que es llamado por el anterior y guarda en la BBDD
 	   * @param user
 	   */
-		  private static void create(User user) throws Exception {
-			  if(User.findOne(user.login)==null)
+		  public static void create(User user) throws Exception {
+			  if(User.findOne(user.id)==null)
 			  User.coll.save(user);
 			  else
 				  throw new Exception("Usuario repetido");
@@ -76,8 +86,8 @@ public class User {
 		   * Borra un usuario dado un login
 		   * @param login
 		   */
-		  public static void delete(String login) {
-			  User user = User.coll.findOneById(login);
+		  public static void delete(String id) {
+			  User user = User.coll.findOneById(id);
 		    if (user != null)
 		    	User.coll.remove(user);
 		  }
@@ -105,12 +115,12 @@ public class User {
 		  
 		  /**Busca un usuario
 		   * 
-		   * @param login
+		   * @param id
 		   * @return
 		   */
-		  public static User findOne(String login)
+		  public static User findOne(String id)
 		  {
-			  return User.coll.findOneById(login);
+			  return User.coll.findOneById(id);
 		  }
 		  
 		  /**Busca un usuario

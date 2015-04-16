@@ -52,11 +52,6 @@ public class Partida {
 		this.quesitosPorJugador = quesitosPorJugador;
 	}
 	
-	public static void main (String[] args)
-	{
-		System.out.println(Partida.all().size());
-	}
-	
 	/**
 	 * Comnstructor por defecto
 	 */

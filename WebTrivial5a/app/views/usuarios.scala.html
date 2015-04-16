@@ -1,0 +1,13 @@
+@(userForm: Form[model.User])
+@import helper._
+
+<h2>Add a new user</h2>
+    
+    @form(routes.Application.register()) {
+        
+        @inputText(userForm("login")) 
+        @inputText(userForm("password")) 
+        
+        <input type="submit" value="Create">
+
+}

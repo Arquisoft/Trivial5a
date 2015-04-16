@@ -1,5 +1,5 @@
-New log file opened at Thu Apr 16 19:25:23 CEST 2015 by 9212@Aitor
-jvm 9212@Aitor
+New log file opened at Thu Apr 16 23:07:55 CEST 2015 by 5648@Aitor
+jvm 5648@Aitor
 jvm vmName=Java HotSpot(TM) 64-Bit Server VM vmVendor=Oracle Corporation vmVersion=25.20-b23
 jvm specName=Java Virtual Machine Specification specVendor=Oracle Corporation specVersion=1.8
 jvm arguments: [-Xms256m, -Xmx1024m, -XX:MetaspaceSize=64m, -XX:MaxMetaspaceSize=256m]
@@ -27,7 +27,7 @@ sorting: ns: List(sbt.plugins.CorePlugin, sbt.plugins.IvyPlugin, sbt.plugins.Jvm
   :: sorted deduced result: List(sbt.plugins.CorePlugin, sbt.plugins.IvyPlugin, sbt.plugins.JvmPlugin, sbt.plugins.JUnitXmlReportPlugin)
 [Loading] Done in C:\Trivial5a\WebTrivial5a\project, returning: (webtrivial5a-build)
 Loading project definition from C:\Trivial5a\WebTrivial5a\project
-Running task... Cancel: sbt.TaskCancellationStrategy$Null$@421c55fa, check cycles: false
+Running task... Cancel: sbt.TaskCancellationStrategy$Null$@3f2f4d39, check cycles: false
 [info] Updating {file:/C:/Trivial5a/WebTrivial5a/project/}webtrivial5a-build...
 Updating {file:/C:/Trivial5a/WebTrivial5a/project/}webtrivial5a-build...
 Other repositories:
@@ -16309,7 +16309,7 @@ sbt-chain: module revision found in cache: org.fusesource.jansi#jansi;1.4
 	[NOT REQUIRED] org.scala-sbt#apply-macro;0.13.8-M3!apply-macro.jar
 	[NOT REQUIRED] org.scala-lang#jline;2.10.4!jline.jar
 	[NOT REQUIRED] org.fusesource.jansi#jansi;1.4!jansi.jar
-:: resolution report :: resolve 5183ms :: artifacts dl 234ms
+:: resolution report :: resolve 5563ms :: artifacts dl 257ms
 	report for default#webtrivial5a-build;0.1-SNAPSHOT compile produced in C:\Trivial5a\WebTrivial5a\project\target\resolution-cache\reports\default-webtrivial5a-build-compile.xml
 	report for default#webtrivial5a-build;0.1-SNAPSHOT runtime produced in C:\Trivial5a\WebTrivial5a\project\target\resolution-cache\reports\default-webtrivial5a-build-runtime.xml
 	report for default#webtrivial5a-build;0.1-SNAPSHOT test produced in C:\Trivial5a\WebTrivial5a\project\target\resolution-cache\reports\default-webtrivial5a-build-test.xml
@@ -16323,7 +16323,7 @@ sbt-chain: module revision found in cache: org.fusesource.jansi#jansi;1.4
 	report for default#webtrivial5a-build;0.1-SNAPSHOT docs produced in C:\Trivial5a\WebTrivial5a\project\target\resolution-cache\reports\default-webtrivial5a-build-docs.xml
 	report for default#webtrivial5a-build;0.1-SNAPSHOT pom produced in C:\Trivial5a\WebTrivial5a\project\target\resolution-cache\reports\default-webtrivial5a-build-pom.xml
 	report for default#webtrivial5a-build;0.1-SNAPSHOT scala-tool produced in C:\Trivial5a\WebTrivial5a\project\target\resolution-cache\reports\default-webtrivial5a-build-scala-tool.xml
-	resolve done (5183ms resolve - 234ms download)
+	resolve done (5563ms resolve - 257ms download)
 [info] Done updating.
 Done updating.
 
@@ -16365,7 +16365,7 @@ Set current project to C:\Trivial5a\WebTrivial5a (in build file:/C:/Trivial5a/We
 > server-handle-next-server-request
 > {file:/C:/Trivial5a/WebTrivial5a/}root/*:playForkConfig
 Evaluating tasks: *:playForkConfig
-Running task... Cancel: sbt.server.ServerTaskCancellation@478a5be6, check cycles: false
+Running task... Cancel: sbt.server.ServerTaskCancellation@44a3de73, check cycles: false
 Read from stdout: Updating {file:/C:/Trivial5a/WebTrivial5a/}root...
 Updating {file:/C:/Trivial5a/WebTrivial5a/}root...
 Other repositories:
@@ -16380,7 +16380,7 @@ resolving dependencies for configuration 'compile'
 == resolving dependencies c-trivial5a-webtrivial5a#c-trivial5a-webtrivial5a_2.11;1.0-SNAPSHOT->org.scala-lang#scala-library;2.11.1 [compile->default(compile)]
 Read from stdout: Resolving org.scala-lang#scala-library;2.11.1 ...
 Resolving org.scala-lang#scala-library;2.11.1 ...
-sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@2e5f43d
+sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@5f469261
 sbt-chain: module revision found in cache: org.scala-lang#scala-library;2.11.1
 	found org.scala-lang#scala-library;2.11.1 in sbt-chain
 	[2.11.1] org.scala-lang#scala-library;2.11.1
@@ -25298,7 +25298,7 @@ all callers are evicted for commons-logging#commons-logging;1.1.1: evicting too
 	[NOT REQUIRED] org.scala-sbt#control_2.11;0.13.8-M3!control_2.11.jar
 	[NOT REQUIRED] com.typesafe.akka#akka-actor_2.11;2.3.8!akka-actor_2.11.jar
 	[NOT REQUIRED] com.typesafe.akka#akka-testkit_2.11;2.3.8!akka-testkit_2.11.jar
-:: resolution report :: resolve 2681ms :: artifacts dl 235ms
+:: resolution report :: resolve 2731ms :: artifacts dl 196ms
 	report for c-trivial5a-webtrivial5a#c-trivial5a-webtrivial5a_2.11;1.0-SNAPSHOT compile produced in C:\Trivial5a\WebTrivial5a\target\resolution-cache\reports\c-trivial5a-webtrivial5a-c-trivial5a-webtrivial5a_2.11-compile.xml
 	report for c-trivial5a-webtrivial5a#c-trivial5a-webtrivial5a_2.11;1.0-SNAPSHOT runtime produced in C:\Trivial5a\WebTrivial5a\target\resolution-cache\reports\c-trivial5a-webtrivial5a-c-trivial5a-webtrivial5a_2.11-runtime.xml
 	report for c-trivial5a-webtrivial5a#c-trivial5a-webtrivial5a_2.11;1.0-SNAPSHOT test produced in C:\Trivial5a\WebTrivial5a\target\resolution-cache\reports\c-trivial5a-webtrivial5a-c-trivial5a-webtrivial5a_2.11-test.xml
@@ -25313,41 +25313,22 @@ all callers are evicted for commons-logging#commons-logging;1.1.1: evicting too
 	report for c-trivial5a-webtrivial5a#c-trivial5a-webtrivial5a_2.11;1.0-SNAPSHOT pom produced in C:\Trivial5a\WebTrivial5a\target\resolution-cache\reports\c-trivial5a-webtrivial5a-c-trivial5a-webtrivial5a_2.11-pom.xml
 	report for c-trivial5a-webtrivial5a#c-trivial5a-webtrivial5a_2.11;1.0-SNAPSHOT scala-tool produced in C:\Trivial5a\WebTrivial5a\target\resolution-cache\reports\c-trivial5a-webtrivial5a-c-trivial5a-webtrivial5a_2.11-scala-tool.xml
 	report for c-trivial5a-webtrivial5a#c-trivial5a-webtrivial5a_2.11;1.0-SNAPSHOT fork-run produced in C:\Trivial5a\WebTrivial5a\target\resolution-cache\reports\c-trivial5a-webtrivial5a-c-trivial5a-webtrivial5a_2.11-fork-run.xml
-	resolve done (2681ms resolve - 235ms download)
+	resolve done (2731ms resolve - 196ms download)
 Read from stdout: Done updating.
 Done updating.
-Total time: 3 s, completed 16-abr-2015 19:25:37
+Total time: 3 s, completed 16-abr-2015 23:08:09
 > server-post-command-cleanup
 > server-handle-next-server-request
 > root/playForkNotifyStart http://localhost:9000
 Evaluating tasks: *:playForkNotifyStart
-Running task... Cancel: sbt.server.ServerTaskCancellation@69c81f2, check cycles: false
-Total time: 0 s, completed 16-abr-2015 19:25:38
+Running task... Cancel: sbt.server.ServerTaskCancellation@9f9ea9e, check cycles: false
+Total time: 0 s, completed 16-abr-2015 23:08:10
 > server-post-command-cleanup
 > server-handle-next-server-request
-> {file:/C:/Trivial5a/WebTrivial5a/}root/*:playForkReload
-Evaluating tasks: *:playForkReload
-Running task... Cancel: sbt.server.ServerTaskCancellation@425dab9a, check cycles: false
-
-Initial source changes: 
-	removed:Set()
-	added: Set()
-	modified: Set()
-Removed products: Set()
-External API changes: API Changes: Set()
-Modified binary dependencies: Set()
-Initial directly invalidated sources: Set()
-
-Sources indirectly invalidated by:
-	product: Set()
-	binary dep: Set()
-	external source: Set()
-All initially invalidated sources: Set()
-
-Copy resource mappings: 
-	(C:\Trivial5a\WebTrivial5a\conf\application.conf,C:\Trivial5a\WebTrivial5a\target\scala-2.11\classes\application.conf)
-	(C:\Trivial5a\WebTrivial5a\conf\play.conf,C:\Trivial5a\WebTrivial5a\target\scala-2.11\classes\play.conf)
-	(C:\Trivial5a\WebTrivial5a\conf\routes,C:\Trivial5a\WebTrivial5a\target\scala-2.11\classes\routes)
-Total time: 2 s, completed 16-abr-2015 19:25:44
-> server-post-command-cleanup
-> server-handle-next-server-request
+Done executing sbt server engine, result Right(Exit(0))
+Closing listening server socket
+Waiting for socket thread
+Waiting for request processor thread
+Waiting for command engine result
+Returning control to sbt launcher with result Exit(0)
+Closing the 5648@Aitor logs at Thu Apr 16 23:10:56 CEST 2015, goodbye.

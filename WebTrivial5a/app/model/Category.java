@@ -6,11 +6,8 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Random;
 
-import net.vz.mongodb.jackson.Id;
+import net.vz.mongodb.jackson.*;
 import net.vz.mongodb.jackson.JacksonDBCollection;
-
-import org.mongojack.ObjectId;
-
 import model.Question;
 import play.modules.mongodb.jackson.MongoDB;
 
@@ -19,6 +16,8 @@ public class Category{
 
 	@Id
 	@ObjectId
+	public String id;
+	
 	public String name;
 	
 	public List<Question> questions= new ArrayList<Question>();
