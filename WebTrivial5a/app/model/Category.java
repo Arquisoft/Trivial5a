@@ -8,11 +8,9 @@ import java.util.Random;
 
 import net.vz.mongodb.jackson.JacksonDBCollection;
 
-import org.mongojack.MongoCollection;
 import org.mongojack.ObjectId;
 
 import model.Question;
-import play.data.validation.Constraints.Required;
 import play.modules.mongodb.jackson.MongoDB;
 
 

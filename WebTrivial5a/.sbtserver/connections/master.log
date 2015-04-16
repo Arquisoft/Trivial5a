@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 New log file opened at Thu Apr 16 19:19:51 CEST 2015 by 4656@Pablo
 Taking next connection to: 12937
 New client attempting to connect on port: 12938-12937
@@ -5,3 +6,41 @@ New client attempting to connect on port: 12938-12937
 This client on port 12938 has uuid dc948264-3290-40a5-97d2-5dfacda24f2a configName play-fork-run humanReadableName Play Fork Run protocolVersion 1 featureTags Vector()
 Connected Clients: play-fork-run-dc948264-3290-40a5-97d2-5dfacda24f2a
 Taking next connection to: 12937
+=======
+New log file opened at Thu Apr 16 17:28:09 CEST 2015 by 7808@Aitor
+Taking next connection to: 5914
+New client attempting to connect on port: 5915-5914
+  Address = /192.168.56.1:5914
+This client on port 5915 has uuid 134107b4-da16-4288-923d-eba01d8bef01 configName activator humanReadableName Activator protocolVersion 1 featureTags Vector()
+Connected Clients: activator-134107b4-da16-4288-923d-eba01d8bef01
+Taking next connection to: 5914
+New client attempting to connect on port: 5916-5914
+  Address = /192.168.56.1:5914
+Handshake exception on socket: 5916
+sbt.impl.ipc.HandshakeException: Unable to perform handshake
+	at sbt.impl.ipc.Peer.handshake(IPC.scala:46)
+	at sbt.impl.ipc.MultiClientServer.<init>(IPC.scala:150)
+	at sbt.server.SbtServerSocketHandler$$anon$1.run(SbtServerSocketHandler.scala:43)
+Caused by: java.net.SocketException: Software caused connection abort: recv failed
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.read(SocketInputStream.java:150)
+	at java.net.SocketInputStream.read(SocketInputStream.java:121)
+	at java.io.BufferedInputStream.fill(BufferedInputStream.java:246)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:265)
+	at java.io.DataInputStream.readInt(DataInputStream.java:387)
+	at sbt.impl.ipc.Peer.receive(IPC.scala:95)
+	at sbt.impl.ipc.Peer.handshake(IPC.scala:49)
+	... 2 more
+Taking next connection to: 5914
+New client attempting to connect on port: 5917-5914
+  Address = /192.168.56.1:5914
+This client on port 5917 has uuid be6a32f6-5d5f-492d-8dd7-d0307ec6a730 configName activator humanReadableName Activator protocolVersion 1 featureTags Vector()
+Connected Clients: activator-134107b4-da16-4288-923d-eba01d8bef01, activator-be6a32f6-5d5f-492d-8dd7-d0307ec6a730
+Taking next connection to: 5914
+Checking to see if clients are empty...
+No non-daemon clients connected after 3 min. Shutting down.
+Server socket thread exiting.
+0 clients open, will close them...
+All client sockets have been closed.
+Closing the 7808@Aitor logs at Thu Apr 16 17:31:09 CEST 2015, goodbye.
+>>>>>>> d9463d766c083b6430b32d5b846b057810514bb5
