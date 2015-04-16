@@ -4,10 +4,6 @@ import play.modules.mongodb.jackson.MongoDB;
 
 import java.util.*;
 
-import javax.persistence.*;
-
-import org.bson.BSONObject;
-
 import com.mongodb.BasicDBObject;
 
 
@@ -15,7 +11,6 @@ import com.mongodb.DBObject;
 
 import model.Question;
 import net.vz.mongodb.jackson.*;
-import net.vz.mongodb.jackson.Id;
 import model.User;
 
 public class Partida {
@@ -57,6 +52,10 @@ public class Partida {
 		this.quesitosPorJugador = quesitosPorJugador;
 	}
 	
+	public static void main (String[] args)
+	{
+		System.out.println(Partida.all().size());
+	}
 	
 	/**
 	 * Comnstructor por defecto
@@ -145,11 +144,14 @@ public class Partida {
 			public void acierta(Question preg, boolean quesito)
 			{
 				activeUser.numberCorrectAnswer+=1;
-				
+				preg.vecesAcertada+=1;
 				if(quesito)
 				{
 					quesitosPorJugador.get(activeUser).add(preg.category);
 				}
+				
+				if(quesitosPorJugador.get(activeUser).size()==MAX_CATEGORIAS)
+					terminarPartida();
 				
 			}
 			
@@ -160,6 +162,8 @@ public class Partida {
 			public void falla(Question preg)
 			{
 				activeUser.numberWrongAnswer+=1;
+				
+				preg.vecesFallada+=1;
 				
 			}
 			
@@ -202,5 +206,23 @@ public class Partida {
 				if(idAskedQuestions.contains(identifier))
 					return true;
 				return false;			
+			}
+			
+			/**
+			 * Metodo que simula la tirada de un dado. 
+			 * @return un numero aleatorio entre 1 y 6
+			 */
+			public int tirarDado()
+			{	Random r = new Random();
+				 return r.nextInt(6)+1; 
+			}
+			
+			/**
+			 * Si se falla se cambia el turno, al turno siguiente
+			 */
+			public void turnoSiguiente()
+			{
+				int indexUsuarioSiguente= (usuarios.indexOf(activeUser)+1)%usuarios.size();
+				activeUser= usuarios.get(indexUsuarioSiguente);
 			}
 }

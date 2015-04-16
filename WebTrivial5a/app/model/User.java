@@ -7,8 +7,6 @@ import java.util.Map;
 
 import com.mongodb.BasicDBObject;
 import com.mongodb.DBObject;
-import com.mongodb.util.JSON;
-
 import play.modules.mongodb.jackson.MongoDB;
 import net.vz.mongodb.jackson.JacksonDBCollection;
 import net.vz.mongodb.jackson.Id;
