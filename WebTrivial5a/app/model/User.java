@@ -1,5 +1,13 @@
 package model;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
+
+import com.mongodb.BasicDBObject;
+import com.mongodb.DBObject;
+
 import play.modules.mongodb.jackson.MongoDB;
 import net.vz.mongodb.jackson.JacksonDBCollection;
 import net.vz.mongodb.jackson.Id;
@@ -49,7 +57,7 @@ public class User {
 	   * Metodo que es llamado por el anterior y guarda en la BBDD
 	   * @param user
 	   */
-		  public static void create(User user) throws Exception {
+		  private static void create(User user) throws Exception {
 			  if(User.findOne(user.login)==null)
 			  User.coll.save(user);
 			  else
@@ -82,6 +90,20 @@ public class User {
 			  User.coll.drop();
 		  }
 		  
+		  /**
+			 * Devuelve las estadísticas del usuario mostrando el número de preguntas
+			 * acertadas y falladas
+			 * 
+			 * @return vecesFallosAciertos
+			 */
+			public Map<String, Object> showStadistics() {
+				Map<String, Object> vecesFallosAciertos = new HashMap<String, Object>();
+				vecesFallosAciertos.put("usuario", login);
+				vecesFallosAciertos.put("aciertos", numberCorrectAnswer);
+				vecesFallosAciertos.put("fallos", numberWrongAnswer);
+				return vecesFallosAciertos;
+			}
+		  
 		  /**Busca un usuario
 		   * 
 		   * @param login
@@ -91,6 +113,47 @@ public class User {
 		  {
 			  return User.coll.findOneById(login);
 		  }
+		  
+		  /**Busca un usuario
+		   * 
+		   * @param login
+		   * @return
+		   */
+		  public static User login(String login,String pass)
+		  {
+			  String converted = null;
+			try {
+				converted = Hash(pass);
+			} catch (NoSuchAlgorithmException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			  
+			  DBObject user = new BasicDBObject("login", login).append("password", converted);
+			  return User.coll.findOne(user);
+		  }
+		  
+		  /**
+		   * Metodo de seguridad. Coge la contraseña y genera un hash unico para esa contraseña. Lo convierte a bytes
+		   * y esos bytes loos vuelve a pasar a texto para introducirlo en la BBDD
+		   * @param pass
+		   * @return
+		 * @throws NoSuchAlgorithmException 
+		   */
+		  private static String Hash(String pass) throws NoSuchAlgorithmException
+		  {
+			  MessageDigest md = MessageDigest.getInstance("MD5");
+			  byte[] bytesOfMessage =pass.getBytes();
+			   md.update(bytesOfMessage);
+			 byte[] converter = md.digest();
+			 String hash = "";
+	         for (int i = 0; i < converter.length; i++) {
+			 	hash+=Integer.toString(converter[i]);
+		  }
+			return hash;
+		  }
+		  
+		  
 	
 	
 }

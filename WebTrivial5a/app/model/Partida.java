@@ -13,11 +13,14 @@ import com.mongodb.BasicDBObject;
 
 import com.mongodb.DBObject;
 
+import model.Question;
 import net.vz.mongodb.jackson.*;
 import net.vz.mongodb.jackson.Id;
 import model.User;
 
 public class Partida {
+	public static final int MAX_CATEGORIAS = 6;
+
 	
 	public List<User> usuarios;
 	
@@ -33,7 +36,7 @@ public class Partida {
 	
 	public boolean finished;
 	
-	public  List<Long> idAskedQuestions;
+	public  List<String> idAskedQuestions;
 	public User activeUser;
 	
 	public Map<Long,Set<String>> quesitosPorJugador;
@@ -42,7 +45,7 @@ public class Partida {
 	 * Constructor con datos para guardar y recuperar
 	 */
 	public Partida(List<User> usuarios, List<Long> idUsers, String id,
-			boolean finished, List<Long> idAskedQuestions, User activeUser,
+			boolean finished, List<String> idAskedQuestions, User activeUser,
 			Map<Long, Set<String>> quesitosPorJugador) {
 		super();
 		this.usuarios = usuarios;
@@ -90,7 +93,7 @@ public class Partida {
 		   * @param password
 		   */
 		  public static void create(List<User> usuarios, List<Long> idUsers, String id,
-					boolean finished, List<Long> idAskedQuestions, User activeUser,
+					boolean finished, List<String> idAskedQuestions, User activeUser,
 					Map<Long, Set<String>> quesitosPorJugador) throws Exception{
 		      create(new Partida(usuarios,idUsers,id,finished,idAskedQuestions,activeUser,quesitosPorJugador));
 		  }
@@ -122,17 +125,75 @@ public class Partida {
 			  return Partida.coll.findOneById(id);
 		  }
 		  
-		  /**Busca  partidas no terminadas
+		  /**Busca  partidas no terminadas o terminadas
 		   * 
 		   * @param id
 		   * @return
 		   */
-		  public static List<Partida> findActive(String id)
+		  public static List<Partida> findActiveOrNot(boolean finished)
 		  {	
-			  DBObject partida = new BasicDBObject("finished", false);
+			  DBObject partida = new BasicDBObject("finished", finished);
 			  DBCursor<Partida> cursor = Partida.coll.find(partida);
 			return cursor.toArray();
 		  }
-	
-
+		  
+		  
+		  /**
+			 * Metodo que se llamara cada vez que acierte una pregunta
+			 * Actualiza estadisticas
+			 */
+			public void acierta(Question preg, boolean quesito)
+			{
+			
+			}
+			
+			/**
+			 * Metodo que se llamara cada vez que se falle una pregunta
+			 * Actualiza estadisticas y pasa el turno
+			 */
+			public void falla(Question preg)
+			{
+				
+			}
+			
+			/**
+			 * Metodo final del juego. Cuando algun usuario acaba  se llama a este metodo
+			 */
+			public boolean terminarPartida() {
+				if (quesitosPorJugador.get(activeUser).size() == MAX_CATEGORIAS)
+					return true;
+				return false;
+				
+			}
+			
+			/**
+			 * Devuelve una pregunta de una categoria dada
+			 * @param category
+			 * @return
+			 */
+			public Question devolverPregunta(String category)
+			{
+				Question q;
+				do
+				{
+				Category c =Category.findOne(category);
+				c.shuffleQuestions(new Random().nextInt());
+				
+				 q = c.questions.get(1);
+				}
+					while(isAsked(q.identifier)==false);	
+					idAskedQuestions.add(q.identifier);
+				return q;
+			}
+			
+			/**
+			 * Metodo que devuele si la pregunta esta repetida o no
+			 * @return
+			 */
+			private boolean isAsked(String identifier)
+			{
+				if(idAskedQuestions.contains(identifier))
+					return true;
+				return false;			
+			}
 }
