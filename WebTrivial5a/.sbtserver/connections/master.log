@@ -1,19 +1,14 @@
-New log file opened at Thu Apr 16 16:03:18 CEST 2015 by 8548@Aitor
-Taking next connection to: 3905
-New client attempting to connect on port: 3906-3905
-  Address = /192.168.56.1:3905
-This client on port 3906 has uuid bec76260-37ec-44fa-80cc-4edad5aa3058 configName activator humanReadableName Activator protocolVersion 1 featureTags Vector()
-Connected Clients: activator-bec76260-37ec-44fa-80cc-4edad5aa3058
-Taking next connection to: 3905
+New log file opened at Thu Apr 16 16:51:21 CEST 2015 by 1596@Aitor
+Taking next connection to: 5324
+New client attempting to connect on port: 5325-5324
+  Address = /192.168.56.1:5324
+This client on port 5325 has uuid f739b1b5-2153-4d45-ba22-679c1cd1ae5a configName play-fork-run humanReadableName Play Fork Run protocolVersion 1 featureTags Vector()
+Connected Clients: play-fork-run-f739b1b5-2153-4d45-ba22-679c1cd1ae5a
+Taking next connection to: 5324
 Checking to see if clients are empty...
-We have 1 non-daemon clients, continuing serving connections.
-Taking next connection to: 3905
-Checking to see if clients are empty...
-We have 1 non-daemon clients, continuing serving connections.
-Taking next connection to: 3905
-Checking to see if clients are empty...
-We have 1 non-daemon clients, continuing serving connections.
-Taking next connection to: 3905
-Checking to see if clients are empty...
-We have 1 non-daemon clients, continuing serving connections.
-Taking next connection to: 3905
+No non-daemon clients connected after 3 min. Shutting down.
+1 daemon clients are connected.
+Server socket thread exiting.
+1 clients open, will close them...
+All client sockets have been closed.
+Closing the 1596@Aitor logs at Thu Apr 16 16:54:22 CEST 2015, goodbye.

@@ -146,6 +146,11 @@ public class Partida {
 			{
 				activeUser.numberCorrectAnswer+=1;
 				
+				if(quesito)
+				{
+					quesitosPorJugador.get(activeUser).add(preg.category);
+				}
+				
 			}
 			
 			/**
@@ -155,6 +160,7 @@ public class Partida {
 			public void falla(Question preg)
 			{
 				activeUser.numberWrongAnswer+=1;
+				
 			}
 			
 			/**
