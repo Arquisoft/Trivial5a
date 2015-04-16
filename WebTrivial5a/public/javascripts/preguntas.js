@@ -1,3 +1,10 @@
+<<<<<<< HEAD
+=======
+xmlhttp.open("GET","localhost:9000/partida/1/Entretenimiento",true);
+xmlhttp.send();
+
+
+>>>>>>> eaec39d518a9d24ce784e1c23b8fc35507cbef13
 
 
 

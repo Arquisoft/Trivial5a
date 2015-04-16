@@ -2,11 +2,12 @@
 # This file defines all application routes (Higher priority routes first)
 # ~~~~
 
-# Home page
+#Home page
 GET     /                           					controllers.Application.index()
 
-#GET		/admin											controllers.Application.admin()
+GET		/admin											controllers.Application.admin()
 
+<<<<<<< HEAD
 #POST	/user											controllers.Application.login()
 #POST	/user											controllers.Application.register()
 #POST   	/user            								controllers.Application.newUser()
@@ -16,13 +17,22 @@ GET     /                           					controllers.Application.index()
 #POST    /user/delete/:id 								controllers.Application.deleteUser(id: Long)
 #DELETE  /user/:id 										controllers.Application.deleteUser(id: Long)
 GET   /categorias										controllers.Application.showQuestions()
+=======
+POST	/user											controllers.Application.login()
+POST	/user											controllers.Application.register()
+GET		/user											controllers.Application.showUsers()
+GET		/user/:id										controllers.Application.showUser(id: String)
+PUT		/user/:id										controllers.Application.updateUser(id: String)
+POST    /user/delete/:id 								controllers.Application.deleteUser(id: String)
+DELETE  /user/:id 										controllers.Application.deleteUser(id: String)
+>>>>>>> eaec39d518a9d24ce784e1c23b8fc35507cbef13
 
-#POST	/partida										controllers.Application.newPartida()
-#GET		/partida										controllers.Application.showPartidas()
-#GET		/partida/:id									controllers.Application.showPartida(id: Long)
-#GET 	/partida/:id/:idCategoria						controllers.Application.getQuestion(id: Long, idCategoria:Long)
-#GET 	/partida/:id/:idQuestion						controllers.Application.getRespuesta(id: Long, idQuestion: Long)
-#POST 	/partida/:id/:idQuestion/:idAnswer				controllers.Application.setRespuesta(id: Long, idQuestion: Long, idAnswer: Long)
+POST	/partida										controllers.Application.newPartida()
+GET		/partida										controllers.Application.showPartidas()
+GET		/partida/:id									controllers.Application.showPartida(id: String)
+GET 	/partida/:id/:idCategoria						controllers.Application.getQuestion(id: String, idCategoria: String)
+GET 	/partida/:id/:idQuestion						controllers.Application.getRespuesta(id: String, idQuestion: String)
+POST 	/partida/:id/:idQuestion/:idAnswer				controllers.Application.setRespuesta(id: String, idQuestion: String, idAnswer: String)
 
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.at(path="/public", file)
