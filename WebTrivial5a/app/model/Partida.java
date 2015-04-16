@@ -144,7 +144,8 @@ public class Partida {
 			 */
 			public void acierta(Question preg, boolean quesito)
 			{
-			
+				activeUser.numberCorrectAnswer+=1;
+				
 			}
 			
 			/**
@@ -153,7 +154,7 @@ public class Partida {
 			 */
 			public void falla(Question preg)
 			{
-				
+				activeUser.numberWrongAnswer+=1;
 			}
 			
 			/**

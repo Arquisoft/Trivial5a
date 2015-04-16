@@ -26,15 +26,5 @@ public class Question {
 	
 	
 	
-	/**
-	 * Metodo que sirve para cambiar el ID a otro id legible para el modelo
-	 * @param identifier
-	 * @return
-	 */
-	public Long getID()
-	{
-		return Long.valueOf(this.identifier.substring(1));
-		
-	}
-
+	
 }

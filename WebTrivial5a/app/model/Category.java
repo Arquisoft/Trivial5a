@@ -119,4 +119,15 @@ public class Category{
 		  {
 			  return Category.coll.findOneById(name);
 		  }
+		  
+		  
+		  /**Busca una categoria y lo actualiza
+		   * 
+		   * @param login
+		   * @return
+		   */
+		  public static void Update(Category category)
+		  {
+			 	Category.coll.save(category)
+		  }
 }

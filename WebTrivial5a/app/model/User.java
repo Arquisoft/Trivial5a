@@ -7,6 +7,7 @@ import java.util.Map;
 
 import com.mongodb.BasicDBObject;
 import com.mongodb.DBObject;
+import com.mongodb.util.JSON;
 
 import play.modules.mongodb.jackson.MongoDB;
 import net.vz.mongodb.jackson.JacksonDBCollection;
@@ -154,6 +155,14 @@ public class User {
 		  }
 		  
 		  
-	
+		  /**Busca un usuario y lo actualiza
+		   * 
+		   * @param login
+		   * @return
+		   */
+		  public static void Update(User user)
+		  {
+			  User.coll.save(user);
+		  }
 	
 }
