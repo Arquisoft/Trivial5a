@@ -6,8 +6,10 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Random;
 
+import com.google.gson.Gson;
+
+import controllers.MongoConnection;
 import net.vz.mongodb.jackson.*;
-import net.vz.mongodb.jackson.JacksonDBCollection;
 import model.Question;
 import play.modules.mongodb.jackson.MongoDB;
 
@@ -23,9 +25,7 @@ public class Category{
 	public List<Question> questions= new ArrayList<Question>();
 	
 	
-	private static JacksonDBCollection<Category, String> coll = 
-			MongoDB.getCollection("categorias", Category.class, String.class);
-
+	
 	
 	public Category(String name, List<Question> preguntas) {
 		super();
@@ -64,23 +64,13 @@ public class Category{
 		Collections.shuffle(questions, new Random(seed));
 	}
 
-	/**
-	 * Metodo que encuentra todos los usuarios y los devuelve en una lista
-	 * @return
-	 */
-	  public static List<Category> all() {
-		    return Category.coll.find().toArray();
-		  }
 
 	  /**
 	   * Metodo que es llamado por el anterior y guarda en la BBDD
 	   * @param category
 	   */
 		  public static void create(Category category) throws Exception {
-			  if(Category.findOne(category.name)==null)
-				  Category.coll.save(category);
-			  else
-				  throw new Exception("Usuario repetido");
+			
 		  }
 
 		  /**
@@ -89,7 +79,7 @@ public class Category{
 		   * @param password
 		   */
 		  public static void create(String name,List<Question> preguntas) throws Exception{
-		      create(new Category(name,preguntas));
+		     
 		  }
 
 		  /**
@@ -97,36 +87,44 @@ public class Category{
 		   * @param login
 		   */
 		  public static void delete(String name) {
-			  Category category = Category.coll.findOneById(name);
-		    if (category != null)
-		    	Category.coll.remove(category);
+			
 		  }
 
-		  /**
-		   * Elimina todos los usuarios
-		   */
-		  public static void removeAll(){
-			  Category.coll.drop();
-		  }
 		  
 		  /**Busca un usuario
 		   * 
 		   * @param login
 		   * @return
+		 * @throws Exception 
 		   */
-		  public static Category findOne(String name)
+		  public static Category findOne(String name) throws Exception
 		  {
-			  return Category.coll.findOneById(name);
+			return MongoConnection.findCategory(name);
 		  }
 		  
+		  public static List<Category> all() throws Exception
+		  {
+			  return MongoConnection.findAllQuestion();
+		  }
 		  
-		  /**Busca una categoria y lo actualiza
+		  /**Busca una categoria, una preguntas y lo actualiza
 		   * 
 		   * @param login
 		   * @return
 		   */
-		  public static void Update(Category category)
+		  public static void Update(Question q, Category category)
 		  {
-			 	Category.coll.save(category);
+			  MongoConnection.updateQuestion(q, category);
 		  }
+		  
+		  /**
+			 * Devuelve la representacion en formato JSON de la pregunta. Cabe añadir
+			 * que es independiente del formato de entrada
+			 * 
+			 * @return String JSON
+			 */
+			public String toJSON() {
+				Gson g = new Gson();
+				return g.toJson(this);
+			}
 }

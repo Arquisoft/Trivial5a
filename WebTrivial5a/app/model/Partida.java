@@ -4,11 +4,13 @@ import play.modules.mongodb.jackson.MongoDB;
 
 import java.util.*;
 
+import com.google.gson.Gson;
 import com.mongodb.BasicDBObject;
 
 
 import com.mongodb.DBObject;
 
+import controllers.MongoConnection;
 import model.Question;
 import net.vz.mongodb.jackson.*;
 import model.User;
@@ -19,15 +21,10 @@ public class Partida {
 	
 	public List<User> usuarios;
 	
-	private static JacksonDBCollection<Partida, String> coll = 
-			MongoDB.getCollection("partidas", Partida.class, String.class);
-
-	
 	public List<Long> idUsers;
 	
-	@Id
-	@ObjectId
-	public String id;
+
+	public Long id;
 	
 	public boolean finished;
 	
@@ -39,7 +36,7 @@ public class Partida {
 	/**
 	 * Constructor con datos para guardar y recuperar
 	 */
-	public Partida(List<User> usuarios, List<Long> idUsers, String id,
+	public Partida(List<User> usuarios, List<Long> idUsers, Long id,
 			boolean finished, List<String> idAskedQuestions, User activeUser,
 			Map<Long, Set<String>> quesitosPorJugador) {
 		super();
@@ -65,9 +62,10 @@ public class Partida {
 	/**
 	 * Metodo que encuentra todas las partidas y los devuelve en una lista
 	 * @return
+	 * @throws Exception 
 	 */
-	  public static List<Partida> all() {
-		    return Partida.coll.find().toArray();
+	  public static List<Partida> all() throws Exception {
+		 return  MongoConnection.findAllPartidas();
 	  }
 
 	  /**
@@ -75,60 +73,49 @@ public class Partida {
 	   * @param user
 	   */
 		  public static void create(Partida partida) throws Exception {
-			  if(Partida.findOne(partida.id)==null)
-				  Partida.coll.save(partida);
-			  else
-				  throw new Exception("Usuario repetido");
-		  }
-
-		  /**
-		   * Metodo que crea una partida
-		   * @param login
-		   * @param password
-		   */
-		  public static void create(List<User> usuarios, List<Long> idUsers, String id,
-					boolean finished, List<String> idAskedQuestions, User activeUser,
-					Map<Long, Set<String>> quesitosPorJugador) throws Exception{
-		      create(new Partida(usuarios,idUsers,id,finished,idAskedQuestions,activeUser,quesitosPorJugador));
+			 MongoConnection.addPartida(partida);
 		  }
 
 		  /**
 		   * Borra una partida dado un id
 		   * @param login
+		 * @throws Exception 
 		   */
-		  public static void delete(String id) {
-			  Partida user = Partida.coll.findOneById(id);
-		    if (user != null)
-		    	Partida.coll.remove(user);
+		  public static void delete(Long id) throws Exception {
+			  
+			  MongoConnection.removePartida(id);
+			  
 		  }
 
-		  /**
-		   * Elimina todos los usuarios
-		   */
-		  public static void removeAll(){
-			  Partida.coll.drop();
-		  }
+		 
 		  
-		  /**Busca una partida
+		  /**Busca una partida para un jugador dado
+		   * 
 		   * 
 		   * @param id
 		   * @return
+		 * @throws Exception 
 		   */
-		  public static Partida findOne(String id)
+		  public static List<Partida> findPartidaUser(User user) throws Exception
 		  {	
-			  return Partida.coll.findOneById(id);
+			  return MongoConnection.findPartidasJugador(user);
 		  }
 		  
 		  /**Busca  partidas no terminadas o terminadas
 		   * 
 		   * @param id
 		   * @return
+		 * @throws Exception 
 		   */
-		  public static List<Partida> findActiveOrNot(boolean finished)
-		  {	
-			  DBObject partida = new BasicDBObject("finished", finished);
-			  DBCursor<Partida> cursor = Partida.coll.find(partida);
-			return cursor.toArray();
+		  public static List<Partida> findActiveOrNot(boolean finished) throws Exception
+		  {
+			 return  MongoConnection.findPartidasActiveOrNot(finished)	;
+			 
+		  }
+		  
+		  public static Partida findOne(Long id) throws Exception
+		  {
+			  return MongoConnection.findPartida(id);
 		  }
 		  
 		  
@@ -176,8 +163,9 @@ public class Partida {
 			 * Devuelve una pregunta de una categoria dada
 			 * @param category
 			 * @return
+			 * @throws Exception 
 			 */
-			public Question devolverPregunta(String category)
+			public Question devolverPregunta(String category) throws Exception
 			{
 				Question q;
 				do
@@ -203,6 +191,15 @@ public class Partida {
 				return false;			
 			}
 			
+			
+			public boolean  containsUser(User user)
+			{
+				
+				if(usuarios.contains(user))
+						return true;
+				return false;
+			}
+			
 			/**
 			 * Metodo que simula la tirada de un dado. 
 			 * @return un numero aleatorio entre 1 y 6
@@ -219,5 +216,16 @@ public class Partida {
 			{
 				int indexUsuarioSiguente= (usuarios.indexOf(activeUser)+1)%usuarios.size();
 				activeUser= usuarios.get(indexUsuarioSiguente);
+			}
+			
+			/**
+			 * Devuelve la representacion en formato JSON de la pregunta. Cabe añadir
+			 * que es independiente del formato de entrada
+			 * 
+			 * @return String JSON
+			 */
+			public String toJSON() {
+				Gson g = new Gson();
+				return g.toJson(this);
 			}
 }

@@ -1,5 +1,7 @@
 package model;
 
+import com.google.gson.Gson;
+
 
 public class Question {
 
@@ -24,5 +26,14 @@ public class Question {
 	
 	
 	
-	
+	/**
+	 * Devuelve la representacion en formato JSON de la pregunta. Cabe añadir
+	 * que es independiente del formato de entrada
+	 * 
+	 * @return String JSON
+	 */
+	public String toJSON() {
+		Gson g = new Gson();
+		return g.toJson(this);
+	}
 }

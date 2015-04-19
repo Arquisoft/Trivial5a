@@ -34,8 +34,8 @@ public class Application extends Controller {
 	}
 	public static Result showQuestions() {
 			
-		  //return ok(categorias.render(Category.all()));
-		return null;
+		  return ok(categorias.render(Category.all()));
+		//return null;
 	}
 	
 	/**
@@ -45,7 +45,7 @@ public class Application extends Controller {
 	 */
 	public static Result register() throws Exception {
 		 Form<User> filledForm = userForm.bindFromRequest();
-		 User.Update(filledForm.get());
+		 User.create(filledForm.get());
 		return ok(usuarios.render(userForm));
 	}
 	
@@ -56,7 +56,13 @@ public class Application extends Controller {
 	}
 
 	public static Result showUser(String id) {
-		return ok(Json.toJson(User.findOne(id)));
+		try {
+			return ok(Json.toJson(User.findOne(id)));
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return TODO;
 	}
 
 	public static Result updateUser(String id) {
@@ -78,17 +84,32 @@ public class Application extends Controller {
 //		ObjectMapper mapper = new ObjectMapper();
 //		JsonNode actualObj = mapper.readTree(Json.toJson(Partida.all()));
 //		return ok(partidas.render(actualObj));
-		return ok(partidas.render(Partida.all()));
+		try {
+			return ok(partidas.render(Partida.all()));
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return TODO;
 	}
 	
 	public static Result showPartida(String id) {
 		return null;
 	}
 	
-	public static Result getQuestion(String id, String idCategoria) {
-		Partida partidaActiva = Partida.findOne(id);
-		Question q = partidaActiva.devolverPregunta(idCategoria);
-		return ok(Json.toJson(q));
+	public static Result getQuestion(Long id, String idCategoria) {
+		Partida partidaActiva;
+		try {
+			partidaActiva = Partida.findOne(id);
+			Question q = partidaActiva.devolverPregunta(idCategoria);
+			return ok(Json.toJson(q));
+
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return TODO;
+		
 	}
 	
 	public static Result getRespuesta(String id, String idQuestion) {

@@ -7,9 +7,12 @@ import java.util.List;
 import java.util.Map;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.google.gson.Gson;
 import com.mongodb.BasicDBObject;
 import com.mongodb.DBObject;
+import com.mongodb.util.JSON;
 
+import controllers.MongoConnection;
 import play.modules.mongodb.jackson.MongoDB;
 import net.vz.mongodb.jackson.JacksonDBCollection;
 import net.vz.mongodb.jackson.Id;
@@ -17,7 +20,6 @@ import net.vz.mongodb.jackson.ObjectId;
 
 public class User {
 	
-	private static JacksonDBCollection<User, String> coll = MongoDB.getCollection("usuarios", User.class, String.class);
 	
 	@Id
 	@ObjectId
@@ -54,50 +56,31 @@ public class User {
 	  }
 	
 	/**
-	 * Metodo que encuentra todos los usuarios y los devuelve en una lista
-	 * @return
+	 * Añade un usuario a la BBDD
+	 * 
+	 * @param user
+	 * @throws Exception
 	 */
-	  public static List<User> all() {
-		    return User.coll.find().toArray();
-		 
-		  }
-
-	  /**
-	   * Metodo que es llamado por el anterior y guarda en la BBDD
-	   * @param user
-	   */
-		  public static void create(User user) throws Exception {
-			  if(User.findOne(user.id)==null)
-			  User.coll.save(user);
-			  else
-				  throw new Exception("Usuario repetido");
-		  }
-
-		  /**
-		   * Metodo que crea un usuarios, si es admin o no
-		   * @param login
-		   * @param password
-		   */
-		  public static void create(String login, String password,boolean admin) throws Exception{
-		      create(new User(login,password,admin));
-		  }
-
-		  /**
-		   * Borra un usuario dado un login
-		   * @param login
-		   */
-		  public static void delete(String id) {
-			  User user = User.coll.findOneById(id);
-		    if (user != null)
-		    	User.coll.remove(user);
-		  }
-
-		  /**
-		   * Elimina todos los usuarios
-		   */
-		  public static void removeAll(){
-			  User.coll.drop();
-		  }
+	public static void create(User user) throws Exception {
+		user.password=Hash(user.password);
+		MongoConnection.addUser(user);
+	}
+	
+	public static User findOne(String login) throws Exception
+	{
+		return MongoConnection.findUser(login);
+	}
+	
+	public static User login(String login, String pass) throws Exception
+	{
+		return MongoConnection.findUser(login,Hash(pass));
+	}
+	
+	public static List<User> all() throws Exception
+	{
+		return MongoConnection.findAllUser();
+	}
+	
 		  
 		  /**
 			 * Devuelve las estadísticas del usuario mostrando el número de preguntas
@@ -113,34 +96,6 @@ public class User {
 				return vecesFallosAciertos;
 			}
 		  
-		  /**Busca un usuario
-		   * 
-		   * @param id
-		   * @return
-		   */
-		  public static User findOne(String id)
-		  {
-			  return User.coll.findOneById(id);
-		  }
-		  
-		  /**Busca un usuario
-		   * 
-		   * @param login
-		   * @return
-		   */
-		  public static User login(String login,String pass)
-		  {
-			  String converted = null;
-			try {
-				converted = Hash(pass);
-			} catch (NoSuchAlgorithmException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-			  
-			  DBObject user = new BasicDBObject("login", login).append("password", converted);
-			  return User.coll.findOne(user);
-		  }
 		  
 		  /**
 		   * Metodo de seguridad. Coge la contraseña y genera un hash unico para esa contraseña. Lo convierte a bytes
@@ -163,14 +118,42 @@ public class User {
 		  }
 		  
 		  
-		  /**Busca un usuario y lo actualiza
-		   * 
-		   * @param login
-		   * @return
-		   */
-		  public static void Update(User user)
-		  {
-			  User.coll.save(user);
-		  }
+		  /**
+			 * Devuelve la representacion en formato JSON de la pregunta. Cabe añadir
+			 * que es independiente del formato de entrada
+			 * 
+			 * @return String JSON
+			 */
+			public String toJSON() {
+				Gson g = new Gson();
+				return g.toJson(this);
+			}
+
+		@Override
+		public int hashCode() {
+			final int prime = 31;
+			int result = 1;
+			result = prime * result + ((login == null) ? 0 : login.hashCode());
+			return result;
+		}
+
+		@Override
+		public boolean equals(Object obj) {
+			if (this == obj)
+				return true;
+			if (obj == null)
+				return false;
+			if (getClass() != obj.getClass())
+				return false;
+			User other = (User) obj;
+			if (login == null) {
+				if (other.login != null)
+					return false;
+			} else if (!login.equals(other.login))
+				return false;
+			return true;
+		}
+			
+			
 	
 }

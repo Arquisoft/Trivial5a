@@ -17,6 +17,8 @@ GET		/admin											controllers.Application.admin()
 GET    /new												controllers.Application.showUsers()
 POST   /new                 							 controllers.Application.register()
 
+GET    /categories											controllers.Application.showQuestions()
+
 
 #POST	/partida										controllers.Application.newPartida()
 GET		/partidas										controllers.Application.showPartidas()

@@ -1,0 +1,19 @@
+@(categorias : List[model.Category])
+
+<Partida> <!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>categorias</title>
+</head>
+<body>
+	<h1>Todas las partidas</h1>
+	<table>
+		@for(categoria <- categorias) {
+		<tr>
+			<td>@categoria.name</td>
+		</tr>
+		}
+	</table>
+</body>
+</html>
