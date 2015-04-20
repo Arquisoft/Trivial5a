@@ -34,8 +34,14 @@ public class Application extends Controller {
 	}
 	public static Result showQuestions() {
 			
-		  return ok(categorias.render(Category.all()));
+		  try {
+			return ok(categorias.render(Category.all()));
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		//return null;
+		return TODO;
 	}
 	
 	/**
@@ -43,15 +49,34 @@ public class Application extends Controller {
 	 * @return
 	 * @throws Exception
 	 */
-	public static Result register() throws Exception {
+	public static Result register()  {
 		 Form<User> filledForm = userForm.bindFromRequest();
-		 User.create(filledForm.get());
-		return ok(usuarios.render(userForm));
+		 try{
+			 User u = new User();
+			 u.login=filledForm.field("login").value();
+			 u.password=filledForm.field("password").value();
+			 u.admin=Boolean.valueOf(filledForm.field("admin").value());
+
+			 User.create(u);
+		      return redirect(routes.Application.showUsers());  
+
+		 }
+			catch(Exception e)
+			{
+				e.printStackTrace();
+			}
+			return null;
 	}
 	
 	public static Result showUsers() {
-		//return ok(Json.toJson(User.all()));
-		return ok(usuarios.render(userForm));
+		try{
+		return ok(usuarios.render(model.User.all(),userForm));
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+		return null;
 
 	}
 

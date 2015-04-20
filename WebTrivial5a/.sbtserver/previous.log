@@ -1,5 +1,5 @@
-New log file opened at Sun Apr 19 20:37:13 CEST 2015 by 40@Aitor-PC
-jvm 40@Aitor-PC
+New log file opened at Mon Apr 20 20:08:00 CEST 2015 by 8280@Aitor-PC
+jvm 8280@Aitor-PC
 jvm vmName=Java HotSpot(TM) 64-Bit Server VM vmVendor=Oracle Corporation vmVersion=25.45-b02
 jvm specName=Java Virtual Machine Specification specVendor=Oracle Corporation specVersion=1.8
 jvm arguments: [-Xms256m, -Xmx1024m, -XX:MetaspaceSize=64m, -XX:MaxMetaspaceSize=256m]
@@ -27,7 +27,7 @@ sorting: ns: List(sbt.plugins.CorePlugin, sbt.plugins.IvyPlugin, sbt.plugins.Jvm
   :: sorted deduced result: List(sbt.plugins.CorePlugin, sbt.plugins.IvyPlugin, sbt.plugins.JvmPlugin, sbt.plugins.JUnitXmlReportPlugin)
 [Loading] Done in C:\Users\Aitor\Trivial5a\WebTrivial5a\project, returning: (webtrivial5a-build)
 Loading project definition from C:\Users\Aitor\Trivial5a\WebTrivial5a\project
-Running task... Cancel: sbt.TaskCancellationStrategy$Null$@1826d588, check cycles: false
+Running task... Cancel: sbt.TaskCancellationStrategy$Null$@3c863e26, check cycles: false
 [info] Updating {file:/C:/Users/Aitor/Trivial5a/WebTrivial5a/project/}webtrivial5a-build...
 Updating {file:/C:/Users/Aitor/Trivial5a/WebTrivial5a/project/}webtrivial5a-build...
 Other repositories:
@@ -16523,7 +16523,7 @@ sbt-chain: module revision found in cache: org.fusesource.jansi#jansi;1.4
 	[NOT REQUIRED] org.scala-sbt#apply-macro;0.13.8-M3!apply-macro.jar
 	[NOT REQUIRED] org.scala-lang#jline;2.10.4!jline.jar
 	[NOT REQUIRED] org.fusesource.jansi#jansi;1.4!jansi.jar
-:: resolution report :: resolve 5290ms :: artifacts dl 227ms
+:: resolution report :: resolve 6105ms :: artifacts dl 310ms
 	report for default#webtrivial5a-build;0.1-SNAPSHOT compile produced in C:\Users\Aitor\Trivial5a\WebTrivial5a\project\target\resolution-cache\reports\default-webtrivial5a-build-compile.xml
 	report for default#webtrivial5a-build;0.1-SNAPSHOT runtime produced in C:\Users\Aitor\Trivial5a\WebTrivial5a\project\target\resolution-cache\reports\default-webtrivial5a-build-runtime.xml
 	report for default#webtrivial5a-build;0.1-SNAPSHOT test produced in C:\Users\Aitor\Trivial5a\WebTrivial5a\project\target\resolution-cache\reports\default-webtrivial5a-build-test.xml
@@ -16537,7 +16537,7 @@ sbt-chain: module revision found in cache: org.fusesource.jansi#jansi;1.4
 	report for default#webtrivial5a-build;0.1-SNAPSHOT docs produced in C:\Users\Aitor\Trivial5a\WebTrivial5a\project\target\resolution-cache\reports\default-webtrivial5a-build-docs.xml
 	report for default#webtrivial5a-build;0.1-SNAPSHOT pom produced in C:\Users\Aitor\Trivial5a\WebTrivial5a\project\target\resolution-cache\reports\default-webtrivial5a-build-pom.xml
 	report for default#webtrivial5a-build;0.1-SNAPSHOT scala-tool produced in C:\Users\Aitor\Trivial5a\WebTrivial5a\project\target\resolution-cache\reports\default-webtrivial5a-build-scala-tool.xml
-	resolve done (5290ms resolve - 227ms download)
+	resolve done (6105ms resolve - 310ms download)
 [info] Done updating.
 Done updating.
 
@@ -16579,7 +16579,7 @@ Set current project to C:\Trivial5a\WebTrivial5a (in build file:/C:/Users/Aitor/
 > server-handle-next-server-request
 > {file:/C:/Users/Aitor/Trivial5a/WebTrivial5a/}root/*:playForkConfig
 Evaluating tasks: *:playForkConfig
-Running task... Cancel: sbt.server.ServerTaskCancellation@23f2b480, check cycles: false
+Running task... Cancel: sbt.server.ServerTaskCancellation@3da52f0d, check cycles: false
 Read from stdout: Updating {file:/C:/Users/Aitor/Trivial5a/WebTrivial5a/}root...
 Updating {file:/C:/Users/Aitor/Trivial5a/WebTrivial5a/}root...
 Other repositories:
@@ -16594,7 +16594,7 @@ resolving dependencies for configuration 'compile'
 == resolving dependencies c-trivial5a-webtrivial5a#c-trivial5a-webtrivial5a_2.11;1.0-SNAPSHOT->org.scala-lang#scala-library;2.11.1 [compile->default(compile)]
 Read from stdout: Resolving org.scala-lang#scala-library;2.11.1 ...
 Resolving org.scala-lang#scala-library;2.11.1 ...
-sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@d8fc41
+sbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@7bc00a1e
 sbt-chain: module revision found in cache: org.scala-lang#scala-library;2.11.1
 	found org.scala-lang#scala-library;2.11.1 in sbt-chain
 	[2.11.1] org.scala-lang#scala-library;2.11.1
@@ -17669,11 +17669,6 @@ sbt-chain: module revision found in cache: net.vz.mongodb.jackson#mongo-jackson-
 	found net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1 in sbt-chain
 == resolving dependencies net.vz.mongodb.jackson#play-mongo-jackson-mapper_2.10;1.1.0->net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1 [compile->compile(*)]
 == resolving dependencies net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1->org.mongodb#mongo-java-driver;2.7.2 [compile->master(*)]
-Read from stdout: Resolving org.mongodb#mongo-java-driver;2.7.2 ...
-Resolving org.mongodb#mongo-java-driver;2.7.2 ...
-sbt-chain: Checking cache for: dependency: org.mongodb#mongo-java-driver;2.7.2 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
-sbt-chain: module revision found in cache: org.mongodb#mongo-java-driver;2.7.2
-	found org.mongodb#mongo-java-driver;2.7.2 in sbt-chain
 == resolving dependencies net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1->org.mongodb#mongo-java-driver;2.7.2 [compile->compile(*)]
 == resolving dependencies net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1->org.codehaus.jackson#jackson-mapper-asl;1.9.5 [compile->master(*)]
 Read from stdout: Resolving org.codehaus.jackson#jackson-mapper-asl;1.9.5 ...
@@ -17714,7 +17709,6 @@ sbt-chain: module revision found in cache: javax.persistence#persistence-api;1.0
 == resolving dependencies net.vz.mongodb.jackson#play-mongo-jackson-mapper_2.10;1.1.0->net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1 [compile->runtime(*)]
 == resolving dependencies net.vz.mongodb.jackson#play-mongo-jackson-mapper_2.10;1.1.0->net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1 [compile->compile]
 == resolving dependencies net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1->org.mongodb#mongo-java-driver;2.7.2 [runtime->runtime(*)]
-== resolving dependencies net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1->org.mongodb#mongo-java-driver;2.7.2 [runtime->compile]
 == resolving dependencies net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1->org.codehaus.jackson#jackson-mapper-asl;1.9.5 [runtime->runtime(*)]
 == resolving dependencies net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1->org.codehaus.jackson#jackson-mapper-asl;1.9.5 [runtime->compile]
 == resolving dependencies org.codehaus.jackson#jackson-mapper-asl;1.9.5->org.codehaus.jackson#jackson-core-asl;1.9.5 [runtime->runtime(*)]
@@ -17744,14 +17738,7 @@ sbt-chain: module revision found in cache: org.mongojack#mongojack;2.0.0-RC1
 == resolving dependencies c-trivial5a-webtrivial5a#c-trivial5a-webtrivial5a_2.11;1.0-SNAPSHOT->org.mongojack#mongojack;2.0.0-RC1 [compile->runtime]
 == resolving dependencies c-trivial5a-webtrivial5a#c-trivial5a-webtrivial5a_2.11;1.0-SNAPSHOT->org.mongojack#mongojack;2.0.0-RC1 [compile->compile]
 == resolving dependencies org.mongojack#mongojack;2.0.0-RC1->org.mongodb#mongo-java-driver;2.9.1 [compile->master(*)]
-Read from stdout: Resolving org.mongodb#mongo-java-driver;2.9.1 ...
-Resolving org.mongodb#mongo-java-driver;2.9.1 ...
-sbt-chain: Checking cache for: dependency: org.mongodb#mongo-java-driver;2.9.1 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
-sbt-chain: module revision found in cache: org.mongodb#mongo-java-driver;2.9.1
-	found org.mongodb#mongo-java-driver;2.9.1 in sbt-chain
 == resolving dependencies org.mongojack#mongojack;2.0.0-RC1->org.mongodb#mongo-java-driver;2.9.1 [compile->compile(*)]
-== resolving dependencies org.mongojack#mongojack;2.0.0-RC1->org.mongodb#mongo-java-driver;2.9.1 [compile->runtime(*)]
-== resolving dependencies org.mongojack#mongojack;2.0.0-RC1->org.mongodb#mongo-java-driver;2.9.1 [compile->compile]
 == resolving dependencies org.mongojack#mongojack;2.0.0-RC1->com.fasterxml.jackson.core#jackson-databind;2.1.3 [compile->master(*)]
 == resolving dependencies org.mongojack#mongojack;2.0.0-RC1->com.fasterxml.jackson.core#jackson-databind;2.3.2 [compile->master(*)]
 == resolving dependencies org.mongojack#mongojack;2.0.0-RC1->com.fasterxml.jackson.core#jackson-databind;2.1.3 [compile->compile(*)]
@@ -17836,7 +17823,6 @@ sbt-chain: module revision found in cache: commons-io#commons-io;2.4
 == resolving dependencies org.mongojack#mongojack;2.0.0-RC1->commons-io#commons-io;2.4 [compile->runtime(*)]
 == resolving dependencies org.mongojack#mongojack;2.0.0-RC1->commons-io#commons-io;2.4 [compile->compile]
 == resolving dependencies org.mongojack#mongojack;2.0.0-RC1->org.mongodb#mongo-java-driver;2.9.1 [runtime->runtime(*)]
-== resolving dependencies org.mongojack#mongojack;2.0.0-RC1->org.mongodb#mongo-java-driver;2.9.1 [runtime->compile]
 == resolving dependencies org.mongojack#mongojack;2.0.0-RC1->com.fasterxml.jackson.core#jackson-databind;2.1.3 [runtime->runtime(*)]
 == resolving dependencies org.mongojack#mongojack;2.0.0-RC1->com.fasterxml.jackson.core#jackson-databind;2.3.2 [runtime->runtime(*)]
 == resolving dependencies org.mongojack#mongojack;2.0.0-RC1->com.fasterxml.jackson.core#jackson-databind;2.3.2 [runtime->compile]
@@ -17899,6 +17885,28 @@ sbt-chain: module revision found in cache: org.webjars#angular-ui-bootstrap;0.12
 == resolving dependencies org.webjars#angular-ui-bootstrap;0.12.0->org.webjars#bootstrap;3.3.1 [runtime->runtime(*)]
 == resolving dependencies org.webjars#angular-ui-bootstrap;0.12.0->org.webjars#bootstrap;3.3.1 [runtime->compile]
 == resolving dependencies c-trivial5a-webtrivial5a#c-trivial5a-webtrivial5a_2.11;1.0-SNAPSHOT->org.webjars#angular-ui-bootstrap;0.12.0 [compile->master]
+== resolving dependencies c-trivial5a-webtrivial5a#c-trivial5a-webtrivial5a_2.11;1.0-SNAPSHOT->com.google.code.gson#gson;2.3.1 [compile->default(compile)]
+Read from stdout: Resolving com.google.code.gson#gson;2.3.1 ...
+Resolving com.google.code.gson#gson;2.3.1 ...
+sbt-chain: Checking cache for: dependency: com.google.code.gson#gson;2.3.1 {compile=[default(compile)]}
+sbt-chain: module revision found in cache: com.google.code.gson#gson;2.3.1
+	found com.google.code.gson#gson;2.3.1 in sbt-chain
+== resolving dependencies c-trivial5a-webtrivial5a#c-trivial5a-webtrivial5a_2.11;1.0-SNAPSHOT->com.google.code.gson#gson;2.3.1 [compile->runtime]
+== resolving dependencies c-trivial5a-webtrivial5a#c-trivial5a-webtrivial5a_2.11;1.0-SNAPSHOT->com.google.code.gson#gson;2.3.1 [compile->compile]
+== resolving dependencies c-trivial5a-webtrivial5a#c-trivial5a-webtrivial5a_2.11;1.0-SNAPSHOT->com.google.code.gson#gson;2.3.1 [compile->master]
+== resolving dependencies c-trivial5a-webtrivial5a#c-trivial5a-webtrivial5a_2.11;1.0-SNAPSHOT->org.mongodb#mongo-java-driver;2.13.0 [compile->default(compile)]
+Read from stdout: Resolving org.mongodb#mongo-java-driver;2.13.0 ...
+Resolving org.mongodb#mongo-java-driver;2.13.0 ...
+sbt-chain: Checking cache for: dependency: org.mongodb#mongo-java-driver;2.13.0 {compile=[default(compile)]}
+sbt-chain: module revision found in cache: org.mongodb#mongo-java-driver;2.13.0
+	found org.mongodb#mongo-java-driver;2.13.0 in sbt-chain
+== resolving dependencies c-trivial5a-webtrivial5a#c-trivial5a-webtrivial5a_2.11;1.0-SNAPSHOT->org.mongodb#mongo-java-driver;2.13.0 [compile->runtime]
+== resolving dependencies c-trivial5a-webtrivial5a#c-trivial5a-webtrivial5a_2.11;1.0-SNAPSHOT->org.mongodb#mongo-java-driver;2.13.0 [compile->compile]
+== resolving dependencies c-trivial5a-webtrivial5a#c-trivial5a-webtrivial5a_2.11;1.0-SNAPSHOT->org.mongodb#mongo-java-driver;2.13.0 [compile->master]
+== resolving dependencies c-trivial5a-webtrivial5a#c-trivial5a-webtrivial5a_2.11;1.0-SNAPSHOT->org.mongodb#mongo-java-driver;2.13.0 [compile->master(*)]
+== resolving dependencies c-trivial5a-webtrivial5a#c-trivial5a-webtrivial5a_2.11;1.0-SNAPSHOT->org.mongodb#mongo-java-driver;2.13.0 [compile->runtime(*)]
+== resolving dependencies c-trivial5a-webtrivial5a#c-trivial5a-webtrivial5a_2.11;1.0-SNAPSHOT->org.mongodb#mongo-java-driver;2.13.0 [compile->compile]
+== resolving dependencies c-trivial5a-webtrivial5a#c-trivial5a-webtrivial5a_2.11;1.0-SNAPSHOT->org.mongodb#mongo-java-driver;2.13.0 [compile->compile(*)]
 resolving dependencies for configuration 'runtime'
 == resolving dependencies for c-trivial5a-webtrivial5a#c-trivial5a-webtrivial5a_2.11;1.0-SNAPSHOT [runtime]
 == resolving dependencies for c-trivial5a-webtrivial5a#c-trivial5a-webtrivial5a_2.11;1.0-SNAPSHOT [compile]
@@ -18526,7 +18534,9 @@ excluding dependency: javax.persistence#persistence-api;1.0 {compile=[compile(*)
 == resolving dependencies net.vz.mongodb.jackson#play-mongo-jackson-mapper_2.10;1.1.0->net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1 [compile->master(*)]
 == resolving dependencies net.vz.mongodb.jackson#play-mongo-jackson-mapper_2.10;1.1.0->net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1 [compile->compile(*)]
 == resolving dependencies net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1->org.mongodb#mongo-java-driver;2.7.2 [compile->master(*)]
+== resolving dependencies net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1->org.mongodb#mongo-java-driver;2.13.0 [compile->master(*)]
 == resolving dependencies net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1->org.mongodb#mongo-java-driver;2.7.2 [compile->compile(*)]
+== resolving dependencies net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1->org.mongodb#mongo-java-driver;2.13.0 [compile->compile(*)]
 == resolving dependencies net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1->org.codehaus.jackson#jackson-mapper-asl;1.9.5 [compile->master(*)]
 == resolving dependencies net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1->org.codehaus.jackson#jackson-mapper-asl;1.9.5 [compile->compile(*)]
 == resolving dependencies org.codehaus.jackson#jackson-mapper-asl;1.9.5->org.codehaus.jackson#jackson-core-asl;1.9.5 [compile->master(*)]
@@ -18549,7 +18559,8 @@ excluding dependency: javax.persistence#persistence-api;1.0 {compile=[compile(*)
 == resolving dependencies net.vz.mongodb.jackson#play-mongo-jackson-mapper_2.10;1.1.0->net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1 [runtime->runtime(*)]
 == resolving dependencies net.vz.mongodb.jackson#play-mongo-jackson-mapper_2.10;1.1.0->net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1 [runtime->compile]
 == resolving dependencies net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1->org.mongodb#mongo-java-driver;2.7.2 [runtime->runtime(*)]
-== resolving dependencies net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1->org.mongodb#mongo-java-driver;2.7.2 [runtime->compile]
+== resolving dependencies net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1->org.mongodb#mongo-java-driver;2.13.0 [runtime->runtime(*)]
+== resolving dependencies net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1->org.mongodb#mongo-java-driver;2.13.0 [runtime->compile]
 == resolving dependencies net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1->org.codehaus.jackson#jackson-mapper-asl;1.9.5 [runtime->runtime(*)]
 == resolving dependencies net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1->org.codehaus.jackson#jackson-mapper-asl;1.9.5 [runtime->compile]
 == resolving dependencies org.codehaus.jackson#jackson-mapper-asl;1.9.5->org.codehaus.jackson#jackson-core-asl;1.9.5 [runtime->runtime(*)]
@@ -18569,7 +18580,9 @@ excluding dependency: javax.persistence#persistence-api;1.0 {compile=[compile(*)
 == resolving dependencies c-trivial5a-webtrivial5a#c-trivial5a-webtrivial5a_2.11;1.0-SNAPSHOT->org.mongojack#mongojack;2.0.0-RC1 [compile->runtime]
 == resolving dependencies c-trivial5a-webtrivial5a#c-trivial5a-webtrivial5a_2.11;1.0-SNAPSHOT->org.mongojack#mongojack;2.0.0-RC1 [compile->compile]
 == resolving dependencies org.mongojack#mongojack;2.0.0-RC1->org.mongodb#mongo-java-driver;2.9.1 [compile->master(*)]
+== resolving dependencies org.mongojack#mongojack;2.0.0-RC1->org.mongodb#mongo-java-driver;2.13.0 [compile->master(*)]
 == resolving dependencies org.mongojack#mongojack;2.0.0-RC1->org.mongodb#mongo-java-driver;2.9.1 [compile->compile(*)]
+== resolving dependencies org.mongojack#mongojack;2.0.0-RC1->org.mongodb#mongo-java-driver;2.13.0 [compile->compile(*)]
 == resolving dependencies org.mongojack#mongojack;2.0.0-RC1->com.fasterxml.jackson.core#jackson-databind;2.1.3 [compile->master(*)]
 == resolving dependencies org.mongojack#mongojack;2.0.0-RC1->com.fasterxml.jackson.core#jackson-databind;2.3.2 [compile->master(*)]
 == resolving dependencies org.mongojack#mongojack;2.0.0-RC1->com.fasterxml.jackson.core#jackson-databind;2.1.3 [compile->compile(*)]
@@ -18588,7 +18601,8 @@ excluding dependency: javax.persistence#persistence-api;1.0 {compile=[compile(*)
 == resolving dependencies org.mongojack#mongojack;2.0.0-RC1->commons-io#commons-io;2.4 [compile->master(*)]
 == resolving dependencies org.mongojack#mongojack;2.0.0-RC1->commons-io#commons-io;2.4 [compile->compile(*)]
 == resolving dependencies org.mongojack#mongojack;2.0.0-RC1->org.mongodb#mongo-java-driver;2.9.1 [runtime->runtime(*)]
-== resolving dependencies org.mongojack#mongojack;2.0.0-RC1->org.mongodb#mongo-java-driver;2.9.1 [runtime->compile]
+== resolving dependencies org.mongojack#mongojack;2.0.0-RC1->org.mongodb#mongo-java-driver;2.13.0 [runtime->runtime(*)]
+== resolving dependencies org.mongojack#mongojack;2.0.0-RC1->org.mongodb#mongo-java-driver;2.13.0 [runtime->compile]
 == resolving dependencies org.mongojack#mongojack;2.0.0-RC1->com.fasterxml.jackson.core#jackson-databind;2.1.3 [runtime->runtime(*)]
 == resolving dependencies org.mongojack#mongojack;2.0.0-RC1->com.fasterxml.jackson.core#jackson-databind;2.3.2 [runtime->runtime(*)]
 == resolving dependencies org.mongojack#mongojack;2.0.0-RC1->com.fasterxml.jackson.core#jackson-databind;2.3.2 [runtime->compile]
@@ -18636,6 +18650,14 @@ excluding dependency: javax.persistence#persistence-api;1.0 {compile=[compile(*)
 == resolving dependencies org.webjars#angular-ui-bootstrap;0.12.0->org.webjars#bootstrap;3.3.1 [runtime->runtime(*)]
 == resolving dependencies org.webjars#angular-ui-bootstrap;0.12.0->org.webjars#bootstrap;3.3.1 [runtime->compile]
 == resolving dependencies c-trivial5a-webtrivial5a#c-trivial5a-webtrivial5a_2.11;1.0-SNAPSHOT->org.webjars#angular-ui-bootstrap;0.12.0 [compile->master]
+== resolving dependencies c-trivial5a-webtrivial5a#c-trivial5a-webtrivial5a_2.11;1.0-SNAPSHOT->com.google.code.gson#gson;2.3.1 [compile->default(compile)]
+== resolving dependencies c-trivial5a-webtrivial5a#c-trivial5a-webtrivial5a_2.11;1.0-SNAPSHOT->com.google.code.gson#gson;2.3.1 [compile->runtime]
+== resolving dependencies c-trivial5a-webtrivial5a#c-trivial5a-webtrivial5a_2.11;1.0-SNAPSHOT->com.google.code.gson#gson;2.3.1 [compile->compile]
+== resolving dependencies c-trivial5a-webtrivial5a#c-trivial5a-webtrivial5a_2.11;1.0-SNAPSHOT->com.google.code.gson#gson;2.3.1 [compile->master]
+== resolving dependencies c-trivial5a-webtrivial5a#c-trivial5a-webtrivial5a_2.11;1.0-SNAPSHOT->org.mongodb#mongo-java-driver;2.13.0 [compile->default(compile)]
+== resolving dependencies c-trivial5a-webtrivial5a#c-trivial5a-webtrivial5a_2.11;1.0-SNAPSHOT->org.mongodb#mongo-java-driver;2.13.0 [compile->runtime]
+== resolving dependencies c-trivial5a-webtrivial5a#c-trivial5a-webtrivial5a_2.11;1.0-SNAPSHOT->org.mongodb#mongo-java-driver;2.13.0 [compile->compile]
+== resolving dependencies c-trivial5a-webtrivial5a#c-trivial5a-webtrivial5a_2.11;1.0-SNAPSHOT->org.mongodb#mongo-java-driver;2.13.0 [compile->master]
 resolving dependencies for configuration 'test'
 == resolving dependencies for c-trivial5a-webtrivial5a#c-trivial5a-webtrivial5a_2.11;1.0-SNAPSHOT [test]
 == resolving dependencies for c-trivial5a-webtrivial5a#c-trivial5a-webtrivial5a_2.11;1.0-SNAPSHOT [runtime]
@@ -19264,7 +19286,9 @@ excluding dependency: javax.persistence#persistence-api;1.0 {compile=[compile(*)
 == resolving dependencies net.vz.mongodb.jackson#play-mongo-jackson-mapper_2.10;1.1.0->net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1 [compile->master(*)]
 == resolving dependencies net.vz.mongodb.jackson#play-mongo-jackson-mapper_2.10;1.1.0->net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1 [compile->compile(*)]
 == resolving dependencies net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1->org.mongodb#mongo-java-driver;2.7.2 [compile->master(*)]
+== resolving dependencies net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1->org.mongodb#mongo-java-driver;2.13.0 [compile->master(*)]
 == resolving dependencies net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1->org.mongodb#mongo-java-driver;2.7.2 [compile->compile(*)]
+== resolving dependencies net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1->org.mongodb#mongo-java-driver;2.13.0 [compile->compile(*)]
 == resolving dependencies net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1->org.codehaus.jackson#jackson-mapper-asl;1.9.5 [compile->master(*)]
 == resolving dependencies net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1->org.codehaus.jackson#jackson-mapper-asl;1.9.5 [compile->compile(*)]
 == resolving dependencies org.codehaus.jackson#jackson-mapper-asl;1.9.5->org.codehaus.jackson#jackson-core-asl;1.9.5 [compile->master(*)]
@@ -19287,7 +19311,8 @@ excluding dependency: javax.persistence#persistence-api;1.0 {compile=[compile(*)
 == resolving dependencies net.vz.mongodb.jackson#play-mongo-jackson-mapper_2.10;1.1.0->net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1 [runtime->runtime(*)]
 == resolving dependencies net.vz.mongodb.jackson#play-mongo-jackson-mapper_2.10;1.1.0->net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1 [runtime->compile]
 == resolving dependencies net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1->org.mongodb#mongo-java-driver;2.7.2 [runtime->runtime(*)]
-== resolving dependencies net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1->org.mongodb#mongo-java-driver;2.7.2 [runtime->compile]
+== resolving dependencies net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1->org.mongodb#mongo-java-driver;2.13.0 [runtime->runtime(*)]
+== resolving dependencies net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1->org.mongodb#mongo-java-driver;2.13.0 [runtime->compile]
 == resolving dependencies net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1->org.codehaus.jackson#jackson-mapper-asl;1.9.5 [runtime->runtime(*)]
 == resolving dependencies net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1->org.codehaus.jackson#jackson-mapper-asl;1.9.5 [runtime->compile]
 == resolving dependencies org.codehaus.jackson#jackson-mapper-asl;1.9.5->org.codehaus.jackson#jackson-core-asl;1.9.5 [runtime->runtime(*)]
@@ -19307,7 +19332,9 @@ excluding dependency: javax.persistence#persistence-api;1.0 {compile=[compile(*)
 == resolving dependencies c-trivial5a-webtrivial5a#c-trivial5a-webtrivial5a_2.11;1.0-SNAPSHOT->org.mongojack#mongojack;2.0.0-RC1 [compile->runtime]
 == resolving dependencies c-trivial5a-webtrivial5a#c-trivial5a-webtrivial5a_2.11;1.0-SNAPSHOT->org.mongojack#mongojack;2.0.0-RC1 [compile->compile]
 == resolving dependencies org.mongojack#mongojack;2.0.0-RC1->org.mongodb#mongo-java-driver;2.9.1 [compile->master(*)]
+== resolving dependencies org.mongojack#mongojack;2.0.0-RC1->org.mongodb#mongo-java-driver;2.13.0 [compile->master(*)]
 == resolving dependencies org.mongojack#mongojack;2.0.0-RC1->org.mongodb#mongo-java-driver;2.9.1 [compile->compile(*)]
+== resolving dependencies org.mongojack#mongojack;2.0.0-RC1->org.mongodb#mongo-java-driver;2.13.0 [compile->compile(*)]
 == resolving dependencies org.mongojack#mongojack;2.0.0-RC1->com.fasterxml.jackson.core#jackson-databind;2.1.3 [compile->master(*)]
 == resolving dependencies org.mongojack#mongojack;2.0.0-RC1->com.fasterxml.jackson.core#jackson-databind;2.3.2 [compile->master(*)]
 == resolving dependencies org.mongojack#mongojack;2.0.0-RC1->com.fasterxml.jackson.core#jackson-databind;2.1.3 [compile->compile(*)]
@@ -19326,7 +19353,8 @@ excluding dependency: javax.persistence#persistence-api;1.0 {compile=[compile(*)
 == resolving dependencies org.mongojack#mongojack;2.0.0-RC1->commons-io#commons-io;2.4 [compile->master(*)]
 == resolving dependencies org.mongojack#mongojack;2.0.0-RC1->commons-io#commons-io;2.4 [compile->compile(*)]
 == resolving dependencies org.mongojack#mongojack;2.0.0-RC1->org.mongodb#mongo-java-driver;2.9.1 [runtime->runtime(*)]
-== resolving dependencies org.mongojack#mongojack;2.0.0-RC1->org.mongodb#mongo-java-driver;2.9.1 [runtime->compile]
+== resolving dependencies org.mongojack#mongojack;2.0.0-RC1->org.mongodb#mongo-java-driver;2.13.0 [runtime->runtime(*)]
+== resolving dependencies org.mongojack#mongojack;2.0.0-RC1->org.mongodb#mongo-java-driver;2.13.0 [runtime->compile]
 == resolving dependencies org.mongojack#mongojack;2.0.0-RC1->com.fasterxml.jackson.core#jackson-databind;2.1.3 [runtime->runtime(*)]
 == resolving dependencies org.mongojack#mongojack;2.0.0-RC1->com.fasterxml.jackson.core#jackson-databind;2.3.2 [runtime->runtime(*)]
 == resolving dependencies org.mongojack#mongojack;2.0.0-RC1->com.fasterxml.jackson.core#jackson-databind;2.3.2 [runtime->compile]
@@ -19374,6 +19402,14 @@ excluding dependency: javax.persistence#persistence-api;1.0 {compile=[compile(*)
 == resolving dependencies org.webjars#angular-ui-bootstrap;0.12.0->org.webjars#bootstrap;3.3.1 [runtime->runtime(*)]
 == resolving dependencies org.webjars#angular-ui-bootstrap;0.12.0->org.webjars#bootstrap;3.3.1 [runtime->compile]
 == resolving dependencies c-trivial5a-webtrivial5a#c-trivial5a-webtrivial5a_2.11;1.0-SNAPSHOT->org.webjars#angular-ui-bootstrap;0.12.0 [compile->master]
+== resolving dependencies c-trivial5a-webtrivial5a#c-trivial5a-webtrivial5a_2.11;1.0-SNAPSHOT->com.google.code.gson#gson;2.3.1 [compile->default(compile)]
+== resolving dependencies c-trivial5a-webtrivial5a#c-trivial5a-webtrivial5a_2.11;1.0-SNAPSHOT->com.google.code.gson#gson;2.3.1 [compile->runtime]
+== resolving dependencies c-trivial5a-webtrivial5a#c-trivial5a-webtrivial5a_2.11;1.0-SNAPSHOT->com.google.code.gson#gson;2.3.1 [compile->compile]
+== resolving dependencies c-trivial5a-webtrivial5a#c-trivial5a-webtrivial5a_2.11;1.0-SNAPSHOT->com.google.code.gson#gson;2.3.1 [compile->master]
+== resolving dependencies c-trivial5a-webtrivial5a#c-trivial5a-webtrivial5a_2.11;1.0-SNAPSHOT->org.mongodb#mongo-java-driver;2.13.0 [compile->default(compile)]
+== resolving dependencies c-trivial5a-webtrivial5a#c-trivial5a-webtrivial5a_2.11;1.0-SNAPSHOT->org.mongodb#mongo-java-driver;2.13.0 [compile->runtime]
+== resolving dependencies c-trivial5a-webtrivial5a#c-trivial5a-webtrivial5a_2.11;1.0-SNAPSHOT->org.mongodb#mongo-java-driver;2.13.0 [compile->compile]
+== resolving dependencies c-trivial5a-webtrivial5a#c-trivial5a-webtrivial5a_2.11;1.0-SNAPSHOT->org.mongodb#mongo-java-driver;2.13.0 [compile->master]
 == resolving dependencies c-trivial5a-webtrivial5a#c-trivial5a-webtrivial5a_2.11;1.0-SNAPSHOT->com.typesafe.play#play-test_2.11;2.3.8 [test->default(compile)]
 Read from stdout: Resolving com.typesafe.play#play-test_2.11;2.3.8 ...
 Resolving com.typesafe.play#play-test_2.11;2.3.8 ...
@@ -21556,7 +21592,9 @@ excluding dependency: javax.persistence#persistence-api;1.0 {compile=[compile(*)
 == resolving dependencies net.vz.mongodb.jackson#play-mongo-jackson-mapper_2.10;1.1.0->net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1 [compile->master(*)]
 == resolving dependencies net.vz.mongodb.jackson#play-mongo-jackson-mapper_2.10;1.1.0->net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1 [compile->compile(*)]
 == resolving dependencies net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1->org.mongodb#mongo-java-driver;2.7.2 [compile->master(*)]
+== resolving dependencies net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1->org.mongodb#mongo-java-driver;2.13.0 [compile->master(*)]
 == resolving dependencies net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1->org.mongodb#mongo-java-driver;2.7.2 [compile->compile(*)]
+== resolving dependencies net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1->org.mongodb#mongo-java-driver;2.13.0 [compile->compile(*)]
 == resolving dependencies net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1->org.codehaus.jackson#jackson-mapper-asl;1.9.5 [compile->master(*)]
 == resolving dependencies net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1->org.codehaus.jackson#jackson-mapper-asl;1.9.5 [compile->compile(*)]
 == resolving dependencies org.codehaus.jackson#jackson-mapper-asl;1.9.5->org.codehaus.jackson#jackson-core-asl;1.9.5 [compile->master(*)]
@@ -21579,7 +21617,8 @@ excluding dependency: javax.persistence#persistence-api;1.0 {compile=[compile(*)
 == resolving dependencies net.vz.mongodb.jackson#play-mongo-jackson-mapper_2.10;1.1.0->net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1 [runtime->runtime(*)]
 == resolving dependencies net.vz.mongodb.jackson#play-mongo-jackson-mapper_2.10;1.1.0->net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1 [runtime->compile]
 == resolving dependencies net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1->org.mongodb#mongo-java-driver;2.7.2 [runtime->runtime(*)]
-== resolving dependencies net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1->org.mongodb#mongo-java-driver;2.7.2 [runtime->compile]
+== resolving dependencies net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1->org.mongodb#mongo-java-driver;2.13.0 [runtime->runtime(*)]
+== resolving dependencies net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1->org.mongodb#mongo-java-driver;2.13.0 [runtime->compile]
 == resolving dependencies net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1->org.codehaus.jackson#jackson-mapper-asl;1.9.5 [runtime->runtime(*)]
 == resolving dependencies net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1->org.codehaus.jackson#jackson-mapper-asl;1.9.5 [runtime->compile]
 == resolving dependencies org.codehaus.jackson#jackson-mapper-asl;1.9.5->org.codehaus.jackson#jackson-core-asl;1.9.5 [runtime->runtime(*)]
@@ -21599,7 +21638,9 @@ excluding dependency: javax.persistence#persistence-api;1.0 {compile=[compile(*)
 == resolving dependencies c-trivial5a-webtrivial5a#c-trivial5a-webtrivial5a_2.11;1.0-SNAPSHOT->org.mongojack#mongojack;2.0.0-RC1 [compile->runtime]
 == resolving dependencies c-trivial5a-webtrivial5a#c-trivial5a-webtrivial5a_2.11;1.0-SNAPSHOT->org.mongojack#mongojack;2.0.0-RC1 [compile->compile]
 == resolving dependencies org.mongojack#mongojack;2.0.0-RC1->org.mongodb#mongo-java-driver;2.9.1 [compile->master(*)]
+== resolving dependencies org.mongojack#mongojack;2.0.0-RC1->org.mongodb#mongo-java-driver;2.13.0 [compile->master(*)]
 == resolving dependencies org.mongojack#mongojack;2.0.0-RC1->org.mongodb#mongo-java-driver;2.9.1 [compile->compile(*)]
+== resolving dependencies org.mongojack#mongojack;2.0.0-RC1->org.mongodb#mongo-java-driver;2.13.0 [compile->compile(*)]
 == resolving dependencies org.mongojack#mongojack;2.0.0-RC1->com.fasterxml.jackson.core#jackson-databind;2.1.3 [compile->master(*)]
 == resolving dependencies org.mongojack#mongojack;2.0.0-RC1->com.fasterxml.jackson.core#jackson-databind;2.3.2 [compile->master(*)]
 == resolving dependencies org.mongojack#mongojack;2.0.0-RC1->com.fasterxml.jackson.core#jackson-databind;2.1.3 [compile->compile(*)]
@@ -21618,7 +21659,8 @@ excluding dependency: javax.persistence#persistence-api;1.0 {compile=[compile(*)
 == resolving dependencies org.mongojack#mongojack;2.0.0-RC1->commons-io#commons-io;2.4 [compile->master(*)]
 == resolving dependencies org.mongojack#mongojack;2.0.0-RC1->commons-io#commons-io;2.4 [compile->compile(*)]
 == resolving dependencies org.mongojack#mongojack;2.0.0-RC1->org.mongodb#mongo-java-driver;2.9.1 [runtime->runtime(*)]
-== resolving dependencies org.mongojack#mongojack;2.0.0-RC1->org.mongodb#mongo-java-driver;2.9.1 [runtime->compile]
+== resolving dependencies org.mongojack#mongojack;2.0.0-RC1->org.mongodb#mongo-java-driver;2.13.0 [runtime->runtime(*)]
+== resolving dependencies org.mongojack#mongojack;2.0.0-RC1->org.mongodb#mongo-java-driver;2.13.0 [runtime->compile]
 == resolving dependencies org.mongojack#mongojack;2.0.0-RC1->com.fasterxml.jackson.core#jackson-databind;2.1.3 [runtime->runtime(*)]
 == resolving dependencies org.mongojack#mongojack;2.0.0-RC1->com.fasterxml.jackson.core#jackson-databind;2.3.2 [runtime->runtime(*)]
 == resolving dependencies org.mongojack#mongojack;2.0.0-RC1->com.fasterxml.jackson.core#jackson-databind;2.3.2 [runtime->compile]
@@ -21666,6 +21708,14 @@ excluding dependency: javax.persistence#persistence-api;1.0 {compile=[compile(*)
 == resolving dependencies org.webjars#angular-ui-bootstrap;0.12.0->org.webjars#bootstrap;3.3.1 [runtime->runtime(*)]
 == resolving dependencies org.webjars#angular-ui-bootstrap;0.12.0->org.webjars#bootstrap;3.3.1 [runtime->compile]
 == resolving dependencies c-trivial5a-webtrivial5a#c-trivial5a-webtrivial5a_2.11;1.0-SNAPSHOT->org.webjars#angular-ui-bootstrap;0.12.0 [compile->master]
+== resolving dependencies c-trivial5a-webtrivial5a#c-trivial5a-webtrivial5a_2.11;1.0-SNAPSHOT->com.google.code.gson#gson;2.3.1 [compile->default(compile)]
+== resolving dependencies c-trivial5a-webtrivial5a#c-trivial5a-webtrivial5a_2.11;1.0-SNAPSHOT->com.google.code.gson#gson;2.3.1 [compile->runtime]
+== resolving dependencies c-trivial5a-webtrivial5a#c-trivial5a-webtrivial5a_2.11;1.0-SNAPSHOT->com.google.code.gson#gson;2.3.1 [compile->compile]
+== resolving dependencies c-trivial5a-webtrivial5a#c-trivial5a-webtrivial5a_2.11;1.0-SNAPSHOT->com.google.code.gson#gson;2.3.1 [compile->master]
+== resolving dependencies c-trivial5a-webtrivial5a#c-trivial5a-webtrivial5a_2.11;1.0-SNAPSHOT->org.mongodb#mongo-java-driver;2.13.0 [compile->default(compile)]
+== resolving dependencies c-trivial5a-webtrivial5a#c-trivial5a-webtrivial5a_2.11;1.0-SNAPSHOT->org.mongodb#mongo-java-driver;2.13.0 [compile->runtime]
+== resolving dependencies c-trivial5a-webtrivial5a#c-trivial5a-webtrivial5a_2.11;1.0-SNAPSHOT->org.mongodb#mongo-java-driver;2.13.0 [compile->compile]
+== resolving dependencies c-trivial5a-webtrivial5a#c-trivial5a-webtrivial5a_2.11;1.0-SNAPSHOT->org.mongodb#mongo-java-driver;2.13.0 [compile->master]
 == resolving dependencies for c-trivial5a-webtrivial5a#c-trivial5a-webtrivial5a_2.11;1.0-SNAPSHOT [optional]
 == resolving dependencies for c-trivial5a-webtrivial5a#c-trivial5a-webtrivial5a_2.11;1.0-SNAPSHOT [provided]
 resolving dependencies for configuration 'runtime-internal'
@@ -22296,7 +22346,9 @@ excluding dependency: javax.persistence#persistence-api;1.0 {compile=[compile(*)
 == resolving dependencies net.vz.mongodb.jackson#play-mongo-jackson-mapper_2.10;1.1.0->net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1 [compile->master(*)]
 == resolving dependencies net.vz.mongodb.jackson#play-mongo-jackson-mapper_2.10;1.1.0->net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1 [compile->compile(*)]
 == resolving dependencies net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1->org.mongodb#mongo-java-driver;2.7.2 [compile->master(*)]
+== resolving dependencies net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1->org.mongodb#mongo-java-driver;2.13.0 [compile->master(*)]
 == resolving dependencies net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1->org.mongodb#mongo-java-driver;2.7.2 [compile->compile(*)]
+== resolving dependencies net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1->org.mongodb#mongo-java-driver;2.13.0 [compile->compile(*)]
 == resolving dependencies net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1->org.codehaus.jackson#jackson-mapper-asl;1.9.5 [compile->master(*)]
 == resolving dependencies net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1->org.codehaus.jackson#jackson-mapper-asl;1.9.5 [compile->compile(*)]
 == resolving dependencies org.codehaus.jackson#jackson-mapper-asl;1.9.5->org.codehaus.jackson#jackson-core-asl;1.9.5 [compile->master(*)]
@@ -22319,7 +22371,8 @@ excluding dependency: javax.persistence#persistence-api;1.0 {compile=[compile(*)
 == resolving dependencies net.vz.mongodb.jackson#play-mongo-jackson-mapper_2.10;1.1.0->net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1 [runtime->runtime(*)]
 == resolving dependencies net.vz.mongodb.jackson#play-mongo-jackson-mapper_2.10;1.1.0->net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1 [runtime->compile]
 == resolving dependencies net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1->org.mongodb#mongo-java-driver;2.7.2 [runtime->runtime(*)]
-== resolving dependencies net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1->org.mongodb#mongo-java-driver;2.7.2 [runtime->compile]
+== resolving dependencies net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1->org.mongodb#mongo-java-driver;2.13.0 [runtime->runtime(*)]
+== resolving dependencies net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1->org.mongodb#mongo-java-driver;2.13.0 [runtime->compile]
 == resolving dependencies net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1->org.codehaus.jackson#jackson-mapper-asl;1.9.5 [runtime->runtime(*)]
 == resolving dependencies net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1->org.codehaus.jackson#jackson-mapper-asl;1.9.5 [runtime->compile]
 == resolving dependencies org.codehaus.jackson#jackson-mapper-asl;1.9.5->org.codehaus.jackson#jackson-core-asl;1.9.5 [runtime->runtime(*)]
@@ -22339,7 +22392,9 @@ excluding dependency: javax.persistence#persistence-api;1.0 {compile=[compile(*)
 == resolving dependencies c-trivial5a-webtrivial5a#c-trivial5a-webtrivial5a_2.11;1.0-SNAPSHOT->org.mongojack#mongojack;2.0.0-RC1 [compile->runtime]
 == resolving dependencies c-trivial5a-webtrivial5a#c-trivial5a-webtrivial5a_2.11;1.0-SNAPSHOT->org.mongojack#mongojack;2.0.0-RC1 [compile->compile]
 == resolving dependencies org.mongojack#mongojack;2.0.0-RC1->org.mongodb#mongo-java-driver;2.9.1 [compile->master(*)]
+== resolving dependencies org.mongojack#mongojack;2.0.0-RC1->org.mongodb#mongo-java-driver;2.13.0 [compile->master(*)]
 == resolving dependencies org.mongojack#mongojack;2.0.0-RC1->org.mongodb#mongo-java-driver;2.9.1 [compile->compile(*)]
+== resolving dependencies org.mongojack#mongojack;2.0.0-RC1->org.mongodb#mongo-java-driver;2.13.0 [compile->compile(*)]
 == resolving dependencies org.mongojack#mongojack;2.0.0-RC1->com.fasterxml.jackson.core#jackson-databind;2.1.3 [compile->master(*)]
 == resolving dependencies org.mongojack#mongojack;2.0.0-RC1->com.fasterxml.jackson.core#jackson-databind;2.3.2 [compile->master(*)]
 == resolving dependencies org.mongojack#mongojack;2.0.0-RC1->com.fasterxml.jackson.core#jackson-databind;2.1.3 [compile->compile(*)]
@@ -22358,7 +22413,8 @@ excluding dependency: javax.persistence#persistence-api;1.0 {compile=[compile(*)
 == resolving dependencies org.mongojack#mongojack;2.0.0-RC1->commons-io#commons-io;2.4 [compile->master(*)]
 == resolving dependencies org.mongojack#mongojack;2.0.0-RC1->commons-io#commons-io;2.4 [compile->compile(*)]
 == resolving dependencies org.mongojack#mongojack;2.0.0-RC1->org.mongodb#mongo-java-driver;2.9.1 [runtime->runtime(*)]
-== resolving dependencies org.mongojack#mongojack;2.0.0-RC1->org.mongodb#mongo-java-driver;2.9.1 [runtime->compile]
+== resolving dependencies org.mongojack#mongojack;2.0.0-RC1->org.mongodb#mongo-java-driver;2.13.0 [runtime->runtime(*)]
+== resolving dependencies org.mongojack#mongojack;2.0.0-RC1->org.mongodb#mongo-java-driver;2.13.0 [runtime->compile]
 == resolving dependencies org.mongojack#mongojack;2.0.0-RC1->com.fasterxml.jackson.core#jackson-databind;2.1.3 [runtime->runtime(*)]
 == resolving dependencies org.mongojack#mongojack;2.0.0-RC1->com.fasterxml.jackson.core#jackson-databind;2.3.2 [runtime->runtime(*)]
 == resolving dependencies org.mongojack#mongojack;2.0.0-RC1->com.fasterxml.jackson.core#jackson-databind;2.3.2 [runtime->compile]
@@ -22406,6 +22462,14 @@ excluding dependency: javax.persistence#persistence-api;1.0 {compile=[compile(*)
 == resolving dependencies org.webjars#angular-ui-bootstrap;0.12.0->org.webjars#bootstrap;3.3.1 [runtime->runtime(*)]
 == resolving dependencies org.webjars#angular-ui-bootstrap;0.12.0->org.webjars#bootstrap;3.3.1 [runtime->compile]
 == resolving dependencies c-trivial5a-webtrivial5a#c-trivial5a-webtrivial5a_2.11;1.0-SNAPSHOT->org.webjars#angular-ui-bootstrap;0.12.0 [compile->master]
+== resolving dependencies c-trivial5a-webtrivial5a#c-trivial5a-webtrivial5a_2.11;1.0-SNAPSHOT->com.google.code.gson#gson;2.3.1 [compile->default(compile)]
+== resolving dependencies c-trivial5a-webtrivial5a#c-trivial5a-webtrivial5a_2.11;1.0-SNAPSHOT->com.google.code.gson#gson;2.3.1 [compile->runtime]
+== resolving dependencies c-trivial5a-webtrivial5a#c-trivial5a-webtrivial5a_2.11;1.0-SNAPSHOT->com.google.code.gson#gson;2.3.1 [compile->compile]
+== resolving dependencies c-trivial5a-webtrivial5a#c-trivial5a-webtrivial5a_2.11;1.0-SNAPSHOT->com.google.code.gson#gson;2.3.1 [compile->master]
+== resolving dependencies c-trivial5a-webtrivial5a#c-trivial5a-webtrivial5a_2.11;1.0-SNAPSHOT->org.mongodb#mongo-java-driver;2.13.0 [compile->default(compile)]
+== resolving dependencies c-trivial5a-webtrivial5a#c-trivial5a-webtrivial5a_2.11;1.0-SNAPSHOT->org.mongodb#mongo-java-driver;2.13.0 [compile->runtime]
+== resolving dependencies c-trivial5a-webtrivial5a#c-trivial5a-webtrivial5a_2.11;1.0-SNAPSHOT->org.mongodb#mongo-java-driver;2.13.0 [compile->compile]
+== resolving dependencies c-trivial5a-webtrivial5a#c-trivial5a-webtrivial5a_2.11;1.0-SNAPSHOT->org.mongodb#mongo-java-driver;2.13.0 [compile->master]
 == resolving dependencies for c-trivial5a-webtrivial5a#c-trivial5a-webtrivial5a_2.11;1.0-SNAPSHOT [optional]
 resolving dependencies for configuration 'test-internal'
 == resolving dependencies for c-trivial5a-webtrivial5a#c-trivial5a-webtrivial5a_2.11;1.0-SNAPSHOT [test-internal]
@@ -23036,7 +23100,9 @@ excluding dependency: javax.persistence#persistence-api;1.0 {compile=[compile(*)
 == resolving dependencies net.vz.mongodb.jackson#play-mongo-jackson-mapper_2.10;1.1.0->net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1 [compile->master(*)]
 == resolving dependencies net.vz.mongodb.jackson#play-mongo-jackson-mapper_2.10;1.1.0->net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1 [compile->compile(*)]
 == resolving dependencies net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1->org.mongodb#mongo-java-driver;2.7.2 [compile->master(*)]
+== resolving dependencies net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1->org.mongodb#mongo-java-driver;2.13.0 [compile->master(*)]
 == resolving dependencies net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1->org.mongodb#mongo-java-driver;2.7.2 [compile->compile(*)]
+== resolving dependencies net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1->org.mongodb#mongo-java-driver;2.13.0 [compile->compile(*)]
 == resolving dependencies net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1->org.codehaus.jackson#jackson-mapper-asl;1.9.5 [compile->master(*)]
 == resolving dependencies net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1->org.codehaus.jackson#jackson-mapper-asl;1.9.5 [compile->compile(*)]
 == resolving dependencies org.codehaus.jackson#jackson-mapper-asl;1.9.5->org.codehaus.jackson#jackson-core-asl;1.9.5 [compile->master(*)]
@@ -23059,7 +23125,8 @@ excluding dependency: javax.persistence#persistence-api;1.0 {compile=[compile(*)
 == resolving dependencies net.vz.mongodb.jackson#play-mongo-jackson-mapper_2.10;1.1.0->net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1 [runtime->runtime(*)]
 == resolving dependencies net.vz.mongodb.jackson#play-mongo-jackson-mapper_2.10;1.1.0->net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1 [runtime->compile]
 == resolving dependencies net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1->org.mongodb#mongo-java-driver;2.7.2 [runtime->runtime(*)]
-== resolving dependencies net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1->org.mongodb#mongo-java-driver;2.7.2 [runtime->compile]
+== resolving dependencies net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1->org.mongodb#mongo-java-driver;2.13.0 [runtime->runtime(*)]
+== resolving dependencies net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1->org.mongodb#mongo-java-driver;2.13.0 [runtime->compile]
 == resolving dependencies net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1->org.codehaus.jackson#jackson-mapper-asl;1.9.5 [runtime->runtime(*)]
 == resolving dependencies net.vz.mongodb.jackson#mongo-jackson-mapper;1.4.1->org.codehaus.jackson#jackson-mapper-asl;1.9.5 [runtime->compile]
 == resolving dependencies org.codehaus.jackson#jackson-mapper-asl;1.9.5->org.codehaus.jackson#jackson-core-asl;1.9.5 [runtime->runtime(*)]
@@ -23079,7 +23146,9 @@ excluding dependency: javax.persistence#persistence-api;1.0 {compile=[compile(*)
 == resolving dependencies c-trivial5a-webtrivial5a#c-trivial5a-webtrivial5a_2.11;1.0-SNAPSHOT->org.mongojack#mongojack;2.0.0-RC1 [compile->runtime]
 == resolving dependencies c-trivial5a-webtrivial5a#c-trivial5a-webtrivial5a_2.11;1.0-SNAPSHOT->org.mongojack#mongojack;2.0.0-RC1 [compile->compile]
 == resolving dependencies org.mongojack#mongojack;2.0.0-RC1->org.mongodb#mongo-java-driver;2.9.1 [compile->master(*)]
+== resolving dependencies org.mongojack#mongojack;2.0.0-RC1->org.mongodb#mongo-java-driver;2.13.0 [compile->master(*)]
 == resolving dependencies org.mongojack#mongojack;2.0.0-RC1->org.mongodb#mongo-java-driver;2.9.1 [compile->compile(*)]
+== resolving dependencies org.mongojack#mongojack;2.0.0-RC1->org.mongodb#mongo-java-driver;2.13.0 [compile->compile(*)]
 == resolving dependencies org.mongojack#mongojack;2.0.0-RC1->com.fasterxml.jackson.core#jackson-databind;2.1.3 [compile->master(*)]
 == resolving dependencies org.mongojack#mongojack;2.0.0-RC1->com.fasterxml.jackson.core#jackson-databind;2.3.2 [compile->master(*)]
 == resolving dependencies org.mongojack#mongojack;2.0.0-RC1->com.fasterxml.jackson.core#jackson-databind;2.1.3 [compile->compile(*)]
@@ -23098,7 +23167,8 @@ excluding dependency: javax.persistence#persistence-api;1.0 {compile=[compile(*)
 == resolving dependencies org.mongojack#mongojack;2.0.0-RC1->commons-io#commons-io;2.4 [compile->master(*)]
 == resolving dependencies org.mongojack#mongojack;2.0.0-RC1->commons-io#commons-io;2.4 [compile->compile(*)]
 == resolving dependencies org.mongojack#mongojack;2.0.0-RC1->org.mongodb#mongo-java-driver;2.9.1 [runtime->runtime(*)]
-== resolving dependencies org.mongojack#mongojack;2.0.0-RC1->org.mongodb#mongo-java-driver;2.9.1 [runtime->compile]
+== resolving dependencies org.mongojack#mongojack;2.0.0-RC1->org.mongodb#mongo-java-driver;2.13.0 [runtime->runtime(*)]
+== resolving dependencies org.mongojack#mongojack;2.0.0-RC1->org.mongodb#mongo-java-driver;2.13.0 [runtime->compile]
 == resolving dependencies org.mongojack#mongojack;2.0.0-RC1->com.fasterxml.jackson.core#jackson-databind;2.1.3 [runtime->runtime(*)]
 == resolving dependencies org.mongojack#mongojack;2.0.0-RC1->com.fasterxml.jackson.core#jackson-databind;2.3.2 [runtime->runtime(*)]
 == resolving dependencies org.mongojack#mongojack;2.0.0-RC1->com.fasterxml.jackson.core#jackson-databind;2.3.2 [runtime->compile]
@@ -23146,6 +23216,14 @@ excluding dependency: javax.persistence#persistence-api;1.0 {compile=[compile(*)
 == resolving dependencies org.webjars#angular-ui-bootstrap;0.12.0->org.webjars#bootstrap;3.3.1 [runtime->runtime(*)]
 == resolving dependencies org.webjars#angular-ui-bootstrap;0.12.0->org.webjars#bootstrap;3.3.1 [runtime->compile]
 == resolving dependencies c-trivial5a-webtrivial5a#c-trivial5a-webtrivial5a_2.11;1.0-SNAPSHOT->org.webjars#angular-ui-bootstrap;0.12.0 [compile->master]
+== resolving dependencies c-trivial5a-webtrivial5a#c-trivial5a-webtrivial5a_2.11;1.0-SNAPSHOT->com.google.code.gson#gson;2.3.1 [compile->default(compile)]
+== resolving dependencies c-trivial5a-webtrivial5a#c-trivial5a-webtrivial5a_2.11;1.0-SNAPSHOT->com.google.code.gson#gson;2.3.1 [compile->runtime]
+== resolving dependencies c-trivial5a-webtrivial5a#c-trivial5a-webtrivial5a_2.11;1.0-SNAPSHOT->com.google.code.gson#gson;2.3.1 [compile->compile]
+== resolving dependencies c-trivial5a-webtrivial5a#c-trivial5a-webtrivial5a_2.11;1.0-SNAPSHOT->com.google.code.gson#gson;2.3.1 [compile->master]
+== resolving dependencies c-trivial5a-webtrivial5a#c-trivial5a-webtrivial5a_2.11;1.0-SNAPSHOT->org.mongodb#mongo-java-driver;2.13.0 [compile->default(compile)]
+== resolving dependencies c-trivial5a-webtrivial5a#c-trivial5a-webtrivial5a_2.11;1.0-SNAPSHOT->org.mongodb#mongo-java-driver;2.13.0 [compile->runtime]
+== resolving dependencies c-trivial5a-webtrivial5a#c-trivial5a-webtrivial5a_2.11;1.0-SNAPSHOT->org.mongodb#mongo-java-driver;2.13.0 [compile->compile]
+== resolving dependencies c-trivial5a-webtrivial5a#c-trivial5a-webtrivial5a_2.11;1.0-SNAPSHOT->org.mongodb#mongo-java-driver;2.13.0 [compile->master]
 == resolving dependencies c-trivial5a-webtrivial5a#c-trivial5a-webtrivial5a_2.11;1.0-SNAPSHOT->com.typesafe.play#play-test_2.11;2.3.8 [test->default(compile)]
 == resolving dependencies c-trivial5a-webtrivial5a#c-trivial5a-webtrivial5a_2.11;1.0-SNAPSHOT->com.typesafe.play#play-test_2.11;2.3.8 [test->runtime]
 == resolving dependencies c-trivial5a-webtrivial5a#c-trivial5a-webtrivial5a_2.11;1.0-SNAPSHOT->com.typesafe.play#play-test_2.11;2.3.8 [test->compile]
@@ -25398,6 +25476,8 @@ all callers are evicted for commons-logging#commons-logging;1.1.1: evicting too
 	[NOT REQUIRED] org.webjars#bootstrap;3.3.1!bootstrap.jar
 	[NOT REQUIRED] org.webjars#angularjs;1.3.8!angularjs.jar
 	[NOT REQUIRED] org.webjars#angular-ui-bootstrap;0.12.0!angular-ui-bootstrap.jar
+	[NOT REQUIRED] com.google.code.gson#gson;2.3.1!gson.jar
+	[NOT REQUIRED] org.mongodb#mongo-java-driver;2.13.0!mongo-java-driver.jar
 	[NOT REQUIRED] org.apache.commons#commons-lang3;3.1!commons-lang3.jar
 	[NOT REQUIRED] org.scala-lang.modules#scala-xml_2.11;1.0.1!scala-xml_2.11.jar(bundle)
 	[NOT REQUIRED] com.typesafe.play#build-link;2.3.8!build-link.jar
@@ -25465,7 +25545,6 @@ all callers are evicted for commons-logging#commons-logging;1.1.1: evicting too
 	[NOT REQUIRED] org.codehaus.jackson#jackson-mapper-asl;1.9.5!jackson-mapper-asl.jar
 	[NOT REQUIRED] javax.persistence#persistence-api;1.0.2!persistence-api.jar
 	[NOT REQUIRED] org.codehaus.jackson#jackson-core-asl;1.9.5!jackson-core-asl.jar
-	[NOT REQUIRED] org.mongodb#mongo-java-driver;2.9.1!mongo-java-driver.jar
 	[NOT REQUIRED] de.undercouch#bson4jackson;2.1.0!bson4jackson.jar
 	[NOT REQUIRED] commons-io#commons-io;2.4!commons-io.jar
 	[NOT REQUIRED] com.fasterxml.jackson.core#jackson-core;2.3.3!jackson-core.jar(bundle)
@@ -25575,7 +25654,7 @@ all callers are evicted for commons-logging#commons-logging;1.1.1: evicting too
 	[NOT REQUIRED] org.scalacheck#scalacheck_2.11;1.11.5!scalacheck_2.11.jar
 	[NOT REQUIRED] com.typesafe.akka#akka-actor_2.11;2.3.8!akka-actor_2.11.jar
 	[NOT REQUIRED] com.typesafe.akka#akka-testkit_2.11;2.3.8!akka-testkit_2.11.jar
-:: resolution report :: resolve 2756ms :: artifacts dl 210ms
+:: resolution report :: resolve 3260ms :: artifacts dl 241ms
 	report for c-trivial5a-webtrivial5a#c-trivial5a-webtrivial5a_2.11;1.0-SNAPSHOT compile produced in C:\Users\Aitor\Trivial5a\WebTrivial5a\target\resolution-cache\reports\c-trivial5a-webtrivial5a-c-trivial5a-webtrivial5a_2.11-compile.xml
 	report for c-trivial5a-webtrivial5a#c-trivial5a-webtrivial5a_2.11;1.0-SNAPSHOT runtime produced in C:\Users\Aitor\Trivial5a\WebTrivial5a\target\resolution-cache\reports\c-trivial5a-webtrivial5a-c-trivial5a-webtrivial5a_2.11-runtime.xml
 	report for c-trivial5a-webtrivial5a#c-trivial5a-webtrivial5a_2.11;1.0-SNAPSHOT test produced in C:\Users\Aitor\Trivial5a\WebTrivial5a\target\resolution-cache\reports\c-trivial5a-webtrivial5a-c-trivial5a-webtrivial5a_2.11-test.xml
@@ -25590,47 +25669,46 @@ all callers are evicted for commons-logging#commons-logging;1.1.1: evicting too
 	report for c-trivial5a-webtrivial5a#c-trivial5a-webtrivial5a_2.11;1.0-SNAPSHOT pom produced in C:\Users\Aitor\Trivial5a\WebTrivial5a\target\resolution-cache\reports\c-trivial5a-webtrivial5a-c-trivial5a-webtrivial5a_2.11-pom.xml
 	report for c-trivial5a-webtrivial5a#c-trivial5a-webtrivial5a_2.11;1.0-SNAPSHOT scala-tool produced in C:\Users\Aitor\Trivial5a\WebTrivial5a\target\resolution-cache\reports\c-trivial5a-webtrivial5a-c-trivial5a-webtrivial5a_2.11-scala-tool.xml
 	report for c-trivial5a-webtrivial5a#c-trivial5a-webtrivial5a_2.11;1.0-SNAPSHOT fork-run produced in C:\Users\Aitor\Trivial5a\WebTrivial5a\target\resolution-cache\reports\c-trivial5a-webtrivial5a-c-trivial5a-webtrivial5a_2.11-fork-run.xml
-	resolve done (2756ms resolve - 210ms download)
+	resolve done (3260ms resolve - 241ms download)
 Read from stdout: Done updating.
 Done updating.
-Total time: 3 s, completed 19-abr-2015 20:37:32
+Total time: 4 s, completed 20-abr-2015 20:10:29
 > server-post-command-cleanup
 > server-handle-next-server-request
 > root/playForkNotifyStart http://localhost:9000
 Evaluating tasks: *:playForkNotifyStart
-Running task... Cancel: sbt.server.ServerTaskCancellation@68c4dd3b, check cycles: false
-Total time: 0 s, completed 19-abr-2015 20:37:33
+Running task... Cancel: sbt.server.ServerTaskCancellation@5af3c990, check cycles: false
+Total time: 0 s, completed 20-abr-2015 20:10:30
 > server-post-command-cleanup
 > server-handle-next-server-request
 > {file:/C:/Users/Aitor/Trivial5a/WebTrivial5a/}root/*:playForkReload
 Evaluating tasks: *:playForkReload
-Running task... Cancel: sbt.server.ServerTaskCancellation@10850c0c, check cycles: false
+Running task... Cancel: sbt.server.ServerTaskCancellation@5f7121b9, check cycles: false
 
 Initial source changes: 
 	removed:Set()
-	added: Set(C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\twirl\main\views\html\partidas.template.scala, C:\Users\Aitor\Trivial5a\WebTrivial5a\app\model\User.java, C:\Users\Aitor\Trivial5a\WebTrivial5a\app\controllers\Application.java, C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\twirl\main\views\html\main.template.scala, C:\Users\Aitor\Trivial5a\WebTrivial5a\app\model\Partida.java, C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\twirl\main\views\html\categorias.template.scala, C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\src_managed\main\controllers\routes.java, C:\Users\Aitor\Trivial5a\WebTrivial5a\app\model\Question.java, C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\src_managed\main\routes_reverseRouting.scala, C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\src_managed\main\routes_routing.scala, C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\twirl\main\views\html\usuarios.template.scala, C:\Users\Aitor\Trivial5a\WebTrivial5a\app\model\Category.java, C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\twirl\main\views\html\index.template.scala)
-	modified: Set()
+	added: Set()
+	modified: Set(C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\twirl\main\views\html\usuarios.template.scala)
 Removed products: Set()
 External API changes: API Changes: Set()
 Modified binary dependencies: Set()
-Initial directly invalidated sources: Set(C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\twirl\main\views\html\partidas.template.scala, C:\Users\Aitor\Trivial5a\WebTrivial5a\app\model\User.java, C:\Users\Aitor\Trivial5a\WebTrivial5a\app\controllers\Application.java, C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\twirl\main\views\html\main.template.scala, C:\Users\Aitor\Trivial5a\WebTrivial5a\app\model\Partida.java, C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\twirl\main\views\html\categorias.template.scala, C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\src_managed\main\controllers\routes.java, C:\Users\Aitor\Trivial5a\WebTrivial5a\app\model\Question.java, C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\src_managed\main\routes_reverseRouting.scala, C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\src_managed\main\routes_routing.scala, C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\twirl\main\views\html\usuarios.template.scala, C:\Users\Aitor\Trivial5a\WebTrivial5a\app\model\Category.java, C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\twirl\main\views\html\index.template.scala)
+Initial directly invalidated sources: Set(C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\twirl\main\views\html\usuarios.template.scala)
 
 Sources indirectly invalidated by:
 	product: Set()
 	binary dep: Set()
 	external source: Set()
-All initially invalidated sources: Set(C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\twirl\main\views\html\partidas.template.scala, C:\Users\Aitor\Trivial5a\WebTrivial5a\app\model\User.java, C:\Users\Aitor\Trivial5a\WebTrivial5a\app\controllers\Application.java, C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\twirl\main\views\html\main.template.scala, C:\Users\Aitor\Trivial5a\WebTrivial5a\app\model\Partida.java, C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\twirl\main\views\html\categorias.template.scala, C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\src_managed\main\controllers\routes.java, C:\Users\Aitor\Trivial5a\WebTrivial5a\app\model\Question.java, C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\src_managed\main\routes_reverseRouting.scala, C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\src_managed\main\routes_routing.scala, C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\twirl\main\views\html\usuarios.template.scala, C:\Users\Aitor\Trivial5a\WebTrivial5a\app\model\Category.java, C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\twirl\main\views\html\index.template.scala)
+All initially invalidated sources: Set(C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\twirl\main\views\html\usuarios.template.scala)
 
-Recompiling all 13 sources: invalidated sources (13) exceeded 50.0% of all sources
-Read from stdout: Compiling 7 Scala sources and 6 Java sources to C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\classes...
-Compiling 7 Scala sources and 6 Java sources to C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\classes...
+Read from stdout: Compiling 1 Scala source to C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\classes...
+Compiling 1 Scala source to C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\classes...
 Getting compiler-interface from component compiler for Scala 2.11.1
 Other repositories:
 Default repositories:
 Getting compiler-interface from component compiler for Scala 2.11.1
 Other repositories:
 Default repositories:
-Running cached compiler 90f4e16, interfacing (CompilerInterface) with Scala compiler version 2.11.1
+Running cached compiler 70a4ddaa, interfacing (CompilerInterface) with Scala compiler version 2.11.1
 Calling Scala compiler with arguments  (CompilerInterface):
 	-deprecation
 	-unchecked
@@ -25639,353 +25717,8 @@ Calling Scala compiler with arguments  (CompilerInterface):
 	-bootclasspath
 	C:\Program Files\Java\jdk1.8.0_45\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_45\jre\classes;C:\Users\Aitor\.ivy2\cache\org.scala-lang\scala-library\jars\scala-library-2.11.1.jar
 	-classpath
-	C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\classes;C:\Users\Aitor\.ivy2\cache\com.typesafe.play\twirl-api_2.11\jars\twirl-api_2.11-1.0.2.jar;C:\Users\Aitor\.ivy2\cache\org.apache.commons\commons-lang3\jars\commons-lang3-3.1.jar;C:\Users\Aitor\.ivy2\cache\org.scala-lang.modules\scala-xml_2.11\bundles\scala-xml_2.11-1.0.1.jar;C:\Users\Aitor\.ivy2\cache\com.typesafe.play\play_2.11\jars\play_2.11-2.3.8.jar;C:\Users\Aitor\.ivy2\cache\com.typesafe.play\build-link\jars\build-link-2.3.8.jar;C:\Users\Aitor\.ivy2\cache\com.typesafe.play\play-exceptions\jars\play-exceptions-2.3.8.jar;C:\Users\Aitor\.ivy2\cache\com.typesafe.play\play-iteratees_2.11\jars\play-iteratees_2.11-2.3.8.jar;C:\Users\Aitor\.ivy2\cache\org.scala-stm\scala-stm_2.11\jars\scala-stm_2.11-0.7.jar;C:\Users\Aitor\.ivy2\cache\com.typesafe\config\bundles\config-1.2.1.jar;C:\Users\Aitor\.ivy2\cache\com.typesafe.play\play-json_2.11\jars\play-json_2.11-2.3.8.jar;C:\Users\Aitor\.ivy2\cache\com.typesafe.play\play-functional_2.11\jars\play-functional_2.11-2.3.8.jar;C:\Users\Aitor\.ivy2\cache\com.typesafe.play\play-datacommons_2.11\jars\play-datacommons_2.11-2.3.8.jar;C:\Users\Aitor\.ivy2\cache\joda-time\joda-time\jars\joda-time-2.3.jar;C:\Users\Aitor\.ivy2\cache\org.joda\joda-convert\jars\joda-convert-1.6.jar;C:\Users\Aitor\.ivy2\cache\com.fasterxml.jackson.core\jackson-annotations\bundles\jackson-annotations-2.3.2.jar;C:\Users\Aitor\.ivy2\cache\com.fasterxml.jackson.core\jackson-databind\bundles\jackson-databind-2.3.2.jar;C:\Users\Aitor\.ivy2\cache\org.scala-lang\scala-reflect\jars\scala-reflect-2.11.1.jar;C:\Users\Aitor\.ivy2\cache\org.scala-lang.modules\scala-parser-combinators_2.11\bundles\scala-parser-combinators_2.11-1.0.1.jar;C:\Users\Aitor\.ivy2\cache\io.netty\netty\bundles\netty-3.9.3.Final.jar;C:\Users\Aitor\.ivy2\cache\com.typesafe.netty\netty-http-pipelining\jars\netty-http-pipelining-1.1.2.jar;C:\Users\Aitor\.ivy2\cache\org.slf4j\slf4j-api\jars\slf4j-api-1.7.6.jar;C:\Users\Aitor\.ivy2\cache\org.slf4j\jul-to-slf4j\jars\jul-to-slf4j-1.7.6.jar;C:\Users\Aitor\.ivy2\cache\org.slf4j\jcl-over-slf4j\jars\jcl-over-slf4j-1.7.6.jar;C:\Users\Aitor\.ivy2\cache\ch.qos.logback\logback-core\jars\logback-core-1.1.1.jar;C:\Users\Aitor\.ivy2\cache\ch.qos.logback\logback-classic\jars\logback-classic-1.1.1.jar;C:\Users\Aitor\.ivy2\cache\com.typesafe.akka\akka-actor_2.11\jars\akka-actor_2.11-2.3.4.jar;C:\Users\Aitor\.ivy2\cache\com.typesafe.akka\akka-slf4j_2.11\jars\akka-slf4j_2.11-2.3.4.jar;C:\Users\Aitor\.ivy2\cache\commons-codec\commons-codec\jars\commons-codec-1.9.jar;C:\Users\Aitor\.ivy2\cache\xerces\xercesImpl\jars\xercesImpl-2.11.0.jar;C:\Users\Aitor\.ivy2\cache\xml-apis\xml-apis\jars\xml-apis-1.4.01.jar;C:\Users\Aitor\.ivy2\cache\javax.transaction\jta\jars\jta-1.1.jar;C:\Users\Aitor\.ivy2\cache\com.typesafe.play\play-java_2.11\jars\play-java_2.11-2.3.8.jar;C:\Users\Aitor\.ivy2\cache\org.yaml\snakeyaml\bundles\snakeyaml-1.13.jar;C:\Users\Aitor\.ivy2\cache\org.hibernate\hibernate-validator\jars\hibernate-validator-5.0.3.Final.jar;C:\Users\Aitor\.ivy2\cache\javax.validation\validation-api\jars\validation-api-1.1.0.Final.jar;C:\Users\Aitor\.ivy2\cache\com.fasterxml\classmate\bundles\classmate-1.0.0.jar;C:\Users\Aitor\.ivy2\cache\org.jboss.logging\jboss-logging\jars\jboss-logging-3.2.0.Final.jar;C:\Users\Aitor\.ivy2\cache\org.springframework\spring-context\jars\spring-context-4.0.3.RELEASE.jar;C:\Users\Aitor\.ivy2\cache\org.springframework\spring-core\jars\spring-core-4.0.3.RELEASE.jar;C:\Users\Aitor\.ivy2\cache\org.springframework\spring-beans\jars\spring-beans-4.0.3.RELEASE.jar;C:\Users\Aitor\.ivy2\cache\org.javassist\javassist\bundles\javassist-3.19.0-GA.jar;C:\Users\Aitor\.ivy2\cache\org.reflections\reflections\jars\reflections-0.9.8.jar;C:\Users\Aitor\.ivy2\cache\com.google.guava\guava\bundles\guava-16.0.1.jar;C:\Users\Aitor\.ivy2\cache\dom4j\dom4j\jars\dom4j-1.6.1.jar;C:\Users\Aitor\.ivy2\cache\com.google.code.findbugs\jsr305\jars\jsr305-2.0.3.jar;C:\Users\Aitor\.ivy2\cache\org.apache.tomcat\tomcat-servlet-api\jars\tomcat-servlet-api-8.0.5.jar;C:\Users\Aitor\.ivy2\cache\com.typesafe.play\play-java-jdbc_2.11\jars\play-java-jdbc_2.11-2.3.8.jar;C:\Users\Aitor\.ivy2\cache\com.typesafe.play\play-jdbc_2.11\jars\play-jdbc_2.11-2.3.8.jar;C:\Users\Aitor\.ivy2\cache\com.jolbox\bonecp\bundles\bonecp-0.8.0.RELEASE.jar;C:\Users\Aitor\.ivy2\cache\com.h2database\h2\jars\h2-1.3.175.jar;C:\Users\Aitor\.ivy2\cache\tyrex\tyrex\jars\tyrex-1.0.1.jar;C:\Users\Aitor\.ivy2\cache\com.typesafe.play\play-java-ebean_2.11\jars\play-java-ebean_2.11-2.3.8.jar;C:\Users\Aitor\.ivy2\cache\org.avaje.ebeanorm\avaje-ebeanorm\jars\avaje-ebeanorm-3.3.4.jar;C:\Users\Aitor\.ivy2\cache\org.avaje.ebeanorm\avaje-ebeanorm-agent\jars\avaje-ebeanorm-agent-3.2.2.jar;C:\Users\Aitor\.ivy2\cache\org.hibernate.javax.persistence\hibernate-jpa-2.0-api\jars\hibernate-jpa-2.0-api-1.0.1.Final.jar;C:\Users\Aitor\.ivy2\cache\com.typesafe.play\play-cache_2.11\jars\play-cache_2.11-2.3.8.jar;C:\Users\Aitor\.ivy2\cache\net.sf.ehcache\ehcache-core\jars\ehcache-core-2.6.8.jar;C:\Users\Aitor\.ivy2\cache\com.typesafe.play\play-java-ws_2.11\jars\play-java-ws_2.11-2.3.8.jar;C:\Users\Aitor\.ivy2\cache\com.typesafe.play\play-ws_2.11\jars\play-ws_2.11-2.3.8.jar;C:\Users\Aitor\.ivy2\cache\com.ning\async-http-client\jars\async-http-client-1.8.15.jar;C:\Users\Aitor\.ivy2\cache\oauth.signpost\signpost-core\jars\signpost-core-1.2.1.2.jar;C:\Users\Aitor\.ivy2\cache\oauth.signpost\signpost-commonshttp4\jars\signpost-commonshttp4-1.2.1.2.jar;C:\Users\Aitor\.ivy2\cache\org.apache.httpcomponents\httpcore\jars\httpcore-4.0.1.jar;C:\Users\Aitor\.ivy2\cache\org.apache.httpcomponents\httpclient\jars\httpclient-4.0.1.jar;C:\Users\Aitor\.ivy2\cache\commons-logging\commons-logging\jars\commons-logging-1.1.1.jar;C:\Users\Aitor\.ivy2\cache\net.vz.mongodb.jackson\play-mongo-jackson-mapper_2.10\jars\play-mongo-jackson-mapper_2.10-1.1.0.jar;C:\Users\Aitor\.ivy2\cache\net.vz.mongodb.jackson\mongo-jackson-mapper\jars\mongo-jackson-mapper-1.4.1.jar;C:\Users\Aitor\.ivy2\cache\org.codehaus.jackson\jackson-mapper-asl\jars\jackson-mapper-asl-1.9.5.jar;C:\Users\Aitor\.ivy2\cache\org.codehaus.jackson\jackson-core-asl\jars\jackson-core-asl-1.9.5.jar;C:\Users\Aitor\.ivy2\cache\javax.persistence\persistence-api\jars\persistence-api-1.0.2.jar;C:\Users\Aitor\.ivy2\cache\org.mongojack\mongojack\jars\mongojack-2.0.0-RC1.jar;C:\Users\Aitor\.ivy2\cache\org.mongodb\mongo-java-driver\jars\mongo-java-driver-2.9.1.jar;C:\Users\Aitor\.ivy2\cache\de.undercouch\bson4jackson\jars\bson4jackson-2.1.0.jar;C:\Users\Aitor\.ivy2\cache\com.fasterxml.jackson.core\jackson-core\bundles\jackson-core-2.3.3.jar;C:\Users\Aitor\.ivy2\cache\commons-io\commons-io\jars\commons-io-2.4.jar;C:\Users\Aitor\.ivy2\cache\org.webjars\bootstrap\jars\bootstrap-3.3.1.jar;C:\Users\Aitor\.ivy2\cache\org.webjars\jquery\jars\jquery-1.11.1.jar;C:\Users\Aitor\.ivy2\cache\org.webjars\angularjs\jars\angularjs-1.3.8.jar;C:\Users\Aitor\.ivy2\cache\org.webjars\angular-ui-bootstrap\jars\angular-ui-bootstrap-0.12.0.jar
-Read from stdout: CoffeeScript compiling on 7 source(s)
-CoffeeScript compiling on 7 source(s)
-Scala compilation took 8.781535885 s
-Attempting to call com.sun.tools.javac.api.JavacTool@78acba22 directly...
-Read from stdout: C:\Users\Aitor\Trivial5a\WebTrivial5a\app\controllers\Application.java:37:  java.util.List<model.Category> cannot be converted to java.util.List<model.Partida>
-C:\Users\Aitor\Trivial5a\WebTrivial5a\app\controllers\Application.java:37:  java.util.List<model.Category> cannot be converted to java.util.List<model.Partida>
-Read from stdout: Category.all()
-Category.all()
-Read from stdout: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
-Some messages have been simplified; recompile with -Xdiags:verbose to get full output
-Total time: 12 s, completed 19-abr-2015 20:37:49
-> server-post-command-cleanup
-> server-handle-next-server-request
-> {file:/C:/Users/Aitor/Trivial5a/WebTrivial5a/}root/*:playForkReload
-Evaluating tasks: *:playForkReload
-Running task... Cancel: sbt.server.ServerTaskCancellation@6eb5b3c2, check cycles: false
-
-Initial source changes: 
-	removed:Set()
-	added: Set(C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\twirl\main\views\html\partidas.template.scala, C:\Users\Aitor\Trivial5a\WebTrivial5a\app\model\User.java, C:\Users\Aitor\Trivial5a\WebTrivial5a\app\controllers\Application.java, C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\twirl\main\views\html\main.template.scala, C:\Users\Aitor\Trivial5a\WebTrivial5a\app\model\Partida.java, C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\twirl\main\views\html\categorias.template.scala, C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\src_managed\main\controllers\routes.java, C:\Users\Aitor\Trivial5a\WebTrivial5a\app\model\Question.java, C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\src_managed\main\routes_reverseRouting.scala, C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\src_managed\main\routes_routing.scala, C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\twirl\main\views\html\usuarios.template.scala, C:\Users\Aitor\Trivial5a\WebTrivial5a\app\model\Category.java, C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\twirl\main\views\html\index.template.scala)
-	modified: Set()
-Removed products: Set()
-External API changes: API Changes: Set()
-Modified binary dependencies: Set()
-Initial directly invalidated sources: Set(C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\twirl\main\views\html\partidas.template.scala, C:\Users\Aitor\Trivial5a\WebTrivial5a\app\model\User.java, C:\Users\Aitor\Trivial5a\WebTrivial5a\app\controllers\Application.java, C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\twirl\main\views\html\main.template.scala, C:\Users\Aitor\Trivial5a\WebTrivial5a\app\model\Partida.java, C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\twirl\main\views\html\categorias.template.scala, C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\src_managed\main\controllers\routes.java, C:\Users\Aitor\Trivial5a\WebTrivial5a\app\model\Question.java, C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\src_managed\main\routes_reverseRouting.scala, C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\src_managed\main\routes_routing.scala, C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\twirl\main\views\html\usuarios.template.scala, C:\Users\Aitor\Trivial5a\WebTrivial5a\app\model\Category.java, C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\twirl\main\views\html\index.template.scala)
-
-Sources indirectly invalidated by:
-	product: Set()
-	binary dep: Set()
-	external source: Set()
-All initially invalidated sources: Set(C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\twirl\main\views\html\partidas.template.scala, C:\Users\Aitor\Trivial5a\WebTrivial5a\app\model\User.java, C:\Users\Aitor\Trivial5a\WebTrivial5a\app\controllers\Application.java, C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\twirl\main\views\html\main.template.scala, C:\Users\Aitor\Trivial5a\WebTrivial5a\app\model\Partida.java, C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\twirl\main\views\html\categorias.template.scala, C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\src_managed\main\controllers\routes.java, C:\Users\Aitor\Trivial5a\WebTrivial5a\app\model\Question.java, C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\src_managed\main\routes_reverseRouting.scala, C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\src_managed\main\routes_routing.scala, C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\twirl\main\views\html\usuarios.template.scala, C:\Users\Aitor\Trivial5a\WebTrivial5a\app\model\Category.java, C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\twirl\main\views\html\index.template.scala)
-
-Recompiling all 13 sources: invalidated sources (13) exceeded 50.0% of all sources
-Read from stdout: Compiling 7 Scala sources and 6 Java sources to C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\classes...
-Compiling 7 Scala sources and 6 Java sources to C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\classes...
-Getting compiler-interface from component compiler for Scala 2.11.1
-Other repositories:
-Default repositories:
-Getting compiler-interface from component compiler for Scala 2.11.1
-Other repositories:
-Default repositories:
-Running cached compiler 49acc664, interfacing (CompilerInterface) with Scala compiler version 2.11.1
-Calling Scala compiler with arguments  (CompilerInterface):
-	-deprecation
-	-unchecked
-	-encoding
-	utf8
-	-bootclasspath
-	C:\Program Files\Java\jdk1.8.0_45\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_45\jre\classes;C:\Users\Aitor\.ivy2\cache\org.scala-lang\scala-library\jars\scala-library-2.11.1.jar
-	-classpath
-	C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\classes;C:\Users\Aitor\.ivy2\cache\com.typesafe.play\twirl-api_2.11\jars\twirl-api_2.11-1.0.2.jar;C:\Users\Aitor\.ivy2\cache\org.apache.commons\commons-lang3\jars\commons-lang3-3.1.jar;C:\Users\Aitor\.ivy2\cache\org.scala-lang.modules\scala-xml_2.11\bundles\scala-xml_2.11-1.0.1.jar;C:\Users\Aitor\.ivy2\cache\com.typesafe.play\play_2.11\jars\play_2.11-2.3.8.jar;C:\Users\Aitor\.ivy2\cache\com.typesafe.play\build-link\jars\build-link-2.3.8.jar;C:\Users\Aitor\.ivy2\cache\com.typesafe.play\play-exceptions\jars\play-exceptions-2.3.8.jar;C:\Users\Aitor\.ivy2\cache\com.typesafe.play\play-iteratees_2.11\jars\play-iteratees_2.11-2.3.8.jar;C:\Users\Aitor\.ivy2\cache\org.scala-stm\scala-stm_2.11\jars\scala-stm_2.11-0.7.jar;C:\Users\Aitor\.ivy2\cache\com.typesafe\config\bundles\config-1.2.1.jar;C:\Users\Aitor\.ivy2\cache\com.typesafe.play\play-json_2.11\jars\play-json_2.11-2.3.8.jar;C:\Users\Aitor\.ivy2\cache\com.typesafe.play\play-functional_2.11\jars\play-functional_2.11-2.3.8.jar;C:\Users\Aitor\.ivy2\cache\com.typesafe.play\play-datacommons_2.11\jars\play-datacommons_2.11-2.3.8.jar;C:\Users\Aitor\.ivy2\cache\joda-time\joda-time\jars\joda-time-2.3.jar;C:\Users\Aitor\.ivy2\cache\org.joda\joda-convert\jars\joda-convert-1.6.jar;C:\Users\Aitor\.ivy2\cache\com.fasterxml.jackson.core\jackson-annotations\bundles\jackson-annotations-2.3.2.jar;C:\Users\Aitor\.ivy2\cache\com.fasterxml.jackson.core\jackson-databind\bundles\jackson-databind-2.3.2.jar;C:\Users\Aitor\.ivy2\cache\org.scala-lang\scala-reflect\jars\scala-reflect-2.11.1.jar;C:\Users\Aitor\.ivy2\cache\org.scala-lang.modules\scala-parser-combinators_2.11\bundles\scala-parser-combinators_2.11-1.0.1.jar;C:\Users\Aitor\.ivy2\cache\io.netty\netty\bundles\netty-3.9.3.Final.jar;C:\Users\Aitor\.ivy2\cache\com.typesafe.netty\netty-http-pipelining\jars\netty-http-pipelining-1.1.2.jar;C:\Users\Aitor\.ivy2\cache\org.slf4j\slf4j-api\jars\slf4j-api-1.7.6.jar;C:\Users\Aitor\.ivy2\cache\org.slf4j\jul-to-slf4j\jars\jul-to-slf4j-1.7.6.jar;C:\Users\Aitor\.ivy2\cache\org.slf4j\jcl-over-slf4j\jars\jcl-over-slf4j-1.7.6.jar;C:\Users\Aitor\.ivy2\cache\ch.qos.logback\logback-core\jars\logback-core-1.1.1.jar;C:\Users\Aitor\.ivy2\cache\ch.qos.logback\logback-classic\jars\logback-classic-1.1.1.jar;C:\Users\Aitor\.ivy2\cache\com.typesafe.akka\akka-actor_2.11\jars\akka-actor_2.11-2.3.4.jar;C:\Users\Aitor\.ivy2\cache\com.typesafe.akka\akka-slf4j_2.11\jars\akka-slf4j_2.11-2.3.4.jar;C:\Users\Aitor\.ivy2\cache\commons-codec\commons-codec\jars\commons-codec-1.9.jar;C:\Users\Aitor\.ivy2\cache\xerces\xercesImpl\jars\xercesImpl-2.11.0.jar;C:\Users\Aitor\.ivy2\cache\xml-apis\xml-apis\jars\xml-apis-1.4.01.jar;C:\Users\Aitor\.ivy2\cache\javax.transaction\jta\jars\jta-1.1.jar;C:\Users\Aitor\.ivy2\cache\com.typesafe.play\play-java_2.11\jars\play-java_2.11-2.3.8.jar;C:\Users\Aitor\.ivy2\cache\org.yaml\snakeyaml\bundles\snakeyaml-1.13.jar;C:\Users\Aitor\.ivy2\cache\org.hibernate\hibernate-validator\jars\hibernate-validator-5.0.3.Final.jar;C:\Users\Aitor\.ivy2\cache\javax.validation\validation-api\jars\validation-api-1.1.0.Final.jar;C:\Users\Aitor\.ivy2\cache\com.fasterxml\classmate\bundles\classmate-1.0.0.jar;C:\Users\Aitor\.ivy2\cache\org.jboss.logging\jboss-logging\jars\jboss-logging-3.2.0.Final.jar;C:\Users\Aitor\.ivy2\cache\org.springframework\spring-context\jars\spring-context-4.0.3.RELEASE.jar;C:\Users\Aitor\.ivy2\cache\org.springframework\spring-core\jars\spring-core-4.0.3.RELEASE.jar;C:\Users\Aitor\.ivy2\cache\org.springframework\spring-beans\jars\spring-beans-4.0.3.RELEASE.jar;C:\Users\Aitor\.ivy2\cache\org.javassist\javassist\bundles\javassist-3.19.0-GA.jar;C:\Users\Aitor\.ivy2\cache\org.reflections\reflections\jars\reflections-0.9.8.jar;C:\Users\Aitor\.ivy2\cache\com.google.guava\guava\bundles\guava-16.0.1.jar;C:\Users\Aitor\.ivy2\cache\dom4j\dom4j\jars\dom4j-1.6.1.jar;C:\Users\Aitor\.ivy2\cache\com.google.code.findbugs\jsr305\jars\jsr305-2.0.3.jar;C:\Users\Aitor\.ivy2\cache\org.apache.tomcat\tomcat-servlet-api\jars\tomcat-servlet-api-8.0.5.jar;C:\Users\Aitor\.ivy2\cache\com.typesafe.play\play-java-jdbc_2.11\jars\play-java-jdbc_2.11-2.3.8.jar;C:\Users\Aitor\.ivy2\cache\com.typesafe.play\play-jdbc_2.11\jars\play-jdbc_2.11-2.3.8.jar;C:\Users\Aitor\.ivy2\cache\com.jolbox\bonecp\bundles\bonecp-0.8.0.RELEASE.jar;C:\Users\Aitor\.ivy2\cache\com.h2database\h2\jars\h2-1.3.175.jar;C:\Users\Aitor\.ivy2\cache\tyrex\tyrex\jars\tyrex-1.0.1.jar;C:\Users\Aitor\.ivy2\cache\com.typesafe.play\play-java-ebean_2.11\jars\play-java-ebean_2.11-2.3.8.jar;C:\Users\Aitor\.ivy2\cache\org.avaje.ebeanorm\avaje-ebeanorm\jars\avaje-ebeanorm-3.3.4.jar;C:\Users\Aitor\.ivy2\cache\org.avaje.ebeanorm\avaje-ebeanorm-agent\jars\avaje-ebeanorm-agent-3.2.2.jar;C:\Users\Aitor\.ivy2\cache\org.hibernate.javax.persistence\hibernate-jpa-2.0-api\jars\hibernate-jpa-2.0-api-1.0.1.Final.jar;C:\Users\Aitor\.ivy2\cache\com.typesafe.play\play-cache_2.11\jars\play-cache_2.11-2.3.8.jar;C:\Users\Aitor\.ivy2\cache\net.sf.ehcache\ehcache-core\jars\ehcache-core-2.6.8.jar;C:\Users\Aitor\.ivy2\cache\com.typesafe.play\play-java-ws_2.11\jars\play-java-ws_2.11-2.3.8.jar;C:\Users\Aitor\.ivy2\cache\com.typesafe.play\play-ws_2.11\jars\play-ws_2.11-2.3.8.jar;C:\Users\Aitor\.ivy2\cache\com.ning\async-http-client\jars\async-http-client-1.8.15.jar;C:\Users\Aitor\.ivy2\cache\oauth.signpost\signpost-core\jars\signpost-core-1.2.1.2.jar;C:\Users\Aitor\.ivy2\cache\oauth.signpost\signpost-commonshttp4\jars\signpost-commonshttp4-1.2.1.2.jar;C:\Users\Aitor\.ivy2\cache\org.apache.httpcomponents\httpcore\jars\httpcore-4.0.1.jar;C:\Users\Aitor\.ivy2\cache\org.apache.httpcomponents\httpclient\jars\httpclient-4.0.1.jar;C:\Users\Aitor\.ivy2\cache\commons-logging\commons-logging\jars\commons-logging-1.1.1.jar;C:\Users\Aitor\.ivy2\cache\net.vz.mongodb.jackson\play-mongo-jackson-mapper_2.10\jars\play-mongo-jackson-mapper_2.10-1.1.0.jar;C:\Users\Aitor\.ivy2\cache\net.vz.mongodb.jackson\mongo-jackson-mapper\jars\mongo-jackson-mapper-1.4.1.jar;C:\Users\Aitor\.ivy2\cache\org.codehaus.jackson\jackson-mapper-asl\jars\jackson-mapper-asl-1.9.5.jar;C:\Users\Aitor\.ivy2\cache\org.codehaus.jackson\jackson-core-asl\jars\jackson-core-asl-1.9.5.jar;C:\Users\Aitor\.ivy2\cache\javax.persistence\persistence-api\jars\persistence-api-1.0.2.jar;C:\Users\Aitor\.ivy2\cache\org.mongojack\mongojack\jars\mongojack-2.0.0-RC1.jar;C:\Users\Aitor\.ivy2\cache\org.mongodb\mongo-java-driver\jars\mongo-java-driver-2.9.1.jar;C:\Users\Aitor\.ivy2\cache\de.undercouch\bson4jackson\jars\bson4jackson-2.1.0.jar;C:\Users\Aitor\.ivy2\cache\com.fasterxml.jackson.core\jackson-core\bundles\jackson-core-2.3.3.jar;C:\Users\Aitor\.ivy2\cache\commons-io\commons-io\jars\commons-io-2.4.jar;C:\Users\Aitor\.ivy2\cache\org.webjars\bootstrap\jars\bootstrap-3.3.1.jar;C:\Users\Aitor\.ivy2\cache\org.webjars\jquery\jars\jquery-1.11.1.jar;C:\Users\Aitor\.ivy2\cache\org.webjars\angularjs\jars\angularjs-1.3.8.jar;C:\Users\Aitor\.ivy2\cache\org.webjars\angular-ui-bootstrap\jars\angular-ui-bootstrap-0.12.0.jar
-Scala compilation took 2.824816794 s
-Attempting to call com.sun.tools.javac.api.JavacTool@16ea411b directly...
-Read from stdout: C:\Users\Aitor\Trivial5a\WebTrivial5a\app\controllers\Application.java:38: unreachable statement
-C:\Users\Aitor\Trivial5a\WebTrivial5a\app\controllers\Application.java:38: unreachable statement
-Read from stdout: return null;
-return null;
-Total time: 3 s, completed 19-abr-2015 20:38:43
-> server-post-command-cleanup
-> server-handle-next-server-request
-> {file:/C:/Users/Aitor/Trivial5a/WebTrivial5a/}root/*:playForkReload
-Evaluating tasks: *:playForkReload
-Running task... Cancel: sbt.server.ServerTaskCancellation@6c714f1f, check cycles: false
-
-Initial source changes: 
-	removed:Set()
-	added: Set(C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\twirl\main\views\html\partidas.template.scala, C:\Users\Aitor\Trivial5a\WebTrivial5a\app\model\User.java, C:\Users\Aitor\Trivial5a\WebTrivial5a\app\controllers\Application.java, C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\twirl\main\views\html\main.template.scala, C:\Users\Aitor\Trivial5a\WebTrivial5a\app\model\Partida.java, C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\twirl\main\views\html\categorias.template.scala, C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\src_managed\main\controllers\routes.java, C:\Users\Aitor\Trivial5a\WebTrivial5a\app\model\Question.java, C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\src_managed\main\routes_reverseRouting.scala, C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\src_managed\main\routes_routing.scala, C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\twirl\main\views\html\usuarios.template.scala, C:\Users\Aitor\Trivial5a\WebTrivial5a\app\model\Category.java, C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\twirl\main\views\html\index.template.scala)
-	modified: Set()
-Removed products: Set()
-External API changes: API Changes: Set()
-Modified binary dependencies: Set()
-Initial directly invalidated sources: Set(C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\twirl\main\views\html\partidas.template.scala, C:\Users\Aitor\Trivial5a\WebTrivial5a\app\model\User.java, C:\Users\Aitor\Trivial5a\WebTrivial5a\app\controllers\Application.java, C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\twirl\main\views\html\main.template.scala, C:\Users\Aitor\Trivial5a\WebTrivial5a\app\model\Partida.java, C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\twirl\main\views\html\categorias.template.scala, C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\src_managed\main\controllers\routes.java, C:\Users\Aitor\Trivial5a\WebTrivial5a\app\model\Question.java, C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\src_managed\main\routes_reverseRouting.scala, C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\src_managed\main\routes_routing.scala, C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\twirl\main\views\html\usuarios.template.scala, C:\Users\Aitor\Trivial5a\WebTrivial5a\app\model\Category.java, C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\twirl\main\views\html\index.template.scala)
-
-Sources indirectly invalidated by:
-	product: Set()
-	binary dep: Set()
-	external source: Set()
-All initially invalidated sources: Set(C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\twirl\main\views\html\partidas.template.scala, C:\Users\Aitor\Trivial5a\WebTrivial5a\app\model\User.java, C:\Users\Aitor\Trivial5a\WebTrivial5a\app\controllers\Application.java, C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\twirl\main\views\html\main.template.scala, C:\Users\Aitor\Trivial5a\WebTrivial5a\app\model\Partida.java, C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\twirl\main\views\html\categorias.template.scala, C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\src_managed\main\controllers\routes.java, C:\Users\Aitor\Trivial5a\WebTrivial5a\app\model\Question.java, C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\src_managed\main\routes_reverseRouting.scala, C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\src_managed\main\routes_routing.scala, C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\twirl\main\views\html\usuarios.template.scala, C:\Users\Aitor\Trivial5a\WebTrivial5a\app\model\Category.java, C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\twirl\main\views\html\index.template.scala)
-
-Recompiling all 13 sources: invalidated sources (13) exceeded 50.0% of all sources
-Read from stdout: Compiling 7 Scala sources and 6 Java sources to C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\classes...
-Compiling 7 Scala sources and 6 Java sources to C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\classes...
-Getting compiler-interface from component compiler for Scala 2.11.1
-Other repositories:
-Default repositories:
-Getting compiler-interface from component compiler for Scala 2.11.1
-Other repositories:
-Default repositories:
-Running cached compiler 64eb3ac5, interfacing (CompilerInterface) with Scala compiler version 2.11.1
-Calling Scala compiler with arguments  (CompilerInterface):
-	-deprecation
-	-unchecked
-	-encoding
-	utf8
-	-bootclasspath
-	C:\Program Files\Java\jdk1.8.0_45\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_45\jre\classes;C:\Users\Aitor\.ivy2\cache\org.scala-lang\scala-library\jars\scala-library-2.11.1.jar
-	-classpath
-	C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\classes;C:\Users\Aitor\.ivy2\cache\com.typesafe.play\twirl-api_2.11\jars\twirl-api_2.11-1.0.2.jar;C:\Users\Aitor\.ivy2\cache\org.apache.commons\commons-lang3\jars\commons-lang3-3.1.jar;C:\Users\Aitor\.ivy2\cache\org.scala-lang.modules\scala-xml_2.11\bundles\scala-xml_2.11-1.0.1.jar;C:\Users\Aitor\.ivy2\cache\com.typesafe.play\play_2.11\jars\play_2.11-2.3.8.jar;C:\Users\Aitor\.ivy2\cache\com.typesafe.play\build-link\jars\build-link-2.3.8.jar;C:\Users\Aitor\.ivy2\cache\com.typesafe.play\play-exceptions\jars\play-exceptions-2.3.8.jar;C:\Users\Aitor\.ivy2\cache\com.typesafe.play\play-iteratees_2.11\jars\play-iteratees_2.11-2.3.8.jar;C:\Users\Aitor\.ivy2\cache\org.scala-stm\scala-stm_2.11\jars\scala-stm_2.11-0.7.jar;C:\Users\Aitor\.ivy2\cache\com.typesafe\config\bundles\config-1.2.1.jar;C:\Users\Aitor\.ivy2\cache\com.typesafe.play\play-json_2.11\jars\play-json_2.11-2.3.8.jar;C:\Users\Aitor\.ivy2\cache\com.typesafe.play\play-functional_2.11\jars\play-functional_2.11-2.3.8.jar;C:\Users\Aitor\.ivy2\cache\com.typesafe.play\play-datacommons_2.11\jars\play-datacommons_2.11-2.3.8.jar;C:\Users\Aitor\.ivy2\cache\joda-time\joda-time\jars\joda-time-2.3.jar;C:\Users\Aitor\.ivy2\cache\org.joda\joda-convert\jars\joda-convert-1.6.jar;C:\Users\Aitor\.ivy2\cache\com.fasterxml.jackson.core\jackson-annotations\bundles\jackson-annotations-2.3.2.jar;C:\Users\Aitor\.ivy2\cache\com.fasterxml.jackson.core\jackson-databind\bundles\jackson-databind-2.3.2.jar;C:\Users\Aitor\.ivy2\cache\org.scala-lang\scala-reflect\jars\scala-reflect-2.11.1.jar;C:\Users\Aitor\.ivy2\cache\org.scala-lang.modules\scala-parser-combinators_2.11\bundles\scala-parser-combinators_2.11-1.0.1.jar;C:\Users\Aitor\.ivy2\cache\io.netty\netty\bundles\netty-3.9.3.Final.jar;C:\Users\Aitor\.ivy2\cache\com.typesafe.netty\netty-http-pipelining\jars\netty-http-pipelining-1.1.2.jar;C:\Users\Aitor\.ivy2\cache\org.slf4j\slf4j-api\jars\slf4j-api-1.7.6.jar;C:\Users\Aitor\.ivy2\cache\org.slf4j\jul-to-slf4j\jars\jul-to-slf4j-1.7.6.jar;C:\Users\Aitor\.ivy2\cache\org.slf4j\jcl-over-slf4j\jars\jcl-over-slf4j-1.7.6.jar;C:\Users\Aitor\.ivy2\cache\ch.qos.logback\logback-core\jars\logback-core-1.1.1.jar;C:\Users\Aitor\.ivy2\cache\ch.qos.logback\logback-classic\jars\logback-classic-1.1.1.jar;C:\Users\Aitor\.ivy2\cache\com.typesafe.akka\akka-actor_2.11\jars\akka-actor_2.11-2.3.4.jar;C:\Users\Aitor\.ivy2\cache\com.typesafe.akka\akka-slf4j_2.11\jars\akka-slf4j_2.11-2.3.4.jar;C:\Users\Aitor\.ivy2\cache\commons-codec\commons-codec\jars\commons-codec-1.9.jar;C:\Users\Aitor\.ivy2\cache\xerces\xercesImpl\jars\xercesImpl-2.11.0.jar;C:\Users\Aitor\.ivy2\cache\xml-apis\xml-apis\jars\xml-apis-1.4.01.jar;C:\Users\Aitor\.ivy2\cache\javax.transaction\jta\jars\jta-1.1.jar;C:\Users\Aitor\.ivy2\cache\com.typesafe.play\play-java_2.11\jars\play-java_2.11-2.3.8.jar;C:\Users\Aitor\.ivy2\cache\org.yaml\snakeyaml\bundles\snakeyaml-1.13.jar;C:\Users\Aitor\.ivy2\cache\org.hibernate\hibernate-validator\jars\hibernate-validator-5.0.3.Final.jar;C:\Users\Aitor\.ivy2\cache\javax.validation\validation-api\jars\validation-api-1.1.0.Final.jar;C:\Users\Aitor\.ivy2\cache\com.fasterxml\classmate\bundles\classmate-1.0.0.jar;C:\Users\Aitor\.ivy2\cache\org.jboss.logging\jboss-logging\jars\jboss-logging-3.2.0.Final.jar;C:\Users\Aitor\.ivy2\cache\org.springframework\spring-context\jars\spring-context-4.0.3.RELEASE.jar;C:\Users\Aitor\.ivy2\cache\org.springframework\spring-core\jars\spring-core-4.0.3.RELEASE.jar;C:\Users\Aitor\.ivy2\cache\org.springframework\spring-beans\jars\spring-beans-4.0.3.RELEASE.jar;C:\Users\Aitor\.ivy2\cache\org.javassist\javassist\bundles\javassist-3.19.0-GA.jar;C:\Users\Aitor\.ivy2\cache\org.reflections\reflections\jars\reflections-0.9.8.jar;C:\Users\Aitor\.ivy2\cache\com.google.guava\guava\bundles\guava-16.0.1.jar;C:\Users\Aitor\.ivy2\cache\dom4j\dom4j\jars\dom4j-1.6.1.jar;C:\Users\Aitor\.ivy2\cache\com.google.code.findbugs\jsr305\jars\jsr305-2.0.3.jar;C:\Users\Aitor\.ivy2\cache\org.apache.tomcat\tomcat-servlet-api\jars\tomcat-servlet-api-8.0.5.jar;C:\Users\Aitor\.ivy2\cache\com.typesafe.play\play-java-jdbc_2.11\jars\play-java-jdbc_2.11-2.3.8.jar;C:\Users\Aitor\.ivy2\cache\com.typesafe.play\play-jdbc_2.11\jars\play-jdbc_2.11-2.3.8.jar;C:\Users\Aitor\.ivy2\cache\com.jolbox\bonecp\bundles\bonecp-0.8.0.RELEASE.jar;C:\Users\Aitor\.ivy2\cache\com.h2database\h2\jars\h2-1.3.175.jar;C:\Users\Aitor\.ivy2\cache\tyrex\tyrex\jars\tyrex-1.0.1.jar;C:\Users\Aitor\.ivy2\cache\com.typesafe.play\play-java-ebean_2.11\jars\play-java-ebean_2.11-2.3.8.jar;C:\Users\Aitor\.ivy2\cache\org.avaje.ebeanorm\avaje-ebeanorm\jars\avaje-ebeanorm-3.3.4.jar;C:\Users\Aitor\.ivy2\cache\org.avaje.ebeanorm\avaje-ebeanorm-agent\jars\avaje-ebeanorm-agent-3.2.2.jar;C:\Users\Aitor\.ivy2\cache\org.hibernate.javax.persistence\hibernate-jpa-2.0-api\jars\hibernate-jpa-2.0-api-1.0.1.Final.jar;C:\Users\Aitor\.ivy2\cache\com.typesafe.play\play-cache_2.11\jars\play-cache_2.11-2.3.8.jar;C:\Users\Aitor\.ivy2\cache\net.sf.ehcache\ehcache-core\jars\ehcache-core-2.6.8.jar;C:\Users\Aitor\.ivy2\cache\com.typesafe.play\play-java-ws_2.11\jars\play-java-ws_2.11-2.3.8.jar;C:\Users\Aitor\.ivy2\cache\com.typesafe.play\play-ws_2.11\jars\play-ws_2.11-2.3.8.jar;C:\Users\Aitor\.ivy2\cache\com.ning\async-http-client\jars\async-http-client-1.8.15.jar;C:\Users\Aitor\.ivy2\cache\oauth.signpost\signpost-core\jars\signpost-core-1.2.1.2.jar;C:\Users\Aitor\.ivy2\cache\oauth.signpost\signpost-commonshttp4\jars\signpost-commonshttp4-1.2.1.2.jar;C:\Users\Aitor\.ivy2\cache\org.apache.httpcomponents\httpcore\jars\httpcore-4.0.1.jar;C:\Users\Aitor\.ivy2\cache\org.apache.httpcomponents\httpclient\jars\httpclient-4.0.1.jar;C:\Users\Aitor\.ivy2\cache\commons-logging\commons-logging\jars\commons-logging-1.1.1.jar;C:\Users\Aitor\.ivy2\cache\net.vz.mongodb.jackson\play-mongo-jackson-mapper_2.10\jars\play-mongo-jackson-mapper_2.10-1.1.0.jar;C:\Users\Aitor\.ivy2\cache\net.vz.mongodb.jackson\mongo-jackson-mapper\jars\mongo-jackson-mapper-1.4.1.jar;C:\Users\Aitor\.ivy2\cache\org.codehaus.jackson\jackson-mapper-asl\jars\jackson-mapper-asl-1.9.5.jar;C:\Users\Aitor\.ivy2\cache\org.codehaus.jackson\jackson-core-asl\jars\jackson-core-asl-1.9.5.jar;C:\Users\Aitor\.ivy2\cache\javax.persistence\persistence-api\jars\persistence-api-1.0.2.jar;C:\Users\Aitor\.ivy2\cache\org.mongojack\mongojack\jars\mongojack-2.0.0-RC1.jar;C:\Users\Aitor\.ivy2\cache\org.mongodb\mongo-java-driver\jars\mongo-java-driver-2.9.1.jar;C:\Users\Aitor\.ivy2\cache\de.undercouch\bson4jackson\jars\bson4jackson-2.1.0.jar;C:\Users\Aitor\.ivy2\cache\com.fasterxml.jackson.core\jackson-core\bundles\jackson-core-2.3.3.jar;C:\Users\Aitor\.ivy2\cache\commons-io\commons-io\jars\commons-io-2.4.jar;C:\Users\Aitor\.ivy2\cache\org.webjars\bootstrap\jars\bootstrap-3.3.1.jar;C:\Users\Aitor\.ivy2\cache\org.webjars\jquery\jars\jquery-1.11.1.jar;C:\Users\Aitor\.ivy2\cache\org.webjars\angularjs\jars\angularjs-1.3.8.jar;C:\Users\Aitor\.ivy2\cache\org.webjars\angular-ui-bootstrap\jars\angular-ui-bootstrap-0.12.0.jar
-Scala compilation took 2.916485199 s
-Attempting to call com.sun.tools.javac.api.JavacTool@2e66d74c directly...
-Java compilation took 0.321720596 s
-Java analysis took 0.013328617 s
-Java compile + analysis took 0.352989199 s
-Invalidating C:\Users\Aitor\Trivial5a\WebTrivial5a\app\model\Category.java...
-Invalidating (transitively) by inheritance from C:\Users\Aitor\Trivial5a\WebTrivial5a\app\model\Category.java...
-Initial set of included nodes: Set(C:\Users\Aitor\Trivial5a\WebTrivial5a\app\model\Category.java)
-Invalidated by transitive inheritance dependency: Set(C:\Users\Aitor\Trivial5a\WebTrivial5a\app\model\Category.java)
-The C:\Users\Aitor\Trivial5a\WebTrivial5a\app\model\Category.java source file has the following regular definitions changed:
-	.
-All member reference dependencies will be considered within this context.
-None of the modified names appears in C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\twirl\main\views\html\categorias.template.scala. This dependency is not being considered for invalidation.
-Invalidating C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\twirl\main\views\html\usuarios.template.scala...
-Invalidating (transitively) by inheritance from C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\twirl\main\views\html\usuarios.template.scala...
-Initial set of included nodes: Set(C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\twirl\main\views\html\usuarios.template.scala)
-Invalidated by transitive inheritance dependency: Set(C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\twirl\main\views\html\usuarios.template.scala)
-The C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\twirl\main\views\html\usuarios.template.scala source file has the following regular definitions changed:
-	notify, format, wait, $asInstanceOf, productArity, equals, asInstanceOf, f, synchronized, _display_, $isInstanceOf, ref, canEqual, productPrefix, notifyAll, readResolve, isInstanceOf, apply, ==, clone, usuarios, copy, toString, !=, getClass, copy$default$1, render, ne, eq, productIterator, ##, finalize, productElement, hashCode.
-All member reference dependencies will be considered within this context.
-Invalidating C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\twirl\main\views\html\main.template.scala...
-Invalidating (transitively) by inheritance from C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\twirl\main\views\html\main.template.scala...
-Initial set of included nodes: Set(C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\twirl\main\views\html\main.template.scala)
-Invalidated by transitive inheritance dependency: Set(C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\twirl\main\views\html\main.template.scala)
-The C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\twirl\main\views\html\main.template.scala source file has the following regular definitions changed:
-	notify, format, wait, $asInstanceOf, productArity, equals, asInstanceOf, f, synchronized, _display_, $isInstanceOf, ref, canEqual, main, productPrefix, notifyAll, readResolve, isInstanceOf, apply, ==, clone, copy, toString, !=, getClass, copy$default$1, render, ne, eq, productIterator, ##, finalize, productElement, hashCode.
-All member reference dependencies will be considered within this context.
-The following modified names cause invalidation of C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\twirl\main\views\html\index.template.scala: Set(format, _display_, main, apply)
-Invalidating C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\twirl\main\views\html\partidas.template.scala...
-Invalidating (transitively) by inheritance from C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\twirl\main\views\html\partidas.template.scala...
-Initial set of included nodes: Set(C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\twirl\main\views\html\partidas.template.scala)
-Invalidated by transitive inheritance dependency: Set(C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\twirl\main\views\html\partidas.template.scala)
-The C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\twirl\main\views\html\partidas.template.scala source file has the following regular definitions changed:
-	notify, format, wait, $asInstanceOf, productArity, equals, asInstanceOf, f, synchronized, _display_, $isInstanceOf, ref, canEqual, productPrefix, notifyAll, readResolve, isInstanceOf, apply, ==, clone, copy, toString, partidas, !=, getClass, copy$default$1, render, ne, eq, productIterator, ##, finalize, productElement, hashCode.
-All member reference dependencies will be considered within this context.
-Invalidating C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\src_managed\main\routes_reverseRouting.scala...
-Invalidating (transitively) by inheritance from C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\src_managed\main\routes_reverseRouting.scala...
-Initial set of included nodes: Set(C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\src_managed\main\routes_reverseRouting.scala)
-Invalidated by transitive inheritance dependency: Set(C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\src_managed\main\routes_reverseRouting.scala)
-The C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\src_managed\main\routes_reverseRouting.scala source file has the following regular definitions changed:
-	notify, register, admin, wait, $asInstanceOf, equals, asInstanceOf, synchronized, $isInstanceOf, showQuestions, ReverseAssets, notifyAll, showUsers, isInstanceOf, <init>, at, ==, clone, showPartidas, toString, !=, getClass, ne, eq, ReverseApplication, ##, finalize, index, hashCode.
-All member reference dependencies will be considered within this context.
-The following modified names cause invalidation of C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\twirl\main\views\html\usuarios.template.scala: Set(register, <init>)
-The following modified names cause invalidation of C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\twirl\main\views\html\main.template.scala: Set(<init>, at)
-Invalidating C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\src_managed\main\routes_routing.scala...
-Invalidating (transitively) by inheritance from C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\src_managed\main\routes_routing.scala...
-Initial set of included nodes: Set(C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\src_managed\main\routes_routing.scala)
-Invalidated by transitive inheritance dependency: Set(C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\src_managed\main\routes_routing.scala)
-The C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\src_managed\main\routes_routing.scala source file has the following regular definitions changed:
-	controllers_Application_register3_invoker, notify, badRequest, wait, $asInstanceOf, routes, controllers_Application_admin1_route, createInvoker, equals, controllers_Application_showQuestions4_invoker, prefix, asInstanceOf, documentation, controllers_Application_index0_invoker, synchronized, $isInstanceOf, handlerFor, controllers_Assets_at6_invoker, controllers_Assets_at6_route, controllers_Application_showUsers2_route, _prefix, controllers_Application_showQuestions4_route, notifyAll, controllers_Application_register3_route, isInstanceOf, ==, clone, controllers_Application_showPartidas5_invoker, Routes, controllers_Application_showPartidas5_route, controllers_Application_admin1_invoker, toString, !=, fakeValue, getClass, setPrefix, controllers_Application_index0_route, ne, call, controllers_Application_showUsers2_invoker, eq, defaultPrefix, ##, finalize, hashCode.
-All member reference dependencies will be considered within this context.
-The following modified names cause invalidation of C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\src_managed\main\routes_reverseRouting.scala: Set(prefix, _prefix, Routes, getClass, defaultPrefix)
-Invalidating C:\Users\Aitor\Trivial5a\WebTrivial5a\app\model\User.java...
-Invalidating (transitively) by inheritance from C:\Users\Aitor\Trivial5a\WebTrivial5a\app\model\User.java...
-Initial set of included nodes: Set(C:\Users\Aitor\Trivial5a\WebTrivial5a\app\model\User.java)
-Invalidated by transitive inheritance dependency: Set(C:\Users\Aitor\Trivial5a\WebTrivial5a\app\model\User.java)
-The C:\Users\Aitor\Trivial5a\WebTrivial5a\app\model\User.java source file has the following regular definitions changed:
-	.
-All member reference dependencies will be considered within this context.
-None of the modified names appears in C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\twirl\main\views\html\usuarios.template.scala. This dependency is not being considered for invalidation.
-Invalidating C:\Users\Aitor\Trivial5a\WebTrivial5a\app\model\Partida.java...
-Invalidating (transitively) by inheritance from C:\Users\Aitor\Trivial5a\WebTrivial5a\app\model\Partida.java...
-Initial set of included nodes: Set(C:\Users\Aitor\Trivial5a\WebTrivial5a\app\model\Partida.java)
-Invalidated by transitive inheritance dependency: Set(C:\Users\Aitor\Trivial5a\WebTrivial5a\app\model\Partida.java)
-The C:\Users\Aitor\Trivial5a\WebTrivial5a\app\model\Partida.java source file has the following regular definitions changed:
-	.
-All member reference dependencies will be considered within this context.
-None of the modified names appears in C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\twirl\main\views\html\partidas.template.scala. This dependency is not being considered for invalidation.
-Invalidating C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\twirl\main\views\html\index.template.scala...
-Invalidating (transitively) by inheritance from C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\twirl\main\views\html\index.template.scala...
-Initial set of included nodes: Set(C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\twirl\main\views\html\index.template.scala)
-Invalidated by transitive inheritance dependency: Set(C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\twirl\main\views\html\index.template.scala)
-The C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\twirl\main\views\html\index.template.scala source file has the following regular definitions changed:
-	notify, format, wait, $asInstanceOf, productArity, equals, asInstanceOf, f, synchronized, _display_, $isInstanceOf, ref, canEqual, productPrefix, notifyAll, readResolve, isInstanceOf, apply, ==, clone, copy, toString, !=, getClass, copy$default$1, render, ne, eq, productIterator, ##, finalize, index, productElement, hashCode.
-All member reference dependencies will be considered within this context.
-Invalidating C:\Users\Aitor\Trivial5a\WebTrivial5a\app\controllers\Application.java...
-Invalidating (transitively) by inheritance from C:\Users\Aitor\Trivial5a\WebTrivial5a\app\controllers\Application.java...
-Initial set of included nodes: Set(C:\Users\Aitor\Trivial5a\WebTrivial5a\app\controllers\Application.java)
-Invalidated by transitive inheritance dependency: Set(C:\Users\Aitor\Trivial5a\WebTrivial5a\app\controllers\Application.java)
-The C:\Users\Aitor\Trivial5a\WebTrivial5a\app\controllers\Application.java source file has the following regular definitions changed:
-	.
-All member reference dependencies will be considered within this context.
-None of the modified names appears in C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\src_managed\main\routes_reverseRouting.scala. This dependency is not being considered for invalidation.
-None of the modified names appears in C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\src_managed\main\routes_routing.scala. This dependency is not being considered for invalidation.
-Invalidating C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\src_managed\main\controllers\routes.java...
-Invalidating (transitively) by inheritance from C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\src_managed\main\controllers\routes.java...
-Initial set of included nodes: Set(C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\src_managed\main\controllers\routes.java)
-Invalidated by transitive inheritance dependency: Set(C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\src_managed\main\controllers\routes.java)
-The C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\src_managed\main\controllers\routes.java source file has the following regular definitions changed:
-	.
-All member reference dependencies will be considered within this context.
-None of the modified names appears in C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\twirl\main\views\html\usuarios.template.scala. This dependency is not being considered for invalidation.
-None of the modified names appears in C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\twirl\main\views\html\main.template.scala. This dependency is not being considered for invalidation.
-Invalidating C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\twirl\main\views\html\categorias.template.scala...
-Invalidating (transitively) by inheritance from C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\twirl\main\views\html\categorias.template.scala...
-Initial set of included nodes: Set(C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\twirl\main\views\html\categorias.template.scala)
-Invalidated by transitive inheritance dependency: Set(C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\twirl\main\views\html\categorias.template.scala)
-The C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\twirl\main\views\html\categorias.template.scala source file has the following regular definitions changed:
-	notify, format, categorias, wait, $asInstanceOf, productArity, equals, asInstanceOf, f, synchronized, _display_, $isInstanceOf, ref, canEqual, productPrefix, notifyAll, readResolve, isInstanceOf, apply, ==, clone, copy, toString, !=, getClass, copy$default$1, render, ne, eq, productIterator, ##, finalize, productElement, hashCode.
-All member reference dependencies will be considered within this context.
-Invalidating C:\Users\Aitor\Trivial5a\WebTrivial5a\app\model\Question.java...
-Invalidating (transitively) by inheritance from C:\Users\Aitor\Trivial5a\WebTrivial5a\app\model\Question.java...
-Initial set of included nodes: Set(C:\Users\Aitor\Trivial5a\WebTrivial5a\app\model\Question.java)
-Invalidated by transitive inheritance dependency: Set(C:\Users\Aitor\Trivial5a\WebTrivial5a\app\model\Question.java)
-The C:\Users\Aitor\Trivial5a\WebTrivial5a\app\model\Question.java source file has the following regular definitions changed:
-	.
-All member reference dependencies will be considered within this context.
-New invalidations:
-	Set()
-Initial set of included nodes: Set()
-Previously invalidated, but (transitively) depend on new invalidations:
-	Set()
-All newly invalidated sources after taking into account (previously) recompiled sources:Set()
-Total time: 4 s, completed 19-abr-2015 20:39:06
-> server-post-command-cleanup
-> server-handle-next-server-request
-> {file:/C:/Users/Aitor/Trivial5a/WebTrivial5a/}root/*:playForkReload
-Evaluating tasks: *:playForkReload
-Running task... Cancel: sbt.server.ServerTaskCancellation@3db4b1bc, check cycles: false
-
-Initial source changes: 
-	removed:Set()
-	added: Set()
-	modified: Set()
-Removed products: Set(C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\classes\views\html\partidas.class, C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\classes\views\html\partidas$$anonfun$apply$1.class, C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\classes\views\html\main$$anonfun$f$1$$anonfun$apply$1.class, C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\classes\views\html\partidas$.class, C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\classes\views\html\categorias$$anonfun$apply$1.class, C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\classes\views\html\usuarios$.class, C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\classes\views\html\categorias$$anonfun$f$1.class, C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\classes\views\html\categorias$.class, C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\classes\views\html\usuarios$$anonfun$f$1.class, C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\classes\views\html\index$.class, C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\classes\views\html\main.class, C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\classes\views\html\categorias.class, C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\classes\views\html\partidas$$anonfun$f$1.class, C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\classes\views\html\index.class, C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\classes\views\html\index$$anonfun$f$1.class, C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\classes\views\html\usuarios$$anonfun$apply$1.class, C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\classes\views\html\main$$anonfun$f$1.class, C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\classes\views\html\usuarios.class, C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\classes\views\html\main$.class)
-External API changes: API Changes: Set()
-Modified binary dependencies: Set()
-Initial directly invalidated sources: Set()
-
-Sources indirectly invalidated by:
-	product: Set(C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\twirl\main\views\html\partidas.template.scala, C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\twirl\main\views\html\main.template.scala, C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\twirl\main\views\html\categorias.template.scala, C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\twirl\main\views\html\usuarios.template.scala, C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\twirl\main\views\html\index.template.scala)
-	binary dep: Set()
-	external source: Set()
-All initially invalidated sources: Set(C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\twirl\main\views\html\partidas.template.scala, C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\twirl\main\views\html\main.template.scala, C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\twirl\main\views\html\categorias.template.scala, C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\twirl\main\views\html\usuarios.template.scala, C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\twirl\main\views\html\index.template.scala)
-
-Read from stdout: Compiling 5 Scala sources to C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\classes...
-Compiling 5 Scala sources to C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\classes...
-Getting compiler-interface from component compiler for Scala 2.11.1
-Other repositories:
-Default repositories:
-Getting compiler-interface from component compiler for Scala 2.11.1
-Other repositories:
-Default repositories:
-Running cached compiler 5237b3a8, interfacing (CompilerInterface) with Scala compiler version 2.11.1
-Calling Scala compiler with arguments  (CompilerInterface):
-	-deprecation
-	-unchecked
-	-encoding
-	utf8
-	-bootclasspath
-	C:\Program Files\Java\jdk1.8.0_45\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_45\jre\classes;C:\Users\Aitor\.ivy2\cache\org.scala-lang\scala-library\jars\scala-library-2.11.1.jar
-	-classpath
-	C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\classes;C:\Users\Aitor\.ivy2\cache\com.typesafe.play\twirl-api_2.11\jars\twirl-api_2.11-1.0.2.jar;C:\Users\Aitor\.ivy2\cache\org.apache.commons\commons-lang3\jars\commons-lang3-3.1.jar;C:\Users\Aitor\.ivy2\cache\org.scala-lang.modules\scala-xml_2.11\bundles\scala-xml_2.11-1.0.1.jar;C:\Users\Aitor\.ivy2\cache\com.typesafe.play\play_2.11\jars\play_2.11-2.3.8.jar;C:\Users\Aitor\.ivy2\cache\com.typesafe.play\build-link\jars\build-link-2.3.8.jar;C:\Users\Aitor\.ivy2\cache\com.typesafe.play\play-exceptions\jars\play-exceptions-2.3.8.jar;C:\Users\Aitor\.ivy2\cache\com.typesafe.play\play-iteratees_2.11\jars\play-iteratees_2.11-2.3.8.jar;C:\Users\Aitor\.ivy2\cache\org.scala-stm\scala-stm_2.11\jars\scala-stm_2.11-0.7.jar;C:\Users\Aitor\.ivy2\cache\com.typesafe\config\bundles\config-1.2.1.jar;C:\Users\Aitor\.ivy2\cache\com.typesafe.play\play-json_2.11\jars\play-json_2.11-2.3.8.jar;C:\Users\Aitor\.ivy2\cache\com.typesafe.play\play-functional_2.11\jars\play-functional_2.11-2.3.8.jar;C:\Users\Aitor\.ivy2\cache\com.typesafe.play\play-datacommons_2.11\jars\play-datacommons_2.11-2.3.8.jar;C:\Users\Aitor\.ivy2\cache\joda-time\joda-time\jars\joda-time-2.3.jar;C:\Users\Aitor\.ivy2\cache\org.joda\joda-convert\jars\joda-convert-1.6.jar;C:\Users\Aitor\.ivy2\cache\com.fasterxml.jackson.core\jackson-annotations\bundles\jackson-annotations-2.3.2.jar;C:\Users\Aitor\.ivy2\cache\com.fasterxml.jackson.core\jackson-databind\bundles\jackson-databind-2.3.2.jar;C:\Users\Aitor\.ivy2\cache\org.scala-lang\scala-reflect\jars\scala-reflect-2.11.1.jar;C:\Users\Aitor\.ivy2\cache\org.scala-lang.modules\scala-parser-combinators_2.11\bundles\scala-parser-combinators_2.11-1.0.1.jar;C:\Users\Aitor\.ivy2\cache\io.netty\netty\bundles\netty-3.9.3.Final.jar;C:\Users\Aitor\.ivy2\cache\com.typesafe.netty\netty-http-pipelining\jars\netty-http-pipelining-1.1.2.jar;C:\Users\Aitor\.ivy2\cache\org.slf4j\slf4j-api\jars\slf4j-api-1.7.6.jar;C:\Users\Aitor\.ivy2\cache\org.slf4j\jul-to-slf4j\jars\jul-to-slf4j-1.7.6.jar;C:\Users\Aitor\.ivy2\cache\org.slf4j\jcl-over-slf4j\jars\jcl-over-slf4j-1.7.6.jar;C:\Users\Aitor\.ivy2\cache\ch.qos.logback\logback-core\jars\logback-core-1.1.1.jar;C:\Users\Aitor\.ivy2\cache\ch.qos.logback\logback-classic\jars\logback-classic-1.1.1.jar;C:\Users\Aitor\.ivy2\cache\com.typesafe.akka\akka-actor_2.11\jars\akka-actor_2.11-2.3.4.jar;C:\Users\Aitor\.ivy2\cache\com.typesafe.akka\akka-slf4j_2.11\jars\akka-slf4j_2.11-2.3.4.jar;C:\Users\Aitor\.ivy2\cache\commons-codec\commons-codec\jars\commons-codec-1.9.jar;C:\Users\Aitor\.ivy2\cache\xerces\xercesImpl\jars\xercesImpl-2.11.0.jar;C:\Users\Aitor\.ivy2\cache\xml-apis\xml-apis\jars\xml-apis-1.4.01.jar;C:\Users\Aitor\.ivy2\cache\javax.transaction\jta\jars\jta-1.1.jar;C:\Users\Aitor\.ivy2\cache\com.typesafe.play\play-java_2.11\jars\play-java_2.11-2.3.8.jar;C:\Users\Aitor\.ivy2\cache\org.yaml\snakeyaml\bundles\snakeyaml-1.13.jar;C:\Users\Aitor\.ivy2\cache\org.hibernate\hibernate-validator\jars\hibernate-validator-5.0.3.Final.jar;C:\Users\Aitor\.ivy2\cache\javax.validation\validation-api\jars\validation-api-1.1.0.Final.jar;C:\Users\Aitor\.ivy2\cache\com.fasterxml\classmate\bundles\classmate-1.0.0.jar;C:\Users\Aitor\.ivy2\cache\org.jboss.logging\jboss-logging\jars\jboss-logging-3.2.0.Final.jar;C:\Users\Aitor\.ivy2\cache\org.springframework\spring-context\jars\spring-context-4.0.3.RELEASE.jar;C:\Users\Aitor\.ivy2\cache\org.springframework\spring-core\jars\spring-core-4.0.3.RELEASE.jar;C:\Users\Aitor\.ivy2\cache\org.springframework\spring-beans\jars\spring-beans-4.0.3.RELEASE.jar;C:\Users\Aitor\.ivy2\cache\org.javassist\javassist\bundles\javassist-3.19.0-GA.jar;C:\Users\Aitor\.ivy2\cache\org.reflections\reflections\jars\reflections-0.9.8.jar;C:\Users\Aitor\.ivy2\cache\com.google.guava\guava\bundles\guava-16.0.1.jar;C:\Users\Aitor\.ivy2\cache\dom4j\dom4j\jars\dom4j-1.6.1.jar;C:\Users\Aitor\.ivy2\cache\com.google.code.findbugs\jsr305\jars\jsr305-2.0.3.jar;C:\Users\Aitor\.ivy2\cache\org.apache.tomcat\tomcat-servlet-api\jars\tomcat-servlet-api-8.0.5.jar;C:\Users\Aitor\.ivy2\cache\com.typesafe.play\play-java-jdbc_2.11\jars\play-java-jdbc_2.11-2.3.8.jar;C:\Users\Aitor\.ivy2\cache\com.typesafe.play\play-jdbc_2.11\jars\play-jdbc_2.11-2.3.8.jar;C:\Users\Aitor\.ivy2\cache\com.jolbox\bonecp\bundles\bonecp-0.8.0.RELEASE.jar;C:\Users\Aitor\.ivy2\cache\com.h2database\h2\jars\h2-1.3.175.jar;C:\Users\Aitor\.ivy2\cache\tyrex\tyrex\jars\tyrex-1.0.1.jar;C:\Users\Aitor\.ivy2\cache\com.typesafe.play\play-java-ebean_2.11\jars\play-java-ebean_2.11-2.3.8.jar;C:\Users\Aitor\.ivy2\cache\org.avaje.ebeanorm\avaje-ebeanorm\jars\avaje-ebeanorm-3.3.4.jar;C:\Users\Aitor\.ivy2\cache\org.avaje.ebeanorm\avaje-ebeanorm-agent\jars\avaje-ebeanorm-agent-3.2.2.jar;C:\Users\Aitor\.ivy2\cache\org.hibernate.javax.persistence\hibernate-jpa-2.0-api\jars\hibernate-jpa-2.0-api-1.0.1.Final.jar;C:\Users\Aitor\.ivy2\cache\com.typesafe.play\play-cache_2.11\jars\play-cache_2.11-2.3.8.jar;C:\Users\Aitor\.ivy2\cache\net.sf.ehcache\ehcache-core\jars\ehcache-core-2.6.8.jar;C:\Users\Aitor\.ivy2\cache\com.typesafe.play\play-java-ws_2.11\jars\play-java-ws_2.11-2.3.8.jar;C:\Users\Aitor\.ivy2\cache\com.typesafe.play\play-ws_2.11\jars\play-ws_2.11-2.3.8.jar;C:\Users\Aitor\.ivy2\cache\com.ning\async-http-client\jars\async-http-client-1.8.15.jar;C:\Users\Aitor\.ivy2\cache\oauth.signpost\signpost-core\jars\signpost-core-1.2.1.2.jar;C:\Users\Aitor\.ivy2\cache\oauth.signpost\signpost-commonshttp4\jars\signpost-commonshttp4-1.2.1.2.jar;C:\Users\Aitor\.ivy2\cache\org.apache.httpcomponents\httpcore\jars\httpcore-4.0.1.jar;C:\Users\Aitor\.ivy2\cache\org.apache.httpcomponents\httpclient\jars\httpclient-4.0.1.jar;C:\Users\Aitor\.ivy2\cache\commons-logging\commons-logging\jars\commons-logging-1.1.1.jar;C:\Users\Aitor\.ivy2\cache\net.vz.mongodb.jackson\play-mongo-jackson-mapper_2.10\jars\play-mongo-jackson-mapper_2.10-1.1.0.jar;C:\Users\Aitor\.ivy2\cache\net.vz.mongodb.jackson\mongo-jackson-mapper\jars\mongo-jackson-mapper-1.4.1.jar;C:\Users\Aitor\.ivy2\cache\org.codehaus.jackson\jackson-mapper-asl\jars\jackson-mapper-asl-1.9.5.jar;C:\Users\Aitor\.ivy2\cache\org.codehaus.jackson\jackson-core-asl\jars\jackson-core-asl-1.9.5.jar;C:\Users\Aitor\.ivy2\cache\javax.persistence\persistence-api\jars\persistence-api-1.0.2.jar;C:\Users\Aitor\.ivy2\cache\org.mongojack\mongojack\jars\mongojack-2.0.0-RC1.jar;C:\Users\Aitor\.ivy2\cache\org.mongodb\mongo-java-driver\jars\mongo-java-driver-2.9.1.jar;C:\Users\Aitor\.ivy2\cache\de.undercouch\bson4jackson\jars\bson4jackson-2.1.0.jar;C:\Users\Aitor\.ivy2\cache\com.fasterxml.jackson.core\jackson-core\bundles\jackson-core-2.3.3.jar;C:\Users\Aitor\.ivy2\cache\commons-io\commons-io\jars\commons-io-2.4.jar;C:\Users\Aitor\.ivy2\cache\org.webjars\bootstrap\jars\bootstrap-3.3.1.jar;C:\Users\Aitor\.ivy2\cache\org.webjars\jquery\jars\jquery-1.11.1.jar;C:\Users\Aitor\.ivy2\cache\org.webjars\angularjs\jars\angularjs-1.3.8.jar;C:\Users\Aitor\.ivy2\cache\org.webjars\angular-ui-bootstrap\jars\angular-ui-bootstrap-0.12.0.jar
-Scala compilation took 1.332762989 s
-New invalidations:
-	Set()
-Initial set of included nodes: Set()
-Previously invalidated, but (transitively) depend on new invalidations:
-	Set()
-All newly invalidated sources after taking into account (previously) recompiled sources:Set()
-Total time: 2 s, completed 19-abr-2015 20:39:29
-> server-post-command-cleanup
-> server-handle-next-server-request
-> {file:/C:/Users/Aitor/Trivial5a/WebTrivial5a/}root/*:playForkReload
-Evaluating tasks: *:playForkReload
-Running task... Cancel: sbt.server.ServerTaskCancellation@5532a19d, check cycles: false
-
-Initial source changes: 
-	removed:Set()
-	added: Set()
-	modified: Set()
-Removed products: Set(C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\classes\views\html\partidas.class, C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\classes\views\html\partidas$$anonfun$apply$1.class, C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\classes\views\html\main$$anonfun$f$1$$anonfun$apply$1.class, C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\classes\views\html\partidas$.class, C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\classes\views\html\categorias$$anonfun$apply$1.class, C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\classes\views\html\usuarios$.class, C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\classes\views\html\categorias$$anonfun$f$1.class, C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\classes\views\html\categorias$.class, C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\classes\views\html\usuarios$$anonfun$f$1.class, C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\classes\views\html\index$.class, C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\classes\views\html\main.class, C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\classes\views\html\categorias.class, C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\classes\views\html\partidas$$anonfun$f$1.class, C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\classes\views\html\index.class, C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\classes\views\html\index$$anonfun$f$1.class, C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\classes\views\html\usuarios$$anonfun$apply$1.class, C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\classes\views\html\main$$anonfun$f$1.class, C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\classes\views\html\usuarios.class, C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\classes\views\html\main$.class)
-External API changes: API Changes: Set()
-Modified binary dependencies: Set()
-Initial directly invalidated sources: Set()
-
-Sources indirectly invalidated by:
-	product: Set(C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\twirl\main\views\html\partidas.template.scala, C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\twirl\main\views\html\main.template.scala, C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\twirl\main\views\html\categorias.template.scala, C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\twirl\main\views\html\usuarios.template.scala, C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\twirl\main\views\html\index.template.scala)
-	binary dep: Set()
-	external source: Set()
-All initially invalidated sources: Set(C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\twirl\main\views\html\partidas.template.scala, C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\twirl\main\views\html\main.template.scala, C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\twirl\main\views\html\categorias.template.scala, C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\twirl\main\views\html\usuarios.template.scala, C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\twirl\main\views\html\index.template.scala)
-
-Read from stdout: Compiling 5 Scala sources to C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\classes...
-Compiling 5 Scala sources to C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\classes...
-Getting compiler-interface from component compiler for Scala 2.11.1
-Other repositories:
-Default repositories:
-Getting compiler-interface from component compiler for Scala 2.11.1
-Other repositories:
-Default repositories:
-Running cached compiler 4d7ef918, interfacing (CompilerInterface) with Scala compiler version 2.11.1
-Calling Scala compiler with arguments  (CompilerInterface):
-	-deprecation
-	-unchecked
-	-encoding
-	utf8
-	-bootclasspath
-	C:\Program Files\Java\jdk1.8.0_45\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_45\jre\classes;C:\Users\Aitor\.ivy2\cache\org.scala-lang\scala-library\jars\scala-library-2.11.1.jar
-	-classpath
-	C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\classes;C:\Users\Aitor\.ivy2\cache\com.typesafe.play\twirl-api_2.11\jars\twirl-api_2.11-1.0.2.jar;C:\Users\Aitor\.ivy2\cache\org.apache.commons\commons-lang3\jars\commons-lang3-3.1.jar;C:\Users\Aitor\.ivy2\cache\org.scala-lang.modules\scala-xml_2.11\bundles\scala-xml_2.11-1.0.1.jar;C:\Users\Aitor\.ivy2\cache\com.typesafe.play\play_2.11\jars\play_2.11-2.3.8.jar;C:\Users\Aitor\.ivy2\cache\com.typesafe.play\build-link\jars\build-link-2.3.8.jar;C:\Users\Aitor\.ivy2\cache\com.typesafe.play\play-exceptions\jars\play-exceptions-2.3.8.jar;C:\Users\Aitor\.ivy2\cache\com.typesafe.play\play-iteratees_2.11\jars\play-iteratees_2.11-2.3.8.jar;C:\Users\Aitor\.ivy2\cache\org.scala-stm\scala-stm_2.11\jars\scala-stm_2.11-0.7.jar;C:\Users\Aitor\.ivy2\cache\com.typesafe\config\bundles\config-1.2.1.jar;C:\Users\Aitor\.ivy2\cache\com.typesafe.play\play-json_2.11\jars\play-json_2.11-2.3.8.jar;C:\Users\Aitor\.ivy2\cache\com.typesafe.play\play-functional_2.11\jars\play-functional_2.11-2.3.8.jar;C:\Users\Aitor\.ivy2\cache\com.typesafe.play\play-datacommons_2.11\jars\play-datacommons_2.11-2.3.8.jar;C:\Users\Aitor\.ivy2\cache\joda-time\joda-time\jars\joda-time-2.3.jar;C:\Users\Aitor\.ivy2\cache\org.joda\joda-convert\jars\joda-convert-1.6.jar;C:\Users\Aitor\.ivy2\cache\com.fasterxml.jackson.core\jackson-annotations\bundles\jackson-annotations-2.3.2.jar;C:\Users\Aitor\.ivy2\cache\com.fasterxml.jackson.core\jackson-databind\bundles\jackson-databind-2.3.2.jar;C:\Users\Aitor\.ivy2\cache\org.scala-lang\scala-reflect\jars\scala-reflect-2.11.1.jar;C:\Users\Aitor\.ivy2\cache\org.scala-lang.modules\scala-parser-combinators_2.11\bundles\scala-parser-combinators_2.11-1.0.1.jar;C:\Users\Aitor\.ivy2\cache\io.netty\netty\bundles\netty-3.9.3.Final.jar;C:\Users\Aitor\.ivy2\cache\com.typesafe.netty\netty-http-pipelining\jars\netty-http-pipelining-1.1.2.jar;C:\Users\Aitor\.ivy2\cache\org.slf4j\slf4j-api\jars\slf4j-api-1.7.6.jar;C:\Users\Aitor\.ivy2\cache\org.slf4j\jul-to-slf4j\jars\jul-to-slf4j-1.7.6.jar;C:\Users\Aitor\.ivy2\cache\org.slf4j\jcl-over-slf4j\jars\jcl-over-slf4j-1.7.6.jar;C:\Users\Aitor\.ivy2\cache\ch.qos.logback\logback-core\jars\logback-core-1.1.1.jar;C:\Users\Aitor\.ivy2\cache\ch.qos.logback\logback-classic\jars\logback-classic-1.1.1.jar;C:\Users\Aitor\.ivy2\cache\com.typesafe.akka\akka-actor_2.11\jars\akka-actor_2.11-2.3.4.jar;C:\Users\Aitor\.ivy2\cache\com.typesafe.akka\akka-slf4j_2.11\jars\akka-slf4j_2.11-2.3.4.jar;C:\Users\Aitor\.ivy2\cache\commons-codec\commons-codec\jars\commons-codec-1.9.jar;C:\Users\Aitor\.ivy2\cache\xerces\xercesImpl\jars\xercesImpl-2.11.0.jar;C:\Users\Aitor\.ivy2\cache\xml-apis\xml-apis\jars\xml-apis-1.4.01.jar;C:\Users\Aitor\.ivy2\cache\javax.transaction\jta\jars\jta-1.1.jar;C:\Users\Aitor\.ivy2\cache\com.typesafe.play\play-java_2.11\jars\play-java_2.11-2.3.8.jar;C:\Users\Aitor\.ivy2\cache\org.yaml\snakeyaml\bundles\snakeyaml-1.13.jar;C:\Users\Aitor\.ivy2\cache\org.hibernate\hibernate-validator\jars\hibernate-validator-5.0.3.Final.jar;C:\Users\Aitor\.ivy2\cache\javax.validation\validation-api\jars\validation-api-1.1.0.Final.jar;C:\Users\Aitor\.ivy2\cache\com.fasterxml\classmate\bundles\classmate-1.0.0.jar;C:\Users\Aitor\.ivy2\cache\org.jboss.logging\jboss-logging\jars\jboss-logging-3.2.0.Final.jar;C:\Users\Aitor\.ivy2\cache\org.springframework\spring-context\jars\spring-context-4.0.3.RELEASE.jar;C:\Users\Aitor\.ivy2\cache\org.springframework\spring-core\jars\spring-core-4.0.3.RELEASE.jar;C:\Users\Aitor\.ivy2\cache\org.springframework\spring-beans\jars\spring-beans-4.0.3.RELEASE.jar;C:\Users\Aitor\.ivy2\cache\org.javassist\javassist\bundles\javassist-3.19.0-GA.jar;C:\Users\Aitor\.ivy2\cache\org.reflections\reflections\jars\reflections-0.9.8.jar;C:\Users\Aitor\.ivy2\cache\com.google.guava\guava\bundles\guava-16.0.1.jar;C:\Users\Aitor\.ivy2\cache\dom4j\dom4j\jars\dom4j-1.6.1.jar;C:\Users\Aitor\.ivy2\cache\com.google.code.findbugs\jsr305\jars\jsr305-2.0.3.jar;C:\Users\Aitor\.ivy2\cache\org.apache.tomcat\tomcat-servlet-api\jars\tomcat-servlet-api-8.0.5.jar;C:\Users\Aitor\.ivy2\cache\com.typesafe.play\play-java-jdbc_2.11\jars\play-java-jdbc_2.11-2.3.8.jar;C:\Users\Aitor\.ivy2\cache\com.typesafe.play\play-jdbc_2.11\jars\play-jdbc_2.11-2.3.8.jar;C:\Users\Aitor\.ivy2\cache\com.jolbox\bonecp\bundles\bonecp-0.8.0.RELEASE.jar;C:\Users\Aitor\.ivy2\cache\com.h2database\h2\jars\h2-1.3.175.jar;C:\Users\Aitor\.ivy2\cache\tyrex\tyrex\jars\tyrex-1.0.1.jar;C:\Users\Aitor\.ivy2\cache\com.typesafe.play\play-java-ebean_2.11\jars\play-java-ebean_2.11-2.3.8.jar;C:\Users\Aitor\.ivy2\cache\org.avaje.ebeanorm\avaje-ebeanorm\jars\avaje-ebeanorm-3.3.4.jar;C:\Users\Aitor\.ivy2\cache\org.avaje.ebeanorm\avaje-ebeanorm-agent\jars\avaje-ebeanorm-agent-3.2.2.jar;C:\Users\Aitor\.ivy2\cache\org.hibernate.javax.persistence\hibernate-jpa-2.0-api\jars\hibernate-jpa-2.0-api-1.0.1.Final.jar;C:\Users\Aitor\.ivy2\cache\com.typesafe.play\play-cache_2.11\jars\play-cache_2.11-2.3.8.jar;C:\Users\Aitor\.ivy2\cache\net.sf.ehcache\ehcache-core\jars\ehcache-core-2.6.8.jar;C:\Users\Aitor\.ivy2\cache\com.typesafe.play\play-java-ws_2.11\jars\play-java-ws_2.11-2.3.8.jar;C:\Users\Aitor\.ivy2\cache\com.typesafe.play\play-ws_2.11\jars\play-ws_2.11-2.3.8.jar;C:\Users\Aitor\.ivy2\cache\com.ning\async-http-client\jars\async-http-client-1.8.15.jar;C:\Users\Aitor\.ivy2\cache\oauth.signpost\signpost-core\jars\signpost-core-1.2.1.2.jar;C:\Users\Aitor\.ivy2\cache\oauth.signpost\signpost-commonshttp4\jars\signpost-commonshttp4-1.2.1.2.jar;C:\Users\Aitor\.ivy2\cache\org.apache.httpcomponents\httpcore\jars\httpcore-4.0.1.jar;C:\Users\Aitor\.ivy2\cache\org.apache.httpcomponents\httpclient\jars\httpclient-4.0.1.jar;C:\Users\Aitor\.ivy2\cache\commons-logging\commons-logging\jars\commons-logging-1.1.1.jar;C:\Users\Aitor\.ivy2\cache\net.vz.mongodb.jackson\play-mongo-jackson-mapper_2.10\jars\play-mongo-jackson-mapper_2.10-1.1.0.jar;C:\Users\Aitor\.ivy2\cache\net.vz.mongodb.jackson\mongo-jackson-mapper\jars\mongo-jackson-mapper-1.4.1.jar;C:\Users\Aitor\.ivy2\cache\org.codehaus.jackson\jackson-mapper-asl\jars\jackson-mapper-asl-1.9.5.jar;C:\Users\Aitor\.ivy2\cache\org.codehaus.jackson\jackson-core-asl\jars\jackson-core-asl-1.9.5.jar;C:\Users\Aitor\.ivy2\cache\javax.persistence\persistence-api\jars\persistence-api-1.0.2.jar;C:\Users\Aitor\.ivy2\cache\org.mongojack\mongojack\jars\mongojack-2.0.0-RC1.jar;C:\Users\Aitor\.ivy2\cache\org.mongodb\mongo-java-driver\jars\mongo-java-driver-2.9.1.jar;C:\Users\Aitor\.ivy2\cache\de.undercouch\bson4jackson\jars\bson4jackson-2.1.0.jar;C:\Users\Aitor\.ivy2\cache\com.fasterxml.jackson.core\jackson-core\bundles\jackson-core-2.3.3.jar;C:\Users\Aitor\.ivy2\cache\commons-io\commons-io\jars\commons-io-2.4.jar;C:\Users\Aitor\.ivy2\cache\org.webjars\bootstrap\jars\bootstrap-3.3.1.jar;C:\Users\Aitor\.ivy2\cache\org.webjars\jquery\jars\jquery-1.11.1.jar;C:\Users\Aitor\.ivy2\cache\org.webjars\angularjs\jars\angularjs-1.3.8.jar;C:\Users\Aitor\.ivy2\cache\org.webjars\angular-ui-bootstrap\jars\angular-ui-bootstrap-0.12.0.jar
-Scala compilation took 1.36926006 s
-New invalidations:
-	Set()
-Initial set of included nodes: Set()
-Previously invalidated, but (transitively) depend on new invalidations:
-	Set()
-All newly invalidated sources after taking into account (previously) recompiled sources:Set()
-Total time: 2 s, completed 19-abr-2015 20:39:34
-> server-post-command-cleanup
-> server-handle-next-server-request
-> {file:/C:/Users/Aitor/Trivial5a/WebTrivial5a/}root/*:playForkReload
-Evaluating tasks: *:playForkReload
-Running task... Cancel: sbt.server.ServerTaskCancellation@452478a6, check cycles: false
-
-Initial source changes: 
-	removed:Set()
-	added: Set()
-	modified: Set()
-Removed products: Set(C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\classes\views\html\partidas.class, C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\classes\views\html\partidas$$anonfun$apply$1.class, C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\classes\views\html\main$$anonfun$f$1$$anonfun$apply$1.class, C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\classes\views\html\partidas$.class, C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\classes\views\html\categorias$$anonfun$apply$1.class, C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\classes\views\html\usuarios$.class, C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\classes\views\html\categorias$$anonfun$f$1.class, C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\classes\views\html\categorias$.class, C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\classes\views\html\usuarios$$anonfun$f$1.class, C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\classes\views\html\index$.class, C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\classes\views\html\main.class, C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\classes\views\html\categorias.class, C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\classes\views\html\partidas$$anonfun$f$1.class, C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\classes\views\html\index.class, C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\classes\views\html\index$$anonfun$f$1.class, C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\classes\views\html\usuarios$$anonfun$apply$1.class, C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\classes\views\html\main$$anonfun$f$1.class, C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\classes\views\html\usuarios.class, C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\classes\views\html\main$.class)
-External API changes: API Changes: Set()
-Modified binary dependencies: Set()
-Initial directly invalidated sources: Set()
-
-Sources indirectly invalidated by:
-	product: Set(C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\twirl\main\views\html\partidas.template.scala, C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\twirl\main\views\html\main.template.scala, C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\twirl\main\views\html\categorias.template.scala, C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\twirl\main\views\html\usuarios.template.scala, C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\twirl\main\views\html\index.template.scala)
-	binary dep: Set()
-	external source: Set()
-All initially invalidated sources: Set(C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\twirl\main\views\html\partidas.template.scala, C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\twirl\main\views\html\main.template.scala, C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\twirl\main\views\html\categorias.template.scala, C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\twirl\main\views\html\usuarios.template.scala, C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\twirl\main\views\html\index.template.scala)
-
-Read from stdout: Compiling 5 Scala sources to C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\classes...
-Compiling 5 Scala sources to C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\classes...
-Getting compiler-interface from component compiler for Scala 2.11.1
-Other repositories:
-Default repositories:
-Getting compiler-interface from component compiler for Scala 2.11.1
-Other repositories:
-Default repositories:
-Running cached compiler 80c4ec3, interfacing (CompilerInterface) with Scala compiler version 2.11.1
-Calling Scala compiler with arguments  (CompilerInterface):
-	-deprecation
-	-unchecked
-	-encoding
-	utf8
-	-bootclasspath
-	C:\Program Files\Java\jdk1.8.0_45\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_45\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_45\jre\classes;C:\Users\Aitor\.ivy2\cache\org.scala-lang\scala-library\jars\scala-library-2.11.1.jar
-	-classpath
-	C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\classes;C:\Users\Aitor\.ivy2\cache\com.typesafe.play\twirl-api_2.11\jars\twirl-api_2.11-1.0.2.jar;C:\Users\Aitor\.ivy2\cache\org.apache.commons\commons-lang3\jars\commons-lang3-3.1.jar;C:\Users\Aitor\.ivy2\cache\org.scala-lang.modules\scala-xml_2.11\bundles\scala-xml_2.11-1.0.1.jar;C:\Users\Aitor\.ivy2\cache\com.typesafe.play\play_2.11\jars\play_2.11-2.3.8.jar;C:\Users\Aitor\.ivy2\cache\com.typesafe.play\build-link\jars\build-link-2.3.8.jar;C:\Users\Aitor\.ivy2\cache\com.typesafe.play\play-exceptions\jars\play-exceptions-2.3.8.jar;C:\Users\Aitor\.ivy2\cache\com.typesafe.play\play-iteratees_2.11\jars\play-iteratees_2.11-2.3.8.jar;C:\Users\Aitor\.ivy2\cache\org.scala-stm\scala-stm_2.11\jars\scala-stm_2.11-0.7.jar;C:\Users\Aitor\.ivy2\cache\com.typesafe\config\bundles\config-1.2.1.jar;C:\Users\Aitor\.ivy2\cache\com.typesafe.play\play-json_2.11\jars\play-json_2.11-2.3.8.jar;C:\Users\Aitor\.ivy2\cache\com.typesafe.play\play-functional_2.11\jars\play-functional_2.11-2.3.8.jar;C:\Users\Aitor\.ivy2\cache\com.typesafe.play\play-datacommons_2.11\jars\play-datacommons_2.11-2.3.8.jar;C:\Users\Aitor\.ivy2\cache\joda-time\joda-time\jars\joda-time-2.3.jar;C:\Users\Aitor\.ivy2\cache\org.joda\joda-convert\jars\joda-convert-1.6.jar;C:\Users\Aitor\.ivy2\cache\com.fasterxml.jackson.core\jackson-annotations\bundles\jackson-annotations-2.3.2.jar;C:\Users\Aitor\.ivy2\cache\com.fasterxml.jackson.core\jackson-databind\bundles\jackson-databind-2.3.2.jar;C:\Users\Aitor\.ivy2\cache\org.scala-lang\scala-reflect\jars\scala-reflect-2.11.1.jar;C:\Users\Aitor\.ivy2\cache\org.scala-lang.modules\scala-parser-combinators_2.11\bundles\scala-parser-combinators_2.11-1.0.1.jar;C:\Users\Aitor\.ivy2\cache\io.netty\netty\bundles\netty-3.9.3.Final.jar;C:\Users\Aitor\.ivy2\cache\com.typesafe.netty\netty-http-pipelining\jars\netty-http-pipelining-1.1.2.jar;C:\Users\Aitor\.ivy2\cache\org.slf4j\slf4j-api\jars\slf4j-api-1.7.6.jar;C:\Users\Aitor\.ivy2\cache\org.slf4j\jul-to-slf4j\jars\jul-to-slf4j-1.7.6.jar;C:\Users\Aitor\.ivy2\cache\org.slf4j\jcl-over-slf4j\jars\jcl-over-slf4j-1.7.6.jar;C:\Users\Aitor\.ivy2\cache\ch.qos.logback\logback-core\jars\logback-core-1.1.1.jar;C:\Users\Aitor\.ivy2\cache\ch.qos.logback\logback-classic\jars\logback-classic-1.1.1.jar;C:\Users\Aitor\.ivy2\cache\com.typesafe.akka\akka-actor_2.11\jars\akka-actor_2.11-2.3.4.jar;C:\Users\Aitor\.ivy2\cache\com.typesafe.akka\akka-slf4j_2.11\jars\akka-slf4j_2.11-2.3.4.jar;C:\Users\Aitor\.ivy2\cache\commons-codec\commons-codec\jars\commons-codec-1.9.jar;C:\Users\Aitor\.ivy2\cache\xerces\xercesImpl\jars\xercesImpl-2.11.0.jar;C:\Users\Aitor\.ivy2\cache\xml-apis\xml-apis\jars\xml-apis-1.4.01.jar;C:\Users\Aitor\.ivy2\cache\javax.transaction\jta\jars\jta-1.1.jar;C:\Users\Aitor\.ivy2\cache\com.typesafe.play\play-java_2.11\jars\play-java_2.11-2.3.8.jar;C:\Users\Aitor\.ivy2\cache\org.yaml\snakeyaml\bundles\snakeyaml-1.13.jar;C:\Users\Aitor\.ivy2\cache\org.hibernate\hibernate-validator\jars\hibernate-validator-5.0.3.Final.jar;C:\Users\Aitor\.ivy2\cache\javax.validation\validation-api\jars\validation-api-1.1.0.Final.jar;C:\Users\Aitor\.ivy2\cache\com.fasterxml\classmate\bundles\classmate-1.0.0.jar;C:\Users\Aitor\.ivy2\cache\org.jboss.logging\jboss-logging\jars\jboss-logging-3.2.0.Final.jar;C:\Users\Aitor\.ivy2\cache\org.springframework\spring-context\jars\spring-context-4.0.3.RELEASE.jar;C:\Users\Aitor\.ivy2\cache\org.springframework\spring-core\jars\spring-core-4.0.3.RELEASE.jar;C:\Users\Aitor\.ivy2\cache\org.springframework\spring-beans\jars\spring-beans-4.0.3.RELEASE.jar;C:\Users\Aitor\.ivy2\cache\org.javassist\javassist\bundles\javassist-3.19.0-GA.jar;C:\Users\Aitor\.ivy2\cache\org.reflections\reflections\jars\reflections-0.9.8.jar;C:\Users\Aitor\.ivy2\cache\com.google.guava\guava\bundles\guava-16.0.1.jar;C:\Users\Aitor\.ivy2\cache\dom4j\dom4j\jars\dom4j-1.6.1.jar;C:\Users\Aitor\.ivy2\cache\com.google.code.findbugs\jsr305\jars\jsr305-2.0.3.jar;C:\Users\Aitor\.ivy2\cache\org.apache.tomcat\tomcat-servlet-api\jars\tomcat-servlet-api-8.0.5.jar;C:\Users\Aitor\.ivy2\cache\com.typesafe.play\play-java-jdbc_2.11\jars\play-java-jdbc_2.11-2.3.8.jar;C:\Users\Aitor\.ivy2\cache\com.typesafe.play\play-jdbc_2.11\jars\play-jdbc_2.11-2.3.8.jar;C:\Users\Aitor\.ivy2\cache\com.jolbox\bonecp\bundles\bonecp-0.8.0.RELEASE.jar;C:\Users\Aitor\.ivy2\cache\com.h2database\h2\jars\h2-1.3.175.jar;C:\Users\Aitor\.ivy2\cache\tyrex\tyrex\jars\tyrex-1.0.1.jar;C:\Users\Aitor\.ivy2\cache\com.typesafe.play\play-java-ebean_2.11\jars\play-java-ebean_2.11-2.3.8.jar;C:\Users\Aitor\.ivy2\cache\org.avaje.ebeanorm\avaje-ebeanorm\jars\avaje-ebeanorm-3.3.4.jar;C:\Users\Aitor\.ivy2\cache\org.avaje.ebeanorm\avaje-ebeanorm-agent\jars\avaje-ebeanorm-agent-3.2.2.jar;C:\Users\Aitor\.ivy2\cache\org.hibernate.javax.persistence\hibernate-jpa-2.0-api\jars\hibernate-jpa-2.0-api-1.0.1.Final.jar;C:\Users\Aitor\.ivy2\cache\com.typesafe.play\play-cache_2.11\jars\play-cache_2.11-2.3.8.jar;C:\Users\Aitor\.ivy2\cache\net.sf.ehcache\ehcache-core\jars\ehcache-core-2.6.8.jar;C:\Users\Aitor\.ivy2\cache\com.typesafe.play\play-java-ws_2.11\jars\play-java-ws_2.11-2.3.8.jar;C:\Users\Aitor\.ivy2\cache\com.typesafe.play\play-ws_2.11\jars\play-ws_2.11-2.3.8.jar;C:\Users\Aitor\.ivy2\cache\com.ning\async-http-client\jars\async-http-client-1.8.15.jar;C:\Users\Aitor\.ivy2\cache\oauth.signpost\signpost-core\jars\signpost-core-1.2.1.2.jar;C:\Users\Aitor\.ivy2\cache\oauth.signpost\signpost-commonshttp4\jars\signpost-commonshttp4-1.2.1.2.jar;C:\Users\Aitor\.ivy2\cache\org.apache.httpcomponents\httpcore\jars\httpcore-4.0.1.jar;C:\Users\Aitor\.ivy2\cache\org.apache.httpcomponents\httpclient\jars\httpclient-4.0.1.jar;C:\Users\Aitor\.ivy2\cache\commons-logging\commons-logging\jars\commons-logging-1.1.1.jar;C:\Users\Aitor\.ivy2\cache\net.vz.mongodb.jackson\play-mongo-jackson-mapper_2.10\jars\play-mongo-jackson-mapper_2.10-1.1.0.jar;C:\Users\Aitor\.ivy2\cache\net.vz.mongodb.jackson\mongo-jackson-mapper\jars\mongo-jackson-mapper-1.4.1.jar;C:\Users\Aitor\.ivy2\cache\org.codehaus.jackson\jackson-mapper-asl\jars\jackson-mapper-asl-1.9.5.jar;C:\Users\Aitor\.ivy2\cache\org.codehaus.jackson\jackson-core-asl\jars\jackson-core-asl-1.9.5.jar;C:\Users\Aitor\.ivy2\cache\javax.persistence\persistence-api\jars\persistence-api-1.0.2.jar;C:\Users\Aitor\.ivy2\cache\org.mongojack\mongojack\jars\mongojack-2.0.0-RC1.jar;C:\Users\Aitor\.ivy2\cache\org.mongodb\mongo-java-driver\jars\mongo-java-driver-2.9.1.jar;C:\Users\Aitor\.ivy2\cache\de.undercouch\bson4jackson\jars\bson4jackson-2.1.0.jar;C:\Users\Aitor\.ivy2\cache\com.fasterxml.jackson.core\jackson-core\bundles\jackson-core-2.3.3.jar;C:\Users\Aitor\.ivy2\cache\commons-io\commons-io\jars\commons-io-2.4.jar;C:\Users\Aitor\.ivy2\cache\org.webjars\bootstrap\jars\bootstrap-3.3.1.jar;C:\Users\Aitor\.ivy2\cache\org.webjars\jquery\jars\jquery-1.11.1.jar;C:\Users\Aitor\.ivy2\cache\org.webjars\angularjs\jars\angularjs-1.3.8.jar;C:\Users\Aitor\.ivy2\cache\org.webjars\angular-ui-bootstrap\jars\angular-ui-bootstrap-0.12.0.jar
-Scala compilation took 1.145487934 s
+	C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\classes;C:\Users\Aitor\.ivy2\cache\com.typesafe.play\twirl-api_2.11\jars\twirl-api_2.11-1.0.2.jar;C:\Users\Aitor\.ivy2\cache\org.apache.commons\commons-lang3\jars\commons-lang3-3.1.jar;C:\Users\Aitor\.ivy2\cache\org.scala-lang.modules\scala-xml_2.11\bundles\scala-xml_2.11-1.0.1.jar;C:\Users\Aitor\.ivy2\cache\com.typesafe.play\play_2.11\jars\play_2.11-2.3.8.jar;C:\Users\Aitor\.ivy2\cache\com.typesafe.play\build-link\jars\build-link-2.3.8.jar;C:\Users\Aitor\.ivy2\cache\com.typesafe.play\play-exceptions\jars\play-exceptions-2.3.8.jar;C:\Users\Aitor\.ivy2\cache\com.typesafe.play\play-iteratees_2.11\jars\play-iteratees_2.11-2.3.8.jar;C:\Users\Aitor\.ivy2\cache\org.scala-stm\scala-stm_2.11\jars\scala-stm_2.11-0.7.jar;C:\Users\Aitor\.ivy2\cache\com.typesafe\config\bundles\config-1.2.1.jar;C:\Users\Aitor\.ivy2\cache\com.typesafe.play\play-json_2.11\jars\play-json_2.11-2.3.8.jar;C:\Users\Aitor\.ivy2\cache\com.typesafe.play\play-functional_2.11\jars\play-functional_2.11-2.3.8.jar;C:\Users\Aitor\.ivy2\cache\com.typesafe.play\play-datacommons_2.11\jars\play-datacommons_2.11-2.3.8.jar;C:\Users\Aitor\.ivy2\cache\joda-time\joda-time\jars\joda-time-2.3.jar;C:\Users\Aitor\.ivy2\cache\org.joda\joda-convert\jars\joda-convert-1.6.jar;C:\Users\Aitor\.ivy2\cache\com.fasterxml.jackson.core\jackson-annotations\bundles\jackson-annotations-2.3.2.jar;C:\Users\Aitor\.ivy2\cache\com.fasterxml.jackson.core\jackson-databind\bundles\jackson-databind-2.3.2.jar;C:\Users\Aitor\.ivy2\cache\org.scala-lang\scala-reflect\jars\scala-reflect-2.11.1.jar;C:\Users\Aitor\.ivy2\cache\org.scala-lang.modules\scala-parser-combinators_2.11\bundles\scala-parser-combinators_2.11-1.0.1.jar;C:\Users\Aitor\.ivy2\cache\io.netty\netty\bundles\netty-3.9.3.Final.jar;C:\Users\Aitor\.ivy2\cache\com.typesafe.netty\netty-http-pipelining\jars\netty-http-pipelining-1.1.2.jar;C:\Users\Aitor\.ivy2\cache\org.slf4j\slf4j-api\jars\slf4j-api-1.7.6.jar;C:\Users\Aitor\.ivy2\cache\org.slf4j\jul-to-slf4j\jars\jul-to-slf4j-1.7.6.jar;C:\Users\Aitor\.ivy2\cache\org.slf4j\jcl-over-slf4j\jars\jcl-over-slf4j-1.7.6.jar;C:\Users\Aitor\.ivy2\cache\ch.qos.logback\logback-core\jars\logback-core-1.1.1.jar;C:\Users\Aitor\.ivy2\cache\ch.qos.logback\logback-classic\jars\logback-classic-1.1.1.jar;C:\Users\Aitor\.ivy2\cache\com.typesafe.akka\akka-actor_2.11\jars\akka-actor_2.11-2.3.4.jar;C:\Users\Aitor\.ivy2\cache\com.typesafe.akka\akka-slf4j_2.11\jars\akka-slf4j_2.11-2.3.4.jar;C:\Users\Aitor\.ivy2\cache\commons-codec\commons-codec\jars\commons-codec-1.9.jar;C:\Users\Aitor\.ivy2\cache\xerces\xercesImpl\jars\xercesImpl-2.11.0.jar;C:\Users\Aitor\.ivy2\cache\xml-apis\xml-apis\jars\xml-apis-1.4.01.jar;C:\Users\Aitor\.ivy2\cache\javax.transaction\jta\jars\jta-1.1.jar;C:\Users\Aitor\.ivy2\cache\com.typesafe.play\play-java_2.11\jars\play-java_2.11-2.3.8.jar;C:\Users\Aitor\.ivy2\cache\org.yaml\snakeyaml\bundles\snakeyaml-1.13.jar;C:\Users\Aitor\.ivy2\cache\org.hibernate\hibernate-validator\jars\hibernate-validator-5.0.3.Final.jar;C:\Users\Aitor\.ivy2\cache\javax.validation\validation-api\jars\validation-api-1.1.0.Final.jar;C:\Users\Aitor\.ivy2\cache\com.fasterxml\classmate\bundles\classmate-1.0.0.jar;C:\Users\Aitor\.ivy2\cache\org.jboss.logging\jboss-logging\jars\jboss-logging-3.2.0.Final.jar;C:\Users\Aitor\.ivy2\cache\org.springframework\spring-context\jars\spring-context-4.0.3.RELEASE.jar;C:\Users\Aitor\.ivy2\cache\org.springframework\spring-core\jars\spring-core-4.0.3.RELEASE.jar;C:\Users\Aitor\.ivy2\cache\org.springframework\spring-beans\jars\spring-beans-4.0.3.RELEASE.jar;C:\Users\Aitor\.ivy2\cache\org.javassist\javassist\bundles\javassist-3.19.0-GA.jar;C:\Users\Aitor\.ivy2\cache\org.reflections\reflections\jars\reflections-0.9.8.jar;C:\Users\Aitor\.ivy2\cache\com.google.guava\guava\bundles\guava-16.0.1.jar;C:\Users\Aitor\.ivy2\cache\dom4j\dom4j\jars\dom4j-1.6.1.jar;C:\Users\Aitor\.ivy2\cache\com.google.code.findbugs\jsr305\jars\jsr305-2.0.3.jar;C:\Users\Aitor\.ivy2\cache\org.apache.tomcat\tomcat-servlet-api\jars\tomcat-servlet-api-8.0.5.jar;C:\Users\Aitor\.ivy2\cache\com.typesafe.play\play-java-jdbc_2.11\jars\play-java-jdbc_2.11-2.3.8.jar;C:\Users\Aitor\.ivy2\cache\com.typesafe.play\play-jdbc_2.11\jars\play-jdbc_2.11-2.3.8.jar;C:\Users\Aitor\.ivy2\cache\com.jolbox\bonecp\bundles\bonecp-0.8.0.RELEASE.jar;C:\Users\Aitor\.ivy2\cache\com.h2database\h2\jars\h2-1.3.175.jar;C:\Users\Aitor\.ivy2\cache\tyrex\tyrex\jars\tyrex-1.0.1.jar;C:\Users\Aitor\.ivy2\cache\com.typesafe.play\play-java-ebean_2.11\jars\play-java-ebean_2.11-2.3.8.jar;C:\Users\Aitor\.ivy2\cache\org.avaje.ebeanorm\avaje-ebeanorm\jars\avaje-ebeanorm-3.3.4.jar;C:\Users\Aitor\.ivy2\cache\org.avaje.ebeanorm\avaje-ebeanorm-agent\jars\avaje-ebeanorm-agent-3.2.2.jar;C:\Users\Aitor\.ivy2\cache\org.hibernate.javax.persistence\hibernate-jpa-2.0-api\jars\hibernate-jpa-2.0-api-1.0.1.Final.jar;C:\Users\Aitor\.ivy2\cache\com.typesafe.play\play-cache_2.11\jars\play-cache_2.11-2.3.8.jar;C:\Users\Aitor\.ivy2\cache\net.sf.ehcache\ehcache-core\jars\ehcache-core-2.6.8.jar;C:\Users\Aitor\.ivy2\cache\com.typesafe.play\play-java-ws_2.11\jars\play-java-ws_2.11-2.3.8.jar;C:\Users\Aitor\.ivy2\cache\com.typesafe.play\play-ws_2.11\jars\play-ws_2.11-2.3.8.jar;C:\Users\Aitor\.ivy2\cache\com.ning\async-http-client\jars\async-http-client-1.8.15.jar;C:\Users\Aitor\.ivy2\cache\oauth.signpost\signpost-core\jars\signpost-core-1.2.1.2.jar;C:\Users\Aitor\.ivy2\cache\oauth.signpost\signpost-commonshttp4\jars\signpost-commonshttp4-1.2.1.2.jar;C:\Users\Aitor\.ivy2\cache\org.apache.httpcomponents\httpcore\jars\httpcore-4.0.1.jar;C:\Users\Aitor\.ivy2\cache\org.apache.httpcomponents\httpclient\jars\httpclient-4.0.1.jar;C:\Users\Aitor\.ivy2\cache\commons-logging\commons-logging\jars\commons-logging-1.1.1.jar;C:\Users\Aitor\.ivy2\cache\net.vz.mongodb.jackson\play-mongo-jackson-mapper_2.10\jars\play-mongo-jackson-mapper_2.10-1.1.0.jar;C:\Users\Aitor\.ivy2\cache\net.vz.mongodb.jackson\mongo-jackson-mapper\jars\mongo-jackson-mapper-1.4.1.jar;C:\Users\Aitor\.ivy2\cache\org.mongodb\mongo-java-driver\jars\mongo-java-driver-2.13.0.jar;C:\Users\Aitor\.ivy2\cache\org.codehaus.jackson\jackson-mapper-asl\jars\jackson-mapper-asl-1.9.5.jar;C:\Users\Aitor\.ivy2\cache\org.codehaus.jackson\jackson-core-asl\jars\jackson-core-asl-1.9.5.jar;C:\Users\Aitor\.ivy2\cache\javax.persistence\persistence-api\jars\persistence-api-1.0.2.jar;C:\Users\Aitor\.ivy2\cache\org.mongojack\mongojack\jars\mongojack-2.0.0-RC1.jar;C:\Users\Aitor\.ivy2\cache\de.undercouch\bson4jackson\jars\bson4jackson-2.1.0.jar;C:\Users\Aitor\.ivy2\cache\com.fasterxml.jackson.core\jackson-core\bundles\jackson-core-2.3.3.jar;C:\Users\Aitor\.ivy2\cache\commons-io\commons-io\jars\commons-io-2.4.jar;C:\Users\Aitor\.ivy2\cache\org.webjars\bootstrap\jars\bootstrap-3.3.1.jar;C:\Users\Aitor\.ivy2\cache\org.webjars\jquery\jars\jquery-1.11.1.jar;C:\Users\Aitor\.ivy2\cache\org.webjars\angularjs\jars\angularjs-1.3.8.jar;C:\Users\Aitor\.ivy2\cache\org.webjars\angular-ui-bootstrap\jars\angular-ui-bootstrap-0.12.0.jar;C:\Users\Aitor\.ivy2\cache\com.google.code.gson\gson\jars\gson-2.3.1.jar
+Scala compilation took 3.760596797 s
 New invalidations:
 	Set()
 Initial set of included nodes: Set()
@@ -25996,7 +25729,7 @@ Copy resource mappings:
 	(C:\Users\Aitor\Trivial5a\WebTrivial5a\conf\application.conf,C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\classes\application.conf)
 	(C:\Users\Aitor\Trivial5a\WebTrivial5a\conf\play.conf,C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\classes\play.conf)
 	(C:\Users\Aitor\Trivial5a\WebTrivial5a\conf\routes,C:\Users\Aitor\Trivial5a\WebTrivial5a\target\scala-2.11\classes\routes)
-Total time: 2 s, completed 19-abr-2015 20:40:13
+Total time: 6 s, completed 20-abr-2015 20:10:37
 > server-post-command-cleanup
 > server-handle-next-server-request
 Done executing sbt server engine, result Right(Exit(0))
@@ -26005,4 +25738,4 @@ Waiting for socket thread
 Waiting for request processor thread
 Waiting for command engine result
 Returning control to sbt launcher with result Exit(0)
-Closing the 40@Aitor-PC logs at Sun Apr 19 20:40:15 CEST 2015, goodbye.
+Closing the 8280@Aitor-PC logs at Mon Apr 20 20:13:25 CEST 2015, goodbye.

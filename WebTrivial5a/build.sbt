@@ -19,7 +19,9 @@ libraryDependencies ++= Seq(
   "org.webjars" % "bootstrap" % "3.3.1",
   "org.webjars" % "angularjs" % "1.3.8",
   "org.webjars" % "angular-ui-bootstrap" % "0.12.0",
-  "org.mockito" % "mockito-core" % "1.10.17" % "test"
+  "org.mockito" % "mockito-core" % "1.10.17" % "test",
+  "com.google.code.gson" % "gson" % "2.3.1",
+  "org.mongodb" % "mongo-java-driver" % "2.13.0"
 )
 
 fork in run := true

@@ -10,7 +10,7 @@ import model.Partida;
 import model.Question;
 import model.User;
 
-import com.google.gson.Gson;
+import com.google.gson.*;
 import com.mongodb.BasicDBObject;
 import com.mongodb.DB;
 import com.mongodb.DBCollection;
