@@ -3,11 +3,12 @@
 # ~~~~
 
 #Home page
-GET     /                           					controllers.Application.index()
+#GET     /                           					controllers.Application.index()
 
-GET		/admin											controllers.Application.admin()
+#GET		/admin											controllers.Application.admin()
 
-#POST	/user											controllers.Application.login()
+GET	/											controllers.Application.index()
+POST /											controllers.Application.login()
 #GET		/user											controllers.Application.showUsers()
 #GET		/user/:id										controllers.Application.showUser(id: Long)
 #PUT		/user/:id										controllers.Application.updateUser(id: Long)
@@ -17,11 +18,11 @@ GET		/admin											controllers.Application.admin()
 GET    /new												controllers.Application.showUsers()
 POST   /new                 							 controllers.Application.register()
 
-GET    /categories											controllers.Application.showQuestions()
+#GET    /categories											controllers.Application.showQuestions()
 
 
 #POST	/partida										controllers.Application.newPartida()
-GET		/partidas										controllers.Application.showPartidas()
+#GET		/partidas										controllers.Application.showPartidas()
 #GET		/partida/:id									controllers.Application.showPartida(id: String)
 #GET 	/partida/:id/:idCategoria						controllers.Application.getQuestion(id: String, idCategoria: String)
 #GET 	/partida/:id/:idQuestion						controllers.Application.getRespuesta(id: String, idQuestion: String)

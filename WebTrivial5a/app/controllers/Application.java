@@ -16,7 +16,8 @@ public class Application extends Controller {
 	static Form<User> userForm = Form.form(User.class);
 	
 	public static Result index() {
-		return ok(index.render("Your new application is ready."));
+		 Form<User> filledForm = userForm.bindFromRequest();
+		return ok(login.render(filledForm));
 	}
 
 	public static Result admin() {
@@ -29,8 +30,21 @@ public class Application extends Controller {
 	}
 
 	public static Result login() {
-		 //Form<Login> loginForm = form(Login.class).bindFromRequest();
-		  return ok();
+		 Form<User> filledForm = userForm.bindFromRequest();
+		 User u = new User();
+		 u.login=filledForm.field("login").value();
+		 u.password=filledForm.field("password").value();
+		 try{
+			 if (User.login(u.login, u.password)!=null){ return ok(partidas.render(Partida.findPartidaUser(u)));}
+				
+			 else
+				 return ok(login.render(userForm));
+		 }catch(Exception e)
+		 {
+			 e.printStackTrace();
+		 }
+		 return null;
+		 
 	}
 	public static Result showQuestions() {
 			
@@ -105,22 +119,16 @@ public class Application extends Controller {
 		return null;
 	}
 	
-	public static Result showPartidas() {
-//		ObjectMapper mapper = new ObjectMapper();
-//		JsonNode actualObj = mapper.readTree(Json.toJson(Partida.all()));
-//		return ok(partidas.render(actualObj));
+	public static Result showPartidasUser(User user) {
 		try {
-			return ok(partidas.render(Partida.all()));
+			return ok(partidas.render(Partida.findPartidaUser(user)));
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		return TODO;
 	}
-	
-	public static Result showPartida(String id) {
-		return null;
-	}
+
 	
 	public static Result getQuestion(Long id, String idCategoria) {
 		Partida partidaActiva;

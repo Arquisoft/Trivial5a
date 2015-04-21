@@ -1,6 +1,7 @@
 package model;
 
 import play.modules.mongodb.jackson.MongoDB;
+import scala.Array;
 
 import java.util.*;
 
@@ -19,7 +20,7 @@ public class Partida {
 	public static final int MAX_CATEGORIAS = 6;
 
 	
-	public List<User> usuarios;
+	public List<User> usuarios= new ArrayList<User>();
 	
 	public List<Long> idUsers;
 	
