@@ -36,10 +36,6 @@ public class Application extends Controller {
 		 u.login=filledForm.field("login").value();
 		 u.password=filledForm.field("password").value();
 		 
-		 if(session("conectado")) {
-				return redirect(partidas.render(Partida.findPartidaUser(u)));
-			}
-		 
 		 try{
 			 if (User.login(u.login, u.password)!=null){ 
 				 session().put("conectado", u.login);
