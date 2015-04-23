@@ -7,8 +7,8 @@
 
 #GET		/admin											controllers.Application.admin()
 
-GET	/											controllers.Application.index()
-POST /											controllers.Application.login()
+GET	/													controllers.Application.index()
+POST /													controllers.Application.login()
 #GET		/user											controllers.Application.showUsers()
 #GET		/user/:id										controllers.Application.showUser(id: Long)
 #PUT		/user/:id										controllers.Application.updateUser(id: Long)

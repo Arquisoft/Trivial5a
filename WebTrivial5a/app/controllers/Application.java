@@ -13,14 +13,30 @@ import model.*;
 
 public class Application extends Controller {
 
-
 	static Form<User> userForm = Form.form(User.class);
 	static Form<Partida> partidaForm = Form.form(Partida.class);
+
 	public static Result index() {
-		 Form<User> filledForm = userForm.bindFromRequest();
-		return ok(login.render(filledForm));
+		if (session().containsKey("conectado")) {
+			try {
+				return ok(partidas.render(Partida.findPartidaUser(new User(session().get("conectado"), "", false))));
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		} else {
+			Form<User> filledForm = userForm.bindFromRequest();
+			return ok(login.render(filledForm));
+		}
+		return null;
 	}
 	
+	public static Result logout() {
+		session().clear();
+		flash("danger", "Salida de sesión.");
+		return redirect("/");
+	}
+
 	public static Result admin() {
 		String user = session("connected");
 		if (user != null) {
@@ -31,72 +47,70 @@ public class Application extends Controller {
 	}
 
 	public static Result login() {
-		 Form<User> filledForm = userForm.bindFromRequest();
-		 User u = new User();
-		 u.login=filledForm.field("login").value();
-		 u.password=filledForm.field("password").value();
-		 
-		 try{
-			 if (User.login(u.login, u.password)!=null){ 
-				 session().put("conectado", u.login);
-				 session().put("admin", String.valueOf(u.admin));
-				 flash("success", "Login correcto. ¡Bienvenido!");
-				 return ok(partidas.render(Partida.findPartidaUser(u)));
-			 }
-				
-			 else {
-				 flash("danger", "Login incorrecto.");
-				 return redirect("/");
-			 }
-		 }catch(Exception e)
-		 {
-			 e.printStackTrace();
-		 }
-		 return null;
-		 
+		Form<User> filledForm = userForm.bindFromRequest();
+		User u = new User();
+		u.login = filledForm.field("login").value();
+		u.password = filledForm.field("password").value();
+
+		try {
+
+			if (User.login(u.login, u.password) != null) {
+				session().put("conectado", u.login);
+				session().put("admin", String.valueOf(u.admin));
+				flash("success", "Login correcto. ¡Bienvenido!");
+				return ok(partidas.render(Partida.findPartidaUser(u)));
+			}
+
+			else {
+				flash("danger", "Login incorrecto.");
+				return redirect("/");
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return null;
+
 	}
+
 	public static Result showQuestions() {
-			
-		  try {
+
+		try {
 			return ok(categorias.render(Category.all()));
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		//return null;
+		// return null;
 		return TODO;
 	}
-	
+
 	/**
-	 * FUNCIONA. FALTARIA  PONER MENSAJE SI USUARIOS REPETIDO Y ESO
+	 * FUNCIONA. FALTARIA PONER MENSAJE SI USUARIOS REPETIDO Y ESO
+	 * 
 	 * @return
 	 * @throws Exception
 	 */
-	public static Result register()  {
-		 Form<User> filledForm = userForm.bindFromRequest();
-		 try{
-			 User u = new User();
-			 u.login=filledForm.field("login").value();
-			 u.password=filledForm.field("password").value();
-			 u.admin=Boolean.valueOf(filledForm.field("admin").value());
+	public static Result register() {
+		Form<User> filledForm = userForm.bindFromRequest();
+		try {
+			User u = new User();
+			u.login = filledForm.field("login").value();
+			u.password = filledForm.field("password").value();
+			u.admin = Boolean.valueOf(filledForm.field("admin").value());
 
-			 User.create(u);
-		      return redirect(routes.Application.showUsers());  
+			User.create(u);
+			return redirect(routes.Application.showUsers());
 
-		 	}
-			catch(Exception e)
-			{
-				e.printStackTrace();
-			}
-			return null;
-	}
-	
-	public static Result showUsers() {
-		try{
-		return ok(usuarios.render(model.User.all(),userForm));
+		} catch (Exception e) {
+			e.printStackTrace();
 		}
-		catch(Exception e)
-		{
+		return null;
+	}
+
+	public static Result showUsers() {
+		try {
+			return ok(usuarios.render(model.User.all(), userForm));
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		return null;
@@ -115,32 +129,31 @@ public class Application extends Controller {
 
 	public static Result updateUser(String id) {
 		User user = userForm.bindFromRequest().get();
-		//User.create(user);
+		// User.create(user);
 		return ok("Usuario modificado");
 	}
 
 	public static Result deleteUser(String id) {
-		//User.delete(id);
+		// User.delete(id);
 		return ok("Usuario eliminado");
 	}
 
 	public static Result newPartida() {
-		try{
-			 Partida p = new Partida();
-			 User u = new User( session().get("conectado"), "", Boolean.valueOf(session().get("admin")));
-			 p.id = (long) Partida.all().size();
-			 p.usuarios.add(u);
-		     tablero.render(Partida.create(p)); 
-		     return redirect(routes.Application.showPartida(p.id));  
+		try {
+			Partida p = new Partida();
+			User u = new User(session().get("conectado"), "",
+					Boolean.valueOf(session().get("admin")));
+			p.id = (long) Partida.all().size();
+			p.usuarios.add(u);
+			tablero.render(Partida.create(p));
+			return redirect(routes.Application.showPartida(p.id));
 
-		 	}
-			catch(Exception e)
-			{
-				e.printStackTrace();
-			}
-			return null;
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return null;
 	}
-	
+
 	public static Result showPartidasUser(User user) {
 		try {
 			return ok(partidas.render(Partida.findPartidaUser(user)));
@@ -159,7 +172,7 @@ public class Application extends Controller {
 		}
 		return TODO;
 	}
-	
+
 	public static Result getQuestion(Long id, String idCategoria) {
 		Partida partidaActiva;
 		try {
@@ -172,15 +185,16 @@ public class Application extends Controller {
 			e.printStackTrace();
 		}
 		return TODO;
-		
+
 	}
-	
+
 	public static Result getRespuesta(String id, String idQuestion) {
-		
+
 		return null;
 	}
-	
-	public static Result setRespuesta(String id, String idQuestion, String idAnswer) {
+
+	public static Result setRespuesta(String id, String idQuestion,
+			String idAnswer) {
 		return null;
 	}
 
