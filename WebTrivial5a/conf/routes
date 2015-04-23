@@ -20,6 +20,7 @@ POST   /new                 							 controllers.Application.register()
 
 #GET    /categories											controllers.Application.showQuestions()
 
+GET 	/logout											controllers.Application.logout()
 
 GET		/tablero										controllers.Application.newPartida()
 GET		/tablero/:id									controllers.Application.showPartida(id: Long)

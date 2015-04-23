@@ -16,7 +16,16 @@
 	<script src="@routes.Assets.at("bootstrap/js/bootstrap.min.js")"></script>
 </head>
 <body>
+
 	<div class="container-fluid main">
+	<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/">Inicio</a>
+    <a href="/logout">
+    <button type="button" class="btn btn-default navbar-btn">Logout  <span class="glyphicon glyphicon-remove-circle" aria-hidden="true"></span></button>
+    </a>
+  </div>
+</nav>
 	@if(flash.containsKey("danger")) {
 	<div class="row">
 				<div class="col-md-12">
