@@ -5,6 +5,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 
 import play.*;
 import play.api.mvc.Session;
+import play.data.DynamicForm;
 import play.data.Form;
 import play.libs.Json;
 import play.mvc.*;
@@ -19,7 +20,8 @@ public class Application extends Controller {
 	public static Result index() {
 		if (session().containsKey("conectado")) {
 			try {
-				return ok(partidas.render(Partida.findPartidaUser(new User(session().get("conectado"), "", false))));
+				return ok(partidas.render(Partida.findPartidaUser(new User(
+						session().get("conectado"), "", false))));
 			} catch (Exception e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
@@ -30,7 +32,7 @@ public class Application extends Controller {
 		}
 		return null;
 	}
-	
+
 	public static Result logout() {
 		session().clear();
 		flash("danger", "Salida de sesión.");
@@ -91,20 +93,34 @@ public class Application extends Controller {
 	 * @throws Exception
 	 */
 	public static Result register() {
-		Form<User> filledForm = userForm.bindFromRequest();
+		//Form<Register> requestData = Form.form(Register.class)
+			//	.bindFromRequest();
+		
+		Form<Register> requestData = Form.form(Register.class).bindFromRequest();
 		try {
+			//if (requestData.hasErrors()) {
+			//	return badRequest(registro.render(requestData));
+			//} else {
 			User u = new User();
-			u.login = filledForm.field("login").value();
-			u.password = filledForm.field("password").value();
-			u.admin = Boolean.valueOf(filledForm.field("admin").value());
-
-			User.create(u);
-			return redirect(routes.Application.showUsers());
+			if(requestData.get().password == requestData.get().password2){
+				u.login = requestData.get().login;
+				u.password = requestData.get().password;
+				u.admin = Boolean.valueOf(requestData.get().admin);
+				User.create(u);
+				return redirect(routes.Application.showUsers());
+			}else{
+				flash("danger", "Las passwords no coinciden");
+				return redirect(routes.Application.registerUser());
+			}
 
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		return null;
+	}
+
+	public static Result registerUser() {
+		return ok(registro.render(Form.form(Register.class)));
 	}
 
 	public static Result showUsers() {
@@ -197,10 +213,33 @@ public class Application extends Controller {
 			String idAnswer) {
 		return null;
 	}
-	
+
 	public static Result javascriptRoutes() {
-	    response().setContentType("text/javascript");
-	    return ok(Routes.javascriptRouter("myJsRoutes", routes.javascript.Application.getQuestion()));
+		response().setContentType("text/javascript");
+		return ok(Routes.javascriptRouter("myJsRoutes",
+				routes.javascript.Application.getQuestion()));
+	}
+
+	public static class Register {
+		public String login;
+		public String password;
+		public String password2;
+		public boolean admin;
+
+		public String validate() {
+			if (!password.equals(password2)) {
+				return "Las contraseñas deben coincidir";
+			} else
+				try {
+					if (User.findOne(login) != null) {
+						return "Usuario ya existe";
+					}
+				} catch (Exception e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			return null;
+		}
 	}
 
 }

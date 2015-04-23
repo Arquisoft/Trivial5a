@@ -9,8 +9,12 @@
 			@form(routes.Application.login()) { 
 				@inputText(userForm("login"))
 				@inputPassword(userForm("password")) 
-				<input class="btn btn-primary"
-					type="submit" value="Login"> 
+				<div class="btn-group" role="group">
+					<button class="btn btn-primary" type="submit">Login</button>
+					<a href="/registro">
+						<button type="button" class="btn btn-success">Registrarse</button>
+					</a>
+				</div>
 				}
 		</div>
 	</div>

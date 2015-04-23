@@ -1,7 +1,7 @@
 @(users:List[model.User], userForm: Form[model.User])
 @import helper._
 
-
+@main("usuarios") {
 	<h1>Add a new user</h1>	
 	<ul>
 	@for(user <- users){
@@ -18,8 +18,11 @@
         
         @inputText(userForm("login")) 
       	@inputPassword(userForm("password")) 
+      	@inputPassword(userForm("password2"))
    		@checkbox(userForm("admin")) 
         
         <input type="submit" class="btn" value="Create">
+
+}
 
 }
