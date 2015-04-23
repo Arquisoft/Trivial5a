@@ -153,5 +153,9 @@ public class Application extends Controller {
 	public static Result setRespuesta(String id, String idQuestion, String idAnswer) {
 		return null;
 	}
+	
+	public static Result tablero() {
+		return ok(tablero.render());
+	}
 
 }
