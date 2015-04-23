@@ -1,22 +1,6 @@
 @(partida:model.Partida)
-<!DOCTYPE html>
-<html>
 
-<head>
-
-  <meta charset="UTF-8">
-
-  <title>@partida.id</title>
-	
-	<link rel="stylesheet" type="text/css" 
-                       href='@routes.Assets.at("stylesheets/tablero.css")'>
-    <link rel="stylesheet" type="text/css" 
-                       href='@routes.Assets.at("stylesheets/tablero-main.css")'>
-	<script src="@routes.Assets.at("javascripts/prefixfree.min.js")"></script>
-	
-</head>
-
-<body>
+@main("Partida") {
   <ul id="menu">
   <a class="menu-button" href="#menu" title="Show navigation"></a>
   <a class="menu-button" href="#menu" title="Hide navigation"></a>
@@ -123,6 +107,4 @@
 
   <script src="js/index.js"></script>
 
-</body>
-
-</html>
+}
