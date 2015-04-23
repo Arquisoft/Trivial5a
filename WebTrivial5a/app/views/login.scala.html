@@ -1,14 +1,17 @@
-@(userForm: Form[model.User])
+@(userForm: Form[model.User]) 
 @import helper._
 
+@main("Login") {
+	<div class="row">
+		<div class="col-md-6 form-group">
+			<h2>Login</h2>
 
-<h2>Login</h2>
-    
-    @form(routes.Application.login()) {
-        
-        @inputText(userForm("login")) 
-      	@inputPassword(userForm("password")) 
-        
-        <input type="submit"  value="login">
-
+			@form(routes.Application.login()) { 
+				@inputText(userForm("login"))
+				@inputPassword(userForm("password")) 
+				<input class="btn btn-primary"
+					type="submit" value="Login"> 
+				}
+		</div>
+	</div>
 }

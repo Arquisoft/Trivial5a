@@ -2,17 +2,44 @@
 
 <!DOCTYPE html>
 
+@import helper._ 
+
 <html>
-    <head>
-        <title>@title</title>
-        <link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/main.css")">
-        <link rel="shortcut icon" type="image/png" href="@routes.Assets.at("images/favicon.png")">
-        <script src="@routes.Assets.at("javascripts/hello.js")" type="text/javascript"></script>
-    </head>
-    <body>
-    	<div id="main">
-    		<div class="btn">JUGAR</div>
-    	</div>
+<head>
+<title>Web Trivial 5a - @title</title>
+<link rel='stylesheet'
+	href='@routes.Assets.at("bootstrap/css/bootstrap.min.css")'>
+<link rel='stylesheet'
+	href='@routes.Assets.at("bootstrap/css/bootstrap.theme.min.css")'>
+	<link rel='stylesheet' href='@routes.Assets.at("stylesheets/main.css")'>
+	<script src="@routes.Assets.at("javascripts/jquery.min.js")"></script>
+	<script src="@routes.Assets.at("bootstrap/js/bootstrap.min.js")"></script>
+</head>
+<body>
+	<div class="container-fluid main">
+	@if(flash.containsKey("danger")) {
+	<div class="row">
+				<div class="col-md-12">
+					<div class="alert alert-danger alert-dismissible" role="alert">
+					<button type="button" class="close" data-dismiss="alert" aria-label="Cerrar"><span aria-hidden="true">&times;</span></button>
+						@flash.get("danger")
+					</div>
+				</div>
+	</div>
+	}
+	@if(flash.containsKey("success")) {
+	<div class="row">
+				<div class="col-md-12">
+					<div class="alert alert-success alert-dismissible" role="alert">
+					<button type="button" class="close" data-dismiss="alert" aria-label="Cerrar">
+						<span aria-hidden="true">&times;</span>
+					</button>
+						@flash.get("success")
+					</div>
+				</div>
+	</div>
+	}
         @content
-    </body>
+	</div>
+</body>
 </html>

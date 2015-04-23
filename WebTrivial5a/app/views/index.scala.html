@@ -1,7 +1,7 @@
-@(message: String)
+@(userForm: Form[model.User]) 
 
-@main("Welcome to Play") {
+@main("Web Trivial 5a") {
 
-    @play20.welcome(message, style = "Java")
+    @login(userForm)
 
 }

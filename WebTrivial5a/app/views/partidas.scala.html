@@ -1,13 +1,7 @@
 @(partidas : List[model.Partida])
 @import helper._
 
-<Partida> <!DOCTYPE html>
-<html>
-<head>
-<meta charset="ISO-8859-1">
-<title>Partidas</title>
-</head>
-<body>
+@main("Lista de Partidas") {
 	<h1>Todas las partidas</h1>
 	<table>
 	<h1>Partidas acabadas</h1>
@@ -41,5 +35,4 @@
 	@form(routes.Application.newPartida()) {
 		<input type="submit" class="btn" value="Create">
 	}
-</body>
-</html>
+}

@@ -35,15 +35,23 @@ public class Application extends Controller {
 		 User u = new User();
 		 u.login=filledForm.field("login").value();
 		 u.password=filledForm.field("password").value();
+		 
+		 if(session("conectado")) {
+				return redirect(partidas.render(Partida.findPartidaUser(u)));
+			}
+		 
 		 try{
 			 if (User.login(u.login, u.password)!=null){ 
 				 session().put("conectado", u.login);
 				 session().put("admin", String.valueOf(u.admin));
+				 flash("success", "Login correcto. ¡Bienvenido!");
 				 return ok(partidas.render(Partida.findPartidaUser(u)));
 			 }
 				
-			 else
-				 return ok(login.render(userForm));
+			 else {
+				 flash("danger", "Login incorrecto.");
+				 return redirect("/");
+			 }
 		 }catch(Exception e)
 		 {
 			 e.printStackTrace();

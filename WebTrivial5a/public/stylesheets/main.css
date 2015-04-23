@@ -1,0 +1,17 @@
+.main {
+	margin: 0 auto;
+	padding: 25px;
+	background-color: #eee;
+}
+
+.alert {
+	padding: 10px;
+	width: 100%;
+}
+
+.alert-error {
+	border: 1px solid #a00;
+	background-color: #f77;
+	color: #a00;
+}
+
