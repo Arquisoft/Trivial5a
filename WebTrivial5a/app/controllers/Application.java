@@ -16,6 +16,8 @@ public class Application extends Controller {
 
 	static Form<User> userForm = Form.form(User.class);
 	static Form<Partida> partidaForm = Form.form(Partida.class);
+	static Form<Register> registerForm = Form.form(Register.class);
+
 
 	public static Result index() {
 		if (session().containsKey("conectado")) {
@@ -96,18 +98,19 @@ public class Application extends Controller {
 		//Form<Register> requestData = Form.form(Register.class)
 			//	.bindFromRequest();
 		
-		Form<Register> requestData = Form.form(Register.class).bindFromRequest();
+		Form<Register> requestData = registerForm.bindFromRequest();
 		try {
 			//if (requestData.hasErrors()) {
 			//	return badRequest(registro.render(requestData));
 			//} else {
 			User u = new User();
-			if(requestData.get().password == requestData.get().password2){
-				u.login = requestData.get().login;
-				u.password = requestData.get().password;
-				u.admin = Boolean.valueOf(requestData.get().admin);
+			if(requestData.field("password").value().equals(requestData.field("password2").value()) ){
+				u.login = requestData.field("login").value();
+				u.password = requestData.field("password").value();
+				//u.admin = Boolean.valueOf(requestData.get().admin);
 				User.create(u);
-				return redirect(routes.Application.showUsers());
+				flash("success", "Usuario registrado");
+				return redirect("/registro");
 			}else{
 				flash("danger", "Las passwords no coinciden");
 				return redirect(routes.Application.registerUser());
@@ -120,7 +123,7 @@ public class Application extends Controller {
 	}
 
 	public static Result registerUser() {
-		return ok(registro.render(Form.form(Register.class)));
+		return ok(registro.render(registerForm));
 	}
 
 	public static Result showUsers() {
