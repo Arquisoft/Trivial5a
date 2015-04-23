@@ -1,22 +1,22 @@
-<<<<<<< HEAD
-=======
-xmlhttp.open("GET","localhost:9000/partida/1/Entretenimiento",true);
-xmlhttp.send();
+$('#getPregunta').click(function(e) {
+    var idToGet = $("#getPregunta").val();
+    $.ajax({
+        type : 'GET',
+        url : '@routes.Application.getQuestion()',
+        data : {
+            id: 1, 
+            idCategoria: geografia
+        },
+        success : function(data) {
+            alert("Hola")
+        }
+    });
+    return false;
+});
 
 
->>>>>>> eaec39d518a9d24ce784e1c23b8fc35507cbef13
 
-
-
-
-
-
-
-
-
-
-			
-			var questions = new Array(); // el array questions almacena las preguntas 
+			/*var questions = new Array(); // el array questions almacena las preguntas 
 			var answers = new Array(); // el array answers almacena las respuestas  
 	
 			// Se define la pregunta 1 
@@ -47,4 +47,4 @@ xmlhttp.send();
 			questions[2][4] = "Xilofono"; 
 			
 			// Asignar la respuesta válida para la pregunta 3 
-			answers[2] = "C";
+			answers[2] = "C";*/

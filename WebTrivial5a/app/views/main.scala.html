@@ -19,6 +19,8 @@
 	<script src="@routes.Assets.at("javascripts/prefixfree.min.js")"></script>
 	<script src="@routes.Assets.at("javascripts/jquery.min.js")"></script>
 	<script src="@routes.Assets.at("bootstrap/js/bootstrap.min.js")"></script>
+	<script src="@routes.Assets.at("javascripts/preguntas.js")"></script>
+	<script type="text/javascript" src='@routes.Application.javascriptRoutes()'></script>
 </head>
 <body>
 
@@ -26,8 +28,12 @@
 		<nav class="navbar navbar-default">
   	<div class="container-fluid">
 	    <a class="navbar-brand" href="/">Inicio</a>
+	    <a href="/categorias">
+	    <button type="button" class="btn btn-default navbar-btn">Categorias  <span class="glyphicon glyphicon-remove-circle" aria-hidden="true"></span></button>
+	    </a>
+	    
 	    <a href="/logout">
-	    <button type="button" class="btn btn-default navbar-btn pull-right">Logout  <span class="glyphicon glyphicon-remove-circle" aria-hidden="true"></span></button>
+	    <button type="button" class="btn btn-danger navbar-btn pull-right">Logout  <span class="glyphicon glyphicon-remove-circle" aria-hidden="true"></span></button>
 	    </a>
   	</div>
 </nav>

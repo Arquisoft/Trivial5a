@@ -197,5 +197,10 @@ public class Application extends Controller {
 			String idAnswer) {
 		return null;
 	}
+	
+	public static Result javascriptRoutes() {
+	    response().setContentType("text/javascript");
+	    return ok(Routes.javascriptRouter("myJsRoutes", routes.javascript.Application.getQuestion()));
+	}
 
 }

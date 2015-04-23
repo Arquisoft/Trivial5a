@@ -18,17 +18,21 @@ POST /													controllers.Application.login()
 GET    /new												controllers.Application.showUsers()
 POST   /new                 							 controllers.Application.register()
 
-#GET    /categories											controllers.Application.showQuestions()
+GET    /categorias										controllers.Application.showQuestions()
 
 GET 	/logout											controllers.Application.logout()
 
 GET		/tablero										controllers.Application.newPartida()
 GET		/tablero/:id									controllers.Application.showPartida(id: Long)
+#GET     /pregunta/:id/:idCategoria   					controllers.Application.getQuestion(id: Long, idCategoria: String)
+#POST    /item/new     									controllers.Application.newItem
+
 #GET	/partidas										controllers.Application.showPartidas()
 #GET	/partida/:id									controllers.Application.showPartida(id: String)
-#GET 	/partida/:id/:idCategoria						controllers.Application.getQuestion(id: String, idCategoria: String)
+GET 	/partida/:id/:idCategoria						controllers.Application.getQuestion(id: Long, idCategoria: String)
 #GET 	/partida/:id/:idQuestion						controllers.Application.getRespuesta(id: String, idQuestion: String)
 #POST 	/partida/:id/:idQuestion/:idAnswer				controllers.Application.setRespuesta(id: String, idQuestion: String, idAnswer: String)
+GET     /javascriptRoutes     							controllers.Application.javascriptRoutes
 
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.at(path="/public", file)
