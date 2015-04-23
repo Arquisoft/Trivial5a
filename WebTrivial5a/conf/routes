@@ -21,14 +21,13 @@ POST   /new                 							 controllers.Application.register()
 #GET    /categories											controllers.Application.showQuestions()
 
 
-#POST	/partida										controllers.Application.newPartida()
-#GET		/partidas										controllers.Application.showPartidas()
-#GET		/partida/:id									controllers.Application.showPartida(id: String)
+GET		/tablero										controllers.Application.newPartida()
+GET		/tablero/:id									controllers.Application.showPartida(id: Long)
+#GET	/partidas										controllers.Application.showPartidas()
+#GET	/partida/:id									controllers.Application.showPartida(id: String)
 #GET 	/partida/:id/:idCategoria						controllers.Application.getQuestion(id: String, idCategoria: String)
 #GET 	/partida/:id/:idQuestion						controllers.Application.getRespuesta(id: String, idQuestion: String)
 #POST 	/partida/:id/:idQuestion/:idAnswer				controllers.Application.setRespuesta(id: String, idQuestion: String, idAnswer: String)
-
-GET     /tablero										controllers.Application.tablero()
 
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.at(path="/public", file)

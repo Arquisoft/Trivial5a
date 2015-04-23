@@ -1,4 +1,4 @@
-<!--Modificacion de http://codepen.io/schoenwaldnils/pen/JnIKA-->
+@(partida:model.Partida)
 <!DOCTYPE html>
 <html>
 
@@ -6,7 +6,7 @@
 
   <meta charset="UTF-8">
 
-  <title>CodePen - Circle Menu 2</title>
+  <title>@partida.id</title>
 	
 	<link rel="stylesheet" type="text/css" 
                        href='@routes.Assets.at("stylesheets/tablero.css")'>
@@ -17,7 +17,6 @@
 </head>
 
 <body>
-
   <ul id="menu">
   <a class="menu-button" href="#menu" title="Show navigation"></a>
   <a class="menu-button" href="#menu" title="Hide navigation"></a>

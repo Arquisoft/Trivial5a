@@ -1,4 +1,5 @@
-@(partidass : List[model.Partida])
+@(partidas : List[model.Partida])
+@import helper._
 
 <Partida> <!DOCTYPE html>
 <html>
@@ -9,11 +10,17 @@
 <body>
 	<h1>Todas las partidas</h1>
 	<table>
-		@for(partida <- partidass) {
+		@for(partida <- partidas) {
 		<tr>
-			<td>@partida</td>
+			<td>@form(routes.Application.showPartida(partida.id)) {
+				<input type="submit" class="btn" value="@partida.id">
+				}
+			</td>	
 		</tr>
 		}
 	</table>
+	@form(routes.Application.newPartida()) {
+		<input type="submit" class="btn" value="Create">
+	}
 </body>
 </html>

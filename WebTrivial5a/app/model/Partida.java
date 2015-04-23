@@ -1,29 +1,20 @@
 package model;
 
-import play.modules.mongodb.jackson.MongoDB;
-import scala.Array;
-
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+import java.util.Random;
+import java.util.Set;
 
 import com.google.gson.Gson;
-import com.mongodb.BasicDBObject;
-
-
-import com.mongodb.DBObject;
 
 import controllers.MongoConnection;
-import model.Question;
-import net.vz.mongodb.jackson.*;
-import model.User;
 
 public class Partida {
 	public static final int MAX_CATEGORIAS = 6;
 
 	
-	public List<User> usuarios= new ArrayList<User>();
-	
-	public List<Long> idUsers;
-	
+	public List<User> usuarios= new ArrayList<User>();	
 
 	public Long id;
 	
@@ -42,7 +33,6 @@ public class Partida {
 			Map<Long, Set<String>> quesitosPorJugador) {
 		super();
 		this.usuarios = usuarios;
-		this.idUsers = idUsers;
 		this.id = id;
 		this.finished = finished;
 		this.idAskedQuestions = idAskedQuestions;
@@ -73,8 +63,9 @@ public class Partida {
 	   * Metodo que es llamado por el anterior y guarda en la BBDD
 	   * @param user
 	   */
-		  public static void create(Partida partida) throws Exception {
+		  public static Partida create(Partida partida) throws Exception {
 			 MongoConnection.addPartida(partida);
+			 return MongoConnection.findPartida(partida.id);
 		  }
 
 		  /**

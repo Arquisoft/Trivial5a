@@ -379,7 +379,7 @@ public class MongoConnection {
 			List<Partida> partidas = new ArrayList<Partida>();
 
 			// Crea una tabla si no existe y agrega datos
-			table = db.getCollection("categorias");
+			table = db.getCollection("partidas");
 			DBCursor cursor = table.find();
 			while (cursor.hasNext()) {
 				Partida partida = new Gson().fromJson(cursor.next().toString(),
@@ -416,9 +416,9 @@ public class MongoConnection {
 		if (client != null) {
 			// Crea una tabla si no existe y agrega datos
 			table = db.getCollection("partidas");
-			DBObject user = new BasicDBObject("id", id);
+			DBObject p = new BasicDBObject("id", id);
 			Gson g = new Gson();
-			DBObject obj = table.findOne(user);
+			DBObject obj = table.findOne(p);
 			if (obj != null) {
 				Partida partida = g.fromJson(obj.toString(), Partida.class);
 				return partida;

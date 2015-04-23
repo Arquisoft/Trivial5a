@@ -24,6 +24,5 @@ libraryDependencies ++= Seq(
   "org.mongodb" % "mongo-java-driver" % "2.13.0"
 )
 
-fork in run := true
+fork in run := false
 
-fork in run := true
