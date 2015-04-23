@@ -10,12 +10,31 @@
 <body>
 	<h1>Todas las partidas</h1>
 	<table>
+	<h1>Partidas acabadas</h1>
 		@for(partida <- partidas) {
+			@if(partida.finished==true){
+			<tr>
+				<td>
+				@form(routes.Application.showPartida(partida.id)) {
+				<input type="submit" class="btn" value="@partida.id">
+					}
+				</td>
+				}
+			</tr>
+			}
+			</table>
+				
+	<table>
+		<h1>Partidas activas</h1>
+		@for(partida <- partidas) {
+			@if(partida.finished==false){
 		<tr>
-			<td>@form(routes.Application.showPartida(partida.id)) {
+			<td>
+			@form(routes.Application.showPartida(partida.id)) {
 				<input type="submit" class="btn" value="@partida.id">
 				}
-			</td>	
+				</td>
+		}
 		</tr>
 		}
 	</table>
