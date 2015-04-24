@@ -4,105 +4,19 @@
   <ul id="menu">
   <a class="menu-button" href="#menu" title="Show navigation"></a>
   <a class="menu-button" href="#menu" title="Hide navigation"></a>
+  @for(a <-1 to 30){
+  @if(a==1||a==6||a==11||a==16||a==21||a==26){
   <li class="menu-item  icon-star">
     <a class="menu-item-back" href="#menu"></a>
+    <div id="circle"></div>
   </li>
+  }else{
   <li class="menu-item">
     <a class="menu-item-back" href="#menu"></a>
+    <div id="circle"></div>
   </li>
-  <li class="menu-item">
-    <a class="menu-item-back" href="#menu"></a>
-  </li>
-  <li class="menu-item">
-    <a class="menu-item-back" href="#menu"></a>
-  </li>
-  <li class="menu-item">
-    <a class="menu-item-back" href="#menu"></a>
-  </li>
-  <li class="menu-item  icon-star">
-    <a class="menu-item-back" href="#menu"></a>
-  </li>
-  <li class="menu-item">
-    <a class="menu-item-back" href="#menu"></a>
-  </li>
-  <li class="menu-item">
-    <a class="menu-item-back" href="#menu"></a>
-  </li>
-  <li class="menu-item">
-    <a class="menu-item-back" href="#menu"></a>
-  </li>
-  <li class="menu-item">
-    <a class="menu-item-back" href="#menu"></a>
-  </li>
-  <li class="menu-item  icon-star">
-    <a class="menu-item-back" href="#menu"></a>
-  </li>
-  <li class="menu-item">
-    <a class="menu-item-back" href="#menu"></a>
-  </li>
-  <li class="menu-item">
-    <a class="menu-item-back" href="#menu"></a>
-  </li>
-  <li class="menu-item">
-    <a class="menu-item-back" href="#menu"></a>
-  </li>
-  <li class="menu-item">
-    <a class="menu-item-back" href="#menu"></a>
-  </li>
-  <li class="menu-item     icon-star">
-    <a class="menu-item-back" href="#menu"></a>
-  </li>
-  <li class="menu-item">
-    <a class="menu-item-back" href="#menu"></a>
-  </li>
-
-  <li class="menu-item">
-    <a class="menu-item-back" href="#menu"></a>
-  </li>
-
-  <li class="menu-item">
-    <a class="menu-item-back" href="#menu"></a>
-  </li>
-
-  <li class="menu-item">
-    <a class="menu-item-back" href="#menu"></a>
-  </li>
-
-  <li class="menu-item    icon-star">
-    <a class="menu-item-back" href="#menu"></a>
-  </li>
-
-  <li class="menu-item">
-    <a class="menu-item-back" href="#menu"></a>
-  </li>
-
-  <li class="menu-item">
-    <a class="menu-item-back" href="#menu"></a>
-  </li>
-
-  <li class="menu-item">
-    <a class="menu-item-back" href="#menu"></a>
-  </li>
-
-  <li class="menu-item">
-    <a class="menu-item-back" href="#menu"></a>
-  </li>
-
-  <li class="menu-item     icon-star">
-    <a class="menu-item-back" href="#menu"></a>
-  </li>
-
-  <li class="menu-item">
-    <a class="menu-item-back" href="#menu"></a>
-  </li>
-  <li class="menu-item">
-    <a class="menu-item-back" href="#menu"></a>
-  </li>
-  <li class="menu-item">
-    <a class="menu-item-back" href="#menu"></a>
-    <li class="menu-item">
-      <a class="menu-item-back" href="#menu"></a>
-    </li>
+  }
+  }
 </ul>
 
 <a href="/partida/@partida.id/Historia">
