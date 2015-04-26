@@ -24,6 +24,8 @@ GET    		/categorias										controllers.Application.showQuestions()
 GET 		/logout											controllers.Application.logout()
 
 GET			/tablero										controllers.Application.newPartida()
+POST   		/partidas/:id/delete       						controllers.Application.deletePartida(id: Long)	
+POST   		/partidas/:id/exit      						controllers.Application.exitPartida(id: Long)			           
 GET			/tablero/:id									controllers.Application.showPartida(id: Long)
 #GET     	/pregunta/:id/:idCategoria   					controllers.Application.getQuestion(id: Long, idCategoria: String)
 #POST    	/item/new     									controllers.Application.newItem

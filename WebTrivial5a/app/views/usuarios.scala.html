@@ -2,7 +2,7 @@
 @import helper._
 
 @main("usuarios") {
-	<h1>Add a new user</h1>	
+	<h1>Usuarios registrados</h1>	
 	<ul>
 	@for(user <- users){
 		<li>
@@ -12,17 +12,6 @@
 		
 		</ul>
 
-<h2>Add a new user</h2>
-    
-    @form(routes.Application.register()) {
-        
-        @inputText(userForm("login")) 
-      	@inputPassword(userForm("password")) 
-      	@inputPassword(userForm("password2"))
-   		@checkbox(userForm("admin")) 
-        
-        <input type="submit" class="btn" value="Create">
 
-}
 
 }

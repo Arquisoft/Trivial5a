@@ -164,6 +164,7 @@ public class Application extends Controller {
 					Boolean.valueOf(session().get("admin")));
 			p.id = (long) Partida.all().size();
 			p.usuarios.add(u);
+			p.activeUser=u;
 			tablero.render(Partida.create(p));
 			return redirect(routes.Application.showPartida(p.id));
 
@@ -172,6 +173,42 @@ public class Application extends Controller {
 		}
 		return null;
 	}
+	
+	
+	/**
+	 * Elimina partidas
+	 * @param id
+	 * @return
+	 */
+	public static Result  deletePartida(Long id) {
+		try {
+			
+			Partida.delete(id);
+			return redirect(routes.Application.login());
+ 
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return null;
+	}
+	
+	/**
+	 * Sale de la partida 
+	 * @param id
+	 * @return
+	 */
+	public static Result  exitPartida(Long id) {
+		try {
+			
+			Partida.salirPartida(id,session().get("conectado"));
+			return redirect(routes.Application.login());
+ 
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return null;
+	}
+
 
 	public static Result showPartidasUser(User user) {
 		try {

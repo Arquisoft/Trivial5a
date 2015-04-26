@@ -74,12 +74,22 @@ public class Partida {
 		 * @throws Exception 
 		   */
 		  public static void delete(Long id) throws Exception {
-			  
 			  MongoConnection.removePartida(id);
 			  
 		  }
 
-		 
+		  /**
+		   * Sale de la partida
+		   * @param login
+		 * @throws Exception 
+		   */
+		  public static void salirPartida(Long id,String login) throws Exception {
+			  User u = MongoConnection.findUser(login);
+			 Partida p= MongoConnection.findPartida(id);
+			 p.usuarios.remove(u);
+			 MongoConnection.addPartida(p);
+			  
+		  }
 		  
 		  /**Busca una partida para un jugador dado
 		   * 
