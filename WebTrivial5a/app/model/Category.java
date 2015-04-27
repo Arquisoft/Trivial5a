@@ -99,7 +99,7 @@ public class Category{
 		   */
 		  public static Category findOne(String name) throws Exception
 		  {
-			return MongoConnection.findCategory(name);
+			return MongoConnection.findCategory(" "+name);
 		  }
 		  
 		  public static List<Category> all() throws Exception

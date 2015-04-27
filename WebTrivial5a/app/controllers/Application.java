@@ -233,31 +233,39 @@ public class Application extends Controller {
 		return TODO;
 	}
 
-	public static Result getQuestion(Long id, String idCategoria) {
+	public static Result getQuestion(Long id, String idCategoria) throws Exception{
 		Partida partidaActiva;
-		try {
+		Question q;
+	
 			partidaActiva = Partida.findOne(id);
-			Question q = partidaActiva.devolverPregunta(idCategoria);
-			return ok(Json.toJson(q));
+			 q = partidaActiva.devolverPregunta(idCategoria);
+			return ok(preguntaventana.render(id, q));
+  
 
+	}
+	
+	public static Result contesta(String category,String identifier, String contestada,Long id)
+	{	Partida p= Partida.findOne(id);	//coges la partida
+		
+		
+		Category c = Category.findOne(category); //coges la categoria
+		for (Question q : c.questions) 
+		if(q.equals(identifier)) //buscas la pregunta
+		{
+			if(q.correctAnswer.equals(contestada)) //si contestaste bien
+			p.acierta(q, quesito); //donde sea la estrella en el circulo
+			else
+				p.falla(q);
+		}
+		
+		try {
+			return ok(tablero.render(Partida.findOne(id)));
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		return TODO;
-
 	}
-
-	public static Result getRespuesta(String id, String idQuestion) {
-
-		return null;
-	}
-
-	public static Result setRespuesta(String id, String idQuestion,
-			String idAnswer) {
-		return null;
-	}
-
 	public static Result javascriptRoutes() {
 		response().setContentType("text/javascript");
 		return ok(Routes.javascriptRouter("myJsRoutes",

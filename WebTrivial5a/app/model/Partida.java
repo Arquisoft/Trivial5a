@@ -20,7 +20,7 @@ public class Partida {
 	
 	public boolean finished;
 	
-	public  List<String> idAskedQuestions;
+	public  List<String> idAskedQuestions= new ArrayList<String>();
 	public User activeUser;
 	
 	public Map<Long,Set<String>> quesitosPorJugador;
@@ -175,9 +175,9 @@ public class Partida {
 				Category c =Category.findOne(category);
 				c.shuffleQuestions(new Random().nextInt());
 				
-				 q = c.questions.get(1);
+				 q = c.questions.get(0);
 				}
-					while(isAsked(q.identifier)==false);	
+					while(isAsked(q.identifier)!=false);	
 					idAskedQuestions.add(q.identifier);
 				return q;
 			}

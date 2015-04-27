@@ -1,4 +1,5 @@
 @(partida:model.Partida)
+@import helper._
 
 @main("Partida") {
   <ul id="menu">
@@ -19,10 +20,7 @@
   }
 </ul>
 
-<a href="/partida/@partida.id/Historia">
-	<button id="getPregunta" type="submit" class="btn btn-primary btn-lg">Pregunta</button>
-</a>
-
-  <script src="js/index.js"></script>
-
+	@form(routes.Application.getQuestion(partida.id," Historia")){
+	<button id="getQuestion" type="submit" class="btn btn-primary btn-lg">Pregunta</button>
+	}
 }
