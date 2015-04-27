@@ -107,9 +107,13 @@ public class Application extends Controller {
 			if(requestData.field("password").value().equals(requestData.field("password2").value()) ){
 				u.login = requestData.field("login").value();
 				u.password = requestData.field("password").value();
-				//u.admin = Boolean.valueOf(requestData.get().admin);
+				if(User.findOne(u.login) == null)
+				{
 				User.create(u);
 				flash("success", "Usuario registrado");
+				}
+				else
+					flash("danger", "ya hay un usuario con ese login");
 				return redirect("/registro");
 			}else{
 				flash("danger", "Las passwords no coinciden");
