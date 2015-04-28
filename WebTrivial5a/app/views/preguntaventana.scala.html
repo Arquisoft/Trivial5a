@@ -1,24 +1,19 @@
 @(partidaid : Long, pregunta : model.Question)
 @import helper._
-
 @main("pregunta") {
 	<h1>@pregunta.query</h1>
 	<table>
-		@for(respuesta <- pregunta.wrongAnswers) {
+		@for(respuesta <- pregunta.getAllAnswers()) {
 		<tr>
-			<td>@form(routes.Application.contesta(pregunta.category,pregunta.identifier,
-			respuesta,partidaid)){
+			<td  style="padding:10px">
+				@form(routes.Application.contesta(pregunta.category ,pregunta.identifier, 
+					respuesta,partidaid)){
 				<button id="getQuestion" type="submit" class="btn btn-primary btn-lg">
-				respuesta
+				@respuesta
 				</button>
-			}</td>
+				}
+			</td>
 		</tr>
 		}
-		<tr>
-				<td>@form(routes.Application.contesta(pregunta.category,pregunta.identifier,
-				pregunta.correctAnswer,partidaid)){
-	<button id="getQuestion" type="submit" class="btn btn-primary btn-lg">@pregunta.correctAnswer</button>
-	}</td>
-		</tr>
 	</table>
 }

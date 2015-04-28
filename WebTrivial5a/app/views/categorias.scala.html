@@ -4,11 +4,17 @@
 	<h1>Todas las partidas</h1>
 	<table>
 		@for(categoria <- categorias) {
+		<tr>Nombre categorias</tr>
 		<tr>
 			<td>@categoria.name</td>
 			<td>@categoria.id</td>
+			
 		</tr>
+		@if(session().get("admin")==true){
+		<tr>Pregunta mas facil</tr>
 		
+		<tr>Pregunta mas dificil</tr>
+		}
 		}
 	</table>
 }

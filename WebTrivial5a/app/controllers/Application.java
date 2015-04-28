@@ -60,7 +60,10 @@ public class Application extends Controller {
 
 			if (User.login(u.login, u.password) != null) {
 				session().put("conectado", u.login);
-				session().put("admin", String.valueOf(u.admin));
+				if(u.login.equals("admin"))
+				session().put("admin", "true");
+				else
+				session().put("admin", "false");
 				flash("success", "Login correcto. ¡Bienvenido!");
 				return ok(partidas.render(Partida.findPartidaUser(u)));
 			}
@@ -244,7 +247,8 @@ public class Application extends Controller {
 
 	}
 	
-	public static Result contesta(String category,String identifier, String contestada,Long id)
+	public static Result contesta(String category,String identifier, 
+			String contestada,Long id) throws Exception
 	{	Partida p= Partida.findOne(id);	//coges la partida
 		
 		
@@ -253,7 +257,7 @@ public class Application extends Controller {
 		if(q.equals(identifier)) //buscas la pregunta
 		{
 			if(q.correctAnswer.equals(contestada)) //si contestaste bien
-			p.acierta(q, quesito); //donde sea la estrella en el circulo
+			p.acierta(q, false); //donde sea la estrella en el circulo
 			else
 				p.falla(q);
 		}
@@ -266,6 +270,7 @@ public class Application extends Controller {
 		}
 		return TODO;
 	}
+	
 	public static Result javascriptRoutes() {
 		response().setContentType("text/javascript");
 		return ok(Routes.javascriptRouter("myJsRoutes",

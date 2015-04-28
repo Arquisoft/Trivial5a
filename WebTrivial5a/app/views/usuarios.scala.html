@@ -4,13 +4,27 @@
 @main("usuarios") {
 	<h1>Usuarios registrados</h1>	
 	<ul>
+	<table>
+	<tr><th>Login:</th>
+	@if(session().get("admin")=="true"){
+		<th>Preguntas acertadas</th>
+		<th>Preguntas falladas</th>
+	}
+	</tr>
 	@for(user <- users){
-		<li>
-			Login: @user.login
-		</li>
-		}
+	<tr>
+		<td>
+			 @user.login
+		</td>
 		
-		</ul>
+		@if(session().get("admin")=="true"){
+		<td>@user.numberCorrectAnswer<td>
+		<td>@user.numberWrongAnswer<td>
+		
+		}
+		</tr>
+		}
+	</table>	
 
 
 
