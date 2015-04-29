@@ -187,7 +187,7 @@ public class Application extends Controller {
 	 * @param id
 	 * @return
 	 */
-	public static Result  deletePartida(Long id) {
+	public static Result deletePartida(Long id) {
 		try {
 			
 			Partida.delete(id);

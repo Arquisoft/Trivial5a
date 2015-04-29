@@ -26,7 +26,7 @@ GET 		/logout											controllers.Application.logout()
 POST			/tablero									controllers.Application.contesta(categoria:String, q:String ,contestada:String , id: Long)
 
 GET			/tablero										controllers.Application.newPartida()
-POST   		/partidas/:id/delete       						controllers.Application.deletePartida(id: Long)	
+GET 		/partidas/:id/delete       						controllers.Application.deletePartida(id: Long)	
 POST   		/partidas/:id/exit      						controllers.Application.exitPartida(id: Long)			           
 GET			/tablero/:id									controllers.Application.showPartida(id: Long)
 GET     	/pregunta/:id/:idCategoria   					controllers.Application.getQuestion(id: Long, idCategoria: String)
