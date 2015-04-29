@@ -1,19 +1,29 @@
-@(categorias : List[model.Category])
+@(categorias : List[model.Category], faciles : List[String],  dificiles: List[String])
 
 @main("categorias") {
-	<h1>Todas las partidas</h1>
-	<table>
-		@for(categoria <- categorias) {
-		<tr>Nombre categorias</tr>
+	<h1>Categorias</h1>
+	<table class= "table">
 		<tr>
-			<td>@categoria.id</td>
-			
+			<th class="text-center success">Nombre categorias</th>
+			@if(session().get("admin")=="true"){
+				<th class="text-center success">Pregunta mas facil</th>
+				<th class="text-center success">Pregunta mas dificil</th>
+			}
 		</tr>
-		@if(session().get("admin")==true){
-		<tr>Pregunta mas facil</tr>
 		
-		<tr>Pregunta mas dificil</tr>
-		}
-		}
+			@for(categoria <- categorias) {
+			<tr>
+				<td class="text-center">@categoria.name</td>
+				@if(session().get("admin")=="true"){
+					<td class="text-center">@faciles.get(categorias.indexOf(categoria))</td>
+				
+					<td class="text-center">@dificiles.get(categorias.indexOf(categoria))</td>
+				}
+			</tr>
+			}
+				
+			
 	</table>
-}
+}	
+				 
+		

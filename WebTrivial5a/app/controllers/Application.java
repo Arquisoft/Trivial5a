@@ -79,28 +79,13 @@ public class Application extends Controller {
 
 	}
 	
-	/*public static Result showCategoriesQuestions() {
+	public static Result showCategoriesQuestions() {
 
 		try {
-			Question preguntaMasFacil = Category.showEstadisticsCategory().get("preguntaFacil");
-			return ok(categorias.render(Category.all(), preguntaMasFacil));
+			return ok(categorias.render(Category.all(), Category.easyQuestions(), Category.hardQuestions()));
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		// return null;
-		return TODO;
-	}*/
-
-	public static Result showCategories() {
-
-		try {
-			//return ok(categorias.render(Category.all()));
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		// return null;
 		return TODO;
 	}
 
@@ -217,7 +202,7 @@ public class Application extends Controller {
 	 * @param id
 	 * @return
 	 */
-	public static Result  exitPartida(Long id) {
+	public static Result exitPartida(Long id) {
 		try {
 			
 			Partida.salirPartida(id,session().get("conectado"));

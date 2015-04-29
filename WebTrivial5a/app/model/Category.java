@@ -6,12 +6,12 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Random;
 
+import net.vz.mongodb.jackson.Id;
+import net.vz.mongodb.jackson.ObjectId;
+
 import com.google.gson.Gson;
 
 import controllers.MongoConnection;
-import net.vz.mongodb.jackson.*;
-import model.Question;
-import play.modules.mongodb.jackson.MongoDB;
 
 
 public class Category{
@@ -23,9 +23,6 @@ public class Category{
 	public String name;
 	
 	public List<Question> questions= new ArrayList<Question>();
-	
-	
-	
 	
 	public Category(String name, List<Question> preguntas) {
 		super();
@@ -95,16 +92,70 @@ public class Category{
 		   * 
 		   * @param login
 		   * @return
-		 * @throws Exception 
+		   * @throws Exception 
 		   */
 		  public static Category findOne(String name) throws Exception
 		  {
 			return MongoConnection.findCategory(name);
 		  }
 		  
+		  /**Retorna todas las categorias con todas sus preguntas cargadas.
+		   * 
+		   * @param login
+		   * @return
+		   * @throws Exception 
+		   */
 		  public static List<Category> all() throws Exception
 		  {
 			  return MongoConnection.findAllQuestion();
+		  }
+		  
+		  /**Retorna todas las preguntas faciles de cada categoria.
+		   * 
+		   * @return
+		   * @throws Exception 
+		   */
+		  public static List<String> easyQuestions() throws Exception
+		  {
+			  List<Category> c = MongoConnection.findAllQuestion();
+			  Question[] easyQuestions = new Question[c.size()];
+			  for (int i = 0; i<c.size(); i++) {
+				for(Question q : c.get(i).questions){
+					if(easyQuestions[i] == null)
+						easyQuestions[i] = q;
+					if(easyQuestions[i].vecesAcertada < q.vecesAcertada)
+						easyQuestions[i] = q;
+				}
+			  }
+			  List<String> r = new ArrayList<String>();
+			  for(Question q : easyQuestions)
+				  r.add(q.query);
+			  return r;
+			  
+		  }
+		  
+		  /**Retorna todas las preguntas dificiles de cada categoria.
+		   * 
+		   * @return
+		   * @throws Exception 
+		   */
+		  public static List<String> hardQuestions() throws Exception
+		  {
+			  List<Category> c = MongoConnection.findAllQuestion();
+			  Question[] hardQuestions = new Question[c.size()];
+			  for (int i = 0; i<c.size(); i++) {
+				for(Question q : c.get(i).questions){
+					if(hardQuestions[i] == null)
+						hardQuestions[i] = q;
+					if(hardQuestions[i].vecesFallada < q.vecesFallada)
+						hardQuestions[i] = q;
+				}
+			  }
+			  List<String> r = new ArrayList<String>();
+			  for(Question q : hardQuestions)
+				  r.add(q.query);
+			  return r;
+			  
 		  }
 		  
 		  /**Busca una categoria, una preguntas y lo actualiza

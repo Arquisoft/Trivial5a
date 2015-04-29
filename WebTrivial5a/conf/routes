@@ -15,12 +15,12 @@ POST		/												controllers.Application.login()
 #POST		/user/delete/:id 								controllers.Application.deleteUser(id: Long)
 #DELETE		/user/:id 										controllers.Application.deleteUser(id: Long)
 
-GET    		/usuario											controllers.Application.showUsers()
+GET    		/usuario										controllers.Application.showUsers()
 POST   		/new                 							controllers.Application.register()
 GET			/registro										controllers.Application.registerUser()
 
-#GET    		/categorias										controllers.Application.showCategories()
-#GET    		/categorias										controllers.Application.showCategoriesQuestions()
+#GET    	/categorias										controllers.Application.showCategories()
+GET    		/categorias										controllers.Application.showCategoriesQuestions()
 
 GET 		/logout											controllers.Application.logout()
 
@@ -31,7 +31,7 @@ GET			/tablero										controllers.Application.newPartida()
 GET 		/partidas/:id/delete       						controllers.Application.deletePartida(id: Long)	
 POST   		/partidas/:id/exit      						controllers.Application.exitPartida(id: Long)			           
 GET			/tablero/:id									controllers.Application.showPartida(id: Long)
-GET     	/pregunta/:id/:idCategoria				controllers.Application.getQuestion(id: Long, idCategoria: String)
+GET     	/pregunta/:id/:idCategoria						controllers.Application.getQuestion(id: Long, idCategoria: String)
 #POST    	/item/new     									controllers.Application.newItem
 
 #GET 		/partida/:id/:idCategoria						controllers.Application.getQuestion(id: Long, idCategoria: String)
