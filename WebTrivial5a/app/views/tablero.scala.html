@@ -8,12 +8,46 @@
   @for(a <-1 to 30){
   @if(a==1||a==6||a==11||a==16||a==21||a==26){
   <li class="menu-item  icon-star">
-    <a class="menu-item-back" href="#menu"></a>
+  @if(a==1){
+    <a id="QDeportes" class="menu-item-back" href="#menu"></a>
+    }
+  @if(a==6){
+    <a id="QHistoria" class="menu-item-back" href="#menu"></a>
+    }
+  @if(a==11){
+    <a id="QEspectaculos" class="menu-item-back" href="#menu"></a>
+    }
+  @if(a==16){
+    <a id="QCiencia" class="menu-item-back" href="#menu"></a>
+    }
+  @if(a==21){
+    <a id="QArte" class="menu-item-back" href="#menu"></a>
+    }
+  @if(a==26){
+    <a id="QGeografia" class="menu-item-back" href="#menu"></a>
+    }
     <div id="circle"></div>
   </li>
   }else{
   <li class="menu-item">
-    <a class="menu-item-back" href="#menu"></a>
+  @if(a==1||a==7||a==13||a==19||a==25){
+    <a id="Deportes" class="menu-item-back" href="#menu"></a>
+    }
+  @if(a==2||a==8||a==14||a==20||a==26){
+    <a id="Geografia" class="menu-item-back" href="#menu"></a>
+    }
+  @if(a==3||a==9||a==15||a==21||a==27){
+    <a id="Arte" class="menu-item-back" href="#menu"></a>
+    }
+ @if(a==4||a==10||a==16||a==22||a==28){
+    <a id="Ciencia" class="menu-item-back" href="#menu"></a>
+    }
+  @if(a==5||a==11||a==17||a==23||a==29){
+    <a id="Espectaculos" class="menu-item-back" href="#menu"></a>
+    }
+ @if(a==6||a==12||a==18||a==24||a==30){
+    <a id="Historia" class="menu-item-back" href="#menu"></a>
+    }
     <div id="circle"></div>
   </li>
   }
