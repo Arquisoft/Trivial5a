@@ -15,8 +15,8 @@ html, body {
   border-radius: 100px;
   border-radius: 50%;
   position: absolute;
-  left: 50%;
-  top: 50%;
+  left: 75%;
+  top: 55%;
   list-style: none;
   font-size: 200%;
   transition: width 500ms, height 500ms, margin 500ms;
@@ -94,7 +94,7 @@ html, body {
 }
 
 #circle {
-  background: #f00;
+  	background: #A4A4A4;
     width: 30px;
     height: 30px;
     border-radius: 50%;
@@ -145,7 +145,7 @@ background: #229cdc;
 
 .menu-item:nth-child(5) .menu-item-back {
   transform: rotate(-60deg) skew(-78deg);
-background: #8b7d6b;
+background: red;
 }
 
 .menu-item:nth-child(5):before {
@@ -253,7 +253,7 @@ background: #229cdc;
 
 .menu-item:nth-child(11) .menu-item-back {
   transform: rotate(12deg) skew(-78deg);
-background: #8b7d6b;
+background: red;
 }
 
 .menu-item:nth-child(11):before {
@@ -361,7 +361,7 @@ background: #229cdc;
 
 .menu-item:nth-child(17) .menu-item-back {
   transform: rotate(84deg) skew(-78deg);
-background: #8b7d6b;
+background: red;
 }
 
 .menu-item:nth-child(17):before {
@@ -469,7 +469,7 @@ background: #229cdc;
 
 .menu-item:nth-child(23) .menu-item-back {
   transform: rotate(156deg) skew(-78deg);
-background: #8b7d6b;
+background: red;
 }
 
 .menu-item:nth-child(23):before {
@@ -577,7 +577,7 @@ background: #229cdc;
 
 .menu-item:nth-child(29) .menu-item-back {
   transform: rotate(228deg) skew(-78deg);
-background: #8b7d6b;
+background: red;
 }
 
 .menu-item:nth-child(29):before {
@@ -641,4 +641,8 @@ background: #ffe800;
 .menu-item:nth-child(32) #circle{
   top:-235px;
   left:-62px;
+}
+
+.tablaJugador{
+	float:left;
 }
