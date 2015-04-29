@@ -328,9 +328,10 @@ public class MongoConnection {
 		if (client != null) {
 			// Crea una tabla si no existe y agrega datos
 			table = db.getCollection("categorias");
-			DBObject user = new BasicDBObject("name"," Entretenimiento");
+			String n = " " + name;
+			DBObject cat = new BasicDBObject("name", n);
 			Gson g = new Gson();
-			DBObject obj = table.findOne(user);
+			DBObject obj = table.findOne(cat);
 			if (obj != null) {
 				Category c = g.fromJson(obj.toString(), Category.class);
 				return c;

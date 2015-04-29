@@ -6,8 +6,11 @@
 		@for(respuesta <- pregunta.getAllAnswers()) {
 		<tr>
 			<td  style="padding:10px">
-				@form(routes.Application.contesta(pregunta.category ,pregunta.identifier, 
-					respuesta,partidaid)){
+				@form(routes.Application.contesta()){
+					<input type ="hidden" name="category" value="@pregunta.category" />
+					<input type ="hidden" name="identifier" value="@pregunta.identifier" />
+					<input type ="hidden" name="contestada" value="@respuesta" />
+					<input type ="hidden" name="id" value="@partidaid" />
 				<button id="getQuestion" type="submit" class="btn btn-primary btn-lg">
 				@respuesta
 				</button>
