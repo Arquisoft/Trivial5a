@@ -85,4 +85,40 @@ public class Question {
 		Collections.shuffle(Arrays.asList(ans), new Random(s));
 		return ans;
 	}
+	
+	/**
+	 * Devuelve el valor de vecesFallada
+	 * 
+	 * @return vecesFallada
+	 */
+	public int getVecesFallada() {
+		return vecesFallada;
+	}
+
+	/**
+	 * Cambia el valor de vecesFallada
+	 * 
+	 * @param vecesFallada
+	 */
+	public void setVecesFallada(int vecesFallada) {
+		this.vecesFallada = vecesFallada;
+	}
+
+	/**
+	 * Devuelve el valor de vecesAcertada
+	 * 
+	 * @return vecesAcertada
+	 */
+	public int getVecesAcertada() {
+		return vecesAcertada;
+	}
+
+	/**
+	 * Cambia el valor de vecesAcertada
+	 * 
+	 * @param vecesAcertada
+	 */
+	public void setVecesAcertada(int vecesAcertada) {
+		this.vecesAcertada = vecesAcertada;
+	}
 }

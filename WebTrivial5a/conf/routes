@@ -15,24 +15,26 @@ POST		/												controllers.Application.login()
 #POST		/user/delete/:id 								controllers.Application.deleteUser(id: Long)
 #DELETE		/user/:id 										controllers.Application.deleteUser(id: Long)
 
-GET    		/new											controllers.Application.showUsers()
+GET    		/usuario											controllers.Application.showUsers()
 POST   		/new                 							controllers.Application.register()
 GET			/registro										controllers.Application.registerUser()
 
-GET    		/categorias										controllers.Application.showQuestions()
+#GET    		/categorias										controllers.Application.showCategories()
+#GET    		/categorias										controllers.Application.showCategoriesQuestions()
 
 GET 		/logout											controllers.Application.logout()
 
-POST			/tablero									controllers.Application.contesta(categoria:String, q:String ,contestada:String , id: Long)
+#POST			/tablero									controllers.Application.contesta()
+POST            /tablero                                    controllers.Application.contesta(categoria:String, q:String ,contestada:String , id: Long)
 
 GET			/tablero										controllers.Application.newPartida()
 GET 		/partidas/:id/delete       						controllers.Application.deletePartida(id: Long)	
 POST   		/partidas/:id/exit      						controllers.Application.exitPartida(id: Long)			           
 GET			/tablero/:id									controllers.Application.showPartida(id: Long)
-GET     	/pregunta/:id/:idCategoria   					controllers.Application.getQuestion(id: Long, idCategoria: String)
+GET     	/pregunta/:id/:idCategoria				controllers.Application.getQuestion(id: Long, idCategoria: String)
 #POST    	/item/new     									controllers.Application.newItem
 
-GET 		/partida/:id/:idCategoria						controllers.Application.getQuestion(id: Long, idCategoria: String)
+#GET 		/partida/:id/:idCategoria						controllers.Application.getQuestion(id: Long, idCategoria: String)
 GET     	/javascriptRoutes     							controllers.Application.javascriptRoutes
 
 # Map static resources from the /public folder to the /assets URL path

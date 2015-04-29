@@ -78,11 +78,24 @@ public class Application extends Controller {
 		return null;
 
 	}
-
-	public static Result showQuestions() {
+	
+	/*public static Result showCategoriesQuestions() {
 
 		try {
-			return ok(categorias.render(Category.all()));
+			Question preguntaMasFacil = Category.showEstadisticsCategory().get("preguntaFacil");
+			return ok(categorias.render(Category.all(), preguntaMasFacil));
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		// return null;
+		return TODO;
+	}*/
+
+	public static Result showCategories() {
+
+		try {
+			//return ok(categorias.render(Category.all()));
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -256,9 +269,11 @@ public class Application extends Controller {
 		for (Question q : c.questions) 
 		if(q.equals(identifier)) //buscas la pregunta
 		{
-			if(q.correctAnswer.equals(contestada)) //si contestaste bien
-			p.acierta(q, false); //donde sea la estrella en el circulo
-			else
+			if(q.correctAnswer.equals(contestada)){ //si contestaste bien
+				flash("success", "Respuesta correcta");
+				p.acierta(q, false); //donde sea la estrella en el circulo
+			}else
+				flash("success", "Respuesta incorrecta");
 				p.falla(q);
 		}
 		
