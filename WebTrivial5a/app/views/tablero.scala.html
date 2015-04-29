@@ -88,4 +88,16 @@
 
 </ul>
 </div>
+
+<script>
+function rollDice(){
+    var status = document.getElementById("status");
+    var d1 = Math.floor(Math.random() * 6) + 1;
+    status.innerHTML = "You rolled "+d1+".";
+}
+</script>
+</head>
+<body>
+<button onclick="rollDice()">Roll Dice</button>
+<h2 id="status" style="clear:left;"></h2>
 }
