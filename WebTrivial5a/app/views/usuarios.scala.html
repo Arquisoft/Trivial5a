@@ -3,27 +3,25 @@
 
 @main("usuarios") {
 	<h1>Usuarios registrados</h1>	
-	<ul>
-	<table>
-	<tr><th>Login:</th>
+	<table class="table table-bordered">
+	<tr><th class="text-center active">Login</th>
 	@if(session().get("admin")=="true"){
-		<th>Preguntas acertadas</th>
-		<th>Preguntas falladas</th>
+		<th class="text-center active">Preguntas acertadas</th>
+		<th class="text-center active">Preguntas falladas</th>
 	}
 	</tr>
 	@for(user <- users){
-	<tr>
-		<td>
-			 @user.login
-		</td>
-		
-		@if(session().get("admin")=="true"){
-		<td>@user.numberCorrectAnswer<td>
-		<td>@user.numberWrongAnswer<td>
-		
-		}
+		<tr>
+			<td class="text-center">
+				 @user.login
+			</td>
+			
+			@if(session().get("admin")=="true"){
+				<td class="text-center">@user.numberCorrectAnswer</td>
+				<td class="text-center">@user.numberWrongAnswer</td>
+			}
 		</tr>
-		}
+	}
 	</table>	
 
 

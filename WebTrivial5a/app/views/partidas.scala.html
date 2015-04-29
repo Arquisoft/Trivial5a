@@ -5,7 +5,7 @@
 <div class="row">
 	<div class="col-md-4">
 		<h1>Partidas en las que te toca tirar</h1>
-		<table>
+		<table >
 			@for(partida <- partidas) {
 				@if(partida.activeUser.login==session().get("conectado")){
 				<tr>

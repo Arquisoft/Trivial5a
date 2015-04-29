@@ -15,11 +15,12 @@ POST		/												controllers.Application.login()
 #POST		/user/delete/:id 								controllers.Application.deleteUser(id: Long)
 #DELETE		/user/:id 										controllers.Application.deleteUser(id: Long)
 
-GET    		/new											controllers.Application.showUsers()
+GET    		/usuario											controllers.Application.showUsers()
 POST   		/new                 							controllers.Application.register()
 GET			/registro										controllers.Application.registerUser()
 
-GET    		/categorias										controllers.Application.showQuestions()
+#GET    		/categorias										controllers.Application.showCategories()
+#GET    		/categorias										controllers.Application.showCategoriesQuestions()
 
 GET 		/logout											controllers.Application.logout()
 
