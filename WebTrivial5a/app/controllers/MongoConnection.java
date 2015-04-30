@@ -494,4 +494,20 @@ public class MongoConnection {
 		} else
 			throw new Exception("Error: Conexión no establecida");		
 	}
+	
+	/**
+	 * Actualizar las estadíticas o datos de la partida
+	 * 
+	 * @param user
+	 */
+	public static void updatePartida(Partida partida) {
+		conectDB();
+		// Crea una tabla si no existe y agrega datos
+		table = db.getCollection("partidas");
+		DBObject[] partidaModificada = new BasicDBObject[1];
+		partidaModificada[0] = (DBObject) JSON.parse(partida.toJSON());
+		DBObject partidaActualizar = new BasicDBObject("id", partida.id);
+		table.findAndModify(partidaActualizar, partidaModificada[0]);
+		client.close();
+	}
 }
