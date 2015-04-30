@@ -2,7 +2,7 @@
 
 @main("categorias") {
 	<h1>Categorias</h1>
-	<table class= "table">
+	<table class="table table-bordered">
 		<tr>
 			<th class="text-center success">Nombre categorias</th>
 			@if(session().get("admin")=="true"){
@@ -10,10 +10,26 @@
 				<th class="text-center success">Pregunta mas dificil</th>
 			}
 		</tr>
-		
 			@for(categoria <- categorias) {
 			<tr>
-				<td class="text-center">@categoria.name</td>
+				@if(categoria.name == " Deportes"){
+					<td class="text-center" bgcolor="#ffb037">@categoria.name</td>
+				}
+				@if(categoria.name == " Historia"){
+					<td class="text-center" bgcolor="#ffe800">@categoria.name</td>
+				}
+				@if(categoria.name == " Entretenimiento"){
+					<td class="text-center" bgcolor="#ff9c9f">@categoria.name</td>
+				}
+				@if(categoria.name == " Ciencia y Tecnologia"){
+					<td class="text-center" bgcolor="#0ad067">@categoria.name</td>
+				}
+				@if(categoria.name == " Arte y Literatura"){
+					<td class="text-center" bgcolor="red">@categoria.name</td>
+				}
+				@if(categoria.name == " Geografia"){
+					<td class="text-center" bgcolor="#229cdc">@categoria.name</td>
+				}
 				@if(session().get("admin")=="true"){
 					<td class="text-center">@faciles.get(categorias.indexOf(categoria))</td>
 				
@@ -21,8 +37,6 @@
 				}
 			</tr>
 			}
-				
-			
 	</table>
 }	
 				 
