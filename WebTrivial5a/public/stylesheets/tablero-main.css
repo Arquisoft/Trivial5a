@@ -660,9 +660,16 @@ background: #ffe800;
 	float:left;
 }
 
-#columna{
+#columnaUsuario{
 	overflow:auto;
 	width:1250px;
+	he
+	ight:500px;
+}
+
+#columnaPartidas{
+	overflow:auto;
+	width:425px;
 	height:500px;
 }
 
