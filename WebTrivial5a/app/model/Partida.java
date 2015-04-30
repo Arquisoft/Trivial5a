@@ -1,6 +1,8 @@
 package model;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Random;
@@ -23,14 +25,15 @@ public class Partida {
 	public  List<String> idAskedQuestions= new ArrayList<String>();
 	public User activeUser;
 	
-	public Map<Long,Set<String>> quesitosPorJugador;
+	public Map<String,Set<String>> quesitosPorJugador= new HashMap<String,Set<String>>();
+	
 	
 	/**
 	 * Constructor con datos para guardar y recuperar
 	 */
 	public Partida(List<User> usuarios, List<Long> idUsers, Long id,
 			boolean finished, List<String> idAskedQuestions, User activeUser,
-			Map<Long, Set<String>> quesitosPorJugador) {
+			Map<String, Set<String>> quesitosPorJugador) {
 		super();
 		this.usuarios = usuarios;
 		this.id = id;
