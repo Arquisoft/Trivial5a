@@ -132,6 +132,7 @@ function rollDice(posactual){
     var numcasillas = 30;
     //status.innerHTML = numdado;
     $("#mover").html(numdado);
+    $("#dice").attr('onclick','').unbind('click');
     
     if (posactual <= 5) {
 		if (posactual - numdado >= 0)
@@ -157,7 +158,6 @@ function rollDice(posactual){
     $( "#"+dmin ).removeAttr( "disabled" );
     $( "#circle-"+dmin ).addClass("circle-enabled");
     $( "#dice" ).attr("disabled", "disabled");
-    
     }
 </script>
 </head>
