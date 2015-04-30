@@ -12,6 +12,7 @@
 		</tr>
 			@for(categoria <- categorias) {
 			<tr>
+			<td class="text-center" bgcolor="#229cdc">@categoria.name</td>
 				@if(categoria.name == " Deportes"){
 					<td class="text-center" bgcolor="#ffb037">@categoria.name</td>
 				}
@@ -32,7 +33,6 @@
 				}
 				@if(session().get("admin")=="true"){
 					<td class="text-center">@faciles.get(categorias.indexOf(categoria))</td>
-				
 					<td class="text-center">@dificiles.get(categorias.indexOf(categoria))</td>
 				}
 			</tr>
