@@ -1,4 +1,4 @@
-@(partidaid : Long, pregunta : model.Question)
+@(partidaid : Long, pregunta : model.Question, quesito: Boolean)
 @import helper._
 @main("pregunta") {
 	<h1>@pregunta.query</h1>
@@ -11,6 +11,7 @@
 					<input type ="hidden" name="query" value="@pregunta.query" />
 					<input type ="hidden" name="contestada" value="@respuesta" />
 					<input type ="hidden" name="id" value="@partidaid" />
+					<input type ="hidden" name="quesito" value="@quesito" />
 				<button id="getQuestion" type="submit" class="btn btn-primary">
 				@respuesta
 				</button>

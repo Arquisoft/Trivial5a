@@ -233,13 +233,13 @@ public class Application extends Controller {
 		
 	}
 
-	public static Result getQuestion(Long id, String idCategoria) throws Exception{
+	public static Result getQuestion(Long id, String idCategoria, Boolean quesito) throws Exception{
 		Partida partidaActiva;
 		Question q;
 	
 			partidaActiva = Partida.findOne(id);
 			 q = partidaActiva.devolverPregunta(idCategoria);
-			return ok(preguntaventana.render(id, q));
+			return ok(preguntaventana.render(id, q, quesito));
   
 
 	}
@@ -251,34 +251,21 @@ public class Application extends Controller {
 		Partida p= Partida.findOne(Long.parseLong(filledForm.field("id").value()));	//coges la partida
 		String cat = filledForm.field("category").value();
 		List<Question> c = Category.findAllQuestions(cat.trim()); //coges la categoria
-		System.out.println("----------------CATEGORIA----------------");
-		System.out.println(cat);
-		System.out.println(c.size());
-		System.out.println(c.get(0).query + c.get(0).correctAnswer);
-		System.out.println(c.get(1).query);
+		
 		for (Question q : c) { 
-			
-			System.out.println("--------------PREGUNTA--------------");
-			System.out.println(q.toString());
-			System.out.println(q.identifer);
-			System.out.println(q.query);
-			System.out.println("------------ID PREGUNTA------------");
-			System.out.println(q.query + "==" + filledForm.field("query").value());
-			System.out.println("----------CATEGORIA PREG----------");
-			System.out.println(q.category);
 			
 			if(q.query.equals(filledForm.field("query").value())) //buscas la pregunta
 			{
 				System.out.println("Pregunta encontrada.");				
 				if(q.correctAnswer.equals(filledForm.field("contestada").value())){ //si contestaste bien
 					flash("success", "Respuesta correcta");
-					//p.acierta(q, false); //donde sea la estrella en el circulo
+					p.acierta(q, Boolean.parseBoolean(filledForm.field("quesito").value())); //donde sea la estrella en el circulo
 				}else
 					flash("danger", "Respuesta incorrecta");
 					p.falla(q);
 			}
 			else {
-				System.out.println("No hay correspondencia en la pregunta.");
+				//System.out.println("No hay correspondencia en la pregunta.");
 			}
 		}
 		try {
@@ -323,6 +310,7 @@ public class Application extends Controller {
 		public String query; 
 		public String contestada;
 		public Long id;
+		public Boolean quesito;
 	}
 
 }
