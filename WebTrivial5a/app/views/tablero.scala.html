@@ -48,10 +48,23 @@ $( document ).ready(function() {
 			@if(partida.quesitosPorJugador.get(partida.activeUser.login).contains(" Geografia")){
 			<td class="text-center icon-star"></td>
 			}else{<td></td>}
-			<td>@partida.quesitosPorJugador</td>
 		</tr>
 		<table>
 	</div>
+	
+	<div id="dado" class="col-md-6">
+	<table class="table table-bordered"">
+		<tr>
+			<th class="text-center success">Tirar</th>
+			<th class="text-center success">Mover</th>
+		</tr>
+		<tr>
+			<td class="text-center"><img src="@routes.Assets.at("/images/dados.gif")" onclick="rollDice(@partida.activeUser.posicion)" id="dice"><i class="icon-die-dice"></i></td>
+			<td id="mover"></td>
+		</tr>
+	</table>
+	</div>	
+
 <div>
   <ul id="menu">
   <a class="menu-button" href="#menu" title="Show navigation"></a>
@@ -112,11 +125,14 @@ $( document ).ready(function() {
 
 <script>
 function rollDice(posactual){
+	
 	if(posactual==0) posactual = posactual+1;
-    var status = document.getElementById("status");
+    //var status = document.getElementById("status");
     var numdado = Math.floor(Math.random() * 6) + 1;
     var numcasillas = 30;
-    status.innerHTML = numdado;
+    //status.innerHTML = numdado;
+    $("#mover").html(numdado);
+    $("#dice").attr('onclick','').unbind('click');
     
     if (posactual <= 5) {
 		if (posactual - numdado >= 0)
@@ -145,7 +161,4 @@ function rollDice(posactual){
     }
 </script>
 </head>
-<body>
-<button onclick="rollDice(@partida.activeUser.posicion)" class="btn btn-warning" id="dice" ><i class="icon-die-dice"></i> Tirar Dado</button>
-<h2 id="status" style="clear:left;"></h2>
 }

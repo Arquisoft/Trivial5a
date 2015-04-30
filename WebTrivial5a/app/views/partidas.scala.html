@@ -4,7 +4,7 @@
 @main("Lista de Partidas") {
 <a href="@routes.Application.newPartida()" class="btn btn-success btn-lg">Nueva Partida <span class="glyphicon glyphicon-plus"></span></a> 
 <div class="row">
-	<div class="col-md-4">
+	<div id="columnaPartidas" class="col-md-4">
 		<h1>Partidas en las que te toca tirar</h1>
 		<table class= "table">
 			@for(partida <- partidas) {
@@ -34,7 +34,7 @@
 			}
 		</table>
 	</div>
-	<div class="col-md-4">
+	<div id="columnaPartidas" class="col-md-4">
 		<h1>Partidas acabadas</h1>
 		<table class= "table">
 			@for(partida <- partidas) {
@@ -60,7 +60,7 @@
 			}
 		</table>
 	</div>
-	<div class="col-md-4">
+	<div id="columnaPartidas" class="col-md-4">
 		<h1>Partidas activas esperando por jugador</h1>
 		<table class= "table">
 			@for(partida <- partidas) {
