@@ -24,8 +24,8 @@ public class Partida {
 	
 	public  List<String> idAskedQuestions= new ArrayList<String>();
 	public User activeUser;
-	
-	public Map<String,Set<String>> quesitosPorJugador= new HashMap<String,Set<String>>();
+	public Set<String> estrellas = new HashSet<String>();
+	public Map<String,Set<String>> quesitosPorJugador = new HashMap<String, Set<String>>();
 	
 	
 	/**
@@ -67,6 +67,8 @@ public class Partida {
 	   * @param user
 	   */
 		  public static Partida create(Partida partida) throws Exception {
+			// HashSet<String> estrellas  = new HashSet<String>();
+			  	partida.quesitosPorJugador.put(partida.activeUser.login,partida.estrellas );
 			 MongoConnection.addPartida(partida);
 			 return MongoConnection.findPartida(partida.id);
 		  }
