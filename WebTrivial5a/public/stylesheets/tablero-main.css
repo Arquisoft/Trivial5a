@@ -652,3 +652,8 @@ background: #ffe800;
 	width:1250px;
 	height:500px;
 }
+
+#logo{
+	text-align:center;
+	margin: auto;
+}
