@@ -151,7 +151,7 @@ public class Partida {
 					terminarPartida();
 				try {
 				Partida.create(this);
-				User.create(activeUser);
+				User.updateUser(activeUser);
 				Category.Update(preg, Category.findOne(preg.category));
 				} catch (Exception e) {
 					
