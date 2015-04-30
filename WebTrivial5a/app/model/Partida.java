@@ -154,7 +154,7 @@ public class Partida {
 				if(quesitosPorJugador.get(activeUser.login).size()==MAX_CATEGORIAS)
 					terminarPartida();
 				try {
-				Partida.create(this);
+				Partida.updatePartida(this);
 				User.updateUser(activeUser);
 				Category.Update(preg, Category.findOne(preg.category));
 				} catch (Exception e) {
