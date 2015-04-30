@@ -259,6 +259,7 @@ public class Application extends Controller {
 				System.out.println("Pregunta encontrada.");				
 				if(q.correctAnswer.equals(filledForm.field("contestada").value())){ //si contestaste bien
 					flash("success", "Respuesta correcta");
+					
 					p.acierta(q, Boolean.parseBoolean(filledForm.field("quesito").value())); //donde sea la estrella en el circulo
 				}else
 					flash("danger", "Respuesta incorrecta");

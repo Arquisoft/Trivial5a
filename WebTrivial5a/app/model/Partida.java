@@ -68,7 +68,7 @@ public class Partida {
 	   */
 		  public static Partida create(Partida partida) throws Exception {
 			// HashSet<String> estrellas  = new HashSet<String>();
-			  	partida.quesitosPorJugador.put(partida.activeUser.login,partida.estrellas );
+			  	partida.quesitosPorJugador.put(partida.activeUser.login, partida.estrellas );
 			 MongoConnection.addPartida(partida);
 			 return MongoConnection.findPartida(partida.id);
 		  }
@@ -136,11 +136,18 @@ public class Partida {
 				preg.vecesAcertada+=1;
 				if(quesito)
 				{
-					quesitosPorJugador.get(activeUser).add(preg.category);
+					System.out.println(estrellas);
+					estrellas.add(preg.category);
+					quesitosPorJugador.get(activeUser.login).add(preg.category);
 				}
 				
-				if(quesitosPorJugador.get(activeUser).size()==MAX_CATEGORIAS)
+				if(quesitosPorJugador.get(activeUser.login).size()==MAX_CATEGORIAS)
 					terminarPartida();
+				try {
+				Partida.create(this);
+				} catch (Exception e) {
+					
+				}
 				
 			}
 			

@@ -30,7 +30,7 @@ $( document ).ready(function() {
 			
 		</tr>
 		<tr>
-			@if(partida.quesitosPorJugador.get(partida.activeUser.login).contains("Deportes")){
+			@if(partida.quesitosPorJugador.get(partida.activeUser.login).contains(" Deportes")){
 			<td class="text-center icon-star"></td>
 			}else{<td></td>}
 			@if(partida.quesitosPorJugador.get(partida.activeUser.login).contains(" Historia")){
@@ -48,6 +48,7 @@ $( document ).ready(function() {
 			@if(partida.quesitosPorJugador.get(partida.activeUser.login).contains(" Geografia")){
 			<td class="text-center icon-star"></td>
 			}else{<td></td>}
+			<td>@partida.quesitosPorJugador</td>
 		</tr>
 		<table>
 	</div>
