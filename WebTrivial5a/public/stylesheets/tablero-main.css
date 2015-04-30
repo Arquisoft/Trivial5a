@@ -646,3 +646,9 @@ background: #ffe800;
 .tablaJugador{
 	float:left;
 }
+
+#columna{
+	overflow:auto;
+	width:1250px;
+	height:500px;
+}
