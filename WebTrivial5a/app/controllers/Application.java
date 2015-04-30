@@ -227,13 +227,10 @@ public class Application extends Controller {
 		return TODO;
 	}
 
-	public static Result showPartida(Long id) {
-		try {
+	public static Result showPartida(Long id) throws Exception{
+	
 			return ok(tablero.render(Partida.findOne(id)));
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-		return TODO;
+		
 	}
 
 	public static Result getQuestion(Long id, String idCategoria) throws Exception{

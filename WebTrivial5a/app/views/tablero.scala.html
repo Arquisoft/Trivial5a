@@ -30,12 +30,24 @@ $( document ).ready(function() {
 			
 		</tr>
 		<tr>
+			@if(partida.quesitosPorJugador.get(partida.activeUser.login).contains("Deportes")){
 			<td class="text-center icon-star"></td>
+			}else{<td></td>}
+			@if(partida.quesitosPorJugador.get(partida.activeUser.login).contains(" Historia")){
 			<td class="text-center icon-star"></td>
+			}else{<td></td>}
+			@if(partida.quesitosPorJugador.get(partida.activeUser.login).contains(" Entretenimiento")){
 			<td class="text-center icon-star"></td>
+			}else{<td></td>}
+			@if(partida.quesitosPorJugador.get(partida.activeUser.login).contains(" Ciencia y Tecnología")){
 			<td class="text-center icon-star"></td>
+			}else{<td></td>}
+			@if(partida.quesitosPorJugador.get(partida.activeUser.login).contains(" Arte y Literatura")){
 			<td class="text-center icon-star"></td>
+			}else{<td></td>}
+			@if(partida.quesitosPorJugador.get(partida.activeUser.login).contains(" Geografia")){
 			<td class="text-center icon-star"></td>
+			}else{<td></td>}
 		</tr>
 		<table>
 	</div>
