@@ -2,7 +2,7 @@
 
 @main("categorias") {
 	<h1>Categorias</h1>
-	<table class= "table">
+	<table class="table table-bordered">
 		<tr>
 			<th class="text-center success">Nombre categorias</th>
 			@if(session().get("admin")=="true"){
@@ -10,7 +10,6 @@
 				<th class="text-center success">Pregunta mas dificil</th>
 			}
 		</tr>
-		
 			@for(categoria <- categorias) {
 			<tr>
 			@if(categoria.name==" Deportes"){
@@ -32,15 +31,13 @@
 				@if(categoria.name==" Historia"){
 				<td class="text-center" bgcolor="#ffe800">@categoria.name</td>}
 				
+
 				@if(session().get("admin")=="true"){
 					<td class="text-center">@faciles.get(categorias.indexOf(categoria))</td>
-				
 					<td class="text-center">@dificiles.get(categorias.indexOf(categoria))</td>
 				}
 			</tr>
 			}
-				
-			
 	</table>
 }	
 				 
