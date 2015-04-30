@@ -663,8 +663,7 @@ background: #ffe800;
 #columnaUsuarios{
 	overflow:auto;
 	width:1250px;
-	he
-	ight:500px;
+	height:500px;
 }
 
 #columnaPartidas{
@@ -676,4 +675,18 @@ background: #ffe800;
 #logo{
 	text-align:center;
 	margin: auto;
+}
+
+#dado{
+	float:left;
+	width:100px;
+	height: 100px;
+}
+
+#mover{
+	color: #855555;
+	text-align: center;
+	font-weight: bold;
+	vertical-align: middle;
+	font-size: xx-large;
 }
