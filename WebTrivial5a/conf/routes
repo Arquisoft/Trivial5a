@@ -24,8 +24,8 @@ GET    		/categorias										controllers.Application.showCategoriesQuestions()
 
 GET 		/logout											controllers.Application.logout()
 
-#POST			/tablero									controllers.Application.contesta()
-POST            /tablero                                    controllers.Application.contesta(categoria:String, q:String ,contestada:String , id: Long)
+POST			/tablero									controllers.Application.contesta()
+#POST            /tablero                                    controllers.Application.contesta(categoria:String, q:String ,contestada:String , id: Long)
 
 GET			/tablero										controllers.Application.newPartida()
 GET 		/partidas/:id/delete       						controllers.Application.deletePartida(id: Long)	

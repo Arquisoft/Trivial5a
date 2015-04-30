@@ -1,5 +1,7 @@
 package controllers;
 
+import java.util.List;
+
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
@@ -17,7 +19,7 @@ public class Application extends Controller {
 	static Form<User> userForm = Form.form(User.class);
 	static Form<Partida> partidaForm = Form.form(Partida.class);
 	static Form<Register> registerForm = Form.form(Register.class);
-
+	static Form<Pregunta> preguntaForm = Form.form(Pregunta.class);
 
 	public static Result index() {
 		if (session().containsKey("conectado")) {
@@ -245,25 +247,45 @@ public class Application extends Controller {
 
 	}
 	
-	public static Result contesta(String category,String identifier, 
-			String contestada,Long id) throws Exception
-	{	Partida p= Partida.findOne(id);	//coges la partida
+	public static Result contesta() throws Exception
+	{	
+		Form<Pregunta> filledForm = preguntaForm.bindFromRequest();
 		
-		
-		Category c = Category.findOne(category); //coges la categoria
-		for (Question q : c.questions) 
-		if(q.equals(identifier)) //buscas la pregunta
-		{
-			if(q.correctAnswer.equals(contestada)){ //si contestaste bien
-				flash("success", "Respuesta correcta");
-				p.acierta(q, false); //donde sea la estrella en el circulo
-			}else
-				flash("success", "Respuesta incorrecta");
-				p.falla(q);
+		Partida p= Partida.findOne(Long.parseLong(filledForm.field("id").value()));	//coges la partida
+		String cat = filledForm.field("category").value();
+		List<Question> c = Category.findAllQuestions(cat.trim()); //coges la categoria
+		System.out.println("----------------CATEGORIA----------------");
+		System.out.println(cat);
+		System.out.println(c.size());
+		System.out.println(c.get(0).query + c.get(0).correctAnswer);
+		System.out.println(c.get(1).query);
+		for (Question q : c) { 
+			
+			System.out.println("--------------PREGUNTA--------------");
+			System.out.println(q.toString());
+			System.out.println(q.identifer);
+			System.out.println(q.query);
+			System.out.println("------------ID PREGUNTA------------");
+			System.out.println(q.query + "==" + filledForm.field("query").value());
+			System.out.println("----------CATEGORIA PREG----------");
+			System.out.println(q.category);
+			
+			if(q.query.equals(filledForm.field("query").value())) //buscas la pregunta
+			{
+				System.out.println("Pregunta encontrada.");				
+				if(q.correctAnswer.equals(filledForm.field("contestada").value())){ //si contestaste bien
+					flash("success", "Respuesta correcta");
+					//p.acierta(q, false); //donde sea la estrella en el circulo
+				}else
+					flash("danger", "Respuesta incorrecta");
+					p.falla(q);
+			}
+			else {
+				System.out.println("No hay correspondencia en la pregunta.");
+			}
 		}
-		
 		try {
-			return ok(tablero.render(Partida.findOne(id)));
+			return redirect(routes.Application.showPartida(Long.parseLong(filledForm.field("id").value())));
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -297,6 +319,13 @@ public class Application extends Controller {
 				}
 			return null;
 		}
+	}
+	
+	public static class Pregunta {
+		public String category;
+		public String query; 
+		public String contestada;
+		public Long id;
 	}
 
 }

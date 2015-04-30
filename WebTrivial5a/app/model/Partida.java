@@ -177,8 +177,8 @@ public class Partida {
 				
 				 q = c.questions.get(0);
 				}
-					while(isAsked(q.identifier)!=false);	
-					idAskedQuestions.add(q.identifier);
+					while(isAsked(q.identifer)!=false);	
+					idAskedQuestions.add(q.identifer);
 				return q;
 			}
 			

@@ -9,7 +9,7 @@ import com.google.gson.Gson;
 
 public class Question {
 
-	public String identifier; // Identifica inequivocamente a la pregunta
+	public String identifer; // Identifica inequivocamente a la pregunta
 	
 	public static final int MAX_ANSWER = 4;
 
@@ -43,7 +43,7 @@ public class Question {
 		final int prime = 31;
 		int result = 1;
 		result = prime * result
-				+ ((identifier == null) ? 0 : identifier.hashCode());
+				+ ((identifer == null) ? 0 : identifer.hashCode());
 		return result;
 	}
 
@@ -58,10 +58,10 @@ public class Question {
 		if (getClass() != obj.getClass())
 			return false;
 		Question other = (Question) obj;
-		if (identifier == null) {
-			if (other.identifier != null)
+		if (identifer == null) {
+			if (other.identifer != null)
 				return false;
-		} else if (!identifier.equals(other.identifier))
+		} else if (!identifer.equals(other.identifer))
 			return false;
 		return true;
 	}

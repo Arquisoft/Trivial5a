@@ -266,6 +266,34 @@ public class MongoConnection {
 		} else
 			throw new Exception("Error al cargar las preguntas");
 	}
+	
+	/**
+	 * Devuelve todos las preguntas.
+	 * 
+	 * @return
+	 * @throws Exception
+	 */
+	public static List<Question> findAllQuestionsByCategory(String name) throws Exception {
+		conectDB();
+		if (client != null) {
+			List<Question> preguntas = new ArrayList<Question>();
+			// Crea una tabla si no existe y agrega datos
+			table = db.getCollection("categorias");
+			String n = " " + name;
+			DBObject cat = new BasicDBObject("name", n);
+			Gson g = new Gson();
+			DBObject obj = table.findOne(cat);
+			if (obj != null) {
+				Category c = g.fromJson(obj.toString(), Category.class);
+				preguntas = c.questions;
+				for (Question q: preguntas) 
+					System.out.println(q);
+				return preguntas;
+			}
+			return null;
+		} else
+			throw new Exception("Error al cargar las preguntas");
+	}
 
 	/**
 	 * Borra la tabla cuyo nombre es pasado como parametro

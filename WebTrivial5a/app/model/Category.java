@@ -99,6 +99,11 @@ public class Category{
 			return MongoConnection.findCategory(name);
 		  }
 		  
+		  public static List<Question> findAllQuestions(String name) throws Exception
+		  {
+			return MongoConnection.findAllQuestionsByCategory(name);
+		  }
+		  
 		  /**Retorna todas las categorias con todas sus preguntas cargadas.
 		   * 
 		   * @param login
