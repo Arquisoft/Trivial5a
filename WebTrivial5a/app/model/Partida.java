@@ -24,7 +24,7 @@ public class Partida {
 	
 	public  List<String> idAskedQuestions= new ArrayList<String>();
 	public User activeUser;
-	public Set<String> estrellas = new HashSet<String>();
+	//public Set<String> estrellas = new HashSet<String>();
 	public Map<String,Set<String>> quesitosPorJugador = new HashMap<String, Set<String>>();
 	
 	
@@ -68,7 +68,7 @@ public class Partida {
 	   */
 		  public static Partida create(Partida partida) throws Exception {
 			// HashSet<String> estrellas  = new HashSet<String>();
-			  	partida.quesitosPorJugador.put(partida.activeUser.login, partida.estrellas );
+			  	//partida.quesitosPorJugador.put(partida.activeUser.login, partida.estrellas );
 			 MongoConnection.addPartida(partida);
 			 return MongoConnection.findPartida(partida.id);
 		  }
@@ -136,15 +136,23 @@ public class Partida {
 				preg.vecesAcertada+=1;
 				if(quesito)
 				{
-					System.out.println(estrellas);
-					estrellas.add(preg.category);
-					quesitosPorJugador.get(activeUser.login).add(preg.category);
+					//System.out.println(estrellas);
+					//estrellas.add(preg.category);
+					if(quesitosPorJugador.get(activeUser.login) != null) {
+						quesitosPorJugador.get(activeUser.login).add(preg.category);
+					} else {
+						HashSet<String> aux = new HashSet<String>();
+						aux.add(preg.category);
+						quesitosPorJugador.put(activeUser.login, aux);
+					}
 				}
 				
 				if(quesitosPorJugador.get(activeUser.login).size()==MAX_CATEGORIAS)
 					terminarPartida();
 				try {
 				Partida.create(this);
+				User.create(activeUser);
+				Category.Update(preg, Category.findOne(preg.category));
 				} catch (Exception e) {
 					
 				}

@@ -418,6 +418,7 @@ public class MongoConnection {
 			}
 			
 			client.close();
+			
 			return partidas;
 		} else
 			throw new Exception("Error: Conexión no establecida");
