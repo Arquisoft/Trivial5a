@@ -1,4 +1,4 @@
-@(partidaid : Long, pregunta : model.Question)
+@(partidaid : Long, pregunta : model.Question, quesito: Boolean)
 @import helper._
 @main("pregunta") {
 	<h1>@pregunta.query</h1>
@@ -6,12 +6,13 @@
 		@for(respuesta <- pregunta.getAllAnswers()) {
 		<tr>
 			<td  style="padding:10px">
-				@form(routes.Application.contesta(pregunta.category, respuesta ,pregunta.identifier , partidaid)){
+				@form(routes.Application.contesta()){
 					<input type ="hidden" name="category" value="@pregunta.category" />
-					<input type ="hidden" name="identifier" value="@pregunta.identifier" />
+					<input type ="hidden" name="query" value="@pregunta.query" />
 					<input type ="hidden" name="contestada" value="@respuesta" />
 					<input type ="hidden" name="id" value="@partidaid" />
-				<button id="getQuestion" type="submit" class="btn btn-primary btn-lg">
+					<input type ="hidden" name="quesito" value="@quesito" />
+				<button id="getQuestion" type="submit" class="btn btn-primary">
 				@respuesta
 				</button>
 				}

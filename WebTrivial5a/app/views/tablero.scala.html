@@ -2,6 +2,14 @@
 @import helper._
 
 @main("Partida") {
+<script>
+$( document ).ready(function() {
+	if(@partida.activeUser.posicion == 0)
+		$( "#circle-1" ).addClass("circle-actual");
+	else
+		$( "#circle-@partida.activeUser.posicion" ).addClass("circle-actual");
+	});
+</script>
   <div class="tablaJugador">
   	<h1>Partida @partida.id</h1>	
 		<table class="table table-bordered">
@@ -22,7 +30,7 @@
 			
 		</tr>
 		<tr>
-			@if(partida.quesitosPorJugador.get(partida.activeUser.login).contains("Deportes")){
+			@if(partida.quesitosPorJugador.get(partida.activeUser.login).contains(" Deportes")){
 			<td class="text-center icon-star"></td>
 			}else{<td></td>}
 			@if(partida.quesitosPorJugador.get(partida.activeUser.login).contains(" Historia")){
@@ -40,6 +48,7 @@
 			@if(partida.quesitosPorJugador.get(partida.activeUser.login).contains(" Geografia")){
 			<td class="text-center icon-star"></td>
 			}else{<td></td>}
+			<td>@partida.quesitosPorJugador</td>
 		</tr>
 		<table>
 	</div>
@@ -51,48 +60,48 @@
 	  @for(a <-1 to 30){
 	  @if(a==1||a==6||a==11||a==16||a==21||a==26){
 	    
-	  <li class="menu-item  icon-star">
+	  <li id="@a-li" class="menu-item  icon-star">
 		  @if(a==1){
-		    <button id="QDeportes" class="menu-item-back" href='@routes.Application.getQuestion(partida.id,"Deportes")' disabled="disabled"></button>
+		    <button id="@a" class="menu-item-back" href='@routes.Application.getQuestion(partida.id,"Deportes", true)' disabled="disabled"></button>
 		    }
 		  @if(a==6){
-		    <button id="QHistoria" class="menu-item-back" href='@routes.Application.getQuestion(partida.id,"Historia")' disabled="disabled"></button>
+		    <button id="@a" class="menu-item-back" href='@routes.Application.getQuestion(partida.id,"Historia", true)' disabled="disabled"></button>
 		    }
 		  @if(a==11){
-		    <button id="QEntretenimiento" class="menu-item-back" href='@routes.Application.getQuestion(partida.id,"Entretenimiento")' disabled="disabled"></button>
+		    <button id="@a" class="menu-item-back" href='@routes.Application.getQuestion(partida.id,"Entretenimiento", true)' disabled="disabled"></button>
 		    }
 		  @if(a==16){
-		    <button id="QCiencia" class="menu-item-back" href='@routes.Application.getQuestion(partida.id,"Ciencia y Tecnologia")' disabled="disabled"></button>
+		    <button id="@a" class="menu-item-back" href='@routes.Application.getQuestion(partida.id,"Ciencia y Tecnologia", true)' disabled="disabled"></button>
 		    }
 		  @if(a==21){
-		    <button id="QArte" class="menu-item-back" href='@routes.Application.getQuestion(partida.id,"Arte y Literatura")' disabled="disabled"></button>
+		    <button id="@a" class="menu-item-back" href='@routes.Application.getQuestion(partida.id,"Arte y Literatura", true)' disabled="disabled"></button>
 		    }
 		  @if(a==26){
-		    <button id="QGeografia" class="menu-item-back" href='@routes.Application.getQuestion(partida.id,"Geografia")' disabled="disabled"></button>
+		    <button id="@a" class="menu-item-back" href='@routes.Application.getQuestion(partida.id,"Geografia", true)' disabled="disabled"></button>
 		    }
-		    <div id="circle"></div>
+		    <div id="circle-@a" class="circle circle-disabled"></div>
 		  </li>
 		  }else{
-		  <li class="menu-item">
+		  <li id="@a-li" class="menu-item">
 		  @if(a==1||a==7||a==13||a==19||a==25){
-		    <button id="Deportes" class="menu-item-back" href='@routes.Application.getQuestion(partida.id,"Deportes")' disabled="disabled"></button>
+		    <button id="@a" class="menu-item-back" href='@routes.Application.getQuestion(partida.id,"Deportes", false)' disabled="disabled"></button>
 		    }
 		  @if(a==2||a==8||a==14||a==20||a==26){
-		    <button id="Geografia" class="menu-item-back" href='@routes.Application.getQuestion(partida.id,"Geografia")' disabled="disabled"></button>
+		    <button id="@a" class="menu-item-back" href='@routes.Application.getQuestion(partida.id,"Geografia", false)' disabled="disabled"></button>
 		    }
 		  @if(a==3||a==9||a==15||a==21||a==27){
-		    <button id="Arte" class="menu-item-back" href='@routes.Application.getQuestion(partida.id,"Arte y Literatura")' disabled="disabled"></button>
+		    <button id="@a" class="menu-item-back" href='@routes.Application.getQuestion(partida.id,"Arte y Literatura", false)' disabled="disabled"></button>
 		    }
 		 @if(a==4||a==10||a==16||a==22||a==28){
-		    <button id="Ciencia" class="menu-item-back" href='@routes.Application.getQuestion(partida.id,"Ciencia y Tecnologia")' disabled="disabled"></button>
+		    <button id="@a" class="menu-item-back" href='@routes.Application.getQuestion(partida.id,"Ciencia y Tecnologia", false)' disabled="disabled"></button>
 		    }
 		  @if(a==5||a==11||a==17||a==23||a==29){
-		    <button id="Entretenimiento" class="menu-item-back" href='@routes.Application.getQuestion(partida.id,"Entretenimiento")' disabled="disabled"></button>
+		    <button id="@a" class="menu-item-back" href='@routes.Application.getQuestion(partida.id,"Entretenimiento", false)' disabled="disabled"></button>
 		    }
 		 @if(a==6||a==12||a==18||a==24||a==30){
-		    <button id="Historia" class="menu-item-back" href='@routes.Application.getQuestion(partida.id,"Historia")' disabled="disabled"></button>
+		    <button id="@a" class="menu-item-back" href='@routes.Application.getQuestion(partida.id,"Historia", false)' disabled="disabled"></button>
 		    }
-		    <div id="circle"></div>
+		    <div id="circle-@a" class="circle circle-disabled"></div>
 	  </li>
 	  	  
 	  }
@@ -102,14 +111,41 @@
 </div>
 
 <script>
-function rollDice(){
+function rollDice(posactual){
+	if(posactual==0) posactual = posactual+1;
     var status = document.getElementById("status");
-    var d1 = Math.floor(Math.random() * 6) + 1;
-    status.innerHTML = "You rolled "+d1+".";
-}
+    var numdado = Math.floor(Math.random() * 6) + 1;
+    var numcasillas = 30;
+    status.innerHTML = numdado;
+    
+    if (posactual <= 5) {
+		if (posactual - numdado >= 0)
+			dplus = posactual - numdado;
+		else {
+			var aux = numcasillas + posactual;
+			dplus = aux - numdado;
+		}
+		dmin = posactual + numdado;
+	} else if (posactual >= 24) {
+		if (posactual + numdado >= numcasillas)
+			dplus = (posactual + numdado) - numcasillas;
+		else
+			dplus = posactual + numdado;
+		dmin = posactual - numdado;
+	} else {
+		dplus = posactual - numdado;
+		dmin = posactual + numdado;
+	}
+    
+    $( "#"+dplus ).removeAttr( "disabled" );
+    $( "#circle-"+dplus ).addClass("circle-enabled");
+    $( "#"+dmin ).removeAttr( "disabled" );
+    $( "#circle-"+dmin ).addClass("circle-enabled");
+    $( "#dice" ).attr("disabled", "disabled");
+    }
 </script>
 </head>
 <body>
-<button onclick="rollDice()">Roll Dice</button>
+<button onclick="rollDice(@partida.activeUser.posicion)" class="btn btn-warning" id="dice" ><i class="icon-die-dice"></i> Tirar Dado</button>
 <h2 id="status" style="clear:left;"></h2>
 }

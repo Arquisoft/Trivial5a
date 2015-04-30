@@ -6,6 +6,7 @@
 
 <html>
 <head>
+<meta charset="UTF-8">
 <title>Web Trivial 5a - @title</title>
 <link rel='stylesheet'
 	href='@routes.Assets.at("bootstrap/css/bootstrap.min.css")'>
@@ -16,6 +17,7 @@
                        href='@routes.Assets.at("stylesheets/tablero.css")'>
     <link rel="stylesheet" type="text/css" 
                        href='@routes.Assets.at("stylesheets/tablero-main.css")'>
+	
 	<script src="@routes.Assets.at("javascripts/prefixfree.min.js")"></script>
 	<script src="@routes.Assets.at("javascripts/jquery.min.js")"></script>
 	<script src="@routes.Assets.at("bootstrap/js/bootstrap.min.js")"></script>
@@ -27,13 +29,15 @@
 	<div class="container-fluid main">
 		<nav class="navbar navbar-default">
   	<div class="container-fluid">
-	    <a class="navbar-brand" href="/">Inicio</a>
+	    <a href="/">
+		<button type="button" class="btn btn-default navbar-btn"><span class="glyphicon glyphicon-play-circle"></span> Partidas</button>
+		</a>
 	    <a href="/categorias">
-	    <button type="button" class="btn btn-default navbar-btn">Categorias</button>
+	    <button type="button" class="btn btn-default navbar-btn"><span class="glyphicon glyphicon-th-list"></span> Categorias</button>
 	    </a>
 	    
 	   	<a href="/usuario">
-	    <button type="button" class="btn btn-default navbar-btn">Usuarios</button>
+	    <button type="button" class="btn btn-default navbar-btn"><span class="glyphicon glyphicon-user"></span> Usuarios</button>
 	    </a>
 	    
 	    <a href="/logout">
@@ -45,8 +49,10 @@
 	<div class="row">
 				<div class="col-md-12">
 					<div class="alert alert-danger alert-dismissible" role="alert">
-					<button type="button" class="close" data-dismiss="alert" aria-label="Cerrar"><span aria-hidden="true">&times;</span></button>
-						@flash.get("danger")
+					<button type="button" class="close" data-dismiss="alert" aria-label="Cerrar">
+						<span aria-hidden="true">&times;</span>
+					</button>
+						<span class="glyphicon glyphicon-error"></span> @flash.get("danger")
 					</div>
 				</div>
 	</div>
@@ -58,7 +64,7 @@
 					<button type="button" class="close" data-dismiss="alert" aria-label="Cerrar">
 						<span aria-hidden="true">&times;</span>
 					</button>
-						@flash.get("success")
+						<span class="glyphicon glyphicon-ok"></span> @flash.get("success")
 					</div>
 				</div>
 	</div>
