@@ -60,6 +60,10 @@ public class User {
 		MongoConnection.addUser(user);
 	}
 	
+	public static void updateUser(User user) throws Exception {
+		MongoConnection.updateUser(user);
+	}
+	
 	public static User findOne(String login) throws Exception
 	{
 		return MongoConnection.findUser(login);
