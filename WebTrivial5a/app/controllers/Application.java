@@ -81,14 +81,10 @@ public class Application extends Controller {
 
 	}
 	
-	public static Result showCategoriesQuestions() {
-
-		try {
+	public static Result showCategoriesQuestions() throws Exception {
 			return ok(categorias.render(Category.all(), Category.easyQuestions(), Category.hardQuestions()));
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-		return TODO;
+		
+		//return TODO;
 	}
 
 	/**
@@ -228,7 +224,7 @@ public class Application extends Controller {
 	}
 
 	public static Result showPartida(Long id) throws Exception{
-	
+		
 			return ok(tablero.render(Partida.findOne(id)));
 		
 	}
@@ -256,7 +252,6 @@ public class Application extends Controller {
 			
 			if(q.query.equals(filledForm.field("query").value())) //buscas la pregunta
 			{
-				System.out.println("Pregunta encontrada.");				
 				if(q.correctAnswer.equals(filledForm.field("contestada").value())){ //si contestaste bien
 					flash("success", "Respuesta correcta");
 					

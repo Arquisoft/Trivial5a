@@ -116,6 +116,14 @@ html, body {
 	border: 8px solid #ffffff;
 }
 
+.menu-disabled {
+	disabled: true;
+}
+
+.menu-enabled {
+	disabled: false;
+}
+
 .menu-item:nth-child(3) {
   display: block;
 }
