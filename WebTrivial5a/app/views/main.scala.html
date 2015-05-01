@@ -1,75 +1,70 @@
 @(title: String)(content: Html)
 
 <!DOCTYPE html>
-
 @import helper._ 
 
 <html>
-<head>
-<meta charset="UTF-8">
-<title>Web Trivial 5a - @title</title>
-<link rel='stylesheet'
-	href='@routes.Assets.at("bootstrap/css/bootstrap.min.css")'>
-<link rel='stylesheet'
-	href='@routes.Assets.at("bootstrap/css/bootstrap.theme.min.css")'>
-	<link rel='stylesheet' href='@routes.Assets.at("stylesheets/main.css")'>
-	<link rel="stylesheet" type="text/css" 
-                       href='@routes.Assets.at("stylesheets/tablero.css")'>
-    <link rel="stylesheet" type="text/css" 
-                       href='@routes.Assets.at("stylesheets/tablero-main.css")'>
-	
-	<script src="@routes.Assets.at("javascripts/prefixfree.min.js")"></script>
-	<script src="@routes.Assets.at("javascripts/jquery.min.js")"></script>
-	<script src="@routes.Assets.at("bootstrap/js/bootstrap.min.js")"></script>
-	<script src="@routes.Assets.at("javascripts/preguntas.js")"></script>
-	<script type="text/javascript" src='@routes.Application.javascriptRoutes()'></script>
-</head>
-<body>
-
-	<div class="container-fluid main">
-		<nav class="navbar navbar-default">
-  	<div class="container-fluid">
-	    <a href="/">
-		<button type="button" class="btn btn-default navbar-btn"><span class="glyphicon glyphicon-play-circle"></span> Partidas</button>
-		</a>
-	    <a href="/categorias">
-	    <button type="button" class="btn btn-default navbar-btn"><span class="glyphicon glyphicon-th-list"></span> Categorias</button>
-	    </a>
-	    
-	   	<a href="/usuario">
-	    <button type="button" class="btn btn-default navbar-btn"><span class="glyphicon glyphicon-user"></span> Usuarios</button>
-	    </a>
-	    
-	    <a href="/logout">
-	    <button type="button" class="btn btn-danger navbar-btn pull-right">Logout  <span class="glyphicon glyphicon-remove-circle" aria-hidden="true"></span></button>
-	    </a>
-  	</div>
-</nav>
-	@if(flash.containsKey("danger")) {
-	<div class="row">
+	<head>
+		<meta charset="UTF-8">
+		<title>Web Trivial 5a - @title</title>
+		<link rel='stylesheet' href='@routes.Assets.at("bootstrap/css/bootstrap.min.css")'>
+		<link rel='stylesheet' href='@routes.Assets.at("bootstrap/css/bootstrap.theme.min.css")'>
+		<link rel='stylesheet' href='@routes.Assets.at("stylesheets/main.css")'>
+		<link rel="stylesheet" type="text/css" href='@routes.Assets.at("stylesheets/tablero.css")'>
+		<link rel="stylesheet" type="text/css" href='@routes.Assets.at("stylesheets/tablero-main.css")'>
+			
+		<script src="@routes.Assets.at("javascripts/prefixfree.min.js")"></script>
+		<script src="@routes.Assets.at("javascripts/jquery.min.js")"></script>
+		<script src="@routes.Assets.at("bootstrap/js/bootstrap.min.js")"></script>
+		<script src="@routes.Assets.at("javascripts/preguntas.js")"></script>
+		<script type="text/javascript" src='@routes.Application.javascriptRoutes()'></script>
+	</head>
+	<body>
+		<div class="container-fluid main">
+			<nav class="navbar navbar-default">
+			  	<div class="container-fluid">
+				    <a href="/">
+						<button type="button" class="btn btn-default navbar-btn"><span class="glyphicon glyphicon-play-circle"></span> Partidas</button>
+					</a>
+					
+				    <a href="/categorias">
+				    	<button type="button" class="btn btn-default navbar-btn"><span class="glyphicon glyphicon-th-list"></span> Categorias</button>
+				    </a>
+				    
+				   	<a href="/usuario">
+				    	<button type="button" class="btn btn-default navbar-btn"><span class="glyphicon glyphicon-user"></span> Usuarios</button>
+				    </a>
+				    
+				    <a href="/logout">
+				    	<button type="button" class="btn btn-danger navbar-btn pull-right">Logout  <span class="glyphicon glyphicon-remove-circle" aria-hidden="true"></span></button>
+				    </a>
+			  	</div>
+			</nav>
+			@if(flash.containsKey("danger")) {
+			<div class="row">
 				<div class="col-md-12">
 					<div class="alert alert-danger alert-dismissible" role="alert">
-					<button type="button" class="close" data-dismiss="alert" aria-label="Cerrar">
-						<span aria-hidden="true">&times;</span>
-					</button>
+						<button type="button" class="close" data-dismiss="alert" aria-label="Cerrar">
+							<span aria-hidden="true">&times;</span>
+						</button>
 						<span class="glyphicon glyphicon-thumbs-down"></span> @flash.get("danger")
 					</div>
 				</div>
-	</div>
-	}
-	@if(flash.containsKey("success")) {
-	<div class="row">
+			</div>
+			}
+			@if(flash.containsKey("success")) {
+			<div class="row">
 				<div class="col-md-12">
 					<div class="alert alert-success alert-dismissible" role="alert">
-					<button type="button" class="close" data-dismiss="alert" aria-label="Cerrar">
-						<span aria-hidden="true">&times;</span>
-					</button>
+						<button type="button" class="close" data-dismiss="alert" aria-label="Cerrar">
+							<span aria-hidden="true">&times;</span>
+						</button>
 						<span class="glyphicon glyphicon-thumbs-up"></span> @flash.get("success")
 					</div>
 				</div>
-	</div>
-	}
-        @content
-	</div>
-</body>
+			</div>
+			}
+		    @content
+		</div>
+	</body>
 </html>

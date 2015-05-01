@@ -1,9 +1,9 @@
 @(userForm: Form[controllers.Application.Register])
+
 @import helper._
 
 @main("usuarios") {
-<h1>Registro nuevo usuario</h1>
-    
+	<h1>Registro nuevo usuario</h1>
     @form(routes.Application.register()) {
     	<div class="form-group">
    			<label for="login">Login</label>

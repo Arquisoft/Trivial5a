@@ -4,12 +4,10 @@ import java.net.UnknownHostException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
-
 import model.Category;
 import model.Partida;
 import model.Question;
 import model.User;
-
 import com.google.gson.*;
 import com.mongodb.BasicDBObject;
 import com.mongodb.DB;
@@ -34,7 +32,7 @@ public class MongoConnection {
 	 */
 	public static void conectDB() {
 		try {
-			String uri="mongodb://admin:admin@ds061721.mongolab.com:61721/trivial5aweb2";
+			String uri = "mongodb://admin:admin@ds061721.mongolab.com:61721/trivial5aweb2";
 			MongoClientURI muri = new MongoClientURI(uri);
 			client = new MongoClient(muri);
 			db = client.getDB(muri.getDatabase());
@@ -69,8 +67,6 @@ public class MongoConnection {
 			throw new Exception("Error: Conexión no establecida");
 	}
 
-	
-
 	/**
 	 * Añade una pregunta a la BBDD
 	 * 
@@ -90,7 +86,7 @@ public class MongoConnection {
 			throw new Exception("Error: Conexión no establecida");
 		}
 	}
-	
+
 	/**
 	 * Añade un usuario a la BBDD
 	 * 
@@ -124,8 +120,7 @@ public class MongoConnection {
 		if (client != null) {
 			// Crea una tabla si no existe y agrega datos
 			table = db.getCollection("usuarios");
-			DBObject user = new BasicDBObject("login", login).append(
-					"password", password);
+			DBObject user = new BasicDBObject("login", login).append("password", password);
 			Gson g = new Gson();
 			DBObject obj = table.findOne(user);
 			if (obj != null) {
@@ -178,14 +173,14 @@ public class MongoConnection {
 		table.findAndModify(userActualizar, userModificado[0]);
 		client.close();
 	}
-	
+
 	/**
 	 * Actualizar las estadíticas o datos de un usuario
 	 * 
 	 * @param user
-	 * @throws Exception 
+	 * @throws Exception
 	 */
-	public  static void removeUser(User user) throws Exception {
+	public static void removeUser(User user) throws Exception {
 		conectDB();
 		// Crea una tabla si no existe y agrega datos
 		findUser(user.login);
@@ -209,8 +204,7 @@ public class MongoConnection {
 		table = db.getCollection("categorias");
 		DBObject[] categoria = new BasicDBObject[1];
 		categoria[0] = (DBObject) JSON.parse(category.toJSON());
-		DBObject categoriaActualizar = new BasicDBObject("name",
-				category.name);
+		DBObject categoriaActualizar = new BasicDBObject("name", category.name);
 		table.findAndModify(categoriaActualizar, categoria[0]);
 		client.close();
 	}
@@ -229,8 +223,7 @@ public class MongoConnection {
 			table = db.getCollection("usuarios");
 			DBCursor cursor = table.find();
 			while (cursor.hasNext()) {
-				User user = new Gson().fromJson(cursor.next().toString(),
-						User.class);
+				User user = new Gson().fromJson(cursor.next().toString(), User.class);
 				usuarios.add(user);
 			}
 			client.close();
@@ -255,8 +248,7 @@ public class MongoConnection {
 			table = db.getCollection("categorias");
 			DBCursor cursor = table.find();
 			while (cursor.hasNext()) {
-				Category category = new Gson().fromJson(cursor.next()
-						.toString(), Category.class);
+				Category category = new Gson().fromJson(cursor.next().toString(), Category.class);
 				preguntas.add(category);
 			}
 			client.close();
@@ -266,14 +258,15 @@ public class MongoConnection {
 		} else
 			throw new Exception("Error al cargar las preguntas");
 	}
-	
+
 	/**
 	 * Devuelve todos las preguntas.
 	 * 
 	 * @return
 	 * @throws Exception
 	 */
-	public static List<Question> findAllQuestionsByCategory(String name) throws Exception {
+	public static List<Question> findAllQuestionsByCategory(String name)
+			throws Exception {
 		conectDB();
 		if (client != null) {
 			List<Question> preguntas = new ArrayList<Question>();
@@ -286,7 +279,7 @@ public class MongoConnection {
 			if (obj != null) {
 				Category c = g.fromJson(obj.toString(), Category.class);
 				preguntas = c.questions;
-				for (Question q: preguntas) 
+				for (Question q : preguntas)
 					System.out.println(q);
 				return preguntas;
 			}
@@ -308,9 +301,7 @@ public class MongoConnection {
 			db.getCollection(table).drop();
 			System.out.println();
 			// Listas las bases de datos
-			System.out
-					.println("Lista de todas las tablas de la BBDD tras el borrado de "
-							+ db);
+			System.out.println("Lista de todas las tablas de la BBDD tras el borrado de " + db);
 			List<String> basesDeDatosBorrada = client.getDatabaseNames();
 			for (String nombreBaseDatos : basesDeDatosBorrada)
 				System.out.println(" - " + nombreBaseDatos);
@@ -325,7 +316,7 @@ public class MongoConnection {
 	 * 
 	 * @throws Exception
 	 */
-	public  static void imprimirDB() throws Exception {
+	public static void imprimirDB() throws Exception {
 		conectDB();
 		// Listas las bases de datos
 		if (client != null) {
@@ -345,12 +336,14 @@ public class MongoConnection {
 		} else
 			throw new Exception("Error: Conexión no establecida");
 	}
-/**
- * Devuelve una categoria pasada por parametro
- * @param name
- * @return
- * @throws Exception
- */
+
+	/**
+	 * Devuelve una categoria pasada por parametro
+	 * 
+	 * @param name
+	 * @return
+	 * @throws Exception
+	 */
 	public static Category findCategory(String name) throws Exception {
 		conectDB();
 		if (client != null) {
@@ -369,24 +362,22 @@ public class MongoConnection {
 		} else
 			throw new Exception("Error: Conexión no establecida");
 	}
-	
+
 	/**
-	 * Devuelve todas las partidas 
+	 * Devuelve todas las partidas
+	 * 
 	 * @return
 	 * @throws Exception
 	 */
 	public static List<Partida> findAllPartidas() throws Exception {
 		conectDB();
-
 		if (client != null) {
 			List<Partida> partidas = new ArrayList<Partida>();
-
 			// Crea una tabla si no existe y agrega datos
 			table = db.getCollection("partidas");
 			DBCursor cursor = table.find();
 			while (cursor.hasNext()) {
-				Partida partida = new Gson().fromJson(cursor.next().toString(),
-						Partida.class);
+				Partida partida = new Gson().fromJson(cursor.next().toString(), Partida.class);
 				partidas.add(partida);
 			}
 			client.close();
@@ -394,53 +385,50 @@ public class MongoConnection {
 		} else
 			throw new Exception("Error: Conexión no establecida");
 	}
-	
+
 	/**
-	 * Devuelve las partidas en las que el login que se pasa por parametro este incluido en la partida
+	 * Devuelve las partidas en las que el login que se pasa por parametro este
+	 * incluido en la partida
+	 * 
 	 * @param login
 	 * @return
 	 * @throws Exception
 	 */
 	public static List<Partida> findPartidasJugador(User user) throws Exception {
 		conectDB();
-
 		if (client != null) {
 			List<Partida> partidas = new ArrayList<Partida>();
-
 			// Crea una tabla si no existe y agrega datos
 			table = db.getCollection("partidas");
 			DBCursor cursor = table.find();
 			while (cursor.hasNext()) {
-				Partida partida = new Gson().fromJson(cursor.next().toString(),
-						Partida.class);
-				if(partida.containsUser(user))
-				partidas.add(partida);
+				Partida partida = new Gson().fromJson(cursor.next().toString(), Partida.class);
+				if (partida.containsUser(user))
+					partidas.add(partida);
 			}
-			
 			client.close();
-			
 			return partidas;
 		} else
 			throw new Exception("Error: Conexión no establecida");
 	}
-	
+
 	/**
 	 * Actualizar las estadíticas o datos de un usuario
 	 * 
 	 * @param user
-	 * @throws Exception 
+	 * @throws Exception
 	 */
-	public  static void removePartida(Long id) throws Exception {
+	public static void removePartida(Long id) throws Exception {
 		conectDB();
 		// Crea una tabla si no existe y agrega datos
-		Partida aborrar=findPartida(id);
+		Partida aborrar = findPartida(id);
 		table = db.getCollection("partidas");
 		DBObject partidaAborrar = new BasicDBObject();
 		partidaAborrar = (DBObject) JSON.parse(aborrar.toJSON());
 		table.findAndRemove(partidaAborrar);
 		client.close();
 	}
-	
+
 	public static Partida findPartida(Long id) throws Exception {
 		conectDB();
 		if (client != null) {
@@ -470,31 +458,28 @@ public class MongoConnection {
 			client.close();
 		} else {
 			throw new Exception("Error: Conexión no establecida");
-		}		
+		}
 	}
 
-	public static List<Partida> findPartidasActiveOrNot(boolean finished) throws Exception {
+	public static List<Partida> findPartidasActiveOrNot(boolean finished)throws Exception {
 		conectDB();
-
 		if (client != null) {
 			List<Partida> partidas = new ArrayList<Partida>();
-
 			// Crea una tabla si no existe y agrega datos
 			table = db.getCollection("categorias");
 			DBCursor cursor = table.find();
 			while (cursor.hasNext()) {
-				Partida partida = new Gson().fromJson(cursor.next().toString(),
-						Partida.class);
-				if(partida.finished==finished)
-				partidas.add(partida);
+				Partida partida = new Gson().fromJson(cursor.next().toString(), Partida.class);
+				if (partida.finished == finished)
+					partidas.add(partida);
 			}
-			
+
 			client.close();
 			return partidas;
 		} else
-			throw new Exception("Error: Conexión no establecida");		
+			throw new Exception("Error: Conexión no establecida");
 	}
-	
+
 	/**
 	 * Actualizar las estadíticas o datos de la partida
 	 * 

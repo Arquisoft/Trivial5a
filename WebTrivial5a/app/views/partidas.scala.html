@@ -1,90 +1,90 @@
 @(partidas : List[model.Partida])
+
 @import helper._
 
 @main("Lista de Partidas") {
-<a href="@routes.Application.newPartida()" class="btn btn-success btn-lg">Nueva Partida <span class="glyphicon glyphicon-plus"></span></a> 
-<div class="row">
-	<div id="columnaPartidas" class="col-md-4">
-		<h1>Partidas en las que te toca tirar</h1>
-		<table class= "table">
-			@for(partida <- partidas) {
-				@if(partida.activeUser.login==session().get("conectado")){
-				<tr>
-					<td class="text-center">
-						<div class="btn-group" role="group">
-						<a type="submit" class="btn btn-default" href="@routes.Application.showPartida(partida.id)">Partida @partida.id</a>
-						
-							@if(partida.usuarios.size()==1){
-								<a href = "@routes.Application.deletePartida(partida.id)" 
-									class="btn btn-danger glyphicon glyphicon-remove" 
-									onclick="return confirm('&iquest;Seguro que quieres eliminar la Partida @partida.id?');" > 
-								</a>
-							}
-							
-							 @if(partida.usuarios.size()>1) {
-								 @form(routes.Application.exitPartida(partida.id)) {
-									<input type="submit" class="btn btn-default" value="Salir">
-								}	
-							} 
-						</div>
-					</td>
-
-				</tr>
-				}
-			}
-		</table>
-	</div>
-	<div id="columnaPartidas" class="col-md-4">
-		<h1>Partidas acabadas</h1>
-		<table class= "table">
-			@for(partida <- partidas) {
-				@if(partida.finished==true){
+	<a href="@routes.Application.newPartida()" class="btn btn-success btn-lg">Nueva Partida <span class="glyphicon glyphicon-plus"></span></a> 
+	<div class="row">
+		<div id="columnaPartidas" class="col-md-4">
+			<h1>Partidas en las que te toca tirar</h1>
+			<table class= "table">
+				@for(partida <- partidas) {
 					@if(partida.activeUser.login==session().get("conectado")){
-						<tr>
-							<td class="text-center">
-								<div class="btn-group" role="group">
+					<tr>
+						<td class="text-center">
+							<div class="btn-group" role="group">
 								<a type="submit" class="btn btn-default" href="@routes.Application.showPartida(partida.id)">Partida @partida.id</a>
-								
 									@if(partida.usuarios.size()==1){
 										<a href = "@routes.Application.deletePartida(partida.id)" 
 											class="btn btn-danger glyphicon glyphicon-remove" 
-											onclick="return confirm('Seguro que quieres eliminar la Partida @partida.id?');" > 
+											onclick="return confirm('&iquest;Seguro que quieres eliminar la Partida @partida.id?');" > 
 										</a>
 									}
-								</div>
+									@if(partida.usuarios.size()>1) {
+										 @form(routes.Application.exitPartida(partida.id)) {
+											<input type="submit" class="btn btn-default" value="Salir">
+										}	
+									} 
+							</div>
+						</td>
+					</tr>
+					}
+				}
+			</table>
+		</div>
+		<div id="columnaPartidas" class="col-md-4">
+			<h1>Partidas acabadas</h1>
+			<table class= "table">
+				@for(partida <- partidas) {
+					@if(partida.finished==true){
+						@if(partida.activeUser.login==session().get("conectado")){
+							<tr>
+								<td class="text-center">
+									<div class="btn-group" role="group">
+										<a type="submit" class="btn btn-default" href="@routes.Application.showPartida(partida.id)">Partida @partida.id</a>
+											@if(partida.usuarios.size()==1){
+												<a href = "@routes.Application.deletePartida(partida.id)" 
+													class="btn btn-danger glyphicon glyphicon-remove" 
+													onclick="return confirm('Seguro que quieres eliminar la Partida @partida.id?');" > 
+												</a>
+											}
+									</div>
+								</td>
+							</tr>
+						}
+					}
+				}
+			</table>
+		</div>
+		<div id="columnaPartidas" class="col-md-4">
+			<h1>Partidas activas esperando por jugador</h1>
+			<table class= "table">
+				@for(partida <- partidas) {
+					@if(partida.finished==false && partida.activeUser.login!=session().get("conectado")){
+						<tr>
+							<td>
+								@form(routes.Application.showPartida(partida.id)) {
+									<input type="submit" class="btn btn-default" value="Partida @partida.id">
+								}
 							</td>
-		
+							<td>
+								@if(partida.usuarios.size()==1){
+									@form(routes.Application.deletePartida(partida.id)) {
+										<input type="submit" class="btn btn-default" value="Eliminar Partida @partida.id">
+									}
+								}
+							</td>
+							<td>
+								@if(partida.usuarios.size()>1) {
+									@form(routes.Application.exitPartida(partida.id)) {
+										<input type="submit" class="btn btn-default" value="Salir Partida @partida.id">
+									}	
+								} 
+							</td>
 						</tr>
 					}
 				}
-			}
-		</table>
+			</table>
+		</div>
 	</div>
-	<div id="columnaPartidas" class="col-md-4">
-		<h1>Partidas activas esperando por jugador</h1>
-		<table class= "table">
-			@for(partida <- partidas) {
-				@if(partida.finished==false && partida.activeUser.login!=session().get("conectado")){
-			<tr>
-				<td>
-				@form(routes.Application.showPartida(partida.id)) {
-					<input type="submit" class="btn btn-default" value="Partida @partida.id">}
-					</td>
-					<td>
-					@if(partida.usuarios.size()==1){
-							@form(routes.Application.deletePartida(partida.id)) {
-							<input type="submit" class="btn btn-default" value="Eliminar Partida @partida.id">}
-							</td>
-							}
-						 @if(partida.usuarios.size()>1) {
-							 @form(routes.Application.exitPartida(partida.id)) {
-							<input type="submit" class="btn btn-default" value="Salir Partida @partida.id">}	 
-							</td>
-							 }
-			</tr>
-			}
-			}
-		</table>
-	</div>
-</div>
 }

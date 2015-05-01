@@ -1,45 +1,46 @@
 @(partidas : List[model.Partida])
+
 @import helper._
 
 @main("Lista de Partidas") {
-<div class="row">
-	<div class="col-md-4">
-		<h1>Todas las partidas</h1>
-	</div>
-	<div class="col-md-4">
-		<h1>Partidas acabadas</h1>
-		<table>
-			@for(partida <- partidas) {
-				@if(partida.finished==true){
-				<tr>
-					<td>
-					@form(routes.Application.showPartida(partida.id)) {
-					<input type="submit" class="btn btn-default" value="Partida @partida.id">
-						}
-					</td>
+	<div class="row">
+		<div class="col-md-4">
+			<h1>Todas las partidas</h1>
+		</div>
+		<div class="col-md-4">
+			<h1>Partidas acabadas</h1>
+			<table>
+				@for(partida <- partidas) {
+					@if(partida.finished==true){
+						<tr>
+							<td>
+								@form(routes.Application.showPartida(partida.id)) {
+									<input type="submit" class="btn btn-default" value="Partida @partida.id">
+								}
+							</td>
+						</tr>
 					}
-				</tr>
 				}
-		</table>
-	</div>
-	<div class="col-md-4">
-		<h1>Partidas activas</h1>
-		<table>
-			@for(partida <- partidas) {
-				@if(partida.finished==false){
-			<tr>
-				<td>
-				@form(routes.Application.showPartida(partida.id)) {
-					<input type="submit" class="btn btn-default" value="Partida @partida.id">
+			</table>
+		</div>
+		<div class="col-md-4">
+			<h1>Partidas activas</h1>
+			<table>
+				@for(partida <- partidas) {
+					@if(partida.finished==false){
+						<tr>
+							<td>
+								@form(routes.Application.showPartida(partida.id)) {
+									<input type="submit" class="btn btn-default" value="Partida @partida.id">
+								}
+							</td>
+						</tr>
 					}
-					</td>
-			}
-			</tr>
-			}
-		</table>
+				}
+			</table>
+		</div>
+		@form(routes.Application.newPartida()) {
+			<input type="submit" class="btn btn-primary btn-lg" value="Create">
+		}
 	</div>
-	@form(routes.Application.newPartida()) {
-		<input type="submit" class="btn btn-primary btn-lg" value="Create">
-	}
-</div>
 }

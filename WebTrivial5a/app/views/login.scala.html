@@ -1,27 +1,24 @@
 @(userForm: Form[model.User]) 
+
 @import helper._
 
 @main("Login") {
 	<div class="row">
-	<div id="logo" class="col-md-12">
-		<img src="@routes.Assets.at("/images/logo.png")">
-	</div>
-	
-	<div class="col-md-6 col-md-offset-5 form-group">
-	
-	<h2>Login</h2>
-			@form(routes.Application.login()) { 
-				@inputText(userForm("login"))
-				@inputPassword(userForm("password")) 
-				<div class="btn-group" role="group">
-					<button class="btn btn-primary" type="submit">Login</button>
-					<a href="/registro">
-						<button type="button" class="btn btn-success">Registrarse</button>
-					</a>
-				</div>
+		<div id="logo" class="col-md-12">
+			<img src="@routes.Assets.at("/images/logo.png")">
+		</div>
+		<div class="col-md-6 col-md-offset-5 form-group">
+			<h2>Login</h2>
+				@form(routes.Application.login()) { 
+					@inputText(userForm("login"))
+					@inputPassword(userForm("password")) 
+					<div class="btn-group" role="group">
+						<button class="btn btn-primary" type="submit">Login</button>
+						<a href="/registro">
+							<button type="button" class="btn btn-success">Registrarse</button>
+						</a>
+					</div>
 				}
 		</div>
 	</div>
-	
-	
 }
