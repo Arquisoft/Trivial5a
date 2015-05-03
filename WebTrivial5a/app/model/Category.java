@@ -55,34 +55,6 @@ public class Category {
 		Collections.shuffle(questions, new Random(seed));
 	}
 
-	/**
-	 * Crea categoría
-	 * 
-	 * @param category
-	 */
-	public static void create(Category category) throws Exception {
-
-	}
-
-	/**
-	 * Csrea preguntas
-	 * 
-	 * @param login
-	 * @param password
-	 */
-	public static void create(String name, List<Question> preguntas)
-			throws Exception {
-
-	}
-
-	/**
-	 * Borra un usuario dado un login
-	 * 
-	 * @param login
-	 */
-	public static void delete(String name) {
-
-	}
 
 	/**
 	 * Busca un usuario

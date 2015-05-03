@@ -5,9 +5,12 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
+import java.util.Map.Entry;
 import java.util.Random;
 import java.util.Set;
+
 import com.google.gson.Gson;
+
 import controllers.MongoConnection;
 
 public class Partida {
@@ -138,13 +141,7 @@ public class Partida {
 		System.out.println(quesitosPorJugador.get(activeUser.login).size());
 		preg.vecesAcertada += 1;
 		if (quesito) {
-			if (quesitosPorJugador.get(activeUser.login) != null) {
 				quesitosPorJugador.get(activeUser.login).add(preg.category);
-			} else {
-				HashSet<String> aux = new HashSet<String>();
-				aux.add(preg.category);
-				quesitosPorJugador.put(activeUser.login, aux);
-			}
 		}
 		if (quesitosPorJugador.get(activeUser.login).size() == MAX_CATEGORIAS)
 			terminarPartida();
@@ -164,6 +161,16 @@ public class Partida {
 	public void falla(Question preg) {
 		activeUser.numberWrongAnswer += 1;
 		preg.vecesFallada += 1;
+		try {
+			Partida.updatePartida(this);
+			User.updateUser(activeUser);
+			Category.Update(preg, Category.findOne(preg.category));
+			
+				//turnoSiguiente();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 
 	/**
@@ -239,5 +246,11 @@ public class Partida {
 	public String toJSON() {
 		Gson g = new Gson();
 		return g.toJson(this);
+	}
+	
+	public void inicializarQuesitos()
+	{	
+		for(User u : usuarios)
+			quesitosPorJugador.put(u.login, new HashSet<String>());
 	}
 }

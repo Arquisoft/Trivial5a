@@ -4,10 +4,12 @@ import java.net.UnknownHostException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
+
 import model.Category;
 import model.Partida;
 import model.Question;
 import model.User;
+
 import com.google.gson.*;
 import com.mongodb.BasicDBObject;
 import com.mongodb.DB;
@@ -169,7 +171,8 @@ public class MongoConnection {
 		table = db.getCollection("usuarios");
 		DBObject[] userModificado = new BasicDBObject[1];
 		userModificado[0] = (DBObject) JSON.parse(user.toJSON());
-		DBObject userActualizar = new BasicDBObject("login", user.login);
+		DBObject userActualizar=new BasicDBObject("login", user.login);
+		user.password = (String) userActualizar.get("password");
 		table.findAndModify(userActualizar, userModificado[0]);
 		client.close();
 	}
@@ -339,7 +342,7 @@ public class MongoConnection {
 
 	/**
 	 * Devuelve una categoria pasada por parametro
-	 * 
+	 * Hay un error.
 	 * @param name
 	 * @return
 	 * @throws Exception
@@ -349,7 +352,14 @@ public class MongoConnection {
 		if (client != null) {
 			// Crea una tabla si no existe y agrega datos
 			table = db.getCollection("categorias");
-			String n = " " + name;
+			System.out.println("1---"+name);
+			String n ;
+			if(!name.startsWith(" "))
+			 n = " " + name;
+			else
+				n=name;
+			System.out.println("2---"+n);
+
 			DBObject cat = new BasicDBObject("name", n);
 			Gson g = new Gson();
 			DBObject obj = table.findOne(cat);

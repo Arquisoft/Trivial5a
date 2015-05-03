@@ -206,6 +206,7 @@ public class Application extends Controller {
 			p.id = (long) Partida.all().size();
 			p.usuarios.add(u);
 			p.activeUser = u;
+			p.inicializarQuesitos();
 			tablero.render(Partida.create(p));
 			return redirect(routes.Application.showPartida(p.id));
 
