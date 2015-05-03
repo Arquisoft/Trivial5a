@@ -88,32 +88,32 @@ $( document ).ready(function() {
 					@for(a <-1 to 30){ @if(a==1||a==6||a==11||a==16||a==21||a==26){
 					<li id="@a-li" class="menu-item  icon-star">
 					@if(a==1){ 
-					<a href='@routes.Application.getQuestion(partida.id,"Deportes", true)'>
+					<a href='@routes.Application.getQuestion(partida.id,"Deportes", true,a)'>
 							<button id="@a" class="menu-item-back"></button>
 					</a> 
 					} 
 					@if(a==6){ 
-					<a href='@routes.Application.getQuestion(partida.id,"Historia", true)'>
+					<a href='@routes.Application.getQuestion(partida.id,"Historia", true,a)'>
 							<button id="@a" class="menu-item-back"></button>
 					</a> 
 					}
 					@if(a==11){ 
-					<a href='@routes.Application.getQuestion(partida.id,"Entretenimiento", true)'>
+					<a href='@routes.Application.getQuestion(partida.id,"Entretenimiento", true,a)'>
 							<button id="@a" class="menu-item-back"></button>
 					</a> 
 					} 
 					@if(a==16){ 
-					<a href='@routes.Application.getQuestion(partida.id,"Ciencia y Tecnologia", true)'>
+					<a href='@routes.Application.getQuestion(partida.id,"Ciencia y Tecnologia", true,a)'>
 							<button id="@a" class="menu-item-back"></button>
 					</a> 
 					} 
 					@if(a==21){ 
-					<a href='@routes.Application.getQuestion(partida.id,"Arte y Literatura", true)'>
+					<a href='@routes.Application.getQuestion(partida.id,"Arte y Literatura", true,a)'>
 							<button id="@a" class="menu-item-back"></button>
 					</a> 
 					} 
 					@if(a==26){ 
-					<a href='@routes.Application.getQuestion(partida.id,"Geografia", true)'>
+					<a href='@routes.Application.getQuestion(partida.id,"Geografia", true,a)'>
 							<button id="@a" class="menu-item-back"></button>
 					</a> 
 					}
@@ -122,27 +122,27 @@ $( document ).ready(function() {
 					}else{
 					<li id="@a-li" class="menu-item">
 						@if(a==1||a==7||a==13||a==19||a==25){ 
-						<a href='@routes.Application.getQuestion(partida.id,"Deportes", false)'>
+						<a href='@routes.Application.getQuestion(partida.id,"Deportes", false,a)'>
 							<button id="@a" class="menu-item-back"></button>
 					</a> } 
 						@if(a==2||a==8||a==14||a==20||a==26){ 
-						<a href='@routes.Application.getQuestion(partida.id,"Geografia", false)'>
+						<a href='@routes.Application.getQuestion(partida.id,"Geografia", false,a)'>
 							<button id="@a" class="menu-item-back"></button>
 					</a> } 
 						@if(a==3||a==9||a==15||a==21||a==27){ 
-						<a href='@routes.Application.getQuestion(partida.id,"Arte y Literatura", false)'>
+						<a href='@routes.Application.getQuestion(partida.id,"Arte y Literatura", false,a)'>
 							<button id="@a" class="menu-item-back"></button>
 					</a> } 
 						@if(a==4||a==10||a==16||a==22||a==28){ 
-						<a href='@routes.Application.getQuestion(partida.id,"Ciencia y Tecnologia", false)'>
+						<a href='@routes.Application.getQuestion(partida.id,"Ciencia y Tecnologia", false,a)'>
 							<button id="@a" class="menu-item-back"></button>
 					</a> } 
 						@if(a==5||a==11||a==17||a==23||a==29){ 
-						<a href='@routes.Application.getQuestion(partida.id,"Entretenimiento", false)'>
+						<a href='@routes.Application.getQuestion(partida.id,"Entretenimiento", false,a)'>
 							<button id="@a" class="menu-item-back"></button>
 					</a> } 
 						@if(a==6||a==12||a==18||a==24||a==30){ 
-						<a href='@routes.Application.getQuestion(partida.id,"Historia", false)'>
+						<a href='@routes.Application.getQuestion(partida.id,"Historia", false,a)'>
 							<button id="@a" class="menu-item-back"></button>
 					</a> }
 						<div id="circle-@a" class="circle circle-disabled"></div>

@@ -31,10 +31,10 @@ GET			/tablero										controllers.Application.newPartida()
 GET 		/partidas/:id/delete       						controllers.Application.deletePartida(id: Long)	
 POST   		/partidas/:id/exit      						controllers.Application.exitPartida(id: Long)			           
 GET			/tablero/:id									controllers.Application.showPartida(id: Long)
-GET     	/pregunta/:id/:idCategoria/:quesito						controllers.Application.getQuestion(id: Long, idCategoria: String, quesito: Boolean)
+GET     	/pregunta/:id/:idCategoria/:quesito/:posicion	controllers.Application.getQuestion(id: Long, idCategoria: String, quesito: Boolean,posicion: Integer)
 #POST    	/item/new     									controllers.Application.newItem
 
-#GET 		/partida/:id/:idCategoria						controllers.Application.getQuestion(id: Long, idCategoria: String)
+#GET 		/partida/:id/:idCategoria/:posicion				controllers.Application.getQuestion(id: Long, idCategoria: String,posicion: Integer)
 GET     	/javascriptRoutes     							controllers.Application.javascriptRoutes
 
 # Map static resources from the /public folder to the /assets URL path

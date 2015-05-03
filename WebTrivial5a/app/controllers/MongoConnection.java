@@ -170,9 +170,14 @@ public class MongoConnection {
 		// Crea una tabla si no existe y agrega datos
 		table = db.getCollection("usuarios");
 		DBObject[] userModificado = new BasicDBObject[1];
-		userModificado[0] = (DBObject) JSON.parse(user.toJSON());
 		DBObject userActualizar=new BasicDBObject("login", user.login);
-		user.password = (String) userActualizar.get("password");
+		DBCursor s = table.find(userActualizar);
+		System.out.println("POS"+user.posicion);
+		while(s.hasNext())
+		{
+		user.password = (String) s.next().get("password");
+		}
+		userModificado[0] = (DBObject) JSON.parse(user.toJSON());
 		table.findAndModify(userActualizar, userModificado[0]);
 		client.close();
 	}

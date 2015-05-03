@@ -284,11 +284,14 @@ public class Application extends Controller {
 	 * @throws Exception
 	 */
 	public static Result getQuestion(Long id, String idCategoria,
-			Boolean quesito) throws Exception {
+			Boolean quesito, int posicion) throws Exception {
 		Partida partidaActiva;
 		Question q;
 		partidaActiva = Partida.findOne(id);
+		partidaActiva.activeUser.posicion=posicion;
+		User.updateUser(partidaActiva.activeUser);
 		q = partidaActiva.devolverPregunta(idCategoria);
+		Partida.updatePartida(partidaActiva);
 		return ok(preguntaventana.render(id, q, quesito));
 	}
 
@@ -302,6 +305,7 @@ public class Application extends Controller {
 		Form<Pregunta> filledForm = preguntaForm.bindFromRequest();
 		Partida p = Partida.findOne(Long.parseLong(filledForm.field("id").value())); // coges la partida
 		String cat = filledForm.field("category").value();
+		System.out.println("POS CONTESTA"+p.activeUser.posicion);
 		List<Question> c = Category.findAllQuestions(cat.trim()); // coges la categoria
 		for (Question q : c) {
 			if (q.query.equals(filledForm.field("query").value())) {// buscas la pregunta
