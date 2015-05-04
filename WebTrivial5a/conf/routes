@@ -19,6 +19,7 @@ GET    		/usuario										controllers.Application.showUsers()
 POST   		/new                 							controllers.Application.register()
 GET			/registro										controllers.Application.registerUser()
 
+
 #GET    	/categorias										controllers.Application.showCategories()
 GET    		/categorias										controllers.Application.showCategoriesQuestions()
 
@@ -27,7 +28,7 @@ GET 		/logout											controllers.Application.logout()
 POST			/tablero									controllers.Application.contesta()
 #POST            /tablero                                    controllers.Application.contesta(categoria:String, q:String ,contestada:String , id: Long)
 
-GET			/tablero										controllers.Application.newPartida()
+GET			/invite											controllers.Application.newPartida()
 GET 		/partidas/:id/delete       						controllers.Application.deletePartida(id: Long)	
 POST   		/partidas/:id/exit      						controllers.Application.exitPartida(id: Long)			           
 GET			/tablero/:id									controllers.Application.showPartida(id: Long)

@@ -236,13 +236,29 @@ public class Application extends Controller {
 			p.usuarios.add(u);
 			p.activeUser = u;
 			p.inicializarQuesitos();
-			tablero.render(Partida.create(p));
-			return redirect(routes.Application.showPartida(p.id));
-
+			Partida.create(p);
+			return ok(inviteuser.render(p, model.User.all()));
+ 
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		return null;
+	}
+	
+
+	/**
+	 * Invita a usuarios
+	 * 
+	 * @return
+	 */
+	public static Result invite(Long partidaId, String login) throws Exception {
+		
+			User u = User.findOne(login);
+			Partida p= Partida.findOne(partidaId);
+			p.usuarios.add(u);
+			p.inicializarQuesitos();
+			Partida.updatePartida(p);
+		return redirect (routes.Application.showPartida(partidaId));
 	}
 
 	/**
