@@ -15,3 +15,6 @@ views.partidas.partidasActivasEsperandoPorJugador=Partidas activas esperando por
 
 views.login.login=Conectarse
 views.login.registrarse=Registrarse
+
+views.tablero.fin=¡HAS TERMINADO!
+views.tablero.enhorabuena=¡Enhorabuena! ¡Has ganado!
