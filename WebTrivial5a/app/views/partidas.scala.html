@@ -3,6 +3,8 @@
 @import helper._
 
 @main("Lista de Partidas") {
+	<a type="submit" class="btn btn-warning btn-lg" href="@routes.Application.login()"><span class="glyphicon glyphicon-repeat">Actualizar</span></a>
+
 	<a href="@routes.Application.newPartida()" class="btn btn-success btn-lg">@Messages("views.partidas.nuevaPartida") <span class="glyphicon glyphicon-plus"></span></a> 
 	<div class="row">
 		<div id="columnaPartidas" class="col-md-4">
