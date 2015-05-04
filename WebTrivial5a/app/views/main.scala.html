@@ -25,6 +25,7 @@
 		<div class="container-fluid main">
 			<nav class="navbar navbar-default">
 			  	<div class="container-fluid">
+			  	<div class="btn-group" role="group">
 				    <a href="/">
 						<button type="button" class="btn btn-default navbar-btn"><span class="glyphicon glyphicon-play-circle"></span> @Messages("views.main.partidas")</button>
 					</a>
@@ -36,6 +37,8 @@
 				   	<a href="/usuario">
 				    	<button type="button" class="btn btn-default navbar-btn"><span class="glyphicon glyphicon-user"></span> @Messages("views.main.usuarios")</button>
 				    </a>
+				    </div>
+				    <div class="btn-group pull-right" role="group">
 				    @if(session().get("conectado") != null){
 					    <a href="/logout">
 					    	<button type="button" class="btn btn-danger navbar-btn pull-right"> @Messages("views.main.logout")  <span class="glyphicon glyphicon-remove-circle" aria-hidden="true"></span></button>
@@ -53,6 +56,7 @@
 				    @if(session().get("conectado") != null){
 				    	<span class="btn navbar-btn pull-right" disabled>@Messages("views.main.saludo") @session().get("conectado")!</span>
 				    }
+				    </div>
 			  	</div>
 			</nav>
 			@if(flash.containsKey("danger")) {
