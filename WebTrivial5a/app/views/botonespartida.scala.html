@@ -1,0 +1,22 @@
+@(partida : model.Partida)
+@import helper._
+
+<tr>
+	<td class="text-center">
+		<div class="btn-group" role="group">
+			<a type="submit" class="btn btn-default" href="@routes.Application.showPartida(partida.id)">@Messages("views.partidas.partida") @partida.id</a>
+				@if(partida.usuarios.size()==1){
+					<a href = "@routes.Application.deletePartida(partida.id)" 
+						class="btn btn-danger glyphicon glyphicon-remove" 
+						onclick="return confirm('@Messages("views.partidas.confirmarEliminacion") @partida.id?');" > 
+					</a>
+				}
+				@if(partida.usuarios.size()>1 && partida.finished==false) {
+					<a href = "@routes.Application.exitPartida(partida.id)" 
+						class="btn btn-danger glyphicon glyphicon-log-out" 
+						onclick="return confirm('@Messages("views.partidas.confirmarSalida") @partida.id?');" > 
+					</a>	
+				} 
+		</div>
+	</td>
+</tr>

@@ -12,6 +12,8 @@ views.partidas.partidasEnlasQueTeTocaTirar=Games where you get to shoot
 views.partidas.partida=Game
 views.partidas.partidasAcabadas=Finished games
 views.partidas.partidasActivasEsperandoPorJugador=Active games waiting for player
+views.partidas.confirmarSalida=Are you sure you want to leave  the game
+views.partidas.confirmarEliminacion=Are you sure you want to delete the game
 
 views.login.login=Login
 views.login.registrarse=Sign in
