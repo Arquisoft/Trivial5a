@@ -15,7 +15,7 @@ import controllers.MongoConnection;
 
 public class Partida {
 	
-	public static final int MAX_CATEGORIAS = 6;
+	public int MAX_CATEGORIAS = 6;
 
 	public List<User> usuarios = new ArrayList<User>();
 
@@ -177,8 +177,10 @@ public class Partida {
 	 * Metodo final del juego. Cuando algun usuario acaba se llama a este metodo
 	 */
 	public boolean terminarPartida() {
-		if (quesitosPorJugador.get(activeUser).size() == MAX_CATEGORIAS)
+		if (quesitosPorJugador.get(activeUser.login).size() == MAX_CATEGORIAS){
+			this.finished = true;
 			return true;
+		}
 		return false;
 	}
 
