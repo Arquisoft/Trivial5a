@@ -12,13 +12,13 @@ import play.libs.Json;
 import play.mvc.Controller;
 import play.mvc.Result;
 import views.html.categorias;
+import views.html.inviteuser;
 import views.html.login;
 import views.html.partidas;
 import views.html.preguntaventana;
 import views.html.registro;
 import views.html.tablero;
 import views.html.usuarios;
-
 import play.i18n.Messages;
 
 public class Application extends Controller {
