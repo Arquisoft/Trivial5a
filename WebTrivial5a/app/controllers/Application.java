@@ -48,9 +48,9 @@ public class Application extends Controller {
 	 * 
 	 * @return
 	 */
-	public static Result es() {
+	public static Result es(String returnUrl) {
 		Controller.changeLang("es");
-		return redirect("/");
+		return redirect(returnUrl == null ? "/" : returnUrl);
 	}
 	
 	/**
@@ -58,9 +58,9 @@ public class Application extends Controller {
 	 * 
 	 * @return
 	 */
-	public static Result en() {
+	public static Result en(String returnUrl) {
 		Controller.changeLang("en");
-		return redirect("/");
+		return redirect(returnUrl == null ? "/" : returnUrl);
 	}
 	
 	/**

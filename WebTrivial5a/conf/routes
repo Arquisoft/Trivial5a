@@ -34,8 +34,8 @@ GET			/tablero/:id									controllers.Application.showPartida(id: Long)
 GET     	/pregunta/:id/:idCategoria/:quesito/:posicion	controllers.Application.getQuestion(id: Long, idCategoria: String, quesito: Boolean,posicion: Integer)
 #POST    	/item/new     									controllers.Application.newItem
 
-GET     	/es     										controllers.Application.es()
-GET     	/en     										controllers.Application.en()
+GET     	/es/:url     										controllers.Application.es(url: String)
+GET     	/en/:url     										controllers.Application.en(url: String)
 
 #GET 		/partida/:id/:idCategoria/:posicion				controllers.Application.getQuestion(id: Long, idCategoria: String,posicion: Integer)
 GET     	/javascriptRoutes     							controllers.Application.javascriptRoutes
