@@ -6,8 +6,8 @@
 		<tr>
 			<th class="text-center success">Nombre categorias</th>
 			@if(session().get("admin")=="true"){
-				<th class="text-center success">Pregunta mas facil</th>
-				<th class="text-center success">Pregunta mas dificil</th>
+				<th class="text-center success" style="vertical-align: middle">Pregunta más fácil</th>
+				<th class="text-center success" style="vertical-align: middle">Pregunta más difícil</th>
 			}
 		</tr>
 			@for(categoria <- categorias) {
