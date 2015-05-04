@@ -342,8 +342,10 @@ public class Application extends Controller {
 					flash("success", "Respuesta correcta");
 					p.acierta(q, Boolean.parseBoolean(filledForm.field(
 							"quesito").value())); // donde sea la estrella en el circulo
-					if(p.finished==true)
+					if(p.finished==true) {
 						flash("success", "Partida terminada");
+						flash("finished", "Finished");
+					}
 				} else
 					flash("danger", "Respuesta incorrecta");
 				p.falla(q);
