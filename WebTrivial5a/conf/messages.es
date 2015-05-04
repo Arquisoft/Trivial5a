@@ -6,6 +6,7 @@ views.main.partidas=Partidas
 views.main.categorias=Categorias
 views.main.usuarios=Usuarios
 views.main.logout=Cerrar Sesión
+views.main.saludo=!Hola
 
 views.partidas.nuevaPartida=Nueva Partida
 views.partidas.partidasEnlasQueTeTocaTirar=Partidas en las que te toca tirar

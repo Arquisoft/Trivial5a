@@ -50,6 +50,9 @@
 				    	<button type="button" class="btn btn-default navbar-btn pull-right"> <img 
                       src="@{routes.Assets.at("images/es.png")}" alt='Español'> </button>
 				    </a>
+				    @if(session().get("conectado") != null){
+				    	<span class="btn navbar-btn pull-right" disabled>@Messages("views.main.saludo") @session().get("conectado")!</span>
+				    }
 			  	</div>
 			</nav>
 			@if(flash.containsKey("danger")) {

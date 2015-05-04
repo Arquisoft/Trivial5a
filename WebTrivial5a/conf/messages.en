@@ -6,6 +6,7 @@ views.main.partidas=Games
 views.main.categorias=Categories
 views.main.usuarios=Users
 views.main.logout=Logout
+views.main.saludo=Hi
 
 views.partidas.nuevaPartida=New Game
 views.partidas.partidasEnlasQueTeTocaTirar=Games where you get to shoot
