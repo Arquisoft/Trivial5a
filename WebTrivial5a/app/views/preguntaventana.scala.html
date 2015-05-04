@@ -29,7 +29,7 @@ $( document ).ready(function() {
 	function playFail() {
 		fail.play();
 	}
-	function answer (respuesta) {
+	function answer(respuesta) {
 		if(respuesta=="@pregunta.correctAnswer") {
 			playCorrect();
 		} else {
@@ -53,13 +53,13 @@ $( document ).ready(function() {
 							<input type ="hidden" name="quesito" value="@quesito" />
 							@if(respuesta==pregunta.correctAnswer){
 							<button id="getQuestion" type="submit" class="btn btn-primary"
-							 onclick="playCorrect();answer(@respuesta)">
+							 onclick="answer('@respuesta')">
 								@respuesta
 							</button>
 							}else{
 							<button id="getQuestion"
 							type="submit" class="btn btn-primary"
-							 onclick="playFail();answer(@respuesta)">
+							 onclick="answer('@respuesta')">
 								@respuesta
 							</button>
 							}
