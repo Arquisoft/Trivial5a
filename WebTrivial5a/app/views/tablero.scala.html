@@ -166,7 +166,8 @@ function rollDice(posactual){
     	dplus= (posactual+numdado)
     	if(dplus!=30)   	dplus = (posactual+numdado)%numcasillas;
     	dmin = posactual-numdado;
-    	if(dmin<0) dmin=numcasillas+dmin;
+    	if(dmin==0) dmin=30;
+    	else if(dmin<0) dmin=numcasillas+dmin;
 	
 	    $( "#"+dplus ).prop('disabled', false);
 	    $( "#circle-"+dplus ).addClass("circle-enabled");
