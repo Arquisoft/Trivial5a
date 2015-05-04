@@ -2,7 +2,33 @@
 
 @import helper._
 
+
+<head>
+<script>
+
+var seconds_left = 30;
+var interval = setInterval(function() {
+    document.getElementById('timer_div').innerHTML = --seconds_left;
+
+    if (seconds_left <= 0)
+    {
+       
+        clearInterval(interval);
+         window.location.href="/tablero/@partidaid"
+    }
+}, 1000);
+
+</script>
+
+
+
+</head>
+
+
 @main("pregunta") {
+<div id = "timer_div">
+
+</div>
 	<h1>@pregunta.query</h1>
 	<table>
 		@for(respuesta <- pregunta.getAllAnswers()) {
@@ -23,3 +49,5 @@
 		}
 	</table>
 }
+
+
