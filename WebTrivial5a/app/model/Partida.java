@@ -162,9 +162,12 @@ public class Partida {
 		activeUser.numberWrongAnswer += 1;
 		preg.vecesFallada += 1;
 		try {
+			System.out.println("user------"+activeUser.login);
 			Partida.updatePartida(this);
 			User.updateUser(activeUser);
 			turnoSiguiente();
+			System.out.println("user------"+activeUser.login);
+
 			Category.Update(preg, Category.findOne(preg.category));
 			Partida.updatePartida(this);
 

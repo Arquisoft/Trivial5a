@@ -30,7 +30,7 @@ $( document ).ready(function() {
 		fail.play();
 	}
 	function answer(respuesta) {
-		if(respuesta=="@pregunta.correctAnswer") {
+		if(respuesta==pregunta.correctAnswer) {
 			playCorrect();
 		} else {
 			playFail();
