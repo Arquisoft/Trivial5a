@@ -8,7 +8,10 @@ $( document ).ready(function() {
 		$( "#circle-1" ).addClass("circle-actual");
 	else
 		$( "#circle-@partida.activeUser.posicion" ).addClass("circle-actual");
+		
+		@if(session().get("conectado")){
 	$( "button").prop('disabled', true);
+	}
 	$( "#dice" ).prop('disabled', false);
 	$( ".navbar-btn" ).prop('disabled', false);
 	});

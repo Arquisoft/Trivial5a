@@ -166,7 +166,7 @@ public class Partida {
 			User.updateUser(activeUser);
 			Category.Update(preg, Category.findOne(preg.category));
 			
-				//turnoSiguiente();
+				turnoSiguiente();
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
