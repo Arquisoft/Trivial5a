@@ -37,6 +37,7 @@ $( document ).ready(function() {
 		}
 		clock.stop();
 		$( "button" ).prop("disabled",true);
+		$( "#myForm" ).submit();
 	}
 </script>
 	<div class="col-md-6">
@@ -45,7 +46,7 @@ $( document ).ready(function() {
 			@for(respuesta <- pregunta.getAllAnswers()) {
 				<tr>
 					<td  style="padding:10px">
-						@form(routes.Application.contesta()){
+						@form(routes.Application.contesta(), 'id -> "myForm"){
 							<input type ="hidden" name="category" value="@pregunta.category" />
 							<input type ="hidden" name="query" value="@pregunta.query" />
 							<input type ="hidden" name="contestada" value="@respuesta" />
