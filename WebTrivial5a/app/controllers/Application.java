@@ -1,16 +1,25 @@
 package controllers;
 
 import java.util.List;
-import com.fasterxml.jackson.databind.JsonNode;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import play.*;
-import play.api.mvc.Session;
-import play.data.DynamicForm;
+
+import model.Category;
+import model.Partida;
+import model.Question;
+import model.User;
+import play.Routes;
 import play.data.Form;
 import play.libs.Json;
-import play.mvc.*;
-import views.html.*;
-import model.*;
+import play.mvc.Controller;
+import play.mvc.Result;
+import views.html.categorias;
+import views.html.login;
+import views.html.partidas;
+import views.html.preguntaventana;
+import views.html.registro;
+import views.html.tablero;
+import views.html.usuarios;
+
+import play.i18n.Messages;
 
 public class Application extends Controller {
 
@@ -35,13 +44,33 @@ public class Application extends Controller {
 	}
 
 	/**
+	 * Cambia de idioma a español
+	 * 
+	 * @return
+	 */
+	public static Result es() {
+		Controller.changeLang("es");
+		return redirect("/");
+	}
+	
+	/**
+	 * Cambia de idioma a ingles
+	 * 
+	 * @return
+	 */
+	public static Result en() {
+		Controller.changeLang("en");
+		return redirect("/");
+	}
+	
+	/**
 	 * Salir de sesión
 	 * 
 	 * @return
 	 */
 	public static Result logout() {
 		session().clear();
-		flash("danger", "Salida de sesión.");
+		flash("danger", Messages.get("application.logout"));
 		return redirect("/");
 	}
 
@@ -77,10 +106,10 @@ public class Application extends Controller {
 					session().put("admin", "true");
 				else
 					session().put("admin", "false");
-				flash("success", "Login correcto. ¡Bienvenido!");
+				flash("success", Messages.get("application.login.correcto"));
 				return ok(partidas.render(Partida.findPartidaUser(u)));
 			} else {
-				flash("danger", "Login incorrecto.");
+				flash("danger", Messages.get("application.login.correcto"));
 				return redirect("/");
 			}
 		} catch (Exception e) {

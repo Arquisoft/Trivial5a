@@ -24,19 +24,29 @@
 			<nav class="navbar navbar-default">
 			  	<div class="container-fluid">
 				    <a href="/">
-						<button type="button" class="btn btn-default navbar-btn"><span class="glyphicon glyphicon-play-circle"></span> Partidas</button>
+						<button type="button" class="btn btn-default navbar-btn"><span class="glyphicon glyphicon-play-circle"></span> @Messages("views.main.partidas")</button>
 					</a>
 					
 				    <a href="/categorias">
-				    	<button type="button" class="btn btn-default navbar-btn"><span class="glyphicon glyphicon-th-list"></span> Categorias</button>
+				    	<button type="button" class="btn btn-default navbar-btn"><span class="glyphicon glyphicon-th-list"></span> @Messages("views.main.categorias")</button>
 				    </a>
 				    
 				   	<a href="/usuario">
-				    	<button type="button" class="btn btn-default navbar-btn"><span class="glyphicon glyphicon-user"></span> Usuarios</button>
+				    	<button type="button" class="btn btn-default navbar-btn"><span class="glyphicon glyphicon-user"></span> @Messages("views.main.usuarios")</button>
 				    </a>
 				    
 				    <a href="/logout">
-				    	<button type="button" class="btn btn-danger navbar-btn pull-right">Logout  <span class="glyphicon glyphicon-remove-circle" aria-hidden="true"></span></button>
+				    	<button type="button" class="btn btn-danger navbar-btn pull-right"> @Messages("views.main.logout")  <span class="glyphicon glyphicon-remove-circle" aria-hidden="true"></span></button>
+				    </a>
+				    
+				    <a href="/en">
+				    	<button type="button" class="btn btn-default navbar-btn pull-right"> <img 
+                      src="@{routes.Assets.at("images/en.png")}" alt='Ingles'> </button>
+				    </a>
+				    
+				    <a href="/es">
+				    	<button type="button" class="btn btn-default navbar-btn pull-right"> <img 
+                      src="@{routes.Assets.at("images/es.png")}" alt='Español'> </button>
 				    </a>
 			  	</div>
 			</nav>
