@@ -163,8 +163,8 @@ function rollDice(posactual){
     $("#mover").html(numdado);
     $("#dice").attr('onclick','').unbind('click');
     
-    
-    	dplus = (posactual+numdado)%numcasillas;
+    	dplus= (posactual+numdado)
+    	if(dplus!=30)   	dplus = (posactual+numdado)%numcasillas;
     	dmin = posactual-numdado;
     	if(dmin<0) dmin=numcasillas+dmin;
 	
