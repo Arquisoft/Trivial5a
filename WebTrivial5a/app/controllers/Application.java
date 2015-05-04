@@ -258,7 +258,14 @@ public class Application extends Controller {
 			p.usuarios.add(u);
 			p.inicializarQuesitos();
 			Partida.updatePartida(p);
-		return redirect (routes.Application.showPartida(partidaId));
+			
+			List<User> todos = User.all();
+			
+			for(User us : p.usuarios)
+				if(todos.contains(us))
+					todos.remove(us);
+			return ok(inviteuser.render(p, todos));
+		//return redirect (routes.Application.showPartida(partidaId));
 	}
 
 	/**

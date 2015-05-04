@@ -4,17 +4,26 @@
 
 @main("usuarios") {
 	<div id="columnaUsuarios">
-		<h1>Usuarios registrados</h1>	
+		<h1>Invitar a Usuarios</h1>	
 		<table class="table table-bordered">
 			
+			@if(partida.usuarios.size<partida.MAX_CATEGORIAS){
 			@for(user <- users){
+			@if(user.login != session().get("conectado")){
 				<tr>
 					<td class="text-center">
 						 @user.login
 					</td>
-						<td class="text-center">invitar a partida</td>
+					<td>
+						<a type="submit" class="btn btn-default" href="@routes.Application.invite(partida.id,user.login)">@Messages("views.partidas.partida")</a>
+				</td>
 				</tr>
+				}
+			}
 			}
 		</table>	
+		
+		<a type="submit" class="btn btn-default" href="@routes.Application.showPartida(partida.id)">¡Empezar!</a>
+		
 	</div>
 }

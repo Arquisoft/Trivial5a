@@ -28,6 +28,8 @@ GET 		/logout											controllers.Application.logout()
 POST			/tablero									controllers.Application.contesta()
 #POST            /tablero                                    controllers.Application.contesta(categoria:String, q:String ,contestada:String , id: Long)
 
+GET    		/invite/:id/:login									controllers.Application.invite(id: Long, login: String)
+
 GET			/invite											controllers.Application.newPartida()
 GET 		/partidas/:id/delete       						controllers.Application.deletePartida(id: Long)	
 POST   		/partidas/:id/exit      						controllers.Application.exitPartida(id: Long)			           
