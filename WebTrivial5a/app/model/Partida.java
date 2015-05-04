@@ -164,9 +164,11 @@ public class Partida {
 		try {
 			Partida.updatePartida(this);
 			User.updateUser(activeUser);
+			turnoSiguiente();
 			Category.Update(preg, Category.findOne(preg.category));
+			Partida.updatePartida(this);
+
 			
-				turnoSiguiente();
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

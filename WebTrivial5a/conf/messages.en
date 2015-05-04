@@ -9,7 +9,7 @@ views.main.logout=Logout
 views.main.saludo=Hi
 
 views.partidas.nuevaPartida=New Game
-views.partidas.partidasEnlasQueTeTocaTirar=Games where you get to shoot
+views.partidas.partidasEnlasQueTeTocaTirar=Games where you get to roll
 views.partidas.partida=Game
 views.partidas.partidasAcabadas=Finished games
 views.partidas.partidasActivasEsperandoPorJugador=Active games waiting for player

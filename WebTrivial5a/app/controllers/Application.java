@@ -12,13 +12,13 @@ import play.libs.Json;
 import play.mvc.Controller;
 import play.mvc.Result;
 import views.html.categorias;
+import views.html.inviteuser;
 import views.html.login;
 import views.html.partidas;
 import views.html.preguntaventana;
 import views.html.registro;
 import views.html.tablero;
 import views.html.usuarios;
-
 import play.i18n.Messages;
 
 public class Application extends Controller {
@@ -236,13 +236,36 @@ public class Application extends Controller {
 			p.usuarios.add(u);
 			p.activeUser = u;
 			p.inicializarQuesitos();
-			tablero.render(Partida.create(p));
-			return redirect(routes.Application.showPartida(p.id));
-
+			Partida.create(p);
+			return ok(inviteuser.render(p, model.User.all()));
+ 
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		return null;
+	}
+	
+
+	/**
+	 * Invita a usuarios
+	 * 
+	 * @return
+	 */
+	public static Result invite(Long partidaId, String login) throws Exception {
+		
+			User u = User.findOne(login);
+			Partida p= Partida.findOne(partidaId);
+			p.usuarios.add(u);
+			p.inicializarQuesitos();
+			Partida.updatePartida(p);
+			
+			List<User> todos = User.all();
+			
+			for(User us : p.usuarios)
+				if(todos.contains(us))
+					todos.remove(us);
+			return ok(inviteuser.render(p, todos));
+		//return redirect (routes.Application.showPartida(partidaId));
 	}
 
 	/**

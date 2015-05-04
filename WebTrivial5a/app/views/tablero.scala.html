@@ -8,16 +8,16 @@ $( document ).ready(function() {
 		$( "#circle-1" ).addClass("circle-actual");
 	else
 		$( "#circle-@partida.activeUser.posicion" ).addClass("circle-actual");
-		
-		@if(session().get("conectado")){
-	$( "button").prop('disabled', true);
+	// Deshabilitar todos los botones
+	$( "button" ).prop('disabled', true);
+	
+	// Si no es tu turno, no puedes clickear el dado
+	@if(session().get("conectado")!=partida.activeUser.login){
+		$("#dice").attr('onclick','').unbind('click');
 	}
-	$( "#dice" ).prop('disabled', false);
+	
+	// Habilitar los botones de la barra de men�
 	$( ".navbar-btn" ).prop('disabled', false);
-	@if(partida.finished==true){
-		$('#myModal').modal();
-		$( "#finish" ).prop('disabled', false);
-	}
 	});
 </script>
 <div class="tablaJugador">
@@ -27,18 +27,19 @@ $( document ).ready(function() {
 			<th class="text-center success">Jugador</th>
 			<th class="text-center success" colspan="6">Categorías</th>
 		</tr>
-		<tr>
-			<td class="text-center" rowspan=2>@partida.activeUser.login</td>
-			<td class="text-center" bgcolor="#ffb037">Deportes</td>
+		<td></td>
+		<td class="text-center" bgcolor="#ffb037">Deportes</td>
 			<td class="text-center" bgcolor="#ffe800">Historia</td>
 			<td class="text-center" bgcolor="#ff9c9f">Entretenimiento</td>
 			<td class="text-center" bgcolor="#0ad067">Ciencia y Tecnología</td>
 			<td class="text-center" bgcolor="red">Arte y Literatura</td>
 			<td class="text-center" bgcolor="#229cdc">Geografía</td>
-
-		</tr>
-		<tr>
-			@if(partida.quesitosPorJugador.get(partida.activeUser.login).contains(" Deportes")){
+			
+			@for(user <- partida.usuarios){
+			<tr>
+				<td class="text-center">@user.login</td>
+			
+			@if(partida.quesitosPorJugador.get(user.login).contains(" Deportes")){
 			<td class="text-center icon-star"></td>
 			 }else{
 			<td></td>
@@ -69,6 +70,7 @@ $( document ).ready(function() {
 			<td></td>
 			}
 		</tr>
+		}
 		<table>
 			</div>
 
@@ -79,6 +81,7 @@ $( document ).ready(function() {
 						<th class="text-center success">Mover</th>
 					</tr>
 					<tr>
+					
 						<td class="text-center">
 							<img src='@routes.Assets.at("/images/dados.gif")' 
 								onclick="rollDice(@partida.activeUser.posicion)"
