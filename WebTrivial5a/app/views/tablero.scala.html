@@ -8,13 +8,16 @@ $( document ).ready(function() {
 		$( "#circle-1" ).addClass("circle-actual");
 	else
 		$( "#circle-@partida.activeUser.posicion" ).addClass("circle-actual");
-		
-		@if(session().get("conectado")!=partida.activeUser.login){
-		    $("#dice").attr('onclick','').unbind('click');
-	}else{
-	$( "#dice" ).prop('disabled', false);
-	$( ".navbar-btn" ).prop('disabled', false);
+	// Deshabilitar todos los botones
+	$( "button" ).prop('disabled', true);
+	
+	// Si no es tu turno, no puedes clickear el dado
+	@if(session().get("conectado")!=partida.activeUser.login){
+		$("#dice").attr('onclick','').unbind('click');
 	}
+	
+	// Habilitar los botones de la barra de menú
+	$( ".navbar-btn" ).prop('disabled', false);
 	});
 </script>
 <div class="tablaJugador">
