@@ -22,9 +22,9 @@ $( document ).ready(function() {
 </script>
 <div class="tablaJugador">
 
-	<a type="submit" class="btn btn-warning btn-lg" href="@routes.Application.showPartida(partida.id)"><span class="glyphicon glyphicon-repeat">Actualizar</span></a>
+	
 
-	<h1>Partida @partida.id</h1>
+	<h1><a type="submit" class="btn btn-warning btn-lg" href="@routes.Application.showPartida(partida.id)"><span class="glyphicon glyphicon-repeat"></span></a> Partida @partida.id</h1>
 	<table class="table table-bordered">
 		<tr>
 			<th class="text-center success" style="vertical-align: middle" rowspan="2"><span class="glyphicon glyphicon-user"></span></th>

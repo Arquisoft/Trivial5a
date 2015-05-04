@@ -25,7 +25,14 @@
 		<div class="container-fluid main">
 			<nav class="navbar navbar-default">
 			  	<div class="container-fluid">
+			  	 <div class="navbar-header">
+      				<a class="navbar-brand" href="/">
+      				  <img style="height:30px" alt="Brand" src='@routes.Assets.at("/images/logo.png")'>
+   				   </a>
+ 			   	</div>
+
 			  	<div class="btn-group" role="group">
+			  		
 				    <a href="/">
 						<button type="button" class="btn btn-default navbar-btn"><span class="glyphicon glyphicon-play-circle"></span> @Messages("views.main.partidas")</button>
 					</a>
@@ -37,7 +44,7 @@
 				   	<a href="/usuario">
 				    	<button type="button" class="btn btn-default navbar-btn"><span class="glyphicon glyphicon-user"></span> @Messages("views.main.usuarios")</button>
 				    </a>
-				    </div>
+				</div>
 				    <div class="btn-group pull-right" role="group">
 				    @if(session().get("conectado") != null){
 					    <a href="/logout">
