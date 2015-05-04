@@ -155,6 +155,16 @@ $( document ).ready(function() {
 				}
 				</ul>
 			</div>
+
+@if(partida.finished==true){
+	<div class="overlay-container">
+			<div class="window-container zoomin">
+				<h3>¡Enhorabuena! ¡Has ganado la partida!</h3> 
+				<span class="close">Cerrar</span>
+			</div>
+	</div>
+}
+
 			<script>
 function rollDice(posactual){
 	
