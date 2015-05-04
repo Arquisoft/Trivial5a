@@ -5,11 +5,11 @@
 @main("usuarios") {
 	<div id="columnaUsuarios" class="col-md-4">
 		<h1>Invitar a Usuarios</h1>	
-		<table class="table table-bordered table-striped table-hover">
+		<table class="table table-bordered">
 			<thead>
 			<tr>
-				<th>Jugador</th>
-				<th>Invitar</th>
+				<th class="text-center success">Jugador</th>
+				<th class="text-center success">Invitar</th>
 			</tr>
 			</thead>
 			<tbody>
@@ -20,7 +20,7 @@
 					<td class="text-center">
 						 @user.login
 					</td>
-					<td>
+					<td class="text-center">
 						<a type="submit" class="btn btn-info" href="@routes.Application.invite(partida.id,user.login)"><i class="glyphicon glyphicon-plus"></i> @Messages("views.partidas.partida")</a>
 					</td>
 				</tr>
@@ -30,7 +30,7 @@
 			</tbody>
 		</table>	
 		
-		<a type="submit" class="btn btn-lg btn-success" href="@routes.Application.showPartida(partida.id)">¡Empezar!</a>
+		<a type="submit" class="btn btn-lg btn-success" href="@routes.Application.showPartida(partida.id)">Â¡Empezar!</a>
 		
 	</div>
 }

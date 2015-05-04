@@ -16,7 +16,7 @@ $( document ).ready(function() {
 		$("#dice").attr('onclick','').unbind('click');
 	}
 	
-	// Habilitar los botones de la barra de menú
+	// Habilitar los botones de la barra de menï¿½
 	$( ".navbar-btn" ).prop('disabled', false);
 	});
 </script>
@@ -44,27 +44,27 @@ $( document ).ready(function() {
 			 }else{
 			<td></td>
 			}
-			@if(partida.quesitosPorJugador.get(partida.activeUser.login).contains(" Historia")){
+			@if(partida.quesitosPorJugador.get(user.login).contains(" Historia")){
 			<td class="text-center icon-star"></td>
 			}else{
 			<td></td>
 			}
-			@if(partida.quesitosPorJugador.get(partida.activeUser.login).contains(" Entretenimiento")){
+			@if(partida.quesitosPorJugador.get(user.login).contains(" Entretenimiento")){
 			<td class="text-center icon-star"></td> 
 			}else{
 			<td></td>
 			}
-			@if(partida.quesitosPorJugador.get(partida.activeUser.login).contains(" Ciencia y Tecnologia")){
+			@if(partida.quesitosPorJugador.get(user.login).contains(" Ciencia y Tecnologia")){
 			<td class="text-center icon-star"></td>
 			}else{
 			<td></td>
 			}
-			@if(partida.quesitosPorJugador.get(partida.activeUser.login).contains(" Arte y Literatura")){
+			@if(partida.quesitosPorJugador.get(user.login).contains(" Arte y Literatura")){
 			<td class="text-center icon-star"></td>
 			}else{
 			<td></td>
 			}
-			@if(partida.quesitosPorJugador.get(partida.activeUser.login).contains(" Geografia")){
+			@if(partida.quesitosPorJugador.get(user.login).contains(" Geografia")){
 			<td class="text-center icon-star"></td>
 			}else{
 			<td></td>
