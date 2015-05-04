@@ -8,7 +8,7 @@
 	<a href="@routes.Application.newPartida()" class="btn btn-success btn-lg">@Messages("views.partidas.nuevaPartida") <span class="glyphicon glyphicon-plus"></span></a> 
 	<div class="row">
 		<div id="columnaPartidas" class="col-md-4">
-			<h1>@Messages("views.partidas.partidasEnlasQueTeTocaTirar")</h1>
+			<h1 class="text-center">@Messages("views.partidas.partidasEnlasQueTeTocaTirar")</h1>
 			<table class= "table">
 				@for(partida <- partidas) {
 					@if(partida.activeUser.login==session().get("conectado") &&  partida.finished==false){
@@ -18,7 +18,7 @@
 			</table>
 		</div>
 		<div id="columnaPartidas" class="col-md-4">
-			<h1>@Messages("views.partidas.partidasAcabadas")</h1>
+			<h1 class="text-center">@Messages("views.partidas.partidasAcabadas")</h1>
 			<table class= "table">
 				@for(partida <- partidas) {
 					@if(partida.finished==true){
@@ -30,7 +30,7 @@
 			</table>
 		</div>
 		<div id="columnaPartidas" class="col-md-4">
-			<h1>@Messages("views.partidas.partidasActivasEsperandoPorJugador")</h1>
+			<h1 class="text-center">@Messages("views.partidas.partidasActivasEsperandoPorJugador")</h1>
 			<table class= "table">
 				@for(partida <- partidas) {
 					@if(partida.finished==false && partida.activeUser.login!=session().get("conectado")){

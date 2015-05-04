@@ -39,7 +39,10 @@ $( document ).ready(function() {
 			
 			@for(user <- partida.usuarios){
 			<tr>
-				<td class="text-center">@user.login</td>
+				@if(user.login ==partida.activeUser.login){
+				<td class="text-center" bgcolor="#ffe800">@user.login</td>
+				}else{
+				<td class="text-center">@user.login</td>}
 			
 			@if(partida.quesitosPorJugador.get(user.login).contains(" Deportes")){
 			<td class="text-center icon-star"></td>

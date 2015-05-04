@@ -354,6 +354,8 @@ public class Application extends Controller {
 	 * @throws Exception
 	 */
 	public static Result contesta() throws Exception {
+		System.out.println("user----weeeeeeeeeeeeeeeeeeeeeeeeeeeeee");
+
 		Form<Pregunta> filledForm = preguntaForm.bindFromRequest();
 		Partida p = Partida.findOne(Long.parseLong(filledForm.field("id").value())); // coges la partida
 		String cat = filledForm.field("category").value();
