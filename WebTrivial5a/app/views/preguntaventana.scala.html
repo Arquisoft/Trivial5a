@@ -16,6 +16,28 @@ $( document ).ready(function() {
 		}
 	});
 });
+
+
+	var  correct= new Audio();
+	var fail = new Audio();
+	
+	correct.src = "@routes.Assets.at("/sounds/correct.mp3")";
+	fail.src = "@routes.Assets.at("/sounds/fail.mp3")";
+	function playCorrect() {
+		correct.play(); 
+	}
+	function playFail() {
+		fail.play();
+	}
+	function answer(respuesta) {
+		if(respuesta=="@pregunta.correctAnswer") {
+			playCorrect();
+		} else {
+			playFail();
+		}
+		clock.stop();
+		$( "button" ).prop("disabled",true);
+	}
 </script>
 	<div class="col-md-6">
 		<h1>@pregunta.query</h1>
@@ -29,9 +51,18 @@ $( document ).ready(function() {
 							<input type ="hidden" name="contestada" value="@respuesta" />
 							<input type ="hidden" name="id" value="@partidaid" />
 							<input type ="hidden" name="quesito" value="@quesito" />
-							<button id="getQuestion" type="submit" onclick="clock.stop()" class="btn btn-primary">
+							@if(respuesta==pregunta.correctAnswer){
+							<button id="getQuestion" type="submit" class="btn btn-primary"
+							 onclick="answer('@respuesta')">
 								@respuesta
 							</button>
+							}else{
+							<button id="getQuestion"
+							type="submit" class="btn btn-primary"
+							 onclick="answer('@respuesta')">
+								@respuesta
+							</button>
+							}
 						}
 					</td>
 				</tr>
