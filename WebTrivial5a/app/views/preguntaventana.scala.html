@@ -29,7 +29,7 @@ $( document ).ready(function() {
 							<input type ="hidden" name="contestada" value="@respuesta" />
 							<input type ="hidden" name="id" value="@partidaid" />
 							<input type ="hidden" name="quesito" value="@quesito" />
-							<button id="getQuestion" type="submit" class="btn btn-primary">
+							<button id="getQuestion" type="submit" onclick="clock.stop()" class="btn btn-primary">
 								@respuesta
 							</button>
 						}
