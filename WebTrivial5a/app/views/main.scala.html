@@ -34,11 +34,11 @@
 				   	<a href="/usuario">
 				    	<button type="button" class="btn btn-default navbar-btn"><span class="glyphicon glyphicon-user"></span> @Messages("views.main.usuarios")</button>
 				    </a>
-				    
-				    <a href="/logout">
-				    	<button type="button" class="btn btn-danger navbar-btn pull-right"> @Messages("views.main.logout")  <span class="glyphicon glyphicon-remove-circle" aria-hidden="true"></span></button>
-				    </a>
-				    
+				    @if(session().get("conectado") != null){
+					    <a href="/logout">
+					    	<button type="button" class="btn btn-danger navbar-btn pull-right"> @Messages("views.main.logout")  <span class="glyphicon glyphicon-remove-circle" aria-hidden="true"></span></button>
+					    </a>
+				    }
 				    <a href="/en">
 				    	<button type="button" class="btn btn-default navbar-btn pull-right"> <img 
                       src="@{routes.Assets.at("images/en.png")}" alt='Ingles'> </button>
