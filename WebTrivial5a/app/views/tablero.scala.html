@@ -16,6 +16,7 @@ $( document ).ready(function() {
 	$( ".navbar-btn" ).prop('disabled', false);
 	@if(partida.finished==true){
 		$('#myModal').modal();
+		$( "#finish" ).prop('disabled', false);
 	}
 	});
 </script>
@@ -171,7 +172,9 @@ $( document ).ready(function() {
 	        ¡Enhorabuena! ¡Has ganado!
 	      </div>
 	      <div class="modal-footer">
-	        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+	      	<a href="/">
+	        	<button type="button" id="finish" class="btn btn-danger">Terminar</button>
+	        </a>
 	      </div>
 	    </div>
 	  </div>
