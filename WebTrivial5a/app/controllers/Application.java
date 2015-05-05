@@ -227,8 +227,8 @@ public class Application extends Controller {
 	 * 
 	 * @return
 	 */
-	public static Result newPartida() {
-		try {
+	public static Result newPartida() throws Exception {
+		
 			Partida p = new Partida();
 			User u = new User(session().get("conectado"), "",
 					Boolean.valueOf(session().get("admin")));
@@ -239,10 +239,8 @@ public class Application extends Controller {
 			Partida.create(p);
 			return ok(inviteuser.render(p, model.User.all()));
  
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-		return null;
+		
+		//return TODO;
 	}
 	
 
@@ -277,6 +275,7 @@ public class Application extends Controller {
 	public static Result deletePartida(Long id) {
 		try {
 			Partida.delete(id);
+			flash("success", "Partida "+id+" eliminada.");
 			return redirect(routes.Application.login());
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -328,7 +327,10 @@ public class Application extends Controller {
 		if (session().containsKey("conectado")) {
 			try {
 				for(User u: p.usuarios) {
-					if(session().get("conectado") == u.login) {
+					System.out.println(u.login);
+					System.out.println(session().get("conectado"));
+					
+					if(u.login.equals(session().get("conectado").toString())) {
 						return ok(tablero.render(p));
 					} else {
 						flash("danger", "No estás participando en esta partida.");
