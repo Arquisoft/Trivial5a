@@ -355,13 +355,11 @@ public class MongoConnection {
 		if (client != null) {
 			// Crea una tabla si no existe y agrega datos
 			table = db.getCollection("categorias");
-			System.out.println("1---"+name);
 			String n ;
 			if(!name.startsWith(" "))
 			 n = " " + name;
 			else
 				n=name;
-			System.out.println("2---"+n);
 
 			DBObject cat = new BasicDBObject("name", n);
 			Gson g = new Gson();

@@ -143,7 +143,6 @@ public class Partida {
 	 */
 	public void acierta(Question preg, boolean quesito) {
 		activeUser.numberCorrectAnswer += 1;
-		System.out.println(quesitosPorJugador.get(activeUser.login).size());
 		preg.vecesAcertada += 1;
 		if (quesito) {
 				quesitosPorJugador.get(activeUser.login).add(preg.category);
@@ -151,6 +150,7 @@ public class Partida {
 		if (quesitosPorJugador.get(activeUser.login).size() == MAX_CATEGORIAS)
 			terminarPartida();
 		try {
+			usuarios.get(usuarios.indexOf(activeUser)).numberCorrectAnswer += 1;
 			Partida.updatePartida(this);
 			User.updateUser(activeUser);
 			Category.Update(preg, Category.findOne(preg.category));
@@ -163,12 +163,13 @@ public class Partida {
 	 * Metodo que se llamara cada vez que se falle una pregunta Actualiza
 	 * estadisticas y pasa el turno
 	 */
-	public void falla(Question preg) {
+	public void falla(Question preg) throws Exception {
 		activeUser.numberWrongAnswer += 1;
 		preg.vecesFallada += 1;
 		try {
 			usuarios.get(usuarios.indexOf(activeUser)).posicion = activeUser.posicion;
-			Partida.updatePartida(this);
+			usuarios.get(usuarios.indexOf(activeUser)).numberWrongAnswer += 1;
+			
 			User.updateUser(activeUser);
 			turnoSiguiente();
 			Category.Update(preg, Category.findOne(preg.category));

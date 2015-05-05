@@ -33,6 +33,23 @@ $( document ).ready(function() {
 <div class="tablaJugador">
 	<h1><a type="submit" class="btn btn-warning btn-lg" href="@routes.Application.showPartida(partida.id)"><span class="glyphicon glyphicon-repeat"></span></a> Partida @partida.id</h1>
 	<table class="table table-bordered">
+					<tr>
+						<th class="text-center success">Tirar</th>
+						<th class="text-center success">Mover</th>
+					</tr>
+					<tr>
+					
+						<td class="text-center">
+							<img src='@routes.Assets.at("/images/dados.gif")' 
+								onclick="rollDice(@partida.activeUser.posicion)"
+								id="dice" />
+							<i class="icon-die-dice"></i>
+						</td>
+						<td id="mover"></td>
+					</tr>
+				</table>
+				
+	<table class="table table-bordered">
 		<tr>
 			<th class="text-center success" style="vertical-align: middle" rowspan="2"><span class="glyphicon glyphicon-user"></span></th>
 			<th class="text-center success" colspan="6">Categorías</th>
@@ -85,25 +102,7 @@ $( document ).ready(function() {
 		}
 		<table>
 			</div>
-
-			<div id="dado" class="col-md-6">
-				<table class="table table-bordered"">
-					<tr>
-						<th class="text-center success">Tirar</th>
-						<th class="text-center success">Mover</th>
-					</tr>
-					<tr>
-					
-						<td class="text-center">
-							<img src='@routes.Assets.at("/images/dados.gif")' 
-								onclick="rollDice(@partida.activeUser.posicion)"
-								id="dice" />
-							<i class="icon-die-dice"></i>
-						</td>
-						<td id="mover"></td>
-					</tr>
-				</table>
-			</div>
+			
 			<div>
 				<ul id="menu">
 					<a class="menu-button" href="#menu" title="Show navigation"></a>

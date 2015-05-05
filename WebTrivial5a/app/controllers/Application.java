@@ -308,7 +308,8 @@ public class Application extends Controller {
 	 */
 	public static Result showPartidasUser(User user) {
 		try {
-			return ok(partidas.render(Partida.findPartidaUser(user)));
+			List<Partida> partidaslist = Partida.findPartidaUser(user);
+			return ok(partidas.render(partidaslist));
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -327,9 +328,6 @@ public class Application extends Controller {
 		if (session().containsKey("conectado")) {
 			try {
 				for(User u: p.usuarios) {
-					System.out.println(u.login);
-					System.out.println(session().get("conectado"));
-					
 					if(u.login.equals(session().get("conectado").toString())) {
 						return ok(tablero.render(p));
 					} else {
