@@ -293,7 +293,8 @@ public class Application extends Controller {
 	public static Result exitPartida(Long id) {
 		try {
 			Partida.salirPartida(id, session().get("conectado"));
-			return redirect(routes.Application.login());
+			flash("success", "Has abandonado la partida "+id+".");
+			return redirect(routes.Application.index());
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -323,7 +324,24 @@ public class Application extends Controller {
 	 * @throws Exception
 	 */
 	public static Result showPartida(Long id) throws Exception {
-		return ok(tablero.render(Partida.findOne(id)));
+		Partida p = Partida.findOne(id);
+		if (session().containsKey("conectado")) {
+			try {
+				for(User u: p.usuarios) {
+					if(session().get("conectado") == u.login) {
+						return ok(tablero.render(p));
+					} else {
+						flash("danger", "No estás participando en esta partida.");
+						return ok(partidas.render(Partida.findPartidaUser(new User(
+								session().get("conectado"), "", false))));
+					}
+				}
+				
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		}
+		return TODO;
 	}
 
 	/**

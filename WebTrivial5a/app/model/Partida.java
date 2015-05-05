@@ -90,7 +90,12 @@ public class Partida {
 	public static void salirPartida(Long id, String login) throws Exception {
 		User u = MongoConnection.findUser(login);
 		Partida p = MongoConnection.findPartida(id);
+		if(p.activeUser == u)
+			p.turnoSiguiente();
+		System.out.println(p.usuarios);
 		p.usuarios.remove(u);
+		Partida.updatePartida(p);
+		System.out.println(p.usuarios);
 		MongoConnection.addPartida(p);
 	}
 

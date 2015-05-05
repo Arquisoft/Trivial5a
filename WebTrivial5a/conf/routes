@@ -32,7 +32,7 @@ GET    		/invite/:id/:login									controllers.Application.invite(id: Long, log
 
 GET			/invite											controllers.Application.newPartida()
 GET 		/partidas/:id/delete       						controllers.Application.deletePartida(id: Long)	
-POST   		/partidas/:id/exit      						controllers.Application.exitPartida(id: Long)			           
+GET   		/partidas/:id/exit      						controllers.Application.exitPartida(id: Long)			           
 GET			/tablero/:id									controllers.Application.showPartida(id: Long)
 GET     	/pregunta/:id/:idCategoria/:quesito/:posicion	controllers.Application.getQuestion(id: Long, idCategoria: String, quesito: Boolean,posicion: Integer)
 #POST    	/item/new     									controllers.Application.newItem
