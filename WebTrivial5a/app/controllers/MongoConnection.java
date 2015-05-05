@@ -172,7 +172,7 @@ public class MongoConnection {
 		DBObject[] userModificado = new BasicDBObject[1];
 		DBObject userActualizar=new BasicDBObject("login", user.login);
 		DBCursor s = table.find(userActualizar);
-		//System.out.println("POS"+user.posicion);
+
 		while(s.hasNext())
 		{
 		user.password = (String) s.next().get("password");
@@ -287,8 +287,7 @@ public class MongoConnection {
 			if (obj != null) {
 				Category c = g.fromJson(obj.toString(), Category.class);
 				preguntas = c.questions;
-				for (Question q : preguntas)
-					System.out.println(q);
+				
 				return preguntas;
 			}
 			return null;
@@ -357,13 +356,11 @@ public class MongoConnection {
 		if (client != null) {
 			// Crea una tabla si no existe y agrega datos
 			table = db.getCollection("categorias");
-			System.out.println("1---"+name);
 			String n ;
 			if(!name.startsWith(" "))
 			 n = " " + name;
 			else
 				n=name;
-			System.out.println("2---"+n);
 
 			DBObject cat = new BasicDBObject("name", n);
 			Gson g = new Gson();

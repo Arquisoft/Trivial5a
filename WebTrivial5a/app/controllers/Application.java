@@ -227,8 +227,8 @@ public class Application extends Controller {
 	 * 
 	 * @return
 	 */
-	public static Result newPartida() {
-		try {
+	public static Result newPartida() throws Exception {
+		
 			Partida p = new Partida();
 			User u = new User(session().get("conectado"), "",
 					Boolean.valueOf(session().get("admin")));
@@ -239,10 +239,8 @@ public class Application extends Controller {
 			Partida.create(p);
 			return ok(inviteuser.render(p, model.User.all()));
  
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-		return null;
+		
+		//return TODO;
 	}
 	
 
@@ -277,6 +275,7 @@ public class Application extends Controller {
 	public static Result deletePartida(Long id) {
 		try {
 			Partida.delete(id);
+			flash("success", "Partida "+id+" eliminada.");
 			return redirect(routes.Application.login());
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -293,7 +292,8 @@ public class Application extends Controller {
 	public static Result exitPartida(Long id) {
 		try {
 			Partida.salirPartida(id, session().get("conectado"));
-			return redirect(routes.Application.login());
+			flash("success", "Has abandonado la partida "+id+".");
+			return redirect(routes.Application.index());
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -308,7 +308,8 @@ public class Application extends Controller {
 	 */
 	public static Result showPartidasUser(User user) {
 		try {
-			return ok(partidas.render(Partida.findPartidaUser(user)));
+			List<Partida> partidaslist = Partida.findPartidaUser(user);
+			return ok(partidas.render(partidaslist));
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -323,7 +324,24 @@ public class Application extends Controller {
 	 * @throws Exception
 	 */
 	public static Result showPartida(Long id) throws Exception {
-		return ok(tablero.render(Partida.findOne(id)));
+		Partida p = Partida.findOne(id);
+		if (session().containsKey("conectado")) {
+			try {
+				for(User u: p.usuarios) {
+					if(u.login.equals(session().get("conectado").toString())) {
+						return ok(tablero.render(p));
+					} else {
+						flash("danger", "No estás participando en esta partida.");
+						return ok(partidas.render(Partida.findPartidaUser(new User(
+								session().get("conectado"), "", false))));
+					}
+				}
+				
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		}
+		return TODO;
 	}
 
 	/**
@@ -361,21 +379,22 @@ public class Application extends Controller {
 		System.out.println("POS CONTESTA"+p.activeUser.posicion);
 		List<Question> c = Category.findAllQuestions(cat.trim()); // coges la categoria
 		System.out.println("RESPUESTA CORRECTA??? "+filledForm.field("contestada").value());
-
+		Boolean quesito = Boolean.parseBoolean(filledForm.field("quesito").value());
 		for (Question q : c) {
 			if (q.query.equals(filledForm.field("query").value())) {// buscas la pregunta
 				if (q.correctAnswer.equals(filledForm.field("contestada").value())) { // si contestaste bien
 					flash("success", "Respuesta correcta");
-					
-					p.acierta(q, Boolean.parseBoolean(filledForm.field(
-							"quesito").value())); // donde sea la estrella en el circulo
+					if(quesito)
+						flash("quesito", "¡Has ganado un quesito!");
+					p.acierta(q, quesito); // donde sea la estrella en el circulo
 					if(p.finished==true) {
 						flash("success", "Partida terminada");
 						flash("finished", "Finished");
 					}
-				} else
+				} else {
 					flash("danger", "Respuesta incorrecta");
-				p.falla(q);
+					p.falla(q);
+				}
 			} else {
 				// System.out.println("No hay correspondencia en la pregunta.");
 			}

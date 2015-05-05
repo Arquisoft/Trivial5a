@@ -21,7 +21,7 @@
 						 @user.login
 					</td>
 					<td class="text-center">
-						<a type="submit" class="btn btn-info" href="@routes.Application.invite(partida.id,user.login)"><i class="glyphicon glyphicon-plus"></i> @Messages("views.partidas.partida")</a>
+						<a type="submit" class="btn btn-info" href='@{routes.Application.invite(partida.id,user.login)}'><i class="glyphicon glyphicon-plus"></i> @Messages("views.partidas.partida")</a>
 					</td>
 				</tr>
 				}
@@ -30,7 +30,7 @@
 			</tbody>
 		</table>	
 		
-		<a type="submit" class="btn btn-lg btn-success" href="@routes.Application.showPartida(partida.id)">Â¡Empezar!</a>
+		<a type="submit" class="btn btn-lg btn-success" href="@routes.Application.showPartida(partida.id)">¡Empezar!</a>
 		
 	</div>
 }
