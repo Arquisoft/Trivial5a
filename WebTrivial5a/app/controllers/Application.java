@@ -373,9 +373,10 @@ public class Application extends Controller {
 						flash("success", "Partida terminada");
 						flash("finished", "Finished");
 					}
-				} else
+				} else {
 					flash("danger", "Respuesta incorrecta");
-				p.falla(q);
+					p.falla(q);
+				}
 			} else {
 				// System.out.println("No hay correspondencia en la pregunta.");
 			}
