@@ -5,9 +5,14 @@ import java.security.NoSuchAlgorithmException;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+
+import model.exception.IdLoginException;
+import model.exception.PasswordException;
 import net.vz.mongodb.jackson.Id;
 import net.vz.mongodb.jackson.ObjectId;
+
 import com.google.gson.Gson;
+
 import controllers.MongoConnection;
 
 public class User {
@@ -17,7 +22,7 @@ public class User {
 	public String id;
 
 	public String login;
-	
+
 	public String password;
 
 	public boolean admin;
@@ -39,7 +44,9 @@ public class User {
 	}
 
 	public User() {
-
+		this.login = "";
+		this.password = "";
+		this.admin = false;
 	}
 
 	/**
@@ -49,8 +56,24 @@ public class User {
 	 * @throws Exception
 	 */
 	public static void create(User user) throws Exception {
+		if(user.login.length() == 0)
+			throw new IdLoginException("El login del usuario está vacio.");
+		if(user.password.length() == 0)
+			throw new PasswordException("El password del usuario está vacio.");
+		if(user.password.length() < 6)
+			throw new PasswordException("El password debe tener al menos 6 caracteres.");
 		user.password = Hash(user.password);
 		MongoConnection.addUser(user);
+	}
+
+	/**
+	 * Borra un usuario a la BBDD
+	 * 
+	 * @param user
+	 * @throws Exception
+	 */
+	public static void borrar(User user) throws Exception {
+		MongoConnection.removeUser(user);
 	}
 
 	/**

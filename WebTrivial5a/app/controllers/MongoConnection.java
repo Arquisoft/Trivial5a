@@ -172,7 +172,7 @@ public class MongoConnection {
 		DBObject[] userModificado = new BasicDBObject[1];
 		DBObject userActualizar=new BasicDBObject("login", user.login);
 		DBCursor s = table.find(userActualizar);
-		System.out.println("POS"+user.posicion);
+		//System.out.println("POS"+user.posicion);
 		while(s.hasNext())
 		{
 		user.password = (String) s.next().get("password");
@@ -235,8 +235,8 @@ public class MongoConnection {
 				usuarios.add(user);
 			}
 			client.close();
-			for (User user : usuarios)
-				System.out.println(user);
+//			for (User user : usuarios)
+//				System.out.println(user);
 			return usuarios;
 		} else
 			throw new Exception("Error: Conexión no establecida");
