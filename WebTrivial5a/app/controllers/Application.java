@@ -354,17 +354,19 @@ public class Application extends Controller {
 	 * @throws Exception
 	 */
 	public static Result contesta() throws Exception {
-		System.out.println("user----weeeeeeeeeeeeeeeeeeeeeeeeeeeeee");
 
 		Form<Pregunta> filledForm = preguntaForm.bindFromRequest();
 		Partida p = Partida.findOne(Long.parseLong(filledForm.field("id").value())); // coges la partida
 		String cat = filledForm.field("category").value();
 		System.out.println("POS CONTESTA"+p.activeUser.posicion);
 		List<Question> c = Category.findAllQuestions(cat.trim()); // coges la categoria
+		System.out.println("RESPUESTA CORRECTA??? "+filledForm.field("contestada").value());
+
 		for (Question q : c) {
 			if (q.query.equals(filledForm.field("query").value())) {// buscas la pregunta
 				if (q.correctAnswer.equals(filledForm.field("contestada").value())) { // si contestaste bien
 					flash("success", "Respuesta correcta");
+					
 					p.acierta(q, Boolean.parseBoolean(filledForm.field(
 							"quesito").value())); // donde sea la estrella en el circulo
 					if(p.finished==true) {

@@ -260,4 +260,15 @@ public class Partida {
 		for(User u : usuarios)
 			quesitosPorJugador.put(u.login, new HashSet<String>());
 	}
+	
+	
+	public User getUserByLogin(String login)
+	{
+		for (User u : usuarios)
+			if(u.login.equals(login))
+				return u;
+		return null;
+		
+	}
+	
 }

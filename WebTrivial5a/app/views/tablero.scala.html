@@ -4,10 +4,11 @@
 @main("Partida") {
 <script>
 $( document ).ready(function() {
-	if(@partida.activeUser.posicion == 0)
+	if(@partida.getUserByLogin(session().get("conectado") ).posicion== 0)
 		$( "#circle-1" ).addClass("circle-actual");
 	else
-		$( "#circle-@partida.activeUser.posicion" ).addClass("circle-actual");
+		$( "#circle-@partida.getUserByLogin(session().get("conectado") ).posicion" )
+		.addClass("circle-actual");
 	// Deshabilitar todos los botones
 	$( "button" ).prop('disabled', true);
 	
