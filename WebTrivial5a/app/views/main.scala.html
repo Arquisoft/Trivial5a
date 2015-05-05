@@ -73,7 +73,18 @@
 				</div>
 			</div>
 			}
-			@if(flash.containsKey("success")) {
+			@if(flash.containsKey("quesito")) {
+			<div class="row">
+				<div class="col-md-12">
+					<div class="alert alert-info alert-dismissible" role="alert">
+						<button type="button" class="close" data-dismiss="alert" aria-label="Cerrar">
+							<span aria-hidden="true">&times;</span>
+						</button>
+						<span class="glyphicon glyphicon-thumbs-up"></span> @flash.get("quesito")
+					</div>
+				</div>
+			</div>
+			} else { @if(flash.containsKey("success")) {
 			<div class="row">
 				<div class="col-md-12">
 					<div class="alert alert-success alert-dismissible" role="alert">
@@ -84,6 +95,7 @@
 					</div>
 				</div>
 			</div>
+			}
 			}
 		    @content
 		</div>

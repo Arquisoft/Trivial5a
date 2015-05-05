@@ -381,14 +381,14 @@ public class Application extends Controller {
 		System.out.println("POS CONTESTA"+p.activeUser.posicion);
 		List<Question> c = Category.findAllQuestions(cat.trim()); // coges la categoria
 		System.out.println("RESPUESTA CORRECTA??? "+filledForm.field("contestada").value());
-
+		Boolean quesito = Boolean.parseBoolean(filledForm.field("quesito").value());
 		for (Question q : c) {
 			if (q.query.equals(filledForm.field("query").value())) {// buscas la pregunta
 				if (q.correctAnswer.equals(filledForm.field("contestada").value())) { // si contestaste bien
 					flash("success", "Respuesta correcta");
-					
-					p.acierta(q, Boolean.parseBoolean(filledForm.field(
-							"quesito").value())); // donde sea la estrella en el circulo
+					if(quesito)
+						flash("quesito", "¡Has ganado un quesito!");
+					p.acierta(q, quesito); // donde sea la estrella en el circulo
 					if(p.finished==true) {
 						flash("success", "Partida terminada");
 						flash("finished", "Finished");
