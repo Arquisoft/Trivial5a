@@ -162,18 +162,10 @@ public class Partida {
 		activeUser.numberWrongAnswer += 1;
 		preg.vecesFallada += 1;
 		try {
-			System.out.println("user------"+activeUser.login);
-			System.out.println("userpos------"+activeUser.posicion);
+			usuarios.get(usuarios.indexOf(activeUser)).posicion = activeUser.posicion;
 			Partida.updatePartida(this);
 			User.updateUser(activeUser);
-			User u = new User();
-			u = u.findOne(activeUser.login);
-			System.out.println("userafterupdate------"+u.login);
-			System.out.println("userposafterupdate------"+u.posicion);
 			turnoSiguiente();
-			System.out.println("user------"+activeUser.login);
-			System.out.println("userpos------"+activeUser.posicion);
-
 			Category.Update(preg, Category.findOne(preg.category));
 			Partida.updatePartida(this);
 

@@ -25,16 +25,10 @@ $( document ).ready(function() {
 			$( "#circle-@partida.activeUser.posicion" ).addClass("circle-actual");
 		}
 	}
-	
-	$("#actualpos").html('ACTUAL: @partida.getUserByLogin(session().get("conectado") ).login POS: @partida.getUserByLogin(session().get("conectado") ).posicion');
-	$("#activepos").html("ACTIVE: @partida.activeUser.login POS: @partida.activeUser.posicion");
-	
 	// Habilitar los botones de la barra de men�
 	$( ".navbar-btn" ).prop('disabled', false);
 	});
 </script>
-<div id="actualpos"></div>
-<div id="activepos"></div>
 
 <div class="tablaJugador">
 	<h1><a type="submit" class="btn btn-warning btn-lg" href="@routes.Application.showPartida(partida.id)"><span class="glyphicon glyphicon-repeat"></span></a> Partida @partida.id</h1>

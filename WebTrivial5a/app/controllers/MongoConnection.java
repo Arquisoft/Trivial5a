@@ -172,7 +172,6 @@ public class MongoConnection {
 		DBObject[] userModificado = new BasicDBObject[1];
 		DBObject userActualizar=new BasicDBObject("login", user.login);
 		DBCursor s = table.find(userActualizar);
-		System.out.println("POS"+user.posicion);
 		while(s.hasNext())
 		{
 		user.password = (String) s.next().get("password");
@@ -287,8 +286,7 @@ public class MongoConnection {
 			if (obj != null) {
 				Category c = g.fromJson(obj.toString(), Category.class);
 				preguntas = c.questions;
-				for (Question q : preguntas)
-					System.out.println(q);
+				
 				return preguntas;
 			}
 			return null;
