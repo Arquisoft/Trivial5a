@@ -8,18 +8,11 @@ import model.Question;
 import model.User;
 import play.Routes;
 import play.data.Form;
+import play.i18n.Messages;
 import play.libs.Json;
 import play.mvc.Controller;
 import play.mvc.Result;
-import views.html.categorias;
-import views.html.inviteuser;
-import views.html.login;
-import views.html.partidas;
-import views.html.preguntaventana;
-import views.html.registro;
-import views.html.tablero;
-import views.html.usuarios;
-import play.i18n.Messages;
+import views.html.*;
 
 public class Application extends Controller {
 
@@ -27,6 +20,47 @@ public class Application extends Controller {
 	static Form<Partida> partidaForm = Form.form(Partida.class);
 	static Form<Register> registerForm = Form.form(Register.class);
 	static Form<Pregunta> preguntaForm = Form.form(Pregunta.class);
+
+	/**
+	 * Cambia de idioma a español
+	 * 
+	 * @return
+	 */
+	public static Result es(String returnUrl) {
+		Controller.changeLang("es");
+		return redirect(returnUrl == null ? "/" : returnUrl);
+	}
+
+	/**
+	 * Cambia de idioma a ingles
+	 * 
+	 * @return
+	 */
+	public static Result en(String returnUrl) {
+		Controller.changeLang("en");
+		return redirect(returnUrl == null ? "/" : returnUrl);
+	}
+
+	/**
+	 * Cambia de idioma a chino
+	 * 
+	 * @return
+	 */
+	public static Result cn(String returnUrl) {
+		Controller.changeLang("cn");
+		return redirect(returnUrl == null ? "/" : returnUrl);
+	}
+
+	/**
+	 * Salir de sesión
+	 * 
+	 * @return
+	 */
+	public static Result logout() {
+		session().clear();
+		flash("danger", Messages.get("application.logout"));
+		return redirect("/");
+	}
 
 	public static Result index() {
 		if (session().containsKey("conectado")) {
@@ -44,50 +78,9 @@ public class Application extends Controller {
 	}
 
 	/**
-	 * Cambia de idioma a español
-	 * 
-	 * @return
-	 */
-	public static Result es(String returnUrl) {
-		Controller.changeLang("es");
-		return redirect(returnUrl == null ? "/" : returnUrl);
-	}
-	
-	/**
-	 * Cambia de idioma a ingles
-	 * 
-	 * @return
-	 */
-	public static Result en(String returnUrl) {
-		Controller.changeLang("en");
-		return redirect(returnUrl == null ? "/" : returnUrl);
-	}
-	
-	/**
-	 * Cambia de idioma a chino
-	 * 
-	 * @return
-	 */
-	public static Result cn(String returnUrl) {
-		Controller.changeLang("cn");
-		return redirect(returnUrl == null ? "/" : returnUrl);
-	}
-	
-	/**
-	 * Salir de sesión
-	 * 
-	 * @return
-	 */
-	public static Result logout() {
-		session().clear();
-		flash("danger", Messages.get("application.logout"));
-		return redirect("/");
-	}
-
-	/**
 	 * Comprobar si el usuario está conectado
 	 * 
-	 * @return
+	 * @return Result
 	 */
 	public static Result admin() {
 		String user = session("connected");
@@ -101,7 +94,7 @@ public class Application extends Controller {
 	/**
 	 * Busca la partida del usuario
 	 * 
-	 * @return
+	 * @return Result
 	 */
 	public static Result login() {
 		Form<User> filledForm = userForm.bindFromRequest();
@@ -131,21 +124,18 @@ public class Application extends Controller {
 	/**
 	 * Mustra las categorias con su pregunta más fácil y más difícil
 	 * 
-	 * @return
+	 * @return Result
 	 * @throws Exception
 	 */
 	public static Result showCategoriesQuestions() throws Exception {
 		return ok(categorias.render(Category.all(), Category.easyQuestions(),
 				Category.hardQuestions()));
-
-		// return TODO;
 	}
 
 	/**
 	 * Registro de usuario y comprobación campos
 	 * 
-	 * @return
-	 * @throws Exception
+	 * @return Result
 	 */
 	public static Result register() {
 		Form<Register> requestData = registerForm.bindFromRequest();
@@ -174,7 +164,7 @@ public class Application extends Controller {
 	/**
 	 * Registar usuario
 	 * 
-	 * @return
+	 * @return Result
 	 */
 	public static Result registerUser() {
 		return ok(registro.render(registerForm));
@@ -183,7 +173,7 @@ public class Application extends Controller {
 	/**
 	 * Mostrar usuarios
 	 * 
-	 * @return
+	 * @return Result
 	 */
 	public static Result showUsers() {
 		try {
@@ -198,7 +188,7 @@ public class Application extends Controller {
 	 * Mostrar usuario
 	 * 
 	 * @param id
-	 * @return
+	 * @return Result
 	 */
 	public static Result showUser(String id) {
 		try {
@@ -213,11 +203,10 @@ public class Application extends Controller {
 	 * Actualizar usuario
 	 * 
 	 * @param id
-	 * @return
+	 * @return Result
 	 */
 	public static Result updateUser(String id) {
 		User user = userForm.bindFromRequest().get();
-		// User.create(user);
 		return ok("Usuario modificado");
 	}
 
@@ -225,67 +214,62 @@ public class Application extends Controller {
 	 * Borrar usuario
 	 * 
 	 * @param id
-	 * @return
+	 * @return Result
 	 */
 	public static Result deleteUser(String id) {
-		// User.delete(id);
 		return ok("Usuario eliminado");
 	}
 
 	/**
 	 * Nueva partida
 	 * 
-	 * @return
+	 * @return Result
 	 */
 	public static Result newPartida() throws Exception {
-		
-			Partida p = new Partida();
-			User u = new User(session().get("conectado"), "",
-					Boolean.valueOf(session().get("admin")));
-			p.id = (long) Partida.all().size();
-			p.usuarios.add(u);
-			p.activeUser = u;
-			p.inicializarQuesitos();
-			Partida.create(p);
-			return ok(inviteuser.render(p, model.User.all()));
- 
-		
-		//return TODO;
+		Partida p = new Partida();
+		User u = new User(session().get("conectado"), "",
+				Boolean.valueOf(session().get("admin")));
+		p.id = (long) Partida.all().size();
+		p.usuarios.add(u);
+		p.activeUser = u;
+		p.inicializarQuesitos();
+		Partida.create(p);
+		return ok(inviteuser.render(p, model.User.all()));
 	}
-	
 
 	/**
 	 * Invita a usuarios
 	 * 
-	 * @return
+	 * @param partidaId
+	 * @param login
+	 * @return Result
+	 * @throws Exception
 	 */
 	public static Result invite(Long partidaId, String login) throws Exception {
-		
-			User u = User.findOne(login);
-			Partida p= Partida.findOne(partidaId);
-			p.usuarios.add(u);
-			p.inicializarQuesitos();
-			Partida.updatePartida(p);
-			
-			List<User> todos = User.all();
-			
-			for(User us : p.usuarios)
-				if(todos.contains(us))
-					todos.remove(us);
-			return ok(inviteuser.render(p, todos));
-		//return redirect (routes.Application.showPartida(partidaId));
+		User u = User.findOne(login);
+		Partida p = Partida.findOne(partidaId);
+		p.usuarios.add(u);
+		p.inicializarQuesitos();
+		Partida.updatePartida(p);
+
+		List<User> todos = User.all();
+
+		for (User us : p.usuarios)
+			if (todos.contains(us))
+				todos.remove(us);
+		return ok(inviteuser.render(p, todos));
 	}
 
 	/**
 	 * Elimina partida
 	 * 
 	 * @param id
-	 * @return
+	 * @return Result
 	 */
 	public static Result deletePartida(Long id) {
 		try {
 			Partida.delete(id);
-			flash("success", "Partida "+id+" eliminada.");
+			flash("success", "Partida " + id + " eliminada.");
 			return redirect(routes.Application.login());
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -297,12 +281,12 @@ public class Application extends Controller {
 	 * Salida de la partida
 	 * 
 	 * @param id
-	 * @return
+	 * @return Result
 	 */
 	public static Result exitPartida(Long id) {
 		try {
 			Partida.salirPartida(id, session().get("conectado"));
-			flash("success", "Has abandonado la partida "+id+".");
+			flash("success", "Has abandonado la partida " + id + ".");
 			return redirect(routes.Application.index());
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -314,7 +298,7 @@ public class Application extends Controller {
 	 * Muestra las partidas del usuario
 	 * 
 	 * @param user
-	 * @return
+	 * @return Result
 	 */
 	public static Result showPartidasUser(User user) {
 		try {
@@ -330,7 +314,7 @@ public class Application extends Controller {
 	 * Muestra la partida
 	 * 
 	 * @param id
-	 * @return
+	 * @return Result
 	 * @throws Exception
 	 */
 	public static Result showPartida(Long id) throws Exception {
@@ -338,21 +322,21 @@ public class Application extends Controller {
 		Boolean participa = false;
 		if (session().containsKey("conectado")) {
 			try {
-				for(User u: p.usuarios) {
-					if(u.login.equals(session().get("conectado").toString())) {
+				for (User u : p.usuarios) {
+					if (u.login.equals(session().get("conectado").toString())) {
 						participa = true;
 						break;
 					} else {
 						participa = false;
 					}
 				}
-				if(participa == true) {
+				if (participa == true) {
 					return ok(tablero.render(p));
 				} else {
 					flash("danger", "No estás participando en esta partida.");
 					return redirect(routes.Application.index());
 				}
-				
+
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
@@ -366,7 +350,7 @@ public class Application extends Controller {
 	 * @param id
 	 * @param idCategoria
 	 * @param quesito
-	 * @return
+	 * @return Result
 	 * @throws Exception
 	 */
 	public static Result getQuestion(Long id, String idCategoria,
@@ -374,7 +358,7 @@ public class Application extends Controller {
 		Partida partidaActiva;
 		Question q;
 		partidaActiva = Partida.findOne(id);
-		partidaActiva.activeUser.posicion=posicion;
+		partidaActiva.activeUser.posicion = posicion;
 		User.updateUser(partidaActiva.activeUser);
 		q = partidaActiva.devolverPregunta(idCategoria);
 		Partida.updatePartida(partidaActiva);
@@ -384,26 +368,29 @@ public class Application extends Controller {
 	/**
 	 * Respuesta a la pregunta
 	 * 
-	 * @return
+	 * @return Result
 	 * @throws Exception
 	 */
 	public static Result contesta() throws Exception {
-
 		Form<Pregunta> filledForm = preguntaForm.bindFromRequest();
-		Partida p = Partida.findOne(Long.parseLong(filledForm.field("id").value())); // coges la partida
+		Partida p = Partida.findOne(Long.parseLong(filledForm.field("id")
+				.value())); // coges la partida
 		String cat = filledForm.field("category").value();
-		System.out.println("POS CONTESTA"+p.activeUser.posicion);
-		List<Question> c = Category.findAllQuestions(cat.trim()); // coges la categoria
-		System.out.println("RESPUESTA CORRECTA??? "+filledForm.field("contestada").value());
-		Boolean quesito = Boolean.parseBoolean(filledForm.field("quesito").value());
+		List<Question> c = Category.findAllQuestions(cat.trim()); // coges la
+		// categoria
+		Boolean quesito = Boolean.parseBoolean(filledForm.field("quesito")
+				.value());
 		for (Question q : c) {
-			if (q.query.equals(filledForm.field("query").value())) {// buscas la pregunta
-				if (q.correctAnswer.equals(filledForm.field("contestada").value())) { // si contestaste bien
+			if (q.query.equals(filledForm.field("query").value())) {// buscas la
+				// pregunta
+				if (q.correctAnswer.equals(filledForm.field("contestada")
+						.value())) { // si contestaste bien
 					flash("success", "Respuesta correcta");
-					if(quesito)
+					if (quesito)
 						flash("quesito", "¡Has ganado un quesito!");
-					p.acierta(q, quesito); // donde sea la estrella en el circulo
-					if(p.finished==true) {
+					p.acierta(q, quesito); // donde sea la estrella en el
+					// circulo
+					if (p.finished == true) {
 						flash("success", "Partida terminada");
 						flash("finished", "Finished");
 					}
@@ -411,12 +398,11 @@ public class Application extends Controller {
 					flash("danger", "Respuesta incorrecta");
 					p.falla(q);
 				}
-			} else {
-				// System.out.println("No hay correspondencia en la pregunta.");
 			}
 		}
 		try {
-			return redirect(routes.Application.showPartida(Long.parseLong(filledForm.field("id").value())));
+			return redirect(routes.Application.showPartida(Long
+					.parseLong(filledForm.field("id").value())));
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -425,9 +411,13 @@ public class Application extends Controller {
 
 	public static Result javascriptRoutes() {
 		response().setContentType("text/javascript");
-		return ok(Routes.javascriptRouter("myJsRoutes", routes.javascript.Application.getQuestion()));
+		return ok(Routes.javascriptRouter("myJsRoutes",
+				routes.javascript.Application.getQuestion()));
 	}
 
+	/*
+	 * Clase para formulario
+	 */
 	public static class Register {
 		public String login;
 		public String password;
@@ -437,7 +427,7 @@ public class Application extends Controller {
 		/**
 		 * Comprobar campos
 		 * 
-		 * @return
+		 * @return Result
 		 */
 		public String validate() {
 			if (!password.equals(password2)) {
@@ -454,6 +444,10 @@ public class Application extends Controller {
 		}
 	}
 
+	/**
+	 * Clase para formulario de pregunta
+	 * 
+	 */
 	public static class Pregunta {
 		public String category;
 		public String query;
