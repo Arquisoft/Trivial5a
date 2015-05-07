@@ -1,0 +1,29 @@
+@(users:List[model.User], userForm: Form[model.User])
+
+@import helper._
+
+@main("usuarios") {
+	<div id="columnaUsuarios">
+		<h1>@Messages("views.usuarios.usuariosRegistrados")</h1>	
+		<table class="table table-bordered">
+			<tr>
+			<th class="text-center success" style="vertical-align: middle"><span class="glyphicon glyphicon-user"></span></th>
+				@if(session().get("admin")=="true"){
+					<th class="text-center success">@Messages("views.usuarios.preguntasAcertadas")</th>
+					<th class="text-center success">@Messages("views.usuarios.preguntasFalladas")</th>
+				}
+			</tr>
+			@for(user <- users){
+				<tr>
+					<td class="text-center">
+						 @user.login
+					</td>
+					@if(session().get("admin")=="true"){
+						<td class="text-center">@user.numberCorrectAnswer</td>
+						<td class="text-center">@user.numberWrongAnswer</td>
+					}
+				</tr>
+			}
+		</table>	
+	</div>
+}

@@ -1,0 +1,36 @@
+@(partida: model.Partida, users:List[model.User])
+
+@import helper._
+
+@main("usuarios") {
+	<div id="columnaUsuarios" class="col-md-4">
+		<h1>@Messages("views.inviteuser.invitarusuario")</h1>	
+		<table class="table table-bordered">
+			<thead>
+			<tr>
+				<th class="text-center success">@Messages("views.inviteuser.jugador")</th>
+				<th class="text-center success">@Messages("views.inviteuser.invitar")</th>
+			</tr>
+			</thead>
+			<tbody>
+			@if(partida.usuarios.size<partida.MAX_CATEGORIAS){
+			@for(user <- users){
+			@if(user.login != session().get("conectado")){
+				<tr>
+					<td class="text-center">
+						 @user.login
+					</td>
+					<td class="text-center">
+						<a type="submit" class="btn btn-info" href='@{routes.Application.invite(partida.id,user.login)}'><i class="glyphicon glyphicon-plus"></i> @Messages("views.partidas.partida")</a>
+					</td>
+				</tr>
+				}
+			}
+			}
+			</tbody>
+		</table>	
+		
+		<a type="submit" class="btn btn-lg btn-success" href="@routes.Application.showPartida(partida.id)">@Messages("views.inviteuser.empezar")</a>
+		
+	</div>
+}

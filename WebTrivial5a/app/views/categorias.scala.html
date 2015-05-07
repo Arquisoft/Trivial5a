@@ -1,0 +1,45 @@
+@(categorias : List[model.Category], faciles : List[String],  dificiles: List[String])
+
+@main("categorias") {
+	<h1>@Messages("views.categorias.categorias")</h1>
+	<table class="table table-bordered">
+		<tr>
+			<th class="text-center success">@Messages("views.categorias.nombreCategorias")</th>
+			@if(session().get("admin")=="true"){
+				<th class="text-center success" style="vertical-align: middle">@Messages("views.categorias.preguntaMasFacil")</th>
+				<th class="text-center success" style="vertical-align: middle">@Messages("views.categorias.preguntaMasDificil")</th>
+			}
+		</tr>
+			@for(categoria <- categorias) {
+			<tr>
+				@if(categoria.name == " Deportes"){
+					<td class="text-center" bgcolor="#ffb037">@Messages("views.categorias.deportes")</td>
+				}
+				
+				@if(categoria.name== " Geografia"){
+					<td class="text-center" bgcolor="#229cdc">@Messages("views.categorias.geografia")</td>
+				}
+				@if(categoria.name== " Entretenimiento"){
+					<td class="text-center" bgcolor="#ff9c9f">@Messages("views.categorias.entretenimiento")</td>
+				}
+				
+				@if(categoria.name== " Ciencia y Tecnologia"){
+					<td class="text-center" bgcolor="#0ad067">@Messages("views.categorias.cienciaYTecnologia")</td>
+				}
+				
+				@if(categoria.name== " Arte y Literatura"){
+					<td class="text-center" bgcolor="red">@Messages("views.categorias.arteYLiteratura")</td>
+				}
+				
+				@if(categoria.name== " Historia"){
+					<td class="text-center" bgcolor="#ffe800">@Messages("views.categorias.historia")</td>
+				}
+
+				@if(session().get("admin")=="true"){
+					<td class="text-center">@faciles.get(categorias.indexOf(categoria))</td>
+					<td class="text-center">@dificiles.get(categorias.indexOf(categoria))</td>
+				}
+			</tr>
+			}
+	</table>
+}	

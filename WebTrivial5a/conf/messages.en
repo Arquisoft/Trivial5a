@@ -1,0 +1,48 @@
+application.login.correcto=Correct login.Welcome!
+application.login.incorrecto=Wrong login!
+application.logout=Logout!
+
+views.main.partidas=Games
+views.main.categorias=Categories
+views.main.usuarios=Users
+views.main.logout=Logout
+views.main.saludo=Hi
+
+views.partidas.nuevaPartida=New Game
+views.partidas.partidasEnlasQueTeTocaTirar=Games where you get to roll
+views.partidas.partida=Game
+views.partidas.partidasAcabadas=Finished games
+views.partidas.partidasActivasEsperandoPorJugador=Active games waiting for player
+views.partidas.confirmarSalida=Are you sure you want to leave  the game
+views.partidas.confirmarEliminacion=Are you sure you want to delete the game
+
+views.login.login=Login
+views.login.registrarse=Sign in
+
+views.tablero.fin=END!
+views.tablero.enhorabuena=Congrats! You win!
+views.tablero.end=Finish
+views.tablero.finperdido=YOU LOSE!
+views.tablero.hasperdido=So bad! You lose!
+views.tablero.tirar=Roll dice
+views.tablero.mover=Move
+
+views.usuarios.usuariosRegistrados=Registered Users
+views.usuarios.preguntasAcertadas=Correct Answer
+views.usuarios.preguntasFalladas=Wrong Answer
+
+views.inviteuser.invitarusuario=Invite Users
+views.inviteuser.jugador=Player
+views.inviteuser.invitar=Invite
+views.inviteuser.empezar=Start!
+
+views.categorias.categorias=Categories
+views.categorias.nombreCategorias=Categories Names 
+views.categorias.preguntaMasFacil=Easiest question
+views.categorias.preguntaMasDificil=Hardest question
+views.categorias.deportes=Sports
+views.categorias.geografia=Geography
+views.categorias.entretenimiento=Entertainment
+views.categorias.cienciaYTecnologia=Science and Technology
+views.categorias.arteYLiteratura=Arts and Literature
+views.categorias.historia=History

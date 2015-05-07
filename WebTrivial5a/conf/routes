@@ -1,0 +1,50 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+#Home page
+#GET		/                           					controllers.Application.index()
+
+#GET		/admin											controllers.Application.admin()
+
+GET			/												controllers.Application.index()
+POST		/												controllers.Application.login()
+#GET		/user											controllers.Application.showUsers()
+#GET		/user/:id										controllers.Application.showUser(id: Long)
+#PUT		/user/:id										controllers.Application.updateUser(id: Long)
+#POST		/user/delete/:id 								controllers.Application.deleteUser(id: Long)
+#DELETE		/user/:id 										controllers.Application.deleteUser(id: Long)
+
+GET    		/usuario										controllers.Application.showUsers()
+POST   		/new                 							controllers.Application.register()
+GET			/registro										controllers.Application.registerUser()
+
+
+#GET    	/categorias										controllers.Application.showCategories()
+GET    		/categorias										controllers.Application.showCategoriesQuestions()
+
+GET 		/logout											controllers.Application.logout()
+
+POST			/tablero									controllers.Application.contesta()
+#POST            /tablero                                    controllers.Application.contesta(categoria:String, q:String ,contestada:String , id: Long)
+
+GET    		/invite/:id/:login									controllers.Application.invite(id: Long, login: String)
+
+GET			/invite											controllers.Application.newPartida()
+GET 		/partidas/:id/delete       						controllers.Application.deletePartida(id: Long)	
+GET   		/partidas/:id/exit      						controllers.Application.exitPartida(id: Long)			           
+GET			/tablero/:id									controllers.Application.showPartida(id: Long)
+GET     	/pregunta/:id/:idCategoria/:quesito/:posicion	controllers.Application.getQuestion(id: Long, idCategoria: String, quesito: Boolean,posicion: Integer)
+#POST    	/item/new     									controllers.Application.newItem
+
+GET     	/es/:url     										controllers.Application.es(url: String)
+GET     	/en/:url     										controllers.Application.en(url: String)
+GET     	/cn/:url     										controllers.Application.cn(url: String)
+
+#GET 		/partida/:id/:idCategoria/:posicion				controllers.Application.getQuestion(id: Long, idCategoria: String,posicion: Integer)
+GET     	/javascriptRoutes     							controllers.Application.javascriptRoutes
+
+
+
+# Map static resources from the /public folder to the /assets URL path
+GET     /assets/*file               controllers.Assets.at(path="/public", file)
