@@ -6,7 +6,7 @@ views.main.partidas=局
 views.main.categorias=类型
 views.main.usuarios=用户
 views.main.logout=退出
-views.main.saludo=你好!
+views.main.saludo=你好
 
 views.partidas.nuevaPartida=新一局
 views.partidas.partidasEnlasQueTeTocaTirar=你轮到的局
@@ -22,6 +22,7 @@ views.login.registrarse=注册
 views.tablero.fin=结束了!
 views.tablero.enhorabuena=恭喜! 你赢了!
 
+views.usuarios.usuariosRegistrados=注册用户
 views.usuarios.preguntasAcertadas=回答正确的问题
 views.usuarios.preguntasFalladas=回答错误的问题
 
