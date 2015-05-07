@@ -24,6 +24,8 @@ views.tablero.enhorabuena=¡Enhorabuena! ¡Has ganado!
 views.tablero.end=Terminar
 views.tablero.finperdido=¡HAS PERDIDO!
 views.tablero.hasperdido=¡Qué Pena! ¡Has perdido!
+views.tablero.tirar=Tirar
+views.tablero.mover=Mover
 
 views.usuarios.usuariosRegistrados=Usuarios Registrados
 views.usuarios.preguntasAcertadas=Preguntas acertadas

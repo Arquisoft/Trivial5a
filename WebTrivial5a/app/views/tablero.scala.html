@@ -40,11 +40,11 @@ $( document ).ready(function() {
 </script>
 
 <div class="tablaJugador">
-	<h1><a type="submit" class="btn btn-warning btn-lg" href="@routes.Application.showPartida(partida.id)"><span class="glyphicon glyphicon-repeat"></span></a> Partida @partida.id</h1>
+	<h1><a type="submit" class="btn btn-warning btn-lg" href="@routes.Application.showPartida(partida.id)"><span class="glyphicon glyphicon-repeat"></span></a> @Messages("views.partidas.partida") @partida.id</h1>
 	<table class="table table-bordered">
 					<tr>
-						<th class="text-center success">Tirar</th>
-						<th class="text-center success">Mover</th>
+						<th class="text-center success">@Messages("views.tablero.tirar")</th>
+						<th class="text-center success">@Messages("views.tablero.mover")</th>
 					</tr>
 					<tr>
 					
@@ -61,14 +61,14 @@ $( document ).ready(function() {
 	<table class="table table-bordered">
 		<tr>
 			<th class="text-center success" style="vertical-align: middle" rowspan="2"><span class="glyphicon glyphicon-user"></span></th>
-			<th class="text-center success" colspan="6">Categorías</th>
+			<th class="text-center success" colspan="6">@Messages("views.categorias.categorias")</th>
 		</tr>
-		<td class="text-center" bgcolor="#ffb037">Deportes</td>
-			<td class="text-center" bgcolor="#ffe800">Historia</td>
-			<td class="text-center" bgcolor="#ff9c9f">Entretenimiento</td>
-			<td class="text-center" bgcolor="#0ad067">Ciencia y Tecnología</td>
-			<td class="text-center" bgcolor="red">Arte y Literatura</td>
-			<td class="text-center" bgcolor="#229cdc">Geografía</td>
+		<td class="text-center" bgcolor="#ffb037">@Messages("views.categorias.deportes")</td>
+			<td class="text-center" bgcolor="#ffe800">@Messages("views.categorias.geografia")</td>
+			<td class="text-center" bgcolor="#ff9c9f">@Messages("views.categorias.entretenimiento")</td>
+			<td class="text-center" bgcolor="#0ad067">@Messages("views.categorias.cienciaYTecnologia")</td>
+			<td class="text-center" bgcolor="red">@Messages("views.categorias.arteYLiteratura")</td>
+			<td class="text-center" bgcolor="#229cdc">@Messages("views.categorias.historia")</td>
 			
 			@for(user <- partida.usuarios){
 			<tr>

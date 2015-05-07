@@ -24,6 +24,8 @@ views.tablero.enhorabuena=Congrats! You win!
 views.tablero.end=Finish
 views.tablero.finperdido=YOU LOSE!
 views.tablero.hasperdido=So bad! You lose!
+views.tablero.tirar=Roll dice
+views.tablero.mover=Move
 
 views.usuarios.usuariosRegistrados=Registered Users
 views.usuarios.preguntasAcertadas=Correct Answer
