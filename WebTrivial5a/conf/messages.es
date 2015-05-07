@@ -21,6 +21,8 @@ views.login.registrarse=Registrarse
 
 views.tablero.fin=¡HAS TERMINADO!
 views.tablero.enhorabuena=¡Enhorabuena! ¡Has ganado!
+views.tablero.tirar=Tirar
+views.tablero.mover=Mover
 
 views.usuarios.usuariosRegistrados=Usuarios Registrados
 views.usuarios.preguntasAcertadas=Preguntas acertadas

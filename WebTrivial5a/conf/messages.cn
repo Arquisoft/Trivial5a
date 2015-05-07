@@ -21,6 +21,8 @@ views.login.registrarse=注册
 
 views.tablero.fin=结束了!
 views.tablero.enhorabuena=恭喜! 你赢了!
+views.tablero.tirar=掷骰子
+views.tablero.mover=举
 
 views.usuarios.usuariosRegistrados=注册用户
 views.usuarios.preguntasAcertadas=回答正确的问题

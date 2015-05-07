@@ -21,6 +21,8 @@ views.login.registrarse=Sign in
 
 views.tablero.fin=END!
 views.tablero.enhorabuena=Congrats! You win!
+views.tablero.tirar=Roll dice
+views.tablero.mover=Move
 
 views.usuarios.usuariosRegistrados=Registered Users
 views.usuarios.preguntasAcertadas=Correct Answer
