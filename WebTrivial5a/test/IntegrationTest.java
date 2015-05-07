@@ -23,8 +23,10 @@ public class IntegrationTest {
 		    @Override
 		    public void invoke(TestBrowser browser) {
 			browser.goTo("http://localhost:3333");
+			assertThat(browser.pageSource()).excludes(
+					"Web Trivial 5b");
 			assertThat(browser.pageSource()).contains(
-				"Your new application is ready.");
+				"Web Trivial 5a");
 		    }
 		});
     }
