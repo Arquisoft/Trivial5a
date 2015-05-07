@@ -4,12 +4,12 @@
 
 @main("usuarios") {
 	<div id="columnaUsuarios" class="col-md-4">
-		<h1>Invitar a Usuarios</h1>	
+		<h1>@Messages("views.inviteuser.invitarusuario")</h1>	
 		<table class="table table-bordered">
 			<thead>
 			<tr>
-				<th class="text-center success">Jugador</th>
-				<th class="text-center success">Invitar</th>
+				<th class="text-center success">@Messages("views.inviteuser.jugador")</th>
+				<th class="text-center success">@Messages("views.inviteuser.invitar")</th>
 			</tr>
 			</thead>
 			<tbody>
@@ -30,7 +30,7 @@
 			</tbody>
 		</table>	
 		
-		<a type="submit" class="btn btn-lg btn-success" href="@routes.Application.showPartida(partida.id)">�Empezar!</a>
+		<a type="submit" class="btn btn-lg btn-success" href="@routes.Application.showPartida(partida.id)">@Messages("views.inviteuser.empezar")</a>
 		
 	</div>
 }

@@ -31,6 +31,11 @@ views.usuarios.usuariosRegistrados=注册用户
 views.usuarios.preguntasAcertadas=回答正确的问题
 views.usuarios.preguntasFalladas=回答错误的问题
 
+views.inviteuser.invitarusuario=邀请用户
+views.inviteuser.jugador=播放机
+views.inviteuser.invitar=邀请
+views.inviteuser.empezar=开始！
+
 views.categorias.categorias=类型
 views.categorias.nombreCategorias=类型名称
 views.categorias.preguntaMasFacil=更简单的问题

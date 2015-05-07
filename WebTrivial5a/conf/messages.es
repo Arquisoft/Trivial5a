@@ -31,6 +31,11 @@ views.usuarios.usuariosRegistrados=Usuarios Registrados
 views.usuarios.preguntasAcertadas=Preguntas acertadas
 views.usuarios.preguntasFalladas=Preguntas falladas
 
+views.inviteuser.invitarusuario=Invitar a Usuarios
+views.inviteuser.jugador=Jugador
+views.inviteuser.invitar=Invitar
+views.inviteuser.empezar=¡Empezar!
+
 views.categorias.categorias=Categorias
 views.categorias.nombreCategorias=Nombre Categorias
 views.categorias.preguntaMasFacil=Pregunta mas fácil
