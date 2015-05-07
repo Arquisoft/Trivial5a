@@ -46,6 +46,11 @@
 					    	<button type="button" class="btn btn-danger navbar-btn pull-right"> @Messages("views.main.logout")  <span class="glyphicon glyphicon-remove-circle" aria-hidden="true"></span></button>
 					    </a>
 				    }
+				    <a href="@{routes.Application.cn(request.uri)}">
+				    	<button type="button" class="btn btn-default navbar-btn pull-right"> <img 
+                      src="@{routes.Assets.at("images/cn.png")}" alt='中国'> </button>
+				    </a>
+				    
 				    <a href="@{routes.Application.en(request.uri)}">
 				    	<button type="button" class="btn btn-default navbar-btn pull-right"> <img 
                       src="@{routes.Assets.at("images/en.png")}" alt='English'> </button>

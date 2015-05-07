@@ -64,6 +64,16 @@ public class Application extends Controller {
 	}
 	
 	/**
+	 * Cambia de idioma a chino
+	 * 
+	 * @return
+	 */
+	public static Result cn(String returnUrl) {
+		Controller.changeLang("cn");
+		return redirect(returnUrl == null ? "/" : returnUrl);
+	}
+	
+	/**
 	 * Salir de sesión
 	 * 
 	 * @return

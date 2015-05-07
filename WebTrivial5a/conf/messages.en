@@ -21,3 +21,18 @@ views.login.registrarse=Sign in
 
 views.tablero.fin=END!
 views.tablero.enhorabuena=Congrats! You win!
+
+views.usuarios.usuariosRegistrados=Registered Users
+views.usuarios.preguntasAcertadas=Correct Answer
+views.usuarios.preguntasFalladas=Wrong Answer
+
+views.categorias.categorias=Categories
+views.categorias.nombreCategorias=Categories Names 
+views.categorias.preguntaMasFacil=Easiest question
+views.categorias.preguntaMasDificil=Hardest question
+views.categorias.deportes=Sports
+views.categorias.geografia=Geography
+views.categorias.entretenimiento=Entertainment
+views.categorias.cienciaYTecnologia=Science and Technology
+views.categorias.arteYLiteratura=Arts and Literature
+views.categorias.historia=History

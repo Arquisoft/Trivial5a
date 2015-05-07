@@ -39,6 +39,7 @@ GET     	/pregunta/:id/:idCategoria/:quesito/:posicion	controllers.Application.g
 
 GET     	/es/:url     										controllers.Application.es(url: String)
 GET     	/en/:url     										controllers.Application.en(url: String)
+GET     	/cn/:url     										controllers.Application.cn(url: String)
 
 #GET 		/partida/:id/:idCategoria/:posicion				controllers.Application.getQuestion(id: Long, idCategoria: String,posicion: Integer)
 GET     	/javascriptRoutes     							controllers.Application.javascriptRoutes
