@@ -329,18 +329,18 @@ public class Application extends Controller {
 		if (session().containsKey("conectado")) {
 			try {
 				for(User u: p.usuarios) {
-					System.out.println(u.login);
 					if(u.login.equals(session().get("conectado").toString())) {
 						participa = true;
+						break;
 					} else {
 						participa = false;
 					}
 				}
-				if(participa) {
+				if(participa == true) {
 					return ok(tablero.render(p));
 				} else {
 					flash("danger", "No estás participando en esta partida.");
-					return redirects(routes.Application.index());
+					return redirect(routes.Application.index());
 				}
 				
 			} catch (Exception e) {
