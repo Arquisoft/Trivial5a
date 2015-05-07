@@ -325,16 +325,22 @@ public class Application extends Controller {
 	 */
 	public static Result showPartida(Long id) throws Exception {
 		Partida p = Partida.findOne(id);
+		Boolean participa = false;
 		if (session().containsKey("conectado")) {
 			try {
 				for(User u: p.usuarios) {
+					System.out.println(u.login);
 					if(u.login.equals(session().get("conectado").toString())) {
-						return ok(tablero.render(p));
+						participa = true;
 					} else {
-						flash("danger", "No estás participando en esta partida.");
-						return ok(partidas.render(Partida.findPartidaUser(new User(
-								session().get("conectado"), "", false))));
+						participa = false;
 					}
+				}
+				if(participa) {
+					return ok(tablero.render(p));
+				} else {
+					flash("danger", "No estás participando en esta partida.");
+					return redirects(routes.Application.index());
 				}
 				
 			} catch (Exception e) {
