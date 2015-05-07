@@ -28,7 +28,9 @@ $( document ).ready(function() {
 	// Habilitar los botones de la barra de men�
 	$( ".navbar-btn" ).prop('disabled', false);
 	@if(partida.finished==true){
-		$("#myModal").dialog({modal: true, autoOpen : true});
+		$("#dice").attr('onclick','').unbind('click');
+		$("#finish").prop('disabled',false);
+		$("#myModal").modal("show");
 	}
 	});
 </script>
@@ -178,7 +180,8 @@ $( document ).ready(function() {
 			</div>
 
 @if(partida.finished==true){
-	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" 
+	aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
 	  <div class="modal-dialog">
 	    <div class="modal-content">
 	      <div class="modal-header">
