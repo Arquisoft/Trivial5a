@@ -21,6 +21,9 @@ views.login.registrarse=Sign in
 
 views.tablero.fin=END!
 views.tablero.enhorabuena=Congrats! You win!
+views.tablero.end=Finish
+views.tablero.finperdido=YOU LOSE!
+views.tablero.hasperdido=So bad! You lose!
 
 views.usuarios.usuariosRegistrados=Registered Users
 views.usuarios.preguntasAcertadas=Correct Answer

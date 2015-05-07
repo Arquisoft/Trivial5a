@@ -28,9 +28,13 @@ $( document ).ready(function() {
 	// Habilitar los botones de la barra de men�
 	$( ".navbar-btn" ).prop('disabled', false);
 	@if(partida.finished==true){
-		$("#dice").attr('onclick','').unbind('click');
-		$("#finish").prop('disabled',false);
-		$("#myModal").modal("show");
+		@if(partida.quesitosPorJugador.get(session.get("conectado")).size < partida.MAX_CATEGORIAS) {
+			$("#finishLose").prop('disabled',false);
+			$("#myModalLose").modal("show");
+		} else {
+			$("#finishWin").prop('disabled',false);
+			$("#myModalWin").modal("show");
+		}
 	}
 	});
 </script>
@@ -180,7 +184,7 @@ $( document ).ready(function() {
 			</div>
 
 @if(partida.finished==true){
-	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" 
+	<div class="modal fade" id="myModalWin" tabindex="-1" role="dialog" 
 	aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
 	  <div class="modal-dialog">
 	    <div class="modal-content">
@@ -192,7 +196,25 @@ $( document ).ready(function() {
 	      </div>
 	      <div class="modal-footer">
 	      	<a href="/">
-	        	<button type="button" id="finish" class="btn btn-danger">Terminar</button>
+	        	<button type="button" id="finishWin" class="btn btn-success">@Messages("views.tablero.end")</button>
+	        </a>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+	<div class="modal fade" id="myModalLose" tabindex="-1" role="dialog" 
+	aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+	  <div class="modal-dialog">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <h4 class="modal-title" id="myModalLabel"> @Messages("views.tablero.finperdido")</h4>
+	      </div>
+	      <div class="modal-body">
+	        @Messages("views.tablero.hasperdido")
+	      </div>
+	      <div class="modal-footer">
+	      	<a href="/">
+	        	<button type="button" id="finishLose" class="btn btn-danger">@Messages("views.tablero.end")</button>
 	        </a>
 	      </div>
 	    </div>
