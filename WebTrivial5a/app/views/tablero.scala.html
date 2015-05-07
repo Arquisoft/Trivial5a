@@ -27,6 +27,9 @@ $( document ).ready(function() {
 	}
 	// Habilitar los botones de la barra de men�
 	$( ".navbar-btn" ).prop('disabled', false);
+	@if(partida.finished==true){
+		$("#myModal").dialog({modal: true, autoOpen : true});
+	}
 	});
 </script>
 
