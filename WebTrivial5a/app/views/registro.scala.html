@@ -1,0 +1,23 @@
+@(userForm: Form[controllers.Application.Register])
+
+@import helper._
+
+@main("usuarios") {
+	<h1>Registro nuevo usuario</h1>
+    @form(routes.Application.register()) {
+    	<div class="form-group">
+   			<label for="login">Login</label>
+   			<input type="text" class="form-control" name="login">
+ 		</div>
+ 		<div class="form-group">
+   			<label for="password">Password</label>
+   			<input type="password" class="form-control" name="password" placeholder="Introduce password" required>
+ 		</div>
+ 		<div class="form-group">
+   			<label for="password2">Confirmar password</label>
+   			<input type="password" class="form-control" name="password2" placeholder="Confirma password" required>
+ 		</div>
+ 		<input type="hidden" value=false name="admin">
+        <input type="submit" class="btn" value="Registrar">
+	}
+}
