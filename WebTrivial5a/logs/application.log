@@ -1,0 +1,85 @@
+2015-05-07 11:53:16,937 - [INFO] - from play in pool-4-thread-1 
+Listening for HTTP on /0:0:0:0:0:0:0:0:9000
+
+2015-05-07 11:55:26,106 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2015-05-07 11:55:42,213 - [WARN] - from play in play-akka.actor.default-dispatcher-4 
+You are using status code '200' with flashing, which should only be used with a redirect status!
+
+2015-05-07 11:56:28,200 - [WARN] - from play in play-akka.actor.default-dispatcher-8 
+You are using status code '200' with flashing, which should only be used with a redirect status!
+
+2015-05-07 11:56:43,206 - [WARN] - from play in play-akka.actor.default-dispatcher-13 
+You are using status code '200' with flashing, which should only be used with a redirect status!
+
+2015-05-07 12:01:10,875 - [INFO] - from play in play-internal-execution-context-6 
+Application started (Dev)
+
+2015-05-07 12:01:15,901 - [WARN] - from play in play-akka.actor.default-dispatcher-26 
+You are using status code '200' with flashing, which should only be used with a redirect status!
+
+2015-05-07 12:07:06,522 - [ERROR] - from application in New I/O worker #8 
+
+
+! @6m480h38a - Internal server error, for (GET) [/] ->
+
+play.PlayExceptions$CompilationException: Compilation error[error: cannot find symbol]
+	at play.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:27) ~[na:na]
+	at play.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:27) ~[na:na]
+	at scala.Option.map(Option.scala:145) ~[scala-library-2.11.1.jar:na]
+	at play.PlayReload$$anonfun$taskFailureHandler$1.apply(PlayReload.scala:49) ~[na:na]
+	at play.PlayReload$$anonfun$taskFailureHandler$1.apply(PlayReload.scala:44) ~[na:na]
+	at scala.Option.map(Option.scala:145) ~[scala-library-2.11.1.jar:na]
+	at play.PlayReload$.taskFailureHandler(PlayReload.scala:44) ~[na:na]
+	at play.PlayReload$.compileFailure(PlayReload.scala:40) ~[na:na]
+	at play.PlayReload$$anonfun$compile$1.apply(PlayReload.scala:17) ~[na:na]
+	at play.PlayReload$$anonfun$compile$1.apply(PlayReload.scala:17) ~[na:na]
+	at scala.util.Either$LeftProjection.map(Either.scala:377) ~[scala-library-2.11.1.jar:na]
+	at play.PlayReload$.compile(PlayReload.scala:17) ~[na:na]
+	at play.PlayRun$$anonfun$playRunTask$1$$anonfun$apply$2$$anonfun$apply$3$$anonfun$2.apply(PlayRun.scala:61) ~[na:na]
+	at play.PlayRun$$anonfun$playRunTask$1$$anonfun$apply$2$$anonfun$apply$3$$anonfun$2.apply(PlayRun.scala:61) ~[na:na]
+	at play.runsupport.Reloader.reload(Reloader.scala:295) ~[na:na]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:122) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:120) ~[play_2.11-2.3.8.jar:2.3.8]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) ~[scala-library-2.11.1.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) ~[scala-library-2.11.1.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) ~[scala-library-2.11.1.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) ~[scala-library-2.11.1.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) ~[scala-library-2.11.1.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) ~[scala-library-2.11.1.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) ~[scala-library-2.11.1.jar:na]
+
+2015-05-07 12:07:48,978 - [INFO] - from play in play-internal-execution-context-7 
+Application started (Dev)
+
+2015-05-07 12:10:39,186 - [INFO] - from play in play-internal-execution-context-11 
+Application started (Dev)
+
+2015-05-07 12:12:59,127 - [INFO] - from play in play-internal-execution-context-16 
+Application started (Dev)
+
+2015-05-07 12:47:08,374 - [INFO] - from play in play-internal-execution-context-141 
+Application started (Dev)
+
+2015-05-07 13:02:46,451 - [WARN] - from play in play-akka.actor.default-dispatcher-274 
+You are using status code '200' with flashing, which should only be used with a redirect status!
+
+2015-05-07 13:42:34,433 - [INFO] - from play in play-internal-execution-context-161 
+Application started (Dev)
+
+2015-05-07 13:59:22,106 - [INFO] - from play in play-internal-execution-context-169 
+Application started (Dev)
+
+2015-05-07 14:16:07,791 - [INFO] - from play in play-internal-execution-context-172 
+Application started (Dev)
+
+2015-05-07 16:40:48,529 - [INFO] - from play in play-internal-execution-context-174 
+Application started (Dev)
+
+2015-05-07 16:43:18,019 - [WARN] - from play in play-akka.actor.default-dispatcher-361 
+You are using status code '200' with flashing, which should only be used with a redirect status!
+
+2015-05-07 17:05:56,984 - [INFO] - from play in play-internal-execution-context-182 
+Application started (Dev)
+
